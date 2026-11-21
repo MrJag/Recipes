@@ -42,8 +42,9 @@ h1 { font-size: var(--title-size); line-height: 1.01; margin: 0 0 4px; }
 .ingredients li { break-inside: avoid; margin: 0 0 4px; }
 .ingredients li::marker { color: var(--accent); }
 .steps { list-style: none; margin: 0; padding: 0; }
-.steps li { position: relative; padding-left: 32px; margin-bottom: var(--step-gap); break-inside: avoid; font-size: var(--body-size); line-height: var(--body-line-height); }
-.step-num { position: absolute; left: 0; top: 0; background: var(--accent); color: white; border-radius: 50%; width: 23px; height: 23px; display: flex; align-items: center; justify-content: center; font: 700 10pt var(--font-serif); }
+.steps > li.recipe-step { display: grid; grid-template-columns: 24px minmax(0, 1fr); column-gap: 10px; align-items: start; padding: 0; margin-bottom: var(--step-gap); break-inside: avoid; font-size: var(--body-size); line-height: var(--body-line-height); }
+.step-num { position: static; grid-column: 1; align-self: start; margin-top: 1px; background: var(--accent); color: white; border-radius: 50%; width: 23px; height: 23px; display: flex; align-items: center; justify-content: center; font: 700 10pt/1 var(--font-serif); flex: none; }
+.step-copy { grid-column: 2; min-width: 0; overflow-wrap: break-word; }
 .running-head { font: 700 9pt var(--font-sans); border-bottom: 1px solid var(--rule); padding-bottom: 9px; margin-bottom: 14px; color: var(--accent); }
 .source { font: italic 8.4pt/1.25 var(--font-serif); margin-top: 10px; border-top: 1px solid var(--rule); padding-top: 8px; }
 .page-num { position: absolute; left: var(--safe-margin); bottom: 12px; font: 8pt var(--font-sans); color: #9d8374; }
