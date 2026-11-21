@@ -2,7 +2,7 @@
 :root {
   --page-width: 8.5in;
   --page-height: 11in;
-  --safe-margin: 0.33in;
+  --safe-margin: 0.38in;
   --home-photo-inset: 0.19in;
   --strip-fraction: .28;
   --photo-gap: .18in;
@@ -12,10 +12,10 @@
   --rule: #b08a76;
   --ingredient-paper: #f2eae1;
   --body-size: 10pt;
-  --body-line-height: 1.28;
+  --body-line-height: 1.3;
   --step-gap: 8px;
   --section-gap: 13px;
-  --title-size: 25pt;
+  --title-size: 26pt;
   --font-serif: Georgia, "Times New Roman", serif;
   --font-sans: Arial, Helvetica, sans-serif;
 }
@@ -36,7 +36,8 @@ h1 { font-size: var(--title-size); line-height: 1.01; margin: 0 0 4px; }
 .ingredients { background: var(--ingredient-paper); border-radius: 7px; padding: 11px 12px; margin-bottom: var(--section-gap); break-inside: avoid; }
 .section-heading { display: flex; gap: 12px; align-items: center; color: var(--accent); font-size: 13pt; letter-spacing: 1.5px; margin: 0 0 10px; }
 .section-heading::after { content: ""; height: 1px; flex: 1; background: var(--rule); }
-.ingredients ul { columns: 2; column-gap: 18px; column-rule: 1px solid #d6c1b3; padding-left: 19px; margin: 0; font-size: var(--body-size); line-height: var(--body-line-height); }
+.ingredients ul { columns: 1; column-gap: 18px; column-rule: 1px solid #d6c1b3; padding-left: 19px; margin: 0; font-size: var(--body-size); line-height: var(--body-line-height); }
+.ingredients.two-column > ul { columns: 2; }
 .ingredients li { break-inside: avoid; margin: 0 0 4px; }
 .ingredients li::marker { color: var(--accent); }
 .steps { list-style: none; margin: 0; padding: 0; }
@@ -45,6 +46,16 @@ h1 { font-size: var(--title-size); line-height: 1.01; margin: 0 0 4px; }
 .running-head { font: 700 9pt var(--font-sans); border-bottom: 1px solid var(--rule); padding-bottom: 9px; margin-bottom: 14px; color: var(--accent); }
 .source { font: italic 8.4pt/1.25 var(--font-serif); margin-top: 10px; border-top: 1px solid var(--rule); padding-top: 8px; }
 .page-num { position: absolute; left: var(--safe-margin); bottom: 12px; font: 8pt var(--font-sans); color: #9d8374; }
+.section-heading { break-after: avoid; }
+.recipe-header, .ingredients, .steps, .source, .related-section, .component-note { flex-shrink: 0; }
+.ingredients .ingredient-groups { column-fill: balance; }
+.stage-heading { break-after: avoid; }
+.photo-placeholder { background: linear-gradient(155deg,#44382e 0%,#92775f 52%,#3b302a 100%); }
+.sheet:not(.has-photo) .content { right: var(--safe-margin); }
+@media screen and (max-width:900px) {
+  #pages { align-items: flex-start; overflow-x: auto; }
+  .sheet { margin: 0 auto; }
+}
 /* Only page 1 receives .has-photo. Continuation pages use full-width .content. */
 @media print {
   @page { size: letter; margin: 0; }
@@ -52,4 +63,5 @@ h1 { font-size: var(--title-size); line-height: 1.01; margin: 0 0 4px; }
   #pages { display: block; padding: 0; margin: 0; }
   .sheet { box-shadow: none; width: 8.5in; height: 11in; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
   body.commercial .photo-strip { right: 0; }
+  .photo-strip, .ingredients, .step-num { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
