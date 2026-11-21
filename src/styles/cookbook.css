@@ -67,3 +67,8 @@ h1 { font-size: var(--title-size); line-height: 1.01; margin: 0 0 4px; }
   body.commercial .photo-strip { right: 0; }
   .photo-strip, .ingredients, .step-num { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+
+/* Photo <img> uses the same cover crop on screen and in print. */
+.photo-strip { overflow: hidden; }
+.photo-strip > .strip-image { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; }
+.photo-strip > .strip-image[hidden] { display:none; }
