@@ -147,12 +147,14 @@ function render(recipe, compact = false) {
   let stepNo = 1;
   for (const stage of stages) {
     if (stage.title) {
-      const heading = el("h3", "stage-heading", stage.title);
       ensureSteps(page);
-      if (!attachWithFit(page, heading)) {
+      const heading = el("li", "stage-heading", stage.title);
+      page.steps.appendChild(heading);
+      if (!fits(page)) {
+        heading.remove();
         page = pageShell(pagesEl.children.length, recipe);
         ensureSteps(page);
-        page.content.appendChild(heading);
+        page.steps.appendChild(heading);
         overflow ||= !fits(page);
       }
     }
