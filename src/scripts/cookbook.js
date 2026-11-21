@@ -165,6 +165,14 @@ function paginate(recipe, density) {
       if (!fits(page)) {
         stepElement.remove();
         if (pendingHeading) pendingHeading.remove();
+        // Never leave an empty Directions heading at the bottom of a page.
+        if (page.steps && page.steps.children.length === 0) {
+          const list = page.steps;
+          const heading = list.previousElementSibling;
+          list.remove();
+          if (heading?.classList.contains("section-heading")) heading.remove();
+          page.steps = null;
+        }
         page = pageShell(pagesEl.children.length, recipe);
         ensureSteps(page);
         if (pendingHeading) page.steps.appendChild(pendingHeading);
