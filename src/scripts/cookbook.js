@@ -137,7 +137,9 @@ function setLayout(density) {
   ROOT.style.setProperty("--step-gap", Math.max(3, stepGap - density * 2) + "px");
   ROOT.style.setProperty("--body-size", Math.max(9, fontSize - density * 0.15) + "pt");
   ROOT.style.setProperty("--section-gap", (13 - density * 2) + "px");
-  ROOT.style.setProperty("--strip-fraction", (Number(byId("photoWidth").value) / 100).toFixed(2));
+  const photoFraction = Number(byId("photoWidth").value) / 100;
+  ROOT.style.setProperty("--strip-fraction", photoFraction.toFixed(2));
+  ROOT.style.setProperty("--photo-width", ((8.5 - 2 * 0.38) * photoFraction).toFixed(3) + "in");
   document.body.classList.toggle("commercial", byId("printMode").value === "commercial");
 }
 function paginate(recipe, density) {
