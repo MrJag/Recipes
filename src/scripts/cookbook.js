@@ -5,6 +5,7 @@ const pagesEl = document.getElementById("pages");
 const statusEl = document.getElementById("status");
 const byId = id => document.getElementById(id);
 let currentRecipe = null;
+let sourceRecipe = null;
 let lastPageCount = 0;
 let renderPending = false;
 
@@ -53,6 +54,15 @@ function buildHeader(recipe) {
   if (bits.length) wrap.appendChild(el("div", "metadata", bits.join("   |   ")));
   if (recipe.headnote) wrap.appendChild(el("p", "headnote", recipe.headnote));
   return wrap;
+}
+function allIngredientGroups(recipe) {
+  const groups = [...(recipe.ingredientGroups || [])];
+  for (const component of recipe.components || []) {
+    for (const group of component.ingredientGroups || []) {
+      groups.push({title: group.title ? component.title + " — " + group.title : component.title, items: group.items || []});
+    }
+  }
+  return groups;
 }
 function buildIngredients(groups) {
   const wrap = el("section", "ingredients");
@@ -128,17 +138,41 @@ function render(recipe, compact = false) {
   document.body.classList.toggle("commercial", byId("printMode").value === "commercial");
   let page = pageShell(0, recipe);
   page.content.appendChild(buildHeader(recipe));
-  page.content.appendChild(buildIngredients(recipe.ingredientGroups));
+  page.content.appendChild(buildIngredients(allIngredientGroups(recipe)));
   let overflow = !fits(page);
-  const steps = recipe.steps || [];
-  for (let i = 0; i < steps.length; i++) {
-    ensureSteps(page);
-    const node = stepNode(steps[i], i+1);
-    if (!attachWithFit(page, node)) {
-      page = pageShell(pagesEl.children.length, recipe);
+  const stages = [
+    ...(recipe.components || []).map(c => ({title: c.title, steps: c.steps || [], note: c.notes})),
+    {title: recipe.components?.length ? "Main method" : null, steps: recipe.steps || []}
+  ];
+  let stepNo = 1;
+  for (const stage of stages) {
+    if (stage.title) {
+      const heading = el("h3", "stage-heading", stage.title);
       ensureSteps(page);
-      page.steps.appendChild(node);
-      overflow ||= !fits(page);
+      if (!attachWithFit(page, heading)) {
+        page = pageShell(pagesEl.children.length, recipe);
+        ensureSteps(page);
+        page.content.appendChild(heading);
+        overflow ||= !fits(page);
+      }
+    }
+    for (const step of stage.steps) {
+      ensureSteps(page);
+      const node = stepNode(step, stepNo++);
+      if (!attachWithFit(page, node)) {
+        page = pageShell(pagesEl.children.length, recipe);
+        ensureSteps(page);
+        page.steps.appendChild(node);
+        overflow ||= !fits(page);
+      }
+    }
+    if (stage.note) {
+      const note = el("p", "component-note", stage.note);
+      if (!attachWithFit(page, note)) {
+        page = pageShell(pagesEl.children.length, recipe);
+        page.content.appendChild(note);
+        overflow ||= !fits(page);
+      }
     }
   }
   for (const app of recipe.relatedApplications || []) {
@@ -193,12 +227,39 @@ async function loadRecipe() {
     if (!response.ok) throw new Error("HTTP " + response.status);
     const recipe = await response.json();
     if (!recipe.title || !Array.isArray(recipe.ingredientGroups) || !Array.isArray(recipe.steps)) throw new Error("Invalid recipe structure");
-    currentRecipe = recipe;
+    sourceRecipe = recipe;
+    setupVariants(recipe);
     requestRender();
   } catch (error) {
     statusEl.textContent = "Unable to load recipe: " + error.message + ". Run a local HTTP server; opening index.html directly may block JSON fetches.";
   }
 }
+function setupVariants(recipe) {
+  const select = byId("variant");
+  const control = byId("variantControl");
+  select.replaceChildren();
+  control.hidden = !Array.isArray(recipe.variants) || recipe.variants.length === 0;
+  if (!control.hidden) {
+    select.appendChild(new Option("Original draft", "-1"));
+    for (let i = 0; i < recipe.variants.length; i++) select.appendChild(new Option(recipe.variants[i].title, String(i)));
+    select.value = "0"; // Default to first complete named version; retain draft as selectable.
+  }
+  selectRecipeVersion();
+}
+function selectRecipeVersion() {
+  const index = Number(byId("variant").value);
+  const variant = sourceRecipe?.variants?.[index];
+  currentRecipe = variant ? {
+    ...sourceRecipe,
+    ...variant,
+    title: variant.title,
+    category: sourceRecipe.category,
+    sourceDriveUrl: sourceRecipe.sourceDriveUrl,
+    sourceNote: sourceRecipe.sourceNote || "Original source document"
+  } : sourceRecipe;
+  requestRender();
+}
+byId("variant").addEventListener("change", selectRecipeVersion);
 byId("recipe").addEventListener("change", loadRecipe);
 for (const id of ["photoWidth","fontSize","stepGap"]) {
   byId(id).addEventListener("input", () => {
