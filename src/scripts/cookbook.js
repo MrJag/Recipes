@@ -92,14 +92,17 @@ function buildIngredients(groups) {
   return wrap;
 }
 function stepNode(step, number) {
-  const li = el("li");
-  li.appendChild(el("span", "step-num", number));
-  const text = typeof step === "string" ? step : step.text;
-  if (typeof step === "object" && step.lead) {
-    const strong = el("strong", null, step.lead + " ");
-    li.appendChild(strong);
+  const li = el("li", "recipe-step");
+  const num = el("span", "step-num", number);
+  num.setAttribute("aria-hidden", "true");
+  const copy = el("div", "step-copy");
+  const value = typeof step === "string" ? step : (step?.text || "");
+  if (typeof step === "object" && step?.lead) {
+    copy.appendChild(el("strong", null, step.lead + " "));
   }
-  li.appendChild(document.createTextNode(text || ""));
+  copy.appendChild(document.createTextNode(value));
+  li.append(num, copy);
+  li.setAttribute("aria-label", "Step " + number + ": " + (step?.lead ? step.lead + " " : "") + value);
   return li;
 }
 function ensureSteps(page) {
