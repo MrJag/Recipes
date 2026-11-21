@@ -30,3 +30,9 @@ The repository is currently public to support a temporary GitHub Pages preview. 
 2. Add original high-resolution recipe photographs and test commercial print bleed.
 3. Finish structured parsing of ingredients, recipe references, and serving yields.
 4. Replace the temporary public Pages preview with authenticated family hosting.
+
+## Image files
+
+Use a PNG master at `assets/masters/<recipe-slug>.png` and a web JPG at `public/images/<recipe-slug>.jpg`. Recipe JSON `photo` points to the JPG. The PNG is retained for re-exports and later print-production work. Converting an existing JPG to PNG cannot restore details already discarded by JPG encoding.
+
+**Latvian Stew:** replacement assets have been prepared, but the GitHub connection supports UTF-8 text writes only. The two binary images must be uploaded through GitHub's file upload interface (or Git CLI) before the published JPG resolves. The browser shows a placeholder if the image is not yet uploaded. See `docs/images.md` for instructions.
