@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "0.1",
+  "id": "mariano-margarita",
+  "title": "Margarita (on the rocks) DRAFT",
+  "category": "Drinks",
+  "servings": null,
+  "photo": null,
+  "headnote": null,
+  "ingredientGroups": [
+    {
+      "title": "Draft variation",
+      "items": [
+        "1-1.25 cup ice",
+        "1.5 oz tequila blanco",
+        "1.5 oz lime",
+        "1-1.25 oz agave syrup"
+      ]
+    }
+  ],
+  "steps": [
+    "See below"
+  ],
+  "variants": [
+    {
+      "title": "The Mariano margarita",
+      "servings": "1 margarita",
+      "headnote": "Surely you've heard of Mariano Martinez: He invented the frozen margarita machine. The Dallas restaurateur helped make frozen margaritas popular in North Texas and beyond. His original frozen margarita machine has since retired; he donated it to the Smithsonian's National Museum of American History, where it can continue to be remembered as an important tool in the life of tequila cocktails. These days, Martinez prefers his margaritas on the rocks anyhow. His tastes have evolved, you might say. So in honor of Martinez's important invention, plus his new-found love for shaken, not blended margaritas, here's his signature cocktail.",
+      "ingredientGroups": [
+        {
+          "title": null,
+          "items": [
+            "2.5 ounces Don Julio Reposado tequila",
+            "3/4 ounces Cointreau",
+            "2 drops Agasweet agave nectar",
+            "2 limes, squeezed to become 1 ounce fresh lime juice",
+            "Full pint glass of cubed ice",
+            "Kosher coarse salt, as needed",
+            "14 oz. sorgente glass"
+          ]
+        }
+      ],
+      "steps": [
+        "On a cutting board, roll 2 whole limes back and forth using the palm of your hand. Cut the limes in half and hand squeeze 1 oz. of lime juice into a measuring cup.",
+        "Add 2.5 ounces of Don Julio Reposado tequila into a shaker. Add 1 ounce of fresh lime juice. Add 2 drops of Agasweet agave nectar. Add 3/4 ounce Cointreau.",
+        "Shake mixture exactly 13 times in shaker tin. Pour mixture into the glass. 10. Serve with a 6\\\" straw."
+      ],
+      "notes": "The Mariano(Erin Burrough). As for that fancy decorative lime in the picture, well, that's a secret. You'll have to go to La Hacienda Ranch or Mariano's Hacienda to get one."
+    },
+    {
+      "title": "Mariano's Margarita — Shaken, Not Stirred",
+      "ingredientGroups": [
+        {
+          "title": null,
+          "items": [
+            "2 oz. fresh hand-squeezed lemon or lime juice",
+            "1 ½ oz. 100 percent Agave tequila",
+            "1 oz. Grand Marnier"
+          ]
+        }
+      ],
+      "steps": [
+        "Salt the rim of a glass, if desired. Set aside. Fill pint shaker with ice and add all ingredients. Shake vigorously exactly five times. Pour contents of a shaker in glass.",
+        "Lime wedge garnish optional."
+      ],
+      "notes": "A note from Mariano Martinez: A great margarita must contain three primary ingredients: 100 percent agave tequila, real orange liqueur, and real, freshly squeezed lime or lemon juice. It must also be correctly hand-shaken with ice. Some 100 percent agave tequila recommendations are: Herradura Silver, el Jimador, Patrón Silver or Don Julio Blanco. Expensive aged tequila is not necessary for margaritas, but don't buy by price alone. Cheap tequila can contain grain alcohol, so stick with 100 percent agave tequila for the best margaritas."
+    }
+  ],
+  "sourceDriveUrl": "https://docs.google.com/document/d/1dfjKD7TqfCqsazXTq8VM0R034ToHEw_Df6tXFr_1yOA/edit",
+  "reviewFlags": [
+    "Multiple distinct versions in one document",
+    "Draft instructions say See below",
+    "Preserve potential original '10. Serve' numbering artifact",
+    "Document contains editorial source text and notes"
+  ]
+}
