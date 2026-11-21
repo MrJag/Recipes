@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "0.1",
+  "id": "butter-masala-chicken",
+  "title": "Butter Masala",
+  "subtitle": "Chicken",
+  "category": "Indian",
+  "servings": "4–5",
+  "photo": null,
+  "headnote": null,
+  "prepTime": null,
+  "cookTime": null,
+  "ingredientGroups": [
+    {
+      "title": "Main",
+      "items": [
+        "2 lbs chicken (breast or thigh)",
+        "Dry spice blend (recipe below)",
+        "Masala Paste (recipe below)",
+        "1 Tbsp lemon juice (1 small lemon)",
+        "¼ cup yogurt",
+        "4 Tbsp butter (50g)",
+        "2 Tbsp sugar (use less with sweet onions)",
+        "½ Tbsp garam masala (recipe in link)",
+        "½ Tbsp dried fenugreek leaves (kasoori methi)",
+        "1 cup cream (heavy whipping)",
+        "¼ cup cilantro, chopped"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "dry-spice-mix",
+      "title": "Dry Spice Mix",
+      "ingredientGroups": [
+        {
+          "title": null,
+          "items": [
+            "2 cloves",
+            "3 green cardamom pods",
+            "1 black cardamom pod",
+            "1 cinnamon stick",
+            "4 black peppercorns",
+            "½ Tbsp cumin",
+            "1 Tbsp coriander powder",
+            "1 star anise",
+            "1 bay leaf",
+            "Nutmeg grating",
+            "2 Tbsp kashmiri chili powder",
+            "1 Tbsp salt"
+          ]
+        }
+      ],
+      "steps": [
+        "Toast all the spices over medium heat for 30-60 seconds and set aside. Alternatively, bake them in the oven on a sheet pan at 250-275 degrees F for 15 minutes.",
+        "Cool for 5 minutes then grind into a fine powder.",
+        "Add the salt and kashmiri powder"
+      ]
+    },
+    {
+      "id": "wet-masala-paste",
+      "title": "Wet Masala Paste",
+      "ingredientGroups": [
+        {
+          "title": null,
+          "items": [
+            "2 Tbsp oil",
+            "100g onion (medium, sliced thin)",
+            "500g tomato (5 roma, cored and peeled*)",
+            "3 garlic cloves",
+            "1” ginger, peeled",
+            "½ green chili, stemmed and seeded"
+          ]
+        }
+      ],
+      "steps": [
+        "Fry the onions over high heat until golden brown and set aside.",
+        "Blend the onions, tomatoes, and garlic-ginger-chili paste until smooth.",
+        "Puree the mixture until smooth."
+      ],
+      "notes": "* A quick way to peel the tomatoes is to broil the halves for 5 minutes in the oven, cut side down. The skin will separate from the pulp and will easily slip off."
+    }
+  ],
+  "steps": [
+    "Prepare the Dry Spice Mix.",
+    "Prepare the Wet Masala Paste.",
+    "Cut the chicken into 1” chunks.",
+    "Combine the chicken, Masala Paste, Spice Mix, lemon juice, and yogurt in the Instant pot bowl. Mix well to ensure the spices are evenly distributed.",
+    "Pressure cook the mixture for 20 minutes then Quick Release. The chicken should be tender and the oil separated.",
+    "Add the butter, sugar, garam masala, and fenugreek leaves.",
+    "Simmer with Saute mode on low heat, stirring frequently to incorporate.",
+    "Stir in the cilantro and cream, simmer for 1 additional minute.",
+    "Serve garnished with a drizzle of cream and chopped cilantro."
+  ],
+  "sourceDriveUrl": "https://docs.google.com/document/d/1bXjkZg2TWbTwIPhxVPXxGZIz8ANabXxvrQqnALDblik/edit",
+  "reviewFlags": [
+    "Subcomponent stages retained as separate objects; renderer needs integrated component printing",
+    "Original document references garam masala 'recipe in link' that needs URL extraction",
+    "Verify whether 2 Tbsp kashmiri chili powder intended"
+  ]
+}
