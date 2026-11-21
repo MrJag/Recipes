@@ -11,9 +11,9 @@ Private family cookbook project.
 - Keep recipes private; do not publish via public GitHub Pages.
 
 ## Current status
-- `src/styles/cookbook.css`: initial v0.4 editorial right-strip design tokens and layout rules.
-- Recipe importer, browser preview, JavaScript pagination, and structured recipe data are planned, not yet committed.
-- No recipes or photos have been imported from Drive yet.
+- `src/styles/cookbook.css`: editable editorial right-strip print design (v0.6).
+- `index.html` and `src/scripts/cookbook.js`: browser recipe selector, layout controls, and automatic pagination.\n- Five example recipes imported as JSON from Google Drive, preserving source references and review flags.\n- The layout is under test; page-fit is checked in-browser and is not yet validated across every recipe.
+- Original food photography has not yet been imported. The page-1 photo strip displays a clear placeholder until an image is supplied.
 
 ## Proposed folders
 - `recipes/`: structured, versioned recipe content
@@ -23,10 +23,10 @@ Private family cookbook project.
 - `docs/`: schema, import, and publishing specifications
 
 ## Privacy
-This repository is private. A private GitHub repository is not by itself an authenticated private family website. Hosting and family access will be designed separately.
+The repository is currently public to support a temporary GitHub Pages preview. **All committed recipe JSON is public** until repository visibility and hosted access are changed. GitHub Pages is not family-authenticated. Do not commit sensitive family information.
 
 ## Next steps
-1. Validate the recipe data schema against Latvian Stew, Caribbean Green Seasoning, Butter Masala, Rosemary Focaccia, and Mariano Margarita.
-2. Port the v0.4 interactive prototype and add pagination tests.
-3. Import the first recipes, keeping links to their original Drive documents.
-4. Build a private preview and family-access plan.
+1. Visually validate the v0.6 browser preview and print pagination against the five imported recipes.
+2. Add original high-resolution recipe photographs and test commercial print bleed.
+3. Finish structured parsing of ingredients, recipe references, and serving yields.
+4. Replace the temporary public Pages preview with authenticated family hosting.
