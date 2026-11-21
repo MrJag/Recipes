@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "0.1",
+  "id": "rosemary-focaccia",
+  "title": "Rosemary Focaccia",
+  "category": "Italian",
+  "servings": null,
+  "prepTime": null,
+  "cookTime": null,
+  "photo": null,
+  "headnote": null,
+  "ingredientGroups": [
+    {
+      "title": "Dough",
+      "items": [
+        "¾ cups water",
+        "2 tbs olive/veg. oil",
+        "2 cups bread flour",
+        "1 tbs sugar",
+        "1 tsp salt",
+        "1 ½ tsp bread machine/quick active dry yeast"
+      ]
+    },
+    {
+      "title": "Garnish",
+      "items": [
+        "3-4 Tbsp olive oil",
+        "2 Tbsp chopped fresh rosemary leaves",
+        "2-3 pinches of coarse salt"
+      ]
+    }
+  ],
+  "steps": [
+    "Add water and oil to the bread machine",
+    "Add flour, sugar, salt, and yeast to the bread machine, taking care that the yeast does not get wet yet.",
+    "Select the Dough cycle and let run, approximately 1h 30m.",
+    "When the dough cycle is complete, preheat the oven to 400° F.",
+    "While the oven preheats, turn the dough onto a lightly floured sheet-pan and flatten into a 12-14” circle.",
+    "Cover loosely with a towel and let rise for 15 minutes.",
+    "Uncover and make dimples all over the surface with your fingertips.",
+    "Drizzle with oil (3-4 Tbsp), then sprinkle with chopped rosemary and salt.",
+    "Bake 14 minutes or until light golden brown.",
+    "Remove, cut, and serve immediately"
+  ],
+  "sourceNote": null,
+  "sourceDriveUrl": "https://docs.google.com/document/d/1l2sttfa1Xd6f45woAoCzGiKNRyCcRSZavfRQpMgSKPk/edit",
+  "reviewFlags": [
+    "Yield not stated"
+  ]
+}
