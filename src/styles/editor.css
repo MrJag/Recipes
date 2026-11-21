@@ -25,3 +25,12 @@
 .content > * { flex-shrink: 0; }
 .steps .stage-heading{padding-left:0;margin:11px 0 7px;font:bold 9.5pt Arial,sans-serif;letter-spacing:.5px;color:var(--accent);break-after:avoid}
 .component-note{font:italic var(--body-size)/1.3 Georgia,serif;margin:4px 0 10px}
+
+/* Keep hidden controls genuinely hidden, despite flex label styling. */
+.controls [hidden] { display: none !important; }
+.controls input[type=range] { width: 92px; }
+.controls select:focus-visible,.controls button:focus-visible,.controls input:focus-visible { outline: 2px solid #ffd2aa; outline-offset: 2px; }
+.ingredients.one-column > ul { columns: 1; }
+.ingredients.two-column > ul { columns: 2; }
+.related-section { break-inside: avoid; }
+.stage-heading { break-inside: avoid; }
