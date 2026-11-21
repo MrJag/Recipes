@@ -27,13 +27,19 @@ function pageShell(index, recipe) {
   if (index === 0) {
     const strip = el("aside", "photo-strip");
     strip.setAttribute("aria-label", recipe.photo ? "Recipe photograph" : "Photograph placeholder");
+    const placeholder = el("div", "photo-placeholder");
+    placeholder.appendChild(el("span", null, recipe.photo ? "IMAGE LOADING · PHOTO PREVIEW" : "PHOTO PLACEHOLDER · ORIGINAL IMAGE NEEDED"));
+    strip.appendChild(placeholder);
     if (recipe.photo) {
-      // Relative paths must point to images committed to this private project.
-      strip.style.backgroundImage = "url(" + JSON.stringify(recipe.photo).slice(1,-1) + ")";
-    } else {
-      const placeholder = el("div", "photo-placeholder");
-      placeholder.appendChild(el("span", null, "PHOTO PLACEHOLDER · ORIGINAL IMAGE NEEDED"));
-      strip.appendChild(placeholder);
+      // Show a readable fallback if an asset is missing or still awaiting upload.
+      const photo = el("img", "strip-image");
+      photo.alt = "";
+      photo.decoding = "async";
+      photo.onload = () => { photo.hidden = false; };
+      photo.onerror = () => { photo.hidden = true; };
+      photo.hidden = true;
+      photo.src = recipe.photo;
+      strip.appendChild(photo);
     }
     page.appendChild(strip);
   } else {
