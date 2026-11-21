@@ -7,8 +7,8 @@
   "servings": "8",
   "prepTime": "30 minutes",
   "cookTime": "2 hours",
-  "photo": "./public/images/latvian-stew-placeholder.svg",
-  "photoStatus": "temporary-generated-placeholder",
+  "photo": "./public/images/latvian-stew.jpg",
+  "photoStatus": "awaiting-binary-upload",
   "headnote": "This recipe is inspired by the Latvian Stew from the pages of “A Gentleman in Moscow”, by Amor Towles, where “... the onions thoroughly caramelized, the pork slowly braised, and the apricots briefly stewed, the three ingredients came together in a sweet and smoky medley that simultaneously suggested the comfort of a snowed-in tavern and the jangle of a Gypsy tambourine.” Count Alexander Rustov goes on to recommend pairing with a Georgian Mukuzani red wine and I couldn’t agree more.",
   "ingredientGroups": [
     {
