@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Private Family Cookbook — Print Preview</title>
+<link rel="stylesheet" href="./src/styles/cookbook.css">
+<link rel="stylesheet" href="./src/styles/editor.css">
+<script defer src="./src/scripts/cookbook.js"></script>
+</head>
+<body>
+<header class="toolbar">
+  <div class="toolbar-heading">
+    <strong>Family Cookbook <small>v0.5 · Private local preview</small></strong>
+    <span>Print preview — US Letter</span>
+  </div>
+  <div class="controls">
+    <label>Recipe <select id="recipe">
+      <option value="recipes/russian/latvian-stew.json">Latvian Stew</option>
+      <option value="recipes/italian/rosemary-focaccia.json">Rosemary Focaccia</option>
+      <option value="recipes/caribbean/caribbean-green-seasoning.json">Caribbean Green Seasoning</option>
+    </select></label>
+    <label>Photo width <input id="photoWidth" type="range" min="22" max="34" value="28" step="1"> <output id="photoWidthValue">28%</output></label>
+    <label>Font size <input id="fontSize" type="range" min="9" max="11.5" step=".25" value="10"> <output id="fontSizeValue">10 pt</output></label>
+    <label>Step spacing <input id="stepGap" type="range" min="3" max="14" value="8" step="1"> <output id="stepGapValue">8px</output></label>
+    <label>Print mode <select id="printMode"><option value="home">Home near-edge</option><option value="commercial">Commercial edge preview</option></select></label>
+    <button id="printButton" type="button">Print / Save PDF</button>
+  </div>
+  <div class="status" id="status" role="status">Loading recipe…</div>
+</header>
+<main id="pages" aria-label="Paginated recipe preview"></main>
+</body>
+</html>
