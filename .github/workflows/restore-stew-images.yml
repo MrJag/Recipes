@@ -1,0 +1,46 @@
+name: Restore cookbook images as binary files
+on:
+  push:
+    paths:
+      - .github/workflows/restore-stew-images.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install image decoder
+        run: python3 -m pip install --user Pillow
+      - name: Decode previous embedded photo and create real JPEG and PNG
+        run: |
+          python3 - <<'PY'
+          import re, base64
+          from io import BytesIO
+          from pathlib import Path
+          from PIL import Image
+          svg = Path('public/images/latvian-stew-placeholder.svg').read_text()
+          encoded = re.search(r'data:image/jpeg;base64,([^"\s]+)', svg)
+          if not encoded:
+              raise SystemExit('Embedded JPEG unavailable; not committing empty images.')
+          original = base64.b64decode(encoded.group(1), validate=True)
+          im = Image.open(BytesIO(original)).convert('RGB')
+          im.load()
+          Path('public/images').mkdir(parents=True, exist_ok=True)
+          Path('assets/masters').mkdir(parents=True, exist_ok=True)
+          im.save('public/images/latvian-stew.jpg', format='JPEG', quality=90, optimize=True)
+          im.save('assets/masters/latvian-stew-master.png', format='PNG', optimize=True)
+          print('Reconstructed', im.size, 'image. Note: source was the low-resolution SVG embedded JPEG.')
+          assert Path('public/images/latvian-stew.jpg').stat().st_size > 1000
+          assert Path('assets/masters/latvian-stew-master.png').stat().st_size > 1000
+          PY
+      - name: Commit actual binary images
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/images/latvian-stew.jpg assets/masters/latvian-stew-master.png
+          git commit -m 'Commit binary Latvian Stew JPEG and PNG (low-resolution source)'
+          git push
