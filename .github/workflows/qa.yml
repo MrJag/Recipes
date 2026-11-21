@@ -1,0 +1,18 @@
+name: Cookbook QA
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check renderer syntax
+        run: node --check src/scripts/cookbook.js
+      - name: Validate cookbook structure and images
+        run: node qa/check.mjs
