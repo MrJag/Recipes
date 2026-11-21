@@ -30,8 +30,13 @@ for (const file of recipePaths) {
   }
   if (recipe.photo) {
     const imagePath = recipe.photo.replace(/^\.\//, '');
-    good(fs.existsSync(imagePath), file + ': photo file missing: ' + imagePath);
-    if (imagePath.endsWith('.svg')) {
+    const exists = fs.existsSync(imagePath);
+    if (!exists && recipe.photoStatus === 'awaiting-binary-upload') {
+      warnings.push(file + ': prepared JPEG not yet uploaded to ' + imagePath);
+    } else {
+      good(exists, file + ': photo file missing: ' + imagePath);
+    }
+    if (exists && imagePath.endsWith('.svg')) {
       const source = read(imagePath);
       const jpegBase64 = source.match(/data:image\/jpeg;base64,([^"]+)/)?.[1];
       good(Boolean(jpegBase64), file + ': SVG lacks embedded JPEG');
