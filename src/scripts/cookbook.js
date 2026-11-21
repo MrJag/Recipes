@@ -8,6 +8,8 @@ let currentRecipe = null;
 let sourceRecipe = null;
 let lastPageCount = 0;
 let renderPending = false;
+let loadSequence = 0;
+let photoWarning = "";
 
 function el(tag, className, text) {
   const node = document.createElement(tag);
@@ -251,7 +253,7 @@ function render(recipe) {
     statusEl.replaceChildren(warning);
   } else {
     statusEl.textContent = recipe.title + " · " + result.pages + " page(s) · photo on page 1 only · " +
-      (density ? "auto-tightened to avoid spillover" : "balanced layout");
+      (density ? "auto-tightened to avoid spillover" : "balanced layout") + (photoWarning ? " · ⚠ " + photoWarning : "");
   }
   return result;
 }
@@ -264,17 +266,35 @@ function requestRender() {
   });
 }
 async function loadRecipe() {
+  const requestId = ++loadSequence;
   const file = byId("recipe").value;
   statusEl.textContent = "Loading " + file + " …";
   try {
     const response = await fetch("./" + file, {cache:"no-store"});
     if (!response.ok) throw new Error("HTTP " + response.status);
     const recipe = await response.json();
+    if (requestId !== loadSequence) return; // Ignore stale responses from previous selections.
     if (!recipe.title || !Array.isArray(recipe.ingredientGroups) || !Array.isArray(recipe.steps)) throw new Error("Invalid recipe structure");
     sourceRecipe = recipe;
+    photoWarning = "";
+    if (recipe.photo) {
+      const probe = new Image();
+      probe.onload = () => {
+        if (requestId !== loadSequence) return;
+        photoWarning = probe.naturalWidth < 250 ? "Photo is low resolution (" + probe.naturalWidth + "px wide)" : "";
+        requestRender();
+      };
+      probe.onerror = () => {
+        if (requestId !== loadSequence) return;
+        photoWarning = "Photo failed to load";
+        requestRender();
+      };
+      probe.src = recipe.photo;
+    }
     setupVariants(recipe);
     requestRender();
   } catch (error) {
+    if (requestId !== loadSequence) return;
     statusEl.textContent = "Unable to load recipe: " + error.message + ". Run a local HTTP server; opening index.html directly may block JSON fetches.";
   }
 }
