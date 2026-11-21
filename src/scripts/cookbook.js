@@ -72,6 +72,7 @@ function buildIngredients(groups) {
   if (single) {
     const ul = el("ul");
     for (const item of groups[0].items || []) ul.appendChild(el("li", null, item));
+    wrap.classList.add(groups[0].items?.length >= 9 ? "two-column" : "one-column");
     wrap.appendChild(ul);
   } else {
     wrap.classList.add("grouped");
@@ -130,41 +131,52 @@ function attachWithFit(page, node) {
   }
   return true;
 }
-function render(recipe, compact = false) {
-  pagesEl.replaceChildren();
-  ROOT.style.setProperty("--step-gap", (compact ? Math.max(3, Number(byId("stepGap").value)-3) : Number(byId("stepGap").value)) + "px");
-  ROOT.style.setProperty("--body-size", (Number(byId("fontSize").value) - (compact ? .2 : 0)) + "pt");
-  ROOT.style.setProperty("--strip-fraction", (Number(byId("photoWidth").value)/100).toFixed(2));
+function setLayout(density) {
+  const stepGap = Number(byId("stepGap").value);
+  const fontSize = Number(byId("fontSize").value);
+  ROOT.style.setProperty("--step-gap", Math.max(3, stepGap - density * 2) + "px");
+  ROOT.style.setProperty("--body-size", Math.max(9, fontSize - density * 0.15) + "pt");
+  ROOT.style.setProperty("--section-gap", (13 - density * 2) + "px");
+  ROOT.style.setProperty("--strip-fraction", (Number(byId("photoWidth").value) / 100).toFixed(2));
   document.body.classList.toggle("commercial", byId("printMode").value === "commercial");
+}
+function paginate(recipe, density) {
+  setLayout(density);
+  pagesEl.replaceChildren();
   let page = pageShell(0, recipe);
-  page.content.appendChild(buildHeader(recipe));
-  page.content.appendChild(buildIngredients(allIngredientGroups(recipe)));
+  const header = buildHeader(recipe);
+  const ingredients = buildIngredients(allIngredientGroups(recipe));
+  page.content.append(header, ingredients);
   let overflow = !fits(page);
   const stages = [
-    ...(recipe.components || []).map(c => ({title: c.title, steps: c.steps || [], note: c.notes})),
-    {title: recipe.components?.length ? "Main method" : null, steps: recipe.steps || []}
+    ...(recipe.components || []).map(c => ({title:c.title, steps:c.steps || [], note:c.notes})),
+    {title:recipe.components?.length ? "Main method" : null, steps:recipe.steps || []}
   ];
   let stepNo = 1;
   for (const stage of stages) {
-    if (stage.title) {
-      ensureSteps(page);
-      const heading = el("li", "stage-heading", stage.title);
-      page.steps.appendChild(heading);
-      if (!fits(page)) {
-        heading.remove();
-        page = pageShell(pagesEl.children.length, recipe);
-        ensureSteps(page);
-        page.steps.appendChild(heading);
-        overflow ||= !fits(page);
-      }
-    }
+    let pendingHeading = stage.title ? el("li", "stage-heading", stage.title) : null;
     for (const step of stage.steps) {
       ensureSteps(page);
-      const node = stepNode(step, stepNo++);
-      if (!attachWithFit(page, node)) {
+      const stepElement = stepNode(step, stepNo++);
+      if (pendingHeading) page.steps.appendChild(pendingHeading);
+      page.steps.appendChild(stepElement);
+      if (!fits(page)) {
+        stepElement.remove();
+        if (pendingHeading) pendingHeading.remove();
         page = pageShell(pagesEl.children.length, recipe);
         ensureSteps(page);
-        page.steps.appendChild(node);
+        if (pendingHeading) page.steps.appendChild(pendingHeading);
+        page.steps.appendChild(stepElement);
+        overflow ||= !fits(page);
+      }
+      pendingHeading = null;
+    }
+    if (pendingHeading) {
+      ensureSteps(page);
+      if (!attachWithFit(page, pendingHeading)) {
+        page = pageShell(pagesEl.children.length, recipe);
+        ensureSteps(page);
+        page.steps.appendChild(pendingHeading);
         overflow ||= !fits(page);
       }
     }
@@ -193,25 +205,45 @@ function render(recipe, compact = false) {
       overflow ||= !fits(page);
     }
   }
-  // Automatic density adjustment for a tiny page-2 spill, not for substantial content.
-  if (!compact && pagesEl.children.length === 2) {
-    const last = pagesEl.lastElementChild;
-    const extras = last.querySelectorAll(".steps > li, .related-section, .source");
-    if (extras.length <= 1 && last.querySelector(".related-section") === null) {
-      const normalPages = pagesEl.children.length;
-      const compactResult = render(recipe, true);
-      if (compactResult.pages < normalPages) return compactResult;
-      return render(recipe, true); // Favor slightly tighter version, if still readable.
+  return {pages:pagesEl.children.length, overflow};
+}
+function tinySpill() {
+  if (pagesEl.children.length < 2) return false;
+  const last = pagesEl.lastElementChild;
+  const steps = [...last.querySelectorAll(".steps > li:not(.stage-heading)")];
+  if (last.querySelector(".related-section") || last.querySelector(".component-note")) return false;
+  const source = last.querySelector(".source");
+  if (steps.length > 1) return false;
+  const pxLine = Number(byId("fontSize").value) * 96 / 72 * 1.3;
+  const remainingHeight = steps.reduce((n, element) => n + element.offsetHeight, 0) + (source ? source.offsetHeight : 0);
+  return remainingHeight > 0 && remainingHeight <= pxLine * 2.5;
+}
+function render(recipe) {
+  const balanced = paginate(recipe, 0);
+  let result = balanced;
+  let density = 0;
+  // Preserve the balanced layout unless a small spacing change actually saves a page.
+  if (!balanced.overflow && balanced.pages > 1 && tinySpill()) {
+    for (const trial of [1, 2]) {
+      const candidate = paginate(recipe, trial);
+      if (!candidate.overflow && candidate.pages < balanced.pages) {
+        result = candidate;
+        density = trial;
+        break;
+      }
     }
+    if (density === 0) result = paginate(recipe, 0);
   }
-  if (overflow) {
-    const warning = el("div", "overflow-warning", "A section exceeds the page area; review this recipe manually.");
+  lastPageCount = result.pages;
+  if (result.overflow) {
+    const warning = el("div", "overflow-warning",
+      "Some recipe content exceeds a page. The source is intact; choose a smaller photo width or font, or review this layout.");
     statusEl.replaceChildren(warning);
   } else {
-    statusEl.textContent = recipe.title + " · " + pagesEl.children.length + " page(s) · first-page photo only · " + (compact ? "minor overflow adjustment" : "balanced layout");
+    statusEl.textContent = recipe.title + " · " + result.pages + " page(s) · photo on page 1 only · " +
+      (density ? "auto-tightened to avoid spillover" : "balanced layout");
   }
-  lastPageCount = pagesEl.children.length;
-  return {pages: lastPageCount, overflow};
+  return result;
 }
 function requestRender() {
   if (!currentRecipe || renderPending) return;
