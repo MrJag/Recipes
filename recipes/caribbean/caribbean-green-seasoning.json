@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "0.1",
+  "id": "caribbean-green-seasoning",
+  "title": "Caribbean Green Seasoning",
+  "category": "Caribbean",
+  "servings": null,
+  "prepTime": null,
+  "cookTime": null,
+  "photo": null,
+  "headnote": null,
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "½ cup olive oil",
+        "6 scallions",
+        "2 yellow onions (medium)",
+        "2 shallots (or half a red onion)",
+        "8 baby bell peppers (traditionally Pimento peppers)",
+        "15-20 cloves garlic",
+        "2 inch of ginger (same volume as garlic)",
+        "1 bunch of parsley (about 1 cup chopped)",
+        "1 bunch of thyme (about 25-30 sprigs)",
+        "15-20 leaves of shado beni (culantro) (Substitute with 2 bunches of cilantro)",
+        "2 Tbsp salt",
+        "½ tsp pepper"
+      ]
+    }
+  ],
+  "steps": [
+    "Roughly chop all ingredients and blend with a food processor using the pulse method until a rough puree."
+  ],
+  "relatedApplications": [
+    {
+      "title": "Grilled Chicken with honey glaze",
+      "method": "Combine marinade and chicken then refrigerate for 1-2 hours. Grill the chicken until nearly done then brush with the glaze and brown until set, about 1 minute per side.",
+      "ingredientGroups": [
+        {
+          "title": "Marinade",
+          "items": [
+            "¼ cup caribbean green seasoning",
+            "3-4 Tbsp yogurt",
+            "Salt and pepper (season the meat to taste as you normally would)",
+            "2 lbs of chicken"
+          ]
+        },
+        {
+          "title": "Glaze",
+          "items": [
+            "1 lemon, juiced",
+            "1 tsp dijon mustard",
+            "1 Tbsp honey"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Crispy potatoes",
+      "method": "Cut 1 lb yukon gold potatoes into ½-¾” chunks. Parboil until it just starts to get tender, around 10 minutes. Drain well and toss with ¼ cup caribbean green seasoning, ½ tsp crushed red pepper, and salt & pepper to taste. The shaking/tossing process should rough up the exterior to create a mashed potato texture on the outside. Pan fry or drizzle with olive oil and roast on a sheet pan for 40 minutes at 450F (400F convection), flipping halfway through."
+    }
+  ],
+  "sourceNote": "Adapted from https://www.youtube.com/watch?v=fLBztzwJLAE and https://www.youtube.com/watch?v=iE_PdL50TWo.",
+  "sourceDriveUrl": "https://docs.google.com/document/d/1CF-x0rnpXAabMfSgWiF5Hc94XVukfc4ht1RVmhfdhPE/edit",
+  "reviewFlags": [
+    "Yield missing",
+    "Related applications retained in original entry; candidate standalone recipes"
+  ]
+}
