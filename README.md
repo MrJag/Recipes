@@ -1,6 +1,6 @@
 # Recipes
 
-Private family cookbook project.
+Family cookbook project (temporarily public for GitHub Pages preview).
 
 ## Goals
 - Preserve the original recipes in Google Drive while migrating them into structured recipe files.
@@ -8,12 +8,12 @@ Private family cookbook project.
 - Produce US Letter (8.5 × 11 in) print layouts using editable HTML and CSS.
 - Keep all ingredients in one contiguous block, optionally using two columns.
 - Use a 28% right-edge photographic strip **on page 1 only**. Continuation pages use full-width text.
-- Keep recipes private; do not publish via public GitHub Pages.
+- Return to private, authenticated family hosting after the temporary public preview.
 
 ## Current status
 - `src/styles/cookbook.css`: editable editorial right-strip print design (v0.6).
 - `index.html` and `src/scripts/cookbook.js`: browser recipe selector, layout controls, and automatic pagination.\n- Five example recipes imported as JSON from Google Drive, preserving source references and review flags.\n- The layout is under test; page-fit is checked in-browser and is not yet validated across every recipe.
-- Original food photography has not yet been imported. The page-1 photo strip displays a clear placeholder until an image is supplied.
+- Latvian Stew has its verified original 263 × 1096 JPEG web image and lossless PNG master committed. Other recipes use placeholders until imagery is added.
 
 ## Proposed folders
 - `recipes/`: structured, versioned recipe content
@@ -35,4 +35,4 @@ The repository is currently public to support a temporary GitHub Pages preview. 
 
 Use a PNG master at `assets/masters/<recipe-slug>.png` and a web JPG at `public/images/<recipe-slug>.jpg`. Recipe JSON `photo` points to the JPG. The PNG is retained for re-exports and later print-production work. Converting an existing JPG to PNG cannot restore details already discarded by JPG encoding.
 
-**Latvian Stew:** replacement assets have been prepared, but the GitHub connection supports UTF-8 text writes only. The two binary images must be uploaded through GitHub's file upload interface (or Git CLI) before the published JPG resolves. The browser shows a placeholder if the image is not yet uploaded. See `docs/images.md` for instructions.
+**Latvian Stew:** The original JPEG and PNG are committed as binary Git blobs and their Git SHAs have been verified against local image files. See `docs/images.md` for paths and asset policy.
