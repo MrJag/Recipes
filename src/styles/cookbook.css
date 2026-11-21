@@ -5,6 +5,7 @@
   --safe-margin: 0.38in;
   --home-photo-inset: 0.19in;
   --strip-fraction: .28;
+  --photo-width: 2.1672in;
   --photo-gap: .18in;
   --paper: #fcf9f4;
   --ink: #251e1a;
@@ -24,8 +25,8 @@ body { margin: 0; background: #e7e3df; color: var(--ink); font-family: var(--fon
 #pages { display: flex; flex-direction: column; align-items: center; gap: 22px; padding: 24px 12px 48px; }
 .sheet { width: var(--page-width); height: var(--page-height); position: relative; overflow: hidden; flex: none; background: var(--paper); box-shadow: 0 5px 22px #0002; break-after: page; }
 .sheet:last-child { break-after: auto; }
-.photo-strip { position: absolute; right: var(--home-photo-inset); top: 0; bottom: 0; width: calc((100% - 2 * var(--safe-margin)) * var(--strip-fraction)); background-position: center; background-size: cover; }
-.sheet.has-photo .content { right: calc(var(--home-photo-inset) + (100% - 2 * var(--safe-margin)) * var(--strip-fraction) + var(--photo-gap)); }
+.photo-strip { position: absolute; right: var(--home-photo-inset); top: 0; bottom: 0; width: var(--photo-width); background-position: center; background-size: cover; }
+.sheet.has-photo .content { right: calc(var(--home-photo-inset) + var(--photo-width) + var(--photo-gap)); }
 .content { position: absolute; top: var(--safe-margin); bottom: var(--safe-margin); left: var(--safe-margin); right: var(--safe-margin); display: flex; flex-direction: column; min-height: 0; }
 .category { font: 700 9pt var(--font-sans); letter-spacing: 2px; color: var(--accent); display: flex; align-items: center; gap: 12px; margin: 0 0 13px; }
 .category::after { content: ""; height: 1px; background: var(--accent); flex: 1; }
