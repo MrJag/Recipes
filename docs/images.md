@@ -9,15 +9,14 @@ We maintain a lossless PNG master and an optimized JPG web derivative for each r
 
 **Current Latvian Stew original:** 263 × 1096 pixels. PNG conversion is lossless with respect to the available source image but does not add detail; commission/re-render a higher-resolution original before final printing.
 
-## Upload to GitHub
+## GitHub status
 
-The connected GitHub API only accepts UTF-8 text for file creates/updates, so binary files are intentionally not passed through the SVG/base64 workaround.
+Both files were committed as real binary Git blobs in commit `6c2d1a02b5e7526399b0534dbb5960abc217e4c5`. Their Git blob hashes matched those calculated from the original local files:
 
-1. From the GitHub repository, choose **Add file → Upload files**.
-2. Upload the PNG to `assets/masters/` and the JPG to `public/images/`. The GitHub web interface allows you to first navigate to or create those folders.
-3. Commit both binary files to `main`.
-4. Verify the JPG directly at `https://mrjag.github.io/Recipes/public/images/latvian-stew.jpg`.
-5. Reload `https://mrjag.github.io/Recipes/` and select Latvian Stew. The photo strip is shown on page 1 only.
+- Web JPG: `649d6d2110204099b71d7704e5754707f6b0524d` (113,232 bytes)
+- Master PNG: `b8f814cd8a6869d42c4b9ff23c33645d65091477` (520,970 bytes)
+
+View the JPG at `https://mrjag.github.io/Recipes/public/images/latvian-stew.jpg`. Reload the cookbook and select Latvian Stew to see the page-1 photo strip.
 
 Avoid converting an image repeatedly between JPEG and PNG. Keep the master and generate new derivatives from it.
 
