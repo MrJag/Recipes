@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "0.1",
+  "id": "latvian-stew",
+  "title": "Latvian Stew",
+  "subtitle": "Braised Pork and Apricot",
+  "category": "Russian",
+  "servings": "8",
+  "prepTime": "30 minutes",
+  "cookTime": "2 hours",
+  "photo": null,
+  "photoStatus": "needs-original-photo",
+  "headnote": "This recipe is inspired by the Latvian Stew from the pages of “A Gentleman in Moscow”, by Amor Towles, where “... the onions thoroughly caramelized, the pork slowly braised, and the apricots briefly stewed, the three ingredients came together in a sweet and smoky medley that simultaneously suggested the comfort of a snowed-in tavern and the jangle of a Gypsy tambourine.” Count Alexander Rustov goes on to recommend pairing with a Georgian Mukuzani red wine and I couldn’t agree more.",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "4-5 lb pork shoulder, trimmed and cut into 1–1 ½” cubes. Retain the bone if included.",
+        "salt and pepper",
+        "~2-3 Tbsp of fat rendered from pork shoulder trimmings.",
+        "2 large onion, cut into ½” chunks",
+        "12 garlic cloves, minced",
+        "5 medium carrots, rangiri cut",
+        "1.5 tsp Aleppo chili",
+        "1 tsp ground cinnamon",
+        "1 tsp Sweet Hungarian Paprika",
+        "1 tsp ground coriander seeds",
+        "1 tsp dried oregano",
+        "4 Tbsp tomato paste",
+        "2 cup dunkel beer (or similar dark beer such as porter or stout)",
+        "4 cups water",
+        "1.5 cup dried apricots, quartered",
+        "½ cup dates, cut into ⅙ chunks",
+        "¼ cup fresh parsley, minced for garnish",
+        "Crusty Bread"
+      ]
+    }
+  ],
+  "steps": [
+    "Preheat the oven to 350F. Prep vegetables and dry spices.",
+    "Trim large segments of fat and silverskin from the pork shoulder. Cut into 1” cubes and toss with 1 Tbsp olive oil and season with a generous amount of salt and pepper.",
+    "Meanwhile, start rendering the trimmed pork fat in a large dutch oven over medium low heat.",
+    "Grill the pork chunks over an open flame until it develops a golden crust and is licked with char marks, approximately 6-8 minutes, then set aside. (Alternatively, fry the pork in batches using the rendered fat or some oil.)",
+    "After rendering 2-3 Tbsp of fat, remove the pork trimmings and caramelize the onions in the dutch oven for 30 minutes over medium-low heat.",
+    "When the onions take on a golden to amber-brown color, add the garlic and tomato paste and fry for 2-3 more minutes, stirring frequently to prevent the mixture from burning.",
+    "Add the grilled meat chunks, any rendered juices, and the dry spices then fry for an additional minute.",
+    "Deglaze with the beer then add half the apricot and date mixture and enough water to almost cover the ingredients, approximately 4 cups.",
+    "Increase the heat to medium-high, stirring the mixture to ensure the spices are incorporated into liquids and the ingredients are equally distributed.",
+    "When the stew reaches a slow simmer, cover with a lid and transfer to the oven to bake for 70 minutes.",
+    "Sprinkle the carrots, remaining apricots, and dates onto the stew, then cover again and bake for an additional 20 minutes.",
+    "The stew is done when the pork chunks pull apart easily with two forks. Garnish with fresh parsley and serve with crusty bread, some Georgian Mukuzani red wine, and a side of boiled or roasted po tatoes."
+  ],
+  "sourceNote": "Inspired by “A Gentleman in Moscow” by Amor Towles and adapted from the original recipe in Pork Stew with Dried Apricots, by Saveur Magazine, 2005.",
+  "sourceDriveUrl": "https://docs.google.com/document/d/1ErJ1p7dsb1Hg_spSkcZ9XSaW8FUhJislFL86zJrt06Y/edit",
+  "reviewFlags": [
+    "Check original '⅙ chunks' for dates",
+    "Check apparent 'po tatoes' typo",
+    "Step uses 1 Tbsp olive oil but it is not in the ingredient list",
+    "Source title/URL should be reviewed"
+  ]
+}
