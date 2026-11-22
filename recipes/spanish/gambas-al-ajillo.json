@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "0.1",
+  "id": "gambas-al-ajillo",
+  "title": "Gambas al Ajillo",
+  "category": "Spanish",
+  "status": "draft",
+  "photo": "./public/images/gambas-al-ajillo.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "Garlic oil",
+        "Fresh garlic, sliced",
+        "Shrimp",
+        "Kosher salt",
+        "Red pepper flakes",
+        "Brandy",
+        "Fresh parsley, chopped",
+        "Baguette bread, sliced"
+      ]
+    }
+  ],
+  "steps": [
+    "Heat garlic oil and sliced garlic over high heat until the garlic is golden brown.",
+    "Add shrimp, kosher salt and red pepper flakes. Cook until the shrimp are cooked through without overcooking, about 1 minute.",
+    "Deglaze with brandy and cook off the alcohol. Add parsley and sauté to coat the shrimp. Cook the remaining pan liquid until emulsified and pour it over the shrimp.",
+    "Meanwhile, grill the sliced bread until grill marks form. Serve with the shrimp."
+  ],
+  "reviewFlags": [
+    "The source does not specify ingredient quantities or how the garlic oil is prepared. Confirm the amounts and oil before cooking."
+  ],
+  "headnote": "The source does not specify ingredient quantities or how the garlic oil is prepared. Confirm the amounts and oil before cooking. Source: Chef John Sumner, Bulla Gastrobar Restaurante."
+}
