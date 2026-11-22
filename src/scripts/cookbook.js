@@ -349,7 +349,33 @@ function selectRecipeVersion() {
   requestRender();
 }
 byId("variant").addEventListener("change", selectRecipeVersion);
-byId("recipe").addEventListener("change", loadRecipe);
+const recipeSelect = byId("recipe");
+const categorySelect = byId("recipeCategory");
+const recipeOptions = Array.from(recipeSelect.options, option => ({
+  option,
+  category: option.value.split("/")[1]
+}));
+const categories = [...new Set(recipeOptions.map(entry => entry.category))].sort();
+for (const category of categories) {
+  const label = category.replace(/(^|-)([a-z])/g, (_, separator, letter) =>
+    (separator ? " " : "") + letter.toUpperCase()
+  );
+  categorySelect.add(new Option(label, category));
+}
+categorySelect.addEventListener("change", () => {
+  const previous = recipeSelect.value;
+  const category = categorySelect.value;
+  const options = recipeOptions
+    .filter(entry => !category || category === entry.category)
+    .map(entry => entry.option);
+  recipeSelect.replaceChildren(...options);
+  if (options.some(option => option.value === previous)) {
+    recipeSelect.value = previous;
+  } else {
+    loadRecipe();
+  }
+});
+recipeSelect.addEventListener("change", loadRecipe);
 for (const id of ["photoWidth","fontSize","stepGap"]) {
   byId(id).addEventListener("input", () => {
     byId(id+"Value").textContent = byId(id).value + (id === "photoWidth" ? "%" : id === "fontSize" ? " pt" : "px");
