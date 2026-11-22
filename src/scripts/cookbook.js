@@ -372,6 +372,7 @@ categorySelect.addEventListener("change", () => {
   if (options.some(option => option.value === previous)) {
     recipeSelect.value = previous;
   } else {
+    recipeSelect.selectedIndex = 0;
     loadRecipe();
   }
 });
