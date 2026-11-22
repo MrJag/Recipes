@@ -34,7 +34,7 @@ The repository is currently public to support a temporary GitHub Pages preview. 
 
 ## Recipe layout QA checklist
 
-- Check category filtering and recipe selection in the sidebar. On narrow screens, verify navigation appears above the preview. Confirm the sidebar stays out of print.
+- Check that sidebar categories expand and collapse, recipe buttons open the correct recipe, and named versions can be selected under their recipe. On narrow screens, verify navigation appears above the preview. Confirm the sidebar stays out of print.
 - Check the live preview and browser print preview. Confirm every page fits and only page 1 has a side photo.
 - Check the ingredient divider in Greek Marinade (plain two-column ingredients) and Japanese Curry (grouped ingredients). Confirm it is centered between the columns, with clear space around bullets and wrapped text. Repeat at the default and widest photo settings. Verify a single-column list has no divider.
 - Verify alternative methods restart at step 1 in each section (Greek Marinade Chicken and Lamb). Verify sequential methods continue numbering across sections and page breaks (Japanese Curry and Latvian Stew).

@@ -290,9 +290,12 @@ function requestRender() {
     render(currentRecipe);
   });
 }
-async function loadRecipe() {
+async function loadRecipe(button) {
   const requestId = ++loadSequence;
-  const file = byId("recipe").value;
+  const file = button.dataset.recipe;
+  sidebar.querySelector("[aria-current]")?.removeAttribute("aria-current");
+  sidebar.querySelector(".recipe-versions")?.remove();
+  button.setAttribute("aria-current", "true");
   statusEl.textContent = "Loading " + file + " …";
   try {
     const response = await fetch("./" + file, {cache:"no-store"});
@@ -316,27 +319,38 @@ async function loadRecipe() {
       };
       probe.src = recipe.photo;
     }
-    setupVariants(recipe);
-    requestRender();
+    setupVariants(recipe, button);
   } catch (error) {
     if (requestId !== loadSequence) return;
     statusEl.textContent = "Unable to load recipe: " + error.message + ". Run a local HTTP server; opening index.html directly may block JSON fetches.";
   }
 }
-function setupVariants(recipe) {
-  const select = byId("variant");
-  const control = byId("variantControl");
-  select.replaceChildren();
-  control.hidden = !Array.isArray(recipe.variants) || recipe.variants.length === 0;
-  if (!control.hidden) {
-    select.appendChild(new Option("Original draft", "-1"));
-    for (let i = 0; i < recipe.variants.length; i++) select.appendChild(new Option(recipe.variants[i].title, String(i)));
-    select.value = "0"; // Default to first complete named version; retain draft as selectable.
+function setupVariants(recipe, recipeButton) {
+  if (!recipe.variants?.length) {
+    selectRecipeVersion(-1);
+    return;
   }
-  selectRecipeVersion();
+
+  const versions = el("div", "recipe-versions");
+  versions.setAttribute("role", "group");
+  versions.setAttribute("aria-label", recipeButton.textContent + " versions");
+  const titles = ["Original draft", ...recipe.variants.map(variant => variant.title)];
+  titles.forEach((title, position) => {
+    const index = position - 1;
+    const button = el("button", null, title);
+    button.type = "button";
+    button.setAttribute("aria-pressed", String(index === 0));
+    button.addEventListener("click", () => {
+      versions.querySelector('[aria-pressed="true"]').setAttribute("aria-pressed", "false");
+      button.setAttribute("aria-pressed", "true");
+      selectRecipeVersion(index);
+    });
+    versions.appendChild(button);
+  });
+  recipeButton.after(versions);
+  selectRecipeVersion(0);
 }
-function selectRecipeVersion() {
-  const index = Number(byId("variant").value);
+function selectRecipeVersion(index) {
   const variant = sourceRecipe?.variants?.[index];
   currentRecipe = variant ? {
     ...sourceRecipe,
@@ -348,35 +362,10 @@ function selectRecipeVersion() {
   } : sourceRecipe;
   requestRender();
 }
-byId("variant").addEventListener("change", selectRecipeVersion);
-const recipeSelect = byId("recipe");
-const categorySelect = byId("recipeCategory");
-const recipeOptions = Array.from(recipeSelect.options, option => ({
-  option,
-  category: option.value.split("/")[1]
-}));
-const categories = [...new Set(recipeOptions.map(entry => entry.category))].sort();
-for (const category of categories) {
-  const label = category.replace(/(^|-)([a-z])/g, (_, separator, letter) =>
-    (separator ? " " : "") + letter.toUpperCase()
-  );
-  categorySelect.add(new Option(label, category));
+const sidebar = document.querySelector(".recipe-sidebar");
+for (const button of sidebar.querySelectorAll("[data-recipe]")) {
+  button.addEventListener("click", () => loadRecipe(button));
 }
-categorySelect.addEventListener("change", () => {
-  const previous = recipeSelect.value;
-  const category = categorySelect.value;
-  const options = recipeOptions
-    .filter(entry => !category || category === entry.category)
-    .map(entry => entry.option);
-  recipeSelect.replaceChildren(...options);
-  if (options.some(option => option.value === previous)) {
-    recipeSelect.value = previous;
-  } else {
-    recipeSelect.selectedIndex = 0;
-    loadRecipe();
-  }
-});
-recipeSelect.addEventListener("change", loadRecipe);
 for (const id of ["photoWidth","fontSize","stepGap"]) {
   byId(id).addEventListener("input", () => {
     byId(id+"Value").textContent = byId(id).value + (id === "photoWidth" ? "%" : id === "fontSize" ? " pt" : "px");
@@ -386,4 +375,4 @@ for (const id of ["photoWidth","fontSize","stepGap"]) {
 byId("printMode").addEventListener("change", requestRender);
 byId("printButton").addEventListener("click", () => window.print());
 window.addEventListener("resize", requestRender);
-loadRecipe();
+loadRecipe(sidebar.querySelector("details[open] [data-recipe]"));
