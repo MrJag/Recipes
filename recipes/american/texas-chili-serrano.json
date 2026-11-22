@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "0.1",
+  "id": "texas-chili-serrano",
+  "title": "Texas Chili with Serrano and Tomatillo",
+  "category": "American",
+  "status": "draft",
+  "photo": "./public/images/texas-chili-serrano.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Beef and chile paste",
+      "items": [
+        "5 lb chuck roast, trimmed into 2-inch cubes",
+        "6 smoked pasilla (ancho) chile pods, deseeded (60 g)",
+        "8 tomatillos (weight unspecified)"
+      ]
+    },
+    {
+      "title": "Vegetables",
+      "items": [
+        "2 onions, roughly chopped (560 g)",
+        "6–8 serrano peppers, deseeded and chopped (80 g)",
+        "3–5 jalapeños (80 g)",
+        "1 poblano, roughly chopped (120 g)",
+        "9–12 garlic cloves, roughly chopped (1 head; 50 g)"
+      ]
+    },
+    {
+      "title": "Spices",
+      "items": [
+        "8 smoked habanero pods, deseeded and ground (6 g)",
+        "6 smoked árbol pods, deseeded and ground (3 g)",
+        "1 Tbsp cumin seeds, ground (7 g)",
+        "1 cup fresh oregano leaves, chopped",
+        "1½ Tbsp salt"
+      ]
+    },
+    {
+      "title": "Liquids",
+      "items": [
+        "3 (12 oz) bottles Shiner Bock",
+        "3 cups reserved ancho soaking water",
+        "1 tsp beef broth concentrate",
+        "3 Tbsp Worcestershire sauce"
+      ]
+    }
+  ],
+  "steps": [
+    "Stem, seed and remove veins from the dried ancho chiles. Cover with just enough boiling water to submerge and soak 30 minutes, reserving 3 cups soaking water.",
+    "Simmer tomatillos in boiling water for 6–8 minutes until soft. Pass the tomatillos and hydrated chiles through a food mill.",
+    "Heat a Dutch oven over high heat. Render some fat from the beef trimmings, sear beef in batches and set aside.",
+    "Add onion, garlic and poblano and sauté 5 minutes. Add ground habanero, árbol, cumin and salt; stir 30 seconds.",
+    "Add chile-tomatillo paste, Worcestershire, beer, chile water and beef concentrate. Bring to a boil and simmer 15 minutes. Blend with an immersion blender if desired.",
+    "Return beef and juices, cover and simmer over the lowest heat for 3 hours. Uncover and simmer about 1½ hours more, until meat falls apart.",
+    "Serve with cornbread, Fritos, cheddar, onion, cilantro or sour cream. For best flavor refrigerate overnight and reheat the next day."
+  ],
+  "reviewFlags": [
+    "The source lists jalapeños and serranos and fresh oregano, but does not say when to add them. Confirm the method before cooking."
+  ],
+  "headnote": "The source lists jalapeños and serranos and fresh oregano, but does not say when to add them. Confirm the method before cooking."
+}

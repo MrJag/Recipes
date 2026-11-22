@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "0.1",
+  "id": "kouign-amann",
+  "title": "Kouign-Amann",
+  "category": "Dessert",
+  "status": "draft",
+  "photo": "./public/images/kouign-amann.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Dough",
+      "items": [
+        "2 Tbsp European-style butter (30 g), melted and cooled, plus more for bowl",
+        "1 Tbsp active dry yeast (10 g)",
+        "3 Tbsp sugar (40 g)",
+        "1 tsp kosher salt (5 g)",
+        "3 cups all-purpose flour (400 g), plus more for dusting",
+        "¼ cup very warm water",
+        "¾ cup cold water"
+      ]
+    },
+    {
+      "title": "Butter block",
+      "items": [
+        "12 oz chilled unsalted European-style butter (340 g)",
+        "½ cup sugar (100 g)",
+        "1 tsp kosher salt (5 g)"
+      ]
+    },
+    {
+      "title": "Assembly",
+      "items": [
+        "All-purpose flour, for dusting",
+        "¾ cup sugar (150 g), divided",
+        "Nonstick vegetable oil spray"
+      ]
+    }
+  ],
+  "steps": [
+    "Butter a large bowl. Dissolve yeast in ¼ cup very warm water at 110–115° and let stand about 5 minutes, until foamy. Add sugar, salt, flour, melted butter and cold water; mix to a shaggy dough. Knead about 5 minutes, until soft and slightly tacky.",
+    "Place in the buttered bowl, cover and rise until doubled, 1–1½ hours. Punch down, knead lightly, cover and chill until doubled again, 45–60 minutes. Pat into a 6 × 6-inch square, wrap and freeze until very firm but not frozen, 30–35 minutes.",
+    "Beat butter-block ingredients on low about 3 minutes until uniform. Shape between parchment into a 12 × 6-inch rectangle ¼ inch thick, wrap and chill 25–30 minutes until firm but pliable.",
+    "Roll dough into a 19 × 7-inch rectangle. Place butter over the upper two-thirds; fold the lower third over the butter, then the upper third down. Seal the edges.",
+    "Rotate 90° counterclockwise, opening on the right. Roll to 24 × 8 inches, about ⅜ inch thick; fold in thirds. Wrap and freeze about 30 minutes until firm but not frozen, then refrigerate about 1 hour.",
+    "With the opening on the right, roll to 24 × 8 inches and fold in thirds. Rotate 90° counterclockwise and roll again to 24 × 8 inches. Sprinkle with 2 Tbsp sugar and fold in thirds. Wrap, freeze about 30 minutes, then refrigerate about 1 hour.",
+    "Roll slightly larger than 16 × 12 inches, trim to size and cut into 12 squares. Coat two 6-cup jumbo muffin pans with spray. Sprinkle the squares with ¼ cup sugar, press, turn and repeat with another ¼ cup. Fold corners to the center and place in muffin cups.",
+    "Cover and refrigerate 8–12 hours. Preheat oven to 375°. Sprinkle cold pastries with the remaining 2 Tbsp sugar and bake 25–30 minutes, until golden and deeply caramelized. Remove immediately to a rack and cool."
+  ],
+  "reviewFlags": [
+    "The source gives 110–115° for the yeast water and 375° for baking without specifying a temperature scale. Confirm the scale before cooking."
+  ],
+  "headnote": "The source gives 110–115° for the yeast water and 375° for baking without specifying a temperature scale. Confirm the scale before cooking. Adapted from Bon Appétit.",
+  "sourceNote": "Adapted from https://www.bonappetit.com/recipe/kouign-amann"
+}
