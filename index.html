@@ -5,19 +5,29 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Family Cookbook — Print Preview</title>
 <link rel="stylesheet" href="./src/styles/cookbook.css?v=0.6.6">
-<link rel="stylesheet" href="./src/styles/editor.css">
+<link rel="stylesheet" href="./src/styles/editor.css?v=0.7">
 <script defer src="./src/scripts/cookbook.js?v=0.6.8"></script>
 </head>
 <body>
 <header class="toolbar">
   <div class="toolbar-heading">
-    <strong>Family Cookbook <small>v0.6 · CSS print preview</small></strong>
+    <strong>Family Cookbook <small>v0.7 · CSS print preview</small></strong>
     <span>US Letter · photo strip on page 1 only</span>
   </div>
   <div class="controls">
+    <label>Photo width <input id="photoWidth" type="range" min="22" max="34" value="28" step="1"> <output id="photoWidthValue">28%</output></label>
+    <label>Font size <input id="fontSize" type="range" min="9" max="11.5" step=".25" value="10"> <output id="fontSizeValue">10 pt</output></label>
+    <label>Step spacing <input id="stepGap" type="range" min="3" max="14" value="8" step="1"> <output id="stepGapValue">8px</output></label>
+    <label>Photo placement <select id="printMode"><option value="home">Inset photo</option><option value="commercial" selected>Edge-to-edge photo</option></select></label>
+    <button id="printButton" type="button">Print / Save PDF</button>
+  </div>
+  <div class="status" id="status" role="status">Loading recipe…</div>
+</header>
+<div class="cookbook-layout">
+  <nav class="recipe-sidebar" aria-label="Browse recipes">
     <label>Category <select id="recipeCategory"><option value="">All categories</option></select></label>
-    <label>Recipe <select id="recipe">
-      <option value="recipes/russian/latvian-stew.json">Latvian Stew</option>
+    <label>Recipe <select id="recipe" size="8">
+      <option value="recipes/russian/latvian-stew.json" selected>Latvian Stew</option>
       <option value="recipes/italian/rosemary-focaccia.json">Rosemary Focaccia</option>
       <option value="recipes/caribbean/caribbean-green-seasoning.json">Caribbean Green Seasoning</option>
       <option value="recipes/indian/butter-masala-chicken.json">Butter Masala (Chicken)</option>
@@ -29,14 +39,8 @@
       <option value="recipes/greek/greek-marinade.json">Greek Marinade (DRAFT)</option>
     </select></label>
     <label id="variantControl" hidden>Version <select id="variant"></select></label>
-    <label>Photo width <input id="photoWidth" type="range" min="22" max="34" value="28" step="1"> <output id="photoWidthValue">28%</output></label>
-    <label>Font size <input id="fontSize" type="range" min="9" max="11.5" step=".25" value="10"> <output id="fontSizeValue">10 pt</output></label>
-    <label>Step spacing <input id="stepGap" type="range" min="3" max="14" value="8" step="1"> <output id="stepGapValue">8px</output></label>
-    <label>Photo placement <select id="printMode"><option value="home">Inset photo</option><option value="commercial" selected>Edge-to-edge photo</option></select></label>
-    <button id="printButton" type="button">Print / Save PDF</button>
-  </div>
-  <div class="status" id="status" role="status">Loading recipe…</div>
-</header>
-<main id="pages" aria-label="Paginated recipe preview"></main>
+  </nav>
+  <main id="pages" aria-label="Paginated recipe preview"></main>
+</div>
 </body>
 </html>

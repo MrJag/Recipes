@@ -11,8 +11,8 @@ Family cookbook project (temporarily public for GitHub Pages preview).
 - Return to private, authenticated family hosting after the temporary public preview.
 
 ## Current status
-- `src/styles/cookbook.css`: editable editorial right-strip print design (v0.6).
-- `index.html` and `src/scripts/cookbook.js`: browser recipe selector, layout controls, and automatic pagination.
+- `src/styles/cookbook.css`: editable editorial right-strip print design (v0.7).
+- `index.html` and `src/scripts/cookbook.js`: category and recipe sidebar, layout controls, and automatic pagination.
 - Ten recipes imported as JSON from Google Drive, preserving source references and review flags.\n- The layout is under test; page-fit is checked in-browser and is not yet validated across every recipe.
 - Latvian Stew has its verified trim-free 614 × 2559 JPEG web image and lossless PNG master committed. The other nine recipes use generated editorial photography.
 
@@ -27,13 +27,14 @@ Family cookbook project (temporarily public for GitHub Pages preview).
 The repository is currently public to support a temporary GitHub Pages preview. **All committed recipe JSON is public** until repository visibility and hosted access are changed. GitHub Pages is not family-authenticated. Do not commit sensitive family information.
 
 ## Next steps
-1. Visually validate the v0.6 browser preview and print pagination against the imported recipes.
+1. Visually validate the v0.7 browser preview and print pagination against the imported recipes.
 2. Add original high-resolution recipe photographs and test commercial print bleed.
 3. Finish structured parsing of ingredients, recipe references, and serving yields.
 4. Replace the temporary public Pages preview with authenticated family hosting.
 
 ## Recipe layout QA checklist
 
+- Check category filtering and recipe selection in the sidebar. On narrow screens, verify navigation appears above the preview. Confirm the sidebar stays out of print.
 - Check the live preview and browser print preview. Confirm every page fits and only page 1 has a side photo.
 - Check the ingredient divider in Greek Marinade (plain two-column ingredients) and Japanese Curry (grouped ingredients). Confirm it is centered between the columns, with clear space around bullets and wrapped text. Repeat at the default and widest photo settings. Verify a single-column list has no divider.
 - Verify alternative methods restart at step 1 in each section (Greek Marinade Chicken and Lamb). Verify sequential methods continue numbering across sections and page breaks (Japanese Curry and Latvian Stew).
