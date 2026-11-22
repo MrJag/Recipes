@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.1",
+  "id": "roti",
+  "title": "Roti",
+  "category": "Indian",
+  "photo": "./public/images/roti.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Ingredients",
+      "items": [
+        "400 g atta, including 50 g reserved for dusting",
+        "1 Tbsp butter or ghee",
+        "2 Tbsp vegetable oil",
+        "½ tsp salt",
+        "250 ml boiling water"
+      ]
+    }
+  ],
+  "steps": [
+    "Add 350 g atta, oil, salt, butter or ghee and boiling water to a bowl. Mix with a spoon for 1 minute while hot.",
+    "Dust the worktop with some reserved flour and knead the dough for 5 minutes. Cover with a bowl and rest for 5–10 minutes.",
+    "Knead 30 seconds more and divide into 12 pieces. Roll into balls, press into discs, dip in flour and keep covered.",
+    "Roll each disc slightly, dust both sides with flour, then roll to full roti size.",
+    "Heat a tawa over medium heat. Cook each roti for 30 seconds, flip for 20 seconds, then flip again for 10 seconds. Set aside and repeat."
+  ]
+}

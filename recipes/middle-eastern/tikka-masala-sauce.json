@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "0.1",
+  "id": "tikka-masala-sauce",
+  "title": "Tikka Masala Sauce",
+  "category": "Middle Eastern",
+  "photo": "./public/images/tikka-masala-sauce.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Dry spices",
+      "items": [
+        "4 tsp garam masala",
+        "4 tsp ground cumin",
+        "2 tsp coriander",
+        "2 tsp smoked paprika",
+        "2 tsp turmeric",
+        "1 tsp black pepper",
+        "½ tsp cayenne pepper",
+        "¼ tsp cardamom",
+        "1 tsp red pepper flakes",
+        "Salt to taste"
+      ]
+    },
+    {
+      "title": "Wet ingredients",
+      "items": [
+        "2 onions, diced",
+        "2 Tbsp minced garlic",
+        "1 Tbsp grated ginger",
+        "½ cup tomato paste",
+        "1 cup tomato purée",
+        "1 cup chicken stock",
+        "¼ cup lime juice",
+        "4 cups coconut milk"
+      ]
+    }
+  ],
+  "steps": [
+    "Sauté the onion over moderately high heat.",
+    "Reduce heat and add the dry spices and ginger.",
+    "Add tomato paste, purée, chicken stock and lime juice; bring to a boil.",
+    "Add coconut milk and reduce to a simmer. The source says the sauce can be refrigerated up to 3 days ahead."
+  ],
+  "status": "draft",
+  "reviewFlags": [
+    "The ingredient list includes garlic but the method does not specify when to add it."
+  ],
+  "headnote": "The ingredient list includes garlic but the method does not specify when to add it."
+}
