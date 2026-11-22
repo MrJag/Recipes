@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "0.1",
+  "id": "roasted-chicken-bombay-potatoes",
+  "title": "Roasted Chicken with Bombay Lemon Potatoes",
+  "category": "American",
+  "photo": "./public/images/roasted-chicken-bombay-potatoes.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "8 chicken drumsticks, skin on",
+        "2 large japanese sweet potatoes (800g),\u000bCut into 1” cubes",
+        "1 large or 2 medium onions, cut into large chunks",
+        "6 cloves of garlic, minced",
+        "2” piece of ginger, cut into ½” matchsticks",
+        "1 lemon, zested and juiced",
+        "1 tsp cumin, ground",
+        "½ tsp coriander, ground",
+        "½ tsp tumeric",
+        "Olive oil (as needed)",
+        "Salt & pepper as needed",
+        "Cilantro, chopped for garnish"
+      ]
+    }
+  ],
+  "steps": [
+    "Preheat the oven to 450°F with the empty 6qt enameled pot (or large baking sheet)",
+    "Microwave the sweet potato chunks with 1 TBsp water, covered, for 6 minutes.  Drain and let them steam dry for 2-3 minutes.",
+    "Combine in a large bowl: sweet potatoes, onions, bell pepper, garlic, ginger, spices, lemon zest, the lemon juice, 2-3 Tbsp olive oil, ½ tsp salt, ½ tsp pepper",
+    "Pat the drumsticks dry then coat lightly with olive oil and season liberally with salt and pepper (or salt/pepper/garlic rub blend).",
+    "Carefully remove the hot pot from the oven and add 1-2 Tbsp neutral oil to coat the bottom.  Add the vegetable mixture then layer the drumsticks on top.",
+    "Roast uncovered for 25 minutes.  Increase the temperature to 500 and roast for another 20 minutes, checking periodically for desired crisp level.",
+    "Plate and garnish with cilantro."
+  ],
+  "reviewFlags": [
+    "The method includes bell pepper without a listed amount."
+  ],
+  "status": "draft",
+  "headnote": "The method includes bell pepper without a listed amount.",
+  "sourceNote": "Adapted from Roasted chicken with lemony Bombay potatoes, Jamie Oliver."
+}

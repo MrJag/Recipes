@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "0.1",
+  "id": "pan-fried-pork-chops",
+  "title": "Pan-Fried Pork Chops",
+  "category": "American",
+  "photo": "./public/images/pan-fried-pork-chops.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": []
+    },
+    {
+      "title": "Pork Chops",
+      "items": [
+        "2 lbs pork chops (butterflied or bone-in)",
+        "2-3 Tbsp oil (grapeseed)"
+      ]
+    },
+    {
+      "title": "Brine",
+      "items": [
+        "3 tbsp salt",
+        "1 tsp pepper",
+        "2 tbsp sugar",
+        "2 cloves minced garlic",
+        "2 cups water"
+      ]
+    },
+    {
+      "title": "Spring onion vinaigrette",
+      "items": [
+        "2 Spring onion (sub: 1 bunch of green onion)",
+        "2 Tbsp olive oil",
+        "3 Tbsp Sherry vinegar (sub: 50/50 apple cider vinegar and sherry wine)",
+        "½ cup parsley (italian flat leaf)",
+        "2-3 cloves garlic, minced",
+        "½ serano, minced",
+        "¼ tsp salt",
+        "¼ tsp pepper"
+      ]
+    }
+  ],
+  "steps": [
+    "Combine all the brine ingredients in a ziploc bag and mix well.",
+    "Add the pork chops, remove all the air, and seal.  Brine for a minimum of 30 hour and a maximum of 8 hours.",
+    "Lightly coat the spring onion in olive oil, salt to taste, and grill over high heat until lightly charred on the outside and tender on the inside.  Remove to cool.  When cool, roughly chop/mince.",
+    "Combine all the vinaigrette ingredients and whisk to combine.",
+    "Remove the pork chops from the brine and dry very well.",
+    "Apply a thin coat of oil to the bottom of a frying pan (stainless steel or cast iron) and bring to medium-high heat until the oil shimmers and starts to smoke.",
+    "Add the pork chops and cook until golden brown underneath, approximately 7 minutes.",
+    "Flip and cook until 135°F, approximately 4 more minutes.",
+    "Remove from heat and let it rest, covered lightly with aluminum foil.",
+    "Serve the pork chops with a spoon of spring onion vinaigrette."
+  ],
+  "reviewFlags": [
+    "The source specifies a minimum brine of 30 hours and a maximum of 8 hours. Confirm the minimum."
+  ],
+  "status": "draft",
+  "headnote": "The source specifies a minimum brine of 30 hours and a maximum of 8 hours. Confirm the minimum."
+}

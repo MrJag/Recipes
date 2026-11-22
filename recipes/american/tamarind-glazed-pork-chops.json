@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "0.1",
+  "id": "tamarind-glazed-pork-chops",
+  "title": "Tamarind-Glazed Pork Chops",
+  "category": "American",
+  "photo": "./public/images/tamarind-glazed-pork-chops.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2-4 pork chops, butterflied"
+      ]
+    },
+    {
+      "title": "Brine (per lb)",
+      "items": [
+        "1 Tbsp salt",
+        "½ cup water"
+      ]
+    },
+    {
+      "title": "Dry rub (per lb)",
+      "items": [
+        "1 tsp olive oil, or enough to coat",
+        "¼ tsp cumin, crushed almost to a powder",
+        "¼ tsp black pepper"
+      ]
+    },
+    {
+      "title": "Glaze",
+      "items": [
+        "¼ cup brown sugar",
+        "¼ cup tamarind pulp/concentrate",
+        "1 Tbsp honey",
+        "2 tsp ginger, grated",
+        "1 habanero, veined, seeded, and minced",
+        "2 tsp chipotle/adobo sauce"
+      ]
+    }
+  ],
+  "steps": [
+    "Combine the brine ingredients in a medium bowl or large ziplock bag.",
+    "Trim the pork chops and place in the brine for 45-60 minutes.",
+    "Meanwhile, combine all the glaze ingredients in a small pot and simmer over low heat until the minced chili is soft and the mixture resembles a pourable jam, approximately 8 minutes.",
+    "Preheat the oven to 475 F.",
+    "Remove the pork chops from the brine and pat dry.",
+    "Apply a light coat of olive oil to the pork chops and then evenly dust both sides with the dry rub mixture.",
+    "Sear the exterior over medium-high until golden brown.  Don’t forget to also sear the fat strip along the sides.  Don’t worry about the interior temperature because it will be finished in the oven.",
+    "Transfer to a foil lined sheet, preferably elevated on a wire rack.",
+    "Let the meat cool for 30-60 seconds then brush both sides with the glaze.",
+    "Bake in the oven until the thickest part of the pork chop measures 135 F, approximately 4-6 minutes.  Flip once during the baking process so that both sides caramelize evenly.",
+    "Remove from the oven and rest for 4 minutes to reabsorb the juices.",
+    "Plate with a small smear of the leftover glaze."
+  ],
+  "reviewFlags": []
+}
