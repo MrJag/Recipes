@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "0.1",
+  "id": "15-bean-soup-sausage",
+  "title": "15-Bean Soup with Sausage",
+  "category": "American",
+  "photo": "./public/images/15-bean-soup-sausage.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2 Tbsp salt, for soaking, plus salt and pepper to taste",
+        "4 quarts water, for soaking",
+        "10 oz (1½ cups) 15-bean soup mix, flavor packet discarded, beans picked over and rinsed",
+        "2 Tbsp vegetable oil, divided",
+        "12 oz hot or sweet Italian sausage",
+        "1 onion, finely chopped",
+        "1 carrot, peeled and finely chopped",
+        "4 garlic cloves, minced",
+        "1 tsp minced fresh thyme or ¼ tsp dried",
+        "4 cups chicken broth",
+        "2 bay leaves",
+        "8 oz Swiss chard, stemmed and chopped",
+        "1 large tomato, cored and chopped",
+        "Parmesan cheese, optional garnish"
+      ]
+    }
+  ],
+  "steps": [
+    "Dissolve 2 Tbsp salt in 4 quarts water. Add the beans and soak at room temperature for 8–24 hours. Drain and rinse.",
+    "Heat 1 Tbsp oil in a pressure cooker over medium-high heat until just smoking. Brown the sausages on all sides, about 2 minutes, and transfer to a plate.",
+    "Heat the remaining 1 Tbsp oil over medium heat. Cook onion and carrot until softened, about 5 minutes. Stir in garlic and thyme and cook until fragrant, about 30 seconds.",
+    "Stir in broth, bay leaves and soaked beans, scraping the bottom of the pot. Return sausage and its juices to the pot.",
+    "Lock the lid and bring to high pressure over medium-high heat. Reduce heat to maintain high pressure and cook 25 minutes. Remove from heat and quick-release pressure; carefully remove the lid.",
+    "Discard bay leaves. Transfer sausage to a cutting board and slice ½ inch thick. Simmer the soup with the chard and tomato until the chard is tender, about 5 minutes. Stir in sausage, season with salt and pepper and serve."
+  ]
+}

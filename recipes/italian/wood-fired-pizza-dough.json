@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "0.1",
+  "id": "wood-fired-pizza-dough",
+  "title": "Wood-Fired Neapolitan Pizza Dough",
+  "category": "Italian",
+  "status": "draft",
+  "photo": "./public/images/wood-fired-pizza-dough.jpg",
+  "servings": "About four 200 g dough balls",
+  "ingredientGroups": [
+    {"title": "By weight", "items": ["500 g Molino Caputo Tipo 00 flour", "325 g water", "10–20 g salt", "3 g active dry yeast"]},
+    {"title": "By volume (alternative)", "items": ["4 cups Molino Caputo Tipo 00 flour", "1½ cups plus 2–3 Tbsp water", "4 tsp salt", "½ tsp active dry yeast"]}
+  ],
+  "steps": [
+    "Mix roughly 80% of the flour with all the water, yeast and salt until combined and resembling a stiff batter. If using a stand mixer, mix slowly for 2 minutes.",
+    "Let the mixture rest for 20 minutes.",
+    "Mix at medium speed or knead by hand for 6–8 minutes, adding the remaining flour gradually. The dough should just form a ball and remain very sticky.",
+    "Turn out onto a lightly floured surface. Knead briefly, then fold the dough in thirds, seal the seam, rotate and bring the ends together, sealing again. Place seam-side down.",
+    "Place in a lightly oiled bowl, cover and let rise for 90 minutes to 2 hours, until nearly doubled.",
+    "Turn out gently and divide into the desired portions; the source suggests about four 200 g balls. Shape gently into balls with taut surfaces and sealed seams.",
+    "Cover the dough balls and let rest about 1 hour before shaping. If using later, refrigerate the covered balls. The source also offers an overnight refrigerator proof as an alternative to the bulk rise."
+  ],
+  "reviewFlags": ["The source provides weight and volume formulations that may not be equivalent; choose one formulation and review the salt quantity. The stated total dough weight is approximate."],
+  "headnote": "A direct dough from Forno Bravo’s Wood-Fired Pizza guide. The source recommends weighing ingredients and provides an alternative volume formulation.",
+  "sourceNote": "Adapted from Forno Bravo, Wood-Fired Pizza (2007), https://www.fornobravo.com/"
+}

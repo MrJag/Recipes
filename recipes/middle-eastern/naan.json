@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "0.1",
+  "id": "naan",
+  "title": "Naan",
+  "category": "Middle Eastern",
+  "photo": "./public/images/naan.jpg",
+  "ingredientGroups": [{"title": null, "items": ["2 cups warm water", "1 cup warm milk", "1 Tbsp active dry yeast", "1 tsp salt", "½ tsp sugar", "1 egg", "2 Tbsp oil, divided", "6½ cups sifted all-purpose flour", "Sesame seeds, optional", "Butter, optional"]}],
+  "steps": ["Combine warm water, yeast, sugar, salt, egg, warm milk and 1 Tbsp oil in a container.", "Add sifted flour and knead into a very soft, slightly sticky dough. If too sticky to handle, rub a little oil on your hands. Rub the remaining oil over the dough and cover the container.", "Let rise in a warm place until doubled, about 40 minutes. Preheat the oven to 500°F, or up to 800°F as specified in the source. If using a pizza stone, preheat it on the center rack.", "Turn out onto a lightly floured surface and shape into tennis-ball-size portions. Flour your hands as needed and let the balls rest for about 10 minutes.", "Press each ball on a floured surface into a 6- to 7-inch round. Gently toss between your palms to shape into an oval or triangle. If desired, spread with butter and sprinkle with sesame seeds.", "Place on the hot pizza stone and bake about 3 minutes, until the top has lightly golden-brown spots. Remove with a wooden spatula and repeat. Alternatively, bake up to two breads on a baking sheet at the same oven temperature, about 5 minutes per batch."]
+}
