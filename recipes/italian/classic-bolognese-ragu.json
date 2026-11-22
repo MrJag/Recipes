@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "0.1",
+  "id": "classic-bolognese-ragu",
+  "title": "Classic Bolognese Ragù",
+  "category": "Italian",
+  "status": "draft",
+  "photo": "./public/images/classic-bolognese-ragu.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "3 Tbsp olive oil",
+        "3 Tbsp butter",
+        "2 Tbsp chopped onion",
+        "2 Tbsp chopped celery",
+        "2 Tbsp chopped carrot",
+        "¾ lb mixture of ground beef chuck, pork and veal",
+        "Salt",
+        "Freshly ground black pepper",
+        "½ cup whole milk",
+        "Whole nutmeg (about ⅛ tsp freshly grated)",
+        "1 cup dry white wine",
+        "2 cups canned Italian plum tomatoes with juice, torn into pieces",
+        "1¼–1½ lb pasta, preferably spaghetti, cooked and drained",
+        "Freshly grated Parmigiano-Reggiano, for serving"
+      ]
+    }
+  ],
+  "steps": [
+    "Heat the oil, butter and onion in a heavy 3½-quart pot over medium heat. Cook until onion is translucent, then add celery and carrot and cook about 2 minutes, stirring.",
+    "Add meats, a large pinch of salt and about 20 turns of finely ground pepper. Break up and cook until no longer pink; do not brown.",
+    "Add milk and simmer gently, stirring frequently, until it has evaporated. Stir in about ⅛ tsp freshly grated nutmeg.",
+    "Add wine and simmer until evaporated. Stir in tomatoes and juice; when bubbling, reduce heat to the gentlest simmer.",
+    "Cook uncovered for at least 3 hours, stirring occasionally. Add ½ cup water as needed to prevent sticking, allowing it to evaporate by the end. Taste and adjust salt.",
+    "The source directs adding a remaining tablespoon of butter to the hot pasta. Toss with the ragù and serve with grated Parmigiano-Reggiano."
+  ],
+  "reviewFlags": [
+    "The ingredients list 3 Tbsp butter, but the directions use butter in the sauce and later call for a remaining tablespoon. Confirm how to divide it."
+  ],
+  "headnote": "The ingredients list 3 Tbsp butter, but the directions use butter in the sauce and later call for a remaining tablespoon. Confirm how to divide it.",
+  "sourceNote": "Adapted from Marcella Hazan, Classic Italian Cooking."
+}
