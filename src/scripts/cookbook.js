@@ -288,8 +288,13 @@ function requestRender() {
   requestAnimationFrame(() => {
     renderPending = false;
     if (currentRecipe) {
-      render(currentRecipe);
-      byId("printButton").disabled = false;
+      pagesEl.classList.add("measuring");
+      try {
+        render(currentRecipe);
+        byId("printButton").disabled = false;
+      } finally {
+        pagesEl.classList.remove("measuring");
+      }
     }
   });
 }

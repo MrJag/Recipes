@@ -107,8 +107,49 @@
   .recipe-sidebar {
     padding: 12px 16px;
     border-inline-end: 0;
-    border-bottom: 1px solid #d6c1b3;
+    border-top: 1px solid #d6c1b3;
   }
+
+  .toolbar { position: static; }
+
+  .cookbook-layout #pages {
+    grid-row: 1;
+    gap: 0;
+    padding: 12px;
+  }
+
+  /* The pagination pass measures Letter sheets before the mobile layout reflows them. */
+  #pages:not(.measuring) {
+    --body-size: 1rem;
+    --body-line-height: 1.5;
+  }
+
+  #pages:not(.measuring) .sheet {
+    width: 100%;
+    height: auto;
+  }
+
+  #pages:not(.measuring) .content {
+    position: static;
+    padding: 20px 16px;
+  }
+
+  #pages:not(.measuring) .photo-strip {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 8rem;
+  }
+
+  #pages:not(.measuring) :is(.ingredients.two-column > ul, .ingredients.grouped .ingredient-groups) {
+    columns: 1;
+  }
+
+  #pages:not(.measuring) :is(.running-head, .page-num) {
+    display: none;
+  }
+
+  #pages:not(.measuring) .source { font-size: .875rem; }
 }
 
 @media print {
