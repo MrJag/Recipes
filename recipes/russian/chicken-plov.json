@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "0.1",
+  "id": "chicken-plov",
+  "title": "Chicken Plov",
+  "category": "Russian",
+  "status": "draft",
+  "photo": "./public/images/chicken-plov.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1/4 c grapeseed oil",
+        "3 lb chicken thick, cut into 1” chunks",
+        "2 small/medium onion, chopped",
+        "2 Tbsp smoked paprika",
+        "1.5 Tbsp Salt (kosher)",
+        "1.5 Tbsp Cumin seed",
+        "1 Tbsp pepper",
+        "1 Tbsp kashmir chili powder",
+        "0.5 Tbsp coriander, crushed",
+        "¼ tsp turmeric",
+        "1 large bay leaf (or 2 small)",
+        "12 baby yukon gold potatoes, whole or halved",
+        "1 whole jalapeno or serrano",
+        "1 whole Garlic head, or equivalent",
+        "2 carrot (5oz / 140g), sliced into 2” matchsticks",
+        "454 g (2.5 c) calasparra rice, rinsed and drained",
+        "454 g (2 c) water, boiled",
+        "0.5 Tbsp Salt (hawaiian alaea red)",
+        "(Optional) 3 Tbsp Barberries, Sour Cherries, or Currant – they add a nice sweet/sour flavor."
+      ]
+    }
+  ],
+  "steps": [
+    "Rinse rice and soak in water while preparing other ingredients.",
+    "Heat oil in a large heavy pot over medium-high heat and fry chicken until lightly golden.",
+    "Add onion and continue to fry until softened, then cover for 10 minutes.",
+    "Mix in paprika, salt, cumin, pepper, kashmir chili, coriander, turmeric, and bay leaf.  Cover and simmer for 15 minutes.",
+    "Stir the mixture for the last time.  Add the potatoes evenly throughout.  Add the garlic and jalapeno in the center, then add an even layer of carrots and an even layer of chickpeas.  Optionally add the dried berries at this time.  The final step is a smooth layer of rice with enough water gently sprinkled to level out with the top of the rice.  Sprinkle the red salt over the top layer to season the rice.",
+    "Reduce the heat to medium-low and cover the pot with a towel, then a lid.  Make sure to wrap the parts of the towel that hang down the sides of the pot back over the lid to prevent catching fire.",
+    "Simmer for approximately 45-60 minutes, checking every 15 minutes to:",
+    "Gently flip the top layer of rice without disturbing the carrot and chickpea layer.",
+    "Check the doneness of the rice and how much moisture is remaining in the pot.",
+    "After flipping the rice, use a flat ladle to swipe down the sides of the pot and create a rounded mound with a smooth surface. Try not to disturb any of the layers in the process.",
+    "Using the back of a utensil, poke 5-10 large holes, evenly spaced, in the mound to allow moisture to escape from the bottom.",
+    "Cover again with the towel and lid.",
+    "Turn off the heat and let sit covered for 10 minutes when the rice is done and most of the liquid at the bottom of the pot has been absorbed.",
+    "Replace the lid with a large serving platter and, quickly but carefully, invert the pot and platter to plate for serving.  Lightly fluff the platter to loosen the rice and slightly distribute the chunks of meat and potatoes.  Alternatively, spoon directly from the pot to serve and ensure you are reaching all layers."
+  ],
+  "reviewFlags": [
+    "The method calls for chickpeas, but the ingredient list does not specify an amount. Confirm the chicken cut, listed as 'chicken thick' in the source."
+  ],
+  "headnote": "The method calls for chickpeas, but the ingredient list does not specify an amount. Confirm the chicken cut, listed as 'chicken thick' in the source."
+}

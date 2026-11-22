@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "0.1",
+  "id": "uzbek-plov-lamb",
+  "title": "Uzbek Plov (Lamb)",
+  "category": "Russian",
+  "status": "draft",
+  "photo": "./public/images/uzbek-plov-lamb.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "½ cup grapeseed oil (or sunflower)",
+        "½ cup toasted sesame oil",
+        "½ small onion, diced",
+        "750 g onions, sliced thin",
+        "1 kg lamb shoulder, ut into 2” chunks\u000b(or beef)",
+        "750 g carrots, sliced 6mm (¼”)",
+        "1.5 liters water",
+        "¾ tsp turmeric",
+        "1 tsp pepper",
+        "(1.5 Tbsp?) Salt",
+        "2 tsp paprika",
+        "1 tsp barberries",
+        "½ cup yellow raisin",
+        "½ cup black currant",
+        "½ cup dried apricot (cut into chunks)",
+        "1.5 tsp cumin",
+        "2 heads of garlic",
+        "1 kg rice"
+      ]
+    }
+  ],
+  "steps": [
+    "Prep the onions and carrots.",
+    "Trim the meat, reserving any large chunks of fat and bones.",
+    "Rinse the rice until it runs clear, approximately 3 times, then soak the rice in a large bowl of water.",
+    "Blanch the fat and bones in boiling water for 1-2 minutes to remove any scum then rinse and set aside.",
+    "Heat both oils in a large heavy pot over high heat.",
+    "Fry the small onion (diced) until golden brown then discard, approximately 3-5 minutes.  The onion is supposed to absorb any off-flavors from the oil and also release a sweet onion flavor into the oil.",
+    "Fry the fat and bones for several minutes to render the fat and add another layer of flavor to the oil.  Discard the fat and bones.",
+    "Fry the meat in sections so that the exterior develops a golden brown crust.  Be careful not to add too much meat at once or it will boil in it’s own liquid instead of fry in the oil.  This process takes approximately 10-15 minutes.  Set the fried meat aside.",
+    "Fry the onions until they start to turn golden brown and clump up.  Continue frying for another 3-5 minutes until they darken even more and the clumps begin to separate.  Stop when the oil rumbles with small bubbles.  The whole process takes approximately 10-15 minutes.",
+    "Add the meat back in along with half the carrots and fry for 2-3 minutes.  Add some water if necessary to prevent anything from burning.",
+    "Add the remaining water, turmeric, pepper, salt, paprika, barberries, raisins, currant, apricot, and cumin, mixing well to distribute.",
+    "Burry the garlic heads and add the remaining carrots and smooth to an even layer.",
+    "Bring to a boil and continue to cook for an additional 5 minutes.",
+    "Carefully remove the garlic and set aside",
+    "Strain the rice and gently later on top of the carrots, creating a smooth surface without compressing anything.  The liquids should barely reach the top of the rice without submerging it.",
+    "Gently flip the rice a section at a time.  It is important to not disturb the carrot layer while moving the rice.  You don’t want to stir the rice either because that will release the starches.  The goal is to carefully rotate the bottom layer of rice with the top layer of rice so that it evenly cooks.",
+    "Build a dome out of the rice as the broth absorbs into it.  The rice should be fully domed by the time the broth cooks down to the carrot layer.",
+    "Place a lid over the kazan (pot) and reduce the heat to low.  Let the pot simmer for 30-35 minutes.  The rice will continue to steam and absorb moisture.",
+    "Taste the rice and if it’s still too dry, add another ¼ cup of boiling water, then cover and simmer for another 5 minutes.",
+    "The plov is done when the rice is perfectly fluffy and moist (without being wet).  Transfer to a serving dish, layering with rice on the bottom, followed by carrot, then finally topped with the chunks of meat.  You can optionally cut the meat into smaller chunks before serving."
+  ],
+  "reviewFlags": [
+    "The source marks the salt quantity as uncertain and does not explain when to return the removed garlic."
+  ],
+  "headnote": "The source marks the salt quantity as uncertain and does not explain when to return the removed garlic."
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "0.1",
+  "id": "clay-pot-rice-short-ribs",
+  "title": "Clay Pot Rice and Short Ribs",
+  "category": "Chinese",
+  "status": "draft",
+  "photo": "./public/images/clay-pot-rice-short-ribs.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2 cups Thai Jasmine rice",
+        "0.5 cup Japanese sticky rice (Tamanishiki)",
+        "0.5 cup Japanese sushi rice",
+        "1.5 lbs shortribs",
+        "6 shitake mushrooms, minced",
+        "1 tsp adolfs tenderizer (or baking soda)",
+        "3 shallots or ¼ red onion, chopped (½” segments)",
+        "1 red sweet pepper (½” segments, mediterranean or bell)",
+        "4 green onions, sliced (reserve the green slices for garnish)",
+        "5-6 garlic cloves, sliced or minced",
+        "1-1.5” segment ginger, minced",
+        "2 fresno chili peppers, sliced or minced",
+        "¼ cup douchi (chinese fermented black beans)",
+        "2 tsp oyster sauce",
+        "2 tbsp light soy sauce",
+        "1 tbsp dark soy sauce",
+        "2 tsp sesame oil",
+        "½ tsp salt",
+        "¼ tsp white pepper",
+        "3-4 cups of water",
+        "1-2 Tbsp oil",
+        "6 baby bok choi (or choice of hearty but leafy greens)",
+        "Garnish:",
+        "Sesame oil, for serving",
+        "Soy sauce, for serving",
+        "Thinly sliced spring onions or scallions, green parts only, for serving"
+      ]
+    }
+  ],
+  "steps": [
+    "Wash the rice then cover with water and soak for 30 minutes.  Drain when done.",
+    "Soak the shitake mushrooms for 15 minutes, then mince when done.",
+    "Slice the shortribs into bitesize pieces then add to a bowl with water and tenderizer/baking soda and soak for 15 minutes.  Rinse and squeeze out excess water when done.",
+    "Place a clay pot (or cast iron dutch oven) on the stove and preheat over low heat.",
+    "Roughly chop the shallots and sweet pepper and set aside.",
+    "Finely chop the garlic, ginger, green onions (whites), douchi and place in a large bowl.",
+    "Add the shortrib, oyster sauce, light soy sauce, dark soy sauce, sesame oil, salt, and white pepper and mix to evenly coat.",
+    "Add the Shallots and sweet pepper then mix briefly to distribute.",
+    "Increase the stove heat to medium and brush a generous amount of oil inside the pot to coat the bottom and sides.",
+    "Add the soaked rice and distribute so that it sits level.  The rice should sizzle when you add it.",
+    "Add enough water to barely cover the rice, approximately 3-4 cups, then cover and cook for 8 minutes.",
+    "Add the meat mixture on top of the rice and drizzle 1-2 Tbsp of oil along the sides of the pot.  Cover and cook an additional 10 minutes over medium to medium-low heat.",
+    "Layer bok choi leaves over the cooked meat then cover and cook for 3 more minutes.",
+    "The clay pot rice dish is done when the meat is cooked through and tender, the greens are lightly steamed, and a crispy golden brown crust of rice formed along the bottom of the pot.",
+    "Serve with a garnish of sliced green onions, cilantro, sesame seeds, a crispy fried egg, and a splash of mild soy sauce."
+  ],
+  "reviewFlags": [
+    "The source does not say when to add the soaked shiitake mushrooms. Some serving garnishes have no listed quantities."
+  ],
+  "headnote": "The source does not say when to add the soaked shiitake mushrooms. Some serving garnishes have no listed quantities.",
+  "sourceNote": "Adapted from Chef Wang, https://www.youtube.com/watch?v=-nxA1IKhMDY"
+}
