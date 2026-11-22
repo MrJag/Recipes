@@ -32,6 +32,11 @@ The repository is currently public to support a temporary GitHub Pages preview. 
 3. Finish structured parsing of ingredients, recipe references, and serving yields.
 4. Replace the temporary public Pages preview with authenticated family hosting.
 
+## Recipe layout QA checklist
+
+- Check the live preview and browser print preview. Confirm every page fits and only page 1 has a side photo.
+- Check the ingredient divider in Greek Marinade (plain two-column ingredients) and Japanese Curry (grouped ingredients). Confirm it is centered between the columns, with clear space around bullets and wrapped text. Repeat at the default and widest photo settings. Verify a single-column list has no divider.
+
 ## Image files
 
 Include a portrait photo with every new recipe, including recipes added for review. Commit the web JPG and set the recipe JSON’s `photo` path in the same change. Verify that the photo loads in the right-edge strip on page 1 and that continuation pages use the full text width.

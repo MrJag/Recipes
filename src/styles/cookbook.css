@@ -38,9 +38,9 @@ h1 { font-size: var(--title-size); line-height: 1.01; margin: 0 0 4px; }
 .ingredients { background: var(--ingredient-paper); border-radius: 7px; padding: 11px 12px; margin-bottom: var(--section-gap); break-inside: avoid; }
 .section-heading { display: flex; gap: 12px; align-items: center; color: var(--accent); font-size: 13pt; letter-spacing: 1.5px; margin: 0 0 10px; }
 .section-heading::after { content: ""; height: 1px; flex: 1; background: var(--rule); }
-.ingredients ul { columns: 1; column-gap: 18px; column-rule: 1px solid #d6c1b3; padding-left: 19px; margin: 0; font-size: var(--body-size); line-height: var(--body-line-height); }
+.ingredients ul { columns: 1; column-gap: 18px; column-rule: 1px solid #d6c1b3; padding: 0; margin: 0; font-size: var(--body-size); line-height: var(--body-line-height); }
 .ingredients.two-column > ul { columns: 2; }
-.ingredients li { break-inside: avoid; margin: 0 0 4px; }
+.ingredients li { break-inside: avoid; margin: 0 0 4px; margin-inline-start: 19px; }
 .ingredients li::marker { color: var(--accent); }
 .steps { list-style: none; margin: 0; padding: 0; }
 .steps > li.recipe-step { display: grid; grid-template-columns: 24px minmax(0, 1fr); column-gap: 10px; align-items: start; padding: 0; margin-bottom: var(--step-gap); break-inside: avoid; font-size: var(--body-size); line-height: var(--body-line-height); }
