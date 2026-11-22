@@ -2,7 +2,7 @@
 
 const categoryRecipes = {
   Drinks: ["frozen-margarita", "iced-lemon-green-tea-with-basil-seeds", "mariano-margarita"],
-  Condiments: ["chili-powder", "spanish-picada", "neapolitan-pizza-sauce", "lawrys-seasoning-clone", 
+  Condiments: ["velveting-chicken", "chili-powder", "spanish-picada", "neapolitan-pizza-sauce", "lawrys-seasoning-clone", 
     "raspberry-vinaigrette", "caribbean-green-seasoning", "chinese-white-stir-fry-sauce",
     "greek-marinade", "hawaiian-chili-pepper-water", "pomodoro-sauce", "bolognese-ragu",
     "codys-salsa", "salsa-roja", "catalan-sofrito", "peanut-sauce", "russells-yellow-curry-spice-blend"

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "id": "velveting-chicken",
+  "title": "Velveting Chicken",
+  "category": "Chinese",
+  "status": "draft",
+  "photo": "./public/images/velveting-chicken.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "½ lb chicken",
+        "¾ tsp baking soda",
+        "1 tsp Shaoxing wine"
+      ]
+    }
+  ],
+  "steps": [
+    "Scale the recipe to the desired quantity of chicken.",
+    "Cut the chicken into bite-sized pieces.",
+    "Mix all ingredients and marinate for 18 minutes.",
+    "Either parboil for 1 minute, or rinse off the marinade, pat dry, and stir-fry."
+  ],
+  "reviewFlags": [
+    "The source presents parboiling and rinsing as alternatives but does not explain whether parboiled chicken should also be rinsed or how it should be finished."
+  ],
+  "headnote": "Draft: Confirm the parboiling and finishing directions."
+}
