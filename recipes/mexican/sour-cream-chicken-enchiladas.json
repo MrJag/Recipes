@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "0.1",
+  "id": "sour-cream-chicken-enchiladas",
+  "title": "Sour Cream Chicken Enchiladas",
+  "category": "Mexican",
+  "status": "draft",
+  "photo": "./public/images/sour-cream-chicken-enchiladas.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Pulled chicken",
+      "items": [
+        "2 cups chicken broth",
+        "2 tsp salt",
+        "5 peppercorns",
+        "¼ onion, skin removed",
+        "2 crushed garlic cloves",
+        "2 chicken breasts"
+      ]
+    },
+    {
+      "title": "Chicken filling",
+      "items": [
+        "2 cups pulled chicken",
+        "2 cups Chihuahua and/or cheddar cheese",
+        "½ onion, diced"
+      ]
+    },
+    {
+      "title": "Sour cream sauce",
+      "items": [
+        "2½ tomatillos, husked and halved",
+        "2 Tbsp butter",
+        "2 mild-to-medium peppers, chopped and seeded",
+        "2 garlic cloves, minced",
+        "2 Tbsp flour",
+        "2 cups reserved chicken broth",
+        "2 cups sour cream",
+        "¾ tsp cumin",
+        "¼ cup cilantro"
+      ]
+    },
+    {
+      "title": "Red sauce",
+      "items": [
+        "3 Tbsp chili powder",
+        "3 Tbsp flour",
+        "1 tsp cocoa powder",
+        "1 garlic clove, minced",
+        "1 tsp Mexican oregano",
+        "2 cups water",
+        "1 (8 oz) can tomato sauce"
+      ]
+    },
+    {
+      "title": "Tortillas",
+      "items": [
+        "Oil",
+        "14 white corn tortillas, 6-inch"
+      ]
+    }
+  ],
+  "steps": [
+    "Combine the pulled-chicken ingredients, bring to a boil and simmer on low for 30 minutes, skimming occasionally. Remove from heat; discard onion, garlic and peppercorns. Reserve the broth, cool the chicken slightly and shred.",
+    "Mix 2 cups pulled chicken with cheese and diced onion.",
+    "Broil tomatillos on a foil-lined sheet for 4 minutes per side.",
+    "For the sour cream sauce, melt butter in a large nonstick pan over medium heat. Sauté the peppers for 3–4 minutes, then garlic for 1 minute. Add flour and cook 1 minute, stirring.",
+    "Add 2 cups reserved broth, whisking constantly until thickened. Remove from heat; blend with sour cream, cumin and cilantro. The source does not say when to add the broiled tomatillos.",
+    "For the red sauce, mix the red sauce ingredients and simmer over medium heat for 20 minutes. The source does not say how to use this sauce in assembly.",
+    "Heat oil over medium heat. Dip each tortilla for a few seconds per side to soften; drain on paper towels.",
+    "Pour 1 cup sour cream sauce into a 9 × 13-inch baking dish. Dip each tortilla in remaining sauce, fill with ⅓ cup chicken mixture, roll and place seam-side down. The source lists 14 tortillas but calls for assembling 12 enchiladas.",
+    "Pour remaining sauce over the enchiladas. Bake at 350°F for 35 minutes or until bubbly."
+  ],
+  "reviewFlags": [
+    "The source omits when the broiled tomatillos are added and how the red sauce is used; it lists 14 tortillas but calls for 12 enchiladas. Confirm these details before cooking."
+  ],
+  "headnote": "The source omits when the broiled tomatillos are added and how the red sauce is used; it lists 14 tortillas but calls for 12 enchiladas. Confirm these details before cooking."
+}
