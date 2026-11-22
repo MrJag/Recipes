@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "0.1",
+  "id": "chuys-hatch-green-chile-sauce",
+  "title": "Chuy’s Hatch Green Chile Sauce",
+  "category": "Mexican",
+  "photo": "./public/images/chuys-hatch-green-chile-sauce.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Ingredients",
+      "items": [
+        "1 qt water",
+        "2 oz beef base",
+        "¼ tsp black pepper",
+        "¼ tsp garlic salt",
+        "¼ tsp salt",
+        "½ lb diced onions",
+        "1 qt roasted green chiles",
+        "½ cup water",
+        "2 oz cornstarch"
+      ]
+    }
+  ],
+  "steps": [
+    "Dissolve beef base in 1 qt water in a large saucepot. Heat over medium-high.",
+    "Add pepper, garlic salt, salt and onion. Simmer about 12 minutes, until onion softens.",
+    "Add roasted green chiles and return to a simmer.",
+    "Whisk cornstarch with ½ cup water until smooth. Slowly stir into the simmering sauce, then simmer 8–10 minutes more, stirring occasionally, until the sauce gains body."
+  ],
+  "sourceNote": "Adapted from http://www.elpasoproud.com/entertainment/nc9-today/lets-cook-chuys-mexican-restaurant"
+}

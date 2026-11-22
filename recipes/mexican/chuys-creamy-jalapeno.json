@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "0.1",
+  "id": "chuys-creamy-jalapeno",
+  "title": "Chuy’s Creamy Jalapeño Sauce",
+  "category": "Mexican",
+  "photo": "./public/images/chuys-creamy-jalapeno.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Original restaurant batch",
+      "items": [
+        "6 packs Hidden Valley Ranch mix",
+        "1 gallon buttermilk",
+        "2 gallons mayonnaise",
+        "3 quarts sliced jalapeños, without juice",
+        "2 cups jalapeño juice",
+        "3 quarts cold tomatillo sauce",
+        "6 oz cleaned cilantro"
+      ]
+    },
+    {
+      "title": "Source scaled batch",
+      "items": [
+        "1 pack Hidden Valley Ranch mix",
+        "⅓ cup buttermilk",
+        "⅔ cup mayonnaise",
+        "½ cup jalapeños",
+        "1 Tbsp plus 1 tsp jalapeño juice",
+        "½ cup tomatillo sauce",
+        "½ cup cilantro"
+      ]
+    }
+  ],
+  "steps": [
+    "Place the ingredients in a large bowl and blend with an immersion blender or regular blender. The source says to drain the jalapeños while retaining the separately listed juice."
+  ],
+  "status": "draft",
+  "reviewFlags": [
+    "The original and scaled ingredient lists do not appear proportional, and ranch packet size is unspecified. Confirm which formula to use."
+  ],
+  "headnote": "The original and scaled ingredient lists do not appear proportional, and ranch packet size is unspecified. Confirm which formula to use."
+}

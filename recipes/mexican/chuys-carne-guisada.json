@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "0.1",
+  "id": "chuys-carne-guisada",
+  "title": "Chuy’s Carne Guisada",
+  "category": "Mexican",
+  "photo": "./public/images/chuys-carne-guisada.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Ingredients",
+      "items": [
+        "¼ cup oil",
+        "2 lb top sirloin, cubed",
+        "2 cups beef stock",
+        "2 tsp ancho chile powder",
+        "1 tsp cumin",
+        "¼ tsp black pepper",
+        "½ tsp granulated garlic",
+        "½ cup green chile sauce",
+        "½ white onion, diced",
+        "1 green bell pepper, diced"
+      ]
+    }
+  ],
+  "steps": [
+    "Heat oil in a large sauté pan. Add cubed steak and brown for 15 minutes.",
+    "Add beef stock and spices and simmer for 35–45 minutes.",
+    "Add green chile sauce, onion and bell pepper. Cook for 15 minutes, then test meat for tenderness and continue cooking if needed."
+  ],
+  "sourceNote": "Adapted from http://www.elpasoproud.com/entertainment/nc9-today/lets-cook-chuys-carne-guisada"
+}

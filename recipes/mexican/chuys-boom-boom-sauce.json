@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "0.1",
+  "id": "chuys-boom-boom-sauce",
+  "title": "Chuy’s Boom-Boom Sauce",
+  "category": "Mexican",
+  "photo": "./public/images/chuys-boom-boom-sauce.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Ingredients",
+      "items": [
+        "½ cup vegetable broth",
+        "¼ cup water",
+        "¼ Tbsp spices (source says ¼ Tbsp each salt and pepper)",
+        "¾ lb roasted green chiles",
+        "2 oz tomatillos",
+        "1½ oz cilantro",
+        "1 oz green onions",
+        "¾ oz minced serranos",
+        "½ oz lime juice",
+        "1¼ lb easy-melt jack and cheddar cheese"
+      ]
+    }
+  ],
+  "steps": [
+    "Heat broth, water and spices in a saucepan over medium-high heat.",
+    "Purée roasted green chiles, tomatillos, cilantro, green onions, serranos and lime juice. Add to the broth mixture in a large pot and bring to a slow boil.",
+    "Lower the heat and slowly whisk in the cheese to prevent clumps and sticking. Remove from heat when melted and combined."
+  ],
+  "status": "draft",
+  "reviewFlags": [
+    "The source says ¼ Tbsp spices but also specifies ¼ Tbsp each of salt and pepper; confirm the intended amount."
+  ],
+  "headnote": "The source says ¼ Tbsp spices but also specifies ¼ Tbsp each of salt and pepper; confirm the intended amount.",
+  "sourceNote": "Adapted from http://www.elpasoproud.com/entertainment/nc9-today/lets-cook-chuys-enchiladas-and-fajitas"
+}
