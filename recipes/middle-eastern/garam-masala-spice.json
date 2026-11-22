@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "0.1",
+  "id": "garam-masala-spice",
+  "title": "Garam Masala Spice",
+  "category": "Middle Eastern",
+  "status": "draft",
+  "photo": "./public/images/garam-masala-spice.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Ingredients",
+      "items": [
+        "¼ cup whole toasted cumin",
+        "¼ cup whole toasted coriander",
+        "2 Tbsp cardamom",
+        "2 Tbsp black pepper",
+        "2 Tbsp cloves",
+        "2 Tbsp fennel seed",
+        "4 star anise",
+        "1¼ cinnamon sticks",
+        "¼ tsp nutmeg",
+        "2 bay leaves",
+        "2 Tbsp ginger",
+        "2 Tbsp pimentón (smoked paprika)"
+      ]
+    }
+  ],
+  "steps": [
+    "Grind all ingredients in a spice grinder. Store in a cool, dry container."
+  ],
+  "reviewFlags": [
+    "The source does not specify whether the cardamom and ginger are whole or ground."
+  ],
+  "headnote": "The source does not specify whether the cardamom and ginger are whole or ground."
+}

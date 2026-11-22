@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "id": "chuys-chicka-boom-enchiladas",
+  "title": "Chuy’s Chicka-Chicka Boom-Boom Enchiladas",
+  "category": "Mexican",
+  "status": "draft",
+  "photo": "./public/images/chuys-chicka-boom-enchiladas.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Ingredients",
+      "items": [
+        "10 cooked corn tortillas",
+        "1¼ lb roasted chicken, seasoned with garlic, salt and pepper",
+        "Mixed jack cheese, as needed",
+        "Boom-Boom Sauce, amount unspecified"
+      ]
+    }
+  ],
+  "steps": [
+    "Fill each tortilla with 2 oz cooked roasted chicken, roll and place in a baking pan.",
+    "Top with mixed jack cheese. Warm in a hot oven for 4 minutes, until the cheese melts.",
+    "Top with Boom-Boom Sauce."
+  ],
+  "reviewFlags": [
+    "The source does not specify the oven temperature or quantities of cheese and sauce."
+  ],
+  "headnote": "The source does not specify the oven temperature or quantities of cheese and sauce."
+}

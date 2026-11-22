@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "0.1",
+  "id": "chuys-combo-fajitas",
+  "title": "Chuy’s Combo Fajitas",
+  "category": "Mexican",
+  "status": "draft",
+  "photo": "./public/images/chuys-combo-fajitas.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Marinade",
+      "items": [
+        "1 cup oil",
+        "2 Tbsp fresh lime juice",
+        "½ bottle Shiner Bock beer",
+        "1 tsp salt",
+        "1 tsp pepper",
+        "1 tsp garlic powder",
+        "1 tsp chile powder",
+        "1 tsp cayenne powder",
+        "1 tsp minced serrano pepper"
+      ]
+    },
+    {
+      "title": "Fajitas",
+      "items": [
+        "2 chicken breasts",
+        "1 lb skirt steak",
+        "1 white onion, sliced into strips",
+        "2 green bell peppers, sliced into strips",
+        "1 red bell pepper, sliced into strips",
+        "¼ cup diced roasted green chiles",
+        "Chopped cilantro, to taste",
+        "Butter, amount unspecified",
+        "Tortillas, lettuce, pico de gallo, grated cheese, guacamole, sour cream, refried beans and rice, for serving"
+      ]
+    }
+  ],
+  "steps": [
+    "Mix all marinade ingredients and divide between two freezer bags. Add chicken to one bag and steak to the other; coat and marinate for 24 hours.",
+    "Grill chicken to an internal temperature of 165 degrees and steak to 135 degrees, as specified by the source. Rest before slicing.",
+    "Heat butter in a large sauté pan until lightly smoking. Add the vegetables and cilantro and sauté until onions are translucent.",
+    "Serve sliced meat with the sautéed vegetables and desired accompaniments."
+  ],
+  "reviewFlags": [
+    "The source gives internal targets of 165 and 135 degrees without a temperature scale, and does not specify beer bottle size or butter quantity. Confirm these details."
+  ],
+  "headnote": "The source gives internal targets of 165 and 135 degrees without a temperature scale, and does not specify beer bottle size or butter quantity. Confirm these details."
+}
