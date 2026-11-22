@@ -12,7 +12,7 @@ const categoryRecipes = {
     "jasmine-coconut-rice", "indian-basmati-rice-pilau", "long-grain-rice-with-mustard-seeds",
     "rosemary-focaccia", "coconut-lime-rice"
   ],
-  Mains: ["15-bean-soup-sausage", "rigatoni-di-gregorio", "polpette-alla-napoletana", "chicken-mole-poblano", "chicken-pintxo-avocado-toast", "gambas-al-ajillo", "paella-de-carne", "cookoff-smoked-beef-chili", "ancient-grains-bowl", "pistachio-stuffed-pork-tenderloin", "beef-short-rib-biryani", "hutchins-style-ribs", "hutchins-style-brisket", "tamarind-glazed-pork-chops", "pan-fried-pork-chops", "roasted-chicken-bombay-potatoes", "joojeh-kebab", "texas-twinkies", "detroit-style-pizza", "dal-tadka", "mariannas-chili", "spatchcocked-hawaiian-chicken", "chicken-plov", "uzbek-plov-lamb", "clay-pot-rice-short-ribs", "chicken-congee", "hatch-green-chili", "hawaiian-teriyaki-chicken", "hawaiian-stir-fry-noodles", "shakshuka", "neapolitan-pizza", "lamb-biryani", "turkish-kofta-kebab", "smoked-pulled-pork", "3-2-1-ribs", "mariannas-chicken-kotleti", 
+  Mains: ["midwestern-chili", "15-bean-soup-sausage", "rigatoni-di-gregorio", "polpette-alla-napoletana", "chicken-mole-poblano", "chicken-pintxo-avocado-toast", "gambas-al-ajillo", "paella-de-carne", "cookoff-smoked-beef-chili", "ancient-grains-bowl", "pistachio-stuffed-pork-tenderloin", "beef-short-rib-biryani", "hutchins-style-ribs", "hutchins-style-brisket", "tamarind-glazed-pork-chops", "pan-fried-pork-chops", "roasted-chicken-bombay-potatoes", "joojeh-kebab", "texas-twinkies", "detroit-style-pizza", "dal-tadka", "mariannas-chili", "spatchcocked-hawaiian-chicken", "chicken-plov", "uzbek-plov-lamb", "clay-pot-rice-short-ribs", "chicken-congee", "hatch-green-chili", "hawaiian-teriyaki-chicken", "hawaiian-stir-fry-noodles", "shakshuka", "neapolitan-pizza", "lamb-biryani", "turkish-kofta-kebab", "smoked-pulled-pork", "3-2-1-ribs", "mariannas-chicken-kotleti", 
     "beef-stroganoff", "red-beans-and-rice", "tomato-basil-soup", "belgian-waffles",
     "philips-waffles", "szechuan-green-beans-and-pork", "taiwanese-popcorn-chicken",
     "hawaiian-huli-huli-chicken", "butter-masala-chicken", "goan-pork-vindaloo",
@@ -21,7 +21,7 @@ const categoryRecipes = {
     "chicken-paella", "chicken-satay", "thai-basil-chicken", "lemongrass-chicken",
     "pollo-a-la-brasa", "shashlik-pork-kebab"
   ],
-  Desserts: ["cuatro-leches-cake", "whiskey-date-cake", "coconut-stracciatella-gelato", "buttery-apple-tart", "cranberry-orange-muffins", "espresso-oreo-gelato", "hectors-tres-leches", "mini-pavlovas"]
+  Desserts: ["tiramisu", "cuatro-leches-cake", "whiskey-date-cake", "coconut-stracciatella-gelato", "buttery-apple-tart", "cranberry-orange-muffins", "espresso-oreo-gelato", "hectors-tres-leches", "mini-pavlovas"]
 };
 
 const cuisineOverrides = {

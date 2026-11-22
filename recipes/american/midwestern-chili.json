@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "0.1",
+  "id": "midwestern-chili",
+  "title": "Mid-Western Chili",
+  "category": "American",
+  "status": "draft",
+  "photo": "./public/images/midwestern-chili.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2–3 slices bacon, chopped",
+        "2 lb beef, chili ground or cubed chuck",
+        "1 lb bulk Italian sausage",
+        "3–4 celery stalks, finely chopped",
+        "1 green bell pepper, seeded and medium-fine chopped",
+        "1 red bell pepper, seeded and medium-fine chopped",
+        "1 green jalapeño, seeded and finely chopped",
+        "1 large yellow onion, medium chopped",
+        "1 Tbsp minced garlic",
+        "2 (28 oz) cans fire-roasted tomatoes with juice, chopped if whole",
+        "1 (15 oz) can red kidney beans, drained",
+        "1 (15 oz) can chili beans in spicy sauce",
+        "1 (6 oz) can tomato paste",
+        "4 tsp beef bouillon concentrate, or 4 bouillon cubes and omit added salt",
+        "1 Tbsp Worcestershire sauce",
+        "2 tsp Tabasco sauce",
+        "½ bottle Guinness beer",
+        "¼ cup chili powder",
+        "1 tsp cayenne pepper",
+        "1 tsp smoked hot paprika, or regular paprika",
+        "2 tsp ground cumin",
+        "1 Tbsp dried Mexican oregano, or regular oregano",
+        "1 tsp dried basil",
+        "1 tsp white sugar",
+        "1 tsp salt",
+        "1 tsp ground black pepper"
+      ]
+    }
+  ],
+  "steps": [
+    "Prepare the vegetables and add them to a large heavy pot.",
+    "Crisp bacon in a small pan over medium-low heat, turning often. Drain, chop and add to the pot.",
+    "Brown the crumbled beef and sausage over high heat in batches of no more than 1 lb. Drain excess grease and add the meat to the pot.",
+    "Add tomatoes, beans, tomato paste, bouillon, liquids, spices and herbs. Stir well, bring to a boil, then simmer over low heat for at least 2 hours, stirring occasionally. Skim excess fat after the first hour if needed.",
+    "Taste and adjust salt, pepper and chili powder. For more tender meat, simmer on the lowest heat for an additional 1–2 hours if desired.",
+    "Serve with cornbread, Fritos, cheddar, diced onion, cilantro or sour cream. For best flavor, refrigerate overnight and reheat the next day."
+  ],
+  "reviewFlags": [
+    "The source specifies half a bottle of Guinness without a bottle size."
+  ],
+  "headnote": "The source specifies half a bottle of Guinness without a bottle size."
+}
