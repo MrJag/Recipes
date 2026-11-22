@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "0.1",
+  "id": "tandoori-chicken",
+  "title": "Tandoori Chicken",
+  "category": "Indian",
+  "photo": "./public/images/tandoori-chicken.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "3 lbs Chicken (butterflied whole, assorted bone-in parts, or 1” boneless cubes)"
+      ]
+    },
+    {
+      "title": "Marinade",
+      "items": [
+        "¾ cup yogurt",
+        "2 Tbsp Garlic & Ginger Paste *",
+        "½ Tbsp oil (grapeseed)",
+        "2 Tbsp Tandoori masala",
+        "½ tsp salt"
+      ]
+    }
+  ],
+  "steps": [
+    "Add all the marinade ingredients to a large bowl and whisk to combine.",
+    "Prepare the chicken. For a whole chicken, butterfly it first. For whole or bone-in pieces, remove skin and excess fat and slash down to the bone about every inch. For kebabs, cut boneless chicken into 1–1½-inch cubes.",
+    "Add the chicken to the marinade, making sure to coat the surface and working the mixture into the slashes.",
+    "Cover the bowl and marinade in the refrigerator for at least 2 hours or overnight for the best results.",
+    "Right before grilling, remove excess marinade and skewer if applicable.",
+    "Grill over medium high heat, flipping and rotating every 3 minutes for 12-15 minutes, until a thermometer registers an internal temperature of 165 °F.",
+    "Rest for 2 minutes then serve."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Adapted from Food Fusion, https://www.youtube.com/watch?v=6pOa9nESATY Garlic and Ginger Paste can be made by grinding equal portions in a mortar and pestle until a smooth paste forms."
+}

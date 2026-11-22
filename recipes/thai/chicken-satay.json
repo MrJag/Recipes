@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "0.1",
+  "id": "chicken-satay",
+  "title": "Chicken Satay",
+  "category": "Thai",
+  "photo": "./public/images/chicken-satay.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "3 lbs boneless skinless chicken thighs or breast",
+        "½ cup coconut milk",
+        "1 Tbsp fish sauce",
+        "1.5 Tbsp soy sauce",
+        "1.5 Tbsp red curry paste",
+        "1 Tbsp curry powder",
+        "1 tsp sugar",
+        "2 Tbsp lime juice",
+        "2 Tbsp neutral oil"
+      ]
+    },
+    {
+      "title": "For Serving",
+      "items": [
+        "Peanut sauce",
+        "Coconut lime rice"
+      ]
+    }
+  ],
+  "steps": [
+    "Trim and cut the chicken into bite sized chunks and set aside.  (¾” pieces for bamboo skewers or 1-1.5” pieces for large skewers.)",
+    "Combine the remaining ingredients in a bowl and whisk until smooth.  (A blender works fine too)",
+    "Marinate for at least 30 minutes or overnight for the best results.",
+    "After the desired marination, skewer the chicken so that they are loosely touching and not packed tightly together.",
+    "Grill over medium to high heat, turning periodically, until golden brown with flecks of char and the chicken reaches 165°F internally, approximately 10–15 minutes.",
+    "Rest for 5 minutes and serve with peanut sauce."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Note: This dish is great with fresh cucumbers, tomatoes, and coconut rice."
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "0.1",
+  "id": "cranberry-orange-muffins",
+  "title": "Cranberry Orange Muffins",
+  "category": "Dessert",
+  "photo": "./public/images/cranberry-orange-muffins.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2.5 cups cranberries",
+        "1 cup bread flour (158g)",
+        "1 cup pastry flour (131g)",
+        "½ tsp salt",
+        "2 tsp baking powder",
+        "¼ cup orange juice (squeezed from 2 oranges)",
+        "¼ cup thick yogurt (greek)",
+        "½ cup butter, room temperature",
+        "1 cup sugar",
+        "zest from 2 oranges",
+        "2 eggs",
+        "1 tsp vanilla (or lemon/orange liquor)",
+        "2-3 Tbsp coarse grained sugar (such as Sugar in the Raw)"
+      ]
+    }
+  ],
+  "steps": [
+    "Preheat the oven to 375F (no convection) and line the muffin pan with liners.",
+    "Toss the cranberries in flour to coat and set aside.",
+    "Sift together the remaining flour, salt, and baking powder and set aside.",
+    "Combine the orange juice and yogurt and set aside.",
+    "Cream the butter, orange zest, and 1 cup sugar on medium (Kitchenaid speed 4) until light.",
+    "Add the eggs and vanilla, beating to incorporate well.",
+    "Add a third of the flour, then a third of the orange+yogurt mixture, mixing well between additions.  Repeat until all of the flour and liquids are incorporated.",
+    "Fold in the cranberries into the batter.",
+    "Distribute the batter into the muffin liners then gently tap the tray on a hard surface to level the batter and remove large air bubbles.",
+    "Sprinkle a large pinch of sugar over the top of each muffin.",
+    "Bake for 30 minutes at 375 F, non-convection.",
+    "Remove the muffins from the baking pan immediately to cool on a wire rack for 5-10 minutes."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Adapted from Jordan Marsh’s Blueberry Muffin recipe, https://sallysbakingaddiction.com/cranberry-orange-muffins/",
+  "servings": "1 dozen medium muffins"
+}

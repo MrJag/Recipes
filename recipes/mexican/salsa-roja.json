@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "0.1",
+  "id": "salsa-roja",
+  "title": "Salsa Roja",
+  "category": "Mexican",
+  "photo": "./public/images/salsa-roja.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "guajillo",
+        "ancho",
+        "2 serrano chili, seeds and stem removed",
+        "2 tomatoes",
+        "2-3 cloves of garlic",
+        "¼ small onion",
+        "pinch of cumin",
+        "2 pinches of oregano",
+        "salt",
+        "1 ladle of water from chilies"
+      ]
+    }
+  ],
+  "steps": [
+    "Bring a pot of water to a boil.",
+    "Remove the stems and seeds from the chiles and add them to the boiling water. The source leaves the boiling time unspecified.",
+    "Add all the ingredients to a blender"
+  ],
+  "reviewFlags": [
+    "The source omits the quantities for guajillo and ancho chiles and leaves the boiling time unfinished."
+  ],
+  "status": "draft",
+  "headnote": "The source omits the quantities for guajillo and ancho chiles and leaves the boiling time unfinished."
+}

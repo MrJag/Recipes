@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "0.1",
+  "id": "pollo-asado",
+  "title": "Pollo Asado",
+  "category": "Mexican",
+  "photo": "./public/images/pollo-asado.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2-4 lbs chicken (breast is fine, thigh is more juicy)"
+      ]
+    },
+    {
+      "title": "Citrus-Achiote Marinade",
+      "items": [
+        "¼ cup orange juice",
+        "¼ cup lime juice",
+        "1 Tbsp honey",
+        "2-3 Tbsp olive oil",
+        "2 chilis in adobo",
+        "0.5 oz achiote paste",
+        "3-4 garlic cloves, roughly chopped or minced",
+        "1 tsp ground cumin",
+        "1 tsp mexican oregano",
+        "1 tsp salt",
+        "1 tsp black pepper"
+      ]
+    }
+  ],
+  "steps": [
+    "Prepare the marinade by blending all of the ingredients in the blender until homogeneous.",
+    "Trim the chicken and marinade for 2 hours, up to a maximum of 4 hours.",
+    "Grill over high heat until the chicken reaches 165°F internally, approximately 12–16 minutes.",
+    "Rest for 3-5 minutes before serving."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Substitute with 1-1.5 Tsp of your choice of ground chili pepper.  Different chili peppers produce different flavor profiles; Aleppo for a fruity raisin, Guajillo for a smokiness, or Kashmiri or a neutral taste."
+}

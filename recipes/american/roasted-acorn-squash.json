@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "0.1",
+  "id": "roasted-acorn-squash",
+  "title": "Roasted Acorn Squash",
+  "category": "American",
+  "photo": "./public/images/roasted-acorn-squash.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1 acorn squash (about 3 pounds)",
+        "2 Tbsp honey",
+        "1.5 Tbsp olive oil, plus more for greasing the pan",
+        "½ teaspoon freshly ground black pepper",
+        "½ teaspoon kosher salt"
+      ]
+    }
+  ],
+  "steps": [
+    "Preheat the oven to 375 F",
+    "Line a baking sheet with aluminum foil for easy cleanup.",
+    "Mix the honey, olive oil, salt, and pepper together in a small bowl and set aside.",
+    "Remove the top and bottom of the squash, then cut the squash in half, vertically to reveal the interior.",
+    "Scrape the seeds and stringy pulp out with a spoon.",
+    "Cut each half into 4 moon shaped segments, approximately 1” thick.",
+    "Rub the honey and oil mixture onto squash, coating all the surfaces thoroughly and arrange evenly on a baking sheet.",
+    "Cook on the middle rack for 25 minutes, or until the flesh gives slightly when pierced by a knife.",
+    "Transfer to the top rack and broil for an additional 3 minutes, producing a light golden caramelization."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Adapted from: NY Times Cooking, https://cooking.nytimes.com/recipes/1015141-roasted-acorn-squash"
+}

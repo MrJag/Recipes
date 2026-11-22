@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "0.1",
+  "id": "tomato-basil-soup",
+  "title": "Tomato Basil Soup",
+  "category": "American",
+  "photo": "./public/images/tomato-basil-soup.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "3 tablespoons olive oil or ghee",
+        "4 large carrots, peeled and diced",
+        "1 large onion, diced",
+        "1 tablespoon dried basil, crushed",
+        "3 28-ounce cans whole peeled Roma tomatoes",
+        "3 cups chicken broth",
+        "1 pint heavy cream",
+        "10 grinds of pepper",
+        "1 Tsp salt + to taste",
+        "1 Tablespoon of butter"
+      ]
+    }
+  ],
+  "steps": [
+    "Heat the oil/ghee over medium-high heat and saute the onion and carrots until soft.",
+    "Add the basil and saute for another 5 minutes, but do not let anything burn.",
+    "Add the tomatoes, chicken broth, 1 Tsp of salt, and black pepper, then pressure cook for 35 minutes.",
+    "Quick release then add half cup of cream, stir, the juice of 1 lemon, stir, and 1 Tablespoon of butter.",
+    "Season to taste with salt and pepper."
+  ],
+  "reviewFlags": [
+    "The source lists a pint of cream but calls for ½ cup in the method. It also calls for lemon juice that isn’t listed in the ingredients."
+  ],
+  "status": "draft",
+  "headnote": "The source lists a pint of cream but calls for ½ cup in the method. It also calls for lemon juice that isn’t listed in the ingredients."
+}

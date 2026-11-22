@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "0.1",
+  "id": "peanut-sauce",
+  "title": "Peanut Sauce",
+  "category": "Thai",
+  "photo": "./public/images/peanut-sauce.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "4 Tbsp lime juice",
+        "1 cup peanut butter",
+        "1 Tbsp red miso",
+        "1 Tbsp ginger, grated",
+        "1 Tbsp fish sauce",
+        "2 tsp habanero, or 1 Tbsp sambal",
+        "2 Tbsp oil",
+        "1 Tbsp honey",
+        "3/4 cup water"
+      ]
+    }
+  ],
+  "steps": [
+    "Combine all ingredients in a bowl and whisk until smooth.  Add salt to taste."
+  ],
+  "reviewFlags": []
+}

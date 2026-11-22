@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "0.1",
+  "id": "long-grain-rice-with-mustard-seeds",
+  "title": "Long Grain Rice with Mustard Seeds",
+  "category": "Indian",
+  "photo": "./public/images/long-grain-rice-with-mustard-seeds.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1 Tbsp Ghee/Oil",
+        "1/4 tsp cumin seeds",
+        "1 tsp brown mustard seeds",
+        "2 cups basmati rice",
+        "2.5 cups water",
+        "½ Tsp Salt",
+        "1 bay leaf",
+        "2 cloves garlic (optional)",
+        "1 pinch asafetida (optional)"
+      ]
+    }
+  ],
+  "steps": [
+    "Heat oil over medium-high heat.",
+    "Saute cumin and mustard seeds until you start to hear crackles, about 15-30 seconds.",
+    "Add the rice and continue to saute until the rice releases a nutty fragrance, about 60 seconds.  The color should remain mostly white, with a slight golden hue.",
+    "Transfer to a rice cooker, adding the water, garlic, salt, asafetida, and bay leaf.",
+    "Cook per rice cooker instructions.  (Cuckoo: mixed rice, turbo mode)",
+    "Fluff immediately when finished then close the lid and let rest for 10 minutes."
+  ],
+  "reviewFlags": []
+}

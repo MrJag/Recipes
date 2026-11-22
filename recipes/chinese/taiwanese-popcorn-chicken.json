@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "0.1",
+  "id": "taiwanese-popcorn-chicken",
+  "title": "Taiwanese Popcorn Chicken",
+  "category": "Chinese",
+  "photo": "./public/images/taiwanese-popcorn-chicken.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1 lbs chicken (boneless skinless thigh)",
+        "1 egg white",
+        "1 Tbsp soy sauce",
+        "2 Tbsp shaoxing wine",
+        "1 tsp salt",
+        "3 cloves garlic",
+        "1 tsp ginger, minced",
+        "1 tsp five-spice powder",
+        "½ tsp onion powder",
+        "2 Tbsp all-purpose flour",
+        "Sweet potato starch, coarse grain (or sub potato/corn starch)",
+        "Handful of washed and dried basil leaves",
+        "Chinese salt+pepper blend",
+        "Cayenne pepper",
+        "Neutral oil for deep-frying"
+      ]
+    }
+  ],
+  "steps": [
+    "Cut chicken into bite sized pieces, approximately 0.75” chunks, and place in a medium sized bowl.",
+    "Next add to the chicken the egg white, soy sauce, shaoxing wine, salt, garlic, ginger, five-spice, onion powder, and flour.  Mix thoroughly to combine then let sit for 10-15 minutes to marinade.",
+    "Add 2 cups of sweet potato starch to a separate container.  Then toss the chicken, several pieces at a time, to coat well and transfer to a baking sheet.  Repeat until all pieces are coated and let the coated chicken rest for 15 minutes so that the coating sticks.",
+    "Meanwhile, bring a pot of oil to 350°F.",
+    "Fry the chicken in batches until a light golden brown, approximately 1-2 minutes.  Do not crowd the pot or the pieces will stick together and it will overwhelm the oil temperature.  Stir periodically to ensure even browning and prevent pieces from sticking together.  Transfer the fried chicken to a large bowl lined with paper towels to absorb excess oil and return to room temperature.  Repeat with the remaining batches.",
+    "Skim any crumbs from the oil, then bring it to 375°F.",
+    "Fry the chicken again in batches until crisp and golden and it reaches 165°F internally.",
+    "Pat the basil completely dry. Carefully add it to the oil right before the chicken is done and fry for 15–20 seconds.",
+    "Transfer everything back to the container lined with paper towels.",
+    "Season with salt, pepper, and cayenne pepper to taste, then serve immediately."
+  ],
+  "reviewFlags": [
+    "Second-fry temperature adjusted from 450°F to 375°F."
+  ],
+  "sourceNote": "Adapted from Souped up Recipes, https://www.youtube.com/watch?v=OyAQrpyG0tE"
+}

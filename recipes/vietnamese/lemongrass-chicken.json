@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "0.1",
+  "id": "lemongrass-chicken",
+  "title": "Lemongrass Chicken",
+  "category": "Vietnamese",
+  "photo": "./public/images/lemongrass-chicken.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Marinade (for 2 lb of meat)",
+      "items": [
+        "4 tbsp fish sauce",
+        "2 lemongrass stalks, outer stems removed and minced",
+        "4 tbsp soy sauce",
+        "1/2 lime juice",
+        "2 tbsp brown sugar",
+        "4 cloves garlic"
+      ]
+    },
+    {
+      "title": "Chicken Bowl",
+      "items": [
+        "3 chicken thighs",
+        "2 medium carrots",
+        "1/4 cup cucumber (about 2 inches)",
+        "8oz bean sprouts",
+        "6-8 butter lettuce leaves",
+        "8oz vermicelli rice noodles",
+        "peanut oil"
+      ]
+    },
+    {
+      "title": "Nuoc Cham Sauce",
+      "items": [
+        "4 tbsp fish sauce",
+        "1/2 lime juice",
+        "2 tbsp brown sugar",
+        "2-3 Thai chiles",
+        "4 cloves garlic",
+        "1/4 cup water"
+      ]
+    }
+  ],
+  "steps": [
+    "Remove the outer stalks of the lemongrass until only the tender white (or purple) stalk remains at the base.  Trim about 1 cm of the root and the upper green section of the stalk.  Finely mince the remaining root stalk then bruise using the back or flat of the knife.",
+    "Combine all marinade ingredients then add the chicken thighs."
+  ],
+  "reviewFlags": [
+    "The source includes the marinade method. Cooking and bowl assembly directions still need to be added."
+  ],
+  "sourceNote": "Adapted from Lemongrass Chicken Vermicelli Noodles (Miss Saigon Oakland) — Woo Can Cook — https://www.woocancook.com/lemongrass-chicken-vermicelli",
+  "status": "draft",
+  "headnote": "The source includes the marinade method. Cooking and bowl assembly directions still need to be added."
+}

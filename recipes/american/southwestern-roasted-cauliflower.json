@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "0.1",
+  "id": "southwestern-roasted-cauliflower",
+  "title": "Southwestern Roasted Cauliflower",
+  "category": "American",
+  "photo": "./public/images/southwestern-roasted-cauliflower.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1 large head Cauliflower",
+        "3 cloves garlic, minced",
+        "1 Tbsp New Mexico Chili Powder",
+        "½ tsp crushed dry Red Chili",
+        "1 tsp Cumin seeds, toasted and ground",
+        "4 Tbsp Olive Oil",
+        "¼ Cup Cilantro leaves, chopped",
+        "½ Lime, juiced",
+        "½ tsp salt (or to taste)"
+      ]
+    }
+  ],
+  "steps": [
+    "Preheat oven to 325 F.",
+    "Separate the florets from the cauliflower.",
+    "Toss the cauliflower with the garlic, spices, olive oil, cilantro, and salt.",
+    "Bake for 60-90 minutes.",
+    "Finish with the lime juice."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Untested: try 425F for 25-30m.  Maybe also roast the lime halves before squeezing.  Maybe save the cilantro for the finishing."
+}

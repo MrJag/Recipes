@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.1",
+  "id": "codys-salsa",
+  "title": "Cody’s Salsa",
+  "category": "Mexican",
+  "photo": "./public/images/codys-salsa.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "28 oz fire roasted tomatoes, drained",
+        "5 garlic cloves",
+        "½ bunch cilantro",
+        "1 cup diced white onion",
+        "2 jalapenos",
+        "1 Tbsp salt",
+        "½ tsp pepper",
+        "1 tsp sugar"
+      ]
+    }
+  ],
+  "steps": [
+    "Blitz all ingredients in a blender until desired consistency."
+  ],
+  "reviewFlags": []
+}

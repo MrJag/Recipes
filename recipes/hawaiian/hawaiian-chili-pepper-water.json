@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "0.1",
+  "id": "hawaiian-chili-pepper-water",
+  "title": "Hawaiian Chili Pepper Water",
+  "category": "Hawaiian",
+  "photo": "./public/images/hawaiian-chili-pepper-water.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "4-8 Hawaiian chili peppers  (substitute: 8 birds eye chilies or 2 Habanero peppers)",
+        "8 cloves garlic, minced",
+        "1 inch of ginger, minced",
+        "½ cup rice wine vinegar",
+        "2.5 tsp Alaea Red Hawaiian Sea Salt",
+        "750ml bottle for storage."
+      ]
+    }
+  ],
+  "steps": [
+    "Mince the garlic, ginger, and chili peppers (seeds included).",
+    "Add all ingredients to a pot and bring to a boil then remove from heat.",
+    "Transfer to a bottle when cool then refrigerate.",
+    "The sauce can be used immediately but will taste best after it has infused for 2-3 days."
+  ],
+  "reviewFlags": [
+    "The source does not specify the amount of water. Confirm the recipe before preparing."
+  ],
+  "sourceNote": "Inspired by Nalu’s South Shore Grill, 2019 Maui Vacation",
+  "status": "draft",
+  "headnote": "The source does not specify the amount of water. Confirm the recipe before preparing."
+}

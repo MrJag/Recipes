@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "0.1",
+  "id": "coconut-lime-rice",
+  "title": "Coconut Lime Rice",
+  "category": "Thai",
+  "photo": "./public/images/coconut-lime-rice.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1 cup basmati rice",
+        "1 cup coconut milk",
+        "¼ cup coconut flakes (optional)",
+        "½ cup water",
+        "Pinch of salt",
+        "1 zested lime",
+        "1 scallion, thinly sliced",
+        "4 tsp cilantro, minced"
+      ]
+    }
+  ],
+  "steps": [
+    "Rinse the rice until the water runs clear and drain.",
+    "In a medium saucepan, combine rice, coconut flakes, 1⁄2 cup water, 1 cup coconut milk, and a pinch of salt.",
+    "Bring to a boil then cover and simmer over low heat for 12-15 minutes, until the rice is tender.",
+    "Remove from heat and stir in the lime zest and scallions.",
+    "Garnish with cilantro."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Note: This dish is great with chicken satay."
+}

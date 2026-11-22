@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "0.1",
+  "id": "belgian-waffles",
+  "title": "Belgian Waffles",
+  "category": "Breakfast",
+  "photo": "./public/images/belgian-waffles.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1 ½ cups (340g) lukewarm milk",
+        "6 tablespoons (85g) butter, melted",
+        "2 to 3 tablespoons (40g) maple syrup",
+        "¾ teaspoon salt",
+        "1 teaspoon vanilla extract",
+        "2 large eggs",
+        "2 cups (241g) King Arthur Unbleached All-Purpose Flour",
+        "1 ½ teaspoons instant yeast",
+        "1 ½ teaspoons baking powder (optional for 30 minute variation)"
+      ]
+    }
+  ],
+  "steps": [
+    "Combine all of the ingredients in a large bowl, leaving room for expansion; the mixture will bubble and grow.  Include the baking powder for the 30 minute quick version, otherwise skip it.",
+    "Stir to combine; it's OK if the mixture isn't perfectly smooth.",
+    "Cover with plastic wrap and rest according to the following schedule:",
+    "Best (Yeast only):  Rest overnight in the refrigerator.",
+    "Good/Fast (Yeast Only):  Rest at room temperature for 1 hour.",
+    "Fastest (Yeast + Baking Powder):  Rest at room temperature for 30 minutes.",
+    "Preheat your waffle iron to 400 °F on Griddle mode.",
+    "Pour 1 heaping cup (~ 1.2 cups) onto the center of the griddle and level sleightly with the back of the measuring cup.  Close the lid and bake for 4 minutes, until the waffle is golden brown.",
+    "Remove and rest on a wire cooling rack to prevent sogginess.  Serve immediately with syrup or dusted with powder sugar."
+  ],
+  "reviewFlags": [
+    "Used baking powder for the quick variation to match the ingredients and mixing instructions."
+  ],
+  "sourceNote": "Adapted from https://www.kingarthurflour.com/recipes/belgian-style-yeast-waffles-recipe",
+  "subtitle": "Yeasted"
+}

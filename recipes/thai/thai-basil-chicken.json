@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "0.1",
+  "id": "thai-basil-chicken",
+  "title": "Thai Basil Chicken",
+  "category": "Thai",
+  "photo": "./public/images/thai-basil-chicken.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Chicken",
+      "items": [
+        "1.5-2 lbs boneless/skinless chicken thigh, medium-fine mince/ground",
+        "1 Tbsp cornstarch",
+        "¼ tsp white pepper",
+        "1 Tbsp light oil (grapeseed)"
+      ]
+    },
+    {
+      "title": "Vegetables",
+      "items": [
+        "1 cup green beans, cut into 1” segments (chinese long bean)",
+        "¾ cup onions, chopped",
+        "1 cup green onions"
+      ]
+    },
+    {
+      "title": "Garlic and Chiles",
+      "items": [
+        "4 Birds Eye chili peppers, stems removed",
+        "4 Tbsp garlic (8-10 cloves, stems removed)",
+        "2 Tbsp mild red peppers, minced (bell pepper is fine)"
+      ]
+    },
+    {
+      "title": "Sauce",
+      "items": [
+        "1 Tbsp oyster sauce",
+        "2 tsp soy sauce",
+        "1.5 tsp dark soy sauce",
+        "1 tsp fish sauce",
+        "1.5 tsp sugar",
+        "2 Tbsp water"
+      ]
+    },
+    {
+      "title": "For Stir-Frying",
+      "items": [
+        "3 Tbsp light oil (grapeseed) for frying.",
+        "2 cups Holy Basil leaves (or Thai Basil), washed and drained"
+      ]
+    }
+  ],
+  "steps": [
+    "In a medium bowl, combine the chicken, cornstarch, white pepper, and oil until distributed.",
+    "Using a mortar and pestle, crush the chili peppers until it reaches a fine consistency.  Add the garlic and mild peppers and continue to crush the mixture until combined.  The goal is to break up the chilis so there are no spicy chunks but not ground to a paste.  Transfer to a small bowl and set aside.",
+    "In a small bowl, combine the oyster sauce, soy sauce, dark soy sauce, fish sauce, sugar, and water.",
+    "Arrange all your ingredients so they are nearby and ready to use prior to stir-frying.  The following steps happen in rapid sequence and can burn if the next set of ingredients are not ready or easily accessible.",
+    "Heat a wok until smoking, then turn the heat down to medium and add 2-3 Tbsp of oil.  Immediately add the garlic chili mixture and fry, moving the mixture quickly to avoid burning the garlic.",
+    "When the chilis are fragrant, add the meat and turn the heat up to medium-high.  Keep the mixture moving quickly to avoid burnt garlic or chicken.",
+    "Add the veggies after the chicken releases its moisture, approximately 30-45 seconds.  Continue to stir fry until the beans reach the desired doneness, approximately 30-45 seconds.",
+    "Add the sauce, tossing for 15 seconds to combine. Before removing from the heat, check that the chicken has reached 165°F.",
+    "Finally, turn off the heat and add the basil, tossing to combine.  The basil will wilt from the residual heat.",
+    "Serve immediately with rice and optionally top with a crispy fried egg."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Adapted from https://hot-thai-kitchen.com/holy-basil-stir-fry/",
+  "subtitle": "Pad Kra Pao, Pad Gaprao"
+}

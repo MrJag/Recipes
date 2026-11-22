@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.1",
+  "id": "raspberry-vinaigrette",
+  "title": "Raspberry Vinaigrette",
+  "category": "American",
+  "photo": "./public/images/raspberry-vinaigrette.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "10 Raspberries",
+        "¼ cup red wine vinegar",
+        "½ cup olive oil",
+        "2 Tbsp Agave sweetener",
+        "1 tsp Dijon Mustard",
+        "1 Tbsp water",
+        "Cracked pepper (to taste)"
+      ]
+    }
+  ],
+  "steps": [
+    "Add all ingredients to a blender and puree until emulsified.",
+    "Add pepper to taste and adjust consistency by adding additional water as needed."
+  ],
+  "reviewFlags": []
+}
