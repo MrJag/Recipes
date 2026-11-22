@@ -13,7 +13,7 @@ Family cookbook project (temporarily public for GitHub Pages preview).
 ## Current status
 - `src/styles/cookbook.css`: editable editorial right-strip print design (v0.6).
 - `index.html` and `src/scripts/cookbook.js`: browser recipe selector, layout controls, and automatic pagination.\n- Five example recipes imported as JSON from Google Drive, preserving source references and review flags.\n- The layout is under test; page-fit is checked in-browser and is not yet validated across every recipe.
-- Latvian Stew has its verified original 263 × 1096 JPEG web image and lossless PNG master committed. Other recipes use placeholders until imagery is added.
+- Latvian Stew has its verified trim-free 614 × 2559 JPEG web image and lossless PNG master committed. The other four recipes use generated editorial photography.
 
 ## Proposed folders
 - `recipes/`: structured, versioned recipe content
@@ -35,4 +35,4 @@ The repository is currently public to support a temporary GitHub Pages preview. 
 
 Use a PNG master at `assets/masters/<recipe-slug>.png` and a web JPG at `public/images/<recipe-slug>.jpg`. Recipe JSON `photo` points to the JPG. The PNG is retained for re-exports and later print-production work. Converting an existing JPG to PNG cannot restore details already discarded by JPG encoding.
 
-**Latvian Stew:** The original JPEG and PNG are committed as binary Git blobs and their Git SHAs have been verified against local image files. See `docs/images.md` for paths and asset policy.
+**Latvian Stew:** The current JPEG and original PNG are committed as binary Git blobs and their Git SHAs have been verified against local image files. See `docs/images.md` for paths and asset policy.

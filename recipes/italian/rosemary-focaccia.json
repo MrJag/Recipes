@@ -6,7 +6,7 @@
   "servings": null,
   "prepTime": null,
   "cookTime": null,
-  "photo": null,
+  "photo": "./public/images/rosemary-focaccia.jpg",
   "headnote": null,
   "ingredientGroups": [
     {

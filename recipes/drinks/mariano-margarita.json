@@ -4,7 +4,7 @@
   "title": "Margarita (on the rocks) DRAFT",
   "category": "Drinks",
   "servings": null,
-  "photo": null,
+  "photo": "./public/images/mariano-margarita.jpg",
   "headnote": null,
   "ingredientGroups": [
     {

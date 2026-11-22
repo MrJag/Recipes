@@ -6,7 +6,7 @@
   "servings": null,
   "prepTime": null,
   "cookTime": null,
-  "photo": null,
+  "photo": "./public/images/caribbean-green-seasoning.jpg",
   "headnote": null,
   "ingredientGroups": [
     {
