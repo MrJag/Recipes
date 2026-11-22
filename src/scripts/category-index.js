@@ -1,7 +1,7 @@
 "use strict";
 
 const categoryRecipes = {
-  Drinks: ["cardamom-currant-moscow-mule", "frozen-margarita", "iced-lemon-green-tea-with-basil-seeds", "mariano-margarita"],
+  Drinks: ["sevilla-sour", "cardamom-currant-moscow-mule", "frozen-margarita", "iced-lemon-green-tea-with-basil-seeds", "mariano-margarita"],
   Condiments: ["velveting-beef", "velveting-chicken", "chili-powder", "spanish-picada", "neapolitan-pizza-sauce", "lawrys-seasoning-clone", 
     "raspberry-vinaigrette", "caribbean-green-seasoning", "chinese-white-stir-fry-sauce",
     "greek-marinade", "hawaiian-chili-pepper-water", "pomodoro-sauce", "bolognese-ragu",

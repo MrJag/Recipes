@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "0.1",
+  "id": "sevilla-sour",
+  "title": "Sevilla Sour",
+  "category": "Drinks",
+  "status": "draft",
+  "photo": "./public/images/sevilla-sour.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2 oz Cardenal Mendoza brandy",
+        "1 oz Manzanilla",
+        "1.5 oz lemon juice",
+        "Dash of red wine",
+        "Egg white",
+        "Mint leaves, for garnish",
+        "Ice"
+      ]
+    }
+  ],
+  "steps": [
+    "Shake the brandy, Manzanilla, lemon juice, red wine, and egg white.",
+    "Strain into a glass with ice cubes and garnish with mint leaves."
+  ],
+  "reviewFlags": [
+    "The source does not specify the quantity of egg white."
+  ],
+  "headnote": "Draft: Confirm the egg white quantity.",
+  "sourceNote": "Adapted from Bulla Gastrobar."
+}
