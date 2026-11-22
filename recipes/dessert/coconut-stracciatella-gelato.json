@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "0.1",
+  "id": "coconut-stracciatella-gelato",
+  "title": "Coconut Stracciatella Gelato",
+  "category": "Dessert",
+  "photo": "./public/images/coconut-stracciatella-gelato.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Dairy",
+      "items": [
+        "420g heavy cream",
+        "220g whole milk",
+        "100g full-fat coconut milk, shaken",
+        "1–2g salt"
+      ]
+    },
+    {
+      "title": "Structure",
+      "items": [
+        "4 large egg yolks",
+        "95g granulated sugar",
+        "35g agave syrup"
+      ]
+    },
+    {
+      "title": "Stabilizers",
+      "items": [
+        "1.1g locust bean gum",
+        "0.8g xanthan gum"
+      ]
+    },
+    {
+      "title": "Flavor and Mix-ins",
+      "items": [
+        "5g vanilla paste",
+        "60g finely shredded unsweetened coconut",
+        "85g dark chocolate (60–70%)",
+        "10g neutral oil or cocoa butter"
+      ]
+    }
+  ],
+  "steps": [
+    "Combine shredded coconut and coconut milk. Warm gently to 120–140°F for 5–10 minutes to soften.",
+    "Whisk the sugar, locust bean gum, and xanthan gum together. Whisk the egg yolks in a large bowl.",
+    "Heat cream, milk, and salt over medium heat, whisking periodically, to 150°F. Remove from the heat.",
+    "Slowly drizzle the hot dairy into the yolks while whisking. Return to the pot with the sugar mixture and agave, whisking to combine.",
+    "Heat over medium, stirring continuously, to 175°F. Remove from heat immediately.",
+    "Add vanilla and emulsify with an immersion blender for 15–20 seconds. Add the coconut mixture and blend briefly, no more than 15 seconds, without puréeing.",
+    "Chill in an ice bath, whisking to cool. Press plastic wrap onto the surface and refrigerate overnight.",
+    "Pre-chill the Musso 5030 for 13 minutes with the lid closed. Stir the base briefly, then churn for 6 minutes.",
+    "Melt the chocolate and oil and hold at 104–113°F. Between minutes 6 and 7, drizzle into the gelato to form thin shards.",
+    "Transfer immediately to a pre-chilled container and freeze at least 3 hours before serving."
+  ],
+  "reviewFlags": [
+    "The source describes this recipe as a pre-draft."
+  ],
+  "sourceNote": "Inspired by Claire Saffitz’s Coffee Oreo ice cream."
+}
