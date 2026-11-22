@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "0.1",
+  "id": "tequila-tini",
+  "title": "Tequila Tini",
+  "category": "Drinks",
+  "photo": "./public/images/tequila-tini.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "Smoked salt, for rim",
+        "½ oz lime juice",
+        "1 oz smoked orange juice",
+        "½ oz agave",
+        "½ oz Cointreau",
+        "1½ oz tequila"
+      ]
+    }
+  ],
+  "steps": [
+    "Rim the serving glass with smoked salt. Add lime juice, smoked orange juice, agave, Cointreau and tequila to a shaker with ice.",
+    "Shake and strain into a mini shaker tin to serve."
+  ],
+  "sourceNote": "Adapted from Fork & Fire cocktail recipes.",
+  "status": "draft",
+  "reviewFlags": [
+    "The source does not explain how to prepare smoked orange juice."
+  ],
+  "headnote": "The source does not explain how to prepare smoked orange juice."
+}

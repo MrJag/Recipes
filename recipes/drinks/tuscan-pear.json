@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.1",
+  "id": "tuscan-pear",
+  "title": "Tuscan Pear",
+  "category": "Drinks",
+  "photo": "./public/images/tuscan-pear.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "¾ oz lemon juice",
+        "½ oz simple syrup",
+        "½ oz limoncello",
+        "¼ oz ginger liqueur",
+        "1½ oz pear vodka",
+        "½ oz orange juice, for floating",
+        "Lemon wheel, for garnish"
+      ]
+    }
+  ],
+  "steps": [
+    "Add lemon juice, simple syrup, limoncello, ginger liqueur and pear vodka to a shaker with ice. Shake and strain into an iced stemless flute.",
+    "Float orange juice on top without shaking it. Garnish with a lemon wheel."
+  ],
+  "sourceNote": "Adapted from Fork & Fire cocktail recipes."
+}

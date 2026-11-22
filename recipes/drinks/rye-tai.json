@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "0.1",
+  "id": "rye-tai",
+  "title": "Rye Tai",
+  "category": "Drinks",
+  "photo": "./public/images/rye-tai.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "½ oz lemon juice",
+        "1½ oz pineapple juice",
+        "1¼ oz orgeat",
+        "2 oz Bulleit rye",
+        "Hella bitters, for floating",
+        "Black cherry, for garnish"
+      ]
+    }
+  ],
+  "steps": [
+    "Add lemon juice, pineapple juice, orgeat and rye to a shaker tin with ice. Roll into a tumbler; do not shake.",
+    "Float bitters and garnish with a black cherry."
+  ],
+  "sourceNote": "Adapted from Fork & Fire cocktail recipes.",
+  "status": "draft",
+  "reviewFlags": [
+    "The source does not specify an amount for the bitters."
+  ],
+  "headnote": "The source does not specify an amount for the bitters."
+}

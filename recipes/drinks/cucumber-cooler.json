@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "0.1",
+  "id": "cucumber-cooler",
+  "title": "Cucumber Cooler",
+  "category": "Drinks",
+  "photo": "./public/images/cucumber-cooler.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2 cucumber slices, for muddling",
+        "¾ oz lime juice",
+        "½ oz simple syrup",
+        "½ oz elderflower liqueur",
+        "1¼ oz vodka or gin",
+        "2 cucumber slices, for garnish"
+      ]
+    }
+  ],
+  "steps": [
+    "Muddle 2 cucumber slices with lime juice and simple syrup in a shaker. Add elderflower liqueur, vodka or gin, and ice.",
+    "Place a cucumber slice in a Collins glass and add ice. Shake and strain into the glass. Garnish with the remaining cucumber slice."
+  ],
+  "sourceNote": "Adapted from Fork & Fire cocktail recipes."
+}

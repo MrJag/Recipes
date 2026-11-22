@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "0.1",
+  "id": "fiery-pineapple",
+  "title": "Fiery Pineapple",
+  "category": "Drinks",
+  "photo": "./public/images/fiery-pineapple.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "Smoked salt, for rim",
+        "¾ oz lime juice",
+        "¾ oz pineapple-jalapeño syrup",
+        "½ oz Cointreau",
+        "1½ oz tequila",
+        "½ oz pineapple juice, for floating",
+        "Jalapeño slice, for garnish"
+      ]
+    }
+  ],
+  "steps": [
+    "Rim a rocks glass with smoked salt. Add lime juice, pineapple-jalapeño syrup, Cointreau and tequila to a shaker with ice.",
+    "Shake and strain into the iced glass. Float pineapple juice and garnish with a jalapeño slice.",
+    "If the syrup is unavailable, the source says to muddle 2–3 jalapeños and add 1 oz pineapple juice to the recipe."
+  ],
+  "sourceNote": "Adapted from Fork & Fire cocktail recipes.",
+  "status": "draft",
+  "reviewFlags": [
+    "The source does not include a recipe for the pineapple-jalapeño syrup."
+  ],
+  "headnote": "The source does not include a recipe for the pineapple-jalapeño syrup."
+}
