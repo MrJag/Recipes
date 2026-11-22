@@ -178,7 +178,7 @@ function paginate(recipe, density) {
   let overflow = !fits(page);
   const stages = [
     ...(recipe.components || []).map(c => ({title:c.title, steps:c.steps || [], note:c.notes})),
-    {title:recipe.components?.length ? "Main method" : null, steps:recipe.steps || []}
+    ...(recipe.steps?.length ? [{title:recipe.components?.length ? "Main method" : null, steps:recipe.steps}] : [])
   ];
   let stepNo = 1;
   for (const stage of stages) {

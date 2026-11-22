@@ -23,24 +23,29 @@
       ]
     }
   ],
-  "steps": [
-    {
-      "lead": "Chicken.",
-      "text": "Combine all of the ingredients in a blender until homogeneous."
-    },
-    "Trim the chicken and marinade for 2-4 hours.",
-    "Grill over high heat until desired doneness, approximately 12-16 minutes.",
-    "Rest for 3-5 minutes before serving.",
-    {
-      "lead": "Lamb.",
-      "text": "Omit the yogurt and combine the rest of the ingredients in a blender until homogeneous."
-    },
-    "Trim the lamb and marinate chops for at least 4 hours or larger cuts at least 8 hours.  Marinate overnight for maximum flavor.",
-    "Grill over high heat until desired doneness, approximately 10-15 minutes.",
-    "Rest for 3-5 minutes before serving."
-  ],
+  "steps": [],
   "reviewFlags": [
     "Source is a draft. Trailing 2s after rosemary and thyme were treated as stray characters."
   ],
-  "headnote": "Makes enough for 2-4 lbs of meat"
+  "headnote": "Makes enough for 2-4 lbs of meat",
+  "components": [
+    {
+      "title": "Chicken",
+      "steps": [
+        "Combine all of the ingredients in a blender until homogeneous.",
+        "Trim the chicken and marinade for 2-4 hours.",
+        "Grill over high heat until desired doneness, approximately 12-16 minutes.",
+        "Rest for 3-5 minutes before serving."
+      ]
+    },
+    {
+      "title": "Lamb",
+      "steps": [
+        "Omit the yogurt and combine the rest of the ingredients in a blender until homogeneous.",
+        "Trim the lamb and marinate chops for at least 4 hours or larger cuts at least 8 hours.  Marinate overnight for maximum flavor.",
+        "Grill over high heat until desired doneness, approximately 10-15 minutes.",
+        "Rest for 3-5 minutes before serving."
+      ]
+    }
+  ]
 }
