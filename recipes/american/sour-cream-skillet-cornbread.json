@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "0.1",
+  "id": "sour-cream-skillet-cornbread",
+  "title": "Sour Cream Skillet Cornbread",
+  "category": "American",
+  "photo": "./public/images/sour-cream-skillet-cornbread.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Ingredients",
+      "items": [
+        "1 cup yellow cornmeal",
+        "1 cup all-purpose flour",
+        "½ cup sugar",
+        "2 tsp baking powder",
+        "1 tsp kosher salt",
+        "½ tsp baking soda",
+        "¾ cup sour cream",
+        "½ cup buttermilk",
+        "2 large eggs",
+        "3 Tbsp melted butter, slightly cooled, plus 1 Tbsp for pan",
+        "2 Tbsp canola oil"
+      ]
+    }
+  ],
+  "steps": [
+    "Place a 10-inch cast-iron skillet on the middle rack and preheat oven to 425°F.",
+    "Whisk cornmeal, flour, sugar, baking powder, salt and baking soda in a bowl.",
+    "In another bowl whisk sour cream, buttermilk, eggs, 3 Tbsp melted butter and oil. Whisk the wet ingredients into the dry ingredients.",
+    "Carefully remove the hot skillet, add 1 Tbsp butter and swirl to coat. Pour in batter.",
+    "Bake about 20 minutes, until a skewer inserted in the center comes out clean. Cool 5 minutes in the pan, then turn onto a rack and cool 10 minutes more. Serve warm."
+  ],
+  "sourceNote": "Adapted from https://www.seriouseats.com/recipes/2014/10/sweet-moist-northern-style-cornbread-recipe.html",
+  "status": "draft",
+  "reviewFlags": [
+    "For a 12-inch pan, the source gives conflicting scaling suggestions of 50% and 44%; confirm before scaling."
+  ],
+  "headnote": "For a 12-inch pan, the source gives conflicting scaling suggestions of 50% and 44%; confirm before scaling."
+}

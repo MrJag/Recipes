@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "0.1",
+  "id": "glazed-cranberry-orange-muffins",
+  "title": "Glazed Cranberry Orange Muffins",
+  "category": "Dessert",
+  "photo": "./public/images/glazed-cranberry-orange-muffins.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Muffins",
+      "items": [
+        "1 cup unsalted butter, room temperature (230 g)",
+        "1 cup granulated sugar (200 g)",
+        "½ cup packed light brown sugar (100 g)",
+        "4 eggs, room temperature",
+        "1 cup sour cream or yogurt",
+        "4 tsp vanilla extract",
+        "Zest of 4 oranges",
+        "3½ cups flour (440 g)",
+        "2 tsp baking soda",
+        "2 tsp baking powder",
+        "1 tsp ground cinnamon",
+        "1 tsp salt",
+        "¼ cup orange juice",
+        "¼ cup milk",
+        "3 cups cranberries (370 g)"
+      ]
+    },
+    {
+      "title": "Orange glaze",
+      "items": [
+        "2 cups confectioners sugar",
+        "6 Tbsp orange juice"
+      ]
+    }
+  ],
+  "steps": [
+    "Preheat oven to 425°F and line a muffin pan.",
+    "Beat butter on high about 1 minute until creamy. Add granulated and brown sugars; beat on high about 2 minutes, scraping the bowl.",
+    "Add eggs, sour cream or yogurt and vanilla; beat on medium for 1 minute, then on high until uniform. Beat in orange zest.",
+    "Combine flour, baking soda, baking powder, cinnamon and salt. Slowly whisk in the wet mixture, then orange juice and milk until just combined. Fold in cranberries.",
+    "Fill muffin liners to the top; add extra cranberries if desired. Bake 5 minutes at 425°F, then lower the oven to 350°F and bake 17–18 minutes more, until a toothpick comes out clean.",
+    "Whisk glaze ingredients and drizzle over warm muffins. Let cool briefly before serving."
+  ],
+  "sourceNote": "Adapted from https://sallysbakingaddiction.com/cranberry-orange-muffins/"
+}

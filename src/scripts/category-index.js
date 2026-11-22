@@ -7,12 +7,12 @@ const categoryRecipes = {
     "greek-marinade", "hawaiian-chili-pepper-water", "pomodoro-sauce", "bolognese-ragu",
     "codys-salsa", "salsa-roja", "catalan-sofrito", "peanut-sauce", "russells-yellow-curry-spice-blend"
   ],
-  Sides: ["pizza-stone-dough", "roti", "wood-fired-pizza-dough", "naan", "balon-lavas", "burger-buns", "mashed-potatoes", "creamed-corn", "cranberry-relish", "pita-bread", "persian-rice-with-tahdig", "baba-ganoush", 
+  Sides: ["sour-cream-skillet-cornbread", "pizza-stone-dough", "roti", "wood-fired-pizza-dough", "naan", "balon-lavas", "burger-buns", "mashed-potatoes", "creamed-corn", "cranberry-relish", "pita-bread", "persian-rice-with-tahdig", "baba-ganoush", 
     "cornbread", "dinner-rolls", "roasted-acorn-squash", "southwestern-roasted-cauliflower",
     "jasmine-coconut-rice", "indian-basmati-rice-pilau", "long-grain-rice-with-mustard-seeds",
     "rosemary-focaccia", "coconut-lime-rice"
   ],
-  Mains: ["steak-guide", "classic-bolognese-ragu", "chuys-combo-fajitas", "chuys-chicka-boom-enchiladas", "chuys-carne-guisada", "seamless-ricotta-ravioli", "texas-chili-serrano", "texas-chili-ancho", "salsiccia-napolitana", "sour-cream-chicken-enchiladas", "midwestern-chili", "15-bean-soup-sausage", "rigatoni-di-gregorio", "polpette-alla-napoletana", "chicken-mole-poblano", "chicken-pintxo-avocado-toast", "gambas-al-ajillo", "paella-de-carne", "cookoff-smoked-beef-chili", "ancient-grains-bowl", "pistachio-stuffed-pork-tenderloin", "beef-short-rib-biryani", "hutchins-style-ribs", "hutchins-style-brisket", "tamarind-glazed-pork-chops", "pan-fried-pork-chops", "roasted-chicken-bombay-potatoes", "joojeh-kebab", "texas-twinkies", "detroit-style-pizza", "dal-tadka", "mariannas-chili", "spatchcocked-hawaiian-chicken", "chicken-plov", "uzbek-plov-lamb", "clay-pot-rice-short-ribs", "chicken-congee", "hatch-green-chili", "hawaiian-teriyaki-chicken", "hawaiian-stir-fry-noodles", "shakshuka", "neapolitan-pizza", "lamb-biryani", "turkish-kofta-kebab", "smoked-pulled-pork", "3-2-1-ribs", "mariannas-chicken-kotleti", 
+  Mains: ["uzbek-plov-beef", "steak-guide", "classic-bolognese-ragu", "chuys-combo-fajitas", "chuys-chicka-boom-enchiladas", "chuys-carne-guisada", "seamless-ricotta-ravioli", "texas-chili-serrano", "texas-chili-ancho", "salsiccia-napolitana", "sour-cream-chicken-enchiladas", "midwestern-chili", "15-bean-soup-sausage", "rigatoni-di-gregorio", "polpette-alla-napoletana", "chicken-mole-poblano", "chicken-pintxo-avocado-toast", "gambas-al-ajillo", "paella-de-carne", "cookoff-smoked-beef-chili", "ancient-grains-bowl", "pistachio-stuffed-pork-tenderloin", "beef-short-rib-biryani", "hutchins-style-ribs", "hutchins-style-brisket", "tamarind-glazed-pork-chops", "pan-fried-pork-chops", "roasted-chicken-bombay-potatoes", "joojeh-kebab", "texas-twinkies", "detroit-style-pizza", "dal-tadka", "mariannas-chili", "spatchcocked-hawaiian-chicken", "chicken-plov", "uzbek-plov-lamb", "clay-pot-rice-short-ribs", "chicken-congee", "hatch-green-chili", "hawaiian-teriyaki-chicken", "hawaiian-stir-fry-noodles", "shakshuka", "neapolitan-pizza", "lamb-biryani", "turkish-kofta-kebab", "smoked-pulled-pork", "3-2-1-ribs", "mariannas-chicken-kotleti", 
     "beef-stroganoff", "red-beans-and-rice", "tomato-basil-soup", "belgian-waffles",
     "philips-waffles", "szechuan-green-beans-and-pork", "taiwanese-popcorn-chicken",
     "hawaiian-huli-huli-chicken", "butter-masala-chicken", "goan-pork-vindaloo",
@@ -21,7 +21,7 @@ const categoryRecipes = {
     "chicken-paella", "chicken-satay", "thai-basil-chicken", "lemongrass-chicken",
     "pollo-a-la-brasa", "shashlik-pork-kebab"
   ],
-  Desserts: ["apple-pie-pizza", "apricot-raspberry-pizza", "chocolate-strawberry-pizza", "mascarpone-dessert-pizza", "kouign-amann", "tiramisu", "cuatro-leches-cake", "whiskey-date-cake", "coconut-stracciatella-gelato", "buttery-apple-tart", "cranberry-orange-muffins", "espresso-oreo-gelato", "hectors-tres-leches", "mini-pavlovas"]
+  Desserts: ["glazed-cranberry-orange-muffins", "apple-pie-pizza", "apricot-raspberry-pizza", "chocolate-strawberry-pizza", "mascarpone-dessert-pizza", "kouign-amann", "tiramisu", "cuatro-leches-cake", "whiskey-date-cake", "coconut-stracciatella-gelato", "buttery-apple-tart", "cranberry-orange-muffins", "espresso-oreo-gelato", "hectors-tres-leches", "mini-pavlovas"]
 };
 
 const cuisineOverrides = {

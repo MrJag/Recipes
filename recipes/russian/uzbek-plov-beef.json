@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "0.1",
+  "id": "uzbek-plov-beef",
+  "title": "Uzbek Beef Plov (Instant Pot)",
+  "category": "Russian",
+  "photo": "./public/images/uzbek-plov-beef.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Ingredients",
+      "items": [
+        "500 g Baldo Pirinç rice, or calasparra rice",
+        "400 g water",
+        "2–3 lb beef chuck, trimmed and cut into 1–2-inch chunks; reserve fat",
+        "¼ cup grapeseed oil, or rendered fat from trimmings",
+        "1 large carrot, sliced into 2-inch matchsticks",
+        "1 medium to large onion, sliced into half-moons",
+        "1 small onion, halved, optional",
+        "½ tsp cumin seed, roughly ground",
+        "1½ Tbsp salt",
+        "1 garlic head",
+        "3–4 dried Kashmiri chile peppers",
+        "3 Tbsp barberries, sour cherries or currants, optional"
+      ]
+    }
+  ],
+  "steps": [
+    "Render the beef trimmings for about 15–30 minutes on the slow-cooker setting. Discard the rendered bits and add oil as needed to make about ¼ cup total. Rinse rice until water runs clear and leave in a strainer.",
+    "Select sauté on high. When oil shimmers, optionally fry the small onion for a couple of minutes, then discard it. Sauté sliced onion until translucent and lightly brown at the edges.",
+    "Move onions aside and sear the beef in the middle of the pot until golden outside. Add carrot, cumin, water, salt and dried chiles; stir.",
+    "Select Meat/Stew for 15 minutes. Rest naturally for 10 minutes, then quick-release the remaining pressure. Taste the broth for salt.",
+    "Sprinkle in optional berries. Add rice in an even layer without stirring and bury the garlic head cut-side down. Make 4–5 holes around the center with a long utensil handle.",
+    "Pressure cook on high for 12 minutes, rest naturally for 10 minutes and quick-release remaining pressure. Fluff rice, mound it, cover and rest another 20 minutes."
+  ],
+  "sourceNote": "Adapted from https://silkroadchef.com/2017/12/25/uzbek-plov-lamb-rice-pilaf-in-instant-pot/",
+  "status": "draft",
+  "reviewFlags": [
+    "The source does not explain how to prepare the garlic head before placing it cut-side down."
+  ],
+  "headnote": "The source does not explain how to prepare the garlic head before placing it cut-side down."
+}
