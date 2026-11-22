@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "0.1",
+  "id": "pistachio-stuffed-pork-tenderloin",
+  "title": "Pistachio-Stuffed Pork Tenderloin",
+  "category": "American",
+  "status": "draft",
+  "photo": "./public/images/pistachio-stuffed-pork-tenderloin.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2 jalapeno peppers",
+        "1 1/3 cups chopped pistachios",
+        "2 pork tenderloins",
+        "2 shallots, finely chopped",
+        "1 tablespoon butter",
+        "1 tablespoon grated ginger",
+        "1 teaspoon fresh rosemary",
+        "1 cup cream",
+        "Olive oil",
+        "Dijon mustard",
+        "Brown sugar",
+        "Salt, Pepper"
+      ]
+    }
+  ],
+  "steps": [
+    "Grill peppers until blistered. Remove from grill and place in a plastic bag. After steaming for 20 minutes, remove the skins and seeds. Chop finely.",
+    "Roast pistachios in a skillet with olive oil. Do not burn. Remove from heat, cool, and chop finely. For this recipe I used a food processor.",
+    "Saute shallots and jalapenos in butter until soft.",
+    "Combine pistachios, ginger, shallots, jalapenos, 1 teaspoon of brown sugar, and rosemary into a mixing bowl. Stir briefly to incorporate. Cool this mixture.",
+    "Trim the silverskin from the tenderloins.",
+    "Butterfly the tenderloin so it lies flat on the cutting surface. Sprinkle both sides with salt, pepper and brown sugar. When complete, rub both sides with Dijon mustard.",
+    "Place 1/3 of the pistachio mixture in a small saucepan. Add cream, salt, pepper, and 1 teaspoon of Dijon mustard. Heat sauce to just boiling.",
+    "Use the remaining 2/3 of the pistachio mixture to fill the pork. Once filled, roll and tie with twine. You can also skewer the two sides together. When complete, coat the tenderloins with olive oil.",
+    "Place the filled tenderloins on the grill over high heat. Rotate on each side. When completely seared move over to low heat and continue cooking.",
+    "Slice tenderloins in medallions and serve with rice and cream sauce."
+  ],
+  "reviewFlags": [
+    "The source does not specify a final cooking temperature or time, and several seasoning quantities are unspecified."
+  ],
+  "headnote": "Draft: Confirm cooking endpoint and seasoning quantities."
+}
