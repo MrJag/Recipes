@@ -1,0 +1,51 @@
+{
+  "id": "paneer-butter-masala",
+  "schemaVersion": "0.1",
+  "title": "Paneer Butter Masala",
+  "category": "Indian",
+  "photo": "./public/images/paneer-butter-masala.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "3 bay leaves",
+        "5 whole kashmiri chilies, stems removed",
+        "2 sticks of thin bark cinnamon",
+        "6 green cardamom pods",
+        "½-1 star anise",
+        "1 tsp coriander powder",
+        "1 Kg tomatoes",
+        "1 cup onions, cubed (use white not red)",
+        "1 Tbsp fresh ginger, roughly chopped",
+        "3 garlic cloves, roughly chopped",
+        "½ cup cashews",
+        "1 cup water",
+        "2 Tbsp ghee (or butter/oil)",
+        "1 ½ tsp kashmiri chili powder",
+        "½ tsp garam masala",
+        "1.5 tsp salt",
+        "1.5 tsp sugar",
+        "600 grams paneer, cubed (soaked in hot water for 20 minutes)",
+        "1 Tbsp fresh kasuri methi (fenugreek) or (1 tsp dry)"
+      ]
+    },
+    {
+      "title": "Garnish",
+      "items": [
+        "2 Tbsp cream",
+        "2 Tbsp coriander leaves (cilantro), chopped"
+      ]
+    }
+  ],
+  "steps": [
+    "Using medium-saute mode: dry roast the bay leaves, kashmiri chili, cinnamon, cardamom, star anise, and coriander until fragrant; about 30-60 seconds.",
+    "Add tomatoes, onions, ginger, garlic, and cashews and pressure cook for 15 minutes.",
+    "Quick release the pressure and remove the pot to let it cool for 5-10 minutes.",
+    "After the mixture has cooled, transfer to a blender and puree until smooth.",
+    "Add 1 cup of water and puree again. (Blending a slightly thickened mixture first will help ensure a smooth paste.)",
+    "In a large pot (or instapot), heat the ghee until shimmering, then add kashmiri powder and garam masala, frying until fragrant.",
+    "Add the puree, salt, sugar, paneer, and kasuri methi, and cook for an additional 10 minutes.",
+    "Right before serving, stir in the cream and garnish with cilantro."
+  ],
+  "reviewFlags": []
+}

@@ -1,0 +1,35 @@
+{
+  "id": "skirt-steak-fajitas",
+  "schemaVersion": "0.1",
+  "title": "Skirt Steak Fajitas",
+  "category": "Mexican",
+  "photo": "./public/images/skirt-steak-fajitas.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "3 lbs fajita meat (outside skirt steak)"
+      ]
+    },
+    {
+      "title": "Marinade",
+      "items": [
+        "½ cup lime juice (~ 3 limes)",
+        "2 Tbsp olive oil",
+        "1 tsp cumin",
+        "1 tsp salt",
+        "1 tsp pepper",
+        "½ tsp Adolf tenderizer",
+        "6 cloves garlic, crushed (or ¾ tsp garlic powder)"
+      ]
+    }
+  ],
+  "steps": [
+    "Prepare the marinade by blending all of the ingredients in the blender until homogeneous.",
+    "Transfer the marinade and skirt steak to a sealed container and marinade at room temperature for 15-30 minutes.",
+    "Grill over high heat until desired doneness, approximately 4-6 minutes.",
+    "Rest for 3-5 minutes before serving."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Adapted from Lupe Tortilla recipe card: There are three cuts of meat commonly used for fajitas: outside skirt, inside skirt, and flank steak. Outside skirt is the best choice because it is both tender and flavorful, but unfortunately also difficult to source outside of a restaurant. If your options are flank and inside skirt steak, buy the inside skirt if you prefer your beef cooked rare to medium and flank if you prefer it cooked medium to well. Tenderness ranked from most to least: outside skirt, flank, inside skirt. Flavor ranked from most to least: outside skirt, inside skirt, flank"
+}

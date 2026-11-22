@@ -1,0 +1,27 @@
+{
+  "id": "russells-yellow-curry-spice-blend",
+  "schemaVersion": "0.1",
+  "title": "Russell’s Yellow Curry Spice Blend",
+  "category": "Thai",
+  "photo": "./public/images/russells-yellow-curry-spice-blend.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2 tbs coriander seeds",
+        "1 tbs turmeric",
+        "1 tsp cumin seeds",
+        "1 tsp peppercorns",
+        "1 tsp red pepper flakes",
+        "1 tsp shelled cardamom",
+        "1 tsp cinnamon",
+        "2 tsp cloves",
+        "1 tsp ginger"
+      ]
+    }
+  ],
+  "steps": [
+    "Grind all ingredients in a spice grinder and store in a cool dry container."
+  ],
+  "reviewFlags": []
+}

@@ -1,0 +1,35 @@
+{
+  "id": "catalan-sofrito",
+  "schemaVersion": "0.1",
+  "title": "Catalan Sofrito",
+  "category": "Spanish",
+  "photo": "./public/images/catalan-sofrito.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "¼ cup olive oil",
+        "1 yellow onion, minced",
+        "2 cloves garlic, minced",
+        "½ bell pepper, seeded and minced",
+        "1 lbs tomatoes (10 plum or 1-28oz cans of whole tomatoes)",
+        "1 tsp paprika (smoked sweet)",
+        "½ tsp kosher salt",
+        "1 bay leaf"
+      ]
+    }
+  ],
+  "steps": [
+    "Heat the oil and gently cook the onions until translucent but not browned, approximately 8-10 minutes.",
+    "Add the garlic, bell pepper, and cook until these soften and fall apart a bit.",
+    "Stir in the tomatoes, bay leaf, and salt. Simmer gently, over very low heat for 50 minutes, stirring occasionally.",
+    "Remove the bay leaf, allow to cool, and store in the refrigerator."
+  ],
+  "reviewFlags": [
+    "Paprika is listed among the ingredients, but the source does not say when to add it."
+  ],
+  "servings": "2 portions",
+  "sourceNote": "Adapted from Bulla Gastrobar Restaurante, Legacy West, Plano, TX",
+  "status": "draft",
+  "headnote": "Paprika is listed among the ingredients, but the source does not say when to add it."
+}

@@ -349,6 +349,7 @@ function setupVariants(recipe, recipeButton) {
     return;
   }
 
+  const initialIndex = recipe.defaultVariant === -1 ? -1 : 0;
   const versions = el("div", "recipe-versions");
   versions.setAttribute("role", "group");
   versions.setAttribute("aria-label", recipeButton.textContent + " versions");
@@ -358,7 +359,7 @@ function setupVariants(recipe, recipeButton) {
     const button = el("button", null, title);
     button.type = "button";
     addDraftBadge(button, status);
-    button.setAttribute("aria-pressed", String(index === 0));
+    button.setAttribute("aria-pressed", String(index === initialIndex));
     button.addEventListener("click", () => {
       versions.querySelector('[aria-pressed="true"]').setAttribute("aria-pressed", "false");
       button.setAttribute("aria-pressed", "true");
@@ -367,7 +368,7 @@ function setupVariants(recipe, recipeButton) {
     versions.appendChild(button);
   });
   recipeButton.after(versions);
-  selectRecipeVersion(0);
+  selectRecipeVersion(initialIndex);
 }
 function selectRecipeVersion(index) {
   const variant = sourceRecipe?.variants?.[index];

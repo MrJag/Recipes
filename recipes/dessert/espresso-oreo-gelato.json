@@ -1,0 +1,63 @@
+{
+  "id": "espresso-oreo-gelato",
+  "schemaVersion": "0.1",
+  "title": "Espresso Oreo Gelato",
+  "category": "Dessert",
+  "photo": "./public/images/espresso-oreo-gelato.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Dairy",
+      "items": [
+        "480g heavy cream",
+        "180g whole milk",
+        "16g dry milk powder",
+        "1 large pinch kosher salt"
+      ]
+    },
+    {
+      "title": "Eggs and Sweeteners",
+      "items": [
+        "4 large egg yolks",
+        "100g granulated sugar",
+        "40g agave syrup"
+      ]
+    },
+    {
+      "title": "Stabilizers",
+      "items": [
+        "1.2g locust bean gum",
+        "0.8g xanthan gum"
+      ]
+    },
+    {
+      "title": "Flavor and Mix-Ins",
+      "items": [
+        "54.7g ristretto espresso (2 shots)",
+        "5g vanilla paste"
+      ]
+    },
+    {
+      "title": null,
+      "items": [
+        "140g Oreo cookies, broken into bite sized chunks (~6 pieces per cookie)"
+      ]
+    }
+  ],
+  "steps": [
+    "Prepare the dry mix: thoroughly whisk together 100g sugar, 16g dry milk, 1.2g locust bean gum, and 0.8g xanthan gum until fully combined. Evenly distributing the gums with the sugar prevents clumping when combining with liquid ingredients later.",
+    "In a large bowl, whisk 4 egg yolks and set aside.",
+    "In a small pot, heat the cream, milk, and salt over medium heat until the mixture reaches 150°F. Whisk periodically to prevent scorching the milk on the bottom and sides of the pot. Immediately remove from heat when it reaches temperature to avoid overshooting.",
+    "Temper the yolks: While whisking constantly, slowly drizzle in the hot dairy to temper them.",
+    "Return the mixture to the pot, along with the dry mix and agave, whisking until fully incorporated.",
+    "Heat over medium, stirring continuously, until the mixture reaches 175°F. Remove from heat immediately.",
+    "Add the espresso and vanilla, then emulsify using an immersion blender for 60 seconds.",
+    "Place the pot in an ice bath and whisk to accelerate the cooling until fully chilled.",
+    "Press plastic wrap directly onto the surface to prevent a skin from forming and refrigerate overnight. Note: Skipping the overnight rest negatively affects texture by allowing larger ice crystals to form during churning.",
+    "Pre-chill the Musso 5030 for 13 minutes with the lid closed to prevent condensation frost.",
+    "Stir the base to briefly re-homogenize, then pour into the machine. Churn for 6 minutes, then add Oreo pieces and churn for 1 additional minute.",
+    "Transfer immediately to a pre-chilled container and freeze for at least 3 hours before serving."
+  ],
+  "reviewFlags": [],
+  "servings": "1 quart",
+  "sourceNote": "Inspired by Claire Saffitz’s Coffee Oreo ice cream."
+}

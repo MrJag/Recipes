@@ -1,0 +1,41 @@
+{
+  "id": "indian-basmati-rice-pilau",
+  "schemaVersion": "0.1",
+  "title": "Indian Basmati Rice Pilau",
+  "category": "Indian",
+  "photo": "./public/images/indian-basmati-rice-pilau.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2 cups basmati rice",
+        "3 cardamom pods",
+        "4 black peppercorns",
+        "2 whole cloves",
+        "1” of cinnamon bark (half stick)",
+        "1 Tbsp Ghee/Oil",
+        "1/4 tsp cumin seeds",
+        "1 cup red onion, sliced",
+        "1 tsp brown mustard seeds",
+        "2.5 cups water",
+        "½ Tsp Salt",
+        "1 bay leaf",
+        "2 cloves garlic (optional)",
+        "1 pinch asafetida (optional)"
+      ]
+    }
+  ],
+  "steps": [
+    "Rinse your rice and let it sit while you prepare the rest of the ingredients.",
+    "Put the whole spices (cardamom, peppercorns, cloves, and cinnamon) into a muslin bag or a spice infuser and crush slightly.",
+    "Heat your pot and when it's hot, add ghee and let it melt.",
+    "When it's hot enough to shimmer, add cumin and mustard seeds and let them splutter. It will sound like popcorn starting to pop.",
+    "Add the sliced onions and salt and cook until the edges are crisp. You want them cooked but not burned (see pic).",
+    "Add the rice and mix until each grain is coated with ghee.",
+    "Add water and set it for 6 minutes at High Pressure. If you're making this in a rice cooker, it's simple enough, just turn it on and walk away. If you're making this on the stove top, you want the water to come to a boil and as soon as it does, stir once, turn heat to low, set your timer for 20 minutes and DO NOT mess with it until it's done or you'll break the rice.",
+    "For basmati, it's very important to let it steam for 10 minutes AFTER it's done its cooking. I opened up the instant Pot and stirred it once, and then closed it back up and let it rest again. You could add defrosted green peas at this point if you like.",
+    "That's it. Your Pilau is ready to serve."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "(reference: https://twosleevers.com/basmati-rice-pilau/#wprm-recipe-container-4997)"
+}

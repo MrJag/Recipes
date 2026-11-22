@@ -1,0 +1,40 @@
+{
+  "id": "bolognese-ragu",
+  "schemaVersion": "0.1",
+  "title": "Bolognese Ragù",
+  "category": "Italian",
+  "photo": "./public/images/bolognese-ragu.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2 Tbsp olive oil",
+        "6 Tbsp butter (3/4th stick)",
+        "1.5 cup minced onion",
+        "2 cup minced celery",
+        "2 cup minced carrot",
+        "1.5 lb ground beef (short rib or chuck, trimmed of fat)",
+        "¾ lb ground pork (italian sausage works fine too)",
+        "1 tsp salt",
+        "¾ tsp pepper",
+        "2 cup whole milk",
+        "⅓ tsp freshly grated nutmeg",
+        "1 cup dry white wine",
+        "28 oz can of Italian plum tomatoes, hand crushed, with juice",
+        "1-½ lbs tagliateli or pappardelle, cooked and drained",
+        "1-2 Tbsp butter",
+        "Freshly grated Parmigiano-Reggiano cheese at the table"
+      ]
+    }
+  ],
+  "steps": [
+    "Heat the olive oil and 6 Tbsp butter in a heavy pot over medium heat. Cook the onion until translucent. Add the celery and carrot and cook for about 2 minutes.",
+    "Add the beef and pork, a large pinch of salt, and about 20 turns of finely ground pepper. Break up the meat and cook until it loses its pink color.",
+    "Add the milk and simmer gently, stirring frequently, until it evaporates. Stir in the nutmeg.",
+    "Add the wine and simmer until it evaporates. Stir in the tomatoes and their juices. Reduce the heat to maintain a very gentle simmer.",
+    "Simmer uncovered for at least 3 hours, stirring occasionally. Add ½ cup water as needed to prevent sticking. Let the added water cook off before serving.",
+    "Toss the hot pasta with 1–2 Tbsp butter and the ragù. Serve with grated Parmigiano-Reggiano."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Adapted from Marcella Hazan’s Classic Italian Cooking."
+}

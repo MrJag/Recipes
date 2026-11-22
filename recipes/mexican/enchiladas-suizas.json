@@ -1,0 +1,77 @@
+{
+  "id": "enchiladas-suizas",
+  "schemaVersion": "0.1",
+  "title": "Enchiladas Suizas",
+  "category": "Mexican",
+  "photo": "./public/images/enchiladas-suizas.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Roasted Vegetables",
+      "items": [
+        "2 poblano peppers",
+        "2 anaheim peppers",
+        "3 serrano peppers",
+        "1 jalapeno pepper",
+        "1 small white onion (cut in half from root to tip)",
+        "4 garlic cloves"
+      ]
+    },
+    {
+      "title": "Shredded Chicken",
+      "items": [
+        "2 lbs chicken breast",
+        "2 bay leaves",
+        "1 tsp black peppercorn",
+        "1 tsp coriander seeds",
+        "1 Tbsp salt",
+        "1 Tbsp chicken bouillon",
+        "4 cups water"
+      ]
+    },
+    {
+      "title": "Sauce and Assembly",
+      "items": [
+        "2 lbs tomatillos (dehusked and washed)",
+        "1 bunch of cilantro",
+        "½ a block of cream cheese",
+        "1 cup Mexican crema (or substitute with sour cream)",
+        "24 corn tortillas",
+        "(optional) ¼ cup red onion, minced",
+        "1.5 lbs Queso Oaxaca, shredded",
+        "Queso Fresco, crumbled",
+        "¼ cup oil for frying the tortillas, plus a drizzle for the vegetables"
+      ]
+    }
+  ],
+  "steps": [
+    "Pre-heat oven on broil.",
+    "Add peppers, onion, and garlic to a sheet pan then drizzle with some oil and place it under the broiler. Roast for a few minutes, flipping ingredients as needed:",
+    "Reserve the garlic for the Instant Pot when it is golden brown on both sides. The garlic will be the first to brown so be careful not to burn it.",
+    "Reserve the onion for the Instant Pot when it is nicely charred.",
+    "When the peppers are charred on both sides, transfer to a container and cover to let the residual heat steam the skin.",
+    "Start Shredded Chicken while waiting for the peppers to steam.",
+    "After the peppers have sat covered for at least 3 minutes, remove the stems, skin, and deseed all the peppers. (pro-tip: slice each pepper in half lengthwise and use a measuring spoon or small spoon to quickly scrape the seeds and veins out. optionally leave the jalapeno and serrano seeds in if you like it spicy.)",
+    "Add chicken breasts, charred onion, charred garlic, bay leaves, pepper, coriander, salt, chicken bouillon, and water to the Instant Pot. Pressure cook on high for 15 minutes, then quick release.",
+    "Start Corn Tortillas while you wait for the chicken to cook.",
+    "Transfer the cooked chicken to a cutting board to cool slightly, leaving everything else in the Instant Pot for now.",
+    "Start Suizas Sauce while you wait for the chicken to cool.",
+    "Shred the chicken while the tomatillos are pressure cooking.",
+    "Mix ¾ cup of Suizas Sauce into the shredded chicken.",
+    "Heat ¼ cup oil in a frying pan over medium heat.",
+    "Quickly fry the corn tortillas for approximately 3-5 seconds per side. The goal is to make the tortillas pliable without being crispy. Transfer to a plate and cover until Assembly.",
+    "Add tomatillos to the Instant Pot and bring to pressure. Quick release as soon as it comes to pressure.",
+    "Transfer the tomatillos, onion, garlic, and 1.5 cups of the chicken broth from the Instant Pot to a blender. The remainder of the broth can be reserved for Mexican rice.",
+    "Add the skinned peppers and a large handful of cilantro (all of the stems and a little of the leaves) to the blender and blend until smooth.",
+    "Add the cream cheese and Mexican crema and blend until incorporated.",
+    "Preheat oven to 400 F",
+    "Add enough Suizas Sauce to cover the bottom of a deep sheet pan, approximately 1 cup.",
+    "Fill each tortilla with 2 Tbsp Oaxaca cheese, 2 Tbsp shredded chicken, and a pinch of minced red onion if desired. Roll into 1-inch enchiladas and arrange in two rows.",
+    "Pour Suizas Sauce over the enchiladas and use the back of a large spoon to spread to evenly coat the corn tortillas.",
+    "Sprinkle the remainder of the Oaxaca cheese over the enchiladas.",
+    "Heat in the oven until the cheese is melted, approximately 10 minutes.",
+    "Garnish with Queso Fresco crumbles and chopped cilantro leaves"
+  ],
+  "reviewFlags": [],
+  "subtitle": "Creamy Green Sauce",
+  "sourceNote": "Inspired by https://www.youtube.com/watch?v=nSD8BBTupgA and https://www.youtube.com/watch?v=Nl4gg4IvrBY."
+}

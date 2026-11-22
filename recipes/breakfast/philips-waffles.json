@@ -1,0 +1,36 @@
+{
+  "id": "philips-waffles",
+  "schemaVersion": "0.1",
+  "title": "Philip’s Waffles",
+  "category": "Breakfast",
+  "photo": "./public/images/philips-waffles.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2 cups (241g) King Arthur Unbleached All-Purpose Flour",
+        "1 Tablespoon baking powder",
+        "2 Tbsp sugar",
+        "2 large eggs",
+        "½ teaspoon salt",
+        "1 ½ cups (340g) lukewarm milk",
+        "½ cup butter (4 tablespoons), melted",
+        "1 teaspoon vanilla extract"
+      ]
+    }
+  ],
+  "steps": [
+    "Combine all of the ingredients in a large bowl, leaving room for expansion; the mixture will bubble and grow. Include the baking powder for the 30 minute quick version, otherwise skip it.",
+    "Stir to combine; it's OK if the mixture isn't perfectly smooth.",
+    "Rest 30 minutes or longer.",
+    "Preheat your waffle iron to 400 °F on Griddle mode.",
+    "Pour 1 heaping cup (~ 1.2 cups) onto the center of the griddle and level sleightly with the back of the measuring cup. Close the lid and bake for 4 minutes, until the waffle is golden brown.",
+    "Remove and rest on a wire cooling rack to prevent sogginess. Serve immediately with syrup, whipped cream, and/or fruit."
+  ],
+  "reviewFlags": [
+    "The butter is listed as both ½ cup and 4 tablespoons. Confirm the butter amount and whether to include baking powder."
+  ],
+  "sourceNote": "Adapted from Philip Gheno",
+  "status": "draft",
+  "headnote": "The butter is listed as both ½ cup and 4 tablespoons. Confirm the butter amount and whether to include baking powder."
+}

@@ -1,0 +1,35 @@
+{
+  "id": "iced-lemon-green-tea-with-basil-seeds",
+  "schemaVersion": "0.1",
+  "title": "Iced Lemon Green Tea with Basil Seeds",
+  "category": "Drinks",
+  "photo": "./public/images/iced-lemon-green-tea-with-basil-seeds.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Drink",
+      "items": [
+        "½ cup ice",
+        "½ cup jasmine or green tea, chilled",
+        "¼ cup lemon-basil seed mixture"
+      ]
+    },
+    {
+      "title": "Lemon–Basil Seed Mixture",
+      "items": [
+        "¼ cup lemon juice",
+        "¼ cup sugar",
+        "½ cup boiling water",
+        "1 Tbsp basil seeds"
+      ]
+    }
+  ],
+  "steps": [
+    "Prepare lemon basil seed mixture if necessary: Combine all ingredients in a small jar or cup and mix well to coat the seeds. Set aside for a few minutes until the basil seeds fluff and become gelatinous.",
+    "For the drink, add the ice and green tea to a medium-large cup. Add the lemon basil seed mixture and stir to combine. Adjust lemon basil seed mixture to your liking."
+  ],
+  "reviewFlags": [
+    "Untested recipe from the original notes."
+  ],
+  "status": "draft",
+  "headnote": "Untested recipe from the original notes."
+}

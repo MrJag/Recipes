@@ -1,0 +1,52 @@
+{
+  "id": "szechuan-green-beans-and-pork",
+  "schemaVersion": "0.1",
+  "title": "Szechuan Green Beans and Pork",
+  "category": "Chinese",
+  "photo": "./public/images/szechuan-green-beans-and-pork.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1-2 Tbsp grapeseed oil",
+        "2 tsp minced ginger",
+        "3 green onions, roughly chopped",
+        "3 garlic cloves",
+        "¾ lb pork",
+        "1 lb chinese long beans"
+      ]
+    },
+    {
+      "title": "Szechuan Sauce",
+      "items": [
+        "1 tsp sugar",
+        "¼ tsp salt",
+        "1 tsp miso paste",
+        "½ tsp sambal oelek",
+        "1 Tbsp light soy sauce",
+        "¼ tsp dark soy sauce (for color)",
+        "1 Tbsp shaoxing wine (chinese cooking wine)",
+        "¼ cup chicken stock",
+        "2 tsp szechuan peppercorn, cracked or crushed",
+        "4 dry red chili peppers, seeded and roughly chopped"
+      ]
+    },
+    {
+      "title": "Finishing Sauce",
+      "items": [
+        "1 Tbsp sesame oil",
+        "1 Tbsp Chinkiang Vinegar (chinese black vinegar, or substitute Apple cider vinegar)"
+      ]
+    }
+  ],
+  "steps": [
+    "Add 1-2 Tbsp neutral oil to a preheated wok and stir fry over high heat the string beans in two batches until they are slightly wrinkled with a light amount of surface char. Set aside.",
+    "Reduce the heat and stir fry the ginger, onions, and garlic until fragrant, approximately 30-60 seconds.",
+    "Add the ground pork, turning the heat back up to high, and sear until no longer pink.",
+    "Add the Szechuan sauce, stirring for 2-3 minutes to evaporate some of the liquid.",
+    "Add the green beans and saute until desired tenderness.",
+    "Add the finishing sauce, stir briefly to incorporate, then serve over white rice."
+  ],
+  "reviewFlags": [],
+  "subtitle": "Gan Bian Si Ji Dou"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "hectors-tres-leches",
+  "schemaVersion": "0.1",
+  "title": "Hector’s Tres Leches",
+  "category": "Dessert",
+  "photo": "./public/images/hectors-tres-leches.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "5 large eggs",
+        "1 cup of white sugar",
+        "1 cup of Presto flour*",
+        "1 can of evaporated milk",
+        "1 can of condensed milk",
+        "1 pint of Half & Half milk (Any FoodTown or Tuscan brand), you can find this at the grocery store next to the fresh milk",
+        "Cool Whip"
+      ]
+    }
+  ],
+  "steps": [
+    "Add the egg whites and beat (with a hand mixer) until they form a meringue.",
+    "add the cup of sugar little by little, continue beating",
+    "add the egg yolks one by one",
+    "lower the mixer speed and add the cup of flour",
+    "Pour the mixture into a mold, level it, and place it in the oven at 350-315 degrees for about 30 minutes.",
+    "Using a fork, break the entire cake into small pieces.",
+    "mix the three milks (evaporated milk, condensed milk and Half & Half)",
+    "add them to the cake",
+    "Put the cake in the refrigerator for 1 hour",
+    "spread the cool whip all over the cake",
+    "Put it in the refrigerator to cool."
+  ],
+  "reviewFlags": [
+    "The source gives the oven temperature as 350–315 degrees. Confirm the intended setting before baking."
+  ],
+  "status": "draft",
+  "headnote": "The source gives the oven temperature as 350–315 degrees. Confirm the intended setting before baking.",
+  "sourceNote": "*If you can't get Presto flour, there's another type of flour from Swam or another that already contains Baking Powder (which makes the cakes rise)."
+}

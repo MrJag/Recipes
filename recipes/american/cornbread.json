@@ -1,0 +1,75 @@
+{
+  "id": "cornbread",
+  "schemaVersion": "0.1",
+  "title": "Cornbread",
+  "category": "American",
+  "photo": "./public/images/cornbread.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "6 tablespoons butter",
+        "1 cup yellow cornmeal",
+        "1 cup milk",
+        "1 cup all purpose flour",
+        "½ cup sugar",
+        "2 teaspoons baking powder",
+        "1 teaspoon Kosher salt",
+        "1 large egg",
+        "1 cup cheddar cheese, shredded",
+        "(optional) 1 cup corn kernels"
+      ]
+    }
+  ],
+  "steps": [
+    "Whisk the milk with the cornmeal and set aside to hydrate for 15 minutes.",
+    "Whisk the flour, sugar, baking powder, and salt then set aside.",
+    "When the cornmeal is hydrated, whisk in the egg and melted butter. The butter needs to be added slowly to temper the egg, otherwise you will end up with scrambled egg.",
+    "Whisk the dry ingredients into the cornmeal mixture.",
+    "Fold in the cheese and corn (if using).",
+    "Pour in cornbread batter into the cast iron pan and bake for 25-30 minutes, or until golden brown. Can alternatively be baked as 12 muffins for 18 minutes.",
+    "Cool in a pan for 5 minutes, then serve immediately. Reheat any leftover cornbread before serving again."
+  ],
+  "reviewFlags": [
+    "The source gives bake times for a skillet and muffins but leaves the oven temperature unspecified."
+  ],
+  "headnote": "This recipe is a hybrid between northern (sweet and moist) and southern (crusty and corn flavored). The source gives bake times for a skillet and muffins but leaves the oven temperature unspecified.",
+  "sourceNote": "Adapted from https://www.allrecipes.com/recipe/17891/golden-sweet-cornbread/",
+  "status": "draft",
+  "variants": [
+    {
+      "title": "Cardamom Cornbread",
+      "status": "draft",
+      "headnote": "This recipe is a hybrid between northern (sweet and moist) and southern (crusty and corn flavored). The source gives bake times for a skillet and muffins but leaves the oven temperature unspecified.",
+      "ingredientGroups": [
+        {
+          "title": null,
+          "items": [
+            "6 tablespoons butter",
+            "1 cup yellow cornmeal",
+            "1 cup milk",
+            "1 cup all purpose flour",
+            "½ cup sugar",
+            "2 tsp green cardamom seeds, ground",
+            "2 teaspoons baking powder",
+            "1 teaspoon Kosher salt",
+            "1 large egg",
+            "1 cup cheddar cheese, shredded",
+            "(optional) 1 cup corn kernels"
+          ]
+        }
+      ],
+      "steps": [
+        "Whisk the milk with the cornmeal and set aside to hydrate for 15 minutes.",
+        "Whisk the flour, sugar, baking powder, and salt then set aside.",
+        "When the cornmeal is hydrated, whisk in the egg and melted butter. The butter needs to be added slowly to temper the egg, otherwise you will end up with scrambled egg.",
+        "Whisk the dry ingredients into the cornmeal mixture.",
+        "Fold in the cheese and corn (if using).",
+        "Pour in cornbread batter into the cast iron pan and bake for 25-30 minutes, or until golden brown. Can alternatively be baked as 12 muffins for 18 minutes.",
+        "Cool in a pan for 5 minutes, then serve immediately. Reheat any leftover cornbread before serving again."
+      ],
+      "sourceNote": "Adapted from the original Cornbread version."
+    }
+  ],
+  "defaultVariant": -1
+}

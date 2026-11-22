@@ -1,0 +1,48 @@
+{
+  "id": "red-beans-and-rice",
+  "schemaVersion": "0.1",
+  "title": "Red Beans and Rice",
+  "category": "American",
+  "photo": "./public/images/red-beans-and-rice.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1 Tbsp Oil",
+        "1 large sweet onion (Vidalia), finely chopped",
+        "4 celery stalks (including leaves), finely chopped",
+        "1 large green bell pepper, finely chopped",
+        "3-4 garlic cloves, minced",
+        "1 tsp thyme (dried)",
+        "½ tsp cayenne pepper (¼ tsp for mild taste buds)",
+        "1.5 lb polish kielbasa (or andouille sausage)",
+        "2 cups dry red beans, hydrated overnight in water with 1 tsp salt",
+        "4 cups chicken stock",
+        "Salt & Pepper to taste"
+      ]
+    },
+    {
+      "title": "To Serve",
+      "items": [
+        "Long grain rice",
+        "Finely chopped scallions",
+        "Tabasco sauce"
+      ]
+    }
+  ],
+  "steps": [
+    "If using dried red kidney beans, drain and discard the soaking water, then boil the beans in fresh water for at least 30 minutes before pressure cooking. Drain before adding them to the pot.",
+    "Set the pressure cooker to Saute mode on Medium heat and add the oil, onion, celery, bell pepper, garlic, thyme, and cayenne pepper. Saute until the vegetables begin to release their liquids, approximately 2-3 minutes.",
+    "Add the sausage, shifting the contents of the pot so that the mixture is on top and continue to cook for another 1-2 minutes.",
+    "Add the red beans and chicken stock, stirring gently to combine, then pressure cook on High for 20 minutes.",
+    "Prepare your extras while the beans cook.",
+    "Release the pressure naturally -- it should take approximately 10-15 minutes.",
+    "Remove the sausage and let it cool slightly before slicing into bite sized chunks.",
+    "You may need to skim some oil from the top of the pot, depending on how much was released by the sausage.",
+    "For a creamier consistency, remove and puree 2-3 cups of stew and stir it back into the pot.",
+    "Stir the sausage back into the pot and serve."
+  ],
+  "reviewFlags": [],
+  "subtitle": "Pressure Cooker",
+  "sourceNote": "Red kidney bean preparation guidance: U.S. Food and Drug Administration. https://www.fda.gov/media/83271/download"
+}

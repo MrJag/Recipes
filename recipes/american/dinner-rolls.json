@@ -1,0 +1,34 @@
+{
+  "id": "dinner-rolls",
+  "schemaVersion": "0.1",
+  "title": "Dinner Rolls",
+  "category": "American",
+  "photo": "./public/images/dinner-rolls.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1 cup (240ml) whole milk, 110° F",
+        "2 ¼ tsp instant yeast (1 packet)",
+        "2 Tbsp sugar",
+        "1 large egg",
+        "4 Tbsp butter (56g, ¼ cup)",
+        "1 tsp salt",
+        "3 cups bread flour (390g)"
+      ]
+    }
+  ],
+  "steps": [
+    "Whisk the milk, yeast, and 1 tablespoon of sugar together. Cover and let stand for 5 minutes.",
+    "Add the remaining sugar, egg, butter, salt, and 1 cup of the flour. Mix on low for 30 seconds, scrape the bowl, and add the remaining flour. Mix on medium for about 2 minutes, until the dough pulls away from the sides. If it is too wet to handle, add flour 1 tablespoon at a time.",
+    "Knead for 5 minutes in the mixer or by hand on a lightly floured surface, until the dough is soft and slightly tacky and passes the windowpane test.",
+    "Transfer to a lightly greased bowl, cover, and let rise in a warm place for 1–2 hours, until doubled.",
+    "Grease a 9 × 13-inch baking pan or two 9-inch pans. Punch down the dough and divide it into 14–16 pieces. Shape each into a smooth ball and arrange them in the pan.",
+    "Cover and let rise until puffy, about 1 hour. Set the oven rack low and preheat to 350°F.",
+    "Bake for 20–25 minutes, rotating the pan halfway through. If the tops brown early, loosely tent the pan with foil. Brush with honey butter if desired and cool briefly before serving.",
+    "Cover leftover rolls tightly and store at room temperature for 2-3 days or in the refrigerator for up to 1 week."
+  ],
+  "reviewFlags": [],
+  "servings": "14–16 rolls",
+  "sourceNote": "Adapted from Sally’s Baking Recipes. https://sallysbakingaddiction.com/soft-dinner-rolls/"
+}

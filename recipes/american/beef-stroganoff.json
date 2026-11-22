@@ -1,0 +1,44 @@
+{
+  "id": "beef-stroganoff",
+  "schemaVersion": "0.1",
+  "title": "Beef Stroganoff",
+  "category": "American",
+  "photo": "./public/images/beef-stroganoff.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2.5 lbs beef chuck, trimmed and sliced",
+        "1 small onion, chopped",
+        "4 garlic cloves, minced",
+        "½ lb mushrooms, sliced thick",
+        "2 Tbsp caraway seeds",
+        "1 Tbsp beef concentrate + 1.5 cups water (or 3 cups beef broth simmered until reduced by half)",
+        "½ cup sour cream",
+        "1 Tbsp Sweet Smoked Paprika (Hungarian)",
+        "1 tsp fresh dill",
+        "2 Tbsp fresh parsley",
+        "1 lb fettuccine noodles",
+        "3 Tbsp butter",
+        "3 Tbsp oil"
+      ]
+    }
+  ],
+  "steps": [
+    "Put 2 Tbsp caraway seeds in ¼ cup boiling water and set aside for later.",
+    "Season the beef with salt and pepper then toss with flour.",
+    "Set the Instant Pot to Saute-High and add 3 Tbsp of oil. Fry the beef for 5 minutes or until golden brown.",
+    "Stir in the chopped onion, garlic, tomato paste, paprika, and broth.",
+    "Pressure cook for 35 minutes at high pressure then quick release.",
+    "Stir in the parsley, dill, and mushrooms then cover and simmer for another 10 minutes with the Keep Warm setting.",
+    "Meanwhile, bring a pot of salted water to boil.",
+    "Cook the fettuccini noodles, drain, then toss with butter.",
+    "Thin the sour cream with the liquid from the strained caraway seeds, and stir into the pot.",
+    "Serve"
+  ],
+  "reviewFlags": [
+    "Confirm quantities for flour, tomato paste, salt, and pepper, which appear in the directions without amounts."
+  ],
+  "status": "draft",
+  "headnote": "Confirm quantities for flour, tomato paste, salt, and pepper, which appear in the directions without amounts."
+}

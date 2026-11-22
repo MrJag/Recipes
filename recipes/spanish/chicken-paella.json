@@ -1,0 +1,45 @@
+{
+  "id": "chicken-paella",
+  "schemaVersion": "0.1",
+  "title": "Chicken Paella",
+  "category": "Spanish",
+  "photo": "./public/images/chicken-paella.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2 Tbsp olive oil (27g)",
+        "8 oz chicken thigh (272g)",
+        "2 oz mushrooms (white chanterelle or portabella) (75g)",
+        "1 cup rice (bomba) (75g)",
+        "½ cup Catalan sofrito (recipe) (158g)",
+        "3 ½ tsp kosher salt (12.5g)",
+        "2.5 cups chicken stock (730g)",
+        "1 Tbsp saffron water (31g)",
+        "1 Tbsp Spanish picada (recipe) (31g)",
+        "4 half artichoke confit (79g, baby sized)",
+        "2 Tbsp green peas (34g)"
+      ]
+    }
+  ],
+  "steps": [
+    "Preheat the oven to 400 degrees F.",
+    "Place paella pan on the stove over high heat. Add olive oil and heat until shimmering.",
+    "Season chicken with ½ tsp of kosher salt. Sear until golden brown, about 4 minutes.",
+    "Add mushrooms and saute until tender, about 1 minute.",
+    "Add rice, sofrito, and 3 tsp of kosher salt. Stir rice for 30 seconds until all the ingredients are fully combined.",
+    "Add chicken stock, saffron water, and picada, stirring to make sure all the flavors blend well. Bring to a boil and reduce heat to medium. The stock should be boiling moderately at this point, with small even bubbles all over, 5-10mm in size.",
+    "Cook until the stock reduces to even with the rice, approximately 10 minutes.",
+    "Transfer the paella pan to the oven and cook until rice is slightly softer than al dente, approximately 9-12 minutes. Oven times may vary.",
+    "Halfway through the oven process, top the paella with the artichoke confit.",
+    "Remove the paella from the oven and allow it to rest for 4 minutes. Sprinkle the green peas evenly over top while resting."
+  ],
+  "reviewFlags": [
+    "The source lists conflicting volume and weight measurements for several ingredients, including the chicken, rice, stock, saffron water, and picada. Confirm which measurements to use."
+  ],
+  "subtitle": "Paella de Pollo",
+  "servings": "5",
+  "sourceNote": "Adapted from Bulla Gastrobar Restaurante, Legacy West, Plano, TX. Reference: https://www.phaidon.com/agenda/food/articles/2011/may/18/paella-rice-with-chicken-and-langoustines/",
+  "status": "draft",
+  "headnote": "The source lists conflicting volume and weight measurements for several ingredients, including the chicken, rice, stock, saffron water, and picada. Confirm which measurements to use."
+}

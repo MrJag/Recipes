@@ -1,0 +1,107 @@
+{
+  "id": "fresh-pasta-from-scratch",
+  "schemaVersion": "0.1",
+  "title": "Fresh Pasta from Scratch",
+  "category": "Italian",
+  "photo": "./public/images/fresh-pasta-from-scratch.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2 ½ cups (12 ounces) all-purpose flour or “00” flour, plus more for dusting",
+        "1 tablespoon kosher salt",
+        "4 large eggs",
+        "1 tablespoon extra-virgin olive oil (optional)"
+      ]
+    }
+  ],
+  "steps": [
+    "Place flour and salt in a large mixing bowl and whisk together. Make a “well” in the center of the flour mixture and add eggs and oil, if using. Using your fingers, blend the eggs into the flour mixture, stirring the flour in from the sides of the well and working outwards. When the pasta dough is mixed, put it on a lightly floured work surface. Knead dough until it is smooth and flexible but not sticky, adding flour as needed, about 5 to 10 minutes. Gather the dough into a ball and flatten. Cover in plastic wrap and allow dough to rest for at least 10 minutes and up to 1 hour at room temperature.",
+    "To roll dough, attach a pasta machine to the edge of a long countertop. Using a bench scraper, cut dough into thirds. Keep extra dough covered in plastic. Flatten a piece of dough into a rough square that will fit the pasta machine. Place the rollers on the widest setting and roll the dough through the machine, catching it with one hand as you roll with the other. Take the dough and fold into thirds towards the center of the dough. Turn the dough so the open end faces the machine and roll it through on the widest setting again. Fold, turn, and roll once more on the widest setting. Continue rolling the pasta through the machine without folding, adjusting the rollers to the next-smallest one each time, until it’s as thin as you want. If the pasta sheet becomes too big to handle, use the bench scraper to cut it into shorter pieces and continue rolling.",
+    "Place a cutting attachment on the pasta machine, and flour the pasta sheets. Cut the pasta ribbons. Or you can cut noodles by rolling well-floured pasta sheets into tight cylinders and slicing with a sharp chef’s knife. Place cut noodles in serving-size “nests” onto floured baking sheets, and toss each nest generously with flour to prevent sticking.",
+    "Pasta can be cooked immediately or covered with plastic wrap and refrigerated for up to 1 hour before cooking.",
+    "To cook pasta, heat a large pot over high heat until boiling. Add enough kosher salt to season the water like sea water. While salted water boils vigorously, add pasta and stir immediately to prevent pasta from sticking. Boil until pasta is al dente, about 2 to 3 minutes. Reserve about ½ cup pasta water, and drain pasta through a colander. Alternately, remove the cooked pasta with a slotted spoon or spider, and reheat water to boiling before cooking another batch."
+  ],
+  "reviewFlags": [],
+  "servings": "4",
+  "variants": [
+    {
+      "title": "Spaghetti and Mini-Meatballs",
+      "ingredientGroups": [
+        {
+          "title": "Sauce and Pasta",
+          "items": [
+            "1/3 cup extra-virgin olive oil",
+            "2 cloves garlic, crushed",
+            "1 (28 ounce) can peeled, crushed tomatoes",
+            "1 (14 ounce) can tomato puree",
+            "10 large basil leaves, chopped",
+            "1 recipe Fresh Pasta Dough (see Original version)",
+            "Grated Romano or Parmesan cheese"
+          ]
+        },
+        {
+          "title": "Meatballs",
+          "items": [
+            "½ pound very lean ground beef",
+            "½ pound ground pork",
+            "1 cup breadcrumbs",
+            "¼ cup chopped Italian parsley",
+            "¼ cup minced onions",
+            "2 cloves garlic, minced",
+            "¼ cup grated Romano cheese",
+            "½ teaspoon freshly ground black pepper",
+            "¾ teaspoon kosher salt",
+            "Dash of freshly grated nutmeg",
+            "1 large egg, beaten",
+            "Small amount of extra-virgin olive oil"
+          ]
+        }
+      ],
+      "steps": [
+        "In a medium saucepan, heat the oil and garlic, and cook for about 1 minute. Add puree and peeled crushed tomatoes and stir. Bring to a boil, then lower heat and simmer.",
+        "Mix all ingredients well, using your hands. Shape into meatballs no larger than a marble. Brown them in a sauté pan with a small amount of oil, then add to the tomato sauce. Simmer the sauce for about 45 minutes, stirring about every 15 minutes.",
+        "Stir in the basil during the last 2 minutes of simmering. Serve over cooked fresh pasta and finish with grated cheese."
+      ],
+      "sourceNote": "From Kids Camp Pasta from Scratch."
+    },
+    {
+      "title": "Three-Cheese Ravioli",
+      "subtitle": "Pesto Cream Sauce",
+      "ingredientGroups": [
+        {
+          "title": "Ravioli",
+          "items": [
+            "2 teaspoons olive oil",
+            "¾ cup finely chopped shallots or onions",
+            "8 ounces whole milk ricotta",
+            "¾ cup grated parmesan",
+            "¾ cup shredded mozzarella",
+            "1 recipe fresh pasta dough (see Original version)",
+            "1 beaten egg for egg wash"
+          ]
+        },
+        {
+          "title": "Pesto Cream Sauce",
+          "items": [
+            "4 cups basil leaves (about 6 ounces)",
+            "¼ cup pine nuts, toasted",
+            "1 clove garlic",
+            "¼ cup freshly grated Parmesan cheese, plus additional to garnish",
+            "¼ cup olive oil",
+            "1 cup cream",
+            "Kosher salt and pepper to taste"
+          ]
+        }
+      ],
+      "steps": [
+        "Heat the oil in a heavy small skillet over medium heat. Add the shallots/onions, cover and cook for 5 minutes. Transfer shallots to a medium bowl and cool. Add all cheeses and mix together. Place a sheet of pasta on the work surface, long side towards you. Gently mark the pasta with the back of a knife at two inch intervals along the length of the sheet, and down the middle of the full length of the sheet, forming a pattern of squares. Spoon a small amount of the filling into the center of each of the squares closest to you. Brush egg wash around the edge of the filling, to the grid lines. When all of the squares along the bottom half of the dough sheet have been filled and egg washed, fold the top half of the dough over, gently pressing around each mound of filling to press out any air and to seal the top layer of pasta to the bottom layer. Using a sharp knife, cut in between each mound of filling to separate the individual raviolis. Cook immediately or cover with plastic and refrigerate.",
+        "Place the basil, pine nuts, garlic, and parmesan cheese in the bowl of a food processor. Process until the contents are well chopped, about 20 seconds. With the machine running, slowly drizzle in the ¼ cup olive oil. Process until well blended. Season to taste with salt and pepper.",
+        "Transfer the pesto to a large skillet over medium heat. Stir in the cream and warm the sauce.",
+        "Bring a large pot of salted water to a boil. Bring the pesto cream sauce to a simmer. Cook the raviolis in boiling salted water. The raviolis are done when they float and the water returns to the boil. Drain the raviolis and add to the sauté pan with the sauce. Toss gently to coat and transfer to a serving platter. Garnish with additional cheese and serve immediately."
+      ],
+      "sourceNote": "From Kids Camp Pasta from Scratch."
+    }
+  ],
+  "defaultVariant": -1
+}
