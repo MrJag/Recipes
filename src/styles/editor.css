@@ -196,12 +196,26 @@
 
 .print-menu-bar {
   position: sticky;
-  top: 0;
+  top: 10px;
   z-index: 40;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: start;
+  justify-self: center;
+  width: min(var(--page-width), calc(100% - 24px));
+  height: 0;
+  margin-top: 36px;
+  padding-inline: 12px;
   display: flex;
   justify-content: flex-end;
-  padding: 10px 12px 0;
   pointer-events: none;
+}
+
+@media screen and (max-width: 760px) {
+  .print-menu-bar {
+    grid-column: 1;
+    margin-top: 24px;
+  }
 }
 
 .print-menu { pointer-events: auto; }
@@ -238,7 +252,7 @@
 .print-menu .toolbar {
   position: absolute;
   inset-inline-end: 12px;
-  top: calc(100% + 6px);
+  top: 50px;
   width: min(25rem, calc(100% - 24px));
   max-height: calc(100vh - 72px);
   max-height: calc(100dvh - 72px);
