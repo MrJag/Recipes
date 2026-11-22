@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "0.1",
+  "id": "burger-buns",
+  "title": "Burger Buns",
+  "category": "American",
+  "status": "draft",
+  "photo": "./public/images/burger-buns.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Wet Ingredients",
+      "items": [
+        "1 cup water (95° F)",
+        "3 Tbsp warm milk",
+        "2 tsp Yeast (instant)\u000b(or 0.75 tsp yeast for overnight proof)"
+      ]
+    },
+    {
+      "title": "Dry Ingredients",
+      "items": [
+        "3 cups Bread Flour (King Arthur)",
+        "⅓ cup AP Flour (King Arthur)",
+        "1.5 tsp Salt",
+        "2.5 Tbsp sugar\u000b(or 1.5 Tbsp honey)"
+      ]
+    },
+    {
+      "title": "Wet Ingredients 2",
+      "items": [
+        "1 large egg",
+        "2.5 Tbsp unsalted butter, softened"
+      ]
+    },
+    {
+      "title": "Egg Wash",
+      "items": [
+        "1 large eggs, beaten",
+        "1 Tbsp water",
+        "Sesame seeds (optional)"
+      ]
+    }
+  ],
+  "steps": [
+    "Dissolve the yeast in warm water and milk.",
+    "Combine the bread flour, all-purpose flour, salt and sugar in a mixing bowl. Stir to mix.",
+    "Add the softened butter to the mixing bowl and combine until crumbly.",
+    "Add the yeast mixture and 1 beaten egg.",
+    "Kneed for 8 minutes on medium-low with the dough hook.",
+    "Shape into a dough ball, cover, and let rise until doubled, approximately 1-2 hours at room temperature or overnight in the refrigerator.  Make sure to use the lower yeast quantity for overnight proofing.",
+    "Punch down the dough lightly and divide into six 5oz portions.  Roll each piece into a ball, stretching the outside towards the bottom to form a tight outer skin.  It’s helpful to pinch the bottom seams together and place them seam-side down.  Arrange the 6 balls on a baking sheet lined with parchment paper.  Cover with a cotton towel and let rise again for 1-2 hours.",
+    "Place a shallow pan on the bottom rack and preheat the oven to 400 °F.",
+    "Prepare an egg wash by beating 1 large egg with 1 Tbsp water.",
+    "After the buns are proofed, lightly brush the exterior with the egg wash.  Be careful not to let egg wash drip down and pool on the pan.",
+    "Add 1 cup of hot water to the shallow pan on the lower rack.  Place the tray of buns on the medium rack and bake for 18 minutes.",
+    "Transfer to a wire rack to cool."
+  ],
+  "reviewFlags": [
+    "The source marks this recipe as a draft."
+  ],
+  "headnote": "Draft: Review before finalizing.",
+  "sourceNote": "Adapted from Hidefumi Kubota at Comme Ça. https://korenainthekitchen.com/2013/06/06/light-brioche-hamburger-buns/"
+}

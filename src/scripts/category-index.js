@@ -7,7 +7,7 @@ const categoryRecipes = {
     "greek-marinade", "hawaiian-chili-pepper-water", "pomodoro-sauce", "bolognese-ragu",
     "codys-salsa", "salsa-roja", "catalan-sofrito", "peanut-sauce", "russells-yellow-curry-spice-blend"
   ],
-  Sides: ["mashed-potatoes", "creamed-corn", "cranberry-relish", "pita-bread", "persian-rice-with-tahdig", "baba-ganoush", 
+  Sides: ["burger-buns", "mashed-potatoes", "creamed-corn", "cranberry-relish", "pita-bread", "persian-rice-with-tahdig", "baba-ganoush", 
     "cornbread", "dinner-rolls", "roasted-acorn-squash", "southwestern-roasted-cauliflower",
     "jasmine-coconut-rice", "indian-basmati-rice-pilau", "long-grain-rice-with-mustard-seeds",
     "rosemary-focaccia", "coconut-lime-rice"
