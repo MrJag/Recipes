@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "0.1",
+  "id": "franklin-sweet-bbq",
+  "title": "Sweet BBQ Sauce",
+  "category": "American",
+  "status": "draft",
+  "photo": "./public/images/franklin-sweet-bbq.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "14 oz ketchup",
+        "5 oz water",
+        "2½ oz apple cider vinegar",
+        "2½ oz white vinegar",
+        "4½ Tbsp brown sugar",
+        "2½ Tbsp Worcestershire sauce",
+        "1 Tbsp chili powder",
+        "½ Tbsp kosher salt",
+        "½ Tbsp coarse-ground black pepper",
+        "1 tsp cumin"
+      ]
+    }
+  ],
+  "steps": [
+    "Mix all ingredients in a pot and simmer about 20 minutes, until flavors combine.",
+    "Remove from heat. Once cool, refrigerate in an airtight jar or bottle. The source says it should keep for months."
+  ],
+  "reviewFlags": [
+    "This formula appears in a source titled “Failed BBQ Sauces”; its refrigerated storage duration needs confirmation. The source states that ounce measures are by volume."
+  ],
+  "headnote": "This formula appears in a source titled “Failed BBQ Sauces”; its refrigerated storage duration needs confirmation. The source states that ounce measures are by volume.",
+  "sourceNote": "Adapted from Aaron Franklin barbecue sauce notes."
+}

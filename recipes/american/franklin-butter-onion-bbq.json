@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "0.1",
+  "id": "franklin-butter-onion-bbq",
+  "title": "Butter and Onion BBQ Sauce",
+  "category": "American",
+  "status": "draft",
+  "photo": "./public/images/franklin-butter-onion-bbq.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "½ lb butter",
+        "½ yellow onion, finely diced",
+        "1½ cups ketchup",
+        "½ cup apple cider vinegar",
+        "2 oz light brown sugar",
+        "1 tsp kosher salt",
+        "1 tsp black pepper",
+        "A little less than 1 tsp garlic powder",
+        "A little less than 1 tsp chili powder",
+        "Juice of ½ lemon"
+      ]
+    }
+  ],
+  "steps": [
+    "Melt butter and sauté onion until soft and translucent.",
+    "Add remaining ingredients, bring to a boil, then reduce heat and simmer for 30 minutes. Serve warm with barbecue."
+  ],
+  "reviewFlags": [
+    "This formula appears in a source titled “Failed BBQ Sauces”; review before using."
+  ],
+  "headnote": "This formula appears in a source titled “Failed BBQ Sauces”; review before using.",
+  "sourceNote": "Adapted from Aaron Franklin barbecue sauce notes."
+}

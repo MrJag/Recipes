@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "0.1",
+  "id": "modified-butter-onion-bbq",
+  "title": "Modified Butter and Onion BBQ Sauce",
+  "category": "American",
+  "status": "draft",
+  "photo": "./public/images/modified-butter-onion-bbq.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1 Tbsp butter",
+        "1 tsp onion powder",
+        "1½ cups ketchup",
+        "¼ cup apple cider vinegar",
+        "¼ cup apple juice",
+        "¼ cup light brown sugar",
+        "1 tsp kosher salt",
+        "1 tsp black pepper",
+        "1 tsp garlic powder",
+        "1 tsp chili powder",
+        "1 Tbsp lemon juice",
+        "¼ cup water",
+        "1 Tbsp tamarind (sweet and sour sauce)"
+      ]
+    }
+  ],
+  "steps": [
+    "Melt butter, add remaining ingredients and bring to a boil.",
+    "Reduce heat and simmer for 30 minutes."
+  ],
+  "reviewFlags": [
+    "This formula appears in a source titled “Failed BBQ Sauces”; the tamarind ingredient is described ambiguously and needs review."
+  ],
+  "headnote": "This formula appears in a source titled “Failed BBQ Sauces”; the tamarind ingredient is described ambiguously and needs review.",
+  "sourceNote": "Adapted from Aaron Franklin barbecue sauce notes."
+}
