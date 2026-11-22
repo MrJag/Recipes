@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "0.1",
+  "id": "cardamom-currant-moscow-mule",
+  "title": "Cardamom Currant Moscow Mule",
+  "category": "Drinks",
+  "status": "draft",
+  "photo": "./public/images/cardamom-currant-moscow-mule.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1.5 oz vodka",
+        "3.5 oz Fever Tree ginger beer",
+        "1 oz fresh lime juice",
+        "0.75 oz cardamom & Zante currant infused syrup",
+        "Ice",
+        "Optional: ginger candy and lime slice, for garnish"
+      ]
+    }
+  ],
+  "steps": [
+    "Pour the vodka, lime juice, and syrup into a copper mug or highball glass filled with ice.",
+    "Top with ginger beer. Optionally garnish with ginger candy and a lime slice on a pick."
+  ],
+  "reviewFlags": [
+    "The source does not include the cardamom and currant syrup preparation."
+  ],
+  "headnote": "Draft: Confirm the infused syrup recipe.",
+  "sourceNote": "Adapted from Bulla Gastrobar."
+}
