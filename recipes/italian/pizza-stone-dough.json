@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "0.1",
+  "id": "pizza-stone-dough",
+  "title": "Pizza Stone Dough",
+  "category": "Italian",
+  "status": "draft",
+  "photo": "./public/images/pizza-stone-dough.jpg",
+  "ingredientGroups": [
+    {
+      "title": "By weight",
+      "items": [
+        "500 g Molino Caputo Tipo 00 flour",
+        "325 g water",
+        "10 g salt",
+        "3 g active dry yeast"
+      ]
+    },
+    {
+      "title": "By volume (alternative)",
+      "items": [
+        "4 cups Molino Caputo Tipo 00 flour",
+        "1½ cups plus 2–3 Tbsp water",
+        "4 tsp salt",
+        "½ tsp active dry yeast"
+      ]
+    }
+  ],
+  "steps": [
+    "Mix the flour and water without the salt and yeast until combined; if using a stand mixer, mix on its lowest setting for 2 minutes. Rest 20 minutes.",
+    "Add salt and yeast. Mix on low to medium speed for 5 minutes or knead by hand for 6–8 minutes, until the sticky dough just forms a ball.",
+    "Turn onto a lightly floured surface, knead briefly, fold into thirds and seal. Rotate, bring the ends together and seal again, placing seam-side down.",
+    "Place in a lightly oiled bowl, cover and rise for 90 minutes to 2 hours, until doubled.",
+    "Gently turn out and divide into desired portions; the source suggests three approximately 275 g balls for 12-inch pizzas. Shape and cover the balls, and proof at least 1 hour before shaping.",
+    "Alternatively, shape the balls without the room-temperature bulk rise and refrigerate in a covered container for a day or two. Remove about 1 hour before use."
+  ],
+  "reviewFlags": [
+    "The source provides weight and volume formulations that may not be equivalent, particularly the salt. Choose one formulation and confirm the amounts."
+  ],
+  "headnote": "The source provides weight and volume formulations that may not be equivalent, particularly the salt. Choose one formulation and confirm the amounts.",
+  "sourceNote": "Adapted from Forno Bravo, Pizza Stone Pizza."
+}
