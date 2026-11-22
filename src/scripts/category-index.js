@@ -2,7 +2,7 @@
 
 const categoryRecipes = {
   Drinks: ["frozen-margarita", "iced-lemon-green-tea-with-basil-seeds", "mariano-margarita"],
-  Condiments: ["spanish-picada", "neapolitan-pizza-sauce", "lawrys-seasoning-clone", 
+  Condiments: ["chili-powder", "spanish-picada", "neapolitan-pizza-sauce", "lawrys-seasoning-clone", 
     "raspberry-vinaigrette", "caribbean-green-seasoning", "chinese-white-stir-fry-sauce",
     "greek-marinade", "hawaiian-chili-pepper-water", "pomodoro-sauce", "bolognese-ragu",
     "codys-salsa", "salsa-roja", "catalan-sofrito", "peanut-sauce", "russells-yellow-curry-spice-blend"
@@ -12,7 +12,7 @@ const categoryRecipes = {
     "jasmine-coconut-rice", "indian-basmati-rice-pilau", "long-grain-rice-with-mustard-seeds",
     "rosemary-focaccia", "coconut-lime-rice"
   ],
-  Mains: ["chicken-plov", "uzbek-plov-lamb", "clay-pot-rice-short-ribs", "chicken-congee", "hatch-green-chili", "hawaiian-teriyaki-chicken", "hawaiian-stir-fry-noodles", "shakshuka", "neapolitan-pizza", "lamb-biryani", "turkish-kofta-kebab", "smoked-pulled-pork", "3-2-1-ribs", "mariannas-chicken-kotleti", 
+  Mains: ["spatchcocked-hawaiian-chicken", "chicken-plov", "uzbek-plov-lamb", "clay-pot-rice-short-ribs", "chicken-congee", "hatch-green-chili", "hawaiian-teriyaki-chicken", "hawaiian-stir-fry-noodles", "shakshuka", "neapolitan-pizza", "lamb-biryani", "turkish-kofta-kebab", "smoked-pulled-pork", "3-2-1-ribs", "mariannas-chicken-kotleti", 
     "beef-stroganoff", "red-beans-and-rice", "tomato-basil-soup", "belgian-waffles",
     "philips-waffles", "szechuan-green-beans-and-pork", "taiwanese-popcorn-chicken",
     "hawaiian-huli-huli-chicken", "butter-masala-chicken", "goan-pork-vindaloo",

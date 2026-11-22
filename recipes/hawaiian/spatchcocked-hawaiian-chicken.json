@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "0.1",
+  "id": "spatchcocked-hawaiian-chicken",
+  "title": "Spatchcocked Hawaiian Chicken",
+  "category": "Hawaiian",
+  "photo": "./public/images/spatchcocked-hawaiian-chicken.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "4 lb Whole Chicken",
+        "6-8 scallions, roughly chopped",
+        "Marinade:",
+        "4 large cloves garlic",
+        "2\" piece fresh ginger",
+        "1/2 cup light brown sugar",
+        "1 tsp. freshly cracked black pepper",
+        "1 Tbsp. kosher salt",
+        "⅔ cup soy sauce",
+        "2 Tbsp. sesame oil",
+        "1 (13.5-oz.) can coconut milk",
+        "3 Tbsp. yogurt or sour cream",
+        "4 scallions, roughly chopped"
+      ]
+    }
+  ],
+  "steps": [
+    "Spatchcock the chicken by cutting out its backbone with a pair of kitchen scissors. (Save the backbone in the freezer for stock.) Put the chicken on a board skin side up and flatten it with your hands. TRansfer to a large ziplock bag.",
+    "Blend the garlic, ginger, brown sugar, pepper, salt, and soy sauce into a paste.",
+    "Add the sesame oil, coconut milk, and yogurt.  Mix briefly to combine.  Stir in the 4 chopped scallions then transfer to the ziplock bag with the chicken.",
+    "Marinade overnight.",
+    "Preheat the grill.",
+    "Place the chicken cut side down and grill for 15 minutes with the lid closed.  Flip the chicken and rotate, cooking for another 15 minutes with the lid closed.  Pull the legs and thighs, flip and rotate, cooking another 8 minutes for the breast.",
+    "Continue grilling until the temperature readys 160, moving as needed to prevent the skin from burning.",
+    "Shortly before the chicken is done, roughly chop the scallions and pile them on a carving board. When it’s ready, move the chicken to the board and place it (cut side down) over the scallions. Let the chicken rest for 10 minutes, then serve."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Oak and pecan wood smoke impart a great taste for this chicken. Adapted from https://thetakeout.com/recipe-hawaiian-grilled-chicken-with-coconut-milk-brin-1843909668"
+}

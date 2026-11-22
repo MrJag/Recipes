@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "0.1",
+  "id": "chili-powder",
+  "title": "Chili Powder",
+  "category": "American",
+  "photo": "./public/images/chili-powder.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "¼ cup dried chili, ground\u000bancho, guajillo, new mexico",
+        "2 Tbsp aleppo chili, ground",
+        "1 Tbsp oregano",
+        "1 Tbsp cumin",
+        "1 tsp coriander",
+        "1 bay leaf, crushed",
+        "3 tsp salt",
+        "2 tsp pepper",
+        "1 tsp ground cinnamon"
+      ]
+    }
+  ],
+  "steps": [
+    "Combine and grind."
+  ],
+  "reviewFlags": [
+    "The source marks this recipe as a draft."
+  ],
+  "status": "draft"
+}
