@@ -3,12 +3,73 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Family Cookbook — Print Preview</title>
+<title>Family Cookbook</title>
 <link rel="stylesheet" href="./src/styles/cookbook.css?v=0.6.6">
-<link rel="stylesheet" href="./src/styles/editor.css?v=0.7.1">
-<script defer src="./src/scripts/cookbook.js?v=0.7.1"></script>
+<link rel="stylesheet" href="./src/styles/editor.css?v=0.7.2">
+<script defer src="./src/scripts/cookbook.js?v=0.7.2"></script>
 </head>
 <body>
+<main id="recipeIndex" tabindex="-1" class="recipe-index">
+  <h1>Family Cookbook</h1>
+  <div class="recipe-outline">
+    <section>
+      <h2>Caribbean</h2>
+      <ul>
+        <li><a href="?recipe=caribbean-green-seasoning" data-recipe="recipes/caribbean/caribbean-green-seasoning.json">Caribbean Green Seasoning</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Dessert</h2>
+      <ul>
+        <li><a href="?recipe=buttery-apple-tart" data-recipe="recipes/dessert/buttery-apple-tart.json">Buttery Apple Tart</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Drinks</h2>
+      <ul>
+        <li><a href="?recipe=mariano-margarita" data-recipe="recipes/drinks/mariano-margarita.json">Mariano Margarita</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Greek</h2>
+      <ul>
+        <li><a href="?recipe=greek-marinade" data-recipe="recipes/greek/greek-marinade.json">Greek Marinade (DRAFT)</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Indian</h2>
+      <ul>
+        <li><a href="?recipe=butter-masala-chicken" data-recipe="recipes/indian/butter-masala-chicken.json">Butter Masala (Chicken)</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Italian</h2>
+      <ul>
+        <li><a href="?recipe=rosemary-focaccia" data-recipe="recipes/italian/rosemary-focaccia.json">Rosemary Focaccia</a></li>
+        <li><a href="?recipe=pomodoro-sauce" data-recipe="recipes/italian/pomodoro-sauce.json">Pomodoro Sauce</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Japanese</h2>
+      <ul>
+        <li><a href="?recipe=japanese-curry" data-recipe="recipes/japanese/japanese-curry.json">Japanese Curry</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Mexican</h2>
+      <ul>
+        <li><a href="?recipe=pork-carnitas" data-recipe="recipes/mexican/pork-carnitas.json">Pork Carnitas</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Russian</h2>
+      <ul>
+        <li><a href="?recipe=latvian-stew" data-recipe="recipes/russian/latvian-stew.json">Latvian Stew</a></li>
+      </ul>
+    </section>
+  </div>
+</main>
+<div id="recipeView" tabindex="-1" hidden>
 <header class="toolbar">
   <div class="toolbar-heading">
     <strong>Family Cookbook <small>v0.7 · CSS print preview</small></strong>
@@ -25,45 +86,10 @@
 </header>
 <div class="cookbook-layout">
   <nav class="recipe-sidebar" aria-label="Browse recipes">
-    <details>
-      <summary>Caribbean</summary>
-      <button type="button" data-recipe="recipes/caribbean/caribbean-green-seasoning.json">Caribbean Green Seasoning</button>
-    </details>
-    <details>
-      <summary>Dessert</summary>
-      <button type="button" data-recipe="recipes/dessert/buttery-apple-tart.json">Buttery Apple Tart</button>
-    </details>
-    <details>
-      <summary>Drinks</summary>
-      <button type="button" data-recipe="recipes/drinks/mariano-margarita.json">Mariano Margarita</button>
-    </details>
-    <details>
-      <summary>Greek</summary>
-      <button type="button" data-recipe="recipes/greek/greek-marinade.json">Greek Marinade (DRAFT)</button>
-    </details>
-    <details>
-      <summary>Indian</summary>
-      <button type="button" data-recipe="recipes/indian/butter-masala-chicken.json">Butter Masala (Chicken)</button>
-    </details>
-    <details>
-      <summary>Italian</summary>
-      <button type="button" data-recipe="recipes/italian/rosemary-focaccia.json">Rosemary Focaccia</button>
-      <button type="button" data-recipe="recipes/italian/pomodoro-sauce.json">Pomodoro Sauce</button>
-    </details>
-    <details>
-      <summary>Japanese</summary>
-      <button type="button" data-recipe="recipes/japanese/japanese-curry.json">Japanese Curry</button>
-    </details>
-    <details>
-      <summary>Mexican</summary>
-      <button type="button" data-recipe="recipes/mexican/pork-carnitas.json">Pork Carnitas</button>
-    </details>
-    <details open>
-      <summary>Russian</summary>
-      <button type="button" data-recipe="recipes/russian/latvian-stew.json">Latvian Stew</button>
-    </details>
+    <a class="index-link" href="./">All recipes</a>
   </nav>
   <main id="pages" aria-label="Paginated recipe preview"></main>
+</div>
 </div>
 </body>
 </html>

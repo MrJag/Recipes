@@ -287,15 +287,22 @@ function requestRender() {
   renderPending = true;
   requestAnimationFrame(() => {
     renderPending = false;
-    render(currentRecipe);
+    if (currentRecipe) {
+      render(currentRecipe);
+      byId("printButton").disabled = false;
+    }
   });
 }
 async function loadRecipe(button) {
   const requestId = ++loadSequence;
   const file = button.dataset.recipe;
+  currentRecipe = null;
+  pagesEl.replaceChildren();
+  byId("printButton").disabled = true;
   sidebar.querySelector("[aria-current]")?.removeAttribute("aria-current");
   sidebar.querySelector(".recipe-versions")?.remove();
-  button.setAttribute("aria-current", "true");
+  button.setAttribute("aria-current", "page");
+  button.closest("details").open = true;
   statusEl.textContent = "Loading " + file + " …";
   try {
     const response = await fetch("./" + file, {cache:"no-store"});
@@ -363,9 +370,52 @@ function selectRecipeVersion(index) {
   requestRender();
 }
 const sidebar = document.querySelector(".recipe-sidebar");
-for (const button of sidebar.querySelectorAll("[data-recipe]")) {
-  button.addEventListener("click", () => loadRecipe(button));
+const recipeIndex = byId("recipeIndex");
+const recipeView = byId("recipeView");
+const recipeLinks = new Map();
+for (const category of recipeIndex.querySelectorAll(".recipe-outline section")) {
+  const group = el("details");
+  group.appendChild(el("summary", null, category.querySelector("h2").textContent));
+  for (const link of category.querySelectorAll("[data-recipe]")) {
+    const sidebarLink = link.cloneNode(true);
+    const slug = new URL(link.href).searchParams.get("recipe");
+    recipeLinks.set(slug, sidebarLink);
+    group.appendChild(sidebarLink);
+  }
+  sidebar.appendChild(group);
 }
+
+function showRoute() {
+  const slug = new URLSearchParams(location.search).get("recipe");
+  const link = recipeLinks.get(slug);
+  recipeIndex.hidden = Boolean(link);
+  recipeView.hidden = !link;
+  if (link) {
+    for (const group of sidebar.querySelectorAll("details")) {
+      group.open = group === link.closest("details");
+    }
+    document.title = link.textContent + " | Family Cookbook";
+    loadRecipe(link);
+  } else {
+    ++loadSequence;
+    currentRecipe = null;
+    document.title = "Family Cookbook";
+  }
+}
+
+document.addEventListener("click", event => {
+  const link = event.target.closest("[data-recipe], .index-link");
+  if (!link || event.defaultPrevented || event.button !== 0 ||
+      event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+  event.preventDefault();
+  if (location.href !== link.href) history.pushState(null, "", link.href);
+  showRoute();
+  window.scrollTo(0, 0);
+  (recipeView.hidden ? recipeIndex : recipeView).focus();
+});
+
+window.addEventListener("popstate", showRoute);
 for (const id of ["photoWidth","fontSize","stepGap"]) {
   byId(id).addEventListener("input", () => {
     byId(id+"Value").textContent = byId(id).value + (id === "photoWidth" ? "%" : id === "fontSize" ? " pt" : "px");
@@ -375,4 +425,4 @@ for (const id of ["photoWidth","fontSize","stepGap"]) {
 byId("printMode").addEventListener("change", requestRender);
 byId("printButton").addEventListener("click", () => window.print());
 window.addEventListener("resize", requestRender);
-loadRecipe(sidebar.querySelector("details[open] [data-recipe]"));
+showRoute();

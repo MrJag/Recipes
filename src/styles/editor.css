@@ -57,7 +57,7 @@
     color: var(--accent);
   }
 
-  .recipe-sidebar button {
+  .recipe-sidebar :is(button, a) {
     display: block;
     width: 100%;
     padding: 7px 8px;
@@ -70,14 +70,14 @@
     font: 400 14px var(--font-sans);
   }
 
-  .recipe-sidebar button:hover,
-  .recipe-sidebar button[aria-current],
-  .recipe-sidebar button[aria-pressed="true"] {
+  .recipe-sidebar :is(button, a):hover,
+  .recipe-sidebar :is(button, a)[aria-current],
+  .recipe-sidebar :is(button, a)[aria-pressed="true"] {
     background: var(--ingredient-paper);
   }
 
-  .recipe-sidebar button[aria-current],
-  .recipe-sidebar button[aria-pressed="true"] {
+  .recipe-sidebar :is(button, a)[aria-current],
+  .recipe-sidebar :is(button, a)[aria-pressed="true"] {
     font-weight: 700;
   }
 
@@ -86,7 +86,7 @@
     border-inline-start: 1px solid var(--rule);
   }
 
-  .recipe-sidebar :is(summary, button):focus-visible {
+  .recipe-sidebar :is(summary, button, a):focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
   }
@@ -114,3 +114,38 @@
 @media print {
   .recipe-sidebar { display: none !important; }
 }
+
+[hidden] { display: none !important; }
+
+.recipe-index {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 64px);
+}
+
+.recipe-index h1 { margin-bottom: 24px; }
+
+.recipe-outline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 18px;
+}
+
+.recipe-outline section {
+  padding: 18px 20px;
+  border-top: 2px solid var(--rule);
+  background: var(--paper);
+}
+
+.recipe-outline h2 {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 1.15rem;
+}
+
+.recipe-outline ul { margin: 0; padding-inline-start: 1.2em; }
+.recipe-outline li + li { margin-top: 6px; }
+.recipe-outline a { color: var(--ink); text-underline-offset: .17em; }
+.recipe-outline a:hover, .recipe-outline a:focus-visible { color: var(--accent); }
+.recipe-sidebar a { text-decoration: none; }
+.recipe-sidebar a.index-link { color: var(--accent); text-decoration: underline; }
