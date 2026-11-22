@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "0.1",
+  "id": "shashlik-pork-kebab",
+  "title": "Shashlik",
+  "subtitle": "Pork Kebab",
+  "category": "Russian",
+  "photo": "./public/images/shashlik-pork-kebab.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "7 lbs pork loin (not tenderloin)",
+        "3 lbs juicy tomatoes",
+        "3 lbs yellow or sweet onions",
+        "4 bay leaves",
+        "2.5 Tbsp Hawaiian salt",
+        "40 turns pepper (2 tsp?)",
+        "2 tsp crushed red pepper",
+        "1 Kirin beer"
+      ]
+    }
+  ],
+  "steps": [
+    "Thinly slice the tomatoes and onions into a very large bowl.",
+    "Add the bay leaves, salt, pepper, crushed red pepper, and beer. Mix by hand, squeezing the tomatoes and onions to release their juices.",
+    "Trim external fat and silverskin from the pork, then cut into 1–1.5-inch cubes.",
+    "Mix the pork into the marinade. Transfer to a container or large ziplock bags and marinate for 24 hours.",
+    "Grill over hot coals at medium-high heat, turning every 30 seconds, until golden brown and the pork registers 145°F on a thermometer."
+  ],
+  "sourceNote": "Adapted from a friend's recipe."
+}

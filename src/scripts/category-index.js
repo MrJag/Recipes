@@ -19,7 +19,7 @@ const categoryRecipes = {
     "paneer-butter-masala", "tandoori-chicken", "fresh-pasta-from-scratch", "japanese-curry",
     "enchiladas-suizas", "pollo-asado", "pork-carnitas", "skirt-steak-fajitas", "latvian-stew",
     "chicken-paella", "chicken-satay", "thai-basil-chicken", "lemongrass-chicken",
-    "pollo-a-la-brasa"
+    "pollo-a-la-brasa", "shashlik-pork-kebab"
   ],
   Desserts: ["buttery-apple-tart", "cranberry-orange-muffins", "espresso-oreo-gelato", "hectors-tres-leches", "mini-pavlovas"]
 };
