@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Family Cookbook | Browse by Category</title>
+  <link rel="stylesheet" href="./src/styles/cookbook.css?v=0.7.7">
+  <link rel="stylesheet" href="./src/styles/editor.css?v=0.7.6">
+  <script defer src="./src/scripts/category-index.js"></script>
+  <style>
+    .index-switch a { color: var(--accent); text-underline-offset: .17em; }
+    .cuisine-control { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-bottom: 24px; }
+    .cuisine-control select { min-height: 44px; max-width: 100%; padding: 6px 10px; border: 1px solid var(--rule); border-radius: 4px; background: var(--paper); color: var(--ink); font: 1rem var(--font-sans); }
+    .category-results a { overflow-wrap: anywhere; }
+    .recipe-cuisine { display: block; margin-top: 2px; color: #635148; font: .8rem var(--font-sans); }
+    .category-results li + li { margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <main class="recipe-index">
+    <p class="index-switch"><a href="./index.html">Original cuisine index</a></p>
+    <h1>Browse Recipes by Category</h1>
+    <label class="cuisine-control">Cuisine
+      <select id="cuisineFilter" disabled><option value="">All cuisines</option></select>
+    </label>
+    <p id="categoryStatus" role="status">Loading recipes…</p>
+    <div id="categoryResults" class="recipe-outline category-results"></div>
+  </main>
+</body>
+</html>

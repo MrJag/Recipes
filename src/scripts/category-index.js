@@ -1,0 +1,102 @@
+"use strict";
+
+const categoryRecipes = {
+  Drinks: ["iced-lemon-green-tea-with-basil-seeds", "mariano-margarita"],
+  Condiments: [
+    "raspberry-vinaigrette", "caribbean-green-seasoning", "chinese-white-stir-fry-sauce",
+    "greek-marinade", "hawaiian-chili-pepper-water", "pomodoro-sauce", "bolognese-ragu",
+    "codys-salsa", "salsa-roja", "catalan-sofrito", "peanut-sauce", "russells-yellow-curry-spice-blend"
+  ],
+  Sides: [
+    "cornbread", "dinner-rolls", "roasted-acorn-squash", "southwestern-roasted-cauliflower",
+    "jasmine-coconut-rice", "indian-basmati-rice-pilau", "long-grain-rice-with-mustard-seeds",
+    "rosemary-focaccia", "coconut-lime-rice"
+  ],
+  Mains: [
+    "beef-stroganoff", "red-beans-and-rice", "tomato-basil-soup", "belgian-waffles",
+    "philips-waffles", "szechuan-green-beans-and-pork", "taiwanese-popcorn-chicken",
+    "hawaiian-huli-huli-chicken", "butter-masala-chicken", "goan-pork-vindaloo",
+    "paneer-butter-masala", "tandoori-chicken", "fresh-pasta-from-scratch", "japanese-curry",
+    "enchiladas-suizas", "pollo-asado", "pork-carnitas", "skirt-steak-fajitas", "latvian-stew",
+    "chicken-paella", "chicken-satay", "thai-basil-chicken", "lemongrass-chicken"
+  ],
+  Desserts: ["buttery-apple-tart", "cranberry-orange-muffins", "espresso-oreo-gelato", "hectors-tres-leches"]
+};
+
+const cuisineOverrides = {
+  "belgian-waffles": "Belgian",
+  "latvian-stew": "Latvian",
+  "mariano-margarita": "Mexican",
+  "taiwanese-popcorn-chicken": "Taiwanese"
+};
+const recipeCategories = new Map(Object.entries(categoryRecipes).flatMap(
+  ([category, slugs]) => slugs.map(slug => [slug, category])
+));
+const nonCuisineGroups = new Set(["Breakfast", "Dessert", "Drinks"]);
+const cuisineFilter = document.getElementById("cuisineFilter");
+const results = document.getElementById("categoryResults");
+const status = document.getElementById("categoryStatus");
+const indexUrl = new URL("./index.html", location.href);
+
+function renderCategories(recipes) {
+  const matching = recipes.filter(recipe => !cuisineFilter.value || recipe.cuisine === cuisineFilter.value);
+  results.replaceChildren();
+  for (const category of [...Object.keys(categoryRecipes), "Uncategorized"]) {
+    const entries = matching.filter(recipe => recipe.category === category);
+    if (!entries.length) continue;
+
+    const section = document.createElement("section");
+    const heading = document.createElement("h2");
+    heading.textContent = category;
+    const list = document.createElement("ul");
+    for (const recipe of entries) {
+      const item = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = recipe.url;
+      link.textContent = recipe.title;
+      if (recipe.draft) {
+        const badge = document.createElement("span");
+        badge.className = "draft-badge";
+        badge.textContent = "Draft";
+        link.append(" ", badge);
+      }
+      const cuisine = document.createElement("span");
+      cuisine.className = "recipe-cuisine";
+      cuisine.textContent = recipe.cuisine;
+      item.append(link, cuisine);
+      list.appendChild(item);
+    }
+    section.append(heading, list);
+    results.appendChild(section);
+  }
+  status.textContent = matching.length ? "" : "No recipes match this cuisine.";
+}
+
+async function loadCatalog() {
+  const response = await fetch(indexUrl, {cache: "no-cache"});
+  if (!response.ok) throw new Error("Catalog request failed");
+  const catalog = new DOMParser().parseFromString(await response.text(), "text/html");
+  const recipes = [...catalog.querySelectorAll(".recipe-outline a[data-recipe]")].map(link => {
+    const group = link.closest("section").querySelector("h2").textContent.trim();
+    const url = new URL(link.getAttribute("href"), indexUrl);
+    const slug = url.searchParams.get("recipe");
+    return {
+      title: link.textContent.trim(),
+      url: url.href,
+      cuisine: cuisineOverrides[slug] ?? (nonCuisineGroups.has(group) ? "Unspecified" : group),
+      category: recipeCategories.get(slug) ?? "Uncategorized",
+      draft: link.dataset.status === "draft"
+    };
+  });
+  if (!recipes.length) throw new Error("Catalog is empty");
+  recipes.sort((a, b) => a.cuisine.localeCompare(b.cuisine) || a.title.localeCompare(b.title));
+  const cuisines = [...new Set(recipes.map(recipe => recipe.cuisine))].sort((a, b) => a.localeCompare(b));
+  for (const cuisine of cuisines) cuisineFilter.add(new Option(cuisine, cuisine));
+  cuisineFilter.disabled = false;
+  cuisineFilter.addEventListener("change", () => renderCategories(recipes));
+  renderCategories(recipes);
+}
+
+loadCatalog().catch(() => {
+  status.textContent = "Couldn’t load the recipe catalog. Open the original cuisine index to browse recipes.";
+});
