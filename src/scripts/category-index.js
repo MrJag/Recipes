@@ -21,7 +21,7 @@ const categoryRecipes = {
     "chicken-paella", "chicken-satay", "thai-basil-chicken", "lemongrass-chicken",
     "pollo-a-la-brasa"
   ],
-  Desserts: ["buttery-apple-tart", "cranberry-orange-muffins", "espresso-oreo-gelato", "hectors-tres-leches"]
+  Desserts: ["buttery-apple-tart", "cranberry-orange-muffins", "espresso-oreo-gelato", "hectors-tres-leches", "mini-pavlovas"]
 };
 
 const cuisineOverrides = {

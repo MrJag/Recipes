@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "0.1",
+  "id": "mini-pavlovas",
+  "title": "Mini Pavlovas",
+  "category": "Dessert",
+  "photo": "./public/images/mini-pavlovas.jpg",
+  "ingredientGroups": [
+    {"title": "Meringue", "items": ["6 egg whites", "1.5 cups granulated sugar, 225g", "0.75 tsp cream of tartar", "2.25 tsp cornstarch", "1.5 pinches salt", "1.5 tsp vanilla"]},
+    {"title": "Whipped Cream", "items": ["3 cups whipping cream", "3 Tbsp powdered sugar", "1.5 Tbsp vanilla extract"]},
+    {"title": "Topping", "items": ["Fresh fruit of choice, such as strawberries and kiwis", "Fresh mint leaves"]}
+  ],
+  "steps": [
+    "Set the oven to 300°F. Line 2 baking sheets with parchment paper. Wipe the stand-mixer bowl with a little lemon or lime juice.",
+    "Add the egg whites, cream of tartar, vanilla, and salt to the clean mixer bowl. Whisk on medium-low until frothy.",
+    "Pulse the granulated sugar in a blender. With the mixer running, add the sugar a tablespoon at a time. Mix on high until stiff, glossy peaks form, scraping the bowl near the end.",
+    "Sprinkle the cornstarch over the meringue and fold it in with a spatula.",
+    "Spoon or pipe the meringue into 3-inch rounds. Create vertical swoops if desired, then make a shallow depression in each top with a teaspoon.",
+    "Put the meringues in the 300°F oven, immediately reduce the temperature to 225°F, and bake for 1 hour. They should be lightly cream-colored, dry, and firm outside with soft centers.",
+    "Turn off the oven and leave the door closed for 1 hour. Crack the door open for another hour. The meringues may be left in the oven overnight if humidity is a concern.",
+    "Whip the cold cream, powdered sugar, and vanilla on high until soft peaks form.",
+    "Assemble just before serving. Top the meringues with whipped cream, cut fruit, and mint."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Adapted from https://preppykitchen.com/pavlova/"
+}
