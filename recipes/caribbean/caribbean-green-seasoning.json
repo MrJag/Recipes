@@ -28,7 +28,18 @@
     }
   ],
   "steps": [
-    "Roughly chop all ingredients and blend with a food processor using the pulse method until a rough puree."
+    {
+      "lead": "Roughly chop.",
+      "text": "Roughly chop the scallions, onions, shallots, peppers, garlic, ginger, parsley, thyme leaves, and culantro or cilantro."
+    },
+    {
+      "lead": "Blend.",
+      "text": "Add the chopped ingredients, olive oil, salt, and pepper to a food processor. Pulse until you have a coarse purée."
+    },
+    {
+      "lead": "Store.",
+      "text": "Spoon into clean Mason jars, close the lids, and refrigerate immediately at 40°F or colder. Use within 3 days or freeze for longer storage."
+    }
   ],
   "relatedApplications": [
     {
