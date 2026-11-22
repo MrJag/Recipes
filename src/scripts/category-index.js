@@ -73,7 +73,9 @@ function renderCategories(recipes) {
     section.append(heading, list);
     results.appendChild(section);
   }
-  status.textContent = matching.length ? "" : "No recipes match this cuisine.";
+  status.textContent = matching.length
+    ? `${matching.length} ${matching.length === 1 ? "recipe" : "recipes"}`
+    : "No recipes match this cuisine.";
 }
 
 async function loadCatalog() {

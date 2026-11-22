@@ -389,6 +389,8 @@ const recipeIndex = byId("recipeIndex");
 const recipeView = byId("recipeView");
 const printMenu = byId("printMenu");
 const recipeLinks = new Map();
+const recipeCount = recipeIndex.querySelectorAll(".recipe-outline a[data-recipe]").length;
+byId("recipeCount").textContent = `${recipeCount} ${recipeCount === 1 ? "recipe" : "recipes"}`;
 for (const category of recipeIndex.querySelectorAll(".recipe-outline section")) {
   const group = el("details");
   group.appendChild(el("summary", null, category.querySelector("h2").textContent));
