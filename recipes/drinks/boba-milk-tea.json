@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "0.1",
+  "id": "boba-milk-tea",
+  "title": "Boba Milk Tea",
+  "category": "Drinks",
+  "status": "draft",
+  "photo": "./public/images/boba-milk-tea.jpg",
+  "ingredientGroups": [
+    {"title": "Tea concentrate", "items": ["20 g loose Assam tea leaves", "5 g loose Ceylon tea leaves", "5 g loose oolong tea leaves", "1 liter water"]},
+    {"title": "Boba", "items": ["10 cups water", "1 cup instant boba", "¼ cup 2:1 brown sugar simple syrup"]},
+    {"title": "For each drink", "items": ["½ cup tea concentrate", "3 Tbsp evaporated milk", "2 Tbsp simple syrup", "¼ cup prepared boba", "½ cup ice"]}
+  ],
+  "steps": [
+    "Heat 1 liter water to 185°F. Add the tea leaves and steep for 10 minutes; strain and chill.",
+    "Bring 10 cups water to a boil in a large pot. Gently swirl the water and slowly add the boba so they do not stick to the bottom.",
+    "When most of the boba float, reduce the heat to medium and simmer covered for 8 minutes. Turn off the heat; the source then says to simmer for an additional 8 minutes.",
+    "Transfer the boba to a bowl of cold water. After 20 seconds, transfer to a storage container and add ¼ cup 2:1 brown sugar simple syrup.",
+    "For each drink, combine ½ cup tea concentrate, 3 Tbsp evaporated milk, 2 Tbsp simple syrup, ¼ cup boba and ½ cup ice. Stir."
+  ],
+  "reviewFlags": ["The source is a draft. Confirm whether the boba should rest or continue simmering during the 8 minutes after the heat is turned off, and whether the assembly syrup is the brown sugar syrup."],
+  "headnote": "The source is a draft. Confirm whether the boba should rest or continue simmering during the 8 minutes after the heat is turned off, and whether the assembly syrup is the brown sugar syrup."
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "0.1",
+  "id": "cardamom-currant-syrup",
+  "title": "Cardamom and Zante Currant Syrup",
+  "category": "Drinks",
+  "status": "draft",
+  "photo": "./public/images/cardamom-currant-syrup.jpg",
+  "ingredientGroups": [{"title": null, "items": [
+    "1 cup sugar",
+    "1 cup hot boiled water",
+    "¼ cup whole cardamom",
+    "¼ cup Zante currants, coarsely chopped"
+  ]}],
+  "steps": [
+    "Pound the whole cardamom to release the seeds.",
+    "Combine the sugar, hot water, cardamom pods and seeds, and currants in a pot. Heat over medium heat for 20 minutes.",
+    "Remove from the heat and allow to cool. Refrigerate for up to two days, then strain and bottle for cocktails."
+  ],
+  "reviewFlags": ["The source describes this as a recipe idea and does not specify how long the strained syrup keeps."],
+  "headnote": "Draft recipe idea. The source does not specify how long the strained syrup keeps."
+}

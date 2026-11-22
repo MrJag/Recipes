@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "0.1",
+  "id": "whiskey-date-cake",
+  "title": "Whiskey Date Cake",
+  "category": "Dessert",
+  "status": "draft",
+  "photo": "./public/images/whiskey-date-cake.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Date cake",
+      "items": [
+        "1 (8 oz) package dried pitted dates, chopped into ½-inch pieces",
+        "2 tsp baking soda",
+        "1¾ cups boiling water",
+        "1 stick unsalted butter, softened",
+        "1 cup plus 2 Tbsp granulated sugar",
+        "3 jumbo eggs, room temperature",
+        "1¾ cups self-rising flour",
+        "3 Tbsp turbinado sugar",
+        "Nonstick pan spray"
+      ]
+    },
+    {
+      "title": "Bourbon sauce",
+      "items": [
+        "2 cups heavy cream",
+        "½ cup granulated sugar, divided",
+        "1 vanilla bean, split",
+        "4 jumbo egg yolks",
+        "1 tsp vanilla extract",
+        "2 Tbsp bourbon"
+      ]
+    },
+    {
+      "title": "Toffee sauce",
+      "items": [
+        "1 stick unsalted butter",
+        "1 lb light brown sugar",
+        "2 cups heavy cream",
+        "2 Tbsp bourbon",
+        "1 Tbsp vanilla extract"
+      ]
+    },
+    {
+      "title": "Spiced pecans",
+      "items": [
+        "1 lb pecan halves",
+        "2 tsp water",
+        "¾ cup maple syrup",
+        "½ tsp kosher salt",
+        "½ tsp black pepper",
+        "½ tsp cayenne pepper"
+      ]
+    },
+    {
+      "title": "Whipped cream",
+      "items": [
+        "2 cups heavy cream",
+        "½ cup granulated sugar",
+        "1 tsp vanilla extract"
+      ]
+    }
+  ],
+  "steps": [
+    "Date cake: Heat oven to 350°. Combine dates, baking soda and boiling water; soak 15–20 minutes. Process the date mixture for 2 minutes to form a paste.",
+    "Cream the butter in a stand mixer for about 1 minute. Add sugar and cream 3 minutes more. Scrape the bowl; add eggs one at a time, mixing between additions. Mix in the flour on low speed, about ½ cup at a time, just until incorporated. Fold in the date paste.",
+    "Spray an 8 × 14-inch cake pan and coat its bottom and sides with turbinado sugar. Pour in batter and bake 30–40 minutes, until a toothpick comes out clean. Cool 20 minutes; turn onto a parchment-lined tray and cool completely.",
+    "Optional self-rising flour blend from the source: mix 3 cups all-purpose flour, 2 tsp iodized salt and 1 Tbsp baking powder. Use immediately or keep airtight; measure the 1¾ cups needed for the cake from the blend.",
+    "Bourbon sauce: Bring cream, ¼ cup sugar and vanilla bean to a simmer. Whisk the yolks and remaining ¼ cup sugar until frothy. Slowly whisk in half the hot cream, then return to the pot and cook over medium-low until thick enough to coat a spoon.",
+    "Stir in vanilla extract and bourbon; remove from heat, strain and cool in an ice bath. Use immediately or refrigerate; if chilled, reheat at 50% microwave power in 10-second intervals until slightly warm and pourable.",
+    "Toffee sauce: Melt butter over medium heat, add brown sugar and cook about 8 minutes, stirring occasionally. Add cream and cook 6–7 minutes more. Remove from heat and stir in bourbon and vanilla. Use immediately or refrigerate up to 3 days; reheat before use.",
+    "Spiced pecans: Heat oven to 350°. Mix water, syrup, salt and peppers; toss with pecans to coat. Spread on a foil-lined baking sheet and bake 12–15 minutes. Scrape from the pan and break up clumps immediately; cool completely. Store airtight at room temperature.",
+    "Whipped cream: Whip cream, sugar and vanilla, starting at low speed and increasing to high, until slightly stiff peaks form. Use immediately or refrigerate.",
+    "To serve: Cut cake into 12 pieces and poke several holes in each. Place on a nonstick foil-lined baking sheet. Heat oven to 500° and pour ¼ cup toffee sauce over each piece. Warm for 4–5 minutes, until bubbling.",
+    "Spoon ¼ cup bourbon sauce onto each plate; add warm cake, whipped cream and spiced pecans."
+  ],
+  "reviewFlags": [
+    "The source contains two different versions. This is its separately labeled 12-serving alternate; confirm whether the nine-serving original should also be included. The source lists oven temperatures in degrees without a temperature scale."
+  ],
+  "headnote": "The source contains two different versions. This is its separately labeled 12-serving alternate; confirm whether the nine-serving original should also be included. The source lists oven temperatures in degrees without a temperature scale. Adapted from Whiskey Cake."
+}

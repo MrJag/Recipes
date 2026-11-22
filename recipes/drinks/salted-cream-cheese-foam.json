@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "0.1",
+  "id": "salted-cream-cheese-foam",
+  "title": "Salted Cream Cheese Foam",
+  "category": "Drinks",
+  "status": "draft",
+  "photo": "./public/images/salted-cream-cheese-foam.jpg",
+  "ingredientGroups": [
+    {"title": "First ingredient list", "items": ["3 oz cream cheese", "2 Tbsp sugar", "½ cup whipping cream", "¼ cup half-and-half", "½ tsp sea salt"]},
+    {"title": "Second ingredient list", "items": ["200 g cream cheese", "100 g sugar", "200 ml whipping cream", "100 ml milk", "1 tsp sea salt"]}
+  ],
+  "steps": ["Combine the ingredients and whip until foamy but still slightly runny.", "Spoon over cold tea, such as green tea, and serve."],
+  "reviewFlags": ["The source marks this recipe untested and lists two formulations with different proportions; confirm which ingredient list to use."],
+  "headnote": "Untested: the source lists two formulations with different proportions. Confirm which ingredient list to use."
+}
