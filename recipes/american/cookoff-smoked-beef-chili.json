@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "0.1",
+  "id": "cookoff-smoked-beef-chili",
+  "title": "Cook-Off Smoked Beef Chili",
+  "category": "American",
+  "status": "draft",
+  "photo": "./public/images/cookoff-smoked-beef-chili.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Smoked sirloin",
+      "items": [
+        "1 picanha steak, at least 1 lb (or brisket)",
+        "Yellow mustard",
+        "Black pepper, 8–16 mesh",
+        "Kosher salt, Lawry’s Seasoning Salt, or Fiesta’s Season-it-all",
+        "Granulated garlic",
+        "Celery salt, optional",
+        "¼ cup rendered beef tallow, for wrapping",
+        "Post-oak and pecan wood"
+      ]
+    },
+    {
+      "title": "Roasted chicken stock",
+      "items": [
+        "1 store-bought rotisserie chicken",
+        "75 g carrot, chopped",
+        "150 g onion, chopped",
+        "3 cloves garlic",
+        "2 liters water",
+        "Neutral oil"
+      ]
+    },
+    {
+      "title": "Smoked beans",
+      "items": [
+        "½ lb dried pinto beans",
+        "½ lb dried mayocoba beans",
+        "18 g kosher salt, for soaking",
+        "1.4 L chicken stock",
+        "6 g salt, Hawaiian Alaea or kosher",
+        "2 bay leaves",
+        "Epazote, optional",
+        "1 g baking soda, optional"
+      ]
+    },
+    {
+      "title": "Chili passata",
+      "items": [
+        "60 g dried guajillo chiles",
+        "22 g dried ancho chiles",
+        "14 g dried pasilla chiles (or more ancho)",
+        "3 g morita chile (1 pod)",
+        "500 g Roma tomatoes (6 tomatoes)",
+        "180 g white onion, quartered (1 medium)",
+        "35 g garlic (3–6 cloves)",
+        "2 serrano peppers",
+        "400 g unsalted beef stock",
+        "8 g ground cumin",
+        "4 g Mexican oregano",
+        "3 g black pepper",
+        "0.5 g allspice",
+        "0.3 g cinnamon",
+        "6 g salt, Hawaiian Alaea or kosher",
+        "2–3 Tbsp rendered chicken fat or beef tallow",
+        "Optional: 4–8 chiles de árbol or 1–2 habaneros"
+      ]
+    },
+    {
+      "title": "Tomato sofrito",
+      "items": [
+        "28 oz can diced fire-roasted tomatoes",
+        "12 oz bacon, diced into 1 cm pieces",
+        "¼ cup water",
+        "225 g onion (1 medium)",
+        "2 serranos, deseeded and minced",
+        "Garlic, quantity unspecified"
+      ]
+    },
+    {
+      "title": "Carne and finishing",
+      "items": [
+        "450 g Italian sausage",
+        "900 g coarse-ground beef chuck",
+        "12 oz Märzen beer",
+        "450 g whole milk",
+        "Fried chili passata",
+        "200 g reserved raw chili passata",
+        "2–3 Tbsp chipotle in adobo, minced or puréed",
+        "1–2 Tbsp brown sugar",
+        "3 g MSG, optional",
+        "Water as needed"
+      ]
+    }
+  ],
+  "steps": [
+    "Smoked sirloin: Trim the cold steak, reserving the fat trimmings to render into tallow during the smoke. Let the meat come to room temperature and lightly coat with mustard.",
+    "Apply a liberal rub of 2 parts black pepper, 1 part salt or seasoning salt, 1 part granulated garlic and, optionally, ½ part celery salt.",
+    "Smoke fat side up at 225–275°F: target 225°F on a traditional high-airflow offset or 275°F on a consumer smoker. Use post-oak for the first 4 hours, then pecan. Cook until the bark is set and the meat stalls, typically around 165°F.",
+    "Wrap tightly in butcher paper with ¼ cup rendered tallow and continue smoking until probe tender, roughly 200–205°F. Rest 4½–12 hours at 150°F in an oven or smoker, or in an insulated cooler while keeping the meat above 140°F. Bring to room temperature and cut into ½-inch chunks.",
+    "Chicken stock: Thinly coat the bottom of a pressure cooker with neutral oil. Sear the onion and carrot until the edges brown; add garlic and sauté 30 seconds.",
+    "Shred the chicken, bones and all, into very small pieces. Add to the cooker with 2 liters water. Pressure cook on high for 60 minutes, then allow the pressure to release naturally.",
+    "Strain through a fine sieve. Cool and refrigerate; separate and reserve the fat cap.",
+    "Smoked beans: Pick over and rinse the beans. Cover with 4 inches water, stir in 18 g salt and soak overnight, at least 12 hours.",
+    "Add beans, 1.4 L stock, 6 g salt, bay leaves and optional epazote to an outdoor-safe vessel. Smoke uncovered at 275–325°F for 3–4 hours over hickory and apple wood, stirring occasionally.",
+    "Taste for tenderness. If still firm or gritty, simmer on the stove; optionally add 1 g baking soda, watching closely and stirring periodically. Remove the bay leaves.",
+    "Chili passata: Stem, seed and remove the ribs from the dried chiles. For more heat, optionally add 4–8 chiles de árbol or 1–2 habaneros, stemmed and seeded.",
+    "Heat enough water to submerge the chiles to 190°F. Submerge, cover and soak for 25 minutes. The source calls for keeping the water between 180°F and 190°F.",
+    "Meanwhile, char the tomatoes, onion, garlic and serranos under the broiler or in a cast-iron pan or comal. Watch the garlic closely.",
+    "Grind the cumin, oregano, black pepper, allspice and cinnamon. Blend the hydrated chiles, charred vegetables, deseeded serranos, spices, salt and beef stock on high for 3 minutes, adding liquid in stages.",
+    "Press through a fine-mesh strainer. Reserve 200 g raw passata. Fry the remainder in rendered fat over medium to medium-high heat for 8–12 minutes, stirring frequently, until darker and thicker.",
+    "Tomato sofrito: Cook the bacon and ¼ cup water over medium-high heat for 5–8 minutes, until the water evaporates and the bacon begins to crisp. Optionally drain excess fat.",
+    "Add onion and serranos and fry until translucent. Add garlic and fry 30 seconds. Add the fire-roasted tomatoes, increase heat and cook about 10 minutes to reduce the moisture.",
+    "Carne: Cook the sausage over medium heat until it releases oil. Increase to high, sear, turn and break into large chunks. Add ground beef and cook, stirring occasionally, until its liquid evaporates.",
+    "Reduce to medium-high and brown the meat in its fat for 3–5 minutes, stirring often. Deglaze with the beer, scraping the pot, and cook uncovered until the beer evaporates.",
+    "Add milk and simmer over medium-low heat for 20–30 minutes, until almost all liquid is gone. Add the fried passata and simmer 30 minutes. Skim the oil if desired.",
+    "Combine the carne, 200 g reserved raw passata, sofrito, smoked beans and smoked sirloin. Add chipotle in adobo, brown sugar and optional MSG; add water as needed. Omit the beans for Texas-style chili if desired.",
+    "Simmer 15 minutes. Taste and adjust salt or sugar; the source suggests apple cider vinegar if needed. Rest, then warm and serve; the chili tastes better the next day."
+  ],
+  "reviewFlags": [
+    "Review the source: the sofrito calls for garlic without a quantity, and the smoked-bean method does not specify whether to drain the soaking water. The author notes the recipe was reconstructed from notes and may contain omissions."
+  ],
+  "headnote": "Review the source: the sofrito calls for garlic without a quantity, and the smoked-bean method does not specify whether to drain the soaking water. The author notes the recipe was reconstructed from notes and may contain omissions."
+}
