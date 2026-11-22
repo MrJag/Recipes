@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "0.1",
+  "id": "seamless-ricotta-ravioli",
+  "title": "Seamless Ricotta Ravioli",
+  "category": "Italian",
+  "photo": "./public/images/seamless-ricotta-ravioli.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "454 g ricotta",
+        "Zest of 1 lemon",
+        "Salt, as needed",
+        "Black pepper, as needed",
+        "5 g basil, finely diced",
+        "30 g egg yolks",
+        "1.4 kg semolina flour"
+      ]
+    }
+  ],
+  "steps": [
+    "Mix ricotta, lemon zest, basil, salt and pepper. Taste and adjust seasoning, then stir in the egg yolks.",
+    "Sift enough semolina into a sheet pan to make a ¼-inch layer. Portion the filling into 16 g balls and place on the flour.",
+    "Sift more semolina over the balls to bury them. Refrigerate for about 36–48 hours, until a flour shell forms and the ravioli can be lifted with a spoon.",
+    "Lift each raviolo out with a slotted spoon; gently turn it over and brush excess flour from the bottom.",
+    "Lower the ravioli gently into unsalted, low-simmering water. Cook about 1 minute, until formed and cooked. Lift out with a slotted spoon and divide among 4 plates. Serve with sauce of your choice."
+  ],
+  "headnote": "Allow 36–48 hours of refrigerated resting. Adapted from ChefSteps.",
+  "sourceNote": "Adapted from ChefSteps, Seamless Ravioli."
+}
