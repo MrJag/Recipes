@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "0.1",
+  "id": "hutchins-style-brisket",
+  "title": "Hutchins-Style Brisket",
+  "category": "American",
+  "status": "draft",
+  "photo": "./public/images/hutchins-style-brisket.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "11-12 lb brisket, wet aged for 40 days",
+        "Yellow mustard",
+        "Pickle juice",
+        "Kosher Salt",
+        "Coarse Black Pepper"
+      ]
+    }
+  ],
+  "steps": [
+    "Trim the brisket.  Always trim the brisket straight out of the fridge when it's cold. Much easier to cut the fat when it's cold.  Keep 1/4\" of the fat on for Prime beef, or ½” of the fat for Choice beef.",
+    "Remove the dekel, if it has one. Get rid of most of the hard fat around the brisket. Optionally, remove the silverskin as well.",
+    "Do not apply the rub until right before you're going to smoke the brisket, and do it when the brisket has reached room temperature. This will be around 2 hours sitting at room temp.",
+    "Mix 2/3 ratio yellow mustard with 1/3 ratio pickle juice and spread all over the brisket.",
+    "Mix 2/3 ratio black pepper with 1/3 ratio salt and sprinkle onto the brisket liberally.",
+    "Smoke the brisket at 225 degrees, fat side up.",
+    "The first 4 hours should use post oak and the rest of the time should be with pecan.",
+    "Cook the brisket to 175-180 F internal temperature. This is about 1 hour per pound of brisket.",
+    "(for Choice brisket with 1/2\" of fat - cook at 350 degrees for 2-3 hours to get a nice sear/bubbling fat layer; then reduce temperature to 225 degrees and continue with the above instructions.)",
+    "Rest open on a sheet pan for 2-2.5 hours or until the internal temperature reaches 145.",
+    "Spray the brisket with apple juice or brisket drippings, then wrap in unwaxed butcher paper and rest for 4.5 hours in the oven at 140F"
+  ],
+  "reviewFlags": [
+    "The source is a draft and does not give quantities for mustard, pickle juice, salt, or pepper."
+  ],
+  "headnote": "The source is a draft and does not give quantities for mustard, pickle juice, salt, or pepper.",
+  "sourceNote": "Reference: https://virginia.sportswar.com/mid/9770485/board/general/"
+}

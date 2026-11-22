@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "0.1",
+  "id": "hutchins-style-ribs",
+  "title": "Hutchins-Style Ribs",
+  "category": "American",
+  "status": "draft",
+  "photo": "./public/images/hutchins-style-ribs.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "½ cup Salt",
+        "½ cup cracked black pepper (butcher grind)",
+        "½ cup paprika",
+        "¼ cup chili powder",
+        "¼ cup granulated garlic",
+        "Pint dark brown sugar",
+        "6 oz. sweet barbecue glaze",
+        "1 cup dark brown sugar",
+        "½ cup ketchup",
+        "¼ cup vinegar",
+        "¼ cup mustard",
+        "* Bring to a full boil, simmer for 5 minutes, then rest for 1 hour."
+      ]
+    }
+  ],
+  "steps": [
+    "Remove slab from wrapper and place upside down (membrane side down).",
+    "If ribs are wet, dab with a paper towel to soak up excess water.",
+    "Apply rib rub very liberally on this side of the rib and be sure to cover the entire surface area evenly. Flip over and apply moderately, covering the whole rib.",
+    "Apply more rub on the bottom side to allow for some seasoning to come off as it is cooked on the metal rack.",
+    "Place into the smoker and set the temp at 225. Cook thoroughly for 5-6 hours with the membrane side up the whole time.",
+    "Start checking at 5 hours. The internal temperature should reach 185 degrees. The meat should have a texture and dexterity of a medium-well steak. Not too tough, but not falling off the bone.",
+    "Remove from the smoker once the internal temperature is reached.",
+    "Let ribs sit for 10-15 minutes in open air.",
+    "Apply BBQ sweet glaze moderately to the bottom side (non-membrane side) until there is a nice, glossy look.",
+    "Slice bones and serve!"
+  ],
+  "reviewFlags": [
+    "The source lists seasoning and glaze quantities but does not specify the number of rib slabs or clearly distinguish the premade glaze from its ingredients."
+  ],
+  "headnote": "The source lists seasoning and glaze quantities but does not specify the number of rib slabs or clearly distinguish the premade glaze from its ingredients.",
+  "sourceNote": "Reference: https://www.fox4news.com/good-day/st-louis-style-ribs"
+}
