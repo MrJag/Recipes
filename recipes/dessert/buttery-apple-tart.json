@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "0.1",
+  "id": "buttery-apple-tart",
+  "title": "Buttery Apple Tart",
+  "category": "Dessert",
+  "photo": null,
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "3 large tart apples, such as Granny Smith, peeled, cored and thinly sliced",
+        "1 teaspoon fresh lemon juice",
+        "2 + 6 Tbsp sugar",
+        "6 Tbsp (3/4th stick) unsalted butter",
+        "1/2 vanilla bean, split in half lengthwise (i.e. cut a bean in half crosswise, then split the half lengthwise)",
+        "1 large eggs, lightly beaten",
+        "1/2 cup (140g) all-purpose flour, sifted",
+        "1/8 teaspoon (1 pinch) salt",
+        "Vanilla-flavored whipped cream or ice cream, for serving"
+      ]
+    }
+  ],
+  "steps": [
+    "Preheat the oven to 350F/175C. Generously butter an 11-inch (28cm) nonreactive tart pan or other similarly-sized glass or ceramic baking dish. Toss the apples in a bowl with the lemon juice and 2 tablespoons of the sugar. Spread the apples evenly in the prepared pan.",
+    "Combine the butter and vanilla bean in a small saucepan (not nonstick - you need to be able to see the butter change color). Cook the butter over medium until the milk solids are light brown and the whole thing smells deeply nutty, about 7-10 minutes. Watch carefully to avoid burning.",
+    "Pour the browned butter into a medium-sized bowl, scraping the black vanilla seeds and browned butter solids in too, and let it cool for a few minutes.  Remove the vanilla bean (add it to your extract!) and stir the remaining sugar into the butter. Gently stir in the eggs then the flour and salt just until blended. Spoon the batter evenly over the apples and spread into an even layer. Sprinkle the top with additional sugar to caramelize as garnish.",
+    "Bake until lightly golden and crusty, 30 to 40 minutes, or until a toothpick inserted in the center comes out clean. Cool in the pan on a wire rack. Cut into wedges and serve from the pan warm, with whipped cream or vanilla ice cream."
+  ],
+  "reviewFlags": [
+    "The source lists ½ cup and 140 g for the same flour quantity. Verify before baking."
+  ],
+  "sourceNote": "Adapted from Home is Where the Cake is | The Traveler's Lunchbox — https://travelerslunchbox.com/2009/10/02/home-is-where-the-cake-is/. NOTE: Double filling and Triple topping then bake for 60 minutes for 9” x 13”",
+  "headnote": "Review before baking: the source lists conflicting volume and weight measurements for the flour."
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "0.1",
+  "id": "pork-carnitas",
+  "title": "Pork Carnitas (Chipotle Clone)",
+  "category": "Mexican",
+  "photo": null,
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "4lb pork shoulder or boston butt",
+        "2 Tbsp salt",
+        "1 tsp coarse black pepper",
+        "1.5 Tbsp juniper berries, crushed",
+        "1 tsp dried thyme",
+        "5 bay leaves",
+        "light oil to coat",
+        "1 cup chicken stock or water"
+      ]
+    },
+    {
+      "title": "For serving",
+      "items": [
+        "flour/corn tortillas",
+        "lime wedges",
+        "onion, diced.",
+        "cilantro, chopped."
+      ]
+    }
+  ],
+  "steps": [
+    "Set the Instant Pot to Saute Mode with High Heat.",
+    "Trim the fat from the pork, then cut into large 2” chunks and season with salt and pepper.",
+    "Brown the chunks in oil when the pot is hot enough (it will beep).  It’s best to sear in batches so that you don’t crowd the pot.",
+    "Cancel Saute Mode and deglaze the pot with chicken stock (or water), adding back all the pork and any rendered juice.",
+    "Add the remaining ingredients (juniper berries, thyme, bay leaves) and mix lightly to distribute.",
+    "Lock the lid and pressure cook on High for 60 minutes, then naturally release the pressure (approximately 15 minutes).",
+    "Transfer the pork to another dish to shred, then mix in ½-1 cup of the juices from the pot.",
+    "Serve with tortillas, lime wedges, diced onion, and cilantro."
+  ],
+  "reviewFlags": []
+}

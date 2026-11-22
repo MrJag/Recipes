@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "0.1",
+  "id": "greek-marinade",
+  "title": "Greek Marinade (DRAFT)",
+  "category": "Greek",
+  "photo": null,
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "⅓ cup plain Greek yogurt",
+        "¼ cup olive oil",
+        "¼ cup lemon juice (3-4 lemons)",
+        "zest from 1 lemon (optional)",
+        "1 Tbsp honey",
+        "4-5 cloves garlic, minced",
+        "1 Tbsp dried oregano",
+        "1 tsp dried rosemary",
+        "1 tsp dried thyme",
+        "1 bay leaf",
+        "1 teaspoon kosher salt",
+        "½ teaspoon freshly ground black pepper"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "lead": "Chicken.",
+      "text": "Combine all of the ingredients in a blender until homogeneous."
+    },
+    "Trim the chicken and marinade for 2-4 hours.",
+    "Grill over high heat until desired doneness, approximately 12-16 minutes.",
+    "Rest for 3-5 minutes before serving.",
+    {
+      "lead": "Lamb.",
+      "text": "Omit the yogurt and combine the rest of the ingredients in a blender until homogeneous."
+    },
+    "Trim the lamb and marinate chops for at least 4 hours or larger cuts at least 8 hours.  Marinate overnight for maximum flavor.",
+    "Grill over high heat until desired doneness, approximately 10-15 minutes.",
+    "Rest for 3-5 minutes before serving."
+  ],
+  "reviewFlags": [
+    "Source is a draft. Trailing 2s after rosemary and thyme were treated as stray characters."
+  ],
+  "headnote": "Makes enough for 2-4 lbs of meat"
+}

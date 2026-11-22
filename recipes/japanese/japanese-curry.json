@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "0.1",
+  "id": "japanese-curry",
+  "title": "Japanese Curry",
+  "category": "Japanese",
+  "photo": null,
+  "ingredientGroups": [
+    {
+      "title": "Curry",
+      "items": [
+        "2 onions, diced fine",
+        "1 Tbsp ginger, grated or minced fine",
+        "1 Tbsp garlic (~2 cloves), minced",
+        "1 Apple (Fuji), peeled and shredded",
+        "8 cups Chicken stock, or water",
+        "1 Tbsp honey",
+        "1 Tbsp ketchup",
+        "1 Tbsp soy sauce",
+        "2 tsp kosher salt",
+        "Curry roux (200g boxed or homemade)",
+        "1-2 lb chicken, cut into bite sized pieces",
+        "3 russet potatoes, peeled and diced",
+        "4 carrots, peeled and rangiri diced",
+        "1–2 Tbsp oil for sautéing"
+      ]
+    }
+  ],
+  "steps": [
+    "Add 1-2 Tbsp of oil to a large heavy pot and saute onions until soft.",
+    "Add the garlic, ginger, and shredded apple, and saute another minute until it is no longer raw.",
+    "Add the chicken stock and bring to a boil.  Cover and simmer over low heat for 15 minutes.",
+    "Use an immersion blender to puree the stock to a smooth, even texture.",
+    "Add the honey, ketchup, soy sauce, salt, and roux then stir until incorporated.  Use the immersion blended if the roux is difficult to mix in.",
+    "Add the chicken and potatoes, then cover and simmer over low heat for 10 minutes.",
+    "Add the carrots and simmer for another 5 minutes.",
+    "Serve with white rice."
+  ],
+  "reviewFlags": [],
+  "components": [
+    {
+      "title": "Quick Homemade Roux (optional)",
+      "ingredientGroups": [
+        {
+          "title": null,
+          "items": [
+            "6 Tbsp butter",
+            "½ cup flour",
+            "2 Tbsp curry powder (S&B Oriental Curry Powder)",
+            "2 Tbsp garam masala",
+            "½ tsp cayenne pepper"
+          ]
+        }
+      ],
+      "steps": [
+        "Melt butter over low heat and stir in flour to combine.  Continue to whisk for 10 minutes until the mixture is a light brown color, like a milky peanut butter.  Add the remaining ingredients and whisk together for another 30 seconds."
+      ]
+    }
+  ]
+}

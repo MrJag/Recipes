@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.1",
+  "id": "pomodoro-sauce",
+  "title": "Pomodoro Sauce",
+  "category": "Italian",
+  "photo": null,
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "6 lbs cherry tomatoes",
+        "4 garlic cloves",
+        "¼ cup Extra virgin olive oil",
+        "1 tsp Salt",
+        "6 basil leaves",
+        "½ tsp oregano"
+      ]
+    }
+  ],
+  "steps": [
+    "Wash the tomatoes and optionally slice in half before placing them in a large pot over medium-high heat, stirring occasionally.",
+    "Transfer the tomatoes to a food mill after they soften to remove the pulp.",
+    "Add the passata (tomato puree) back to the pot along with the rest of the ingredients and simmer until reduced to a tomato sauce consistency, approximately 15 minutes."
+  ],
+  "reviewFlags": []
+}
