@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "0.1",
+  "id": "salsiccia-napolitana",
+  "title": "Salsiccia Napolitana (Hot Italian Sausage)",
+  "category": "Italian",
+  "status": "draft",
+  "photo": "./public/images/salsiccia-napolitana.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "4½ lb pork butt (2040 g)",
+        "½ lb pork fatback (230 g)",
+        "5 tsp salt (36.6 g)",
+        "3 Tbsp hot paprika (20 g)",
+        "1 Tbsp sugar (13 g)",
+        "2 tsp garlic powder (4.5 g)",
+        "1 tsp ground white pepper (2.4 g)",
+        "1 tsp cayenne pepper (1.8 g)",
+        "1 tsp ground coriander (1.8 g)",
+        "½ cup ice water (125 ml)",
+        "32 mm hog casings",
+        "Optional: 5 g food-grade polyphosphates per pound of meat"
+      ]
+    }
+  ],
+  "steps": [
+    "Keep the meat cold. The source suggests freezing the cubed meat for about 10 minutes before grinding. Grind pork and fat separately through a 3/16-inch plate.",
+    "Dissolve the spices in ½ cup ice water. Add the wet spices and garlic to the ground meat and mix well. The source suggests optional food-grade polyphosphates.",
+    "Add the salt and mix for a couple of minutes, until tacky.",
+    "Stuff into well-rinsed 32–35 mm hog casings and refrigerate. The source says to eat within 5 days, or freeze."
+  ],
+  "reviewFlags": [
+    "The source does not provide cooking instructions or a cooking endpoint. Review the raw-sausage storage period and cooking method before making."
+  ],
+  "headnote": "The source does not provide cooking instructions or a cooking endpoint. Review the raw-sausage storage period and cooking method before making. Adapted from Len Poli’s Salsiccia Napolitana."
+}
