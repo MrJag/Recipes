@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "0.1",
+  "id": "steak-guide",
+  "title": "Steak Guide",
+  "category": "American",
+  "photo": "./public/images/steak-guide.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Ingredients",
+      "items": [
+        "Steaks, prepared as desired",
+        "Clarified butter or beef tallow, for brushing"
+      ]
+    }
+  ],
+  "steps": [
+    "Preheat an oven to 350°F.",
+    "Sear steaks at the highest temperature possible for 4 minutes, flipping and rotating 90° every 30 seconds.",
+    "Finish in the oven, flipping every 2 minutes. The source suggests no oven time for rare, 2 minutes for medium-rare, 4 minutes for medium, 6 minutes for medium-well and 8 minutes for well-done.",
+    "Rest for 10 minutes, brush with clarified butter or beef tallow and serve."
+  ],
+  "status": "draft",
+  "reviewFlags": [
+    "The source labels this a draft and does not specify steak thickness or internal temperatures for the timing guide."
+  ],
+  "headnote": "The source labels this a draft and does not specify steak thickness or internal temperatures for the timing guide."
+}

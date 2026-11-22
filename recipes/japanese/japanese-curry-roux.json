@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "0.1",
+  "id": "japanese-curry-roux",
+  "title": "Japanese Curry Roux",
+  "category": "Japanese",
+  "photo": "./public/images/japanese-curry-roux.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Spice mix",
+      "items": [
+        "1 (2-inch) cinnamon stick, pounded into pieces",
+        "1 dried bay leaf",
+        "1 Tbsp brown mustard seeds",
+        "1 Tbsp coriander seeds",
+        "1 Tbsp fennel seeds",
+        "1 Tbsp cumin seeds",
+        "1 tsp fenugreek seeds",
+        "½ tsp whole cloves",
+        "2 cardamom pods",
+        "1 dried shiitake mushroom, broken into pieces",
+        "1 (1-inch) strip dried kombu, cut into pieces",
+        "1½ tsp whole black peppercorns",
+        "Zest of 1 orange",
+        "1 Tbsp ground turmeric",
+        "1 Tbsp ground ginger",
+        "1 Tbsp sea salt",
+        "1 tsp sweet paprika",
+        "1 tsp cayenne pepper, or more to taste"
+      ]
+    },
+    {
+      "title": "Roux",
+      "items": [
+        "1½ cups unsalted butter (340 g; 3 sticks)",
+        "2¼ cups all-purpose flour"
+      ]
+    }
+  ],
+  "steps": [
+    "Toast cinnamon, bay leaf, mustard, coriander, fennel, cumin, fenugreek, cloves and cardamom over medium heat, stirring until fragrant, about 2 minutes. Transfer to a spice grinder.",
+    "Add mushroom, kombu and peppercorns; grind at high speed for 30 seconds, shaking the grinder as needed. Transfer to a bowl and add orange zest, turmeric, ginger, salt, paprika and cayenne.",
+    "Melt butter in a large saucepan over medium-high heat. Lower to medium-low, gradually whisk in flour and cook, stirring constantly, until light brown, 15–20 minutes. Turn off heat and stir in the spice mix.",
+    "Divide among three mini loaf pans, about ¾ cup each, or spread on a parchment-lined quarter sheet tray. Cool briefly, then refrigerate until firm.",
+    "Unmold and cut each loaf into 9 cubes, or cut the sheet into 27 pieces. Wrap tightly. The source says refrigerate about a month or freeze 3 months."
+  ],
+  "sourceNote": "Adapted from https://www.diasporaco.com/blogs/recipes/japanese-curry-brick"
+}
