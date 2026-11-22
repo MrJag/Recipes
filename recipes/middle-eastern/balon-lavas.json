@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "0.1",
+  "id": "balon-lavas",
+  "title": "Balon Lavaş (Turkish Balloon Bread)",
+  "category": "Middle Eastern",
+  "status": "draft",
+  "photo": "./public/images/balon-lavas.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "400 g flour",
+        "250 ml water",
+        "¾ tsp dry yeast",
+        "1 Tbsp warm water",
+        "½ tsp salt",
+        "1 egg yolk, for brushing",
+        "1 Tbsp water, for brushing",
+        "1 Tbsp peeled sesame seeds",
+        "1 Tbsp nigella seeds"
+      ]
+    }
+  ],
+  "steps": [
+    "Dissolve the yeast in the tablespoon of lukewarm water and set aside for about 10 minutes.",
+    "Mix flour and salt, make a well in the center and add the dissolved yeast. Gradually mix in the flour and 250 ml water, kneading to a soft, moist, non-sticky dough. Shape into a ball and let rise in a covered bowl at room temperature for 90 minutes.",
+    "Place a baking stone on the middle rack. Set the oven to 275 degrees with top and bottom heat; preheat the stone for about an hour. The source does not specify the temperature unit; see the review note.",
+    "Whisk the egg yolk with 1 Tbsp water. Flour the work surface generously, knead the dough again and divide into 8 pieces. Roll each into a circle about 3 mm thick and 12–15 cm across.",
+    "Brush the center of each bread with egg wash and sprinkle with sesame and nigella. Slide onto the hot stone and close the oven door.",
+    "Bake until puffed: a lightly browned surface gives a softer bread, while additional browning produces a crisp bread. The source does not specify a baking time. Repeat with the remaining dough and serve warm."
+  ],
+  "reviewFlags": [
+    "The source states an oven temperature of 275 degrees without specifying Fahrenheit or Celsius, and does not give a baking time. Confirm both before baking."
+  ],
+  "headnote": "The source states an oven temperature of 275 degrees without specifying Fahrenheit or Celsius, and does not give a baking time. Confirm both before baking."
+}
