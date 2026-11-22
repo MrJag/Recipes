@@ -130,6 +130,21 @@ function applicationNode(app) {
   if (app.method) section.appendChild(el("p", null, app.method));
   return section;
 }
+function buildSourceNote(note) {
+  const node = el("p", "source");
+  node.style.overflowWrap = "anywhere";
+  let offset = 0;
+  for (const match of note.matchAll(/https?:\/\/[^\s<>"“”]+/gi)) {
+    const url = match[0].replace(/[.,;:!?]+$/, "");
+    node.append(note.slice(offset, match.index));
+    const link = el("a", null, url);
+    link.href = url;
+    node.appendChild(link);
+    offset = match.index + url.length;
+  }
+  node.append(note.slice(offset));
+  return node;
+}
 function fits(page) {
   // An explicitly sized, non-shrinking content region provides actual print-page bounds.
   return page.content.scrollHeight <= page.content.clientHeight + 1;
@@ -219,7 +234,7 @@ function paginate(recipe, density) {
     }
   }
   if (recipe.sourceNote) {
-    const node = el("p", "source", recipe.sourceNote);
+    const node = buildSourceNote(recipe.sourceNote);
     if (!attachWithFit(page, node)) {
       page = pageShell(pagesEl.children.length, recipe);
       page.content.appendChild(node);
@@ -328,7 +343,7 @@ function selectRecipeVersion() {
     title: variant.title,
     category: sourceRecipe.category,
     sourceDriveUrl: sourceRecipe.sourceDriveUrl,
-    sourceNote: sourceRecipe.sourceNote || "Original source document"
+    sourceNote: variant.sourceNote || sourceRecipe.sourceNote || "Original source document"
   } : sourceRecipe;
   requestRender();
 }
