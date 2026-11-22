@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "0.1",
+  "id": "ancient-grains-bowl",
+  "title": "Ancient Grains Bowl",
+  "category": "American",
+  "photo": "./public/images/ancient-grains-bowl.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2 cups sweet potato, cut into 1-inch chunks",
+        "¼ cup miso vinaigrette (see recipe)",
+        "2 portobello mushrooms",
+        "1 small onion, cut into ½ inch slices",
+        "3 cups cooked ancient grains (see recipe), warmed",
+        "2 cups blanched snow peas",
+        "¼ cup cilantro pesto (see recipe)",
+        "1 avocado, pitted, peeled and quartered"
+      ]
+    },
+    {
+      "title": "Miso Vinaigrette",
+      "items": [
+        "6 Tbsp (¼ cup + 2 Tbsp) rice wine vinegar",
+        "1 Tbsp sambal olek",
+        "1.75 Tbsp low sodium soy sauce",
+        "1 Tbsp evaporated cane sugar",
+        "¼ tsp kosher salt",
+        "1 Tbsp white miso paste",
+        "¼ tsp sesame chili oil",
+        "¾ cups grapeseed oil"
+      ]
+    },
+    {
+      "title": "Cilantro Pesto",
+      "items": [
+        "2 bunches cilantro, chopped roughly",
+        "¼ cup pumpkin seeds, roasted and salted",
+        "2 cloves garlic (approximately 1 tsp)",
+        "½ tsp cumin, ground",
+        "1 tsp kosher salt",
+        "¼ cup orange juice",
+        "¼ cup lime juice",
+        "½ cup grapeseed oil",
+        "½ cup olive oil"
+      ]
+    },
+    {
+      "title": "Ancient Grains",
+      "items": [
+        "1 tsp garlic, minced",
+        "1 tsp ginger, minced",
+        "1 tsp lemongrass, minced",
+        "1 tsp turmeric, minced",
+        "1 tsp kosher salt",
+        "1 Tbsp olive oil",
+        "½ cup red quinoa",
+        "½ cup brown rice",
+        "½ cup farro (spelt)",
+        "3 ½ cup water"
+      ]
+    }
+  ],
+  "steps": [
+    "Preheat oven to 375 F.",
+    "Prepare the miso vinaigrette by blending until emulsified. Blend the cilantro pesto until smooth. Combine the ancient grains ingredients in a covered baking dish and bake at 375°F for 75–85 minutes.",
+    "Preheat oven to 425 degrees F and roast yams, portobello mushrooms, and onions on a lightly oiled baking sheet for 25 minutes.  Remove the vegetables, setting the mushrooms and onions aside.",
+    "Decrease the oven to 350, toss the yams in the Miso Vinaigrette, and return to the oven for an additional 10 minutes, or until tender.",
+    "To serve, place grain mixture into middle of large serving platter or bowl. Place the miso yams piled onto one side. Pile the blanched snow peas on the opposite side of the yams. Fill in the gaps around the grains with the mushroom-onion mixture and cilantro pesto. Top with quartered avocado pieces"
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Adapted from True Food Kitchen."
+}
