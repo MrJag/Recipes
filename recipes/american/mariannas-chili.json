@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "0.1",
+  "id": "mariannas-chili",
+  "title": "Marianna’s Chili",
+  "category": "American",
+  "status": "draft",
+  "photo": "./public/images/mariannas-chili.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "4.5 pounds beef (chili ground or cubed chuck)",
+        "1 large yellow onion, fine/medium chopped",
+        "5 cloves garlic, minced (1-2 Tbsp)",
+        "2 (28 ounce) cans fire roasted tomatoes, diced with juice",
+        "1 can rotel",
+        "2 adobo chili peppers, minced or pureed",
+        "3 (15 ounce) cans of beans (red, pinto, black)\u000bFor dry beans:\u000b1.5 cups dry beans, soaked overnight in water\u000brinse beans, 2 whole cloves of garlic and half a large onion, then pressure cook for 25 minutes and natural release.  Remove garlic and onion, add 1 Tbsp salt, and simmer 20 minutes longer (slow cooker mode).",
+        "5 Tbsp (1/4 cup, heaping) chili powder (Penzy 9000)",
+        "1 (28 oz) can of water",
+        "2 teaspoon salt",
+        "2 teaspoon ground black pepper",
+        "1 tsp ground cinnamon"
+      ]
+    }
+  ],
+  "steps": [
+    "Brown the beef in a large pot over high heat.  Drain any excessive grease and return to pot.",
+    "Add remaining ingredients and bring to a boil.",
+    "Simmer over low heat for 45 minutes.",
+    "Remove from heat and serve.  For the best flavor make it the day before and refrigerate overnight to let the flavors meld, then reheat and serve the following day.",
+    "Serving suggestions:  corn-bread, Fritos, shredded cheddar, fresh diced onions, cilantro, and/or sour cream."
+  ],
+  "reviewFlags": [
+    "Review the source’s dry-bean method, which does not specify the pressure-cooking water quantity."
+  ],
+  "headnote": "Review the source’s dry-bean method, which does not specify the pressure-cooking water quantity."
+}

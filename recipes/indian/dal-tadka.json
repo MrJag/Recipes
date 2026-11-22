@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "0.1",
+  "id": "dal-tadka",
+  "title": "Dal Tadka",
+  "category": "Indian",
+  "status": "draft",
+  "photo": "./public/images/dal-tadka.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1/2 cup masoor dal / dehusked brown lentils",
+        "1/4 cup moong dal / skinned, split green gram",
+        "1/4 cup tuvar / arhar dal / pigeon pea lentils",
+        "5 cups water",
+        "1 tsp haldi (turmeric)",
+        "2 tsp salt",
+        "1 Tbsp oil - 1 tbsp",
+        "⅓ cup ghee",
+        "2 tsp jeera (cumin), whole seeds",
+        "½ tsp hing / Asafoetida",
+        "6 whole dry kashmiri chilis",
+        "10 small curry leafs",
+        "3 inch ginger, ground to paste",
+        "10-15 garlic cloves, ground to paste (~ 1:1 with ginger by volume, but heavier on garlic)",
+        "(replace ginger and garlic above with 3 one-inch cubes of ginger garlic paste.)",
+        "1 small onion, finely chopped",
+        "1 small tomato, finely chopped (roma)",
+        "dash of haldi (turmeric)",
+        "2 tsp kashmiri chili powder",
+        "2 tsp dhaniya (coriander seeds), ground",
+        "1 tsp kasuri methi (fenugreek leaves, not seeds), crushed",
+        "Salt - to season",
+        "2 Tbsp coriander leaf (cilantro), coarsely chopped",
+        "2 Tbsp butter"
+      ]
+    }
+  ],
+  "steps": [
+    "Rinse the dal (lentil) until the water runs clear, then transfer to a pressure cooker and soak in 3 cups of fresh water for 10-15 minutes.",
+    "Add turmeric and salt, then pressure cook on high in the instant pot for 5 minutes then let it naturally release pressure (15-20 minutes).",
+    "Meanwhile, heat oil and ghee over medium-high heat.",
+    "Bloom the cumin seeds , asafotida, and chili pods in the oil until you start to hear crackles, about 15-30 seconds.",
+    "Add curry leaves, chopped onion, ginger paste, garlic paste, chopped tomato, chopped green chilis, dash of turmeric, chili powder, coriander powder, crushed fenugreek.",
+    "Saute for around 2 minutes over medium heat.",
+    "Reserve a portion of the mixture for garnish then add the cooked dal to the pot, stirring to combine.",
+    "Adjust salt to taste, then simmer for 1 minute until slightly thickened.",
+    "Add cilantro and butter then remove from heat, stirring until the butter is melted.  Serve immediately with a side of rice or naan, drizzling a spoon of the reserved mixture over top as garnish."
+  ],
+  "reviewFlags": [
+    "The source lists 5 cups water but directs soaking in 3 cups, and the method calls for green chilis without an amount."
+  ],
+  "headnote": "The source lists 5 cups water but directs soaking in 3 cups, and the method calls for green chilis without an amount."
+}
