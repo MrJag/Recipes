@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "0.1",
+  "id": "chicken-congee",
+  "title": "Chicken Congee",
+  "category": "Chinese",
+  "status": "draft",
+  "photo": "./public/images/chicken-congee.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "3 chicken thighs",
+        "¾ cup/150 grams sushi rice",
+        "2 ½ quarts/2.5 liters chicken stock",
+        "Salt",
+        "2 1-inch slices fresh ginger"
+      ]
+    },
+    {
+      "title": "Garnish",
+      "items": [
+        "Sesame oil, for serving",
+        "Soy sauce, for serving",
+        "Thinly sliced spring onions or scallions, green parts only, for serving"
+      ]
+    }
+  ],
+  "steps": [
+    "Rinse and drain the rice.",
+    "Add all ingredients to an Instant Pot and cook for 20 minutes.",
+    "Serve with soy sauce, sesame oil, and scallions."
+  ],
+  "reviewFlags": [
+    "The source marks this recipe unfinished and does not specify the Instant Pot setting, pressure release method, or salt quantity."
+  ],
+  "headnote": "Draft: Confirm the cooking setting, pressure release, and salt quantity.",
+  "sourceNote": "Adapted from https://cooking.nytimes.com/recipes/1018321-chicken-congee"
+}

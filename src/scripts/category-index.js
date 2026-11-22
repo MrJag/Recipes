@@ -12,7 +12,7 @@ const categoryRecipes = {
     "jasmine-coconut-rice", "indian-basmati-rice-pilau", "long-grain-rice-with-mustard-seeds",
     "rosemary-focaccia", "coconut-lime-rice"
   ],
-  Mains: ["hatch-green-chili", "hawaiian-teriyaki-chicken", "hawaiian-stir-fry-noodles", "shakshuka", "neapolitan-pizza", "lamb-biryani", "turkish-kofta-kebab", "smoked-pulled-pork", "3-2-1-ribs", "mariannas-chicken-kotleti", 
+  Mains: ["chicken-congee", "hatch-green-chili", "hawaiian-teriyaki-chicken", "hawaiian-stir-fry-noodles", "shakshuka", "neapolitan-pizza", "lamb-biryani", "turkish-kofta-kebab", "smoked-pulled-pork", "3-2-1-ribs", "mariannas-chicken-kotleti", 
     "beef-stroganoff", "red-beans-and-rice", "tomato-basil-soup", "belgian-waffles",
     "philips-waffles", "szechuan-green-beans-and-pork", "taiwanese-popcorn-chicken",
     "hawaiian-huli-huli-chicken", "butter-masala-chicken", "goan-pork-vindaloo",
