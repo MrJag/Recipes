@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Family Cookbook</title>
 <link rel="stylesheet" href="./src/styles/cookbook.css?v=0.6.6">
-<link rel="stylesheet" href="./src/styles/editor.css?v=0.7.4">
-<script defer src="./src/scripts/cookbook.js?v=0.7.3"></script>
+<link rel="stylesheet" href="./src/styles/editor.css?v=0.7.5">
+<script defer src="./src/scripts/cookbook.js?v=0.7.5"></script>
 </head>
 <body>
 <main id="recipeIndex" tabindex="-1" class="recipe-index">
@@ -70,7 +70,10 @@
   </div>
 </main>
 <div id="recipeView" tabindex="-1" hidden>
-<header class="toolbar">
+<div class="print-menu-bar">
+<details class="print-menu" id="printMenu">
+  <summary id="printMenuToggle">Print options</summary>
+  <div class="toolbar">
   <div class="toolbar-heading">
     <strong>Family Cookbook <small>v0.7 · CSS print preview</small></strong>
     <span>US Letter · photo strip on page 1 only</span>
@@ -83,7 +86,9 @@
     <button id="printButton" type="button">Print / Save PDF</button>
   </div>
   <div class="status" id="status" role="status">Loading recipe…</div>
-</header>
+  </div>
+</details>
+</div>
 <div class="cookbook-layout">
   <main id="pages" aria-label="Paginated recipe preview"></main>
   <nav class="recipe-sidebar" aria-label="Browse recipes">

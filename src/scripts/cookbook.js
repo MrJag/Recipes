@@ -377,6 +377,7 @@ function selectRecipeVersion(index) {
 const sidebar = document.querySelector(".recipe-sidebar");
 const recipeIndex = byId("recipeIndex");
 const recipeView = byId("recipeView");
+const printMenu = byId("printMenu");
 const recipeLinks = new Map();
 for (const category of recipeIndex.querySelectorAll(".recipe-outline section")) {
   const group = el("details");
@@ -391,6 +392,7 @@ for (const category of recipeIndex.querySelectorAll(".recipe-outline section")) 
 }
 
 function showRoute() {
+  printMenu.open = false;
   const slug = new URLSearchParams(location.search).get("recipe");
   const link = recipeLinks.get(slug);
   recipeIndex.hidden = Boolean(link);
@@ -421,6 +423,14 @@ document.addEventListener("click", event => {
 });
 
 window.addEventListener("popstate", showRoute);
+document.addEventListener("click", event => {
+  if (printMenu.open && !printMenu.contains(event.target)) printMenu.open = false;
+});
+document.addEventListener("keydown", event => {
+  if (event.key !== "Escape" || event.defaultPrevented || !printMenu.open) return;
+  printMenu.open = false;
+  byId("printMenuToggle").focus();
+});
 for (const id of ["photoWidth","fontSize","stepGap"]) {
   byId(id).addEventListener("input", () => {
     byId(id+"Value").textContent = byId(id).value + (id === "photoWidth" ? "%" : id === "fontSize" ? " pt" : "px");

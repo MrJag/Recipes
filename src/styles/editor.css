@@ -1,4 +1,4 @@
-.toolbar{position:sticky;top:0;z-index:40;background:#202024;color:#fff;font-family:Arial,sans-serif;padding:12px 18px;box-shadow:0 2px 12px #0005}
+.toolbar{background:#202024;color:#fff;font-family:Arial,sans-serif;padding:12px 18px;box-shadow:0 2px 12px #0005}
 .toolbar-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
 .toolbar-heading small{font-weight:400;opacity:.7;padding-left:8px}.toolbar-heading span{font-size:12px;opacity:.75}
 .controls{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
@@ -19,7 +19,7 @@
 .related-section ul{padding-left:18px;margin:3px 0 8px}
 .related-section li{margin:0 0 3px}
 .overflow-warning{color:#a42e24;font:700 9pt Arial,sans-serif;margin-top:5px}
-@media print{.toolbar{display:none!important}.photo-placeholder{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+@media print{.print-menu-bar{display:none!important}.photo-placeholder{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
 
 /* Keep page height measurements honest. */
 .content > * { flex-shrink: 0; }
@@ -115,8 +115,6 @@
     border-top: 1px solid #d6c1b3;
   }
 
-  .toolbar { position: static; }
-
   .cookbook-layout #pages {
     grid-column: 1;
     gap: 0;
@@ -195,3 +193,69 @@
 .recipe-outline a:hover, .recipe-outline a:focus-visible { color: var(--accent); }
 .recipe-sidebar a { text-decoration: none; }
 .recipe-sidebar a.index-link { color: var(--accent); text-decoration: underline; }
+
+.print-menu-bar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 12px 0;
+  pointer-events: none;
+}
+
+.print-menu { pointer-events: auto; }
+
+.print-menu summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: 7px;
+  background: #202024;
+  color: #fff;
+  box-shadow: 0 2px 10px #0004;
+  font: 600 14px var(--font-sans);
+  cursor: pointer;
+  list-style: none;
+}
+
+.print-menu summary::-webkit-details-marker { display: none; }
+
+.print-menu summary::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border: solid currentColor;
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+}
+
+.print-menu[open] summary::after { transform: rotate(225deg); }
+.print-menu summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.print-menu .toolbar {
+  position: absolute;
+  inset-inline-end: 12px;
+  top: calc(100% + 6px);
+  width: min(25rem, calc(100% - 24px));
+  max-height: calc(100vh - 72px);
+  max-height: calc(100dvh - 72px);
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+.print-menu .toolbar-heading { flex-wrap: wrap; gap: 5px 12px; }
+.print-menu .controls { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; }
+.print-menu .controls label { flex-wrap: wrap; min-height: 36px; font-size: 14px; }
+.print-menu .controls input[type=range] { width: clamp(70px, 30vw, 128px); }
+.print-menu .controls select,.print-menu .controls button { min-height: 44px; font-size: 16px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .print-menu[open] .toolbar { animation: reveal-print-menu 160ms ease-out both; }
+  @keyframes reveal-print-menu {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
