@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "0.1",
+  "id": "rigatoni-di-gregorio",
+  "title": "Rigatoni di Gregorio",
+  "category": "Italian",
+  "status": "draft",
+  "photo": "./public/images/rigatoni-di-gregorio.jpg",
+  "ingredientGroups": [{"title": null, "items": ["2 Tbsp extra-virgin olive oil", "1 yellow onion, diced", "3 Tbsp balsamic vinegar", "10 oz button mushrooms", "1 lb chicken breast, cut into 1 to 1½-inch pieces", "6 cloves garlic, minced", "Salt and pepper", "2 cups chicken stock", "2 oz Marsala wine", "2 oz white wine", "2 cups heavy cream", "1 lb rigatoni", "1 Tbsp fresh basil, chopped (and parsley mix)", "2 Tbsp grated Parmesan cheese", "2 oz garlic butter", "Additional parsley and Parmesan shavings, for garnish"]}],
+  "steps": ["Heat the olive oil over medium-low heat and caramelize the onion.", "In a large pot, sauté the mushrooms with the balsamic vinegar until the liquid is released and reabsorbed.", "Add the onion, chicken and garlic to the mushrooms; season with salt and pepper.", "Add chicken stock, Marsala and white wine. Bring to a boil and simmer until reduced by half.", "Add cream, bring to a boil and simmer until slightly thickened.", "While the sauce thickens, cook the rigatoni just shy of al dente; it will cook a little more in the sauce.", "Drain the pasta, add to the sauce and toss with basil, parsley, Parmesan and garlic butter. Season with salt and pepper to taste and garnish with parsley and Parmesan shavings."],
+  "reviewFlags": ["The source does not specify how long to cook the chicken before adding the liquids or its finished doneness; confirm the cooking method. The basil and parsley quantities are also unclear."],
+  "headnote": "The source does not specify how long to cook the chicken before adding the liquids or its finished doneness; confirm the cooking method. The basil and parsley quantities are also unclear."
+}

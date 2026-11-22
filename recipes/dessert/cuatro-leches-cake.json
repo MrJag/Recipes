@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "0.1",
+  "id": "cuatro-leches-cake",
+  "title": "Cuatro Leches Cake",
+  "category": "Dessert",
+  "status": "draft",
+  "photo": "./public/images/cuatro-leches-cake.jpg",
+  "ingredientGroups": [
+    {"title": "Vanilla mantecada cake", "items": ["3 cups all-purpose flour (13.23 oz / 375 g)", "1½ tsp baking powder (7.35 g)", "¼ tsp salt (1.5 g)", "1 liquid cup milk (8.5 oz / 242 g)", "1 tsp vanilla extract (4 g)", "1 cup unsalted butter (2 sticks / 8 oz / 226 g)", "2 cups sugar (14 oz / 400 g)", "4 large eggs (7 oz / 200 g)"]},
+    {"title": "Three leches sauce", "items": ["2 cups evaporated milk", "2 cups condensed milk", "2 cups whipping cream"]},
+    {"title": "Arequipe sauce", "items": ["1 cup dulce de leche", "½ liquid cup warmed whole or 2% milk (4.25 oz / 121 g)"]},
+    {"title": "Caramelized meringue", "items": ["2 cups sugar", "4 oz water", "1 cup egg whites", "1 Tbsp lemon juice", "½ tsp vanilla extract"]},
+    {"title": "Assembly", "items": ["1 baked and cooled 8-inch vanilla mantecada cake, as listed in the source", "¾ cup arequipe sauce", "1 cup three leches sauce", "1 recipe caramelized meringue", "½ cup powdered sugar, or more, for dusting", "Fresh fruit, optional"]}
+  ],
+  "steps": [
+    "Make the cake: Position a rack in the lower third and preheat the oven to 350°F. Grease two 9-inch pans and line the bottoms with greased parchment. The source says to reduce oven heat by 25°F for dark nonstick or ovenproof glass pans.",
+    "Sift flour, baking powder and salt. Stir vanilla into the milk. Beat the butter on low until softened, about 60 seconds if cold; add sugar gradually and beat on medium for 2 minutes. Scrape the bowl.",
+    "On low speed add eggs one at a time, beating 20 seconds after each. Beat on medium for 2 minutes. With the mixer on low, add the flour mixture in three portions alternating with the milk in two, beginning and ending with flour. Scrape the bowl and mix on low for 30 seconds; do not overmix.",
+    "Divide between the pans. Bake for about 40 minutes, or about 45 minutes in 8-inch pans, until the centers feel firm. Cool in the pans on a rack.",
+    "Make the three leches sauce: Whisk the evaporated milk, condensed milk and whipping cream together and refrigerate.",
+    "Make the arequipe sauce: Whisk the dulce de leche with the warmed milk. Cover and refrigerate until needed.",
+    "Make the meringue: Heat the water and sugar in a small saucepan to the soft-ball stage, 240°F. Beat egg whites to soft peaks. Add the syrup slowly at medium speed, then increase to high, add the lemon juice and vanilla, and beat to stiff peaks.",
+    "Assemble: The source ingredient list calls for one baked 8-inch cake, but its detailed method refers to two cakes; confirm before assembly. Unmold, remove parchment and slice the first cake into two layers. Pierce the cut surfaces with a fork and brush with three leches sauce, about 6 oz total, then stack the matching top layer.",
+    "Pipe a dam of meringue around the edge and spread more meringue inside. The detailed source method then calls for slicing a second cake into two layers, piercing and brushing them with about 6 oz sauce total, and stacking them on top.",
+    "Ice the cake with meringue about ½ inch thick and decorate as desired. Torch until light golden brown. Alternatively, preheat the oven to 450°F for 15 minutes and brown on the middle rack for 4–6 minutes, watching constantly.",
+    "Drizzle with arequipe sauce and dust with powdered sugar. Add fruit if desired. Chill about 1 hour and serve immediately with extra three leches sauce and arequipe. Refrigerate the cake; the source says it keeps 3–4 days."
+  ],
+  "reviewFlags": ["The assembly ingredient list calls for one 8-inch cake and 1 cup three leches sauce, but the detailed method calls for two cakes and about 6 oz sauce per pair of cut layers. The companion source uses a different assembly. Confirm cake count and soaking quantity before making."],
+  "headnote": "Review before making: the source conflicts on the number of cake layers and amount of soaking sauce."
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "0.1",
+  "id": "italian-mushroom-cream",
+  "title": "Anthony’s Italian Mushroom Cream",
+  "category": "Italian",
+  "status": "draft",
+  "photo": "./public/images/italian-mushroom-cream.jpg",
+  "ingredientGroups": [
+    {"title": "Mushroom cream", "items": ["2 Tbsp extra-virgin olive oil", "1 yellow onion, diced", "3 Tbsp balsamic vinegar", "12 oz button mushrooms", "6 cloves garlic, minced", "½ tsp salt", "¼ tsp pepper", "1 cup chicken stock", "2 oz Marsala wine", "2 oz white wine", "1½ cups heavy cream", "2 Tbsp grated Parmesan cheese", "1 Tbsp butter"]},
+    {"title": "Optional rigatoni pairing", "items": ["1 lb grilled chicken breast, cut into 1–1½-inch pieces", "1 lb rigatoni, cooked al dente", "1 Tbsp fresh basil, chopped", "1–2 Tbsp flat-leaf parsley, chopped"]},
+    {"title": "Optional chicken friands", "items": ["1 lb chicken breast, shredded", "¼ cup Swiss cheese, shredded", "¼ cup Gruyère cheese, shredded", "8 sheets puff pastry (5 × 5 inches)", "¼ cup mushroom sauce for filling", "Egg wash, amount unspecified", "¼ cup mushroom sauce per pastry, for serving"]}
+  ],
+  "steps": [
+    "Heat the oil over medium-low heat and caramelize the onion.",
+    "In a large pot, sauté the mushrooms with the balsamic vinegar until their liquid is released and reabsorbed.",
+    "Add the onion, garlic, chicken stock, Marsala and white wine. Bring to a boil, then simmer for 15–20 minutes. Season with salt and pepper to taste.",
+    "Add the cream and bring to a gentle simmer until slightly thickened. Finish with Parmesan and butter.",
+    "Serve as a soup with minced parsley, or use with one of the following pairings.",
+    "Rigatoni: Toss the grilled chicken, cooked rigatoni, basil and parsley with the mushroom cream sauce. Season with salt and pepper if needed.",
+    "Chicken friands: Preheat the oven to 375°F. Combine the shredded chicken, cheeses and ¼ cup mushroom sauce. Enclose the filling between pairs of puff pastry sheets, pinching or crimping the edges.",
+    "Brush the pastries with egg wash. Bake on a parchment-lined cookie sheet for 30 minutes or until golden brown. Serve with ¼ cup mushroom sauce per pastry."
+  ],
+  "reviewFlags": ["The source does not specify how to prepare or how much egg wash to use for the optional chicken friands."],
+  "headnote": "A versatile mushroom cream for chicken or pasta. Review the egg wash for the optional chicken friands."
+}

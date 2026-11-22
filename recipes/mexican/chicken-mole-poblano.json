@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "0.1",
+  "id": "chicken-mole-poblano",
+  "title": "Chicken en Mole Poblano",
+  "category": "Mexican",
+  "status": "draft",
+  "photo": "./public/images/chicken-mole-poblano.jpg",
+  "ingredientGroups": [{"title": null,"items": [
+    "8–12 chicken pieces (or turkey)", "Vegetable oil", "2 cups pear-shaped tomatoes", "¾ cup green pepper, chopped", "2 cloves garlic, minced", "2 tsp salt", "2 tsp sesame seeds", "1½ tsp chili powder", "1½ tsp light Karo syrup", "¼ cup unsweetened cocoa", "¼ cup brown sugar", "¼ cup chopped almonds", "¼ cup raisins", "½ tsp cinnamon", "¼ tsp pepper", "¼ tsp crushed red pepper", "Pinch of ground cloves", "1 bay leaf", "2 chiles in adobo", "0.5 oz achiote paste", "3–4 garlic cloves, roughly chopped or minced", "1 tsp ground cumin", "1 tsp Mexican oregano", "1 tsp salt", "1 tsp black pepper"
+  ]}],
+  "steps": [
+    "Heat a shallow layer of oil in a very large skillet, or use two skillets. Brown the chicken on both sides, then add water to cover and simmer 30 minutes.",
+    "While the chicken cooks, blend all remaining ingredients except the bay leaf until smooth.",
+    "When the chicken is done, drain and reserve the broth. Add 1–1½ cups broth to the sauce and blend. Pour the sauce over the chicken in the skillet, add the bay leaf and cook over low heat for 35 minutes more.",
+    "Serve with rice."
+  ],
+  "reviewFlags": ["The source lists garlic, salt and black pepper twice in different amounts. Confirm whether both entries are intended before cooking."],
+  "headnote": "Draft: The source lists garlic, salt and black pepper twice in different amounts; confirm whether both entries are intended."
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "0.1",
+  "id": "polpette-alla-napoletana",
+  "title": "Polpette alla Napoletana",
+  "subtitle": "Neapolitan Meatballs",
+  "category": "Italian",
+  "status": "draft",
+  "photo": "./public/images/polpette-alla-napoletana.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "½ cup pine nuts",
+        "½ cup raisins",
+        "¾ lb ground beef",
+        "¾ lb ground pork",
+        "¾ lb ground veal",
+        "4 large basil leaves (1½ × 2½ inches), torn",
+        "An equal amount or a little more parsley, chopped or torn",
+        "1 large egg",
+        "75% of a fist-sized chunk of Italian bread (80 g), crust removed",
+        "Milk, enough to soak bread",
+        "5 large heaping spoons freshly grated Parmigiano cheese (240 ml)",
+        "1 tsp salt and 20 grinds pepper, to taste",
+        "3–5 swirls extra-virgin olive oil in the bottom of the pot (½ cup? 120 ml)",
+        "1 small onion, chopped",
+        "4 cups tomato purée (950 ml)",
+        "1 cup wine (240 ml)"
+      ]
+    }
+  ],
+  "steps": [
+    "In a mixing bowl, combine ground pork and beef, raisins, pine nuts, parsley, basil, Parmigiano, salt and pepper. The source also lists ground veal but does not specify when to add it; see review note.",
+    "Soak bread in a cup of milk; squeeze out excess milk. Break bread into small pieces and add to the bowl.",
+    "Add egg and mix until evenly distributed. Shape into golf-ball-sized meatballs.",
+    "Heat olive oil in a large pot and cook the onion until translucent. Add red wine and tomato purée and bring to a boil.",
+    "Add the uncooked meatballs and cook over medium heat for 30 minutes."
+  ],
+  "reviewFlags": [
+    "The source lists ground veal but omits it from the mixing directions. Confirm whether to add it; the olive oil amount is marked uncertain in the source."
+  ],
+  "headnote": "The source lists ground veal but omits it from the mixing directions. Confirm whether to add it; the olive oil amount is marked uncertain in the source."
+}
