@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "0.1",
+  "id": "detroit-style-pizza",
+  "title": "Detroit Style Pizza",
+  "category": "American",
+  "status": "draft",
+  "photo": "./public/images/detroit-style-pizza.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "10” cast iron pan\u000bOr 9x9” square baking pan",
+        "1 dough ball (recipe below)",
+        "⅓ - ½ cup pizza sauce (recipe below)",
+        "125g (1 cup) mozzarella cheese"
+      ]
+    },
+    {
+      "title": "Regular crust coating",
+      "items": [
+        "1 Tbsp + 1 tsp olive oil"
+      ]
+    },
+    {
+      "title": "Turbo crust coating",
+      "items": [
+        "1 Tbsp butter (melted)",
+        "1 tsp olive oil",
+        "1 tsp garlic powder",
+        "Additional toppings: pepperoni, sausage, etc."
+      ]
+    },
+    {
+      "title": "Dough Ball",
+      "items": [
+        "240g (2 cups) All Purpose Flour (King Arthur Unbleached AP)",
+        "¾ tsp salt (2g)",
+        "½ tsp bread machine/quick active dry yeast (2.5g)",
+        "¾ cup water, 95°F",
+        "1 Tbsp olive oil"
+      ]
+    },
+    {
+      "title": "Pizza sauce",
+      "items": [
+        "1 Tbsp olive oil",
+        "3 cloves garlic, minced",
+        "⅛-¼ tsp red pepper, crushed",
+        "1 28oz can of san marzano tomatoes",
+        "1.5 Tbsp sugar",
+        "1 Tbsp tomato paste",
+        "1 tsp oregano",
+        "½ tsp basil",
+        "½ tsp salt",
+        "¼ tsp pepper"
+      ]
+    }
+  ],
+  "steps": [
+    "Add the flour, salt, yeast, water, and olive oil to the Kitchenaid mixing bowl and mix on low speed (2) with the dough hook for 45 seconds.  The dough is mixed enough when it combines into a single mass and then starts to spread back out.",
+    "Remove the hook, scrape down the sides, then cover and rest for 5 minutes.",
+    "With a slightly damp hand, scoop fingers under one side of the dough ball to reach the underside, then stretch up and over to fold the dough onto itself.  Rotate the bowl 90° then cover and rest for 5 minutes.  See this video for an example of the fold technique.  note that the rotate is different than described here.",
+    "Repeat the fold-rotate-rest process three additional times to complete a total of 4 folds.  This folding technique is required in place of the traditional kneading due to the high hydration of the dough ball.  The four folds -- one for each side of the ball -- will align the gluten to provide structure to the dough ball during bulk fermentation.  The rest between each fold allows the gluten to relax enough for the next fold.",
+    "Cover and refrigerate for a minimum of 12 hours, but ideally 1-2 days for flavor development.",
+    "Three hours prior to cooking the pizza, oil the bottom and sides of the cast iron pan with the oil or oil/butter blend.",
+    "Transfer the dough ball to the pan to coat the bottom with oil.  Flip it over so that both sides are coated.",
+    "Optionally, sprinkle the garlic and romano season over the dough ball and flip again so the seasoned side is facing the pan.",
+    "Press the dough into the pan with your hand to shape until it evenly covers the bottom from edge to edge.  If the dough is pulling back on itself, cover and rest for 15 minutes before completing the shape.",
+    "Cover and let rise for 2 hours.  The dough should increase in volume and slightly jiggle when the pan is lightly shaked.",
+    "Prepare the pizza sauce while the dough is rising:  Saute garlic and crushed red pepper in 1 Tbsp of olive oil over medium heat in a 1 quart pot until fragrant, approximately 1 minute.  Do not burn the garlic.",
+    "Add the tomatoes, tomato paste, sugar, oregano, basil, salt, and pepper and bring to a simmer.  Crush the tomatoes into small pieces using a potato mixer if they were whole.  Continue to simmer, stirring occasionally to prevent splatter, until the desired consistency.  I look for when the bubbles appear rapid and vigorous due to the increased viscosity.  The volume in the pot should reduce by around ½-¾ inch.  Turn off heat and let cool to room temperature.",
+    "Preheat the oven to 450°F about 30 minutes prior to baking.",
+    "Assemble the pizza when ready to bake.  Top with ⅓-½ cup of tomato sauce, then mozzarella cheese, and finally any desired toppings.",
+    "Bake on the lowest rack for 17 minutes.  Bake an additional 1-2 minutes on the top rack if the cheese is not sufficiently browned."
+  ],
+  "reviewFlags": [
+    "The method mentions romano seasoning without listing an amount. The source includes conflicting volume and weight quantities for some dough ingredients."
+  ],
+  "headnote": "The method mentions romano seasoning without listing an amount. The source includes conflicting volume and weight quantities for some dough ingredients."
+}

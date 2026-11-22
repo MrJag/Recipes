@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "0.1",
+  "id": "texas-twinkies",
+  "title": "Texas Twinkies",
+  "category": "American",
+  "status": "draft",
+  "photo": "./public/images/texas-twinkies.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1½ lbs. marbled brisket",
+        "2 tbsp. salt",
+        "2 tbsp. coarsely ground black pepper",
+        "Ground cumin, to taste",
+        "12 whole jalapenos",
+        "15 tbsp. cream cheese",
+        "12 thick-cut strips of bacon",
+        "6 oz. sweet barbecue glaze",
+        "1 cup dark brown sugar",
+        "½ cup ketchup",
+        "¼ cup vinegar",
+        "¼ cup mustard",
+        "* Bring to a full boil, simmer for 5 minutes, then rest for 1 hour."
+      ]
+    }
+  ],
+  "steps": [
+    "For brisket: Trim fat off to ¼-inch. Create rub with 60% pepper, 35% salt and 5% cumin or cayenne. Rub mixture on brisket; let set in refrigerator for 2 to 3 hours.",
+    "Remove meat and hold at room temperature. Preheat the smoker to 220 F. Smoke brisket for 1 hour per pound or until the internal temperature reaches 185 F for firm and 205 F for tender brisket. Use point of brisket, which is marbled, for Texas Twinkies.",
+    "Slice one side of jalapeno from stem to tip. Slice across on stem end to represent a \"T\". Remove seeds and membranes from jalapeno. Place jalapenos on baking sheet and bake at 300 F for 10 minutes.",
+    "Remove jalapenos and place in a bowl of ice water to extract additional seed oil. Raise oven temperature to 350 F.",
+    "Cover bottom of inside of jalapenos with roughly 1 tablespoon of cream cheese. On top of cheese, add 2 ounces smoked brisket.",
+    "Close jalapeno around stuffing and wrap with bacon. Season with a pinch of salt and pepper.",
+    "Place jalapenos on baking sheet at 350 F for about 30 minutes.\u000bOr Smoke 225 F for 2 hours.",
+    "To serve, brush each jalapeno about 1 tablespoon of BBQ glaze and serve."
+  ],
+  "reviewFlags": [
+    "The source lists 1½ lb brisket but calls for 2 oz per jalapeño. It is unclear whether the 6 oz barbecue glaze is additional to the listed glaze ingredients."
+  ],
+  "headnote": "The source lists 1½ lb brisket but calls for 2 oz per jalapeño. It is unclear whether the 6 oz barbecue glaze is additional to the listed glaze ingredients.",
+  "sourceNote": "References: https://www.foodservicedirector.com/recipedia/texas-twinkies and https://www.maxim.com/entertainment/how-make-ultimate-jalapeno-poppers"
+}

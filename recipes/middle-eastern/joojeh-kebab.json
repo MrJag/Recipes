@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "0.1",
+  "id": "joojeh-kebab",
+  "title": "Joojeh Kebab",
+  "category": "Middle Eastern",
+  "status": "draft",
+  "photo": "./public/images/joojeh-kebab.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1 kg (2.2 lbs) chicken breast",
+        "Marinade (below)"
+      ]
+    },
+    {
+      "title": "Marinade",
+      "items": [
+        "4 cloves garlic, minced",
+        "½ cup yogurt (bulgarian)",
+        "2 tsp kashmiri chili powder",
+        "1 tsp pepper",
+        "1 tsp sumak",
+        "1 Tbsp saffron water (below)"
+      ]
+    },
+    {
+      "title": "Saffron water",
+      "items": [
+        "1 tsp salt",
+        "1 large pinch of saffron"
+      ]
+    }
+  ],
+  "steps": [
+    "Prepare the saffron water by grinding the threads of saffron and salt to a fine powder in a mortar.  Dissolve the powder in 1 Tbsp of boiling water and set aside.",
+    "Prepare the marinade in a large container by mixing all the ingredients together.",
+    "Cut the chicken into 1” cubes.  Each breast (half) should produce approximately 6 cubes.",
+    "Add the chicken cubes to the marinade and mix well to coat.",
+    "Marinade the meat in the refrigerator for 24 hours (best), 12 hours (good), or a minimum of 2 hours.",
+    "Take the meat out of the refrigerator 30-60 minutes before grilling to come up to room temperature.  Assemble onto medium thick skewers and grill over high heat.  Flip the skewers every 1-2 minutes, basting with butter after each flip.  Remove from the grill when the largest cubes reach an internal temperature of 160 degrees F, approximately 8 minutes.  Rest for 5 minutes before serving."
+  ],
+  "reviewFlags": [
+    "The source calls for butter to baste without listing a quantity."
+  ],
+  "headnote": "The source calls for butter to baste without listing a quantity.",
+  "sourceNote": "Adapted from https://www.youtube.com/watch?v=ka8C_k4OTtc"
+}
