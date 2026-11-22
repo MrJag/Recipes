@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.1",
+  "id": "bougie-rose",
+  "title": "Bougie Rosé",
+  "category": "Drinks",
+  "photo": "./public/images/bougie-rose.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "Sugar, for rim",
+        "½ oz lemon juice",
+        "½ oz cranberry juice",
+        "½ oz simple syrup",
+        "½ oz Chambord",
+        "2 oz Hangar 1 Rosé vodka",
+        "Black cherry, for garnish"
+      ]
+    }
+  ],
+  "steps": [
+    "Rim a coupe with sugar. Add lemon juice, cranberry juice, simple syrup, Chambord and rosé vodka to a shaker with ice.",
+    "Shake and strain into the glass. Garnish with a black cherry."
+  ],
+  "sourceNote": "Adapted from Fork & Fire cocktail recipes."
+}

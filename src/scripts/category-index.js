@@ -1,7 +1,7 @@
 "use strict";
 
 const categoryRecipes = {
-  Drinks: ["rye-tai", "tequila-tini", "fiery-pineapple", "cucumber-cooler", "tuscan-pear", "boba-milk-tea", "sevilla-sour", "cardamom-currant-moscow-mule", "frozen-margarita", "iced-lemon-green-tea-with-basil-seeds", "mariano-margarita"],
+  Drinks: ["bougie-rose", "yuzu-margarita", "fork-fire-smoked-old-fashioned", "smoky-mezcal", "rye-tai", "tequila-tini", "fiery-pineapple", "cucumber-cooler", "tuscan-pear", "boba-milk-tea", "sevilla-sour", "cardamom-currant-moscow-mule", "frozen-margarita", "iced-lemon-green-tea-with-basil-seeds", "mariano-margarita"],
   Condiments: ["italian-mushroom-cream", "cardamom-currant-syrup", "salted-cream-cheese-foam", "velveting-beef", "velveting-chicken", "chili-powder", "spanish-picada", "neapolitan-pizza-sauce", "lawrys-seasoning-clone", 
     "raspberry-vinaigrette", "caribbean-green-seasoning", "chinese-white-stir-fry-sauce",
     "greek-marinade", "hawaiian-chili-pepper-water", "pomodoro-sauce", "bolognese-ragu",

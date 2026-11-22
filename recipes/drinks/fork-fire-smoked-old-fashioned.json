@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.1",
+  "id": "fork-fire-smoked-old-fashioned",
+  "title": "Smoked Old Fashioned",
+  "category": "Drinks",
+  "photo": "./public/images/fork-fire-smoked-old-fashioned.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "¼ oz simple syrup",
+        "2 oz TX whiskey or whiskey/bourbon of choice",
+        "2 dashes Angostura aromatic bitters",
+        "2 dashes Fee Brothers orange bitters",
+        "Orange peel",
+        "Black cherry, optional"
+      ]
+    }
+  ],
+  "steps": [
+    "Smoke the inside and outside of a rocks glass.",
+    "Add simple syrup, whiskey and both bitters to a stirring glass with ice. Stir for 5 seconds and strain over ice in the smoked glass.",
+    "Express the orange peel over the drink, rub it around the rim and garnish. Add a black cherry if desired."
+  ],
+  "sourceNote": "Adapted from Fork & Fire cocktail recipes."
+}

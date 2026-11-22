@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "0.1",
+  "id": "smoky-mezcal",
+  "title": "Smoky Mezcal",
+  "category": "Drinks",
+  "photo": "./public/images/smoky-mezcal.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "Smoked salt, for half rim",
+        "1 oz pasteurized egg white or 1 egg white (as written in source)",
+        "¾ oz lime juice",
+        "½ oz agave",
+        "½ oz Cointreau",
+        "1½ oz mezcal",
+        "Lime wheel, for garnish"
+      ]
+    }
+  ],
+  "steps": [
+    "Rim half a rocks glass with smoked salt. Add egg white, lime juice, agave, Cointreau and mezcal to a shaker. Dry shake for 10 seconds.",
+    "Add ice and shake again. Strain into an iced glass and garnish with a lime wheel."
+  ],
+  "sourceNote": "Adapted from Fork & Fire cocktail recipes.",
+  "status": "draft",
+  "reviewFlags": [
+    "Confirm the egg white measure: the source lists 1 oz pasteurized egg white or 1 egg white."
+  ],
+  "headnote": "Confirm the egg white measure: the source lists 1 oz pasteurized egg white or 1 egg white."
+}

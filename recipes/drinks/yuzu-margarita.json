@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "0.1",
+  "id": "yuzu-margarita",
+  "title": "Yuzu Margarita",
+  "category": "Drinks",
+  "photo": "./public/images/yuzu-margarita.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "Smoked salt, for half rim",
+        "¾ oz yuzu juice, diluted as described in source",
+        "¼ oz lime juice",
+        "½ oz agave",
+        "½ oz Cointreau",
+        "1½ oz tequila",
+        "½ oz orange juice, for floating"
+      ]
+    }
+  ],
+  "steps": [
+    "Rim half a stemless flute with smoked salt. The source specifies diluting yuzu with an equal part of water.",
+    "Shake yuzu, lime, agave, Cointreau and tequila with ice; strain into the iced glass. Float ½ oz orange juice on top.",
+    "If yuzu is unavailable, the source suggests ½ oz lemon juice, ½ oz lime juice and 2 dashes grapefruit bitters in its place."
+  ],
+  "sourceNote": "Adapted from Fork & Fire cocktail recipes.",
+  "status": "draft",
+  "reviewFlags": [
+    "Confirm whether the ¾ oz yuzu measure is before or after dilution, and how the substitution relates to the separately listed lime juice."
+  ],
+  "headnote": "Confirm whether the ¾ oz yuzu measure is before or after dilution, and how the substitution relates to the separately listed lime juice."
+}
