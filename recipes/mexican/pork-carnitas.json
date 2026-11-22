@@ -1,7 +1,8 @@
 {
   "schemaVersion": "0.1",
   "id": "pork-carnitas",
-  "title": "Pork Carnitas (Chipotle Clone)",
+  "title": "Pork Carnitas",
+  "subtitle": "Chipotle Clone",
   "category": "Mexican",
   "photo": "./public/images/pork-carnitas.jpg",
   "ingredientGroups": [
