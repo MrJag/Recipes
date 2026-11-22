@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "0.1",
+  "id": "chocolate-strawberry-pizza",
+  "title": "Chocolate and Strawberry Pizza",
+  "category": "Dessert",
+  "status": "draft",
+  "photo": "./public/images/chocolate-strawberry-pizza.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Ingredients",
+      "items": [
+        "Preferred pizza dough",
+        "½ lb chocolate bar, grated",
+        "½–1 lb strawberries, cleaned and chopped",
+        "Optional: 2 Tbsp milk, cream, or condensed milk"
+      ]
+    }
+  ],
+  "steps": [
+    "Fire the oven to pizza heat and shape the dough.",
+    "Sprinkle grated chocolate over the dough and add the strawberries.",
+    "Cook about 2 minutes, until the rim is browned and chocolate melted.",
+    "Optionally blend the chocolate with 2 Tbsp milk or cream for a milder topping, or condensed milk for a sweeter topping."
+  ],
+  "reviewFlags": [
+    "The source does not specify a numeric oven temperature or amount of dough."
+  ],
+  "headnote": "The source does not specify a numeric oven temperature or amount of dough.",
+  "sourceNote": "Adapted from Forno Bravo, Pizza Stone Pizza."
+}

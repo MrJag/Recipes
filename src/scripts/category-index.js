@@ -21,7 +21,7 @@ const categoryRecipes = {
     "chicken-paella", "chicken-satay", "thai-basil-chicken", "lemongrass-chicken",
     "pollo-a-la-brasa", "shashlik-pork-kebab"
   ],
-  Desserts: ["kouign-amann", "tiramisu", "cuatro-leches-cake", "whiskey-date-cake", "coconut-stracciatella-gelato", "buttery-apple-tart", "cranberry-orange-muffins", "espresso-oreo-gelato", "hectors-tres-leches", "mini-pavlovas"]
+  Desserts: ["apple-pie-pizza", "apricot-raspberry-pizza", "chocolate-strawberry-pizza", "mascarpone-dessert-pizza", "kouign-amann", "tiramisu", "cuatro-leches-cake", "whiskey-date-cake", "coconut-stracciatella-gelato", "buttery-apple-tart", "cranberry-orange-muffins", "espresso-oreo-gelato", "hectors-tres-leches", "mini-pavlovas"]
 };
 
 const cuisineOverrides = {

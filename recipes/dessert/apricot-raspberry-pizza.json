@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "0.1",
+  "id": "apricot-raspberry-pizza",
+  "title": "Apricot and Raspberry Pizza",
+  "category": "Dessert",
+  "status": "draft",
+  "photo": "./public/images/apricot-raspberry-pizza.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Ingredients",
+      "items": [
+        "12–14-inch pizza dough",
+        "1 large ripe apricot",
+        "8–10 raspberries",
+        "1 Tbsp butter",
+        "¼ tsp ground cinnamon",
+        "¼ cup brown sugar",
+        "2 Tbsp extra-virgin olive oil",
+        "Vanilla ice cream, optional",
+        "Cream sherry or port, optional"
+      ]
+    }
+  ],
+  "steps": [
+    "Roll or stretch the dough to ⅛–½ inch thick. Slice the apricot ¼–½ inch thick and halve the raspberries.",
+    "Coat the dough with olive oil. Arrange the apricot slices and raspberries with space between them. Dot with butter and sprinkle with cinnamon and brown sugar.",
+    "Bake at 600–650°F until the crust is evenly browned and the sugar and exposed fruit caramelize.",
+    "Rest for a few minutes, then slice. Serve as is or with vanilla ice cream and a drizzle of cream sherry or port."
+  ],
+  "reviewFlags": [
+    "The general directions suggest 4–6 Tbsp brown sugar, while the specific ingredient list calls for ¼ cup. Confirm the desired amount."
+  ],
+  "headnote": "The general directions suggest 4–6 Tbsp brown sugar, while the specific ingredient list calls for ¼ cup. Confirm the desired amount.",
+  "sourceNote": "Adapted from Forno Bravo, Pizza Stone Pizza."
+}

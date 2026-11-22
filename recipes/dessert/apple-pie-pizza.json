@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "0.1",
+  "id": "apple-pie-pizza",
+  "title": "Apple Pie Pizza",
+  "category": "Dessert",
+  "status": "draft",
+  "photo": "./public/images/apple-pie-pizza.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Ingredients",
+      "items": [
+        "8 Macintosh apples, peeled, cored and chopped",
+        "¼ cup white sugar",
+        "½ tsp ground cinnamon",
+        "½ tsp ground allspice",
+        "12–14-inch pizza dough",
+        "¼ cup mascarpone",
+        "2 Tbsp butter",
+        "Brown sugar, amount unspecified",
+        "Vanilla ice cream, optional"
+      ]
+    }
+  ],
+  "steps": [
+    "Roll or stretch the dough to ⅛–½ inch thick. Prepare the apple pie filling; the source does not provide a filling method.",
+    "Pre-bake the pizza base at 500–600°F for 30 seconds to 1 minute.",
+    "Spread mascarpone on the base, add the apple filling, dot with butter and sprinkle with cinnamon and brown sugar.",
+    "Return to the oven until the filling is crisp and bubbling. Rest briefly, slice and serve, optionally with vanilla ice cream."
+  ],
+  "reviewFlags": [
+    "The source omits the apple filling preparation and brown sugar quantity and lists white sugar without specifying how to use it."
+  ],
+  "headnote": "The source omits the apple filling preparation and brown sugar quantity and lists white sugar without specifying how to use it.",
+  "sourceNote": "Adapted from Forno Bravo, Pizza Stone Pizza."
+}

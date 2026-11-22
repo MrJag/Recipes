@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "0.1",
+  "id": "mascarpone-dessert-pizza",
+  "title": "Mascarpone Dessert Pizza",
+  "category": "Dessert",
+  "status": "draft",
+  "photo": "./public/images/mascarpone-dessert-pizza.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Dough",
+      "items": [
+        "500 g Caputo pizza flour",
+        "300 g water",
+        "1 Tbsp olive oil",
+        "1 tsp salt",
+        "2 tsp instant dry yeast",
+        "Rind of 1 lemon"
+      ]
+    },
+    {
+      "title": "Toppings",
+      "items": [
+        "Mascarpone, 6–8 dollops per pizza",
+        "2 Tbsp pine nuts per pizza",
+        "Olive oil",
+        "Powdered sugar",
+        "Crème fraîche",
+        "Fresh fruit"
+      ]
+    }
+  ],
+  "steps": [
+    "Prepare the dough as you would regular pizza dough and divide into four dough balls.",
+    "Shape each ball into a thick 6–7-inch round with finger impressions. Coat with olive oil, add 6–8 dollops mascarpone and top with 2 Tbsp pine nuts.",
+    "Bake in a live-fire oven that has fallen from pizza heat to around 600°F.",
+    "Quarter or halve; finish with crème fraîche, powdered sugar and fresh fruit."
+  ],
+  "reviewFlags": [
+    "The source does not specify dough mixing and proofing times, topping amounts other than mascarpone and pine nuts, or baking time."
+  ],
+  "headnote": "The source does not specify dough mixing and proofing times, topping amounts other than mascarpone and pine nuts, or baking time.",
+  "sourceNote": "Adapted from Forno Bravo, Pizza Stone Pizza."
+}
