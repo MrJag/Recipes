@@ -182,6 +182,7 @@ function paginate(recipe, density) {
   ];
   let stepNo = 1;
   for (const stage of stages) {
+    if (recipe.restartStepNumbersPerSection) stepNo = 1;
     let pendingHeading = stage.title ? el("li", "stage-heading", stage.title) : null;
     for (const step of stage.steps) {
       ensureSteps(page);

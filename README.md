@@ -36,6 +36,8 @@ The repository is currently public to support a temporary GitHub Pages preview. 
 
 - Check the live preview and browser print preview. Confirm every page fits and only page 1 has a side photo.
 - Check the ingredient divider in Greek Marinade (plain two-column ingredients) and Japanese Curry (grouped ingredients). Confirm it is centered between the columns, with clear space around bullets and wrapped text. Repeat at the default and widest photo settings. Verify a single-column list has no divider.
+- Verify alternative methods restart at step 1 in each section (Greek Marinade Chicken and Lamb). Verify sequential methods continue numbering across sections and page breaks (Japanese Curry and Latvian Stew).
+- Check that single- and double-digit step numerals are visually centered horizontally and vertically in their circles in the live preview and browser print preview.
 
 ## Image files
 

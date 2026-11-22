@@ -28,6 +28,7 @@
     "Source is a draft. Trailing 2s after rosemary and thyme were treated as stray characters."
   ],
   "headnote": "Makes enough for 2-4 lbs of meat",
+  "restartStepNumbersPerSection": true,
   "components": [
     {
       "title": "Chicken",
