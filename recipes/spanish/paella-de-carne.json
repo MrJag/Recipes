@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "0.1",
+  "id": "paella-de-carne",
+  "title": "Paella de Carne (Steak)",
+  "category": "Spanish",
+  "status": "draft",
+  "photo": "./public/images/paella-de-carne.jpg",
+  "servings": "5 people",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2 Tbsp olive oil (27 g)",
+        "8 oz sirloin steak (272 g)",
+        "1 tsp kosher salt, to season steak",
+        "2 oz asparagus, blanched and cut into 3 pieces (roughly 2 stalks)",
+        "1 cup bomba rice (75 g)",
+        "½ cup Catalan sofrito (158 g)",
+        "1 Tbsp Spanish picada (31 g)",
+        "2 tsp kosher salt, to season broth",
+        "2.5 cups chicken stock",
+        "1 Tbsp saffron water",
+        "½ cup brisket demi-glace (or 1.5 tsp beef broth concentrate plus ½ cup water)",
+        "1 rosemary sprig (or ¼ tsp dried rosemary)",
+        "1 Tbsp piquillo pepper confit",
+        "6 Padrón peppers, blistered and salted"
+      ]
+    }
+  ],
+  "steps": [
+    "Preheat the oven to 400°F. Heat the olive oil in a paella pan over high heat until shimmering.",
+    "The source says to season chicken with 1 tsp kosher salt, sear until medium rare and golden brown, about 2 minutes, and set aside. The ingredient list specifies sirloin steak; see review note.",
+    "Add the asparagus and sauté 30 seconds. Add rice, sofrito, picada and 2 tsp salt; stir for 30 seconds.",
+    "Add stock, saffron water, demi-glace and rosemary. Stir, bring to a boil and reduce to medium heat, maintaining small, even bubbles. Cook about 10 minutes, until the stock is level with the rice.",
+    "Transfer the pan to the oven and cook for 9–12 minutes, until rice is slightly softer than al dente.",
+    "Remove from the oven and top with piquillo and Padrón peppers. Rest 4 minutes and serve. The source does not specify when to return the seared meat."
+  ],
+  "reviewFlags": [
+    "The source lists steak but says chicken in the searing step and does not say when to return the meat. Its stated ounce and gram amounts for steak, and cup and gram amounts for rice, conflict. Confirm these details before cooking."
+  ],
+  "headnote": "The source lists steak but says chicken in the searing step and does not say when to return the meat. Its stated ounce and gram amounts for steak, and cup and gram amounts for rice, conflict. Confirm these details before cooking. Adapted from Bulla Gastrobar Restaurante."
+}
