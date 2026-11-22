@@ -42,7 +42,11 @@
     align-items: start;
   }
 
+  .cookbook-layout #pages { grid-column: 2; grid-row: 1; }
+
   .recipe-sidebar {
+    grid-column: 1;
+    grid-row: 1;
     display: grid;
     gap: 14px;
     padding: 24px 16px;
@@ -105,6 +109,7 @@
   }
 
   .recipe-sidebar {
+    grid-row: 2;
     padding: 12px 16px;
     border-inline-end: 0;
     border-top: 1px solid #d6c1b3;
@@ -113,7 +118,7 @@
   .toolbar { position: static; }
 
   .cookbook-layout #pages {
-    grid-row: 1;
+    grid-column: 1;
     gap: 0;
     padding: 12px;
   }
