@@ -18,7 +18,8 @@ const categoryRecipes = {
     "hawaiian-huli-huli-chicken", "butter-masala-chicken", "goan-pork-vindaloo",
     "paneer-butter-masala", "tandoori-chicken", "fresh-pasta-from-scratch", "japanese-curry",
     "enchiladas-suizas", "pollo-asado", "pork-carnitas", "skirt-steak-fajitas", "latvian-stew",
-    "chicken-paella", "chicken-satay", "thai-basil-chicken", "lemongrass-chicken"
+    "chicken-paella", "chicken-satay", "thai-basil-chicken", "lemongrass-chicken",
+    "pollo-a-la-brasa"
   ],
   Desserts: ["buttery-apple-tart", "cranberry-orange-muffins", "espresso-oreo-gelato", "hectors-tres-leches"]
 };

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "0.1",
+  "id": "pollo-a-la-brasa",
+  "title": "Pollo a la Brasa",
+  "subtitle": "Peruvian Roast Chicken",
+  "category": "Peruvian",
+  "photo": "./public/images/pollo-a-la-brasa.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "3–4 lb whole chicken, spatchcocked, or 4–6 bone-in thighs"
+      ]
+    },
+    {
+      "title": "Marinade",
+      "items": [
+        "6 garlic cloves, minced to a paste",
+        "2 Tbsp soy sauce",
+        "1 Tbsp Worcestershire sauce",
+        "2 Tbsp lime juice or white vinegar",
+        "1 Tbsp olive oil",
+        "2 tsp ground cumin",
+        "2 tsp smoked paprika",
+        "1 tsp black pepper",
+        "1–2 tsp kosher salt",
+        "1 tsp dried oregano",
+        "2 tsp ají amarillo paste",
+        "Optional: ½ tsp ají panca chili powder"
+      ]
+    },
+    {
+      "title": "Ají Verde",
+      "items": [
+        "1 cup fresh cilantro, including tender stems",
+        "2 jalapeños, seeded to control heat",
+        "3 garlic cloves",
+        "½ cup mayonnaise",
+        "2 Tbsp sour cream or Greek yogurt",
+        "1 lime, juiced, about 2 Tbsp",
+        "2 Tbsp olive oil",
+        "½ tsp salt"
+      ]
+    }
+  ],
+  "steps": [
+    "Blend the marinade ingredients until smooth.",
+    "Blend the ají verde ingredients until smooth. Adjust the lime and salt, then chill for 30 minutes before serving.",
+    "Coat the chicken with the marinade. Refrigerate overnight, or up to 3 days.",
+    "Grill skin-side up over indirect heat at 375–400°F until the chicken reaches 150°F internally.",
+    "Move the chicken skin-side down over direct heat. Grill until it reaches 160–165°F internally.",
+    "Rest for 15 minutes before carving. Serve with ají verde."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Great when grilled over wood to pick up a smoked flavor. Serve with roasted potatoes and ají verde. Adapted from https://silkroadchef.com/2017/12/25/uzbek-plov-lamb-rice-pilaf-in-instant-pot/"
+}
