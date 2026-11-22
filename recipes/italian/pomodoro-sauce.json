@@ -3,7 +3,7 @@
   "id": "pomodoro-sauce",
   "title": "Pomodoro Sauce",
   "category": "Italian",
-  "photo": null,
+  "photo": "./public/images/pomodoro-sauce.jpg",
   "ingredientGroups": [
     {
       "title": null,

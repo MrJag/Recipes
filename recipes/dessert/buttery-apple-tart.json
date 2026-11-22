@@ -3,7 +3,7 @@
   "id": "buttery-apple-tart",
   "title": "Buttery Apple Tart",
   "category": "Dessert",
-  "photo": null,
+  "photo": "./public/images/buttery-apple-tart.jpg",
   "ingredientGroups": [
     {
       "title": null,

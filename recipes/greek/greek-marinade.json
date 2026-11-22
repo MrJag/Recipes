@@ -3,7 +3,7 @@
   "id": "greek-marinade",
   "title": "Greek Marinade (DRAFT)",
   "category": "Greek",
-  "photo": null,
+  "photo": "./public/images/greek-marinade.jpg",
   "ingredientGroups": [
     {
       "title": null,

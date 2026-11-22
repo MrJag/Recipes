@@ -3,7 +3,7 @@
   "id": "pork-carnitas",
   "title": "Pork Carnitas (Chipotle Clone)",
   "category": "Mexican",
-  "photo": null,
+  "photo": "./public/images/pork-carnitas.jpg",
   "ingredientGroups": [
     {
       "title": null,

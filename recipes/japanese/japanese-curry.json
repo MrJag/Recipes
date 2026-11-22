@@ -3,7 +3,7 @@
   "id": "japanese-curry",
   "title": "Japanese Curry",
   "category": "Japanese",
-  "photo": null,
+  "photo": "./public/images/japanese-curry.jpg",
   "ingredientGroups": [
     {
       "title": "Curry",
