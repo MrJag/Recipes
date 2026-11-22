@@ -1,14 +1,15 @@
 {
   "schemaVersion": "0.1",
   "id": "mariano-margarita",
-  "title": "Margarita (on the rocks) DRAFT",
+  "title": "Margarita (on the rocks)",
+  "status": "draft",
   "category": "Drinks",
   "servings": null,
   "photo": "./public/images/mariano-margarita.jpg",
   "headnote": null,
   "ingredientGroups": [
     {
-      "title": "Draft variation",
+      "title": "Variation",
       "items": [
         "1-1.25 cup ice",
         "1.5 oz tequila blanco",

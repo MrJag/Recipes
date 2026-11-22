@@ -50,9 +50,15 @@ function pageShell(index, recipe) {
   pagesEl.appendChild(page);
   return { page, content, index, steps: null };
 }
+function addDraftBadge(element, status) {
+  if (status === "draft") element.append(" ", el("span", "draft-badge", "Draft"));
+}
+
 function buildHeader(recipe) {
   const wrap = el("header", "recipe-header");
-  wrap.appendChild(el("div", "category", (recipe.category || "Recipes").toUpperCase()));
+  const category = el("div", "category", (recipe.category || "Recipes").toUpperCase());
+  addDraftBadge(category, recipe.status);
+  wrap.appendChild(category);
   wrap.appendChild(el("h1", null, recipe.title));
   if (recipe.subtitle) wrap.appendChild(el("div", "subtitle", "(" + recipe.subtitle + ")"));
   const bits = [];
@@ -346,11 +352,12 @@ function setupVariants(recipe, recipeButton) {
   const versions = el("div", "recipe-versions");
   versions.setAttribute("role", "group");
   versions.setAttribute("aria-label", recipeButton.textContent + " versions");
-  const titles = ["Original draft", ...recipe.variants.map(variant => variant.title)];
-  titles.forEach((title, position) => {
+  const versionsToShow = [{title: "Original", status: recipe.status}, ...recipe.variants];
+  versionsToShow.forEach(({title, status}, position) => {
     const index = position - 1;
     const button = el("button", null, title);
     button.type = "button";
+    addDraftBadge(button, status);
     button.setAttribute("aria-pressed", String(index === 0));
     button.addEventListener("click", () => {
       versions.querySelector('[aria-pressed="true"]').setAttribute("aria-pressed", "false");
@@ -368,10 +375,12 @@ function selectRecipeVersion(index) {
     ...sourceRecipe,
     ...variant,
     title: variant.title,
+    status: variant.status,
     category: sourceRecipe.category,
     sourceDriveUrl: sourceRecipe.sourceDriveUrl,
     sourceNote: variant.sourceNote || sourceRecipe.sourceNote || "Original source document"
   } : sourceRecipe;
+  document.title = currentRecipe.title + " | Family Cookbook";
   requestRender();
 }
 const sidebar = document.querySelector(".recipe-sidebar");
@@ -385,6 +394,8 @@ for (const category of recipeIndex.querySelectorAll(".recipe-outline section")) 
   for (const link of category.querySelectorAll("[data-recipe]")) {
     const sidebarLink = link.cloneNode(true);
     const slug = new URL(link.href).searchParams.get("recipe");
+    addDraftBadge(link, link.dataset.status);
+    addDraftBadge(sidebarLink, sidebarLink.dataset.status);
     recipeLinks.set(slug, sidebarLink);
     group.appendChild(sidebarLink);
   }
@@ -401,7 +412,6 @@ function showRoute() {
     for (const group of sidebar.querySelectorAll("details")) {
       group.open = group === link.closest("details");
     }
-    document.title = link.textContent + " | Family Cookbook";
     loadRecipe(link);
   } else {
     ++loadSequence;

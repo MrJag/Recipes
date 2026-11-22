@@ -75,3 +75,17 @@ h1 { font-size: var(--title-size); line-height: 1.01; margin: 0 0 4px; }
 .photo-strip { overflow: hidden; }
 .photo-strip > .strip-image { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; }
 .photo-strip > .strip-image[hidden] { display:none; }
+
+.draft-badge {
+  display: inline-block;
+  margin-inline-start: .3em;
+  padding: .1em .45em;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--ingredient-paper);
+  color: var(--accent);
+  font: 700 .75rem/1.25 var(--font-sans);
+  letter-spacing: normal;
+  white-space: nowrap;
+}
+.category .draft-badge { margin-inline-start: 0; font-size: 8pt; }
