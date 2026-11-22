@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "0.1",
+  "id": "velveting-beef",
+  "title": "Velveting Beef",
+  "category": "Chinese",
+  "photo": "./public/images/velveting-beef.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "0.5 lb beef (chuck or flank steak)",
+        "¾ tsp baking soda",
+        "1.5 Tbsp water",
+        "1 tsp oyster or soy sauce",
+        "1 tsp cornstarch",
+        "1 tsp oil",
+        "1 tsp Shaoxing wine"
+      ]
+    }
+  ],
+  "steps": [
+    "Scale the recipe to the desired quantity of beef.",
+    "Cut the beef into 1–1.5-inch strips with the grain, followed by ¼-inch slices against the grain.",
+    "Combine the beef, baking soda, and water and tenderize for 1–2 hours.",
+    "Rinse the baking soda from the beef and drain.",
+    "Combine the beef with oyster or soy sauce, cornstarch, oil, and Shaoxing wine. Marinate for another 15 minutes.",
+    "Stir-fry as required in your Chinese recipe."
+  ],
+  "sourceNote": "Adapted from https://thewoksoflife.com/prepare-beef-for-stir-fry/"
+}
