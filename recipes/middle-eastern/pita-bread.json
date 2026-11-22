@@ -1,0 +1,36 @@
+{
+  "id": "pita-bread",
+  "schemaVersion": "0.1",
+  "title": "Pita Bread",
+  "category": "Middle Eastern",
+  "photo": "./public/images/pita-bread.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2 cups All Purpose Flour (King Arthur) + extra reserved for dusting",
+        "½ cup Whole Wheat Flour",
+        "1 tbsp Sugar",
+        "1 tsp Salt",
+        "1 tbsp Olive Oil",
+        "2 tsp Yeast (instant)",
+        "1 cup water (95° F)"
+      ]
+    }
+  ],
+  "steps": [
+    "Combine all-purpose flour, wheat flour, salt and sugar in a mixing bowl. Stir to mix.",
+    "Dissolve the yeast in warm water then add to the flour mixture along with olive oil. Mix by hand until the dough is homogeneous and forms a single sticky ball, approximately 2-3 minutes.",
+    "Dust your kneading surface and dough ball with some of the reserved flour and knead for 8-10 mins until you get a soft and tacky dough. You should be able to press into the dough ball with a finger without much resistance, but when pulling back the dough should stick to the finger a little bit.",
+    "Lightly oil your mixing bowl and dough ball then cover with a tea towel and proof until doubled in size, approximately 1-2 hours.",
+    "Punch down the dough and divide into 10 equal chunks. Form each chunk into a round ball, then flatten and cover with a tea towel before moving on to the next one. Let the round discs rest another 5 minutes to relax the gluten before the final shaping.",
+    "Roll each disc into thin even 6 inch discs and proof for another 30 minutes.",
+    "Preheat your oven or grill to the hottest temperature available: 450-550 degrees F.",
+    "When ready to bake, flip the dough top-side down onto the baking stone or grill surface. Flip the pita after the bottom has toasted briefly, approximately 20 seconds. Cook until the pita is fully puffy then flip and grill the other side until desired doneness. Aim for some golden brown color on both sides.",
+    "Wrap the cooked pitas together in a tea towel to keep them from drying out.",
+    "Serve while still warm."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Adapted from: https://spicesnflavors.com/homemade-pita-bread/",
+  "servings": "10 pitas (6-inch)"
+}

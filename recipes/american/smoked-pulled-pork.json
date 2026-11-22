@@ -1,0 +1,30 @@
+{
+  "id": "smoked-pulled-pork",
+  "schemaVersion": "0.1",
+  "title": "Smoked Pulled Pork",
+  "category": "American",
+  "photo": "./public/images/smoked-pulled-pork.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "4lb pork shoulder or boston butt",
+        "Yellow Mustard",
+        "Southern Spice Rub"
+      ]
+    }
+  ],
+  "steps": [
+    "Trim any large chunks of fat from the outside of the pork. It is not necessary to fully clean the surface because most of it will melt off during the 11 hour smoke.",
+    "Slather the meat with a generous coating of yellow mustard. This will help the rub stick in the next step.",
+    "Dust all sides with a very generous coating of spice rub.",
+    "Smoke until the meat temperature stalls around 160-170 °F, approximately 9 hours.",
+    "Wrap and finish smoking until 203° F, approximately two additional hours.",
+    "Rest for 1 hour then shred, mixing any residual juices back into the pulled pork."
+  ],
+  "reviewFlags": [
+    "The source lists internal temperatures and estimated times but omits the smoker temperature."
+  ],
+  "status": "draft",
+  "headnote": "The source lists internal temperatures and estimated times but omits the smoker temperature."
+}

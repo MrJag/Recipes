@@ -1,0 +1,31 @@
+{
+  "id": "baba-ganoush",
+  "schemaVersion": "0.1",
+  "title": "Baba Ganoush",
+  "category": "Middle Eastern",
+  "photo": "./public/images/baba-ganoush.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "6 Eggplants, sliced ½ thick",
+        "2 Tbsp Garlic (minced/crushed)",
+        "¼cup Lemon Juice",
+        "¼ cup Olive Oil",
+        "½ cup Tahini",
+        "~2 Tbsp Salt",
+        "~1 Tbsp Pepper",
+        "Sesame Seeds (black and white for garnish)"
+      ]
+    }
+  ],
+  "steps": [
+    "Slice the eggplants approximately ½” thick, then drizzle olive oil on top and season with salt and pepper.",
+    "On a hot grill (recommended) or preheated broiler, sear the eggplant until charred on both sides.",
+    "Transfer the slices to a baking tray and finish cooking in an oven at 375°F for approximately 10-20 minutes until the flesh is tender.",
+    "While the eggplant is still warm, carefully remove the skin and transfer the flesh to a food processor.",
+    "Add garlic, lemon juice, olive oil, tahini, and 1 Tbsp of salt, then pulse for 5-10 seconds until combined into a rough paste.",
+    "Transfer to a serving dish, then drizzle with additional olive oil and a sprinkle of sesame seeds."
+  ],
+  "reviewFlags": []
+}

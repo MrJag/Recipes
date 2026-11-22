@@ -1,0 +1,33 @@
+{
+  "id": "hatch-green-chili",
+  "schemaVersion": "0.1",
+  "title": "Hatch Green Chili",
+  "category": "American",
+  "photo": "./public/images/hatch-green-chili.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1 pound Hatch chile peppers, halved and seeded",
+        "3 pounds boneless pork roast (butt or shoulder), cubed",
+        "2 cups all-purpose flour",
+        "3 tablespoons salt, divided",
+        "3 tablespoons coarse black pepper, divided",
+        "¼ cup vegetable oil",
+        "2 cups chicken stock",
+        "15 oz can diced tomatoes with green chile peppers",
+        "1 large sweet onion, chopped",
+        "2 Tbsp ground cumin",
+        "3 cloves garlic",
+        "(optional) ¼ cup dry hominy, soaked overnight and rinsed + ½ cup water"
+      ]
+    }
+  ],
+  "steps": [
+    "Prepare the chili peppers: Roast 6-inches under a broiler for approximately 5 to 8 minutes, flipping as needed until blistered all over. Remove and set aside in a tightly covered container for at least 10 minutes to steam in the residual heat. The peppers will soften so that you can easily remove the skin, stem, and seeds. Chop into small pieces and set aside.",
+    "Toss the meat with the flour, salt, and pepper to coat. Add oil to a frying pan and sear the exterior of the meat chunks over medium high heat, then transfer to a slow cooker.",
+    "Add the remaining ingredients to the slow cooker and mix well. Cook for 6 hours on low or 4 hours on high, until the meat is tender."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Adapted from https://www.allrecipes.com/recipe/266314/hatch-chili/"
+}

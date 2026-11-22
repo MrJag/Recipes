@@ -1,18 +1,18 @@
 "use strict";
 
 const categoryRecipes = {
-  Drinks: ["iced-lemon-green-tea-with-basil-seeds", "mariano-margarita"],
-  Condiments: [
+  Drinks: ["frozen-margarita", "iced-lemon-green-tea-with-basil-seeds", "mariano-margarita"],
+  Condiments: ["spanish-picada", "neapolitan-pizza-sauce", "lawrys-seasoning-clone", 
     "raspberry-vinaigrette", "caribbean-green-seasoning", "chinese-white-stir-fry-sauce",
     "greek-marinade", "hawaiian-chili-pepper-water", "pomodoro-sauce", "bolognese-ragu",
     "codys-salsa", "salsa-roja", "catalan-sofrito", "peanut-sauce", "russells-yellow-curry-spice-blend"
   ],
-  Sides: [
+  Sides: ["mashed-potatoes", "creamed-corn", "cranberry-relish", "pita-bread", "persian-rice-with-tahdig", "baba-ganoush", 
     "cornbread", "dinner-rolls", "roasted-acorn-squash", "southwestern-roasted-cauliflower",
     "jasmine-coconut-rice", "indian-basmati-rice-pilau", "long-grain-rice-with-mustard-seeds",
     "rosemary-focaccia", "coconut-lime-rice"
   ],
-  Mains: [
+  Mains: ["hatch-green-chili", "hawaiian-teriyaki-chicken", "hawaiian-stir-fry-noodles", "shakshuka", "neapolitan-pizza", "lamb-biryani", "turkish-kofta-kebab", "smoked-pulled-pork", "3-2-1-ribs", "mariannas-chicken-kotleti", 
     "beef-stroganoff", "red-beans-and-rice", "tomato-basil-soup", "belgian-waffles",
     "philips-waffles", "szechuan-green-beans-and-pork", "taiwanese-popcorn-chicken",
     "hawaiian-huli-huli-chicken", "butter-masala-chicken", "goan-pork-vindaloo",
@@ -24,6 +24,9 @@ const categoryRecipes = {
 };
 
 const cuisineOverrides = {
+  "frozen-margarita": "Mexican",
+  "persian-rice-with-tahdig": "Persian",
+  "turkish-kofta-kebab": "Turkish",
   "belgian-waffles": "Belgian",
   "latvian-stew": "Latvian",
   "mariano-margarita": "Mexican",

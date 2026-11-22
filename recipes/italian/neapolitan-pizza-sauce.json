@@ -1,0 +1,26 @@
+{
+  "id": "neapolitan-pizza-sauce",
+  "schemaVersion": "0.1",
+  "title": "Neapolitan Pizza Sauce",
+  "category": "Italian",
+  "photo": "./public/images/neapolitan-pizza-sauce.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "28oz can of San Marzano tomatoes, whole",
+        "1 tsp salt",
+        "7.3 g basil",
+        "1.5 tsp olive oil"
+      ]
+    }
+  ],
+  "steps": [
+    "Strain excess liquids into a medium pot through a mesh strainer and transfer the tomatoes and thick pulp to a bowl.",
+    "Add salt, basil, and olive oil to the bowl.",
+    "Reduce the tomato liquid in a pot over medium-low heat until it’s thick enough to coat the back of a spoon, then add to the bowl.",
+    "Mix well to incorporate."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Adapted from Vito Iacopelli, https://www.youtube.com/watch?v=f32frig1s9w"
+}

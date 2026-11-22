@@ -1,0 +1,30 @@
+{
+  "id": "cranberry-relish",
+  "schemaVersion": "0.1",
+  "title": "Cranberry Relish",
+  "category": "American",
+  "photo": "./public/images/cranberry-relish.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2 lbs cranberries, chopped pea size (250g)",
+        "2 cups english walnuts, chopped",
+        "1 cup sugar (200g)",
+        "2 oranges, zested and juiced",
+        "¼ cup grand marnier"
+      ]
+    }
+  ],
+  "steps": [
+    "Chop cranberries and walnuts to size",
+    "In a large bowl, mix all the ingredients and let sit overnight.",
+    "Serve."
+  ],
+  "reviewFlags": [
+    "The source lists both 2 lb and 250 g for the cranberries. Confirm the intended quantity."
+  ],
+  "sourceNote": "Adapted from Suzuko Gheno’s Recipe",
+  "status": "draft",
+  "headnote": "The source lists both 2 lb and 250 g for the cranberries. Confirm the intended quantity."
+}

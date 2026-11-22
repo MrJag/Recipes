@@ -1,0 +1,44 @@
+{
+  "id": "hawaiian-stir-fry-noodles",
+  "schemaVersion": "0.1",
+  "title": "Hawaiian Stir-Fry Noodles",
+  "category": "Hawaiian",
+  "photo": "./public/images/hawaiian-stir-fry-noodles.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1 lb fresh stir fry noodles (yakisoba, chow mein, etc)",
+        "2-3 Tbsp oil (enough to coat bottom of wok)",
+        "1 tbsp ginger (1 inch slice)",
+        "1 tbsp garlic (4 cloves)",
+        "¾ head of cabbage, shredded coarsely",
+        "1 large carrot, sliced or shredded",
+        "2 stalks of green onion, chopped into ½”-1” slices"
+      ]
+    },
+    {
+      "title": "Sauce",
+      "items": [
+        "¾ Tbsp Sesame Oil",
+        "½ Tbsp Soy Sauce",
+        "½ Tbsp oyster Sauce",
+        "¼ Tbsp salt",
+        "¼ Tbsp sugar",
+        "1 pinch of white pepper"
+      ]
+    }
+  ],
+  "steps": [
+    "Preheat wok over the highest heat possible. The oil should instantly start smoking when added to a properly heated wok.",
+    "Mix together all sauce ingredients in a small dish and set aside.",
+    "Slice all the vegetables.",
+    "It is important to make sure all your ingredients are prepped and ready to go. Steps 3-8 are executed very quickly and delays will result in burnt food.",
+    "Add oil the wok, swirling slightly to coat the bottom and sides.",
+    "Add the garlic and ginger, stirring quickly to prevent burning.",
+    "Immediately add all the remaining vegetables except the green onions, stirring frequently for 1 minute.",
+    "Add the noodles, green onion, and sauce, stirring frequently until heated through and well distributed."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Adapted from Trilogy Tours, 2019 Maui Vacation, http://blog.sailtrilogy.com/blog/a-guide-to-trilogys-famous-recipes"
+}

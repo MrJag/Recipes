@@ -1,0 +1,31 @@
+{
+  "id": "lawrys-seasoning-clone",
+  "schemaVersion": "0.1",
+  "title": "Lawry’s Seasoning Clone",
+  "category": "American",
+  "photo": "./public/images/lawrys-seasoning-clone.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "⅓ cup salt",
+        "3 ½ tsp sugar",
+        "1 ½ tsp cornstarch",
+        "2 tsp celery seed",
+        "1 Tbsp paprika",
+        "1 ½ tsp onion powder",
+        "1 tsp garlic powder",
+        "1 tsp turmeric",
+        "⅛ tsp kashmir chili powder",
+        "¼ tsp MSG (optional)"
+      ]
+    }
+  ],
+  "steps": [
+    "Process in food processor or blender for 10-15 seconds to mix and break down the crystal size of the salt and sugar. The final mixture should be a fine texture but not powdered.",
+    "Store in a tightly sealed container. The blend improves over time as the flavor from the seasonings meld together."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Inspired by https://www.food.com/recipe/lawrys-seasoned-salt-copycat-425753",
+  "headnote": "A sweet and salty all-purpose seasoning blend for everyday cooking and barbecue."
+}

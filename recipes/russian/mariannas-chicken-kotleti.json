@@ -1,0 +1,39 @@
+{
+  "id": "mariannas-chicken-kotleti",
+  "schemaVersion": "0.1",
+  "title": "Marianna’s Chicken Kotleti",
+  "category": "Russian",
+  "photo": "./public/images/mariannas-chicken-kotleti.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2.5 lbs chicken",
+        "1 large onion",
+        "1 bell pepper",
+        "5 cloves garlic, grated",
+        "½\" knob ginger, grated (slightly less volume than garlic)",
+        "1 serrano, deseeded and grated",
+        "1 green onion, sliced fine",
+        "1 slice bread, crust removed",
+        "~1 Tbsp milk (enough to wet the bread slice)",
+        "¼ cup panko crumb",
+        "2.5 tsp salt",
+        "1.5 tsp pepper",
+        "Neutral frying oil, enough to cover the bottom of the pan"
+      ]
+    }
+  ],
+  "steps": [
+    "Remove the crust from the bread and moisten the bread with about 1 Tbsp milk.",
+    "Grate the garlic, ginger, and flesh of the serrano pepper into a medium-large bowl.",
+    "Cut the chicken, onion, and bell pepper into manageable strips or chunks and grind using the large grinder setting.",
+    "Combine all the ingredients and mix for 1 minute or until well distributed.",
+    "Preheat an oven to 450F",
+    "Preheat a pan with enough neutral frying oil to generously cover the bottom over medium-high heat.",
+    "Scoop 2 heaping tablespoons into a rounded oval patty into the frying pan and fry until dark golden brown, then flip and fry the other side. You are only trying to crisp the outsides at this point. The insides will not be fully cooked yet.",
+    "Transfer the fried patties to a baking sheet and cook for an additional 5-10 minutes, until the insides are cooked through.",
+    "Serve with buckwheat kasha and fresh veggies (like sliced cucumbers)."
+  ],
+  "reviewFlags": []
+}

@@ -1,0 +1,49 @@
+{
+  "id": "shakshuka",
+  "schemaVersion": "0.1",
+  "title": "Shakshuka",
+  "category": "Middle Eastern",
+  "photo": "./public/images/shakshuka.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "3+ Tbsp olive oil",
+        "1 medium onion, diced or sliced",
+        "2 long sweet peppers, seeded + diced or sliced",
+        "3 cloves of garlic, minced",
+        "2 tsp smoked sweet paprika",
+        "2 tsp kashmiri chili powder",
+        "1.5 tsp aleppo chili powder",
+        "1 tsp cumin powder",
+        "½ tsp salt",
+        "¼ tsp pepper",
+        "10 roma tomatoes, skinned + seeded, then chopped, crushed, or pureed. (or 28oz crushed tomato can)",
+        "1 tsp sugar",
+        "6-8 eggs"
+      ]
+    },
+    {
+      "title": "Optional Garnishes",
+      "items": [
+        "Chopped cilantro",
+        "Honey (to drizzle on top)",
+        "Feta cheese, crumbled",
+        "Crumbled sausage or chorizo",
+        "Brined olives"
+      ]
+    }
+  ],
+  "steps": [
+    "Saute onion, peppers, and garlic in a large 12” pan with olive oil over high heat until translucent or lightly caramelized.",
+    "Add the spices, salt, and pepper and cook for 30 seconds longer.",
+    "Add the tomatoes and sugar and reduce by half or until desired consistency, approximately 15-20 minutes. You can add water if it reduces too much.",
+    "Evenly spaced throughout the sauce, make a small hole and crack an egg into it. Carefully push the sauce over the edge of the egg to help contain it, but do not cover the eggs completely.",
+    "Cover the pan with a lid and cook for 5 minutes and 30 seconds. Aim for perfectly poached eggs, where the whites are set on the outside but the yolk is still slightly runny.",
+    "Add the garnish: Chopped cilantro gives a fresh bright note. Feta cheese, olives, sausage, or chorizo add a salty note. Honey complements the creamy saltiness from the feta really well.",
+    "Serve immediately (before the yolks set) with bread for dipping."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Adapted from https://www.youtube.com/watch?v=voinXU09-Ns",
+  "servings": "4"
+}

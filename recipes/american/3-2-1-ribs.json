@@ -1,0 +1,32 @@
+{
+  "id": "3-2-1-ribs",
+  "schemaVersion": "0.1",
+  "title": "3-2-1 Ribs",
+  "category": "American",
+  "photo": "./public/images/3-2-1-ribs.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "Baby Back Ribs",
+        "Yellow Mustard",
+        "Southern Spice Rub",
+        "Kansas Style BBQ Sauce"
+      ]
+    }
+  ],
+  "steps": [
+    "Rinse the ribs under cold water to remove bone dust, then dry with a paper towel.",
+    "Separate and save any non-rib meat, then remove any silverskin from the backside of the rib. The non-rib meat can be smoked like a skirt steak for 60-90 minutes using all the same seasonings.",
+    "Slather all the ribs in a generous coating of yellow mustard. This will help the rub stick in the next step.",
+    "Coat all the sides of the ribs very generously with the spice rub -- sometimes it’s good to use a light second coating.",
+    "Smoke for 3 hours. The ribs pickup all the smoke flavor in this step.",
+    "Wrap in foil and smoke for another 2 hours. This is when the ribs become nice and moist.",
+    "Unwrap and smoke for 1 more hour, slathering in BBQ sauce every 15-30 minutes. This firms up the exterior a little bit so the ribs don’t fall apart. The BBQ glaze will also caramelize into a nice crust, giving the ribs an extra depth of flavor."
+  ],
+  "reviewFlags": [
+    "The source lists the 3-2-1 timing but omits the smoker temperature."
+  ],
+  "status": "draft",
+  "headnote": "The source lists the 3-2-1 timing but omits the smoker temperature."
+}

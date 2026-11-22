@@ -1,0 +1,60 @@
+{
+  "id": "neapolitan-pizza",
+  "schemaVersion": "0.1",
+  "title": "Neapolitan Pizza",
+  "category": "Italian",
+  "photo": "./public/images/neapolitan-pizza.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Poolish",
+      "items": [
+        "200g flour (00 or whole wheat)",
+        "200g water (95F or 2/3rd room temp + 1/3rd boiling)",
+        "2g yeast"
+      ]
+    },
+    {
+      "title": "Dough",
+      "items": [
+        "400g Poolish (recipe above)",
+        "400g flour",
+        "200g water (cold)",
+        "25g salt"
+      ]
+    },
+    {
+      "title": "Margherita Topping",
+      "items": [
+        "1 dough ball",
+        "60g fresh Mozzarella",
+        "1 pinch oregano",
+        "2-3 pinches grated italian hard-rind cheese: Pecorino Romano: sheep milk, aged 5-8 mo, tangy and salty Grana Padano - cows milk, aged 9+ mo, sweet to buttery to nutty Parmigiano Reggiano: cows milk, aged 12/18/24 months, nutty to slightly spicy"
+      ]
+    }
+  ],
+  "steps": [
+    "Combine poolish water and yeast until dissolved. Add the flour and set aside for 12-16 hours at room temperature (65-75F).",
+    "Mix the poolish and dough water in a kitchenaid mixer with a dough hook over low speed (stir-2) until the water is milky white. You may need to stop and scrape down the hook once or twice.",
+    "Add the flour, a little bit at a time, until well combined. Increase the mixing speed and kneed for 10 minutes, or until the dough cleanly pulls away from the side of the bowl.",
+    "Remove the dough and knead on a lightly floured surface for 1-2 minutes until a ball forms. Cover and rest for 30 minutes.",
+    "Divide the dough into four 250g balls. Cover and refrigerate until 3 hours before needed.",
+    "When ready, bring the dough balls up to room temperature and let rest until doubled in size, approximately 2-3 hours.",
+    "Scoop ball from container and flip the top side down into the flour. It is important to note the orientation of the original “top side” as it will be referenced throughout the instructions. Carefully flip the ball over in the flour so the top side is back on top.",
+    "Using the neapolitan 6-finger method and working from bottom to top, lightly press the dough flat, leaving the crust untouched.",
+    "Flip the dough over, top side down, rotate counter-clockwise 90 degrees, and repeat the 6-finger method.",
+    "Your hand should fit inside the flattened surface of the dough at this point. If not, flip/rotate/repeat. Make sure to end with the top side facing up.",
+    "Using the neapolitan slap method, hold the right half flat with your right hand (palm down) and grab and stretch away with your left hand.",
+    "Finish the stretch by rotating the right hand palm up as you flip the dough with your left hand over to the right hand, in a page turning motion. The dough should be upside down over your right hand, palm up.",
+    "With the left hand palm up, slap the dough back down with your right hand, rotating 120 degrees counter-clockwise in the process.",
+    "Use the slap process to stretch the pizza skin to 1” smaller than your final desired size. An experienced pizzaiolo would use 3 slaps.",
+    "Top, transfer to launching pizza peel, stretch to final size, then launch.",
+    "Cook 60-120 seconds, rotating every 30-45 seconds as needed to prevent burns."
+  ],
+  "reviewFlags": [
+    "The source specifies a bake time but omits the pizza oven temperature and quantity of sauce."
+  ],
+  "sourceNote": "Adapted from Vito Iacopelli",
+  "servings": "4 dough balls (250 g each)",
+  "status": "draft",
+  "headnote": "The source specifies a bake time but omits the pizza oven temperature and quantity of sauce."
+}

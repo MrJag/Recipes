@@ -1,0 +1,22 @@
+{
+  "id": "frozen-margarita",
+  "schemaVersion": "0.1",
+  "title": "Frozen Margarita",
+  "category": "Drinks",
+  "photo": "./public/images/frozen-margarita.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1-1.25 cup ice",
+        "1.5 oz tequila blanco",
+        "1.5 oz lime",
+        "1-1.25 oz agave syrup"
+      ]
+    }
+  ],
+  "steps": [
+    "Add everything to a blender and use the ice crush function."
+  ],
+  "reviewFlags": []
+}

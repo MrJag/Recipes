@@ -1,0 +1,28 @@
+{
+  "id": "creamed-corn",
+  "schemaVersion": "0.1",
+  "title": "Creamed Corn",
+  "category": "American",
+  "photo": "./public/images/creamed-corn.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "8 ears corn",
+        "⅔ cup heavy cream",
+        "3 Tbsp butter",
+        "½ Tsp salt",
+        "¼ Tsp ground pepper"
+      ]
+    }
+  ],
+  "steps": [
+    "In a large, deep bowl, slice off the kernels of corn.",
+    "With the dull side of the knife (or a regular dinner knife), press and scrape the cob all the way down to remove all the bits of kernel and creamy milk inside.",
+    "Mix in heavy cream, salt to taste, a generous amount of ground pepper and butter.",
+    "Pour mixture into a baking dish. Bake at 350Fº for 30 to 45 minutes or until thoroughly warmed through."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Adapted from The Pioneer Woman — https://www.thepioneerwoman.com/food-cooking/recipes/a10229/fresh-corn-cass/",
+  "headnote": "This recipe is nearly identical to Babe’s Creamed Corn and is typically scaled 2x for Thanksgiving."
+}

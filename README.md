@@ -13,8 +13,8 @@ Family cookbook project (temporarily public for GitHub Pages preview).
 ## Current status
 - `src/styles/cookbook.css`: editable editorial right-strip print design (v0.7).
 - `index.html` and `src/scripts/cookbook.js`: category and recipe sidebar, layout controls, and automatic pagination.
-- Fifty recipes imported as JSON from Google Drive, preserving source references and review flags.\n- The layout is under test; page-fit is checked in-browser and is not yet validated across every recipe.
-- Latvian Stew has its verified trim-free 614 × 2559 JPEG web image and lossless PNG master committed. The other forty-nine recipes use generated editorial photography.
+- Seventy recipes imported as JSON from Google Drive, preserving source references and review flags.\n- The layout is under test; page-fit is checked in-browser and is not yet validated across every recipe.
+- Latvian Stew has its verified trim-free 614 × 2559 JPEG web image and lossless PNG master committed. The other sixty-nine recipes use generated editorial photography.
 
 ## Proposed folders
 - `recipes/`: structured, versioned recipe content

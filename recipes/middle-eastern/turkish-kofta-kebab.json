@@ -1,0 +1,49 @@
+{
+  "id": "turkish-kofta-kebab",
+  "schemaVersion": "0.1",
+  "title": "Turkish Kofta Kebab",
+  "category": "Middle Eastern",
+  "photo": "./public/images/turkish-kofta-kebab.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1 kg (2.2 lbs) beef, lamb, or a mixture (At least 15% fat, but 20-30% is better.)",
+        "1 large onion, outer layer peeled.",
+        "4 cloves garlic, minced",
+        "1-2 sweet mediteranian peppers, finely minced (Substitute with any sweet, thin-skinned, pepper. American bell peppers are thick skinned, but will work if needed.)",
+        "½ parsley bunch, stemmed and minced",
+        "3 tsp salt",
+        "1 tsp pepper, ground",
+        "2 tsp cumin, ground",
+        "1.5 tsp coriander, ground",
+        "1.5 Tbsp dry aleppo chili pepper, ground"
+      ]
+    },
+    {
+      "title": "Optional Spices (Choose One)",
+      "items": [
+        "½ tsp garam masala (preferred choice)",
+        "½ tsp Cardamom",
+        "½ tsp Cinnamon",
+        "⅛ tsp Nutmeg"
+      ]
+    }
+  ],
+  "steps": [
+    "Shred a large onion using the coarse side of a box shredder. Strain the shredded onion until the pulp is dry and add it to a large mixing bowl. Removing the liquid is VERY important and about 1 cup of excess liquid can typically be extracted using a nut milk bag.",
+    "Add to the mixing bowl: the meat, minced garlic, finely minced sweet pepper, and finely chopped parsley.",
+    "Next add all the spices: salt, pepper, cumin, coriander, and Aleppo pepper.",
+    "Mix until well combined, approximately 3-5 minutes, then refrigerate for at least 45 minutes.",
+    "After the mixture is sufficiently chilled, prepare your skewers, a tray to hold the finished skewers, and a bowl of ice water .",
+    "Wet your dominant hand with the ice water and then grab a handful of the kofta mixture.",
+    "Use a light circular rolling motion against the side of the mixing bowl to shape the meat mixture into a smooth roundish football.",
+    "Hold the flat skewer in your non-dominant hand and the meatball in the palm of your dominant hand.",
+    "Place the meat mixture about 3” from the end of the skewer and with a steady sawing motion, cut the edge of the skewer into the center of the meatball. Apply pressure around the meat until it somewhat seals around the other end of the skewer. The meat is not securely attached at this point, so make sure to support the weight of the meat with your hand.",
+    "Starting at the top of the meat mixture, with your palm or fingers supporting the back side of the kebab, squeeze gently but firmly down with your thumb to shift the meat mixture downwards towards the handle. Work your way down the skewer until you reach the bottom.",
+    "Flip the skewer over, then repeat the squeezing motion again from the top until you reach the bottom. Periodically wet your hands with the ice water to limit the fat from melting and sticking to your palms instead of the skewer. Each pass should progressively flatten out the shape of the kebab and remove any air pockets between the metal skewer and the meat.",
+    "Grill over hot coals or high heat on your grill until lightly charred on the outside. Turning the skewer every 30 seconds promotes even cooking, which prevents the kebab from separating and falling off of the skewers during the grilling process.",
+    "Cook until lightly charred on the outside, approximately 8-11 minutes."
+  ],
+  "reviewFlags": []
+}

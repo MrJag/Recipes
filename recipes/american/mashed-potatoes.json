@@ -1,0 +1,32 @@
+{
+  "id": "mashed-potatoes",
+  "schemaVersion": "0.1",
+  "title": "Mashed Potatoes",
+  "category": "American",
+  "photo": "./public/images/mashed-potatoes.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "5 lb mix of russet and Yukon Gold potatoes",
+        "6 cloves garlic (optional)",
+        "3/4 c. butter",
+        "1 package (8 oz.) cream cheese, softened",
+        "¾ cup half-and-half",
+        "2 tsp Lawry's Seasoned Salt",
+        "½ tsp black pepper"
+      ]
+    }
+  ],
+  "steps": [
+    "Peel and cut potatoes into roughly equal 1-2” chunks and rinse under cold water to remove excess starch.",
+    "Add to a large pot and cover with 1” of water and bring to a boil. Add garlic if using.",
+    "Cook for 30 to 35 minutes. A fork or knife should easily pierce the potatoes with no resistance, and the potatoes should almost, but not totally, fall apart.",
+    "Drain the potatoes in a large colander then add back to the large pot. Mash the potatoes over low heat to gradually dry the potatoes.",
+    "Add the butter, cream cheese, and half-and-half. Continue mashing.",
+    "Add the salt and pepper.",
+    "Place in a baking dish, add a couple slices of butter, then bake at 350F until the butter is melted and the potatoes are piping hot."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Adapted from The Pioneer Woman — https://www.thepioneerwoman.com/food-cooking/recipes/a12083/delicious-creamy-mashed-potatoes"
+}

@@ -1,0 +1,83 @@
+{
+  "id": "lamb-biryani",
+  "schemaVersion": "0.1",
+  "title": "Lamb Biryani",
+  "category": "Indian",
+  "photo": "./public/images/lamb-biryani.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Lamb Masala",
+      "items": [
+        "2.2 lbs lamb shoulder, cut into 1-1.5” chunks",
+        "2 Tbsp garlic ginger chili paste (2:2:1 ratio, see recipe)",
+        "1 Tbsp kashmir chili powder",
+        "1 Tsp turmeric powder",
+        "1 Tsp Garam Masala powder (see recipe)",
+        "1 cup yogurt",
+        "1 cup Barista (fried red onion, see recipe)",
+        "1 cup coriander leaves, chopped (2 bunches of cilantro)",
+        "¼ cup mint leaves, chopped",
+        "½ cup chopped tomatoes (1 large roma)",
+        "2 Tbsp ghee (clarified butter)",
+        "3” piece of cinnamon bark",
+        "3 green cardamom pods",
+        "2 black cardamom pods",
+        "1 Tsp cumin seeds",
+        "3-4 bay leaves",
+        "2 cloves",
+        "3 tsp salt",
+        "¼ Tsp nutmeg, ground (⅛” segment)"
+      ]
+    },
+    {
+      "title": "Rice",
+      "items": [
+        "0.5 kg basmati rice (Tilda or Daawat brand)",
+        "3 liters water",
+        "1 Tbsp ghee (clarified butter)",
+        "3” piece of cinnamon bark",
+        "1 Tsp cumin seeds",
+        "5 green cardamom pods",
+        "1 black cardamom pod",
+        "1 star anise",
+        "2 cloves",
+        "3-4 bay leaves",
+        "3 Tbsp garlic ginger chili paste (2:2:1 ratio, see recipe)",
+        "2 Tsp salt"
+      ]
+    },
+    {
+      "title": "Assembly",
+      "items": [
+        "5-10 Saffron strands",
+        "¼ cup milk, warmed",
+        "1 cup golden raisins (or similar dried fruit)",
+        "1 cup Barista (fried red onion, see recipe)",
+        "½ cup coriander leaves, chopped",
+        "2 Tbsp ghee",
+        "2 Tsp Keora water (kewra, keora, or kewda water)"
+      ]
+    }
+  ],
+  "steps": [
+    "Prepare the Barista and Garlic-Ginger-Chili paste if necessary.",
+    "Soak the saffron strands in ¼ cup medium-hot milk and set aside until assembly.",
+    "Combine all the Lamb Masala ingredients and thoroughly mix to coat the chunks of meat. Optionally marinade the mixture for up to 30 minutes.",
+    "Cook the Lamb Masala in the Instant Pot using the Meat/Stew mode, high pressure, for 45 minutes.",
+    "With 10 minutes remaining on the Instant Pot, rinse the basmati rice in a medium-large bowl until the water runs clear. Cover the rice completely with water and let it soak for 20 minutes.",
+    "While the rice is soaking, bring 3 liters of water to a boil in a large pot along with ghee, cinnamon, cumin, green and black cardamom, star anise, cloves, bay leaves, garlic-ginger-chili paste, and salt. Cover and lower the heat to a simmer until you are ready to cook the rice.",
+    "Let the Instant Pot naturally release pressure for 10 minutes when the Meat/Stew cycle is complete and then vent the remaining pressure using the quick-release.",
+    "Switch the Instant Pot to Saute mode with low heat and simmer the Lamb Masala, stirring occasionally, until the gravy has thickened, approximately 10 more minutes.",
+    "Bring the large pot of water back to a rolling boil then strain and add the soaked rice. Cook over high heat until 70% done, approximately 10 minutes. The grains should be tender on the outside with a little bite on the inside, similar to an al dente noodle.",
+    "Strain the par cooked rice in a colander.",
+    "Add half the lamb masala to the bottom of the large pot.",
+    "Add half of the rice, being careful not to compress or break the grains.",
+    "Sprinkle ½ cup of raisins",
+    "Sprinkle ½ cup of Barista",
+    "Sprinkle half the chopped coriander",
+    "Repeat the assembly process again, starting with the lamb.",
+    "Finish by drizzling 2 Tbsp ghee, the saffron-milk mixture, and kewra water.",
+    "Cook over high heat for 4 minutes and low heat for 10 minutes."
+  ],
+  "reviewFlags": []
+}

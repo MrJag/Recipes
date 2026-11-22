@@ -1,0 +1,47 @@
+{
+  "id": "hawaiian-teriyaki-chicken",
+  "schemaVersion": "0.1",
+  "title": "Hawaiian Teriyaki Chicken",
+  "category": "Hawaiian",
+  "photo": "./public/images/hawaiian-teriyaki-chicken.jpg",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "4 lbs Chicken"
+      ]
+    },
+    {
+      "title": "Marinade",
+      "items": [
+        "4 cloves of Garlic, minced",
+        "1” of Ginger Root, minced (equal to garlic above)",
+        "⅓ c Brown Sugar",
+        "1 tsp Sesame Oil",
+        "1 cup Soy Sauce",
+        "¼ cup Pineapple Juice"
+      ]
+    },
+    {
+      "title": "Glaze",
+      "items": [
+        "5 Tbsp Honey (⅓ cup + ½ Tbsp)",
+        "¼ cup Dijon Mustard",
+        "¾ cup Pineapple Juice",
+        "1 Tbsp Cornstarch"
+      ]
+    }
+  ],
+  "steps": [
+    "Combine all marinade ingredients and marinade the chicken overnight or at least 6 hours.",
+    "Whisk glaze ingredients together in a pan until smooth.",
+    "Bring glaze to a boil over medium-high heat, stirring constantly, until thickened then remove from heat.",
+    "Grill chicken over medium-high heat, flipping and glazing with a brush frequently.",
+    "Grill for approximately 10–15 minutes, using a thermometer to confirm the chicken reaches 165°F internally."
+  ],
+  "reviewFlags": [
+    "The source lists 160°F for removal from the grill. USDA guidance specifies 165°F for poultry."
+  ],
+  "sourceNote": "*** Note: oak and pecan wood smoke impart a great taste for this chicken. Adapted from Trilogy Tours, 2019 Maui Vacation, http://blog.sailtrilogy.com/blog/a-guide-to-trilogys-famous-recipes",
+  "subtitle": "Trilogy Tours"
+}

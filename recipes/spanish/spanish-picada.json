@@ -1,0 +1,65 @@
+{
+  "id": "spanish-picada",
+  "schemaVersion": "0.1",
+  "title": "Spanish Picada",
+  "category": "Spanish",
+  "photo": "./public/images/spanish-picada.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Base",
+      "items": [
+        "3 Tbsp olive oil",
+        "2 cloves garlic, minced",
+        "30 almonds, blanched and roasted (or half almonds/hazelnuts)",
+        "1 slice grilled bread, cubed (country style, not sourdough, 1.5” thick, no crust)"
+      ]
+    },
+    {
+      "title": "Optional Additions",
+      "items": [
+        "¼ tsp salt",
+        "2 sprigs parsley",
+        "1oz bitter chocolate",
+        "1 large pinch saffron"
+      ]
+    },
+    {
+      "title": "Optional Seasonings",
+      "items": [
+        "Pinch pepper",
+        "Optional: pinch aniseeds, pinch cloves, pinch cinnamon, pinch paprika"
+      ]
+    }
+  ],
+  "steps": [
+    "Fry garlic in oil over medium low heat until golden.",
+    "Meanwhile, toast the bread and almonds on a baking sheet at 350 degrees for about 8 minutes.",
+    "Pulse the toast and remaining ingredients in a food processor until mealy.",
+    "Fry with the garlic until a thick consistency."
+  ],
+  "reviewFlags": [],
+  "sourceNote": "Adapted for a recipe from Bulla Gastrobar Restaurante, Legacy West, Plano, TX",
+  "defaultVariant": -1,
+  "variants": [
+    {
+      "title": "Mortar and Pestle Picada",
+      "ingredientGroups": [
+        {
+          "title": null,
+          "items": [
+            "A pinch of saffron threads",
+            "A pinch of salt",
+            "4 garlic cloves",
+            "6 skinless roasted almonds",
+            "Parsley sprigs"
+          ]
+        }
+      ],
+      "steps": [
+        "Toast the saffron in a dry nonstick pan. Grind it with the salt in a mortar.",
+        "Add the garlic, almonds, and parsley. Crush to a thick paste, then stir into the dish."
+      ],
+      "sourceNote": "Source: https://www.gourmandbreaks.com/blog/traditional-spanish-recipe-picada/"
+    }
+  ]
+}
