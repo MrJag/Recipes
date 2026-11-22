@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "0.1",
+  "id": "beef-short-rib-biryani",
+  "title": "Beef Short-Rib Biryani",
+  "category": "Indian",
+  "status": "draft",
+  "photo": "./public/images/beef-short-rib-biryani.jpg",
+  "ingredientGroups": [
+    {
+      "title": "Beef Marinade",
+      "items": [
+        "3kg Beef rib (off the bone)",
+        "225g Garlic & Ginger (50/50 blend)",
+        "45g Kashmiri chilli powder",
+        "10g Turmeric powder",
+        "45g Coriander powder",
+        "20g Cumin powder",
+        "30g Garam masala or Biryani Masala (below)",
+        "10g Green chilli",
+        "600g Ripe tomato",
+        "750g Yoghurt",
+        "30g Salt",
+        "1.5kg Onion deep fried till golden (approx. 500 g yield)",
+        "50g Coriander (cilantro) stalk"
+      ]
+    },
+    {
+      "title": "Biryani Masala",
+      "items": [
+        "45g Coriander seeds",
+        "30g Cumin seeds",
+        "9g Shahi jeera (black cumin)",
+        "21g Fennel seeds",
+        "30g Black peppercorns",
+        "9g Green cardamom pods",
+        "9g Black cardamom pods",
+        "10g Cinnamon stick",
+        "3g Cloves",
+        "22.5g Mace",
+        "3 g Whole nutmeg, grated",
+        "7.5g Star anise",
+        "7.5g Cassia leaves",
+        "9g Stone flower/Dagad Phool (optional but authentic)",
+        "9g Rose petals (optional but authentic)",
+        "9g Dried Kashmiri chillies"
+      ]
+    },
+    {
+      "title": "Beef Cooking",
+      "items": [
+        "250g Ghee / Beef fat (70/30 ratio",
+        "2.5 Black cumin",
+        "8 Green cardamom",
+        "8 Black cardamom",
+        "4 Cassia leaf (see notes)",
+        "3” Cassia bark (see notes)",
+        "4g Black peppercorn",
+        "3 whole mace",
+        "2 Star anise",
+        "5 cloves",
+        "4lt Beef stock",
+        "5g Methi (fenugreek)",
+        "Lemon juice to taste",
+        "Handful mint leaves roughly chopped",
+        "Handful coriander leaves roughly chopped"
+      ]
+    },
+    {
+      "title": "Rice",
+      "items": [
+        "2kg Sella basmati rice",
+        "60g Garlic & ginger",
+        "1 Mace blade, or ½ blade ground mace",
+        "3 Black peppercorns",
+        "2 Star anise",
+        "4 Green cardamom",
+        "2 Bay leaf",
+        "Juice of ½ a lemon",
+        "160g Salt",
+        "7lt Water"
+      ]
+    },
+    {
+      "title": "Final Assembly",
+      "items": [
+        "2 tbsp Kewra water (buy it here)",
+        "50ml Ghee",
+        "Pinch of saffron infused in 75ml warm milk (Saffron is optional, but authentic)",
+        "Bunch mint",
+        "Bunch coriander",
+        "Whole lemon sliced into wheels"
+      ]
+    }
+  ],
+  "steps": [
+    "Dry Roast: Roast all spices on low heat for 2-3 minutes, stirring continuously.",
+    "Cool: Transfer to a plate and let cool completely.",
+    "Grind: Blend to a fine, aromatic powder.",
+    "Combine beef rib with garlic ginger paste, spices, tomato, yoghurt, and salt.",
+    "Add fried 200g fried onions and coriander stalks.",
+    "Mix thoroughly, marinate overnight and set aside for cooking.",
+    "Heat ghee and beef fat blend.",
+    "Add whole spices and sauté until aromatic.",
+    "Add marinated beef along with all the marinade, cook out until fat splits.",
+    "Add beef stock, cover and simmer for 2.5/3 hours until the beef is tender.",
+    "Finish with methi, lemon juice, mint and coriander.",
+    "Wash and soak rice for 20 mins",
+    "Boil water with spices, lemon juice and salt",
+    "Add the rice and cook for 5 mins until 70% cooked (rice is nutty) remove half drain, then allow the rest for a further 2 minutes to cook to 90% (looks cooked but is firm)",
+    "Drain, remove hard spices and set aside for layering.",
+    "Skim the Fat: Once the curried beef is cooked, skim off some of the excess fat from the top and reserve it for finishing.",
+    "First Layer: In the biryani pot (wide pots work best), spread the curried beef evenly across the base. Add the first layer of rice (cooked to 70%) over the beef. Sprinkle with biryani masala, chopped mint, chopped coriander and a generous pinch of biryani masala",
+    "Second Layer: Add the second layer of rice (cooked to 90%) over the top. Using a spoon, drizzle some of the reserved curried beef fat evenly across the rice. Sprinkle with generous pinch of biryani masala",
+    "Saffron Milk Infusion: Sprinkle the saffron milk over the rice for colour and aroma.",
+    "Final Garnish: Finish with another layer of fresh herbs (mint and coriander) and lemon slices. Drizzle 2 tablespoons of kewra water across the top.",
+    "Sealing the Pot: Cover with a damp cloth and lid or seal the rim with a couple layers of tightly wrapped foil to trap steam. Place the pot on moderate heat for 5 minutes, then reduce to low heat and cook for 20 minutes.",
+    "Resting: Remove from heat and allow the biryani to rest for 20 minutes before opening. This resting period lets the flavours settle and the rice finish steaming.",
+    "To Serve: Carefully remove the lid. Using a spatula, go right to the bottom and gently fluff the biryani, lifting rice and meat together without breaking the grains. Serve hot, ensuring each portion carries both rice and beef."
+  ],
+  "reviewFlags": [
+    "The source includes a separate lamb method after the beef recipe. Confirm whether the unit on 2.5 black cumin and the ghee/beef fat ratio are correct."
+  ],
+  "headnote": "Draft: Confirm the black cumin quantity and ghee/beef fat ratio.",
+  "sourceNote": "Aktar Islam’s Short-Rib Biryani, Fallow Chefs."
+}
