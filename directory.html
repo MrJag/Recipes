@@ -7,9 +7,9 @@
   <title>Recipe Directory | Family Cookbook</title>
   <link rel="stylesheet" href="./src/styles/cookbook.css?v=0.7.7">
   <link rel="stylesheet" href="./src/styles/editor.css?v=0.7.8">
-  <link rel="stylesheet" href="./src/styles/home.css?v=6">
+  <link rel="stylesheet" href="./src/styles/home.css?v=7">
   <link rel="stylesheet" href="./src/styles/site-header.css?v=4">
-  <script defer src="./src/scripts/category-index.js?v=13"></script>
+  <script defer src="./src/scripts/category-index.js?v=14"></script>
   <script defer src="./src/scripts/header-categories.js?v=2"></script>
 </head>
 <body class="homepage directory-page">
@@ -56,6 +56,13 @@
       <nav id="groupNav" class="group-nav" aria-label="Browse by dish type"></nav>
       <p id="categoryStatus" class="directory-status" role="status" aria-live="polite">Loading recipes…</p>
       <div id="categoryResults" class="recipe-outline category-results"></div>
+      <aside id="directoryHighlights" class="directory-highlights" aria-label="Featured recipe photography" aria-live="polite">
+        <div class="directory-highlights-heading">
+          <span class="eyebrow">A little inspiration</span>
+          <h2 id="directoryHighlightsTitle">Fresh from the Kitchen</h2>
+        </div>
+        <div id="directoryHighlightsCards" class="directory-highlights-cards"></div>
+      </aside>
       <noscript><p>JavaScript is required to browse and open recipes.</p></noscript>
     </section>
 </main>

@@ -46,6 +46,74 @@ let recipes = [];
 let selectedGroups = [];
 let expandedGroup = location.hash === "#recipeSearch" ? null : "Soups, Stews & Chili";
 
+let featuredPhotoIndex = {};
+let recentHighlights = [];
+const highlights = $("directoryHighlightsCards");
+const highlightsTitle = $("directoryHighlightsTitle");
+
+function renderHighlights(matching) {
+  if (!highlights) return;
+  const currentGroup = selectedGroups.length === 1 ? selectedGroups[0] : null;
+  const activeFilters = Boolean(currentGroup || searchInput.value.trim() || cuisineFilter.value || proteinFilter.value);
+  const photographed = matching.filter(recipe => featuredPhotoIndex[recipe.slug]);
+  const chosen = [];
+  const seen = new Set();
+  // When browsing a category, show variety across its subcategories first.
+  if (currentGroup) {
+    for (const recipe of photographed) {
+      if (!seen.has(recipe.subgroup) && chosen.length < 3) {
+        chosen.push(recipe);
+        seen.add(recipe.subgroup);
+      }
+    }
+  }
+  for (const recipe of photographed) {
+    if (chosen.length === 3) break;
+    if (!chosen.some(item => item.slug === recipe.slug)) chosen.push(recipe);
+  }
+  const bySlug = new Map(recipes.map(recipe => [recipe.slug,recipe]));
+  const byRecent = new Map(recentHighlights.map(recipe => [recipe.slug,recipe]));
+  let show = activeFilters ? chosen : recentHighlights.map(entry => bySlug.get(entry.slug)).filter(recipe => recipe && featuredPhotoIndex[recipe.slug]).slice(0,3);
+  if (!show.length) show = recentHighlights.map(entry => bySlug.get(entry.slug)).filter(recipe => recipe && featuredPhotoIndex[recipe.slug]).slice(0,3);
+  highlightsTitle.textContent = currentGroup ? "From " + currentGroup : activeFilters ? "Recipes to Discover" : "Fresh from the Kitchen";
+  highlights.replaceChildren();
+  for (const recipe of show) {
+    const card = document.createElement("a");
+    card.className = "highlight-recipe";
+    card.href = recipe.url;
+    const frame = document.createElement("span");
+    frame.className = "highlight-photo";
+    frame.style.display = "block";
+    const img = document.createElement("img");
+    img.src = featuredPhotoIndex[recipe.slug];
+    img.alt = recipe.title;
+    img.loading = "lazy";
+    img.decoding = "async";
+    frame.appendChild(img);
+    const title = document.createElement("span");
+    title.className = "highlight-title";
+    title.textContent = recipe.title;
+    if (recipe.draft) {
+      const badge = document.createElement("span");
+      badge.className = "draft-badge";
+      badge.textContent = "Draft";
+      title.append(" ",badge);
+    }
+    const description = document.createElement("span");
+    description.className = "highlight-description";
+    const note = byRecent.get(recipe.slug)?.description;
+    description.textContent = note || [recipe.subgroup,recipe.cuisine].filter(Boolean).join(" · ");
+    card.append(frame,title,description);
+    highlights.appendChild(card);
+  }
+  if (!show.length) {
+    const empty = document.createElement("p");
+    empty.className = "directory-highlights-empty";
+    empty.textContent = "More recipe photos are coming soon.";
+    highlights.appendChild(empty);
+  }
+}
+
 function itemNode(recipe) {
   const item = document.createElement("li");
   const link = document.createElement("a");
@@ -133,6 +201,7 @@ function render() {
     ? `Showing ${matching.length} of ${recipes.length} recipes`
     : "No recipes match your filters. Try clearing the search or filters.";
   updateGroupButtons();
+  renderHighlights(matching);
 }
 
 function saveFilterUrl() {
@@ -152,10 +221,17 @@ function selectGroups(names) {
 }
 
 async function loadCatalog() {
-  const [page, tags] = await Promise.all([
+  const [page, tags, pictures, recent] = await Promise.all([
     fetch(indexUrl,{cache:"no-cache"}),
-    fetch(taxonomyUrl,{cache:"no-cache"})
+    fetch(taxonomyUrl,{cache:"no-cache"}),
+    fetch("./src/data/recipe-photo-index.json",{cache:"no-cache"}),
+    fetch("./src/data/recent-recipes.json",{cache:"no-cache"})
   ]);
+  if (pictures.ok) featuredPhotoIndex = await pictures.json();
+  if (recent.ok) {
+    const data = await recent.json();
+    recentHighlights = Array.isArray(data.recipes) ? data.recipes : [];
+  }
   if (!page.ok || !tags.ok) throw new Error("Could not fetch recipe catalog or taxonomy");
   const catalog = new DOMParser().parseFromString(await page.text(),"text/html");
   taxonomy = await tags.json();

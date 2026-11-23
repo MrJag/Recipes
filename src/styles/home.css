@@ -106,3 +106,66 @@ body.homepage{background:#fbf8f2;color:#281f1a}
 .homepage.directory-page .directory {padding-top:clamp(28px,4vw,52px)}
 .homepage.directory-page .directory-header h2 {margin-top:0}
 .homepage.directory-page .site-nav a[aria-current="page"] {text-decoration:underline;text-underline-offset:5px}
+
+/* v0.8.0 directory enhancement: editorial category-aware photo rail. */
+.homepage.directory-page .directory {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) clamp(265px,23vw,300px);
+  grid-template-areas:
+    "heading ."
+    "filters photos"
+    "groups photos"
+    "status photos"
+    "results photos";
+  column-gap:clamp(24px,3vw,40px);
+  row-gap:0;
+  align-items:start;
+}
+.homepage.directory-page .directory-header{grid-area:heading;min-width:0}
+.homepage.directory-page .directory-tools{grid-area:filters;min-width:0}
+.homepage.directory-page .group-nav{grid-area:groups;min-width:0}
+.homepage.directory-page .directory-status{grid-area:status;min-width:0}
+.homepage.directory-page #categoryResults{grid-area:results;min-width:0}
+.homepage.directory-page .directory-highlights{
+  grid-area:photos;position:sticky;top:24px;align-self:start;min-width:0;
+  margin-top:0;border-top:2px solid #ad7960;padding-top:16px;
+}
+.homepage.directory-page .directory-highlights-heading{margin-bottom:14px}
+.homepage.directory-page .directory-highlights-heading h2{
+  margin:6px 0 0;font:italic normal 1.65rem/1.2 Georgia,serif;color:#342721;
+}
+.homepage.directory-page .directory-highlights-cards{display:flex;flex-direction:column;gap:20px}
+.homepage.directory-page .highlight-recipe{
+  display:block;color:#30271f;text-decoration:none;border-radius:5px;min-width:0;
+}
+.homepage.directory-page .highlight-recipe img{
+  display:block;width:100%;aspect-ratio:1.55;object-fit:cover;border-radius:5px;
+  background:#e4d9c9;transition:transform .18s ease;
+}
+.homepage.directory-page .highlight-recipe .highlight-photo{overflow:hidden;border-radius:5px}
+.homepage.directory-page .highlight-recipe:hover img{transform:scale(1.025)}
+.homepage.directory-page .highlight-recipe:hover .highlight-title{text-decoration:underline;text-underline-offset:3px}
+.homepage.directory-page .highlight-title{
+  display:block;margin:8px 0 3px;font:normal 1.14rem/1.25 Georgia,serif;
+}
+.homepage.directory-page .highlight-description{
+  display:block;font:.82rem/1.4 Arial,sans-serif;color:#716357;
+}
+.homepage.directory-page .highlight-recipe .draft-badge{vertical-align:middle;font-size:.61rem}
+.homepage.directory-page .directory-highlights-empty{font:.87rem/1.5 Arial,sans-serif;color:#716357}
+@media(max-width:1080px){
+  .homepage.directory-page .directory{
+    grid-template-columns:minmax(0,1fr);
+    grid-template-areas:"heading" "filters" "photos" "groups" "status" "results";
+  }
+  .homepage.directory-page .directory-highlights{position:static;margin:12px 0 20px;max-width:100%}
+  .homepage.directory-page .directory-highlights-cards{
+    flex-direction:row;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;
+    padding-bottom:8px;
+  }
+  .homepage.directory-page .highlight-recipe{flex:0 0 min(245px,65vw);scroll-snap-align:start}
+  .homepage.directory-page .directory-highlights-heading h2{font-size:1.4rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .homepage.directory-page .highlight-recipe img{transition:none}
+}

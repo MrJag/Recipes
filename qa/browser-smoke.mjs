@@ -21,10 +21,15 @@ try {
  check((await page.locator('#categoryStatus').textContent()).includes('of 175'), 'Directory filtering loads');
  check((await page.locator('#categoryStatus').textContent()).includes('22 of'), 'Drinks category filtering matches taxonomy');
  check(await page.locator('#directoryHeading').isVisible(),'Directory heading is visible');
+ check(await page.locator('#directoryHighlights .highlight-recipe').count()>=1,'Dynamic photo sidebar appears');
+ check((await page.locator('#directoryHighlightsTitle').textContent()).includes('Drinks & Cocktails'),'Photo sidebar reflects selected category');
+ check(await page.locator('#directoryHighlights img').count()>=1,'Category photos use actual image files');
  check((await page.locator('#directoryHeading').boundingBox()).y < 220,'Directory heading is near top of viewport');
  await page.goto('http://localhost:8123/directory.html?category=Main%20Dishes',{waitUntil:'load'});
  await page.waitForTimeout(550);
  check((await page.locator('#categoryStatus').textContent()).includes('53 of'),'Main Dishes bookmark filters correctly');
+ check((await page.locator('#directoryHighlightsTitle').textContent()).includes('Main Dishes'),'Main Dishes photo sidebar follows category');
+ check(await page.locator('#directoryHighlights .highlight-recipe').count()===3,'Three category-aware cards appear');
  check(await page.locator('#categoryResults').isVisible(),'Filtered results visible');
  await page.goto('http://localhost:8123/directory.html#recipeSearch',{waitUntil:'load'});
  await page.waitForTimeout(550);
@@ -49,6 +54,10 @@ try {
  await page.locator('.category-card[data-category="Mains"]').click();
  await page.waitForTimeout(350);
  check(page.url().includes('directory.html?category=Main'),'Homepage category card opens directory');
+ await page.goto('http://localhost:8123/directory.html',{waitUntil:'load'});
+ await page.waitForTimeout(500);
+ check((await page.locator('#directoryHighlightsTitle').textContent()).includes('Fresh from the Kitchen'),'Unfiltered directory shows recent additions');
+ check(await page.locator('#directoryHighlights .highlight-recipe').count()===3,'Three recent additions appear in directory photo rail');
  await page.goto('http://localhost:8123/recipe.html?recipe=midwestern-chili',{waitUntil:'load'});
  await page.waitForTimeout(500);
  await page.locator('#headerCategories > summary').click();
