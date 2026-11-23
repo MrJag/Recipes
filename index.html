@@ -7,8 +7,8 @@
   <title>Family Cookbook | Recipes &amp; Favorites</title>
   <link rel="stylesheet" href="./src/styles/cookbook.css?v=0.7.7">
   <link rel="stylesheet" href="./src/styles/editor.css?v=0.7.6">
-  <link rel="stylesheet" href="./src/styles/home.css?v=1">
-  <script defer src="./src/scripts/category-index.js?v=5"></script>
+  <link rel="stylesheet" href="./src/styles/home.css?v=2">
+  <script defer src="./src/scripts/category-index.js?v=6"></script>
 </head>
 <body class="homepage">
   <header class="site-header">
@@ -63,8 +63,12 @@
         <label class="cuisine-control" for="cuisineFilter">Cuisine
           <select id="cuisineFilter" disabled><option value="">All cuisines</option></select>
         </label>
+        <label class="protein-control" for="proteinFilter">Main ingredient
+          <select id="proteinFilter" disabled><option value="">All ingredients</option></select>
+        </label>
         <button id="clearFilters" class="reset-button" type="button">Clear filters</button>
       </div>
+      <nav id="groupNav" class="group-nav" aria-label="Browse by dish type"></nav>
       <p id="categoryStatus" class="directory-status" role="status" aria-live="polite">Loading recipes…</p>
       <div id="categoryResults" class="recipe-outline category-results"></div>
       <noscript><p>JavaScript is required for the filtered directory. <a href="./index2.html">Browse the complete cuisine index instead.</a></p></noscript>
