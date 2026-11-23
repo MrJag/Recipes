@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "0.1",
+  "id": "high-tide-cocktail",
+  "title": "High Tide Cocktail (Home Recreation)",
+  "status": "draft",
+  "category": "Drinks",
+  "headnote": "Unverified home recreation of the High Tide served at Driftwood, Laguna Beach. User enjoyed the restaurant cocktail; no evidence of tasting this home recreation yet. Makes one cocktail.",
+  "ingredientGroups": [
+    {
+      "title": "Cocktail",
+      "items": [
+        "60 ml George Dickel 8 rye whiskey",
+        "45 ml fresh pineapple juice",
+        "22 ml fresh lemon juice",
+        "15 ml ginger syrup",
+        "6–8 fresh mint leaves",
+        "Crushed ice",
+        "Optional: a few drops saline solution"
+      ]
+    },
+    {
+      "title": "Ginger syrup (separate batch)",
+      "items": [
+        "200 g sugar (approximately 1 cup)",
+        "240 g water (approximately 1 cup)",
+        "80–100 g fresh ginger, sliced"
+      ]
+    },
+    {
+      "title": "Garnish",
+      "items": [
+        "Fresh mint sprig",
+        "Pineapple wedge or leaf",
+        "Optional candied ginger"
+      ]
+    }
+  ],
+  "steps": [
+    "For the ginger syrup, combine sugar, water, and sliced ginger. Simmer for 10 minutes, let steep 20 minutes, then strain and chill.",
+    "Lightly slap the mint leaves to release their aroma. Add rye, pineapple juice, fresh lemon juice, ginger syrup, and mint to a shaker with ice.",
+    "Shake for approximately 12 seconds.",
+    "Dump into a rocks or tiki glass over crushed ice and garnish with mint and pineapple; add optional candied ginger.",
+    "Taste and adjust for balance. This recreation uses fresh lemon rather than the commercial lemon sour mix listed in the restaurant description."
+  ],
+  "reviewFlags": [
+    "Restaurant recipe amounts were not published; the measured cocktail is the assistant's May 8, 2026 approximation.",
+    "User has not confirmed the home version tastes like the restaurant drink.",
+    "Photo not supplied."
+  ],
+  "sourceNote": "Inspired by Driftwood's High Tide in Laguna Beach; recreated in prior ChatGPT discussion on May 8, 2026."
+}
