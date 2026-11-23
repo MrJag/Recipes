@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "0.1",
+  "id": "sweetango-orchard-sour",
+  "title": "Sweetango Orchard Sour",
+  "category": "Drinks",
+  "status": "draft",
+  "headnote": "A bright, apple-forward bourbon sour designed around Fowler Farms Sweetango pure apple cider. Michter’s Small Batch adds gentle vanilla and caramel notes without overpowering the fresh sweet-tart cider. No mulled spices or added syrup.",
+  "yield": "1 cocktail",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "45 ml Michter’s Small Batch Bourbon",
+        "75 ml Fowler Farms Sweetango pure apple cider",
+        "15 ml Drillaud elderflower liqueur",
+        "15 ml fresh lemon juice",
+        "Ice",
+        "Thin apple slice, for garnish (optional)"
+      ]
+    }
+  ],
+  "steps": [
+    "Add the bourbon, Sweetango cider, elderflower liqueur and fresh lemon juice to a cocktail shaker filled with ice.",
+    "Shake vigorously for about 12 seconds.",
+    "Double-strain into a chilled coupe. Garnish with a thin apple slice if desired."
+  ],
+  "reviewFlags": [
+    "Draft — recipe has not yet been mixed and taste-tested; adjust lemon or elderflower after tasting.",
+    "Add a dedicated cocktail photograph before finalizing the recipe."
+  ],
+  "sourceNote": "Developed in conversation for Fowler Farms Sweetango cider, using Michter’s Small Batch Bourbon. Intended to preserve the cider’s bright, sweet-tart character without mulled spices."
+}
