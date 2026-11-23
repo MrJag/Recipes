@@ -63,3 +63,12 @@
 @media(max-width:680px) {
   .site-header .header-categories-menu {left:0;right:auto;width:min(285px,calc(100vw - 34px))}
 }
+
+/* Release checkpoint, shared by all three site views. */
+.site-header .app-version {
+  align-self:baseline;
+  margin-left:-5px;
+  color:#827465;
+  font:600 clamp(.66rem,.85vw,.78rem)/1.25 Arial,sans-serif;
+  letter-spacing:.015em;
+}
