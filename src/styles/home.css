@@ -89,3 +89,14 @@ body.homepage{background:#fbf8f2;color:#281f1a}
 .homepage .featured-photo-placeholder span{padding:12px 16px;text-align:center;font:italic 1rem Georgia,serif}
 .homepage .recent-recipe .draft-badge{display:inline-block;vertical-align:middle;margin-left:4px;padding:3px 6px;background:#f4dcae;color:#684727;border:1px solid #d9b976;border-radius:3px;font:700 .61rem/1 Arial,sans-serif;letter-spacing:.02em}
 .homepage .featured .recent-recipe img{width:100%}
+
+/* A single URL now hosts the landing page and individual recipes. */
+.homepage.recipe-open{background:#e7e3df}
+.homepage.recipe-open > #homeContent,
+.homepage.recipe-open > .site-footer{display:none}
+.homepage #recipeView[hidden],
+.homepage #recipeIndex[hidden]{display:none!important}
+@media print{
+  .homepage.recipe-open{background:white}
+  .homepage > #homeContent,.homepage > .site-footer{display:none!important}
+}

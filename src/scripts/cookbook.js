@@ -467,7 +467,7 @@ async function buildSidebar() {
   if (assigned.size !== catalogLinks.size) {
     throw new Error("Category index is missing " + (catalogLinks.size - assigned.size) + " recipes");
   }
-  sidebar.replaceChildren(sidebar.querySelector(".index-link"), fragment);
+  sidebar.replaceChildren(fragment);
 }
 
 function revealSelectedRecipe(link) {
@@ -482,8 +482,9 @@ function showRoute() {
   printMenu.open = false;
   const slug = new URLSearchParams(location.search).get("recipe");
   const link = recipeLinks.get(slug);
-  recipeIndex.hidden = Boolean(link);
+  recipeIndex.hidden = true; // The cuisine catalog is data, not a second visible directory.
   recipeView.hidden = !link;
+  document.body.classList.toggle("recipe-open", Boolean(link));
   if (link) {
     revealSelectedRecipe(link);
     loadRecipe(link);
@@ -495,15 +496,36 @@ function showRoute() {
 }
 
 document.addEventListener("click", event => {
-  const link = event.target.closest("[data-recipe], .index-link");
+  const link = event.target.closest("a[href]");
   if (!link || event.defaultPrevented || event.button !== 0 ||
       event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-
-  event.preventDefault();
-  if (location.href !== link.href) history.pushState(null, "", link.href);
-  showRoute();
-  window.scrollTo(0, 0);
-  (recipeView.hidden ? recipeIndex : recipeView).focus();
+  const destination = new URL(link.href);
+  const slug = destination.searchParams.get("recipe");
+  if (slug && recipeLinks.has(slug) && destination.origin === location.origin &&
+      /\\/(?:index2\\.html|index\\.html)?$/.test(destination.pathname)) {
+    event.preventDefault();
+    const canonical = new URL("./", location.href);
+    canonical.searchParams.set("recipe", slug);
+    if (location.href !== canonical.href) history.pushState(null, "", canonical.href);
+    showRoute();
+    window.scrollTo(0, 0);
+    recipeView.focus();
+    return;
+  }
+  // Header section links should also work from within a recipe.
+  if (document.body.classList.contains("recipe-open") &&
+      link.closest(".site-header") && destination.origin === location.origin &&
+      destination.pathname === location.pathname && destination.hash &&
+      !destination.searchParams.has("recipe")) {
+    event.preventDefault();
+    history.pushState(null, "", destination.href);
+    showRoute();
+    const target = document.querySelector(destination.hash);
+    target?.scrollIntoView();
+    if (destination.hash === "#directory") {
+      document.getElementById("recipeSearch")?.focus({preventScroll:true});
+    }
+  }
 });
 
 window.addEventListener("popstate", showRoute);

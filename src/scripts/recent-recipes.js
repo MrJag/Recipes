@@ -14,7 +14,7 @@
     for (const recipe of payload.recipes.slice(0, 3)) {
       const link = document.createElement("a");
       link.className = "recent-recipe";
-      link.href = "./index2.html?recipe=" + encodeURIComponent(recipe.slug);
+      link.href = "./?recipe=" + encodeURIComponent(recipe.slug);
       if (recipe.photo) {
         const img = document.createElement("img");
         img.src = new URL((recipe.photo.startsWith("./") ? recipe.photo.slice(2) : recipe.photo), location.href).href;

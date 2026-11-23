@@ -256,7 +256,6 @@
 .recipe-outline a { color: var(--ink); text-underline-offset: .17em; }
 .recipe-outline a:hover, .recipe-outline a:focus-visible { color: var(--accent); }
 .recipe-sidebar a { text-decoration: none; }
-.recipe-sidebar a.index-link { color: var(--accent); text-decoration: underline; }
 
 .print-menu-bar {
   position: sticky;
