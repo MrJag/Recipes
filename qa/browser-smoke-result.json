@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-23T22:51:09.468Z",
+  "checks": [
+    {
+      "label": "Direct recipe URL switches to recipe view",
+      "pass": true
+    },
+    {
+      "label": "Recipe viewer is visible",
+      "pass": true
+    },
+    {
+      "label": "Landing page hides on recipe",
+      "pass": true
+    },
+    {
+      "label": "Selected recipe is rendered",
+      "pass": true
+    },
+    {
+      "label": "Sidebar contains recipe navigation",
+      "pass": true
+    },
+    {
+      "label": "Brand navigates back home",
+      "pass": true
+    },
+    {
+      "label": "Another direct recipe opens",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "pass": true
+}
