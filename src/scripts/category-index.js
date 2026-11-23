@@ -40,10 +40,19 @@ const nonCuisineGroups = new Set(["Breakfast", "Dessert", "Drinks"]);
 const cuisineFilter = document.getElementById("cuisineFilter");
 const results = document.getElementById("categoryResults");
 const status = document.getElementById("categoryStatus");
+const searchInput = document.getElementById("recipeSearch");
+const clearButton = document.getElementById("clearFilters");
+let activeCategory = "";
+let loadedRecipes = [];
 const indexUrl = new URL("./index2.html", location.href);
 
 function renderCategories(recipes) {
-  const matching = recipes.filter(recipe => !cuisineFilter.value || recipe.cuisine === cuisineFilter.value);
+  const term = searchInput.value.trim().toLocaleLowerCase();
+  const matching = recipes.filter(recipe =>
+    (!cuisineFilter.value || recipe.cuisine === cuisineFilter.value) &&
+    (!activeCategory || recipe.category === activeCategory) &&
+    (!term || recipe.title.toLocaleLowerCase().includes(term) || recipe.cuisine.toLocaleLowerCase().includes(term))
+  );
   results.replaceChildren();
   for (const category of [...Object.keys(categoryRecipes), "Uncategorized"]) {
     const entries = matching.filter(recipe => recipe.category === category);
@@ -74,8 +83,8 @@ function renderCategories(recipes) {
     results.appendChild(section);
   }
   status.textContent = matching.length
-    ? `${matching.length} ${matching.length === 1 ? "recipe" : "recipes"}`
-    : "No recipes match this cuisine.";
+    ? `${matching.length} ${matching.length === 1 ? "recipe" : "recipes"}${activeCategory ? " · " + activeCategory : ""}`
+    : "No recipes match your filters.";
 }
 
 async function loadCatalog() {
@@ -99,10 +108,29 @@ async function loadCatalog() {
   const cuisines = [...new Set(recipes.map(recipe => recipe.cuisine))].sort((a, b) => a.localeCompare(b));
   for (const cuisine of cuisines) cuisineFilter.add(new Option(cuisine, cuisine));
   cuisineFilter.disabled = false;
-  cuisineFilter.addEventListener("change", () => renderCategories(recipes));
+  loadedRecipes = recipes;
+  cuisineFilter.addEventListener("change", () => renderCategories(loadedRecipes));
+  searchInput.addEventListener("input", () => renderCategories(loadedRecipes));
+  clearButton.addEventListener("click", () => {
+    activeCategory = "";
+    cuisineFilter.value = "";
+    searchInput.value = "";
+    renderCategories(loadedRecipes);
+  });
+  for (const card of document.querySelectorAll("[data-category]")) {
+    card.addEventListener("click", () => {
+      activeCategory = card.dataset.category || "";
+      cuisineFilter.value = "";
+      searchInput.value = "";
+      renderCategories(loadedRecipes);
+    });
+  }
+  document.getElementById("searchShortcut")?.addEventListener("click", () => {
+    window.setTimeout(() => searchInput.focus({ preventScroll: true }), 0);
+  });
   renderCategories(recipes);
 }
 
 loadCatalog().catch(() => {
-  status.textContent = "Couldn’t load the recipe catalog. Open the original cuisine index to browse recipes.";
+  status.replaceChildren(document.createTextNode("Couldn’t load the recipe catalog. "), Object.assign(document.createElement("a"), {href: "./index2.html", textContent: "Browse the classic cuisine index."}));
 });
