@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "0.1",
+  "id": "meatballs-calabrian-chili-sauce",
+  "title": "Meatballs with Calabrian Chili Tomato Sauce",
+  "status": "draft",
+  "category": "Italian",
+  "headnote": "Isabelle Heikens' meatballs with bacon and spicy tomato sauce, originally published in At Isabelle's (Sep 27, 2026). Makes about 20 large meatballs. Favorable remarks in the newsletter were the author's, not a confirmed user cooking test.",
+  "ingredientGroups": [
+    {
+      "title": "Meatballs",
+      "items": [
+        "600 g lean ground beef",
+        "300 g very cold thick-cut bacon",
+        "1 large yellow onion",
+        "6 garlic cloves",
+        "1 cup fresh parsley",
+        "90 g panko breadcrumbs (original: 1½ cups; approximate)",
+        "120 g milk (original: ½ cup; approximate)",
+        "75 g finely grated Parmesan (original: ¾ cup; approximate)",
+        "2 tsp dried thyme",
+        "Black pepper to taste",
+        "2 large eggs",
+        "10 g Diamond Crystal kosher salt (original: 2 tsp; approximate)",
+        "Olive oil to sear"
+      ]
+    },
+    {
+      "title": "Calabrian chili tomato sauce",
+      "items": [
+        "1 large onion, diced",
+        "3 garlic cloves, thinly sliced",
+        "30 g tomato paste (original: 2 tbsp; approximate)",
+        "15 g Calabrian chili paste (original: 1 tbsp; approximate)",
+        "1,590 g canned whole tomatoes (original: two 28-oz cans), crushed by hand",
+        "Water to loosen sauce",
+        "Butter to finish pasta",
+        "Pasta for serving, optional"
+      ]
+    }
+  ],
+  "steps": [
+    "Pulse the cold bacon until finely minced, stopping short of a paste. Combine it with the beef.",
+    "Finely process the onion, garlic, and parsley and add to the meat.",
+    "Soak the panko in the milk; mix with Parmesan, thyme, pepper, and eggs. Season meat with salt, then gently combine with the soaked breadcrumb mixture without overworking.",
+    "Shape into about 20 large meatballs. Sear in batches in a lightly oiled Dutch oven until browned on all sides, then transfer to a plate.",
+    "For the sauce, soften diced onion in the pan, then add sliced garlic. Stir in tomato and Calabrian chili pastes and cook until darkened and fragrant.",
+    "Add crushed tomatoes and some water, scraping the pan. Bring to a simmer, nestle in the seared meatballs, cover and cook gently for 30–45 minutes until cooked through (160°F at center for ground beef).",
+    "Cook pasta if using, toss with tomato sauce and a little butter, and serve with meatballs."
+  ],
+  "reviewFlags": [
+    "External newsletter recipe, not verified as cooked or enjoyed by the user.",
+    "Approximate conversions from cups and spoonfuls need validation before the draft is marked final.",
+    "Photo not supplied."
+  ],
+  "sourceNote": "Isabelle Heikens, At Isabelle's, September 27, 2026: https://open.substack.com/pub/atisabelles/p/meatballs"
+}
