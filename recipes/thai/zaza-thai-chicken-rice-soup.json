@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "0.1",
+  "id": "zaza-thai-chicken-rice-soup",
+  "title": "ZaZa Thai Chicken Rice Soup (Copycat)",
+  "category": "Thai",
+  "status": "draft",
+  "subtitle": "Traditional ginger-garlic chicken and jasmine rice soup",
+  "headnote": "A comforting Thai-style chicken rice soup with rice softened until it partly breaks down, finished with fried garlic and herbs. Draft: exact quantities for aromatics and seasonings still require confirmation.",
+  "ingredientGroups": [
+    {
+      "title": "Soup",
+      "items": [
+        "8 cups chicken stock",
+        "1½ lb bone-in chicken thighs",
+        "¾ cup jasmine rice",
+        "Fresh ginger (quantity to confirm)",
+        "Celery (quantity to confirm)",
+        "Garlic (quantity to confirm)",
+        "Fish sauce, to taste",
+        "Ground white pepper, to taste",
+        "Sugar, to taste"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Fried garlic",
+        "Sliced green onion",
+        "Fresh cilantro"
+      ]
+    }
+  ],
+  "steps": [
+    "Add the stock, bone-in chicken thighs, ginger, celery, and garlic to a pot. Bring to a gentle simmer and cook for about 30 minutes, until the chicken is cooked through.",
+    "Remove the chicken, let it cool enough to handle, and shred the meat; discard the bones.",
+    "Add jasmine rice to the aromatic broth. Simmer for 45–60 minutes, stirring periodically, until the rice is soft and partly broken down.",
+    "Season with fish sauce, white pepper, and sugar to taste. Return the shredded chicken and heat through.",
+    "Ladle into bowls and garnish with fried garlic, green onion, and cilantro."
+  ],
+  "reviewFlags": [
+    "The prior recipe specified the core ingredients and cooking times but did not preserve exact amounts for ginger, celery, garlic, fish sauce, sugar, or white pepper. Keep as Draft pending confirmation."
+  ],
+  "sourceNote": "ZaZa Thai Chicken Rice Soup copycat from conversation, July 25, 2026; traditional version (not the leftover-rice variation)."
+}
