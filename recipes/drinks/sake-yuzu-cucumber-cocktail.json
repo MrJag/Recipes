@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "0.1",
+  "id": "sake-yuzu-cucumber-cocktail",
+  "title": "Sake–Yuzu Cucumber Cocktail",
+  "status": "draft",
+  "category": "Drinks",
+  "headnote": "DRAFT / UNTESTED REVISED FORMULA — October 5, 2026 experiment. Earlier version was tasted and described as not sweet enough; latest proposed revision below was not confirmed as tested. Makes one cocktail.",
+  "ingredientGroups": [
+    {
+      "title": "Latest proposed build",
+      "items": [
+        "60 ml sake",
+        "5–7.5 ml gin (restrained; 15 g was too strong in earlier trial)",
+        "12.5 ml fresh lemon juice",
+        "5 ml bergamot syrup",
+        "20–22 g yuzu honey tea (jarred yuzu-honey preserve)",
+        "12 g cucumber",
+        "Tiny pinch salt or 2 drops saline solution",
+        "Ice"
+      ]
+    },
+    {
+      "title": "Garnish",
+      "items": [
+        "Thin cucumber slice",
+        "Twisted lemon peel"
+      ]
+    },
+    {
+      "title": "Optional bergamot-free alternative (not part of the main recipe)",
+      "items": [
+        "Omit the 5 ml bergamot syrup",
+        "Use 22–25 g yuzu honey tea instead of 20–22 g",
+        "Use 10–12.5 ml lemon juice"
+      ]
+    }
+  ],
+  "steps": [
+    "Muddle 12 g cucumber gently in a shaker to release its juice and aroma.",
+    "Add sake, restrained amount of gin, lemon juice, bergamot syrup, yuzu honey tea, and a tiny amount of salt or saline.",
+    "Add ice and shake vigorously until chilled and the yuzu-honey preserve is fully dispersed.",
+    "Double-strain over fresh ice into a chilled rocks glass.",
+    "Garnish with a cucumber slice and expressed/twisted lemon peel. Taste and adjust the next build for sweetness and acidity."
+  ],
+  "reviewFlags": [
+    "DRAFT — this is the latest proposed revision, not a verified successful final drink.",
+    "October 5 initial tested build: 60 ml sake, 15 ml lemon, 15 ml bergamot syrup, 9 g cucumber, ½ tbsp yuzu-honey tea. User reported it was not sweet enough.",
+    "Gin at 15 g was reported too strong. Keep it restrained at approximately 5–7.5 ml (the user's accepted range was 5–10 g).",
+    "No photo supplied."
+  ],
+  "sourceNote": "Reconstructed from earlier user/assistant cocktail development conversations (February, October 2026)."
+}
