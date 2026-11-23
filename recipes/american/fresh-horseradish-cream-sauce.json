@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "0.1",
+  "id": "fresh-horseradish-cream-sauce",
+  "title": "Fresh Horseradish Cream Sauce",
+  "status": "draft",
+  "category": "American",
+  "headnote": "Standalone creamy horseradish spread from June 14, 2026 conversation; made for Roast Beef, Swiss & Horseradish Ciabatta. The discussed quantities were 2 tbsp freshly grated horseradish, ¼ cup sour cream, 1 tsp Dijon, and a pinch of salt. Approximate gram equivalents below; exact amount of vinegar for this small sauce batch was not recorded.",
+  "ingredientGroups": [
+    {
+      "title": "Sauce",
+      "items": [
+        "12–15 g freshly grated horseradish root (original: 2 tbsp; approximate)",
+        "60 g sour cream (original: ¼ cup; approximate)",
+        "5 g Dijon mustard (original: 1 tsp; approximate)",
+        "Pinch of salt",
+        "A few drops of white vinegar, optional, to fix the horseradish heat after grating"
+      ]
+    }
+  ],
+  "steps": [
+    "Peel the fresh horseradish root and finely grate 2 tablespoons in a well-ventilated area; avoid leaning over the freshly grated root.",
+    "For more pronounced heat, allow the fresh grated horseradish to stand about 1–3 minutes, then add a few drops of vinegar if desired to stabilize the pungency. This vinegar amount is a practical small-batch suggestion, not a recovered exact historical measurement.",
+    "Mix the grated horseradish with sour cream, Dijon mustard, and a pinch of salt until smooth.",
+    "Taste and adjust salt or horseradish. Refrigerate until ready to serve, then spread generously onto ciabatta with roast beef and Swiss."
+  ],
+  "reviewFlags": [
+    "Draft / untested: no verified personal outcome.",
+    "Fresh-root preparation in the earlier discussion also referenced 2–3 tbsp vinegar for a separate larger prepared-horseradish base; that quantity is NOT applied to this small cream sauce.",
+    "Gram equivalents and optional vinegar drops are approximations.",
+    "No user-supplied page-one photo."
+  ]
+}
