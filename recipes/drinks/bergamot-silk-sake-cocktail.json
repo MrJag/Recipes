@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "0.1",
+  "id": "bergamot-silk-sake-cocktail",
+  "title": "Bergamot Silk (Sake Cocktail)",
+  "status": "draft",
+  "category": "Drinks",
+  "headnote": "DRAFT / UNTESTED FINAL VERSION — Egg-free revised Bergamot Silk from October 18, 2026. Makes two cocktails. Earlier February version used egg white; this version deliberately omits it. Lemon is adjusted to taste.",
+  "ingredientGroups": [
+    {
+      "title": "For 2 cocktails",
+      "items": [
+        "120 ml dry junmai sake (4 oz)",
+        "37.5 ml 1:1 bergamot syrup (1¼ oz)",
+        "7.5 ml Drillaud elderflower liqueur (¼ oz)",
+        "30 ml fresh lemon juice to start (1 oz); add up to 7.5 ml more (¼ oz) if too sweet",
+        "2 dashes Peychaud’s bitters",
+        "Optional: 3–4 drops saline solution",
+        "Ice"
+      ]
+    }
+  ],
+  "steps": [
+    "Chill two coupe or Nick & Nora glasses.",
+    "Add the sake, bergamot syrup, elderflower liqueur, 30 ml fresh lemon juice, Peychaud’s bitters, and optional saline to a cocktail shaker filled with ice.",
+    "Shake briskly for 10–12 seconds, then fine-strain evenly into the chilled glasses.",
+    "Taste for balance before repeating the batch. If too sweet, increase lemon to a total of 37.5 ml (1¼ oz) per two cocktails.",
+    "Serve without egg white; this is the finalized egg-free direction, not the earlier February egg-white build."
+  ],
+  "reviewFlags": [
+    "DRAFT — latest egg-free version recovered from October 18 conversation; no confirmed tasting result for this exact revision.",
+    "Original February version included an egg white, but has intentionally not been substituted into the October recipe.",
+    "No photo supplied."
+  ],
+  "sourceNote": "Reconstructed from earlier user/assistant cocktail development conversations (February, October 2026)."
+}
