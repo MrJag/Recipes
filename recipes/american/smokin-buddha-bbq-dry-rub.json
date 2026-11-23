@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "0.1",
+  "id": "smokin-buddha-bbq-dry-rub",
+  "title": "Smokin' Buddha BBQ Dry Rub (Coffee & Kashmiri Variation)",
+  "status": "draft",
+  "category": "American",
+  "headnote": "DRAFT / UNTESTED. Reconstructed September 19, 2026 large-batch variation of Smokin' Buddha BBQ rub. The final direction swapped the original paprika/chili blend for Kashmiri, Hungarian, and ancho chilies; raised the garlic, lowered cayenne, and added finely ground medium-dark Brazilian Arabica coffee. Historical batch is industrial-scale, approximately 6.3 kg; portion down as needed.",
+  "ingredientGroups": [
+    {
+      "title": "Full reconstructed batch (approximately 6.3 kg)",
+      "items": [
+        "2,155 g kosher salt (original: 4 lb 12 oz)",
+        "1,701 g turbinado sugar (original: 3 lb 12 oz)",
+        "907 g light brown sugar (original: 2 lb)",
+        "250 g Kashmiri chili powder",
+        "200 g sweet Hungarian paprika",
+        "88 g pure ancho chile powder",
+        "142 g granulated onion (original: 5 oz)",
+        "170 g granulated garlic (final adjustment)",
+        "198 g coarse black pepper (original: 7 oz)",
+        "30 g cayenne pepper (final adjustment)",
+        "113 g ground cumin (original: 4 oz)",
+        "57 g ground nutmeg (original: 2 oz)",
+        "57 g dried thyme (original: 2 oz)",
+        "60 g medium-dark Brazilian Arabica coffee, finely ground like espresso"
+      ]
+    }
+  ],
+  "steps": [
+    "Weigh all ingredients accurately into a very large food-safe mixing bowl or clean container.",
+    "Break up any clumps in the brown sugar, then whisk or tumble all dry ingredients thoroughly until completely uniform. Avoid breathing the fine pepper and chili dust.",
+    "Transfer to airtight jars, label the batch, and store in a cool, dark, dry location.",
+    "Apply directly to meat without a binder. Optionally allow 12–24 hours of refrigerated rest after seasoning before smoking."
+  ],
+  "reviewFlags": [
+    "UNTESTED: no user feedback on this exact final reconstructed rub.",
+    "Historical total was described as 13 lb 6 oz (6,067 g), but the listed original weights plus final substitutions sum to approximately 6,326 g; ingredient weights are preserved and arithmetic discrepancy flagged.",
+    "Large batch: consider scaling before making, rather than assuming quantities are household-sized.",
+    "Photo not supplied."
+  ],
+  "sourceNote": "Recovered September 19, 2026 Smokin' Buddha BBQ rub reconstruction; not asserted as an official published formulation."
+}
