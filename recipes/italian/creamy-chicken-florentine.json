@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "0.1",
+  "id": "creamy-chicken-florentine",
+  "title": "Creamy Chicken Florentine",
+  "category": "Italian",
+  "status": "draft",
+  "subtitle": "With slow-roasted cherry tomatoes",
+  "servings": "Not specified (3 chicken breasts)",
+  "prepTime": "Not specified",
+  "cookTime": "About 30 minutes on the stovetop, plus optional 90-minute tomato roasting",
+  "photo": "",
+  "headnote": "ThatDudeCanCook's chicken Florentine with a shallot, garlic, white-wine, stock, Parmesan and cream sauce. The optional slow-roasted tomatoes bring concentrated acidity. Ingredient quantities are intentionally left unverified where the video transcript does not specify them; consult the original description before cooking.",
+  "ingredientGroups": [
+    {
+      "title": "Chicken",
+      "items": [
+        "3 boneless skinless chicken breasts",
+        "Rosemary salt, to taste (or salt)",
+        "All-purpose flour, enough for a light coating (quantity not stated)",
+        "Neutral high-heat oil, such as avocado oil (quantity not stated)"
+      ]
+    },
+    {
+      "title": "Creamy Florentine sauce",
+      "items": [
+        "Olive oil (quantity not stated)",
+        "Butter (quantity not stated)",
+        "Shallots, diced (quantity not stated; onion may substitute)",
+        "Garlic, sliced (quantity not stated)",
+        "Dry white wine (quantity not stated)",
+        "Chicken stock (quantity not stated)",
+        "Heavy cream (quantity not stated)",
+        "Parmesan cheese, finely grated (quantity not stated)",
+        "Freshly ground black pepper, to taste",
+        "Fresh spinach (quantity not stated)"
+      ]
+    },
+    {
+      "title": "Optional slow-roasted tomatoes and finish",
+      "items": [
+        "Cherry or grape tomatoes, halved (quantity not stated)",
+        "Olive oil, to coat tomatoes",
+        "Rosemary salt or salt, to taste",
+        "Lemon, for a finishing squeeze"
+      ]
+    }
+  ],
+  "steps": [
+    "Optional tomatoes: Preheat the oven to 275°F. Toss halved cherry or grape tomatoes with olive oil and rosemary salt or regular salt. Place cut-side up on a parchment-lined sheet pan and slow-roast for about 90 minutes until wrinkled and concentrated. Alternatively, roast at 225°F for about 2½ hours.",
+    "Prepare the chicken: Remove the thin tail from each chicken breast, then halve the thicker portion to make three pieces per breast (nine pieces total). Season the chicken itself with rosemary salt, not the flour.",
+    "Lightly dredge the seasoned chicken in all-purpose flour, tapping off the excess. This small amount of flour helps thicken the sauce later; no separate roux is needed.",
+    "Heat a little neutral oil in a skillet over medium-high heat. Sear the chicken in batches until browned, about 2½ minutes per side. Transfer to a rack. Check that the chicken reaches a safe internal temperature of 165°F; times depend on thickness.",
+    "Choose the sauce pan: Reuse the chicken pan for more browned flavor (a darker sauce), or use a clean pan for a whiter cream sauce.",
+    "Heat a little olive oil and butter in the pan. Add diced shallots and cook for about 3 minutes. Add sliced garlic and cook for about 1 more minute.",
+    "Pour in dry white wine and reduce over relatively high heat until approximately 80% has evaporated and the remaining liquid is syrupy.",
+    "Add chicken stock and reduce by about half, approximately 5 minutes.",
+    "Add heavy cream. Gradually whisk in finely grated Parmesan and add black pepper to taste. Cook gently for about 3–4 minutes, until the sauce begins to thicken. Taste before adding any more salt because Parmesan contributes saltiness.",
+    "Reduce the heat to medium-low. Add fresh spinach in batches, gently wilting for about 30 seconds; avoid overcooking it.",
+    "Return the chicken to the sauce. Warm gently over low heat for about 3–4 minutes, confirming the thickest chicken piece is at least 165°F.",
+    "Arrange the roasted tomatoes over the chicken rather than mixing them into the pale sauce. Finish with a light squeeze of lemon and serve family-style. Garlic bread, pasta, mashed potatoes, polenta or rice work well alongside."
+  ],
+  "sourceNote": "Source: ThatDudeCanCook, “How to Make Creamy Chicken Florentine,” https://www.youtube.com/watch?v=-oxzoIR5ofQ. Method reconstructed from the full TranscriptX transcript; the YouTube description ingredient quantities could not be retrieved.",
+  "reviewFlags": [
+    "HIGH PRIORITY: Retrieve and verify all ingredient quantities against the original YouTube video description; they are not present in the spoken transcript.",
+    "No recipe photo committed yet; add assets/masters/creamy-chicken-florentine.png and public/images/creamy-chicken-florentine.jpg, then set photo to ./public/images/creamy-chicken-florentine.jpg.",
+    "Serving yield and preparation time not specified in transcript."
+  ]
+}
