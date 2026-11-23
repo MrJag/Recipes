@@ -12,7 +12,7 @@
       for (const group of data.groups) {
         if (!group.name) continue;
         const link = document.createElement("a");
-        link.href = "./?category=" + encodeURIComponent(group.name) + "#directory";
+        link.href = "./directory.html?category=" + encodeURIComponent(group.name);
         link.textContent = group.name;
         links.appendChild(link);
       }

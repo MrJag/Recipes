@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse and search the Family Cookbook recipe directory.">
+  <title>Recipe Directory | Family Cookbook</title>
+  <link rel="stylesheet" href="./src/styles/cookbook.css?v=0.7.7">
+  <link rel="stylesheet" href="./src/styles/editor.css?v=0.7.8">
+  <link rel="stylesheet" href="./src/styles/home.css?v=6">
+  <link rel="stylesheet" href="./src/styles/site-header.css?v=3">
+  <script defer src="./src/scripts/category-index.js?v=12"></script>
+  <script defer src="./src/scripts/header-categories.js?v=2"></script>
+</head>
+<body class="homepage directory-page">
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Family Cookbook home"><span class="brand-mark" aria-hidden="true">❧</span>Family Cookbook</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#directory">Recipes</a>
+      <details class="header-categories" id="headerCategories">
+        <summary>Categories <span class="menu-chevron" aria-hidden="true">▾</span></summary>
+        <div class="header-categories-menu" role="group" aria-label="Recipe categories">
+          <a href="./?category=Soups%2C%20Stews%20%26%20Chili#directory">Soups, Stews &amp; Chili</a>
+          <a href="./?category=Main%20Dishes#directory">Main Dishes</a>
+          <a href="./?category=Pizza%2C%20Pasta%20%26%20Noodles#directory">Pizza, Pasta &amp; Noodles</a>
+          <a href="./?category=Sides%2C%20Breads%20%26%20Grains#directory">Sides, Breads &amp; Grains</a>
+          <a href="./?category=Sauces%2C%20Condiments%20%26%20Seasonings#directory">Sauces, Condiments &amp; Seasonings</a>
+          <a href="./?category=Breakfast%20%26%20Brunch#directory">Breakfast &amp; Brunch</a>
+          <a href="./?category=Desserts%20%26%20Baking#directory">Desserts &amp; Baking</a>
+          <a href="./?category=Drinks%20%26%20Cocktails#directory">Drinks &amp; Cocktails</a>
+          <a href="./?category=Techniques%20%26%20Guides#directory">Techniques &amp; Guides</a>
+        </div>
+      </details>
+      <a href="./#about">About</a>
+      <a href="#directory" id="searchShortcut">Search ⌕</a>
+    </nav>
+  </header>
+<main class="directory-main">
+    <section class="directory home-container" id="directory" aria-labelledby="directoryHeading">
+      <div class="directory-header">
+        <h2 id="directoryHeading">Recipe Directory</h2>
+        <p class="eyebrow">Browse, search, and explore our full collection of recipes.</p>
+      </div>
+      <div class="directory-tools">
+        <label class="search-control" for="recipeSearch">Search recipes
+          <input id="recipeSearch" type="search" placeholder="Try pizza, chicken, cocktail…" autocomplete="off">
+        </label>
+        <label class="cuisine-control" for="cuisineFilter">Cuisine
+          <select id="cuisineFilter" disabled><option value="">All cuisines</option></select>
+        </label>
+        <label class="protein-control" for="proteinFilter">Main ingredient
+          <select id="proteinFilter" disabled><option value="">All ingredients</option></select>
+        </label>
+        <button id="clearFilters" class="reset-button" type="button">Clear filters</button>
+      </div>
+      <nav id="groupNav" class="group-nav" aria-label="Browse by dish type"></nav>
+      <p id="categoryStatus" class="directory-status" role="status" aria-live="polite">Loading recipes…</p>
+      <div id="categoryResults" class="recipe-outline category-results"></div>
+      <noscript><p>JavaScript is required to browse and open recipes.</p></noscript>
+    </section>
+</main>
+<footer id="about" class="site-footer">Family Cookbook · Recipes gathered with care</footer>
+</body>
+</html>

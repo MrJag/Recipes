@@ -7,40 +7,42 @@
   <title>Family Cookbook | Recipes &amp; Favorites</title>
   <link rel="stylesheet" href="./src/styles/cookbook.css?v=0.7.7">
   <link rel="stylesheet" href="./src/styles/editor.css?v=0.7.8">
-  <link rel="stylesheet" href="./src/styles/home.css?v=5">
+  <link rel="stylesheet" href="./src/styles/home.css?v=6">
   <link rel="stylesheet" href="./src/styles/site-header.css?v=3">
   <script>
-    // Preserve old bookmarks from the previous combined-page build.
-    if (new URLSearchParams(location.search).has("recipe")) {
+    // Preserve old recipe links and category bookmarks.
+    const params = new URLSearchParams(location.search);
+    if (params.has("recipe")) {
       location.replace("./recipe.html" + location.search + location.hash);
+    } else if (params.has("category") || params.has("cuisine") || params.has("ingredient") || params.has("search")) {
+      location.replace("./directory.html" + location.search + location.hash);
     }
   </script>
-  <script defer src="./src/scripts/category-index.js?v=11"></script>
   <script defer src="./src/scripts/recent-recipes.js?v=3"></script>
-  <script defer src="./src/scripts/header-categories.js?v=1"></script>
+  <script defer src="./src/scripts/header-categories.js?v=2"></script>
 
 </head>
 <body class="homepage">
   <header class="site-header">
     <a class="brand" href="./" aria-label="Family Cookbook home"><span class="brand-mark" aria-hidden="true">❧</span>Family Cookbook</a>
     <nav class="site-nav" aria-label="Main navigation">
-      <a href="#directory">Recipes</a>
+      <a href="./directory.html">Recipes</a>
       <details class="header-categories" id="headerCategories">
         <summary>Categories <span class="menu-chevron" aria-hidden="true">▾</span></summary>
         <div class="header-categories-menu" role="group" aria-label="Recipe categories">
-          <a href="./?category=Soups%2C%20Stews%20%26%20Chili#directory">Soups, Stews &amp; Chili</a>
-          <a href="./?category=Main%20Dishes#directory">Main Dishes</a>
-          <a href="./?category=Pizza%2C%20Pasta%20%26%20Noodles#directory">Pizza, Pasta &amp; Noodles</a>
-          <a href="./?category=Sides%2C%20Breads%20%26%20Grains#directory">Sides, Breads &amp; Grains</a>
-          <a href="./?category=Sauces%2C%20Condiments%20%26%20Seasonings#directory">Sauces, Condiments &amp; Seasonings</a>
-          <a href="./?category=Breakfast%20%26%20Brunch#directory">Breakfast &amp; Brunch</a>
-          <a href="./?category=Desserts%20%26%20Baking#directory">Desserts &amp; Baking</a>
-          <a href="./?category=Drinks%20%26%20Cocktails#directory">Drinks &amp; Cocktails</a>
-          <a href="./?category=Techniques%20%26%20Guides#directory">Techniques &amp; Guides</a>
+          <a href="./directory.html?category=Soups%2C%20Stews%20%26%20Chili">Soups, Stews &amp; Chili</a>
+          <a href="./directory.html?category=Main%20Dishes">Main Dishes</a>
+          <a href="./directory.html?category=Pizza%2C%20Pasta%20%26%20Noodles">Pizza, Pasta &amp; Noodles</a>
+          <a href="./directory.html?category=Sides%2C%20Breads%20%26%20Grains">Sides, Breads &amp; Grains</a>
+          <a href="./directory.html?category=Sauces%2C%20Condiments%20%26%20Seasonings">Sauces, Condiments &amp; Seasonings</a>
+          <a href="./directory.html?category=Breakfast%20%26%20Brunch">Breakfast &amp; Brunch</a>
+          <a href="./directory.html?category=Desserts%20%26%20Baking">Desserts &amp; Baking</a>
+          <a href="./directory.html?category=Drinks%20%26%20Cocktails">Drinks &amp; Cocktails</a>
+          <a href="./directory.html?category=Techniques%20%26%20Guides">Techniques &amp; Guides</a>
         </div>
       </details>
       <a href="#about">About</a>
-      <a href="#directory" id="searchShortcut">Search ⌕</a>
+      <a href="./directory.html" id="searchShortcut">Search ⌕</a>
     </nav>
   </header>
 
@@ -50,18 +52,18 @@
         <span class="eyebrow">Made, shared &amp; loved</span>
         <h1 id="heroTitle">A collection of recipes, flavors, and favorites from our kitchen.</h1>
         <p>Time-honored family recipes, new discoveries, and everyday meals we love to share.</p>
-        <a class="button" href="#directory">Browse Recipes &nbsp; →</a>
+        <a class="button" href="./directory.html">Browse Recipes &nbsp; →</a>
       </div>
       <div class="hero-photo" role="img" aria-label="Homemade Latvian pork and apricot stew"></div>
     </section>
 
     <section class="categories home-container" id="categories" aria-label="Browse recipe categories">
       <div class="category-grid">
-        <a class="category-card" href="#directory" data-category="Mains"><img src="./public/images/skirt-steak-fajitas.jpg" alt="Skirt steak fajitas" loading="lazy"><span>Mains</span></a>
-        <a class="category-card" href="#directory" data-category="Sides"><img src="./public/images/mashed-potatoes.jpg" alt="Mashed potatoes" loading="lazy"><span>Sides</span></a>
-        <a class="category-card" href="#directory" data-category="Condiments"><img src="./public/images/peanut-sauce.jpg" alt="Peanut sauce" loading="lazy"><span>Condiments</span></a>
-        <a class="category-card" href="#directory" data-category="Drinks"><img src="./public/images/fork-fire-smoked-old-fashioned.jpg" alt="Smoked Old Fashioned cocktail" loading="lazy"><span>Drinks</span></a>
-        <a class="category-card" href="#directory" data-category="Desserts"><img src="./public/images/tiramisu.jpg" alt="Tiramisu" loading="lazy"><span>Desserts</span></a>
+        <a class="category-card" href="./directory.html?category=Main%20Dishes" data-category="Mains"><img src="./public/images/skirt-steak-fajitas.jpg" alt="Skirt steak fajitas" loading="lazy"><span>Mains</span></a>
+        <a class="category-card" href="./directory.html?category=Sides%2C%20Breads%20%26%20Grains" data-category="Sides"><img src="./public/images/mashed-potatoes.jpg" alt="Mashed potatoes" loading="lazy"><span>Sides</span></a>
+        <a class="category-card" href="./directory.html?category=Sauces%2C%20Condiments%20%26%20Seasonings" data-category="Condiments"><img src="./public/images/peanut-sauce.jpg" alt="Peanut sauce" loading="lazy"><span>Condiments</span></a>
+        <a class="category-card" href="./directory.html?category=Drinks%20%26%20Cocktails" data-category="Drinks"><img src="./public/images/fork-fire-smoked-old-fashioned.jpg" alt="Smoked Old Fashioned cocktail" loading="lazy"><span>Drinks</span></a>
+        <a class="category-card" href="./directory.html?category=Desserts%20%26%20Baking" data-category="Desserts"><img src="./public/images/tiramisu.jpg" alt="Tiramisu" loading="lazy"><span>Desserts</span></a>
       </div>
     </section>
 
@@ -76,28 +78,7 @@
       </div>
     </section>
 
-    <section class="directory home-container" id="directory" aria-labelledby="directoryHeading">
-      <div class="directory-header">
-        <h2 id="directoryHeading">Recipe Directory</h2>
-        <p class="eyebrow">Browse, search, and explore our full collection of recipes.</p>
-      </div>
-      <div class="directory-tools">
-        <label class="search-control" for="recipeSearch">Search recipes
-          <input id="recipeSearch" type="search" placeholder="Try pizza, chicken, cocktail…" autocomplete="off">
-        </label>
-        <label class="cuisine-control" for="cuisineFilter">Cuisine
-          <select id="cuisineFilter" disabled><option value="">All cuisines</option></select>
-        </label>
-        <label class="protein-control" for="proteinFilter">Main ingredient
-          <select id="proteinFilter" disabled><option value="">All ingredients</option></select>
-        </label>
-        <button id="clearFilters" class="reset-button" type="button">Clear filters</button>
-      </div>
-      <nav id="groupNav" class="group-nav" aria-label="Browse by dish type"></nav>
-      <p id="categoryStatus" class="directory-status" role="status" aria-live="polite">Loading recipes…</p>
-      <div id="categoryResults" class="recipe-outline category-results"></div>
-      <noscript><p>JavaScript is required to browse and open recipes.</p></noscript>
-    </section>
+
   </main>
   <footer id="about" class="site-footer">Family Cookbook · Recipes gathered with care</footer>
 </body>

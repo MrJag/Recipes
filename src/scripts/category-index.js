@@ -135,9 +135,19 @@ function render() {
   updateGroupButtons();
 }
 
+function saveFilterUrl() {
+  const url = new URL(location.href);
+  if (selectedGroups.length === 1) url.searchParams.set("category", selectedGroups[0]);
+  else url.searchParams.delete("category");
+  for (const [name,value] of [["search",searchInput.value.trim()],["cuisine",cuisineFilter.value],["ingredient",proteinFilter.value]]) {
+    if (value) url.searchParams.set(name,value); else url.searchParams.delete(name);
+  }
+  history.replaceState(null,"",url);
+}
 function selectGroups(names) {
   selectedGroups = names;
   expandedGroup = names[0] || "Soups, Stews & Chili";
+  saveFilterUrl();
   render();
 }
 
@@ -190,13 +200,15 @@ async function loadCatalog() {
     });
     groupNav.appendChild(button);
   }
-  cuisineFilter.addEventListener("change",render);
-  proteinFilter.addEventListener("change",render);
-  searchInput.addEventListener("input",render);
+  const changeFilter = () => { saveFilterUrl(); render(); };
+  cuisineFilter.addEventListener("change",changeFilter);
+  proteinFilter.addEventListener("change",changeFilter);
+  searchInput.addEventListener("input",changeFilter);
   clearButton.addEventListener("click",() => {
     selectedGroups = [];
     searchInput.value = cuisineFilter.value = proteinFilter.value = "";
     expandedGroup = "Soups, Stews & Chili";
+    saveFilterUrl();
     render();
   });
   for (const card of document.querySelectorAll("[data-category]")) {
@@ -219,7 +231,11 @@ async function loadCatalog() {
   $("searchShortcut")?.addEventListener("click",() => {
     window.setTimeout(() => searchInput.focus({preventScroll:true}),0);
   });
-  const requestedGroup = new URLSearchParams(location.search).get("category");
+  const urlFilters = new URLSearchParams(location.search);
+  const requestedGroup = urlFilters.get("category");
+  searchInput.value = urlFilters.get("search") || "";
+  if (urlFilters.has("cuisine")) cuisineFilter.value = urlFilters.get("cuisine");
+  if (urlFilters.has("ingredient")) proteinFilter.value = urlFilters.get("ingredient");
   if (requestedGroup && taxonomy.groups.some(group => group.name === requestedGroup)) {
     selectedGroups = [requestedGroup];
     expandedGroup = requestedGroup;
@@ -230,8 +246,8 @@ async function loadCatalog() {
 loadCatalog().catch(error => {
   console.error("Cookbook catalog:",error);
   const link = document.createElement("a");
-  link.href = "./recipe.html";
-  link.textContent = "Browse the recipe index.";
+  link.href = "./directory.html";
+  link.textContent = "Reload the recipe directory.";
   status.replaceChildren(document.createTextNode("Couldn’t load the recipe directory. "),link);
 });
 })();

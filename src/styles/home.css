@@ -100,3 +100,9 @@ body.homepage{background:#fbf8f2;color:#281f1a}
   .homepage.recipe-open{background:white}
   .homepage > #homeContent,.homepage > .site-footer{display:none!important}
 }
+
+/* Recipe directory has its own page and starts directly beneath the shared header. */
+.homepage.directory-page .directory-main {min-height:calc(100vh - 180px)}
+.homepage.directory-page .directory {padding-top:clamp(28px,4vw,52px)}
+.homepage.directory-page .directory-header h2 {margin-top:0}
+.homepage.directory-page .site-nav a[aria-current="page"] {text-decoration:underline;text-underline-offset:5px}
