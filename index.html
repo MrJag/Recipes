@@ -3,28 +3,73 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Family Cookbook | Browse by Category</title>
+  <meta name="description" content="A collection of family recipes, flavors, and favorites from our kitchen.">
+  <title>Family Cookbook | Recipes &amp; Favorites</title>
   <link rel="stylesheet" href="./src/styles/cookbook.css?v=0.7.7">
   <link rel="stylesheet" href="./src/styles/editor.css?v=0.7.6">
-  <script defer src="./src/scripts/category-index.js?v=4"></script>
-  <style>
-    .index-switch a { color: var(--accent); text-underline-offset: .17em; }
-    .cuisine-control { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-bottom: 24px; }
-    .cuisine-control select { min-height: 44px; max-width: 100%; padding: 6px 10px; border: 1px solid var(--rule); border-radius: 4px; background: var(--paper); color: var(--ink); font: 1rem var(--font-sans); }
-    .category-results a { overflow-wrap: anywhere; }
-    .recipe-cuisine { display: block; margin-top: 2px; color: #635148; font: .8rem var(--font-sans); }
-    .category-results li + li { margin-top: 12px; }
-  </style>
+  <link rel="stylesheet" href="./src/styles/home.css?v=1">
+  <script defer src="./src/scripts/category-index.js?v=5"></script>
 </head>
-<body>
-  <main class="recipe-index">
-    <p class="index-switch"><a href="./index2.html">Original cuisine index</a></p>
-    <h1>Browse Recipes by Category</h1>
-    <label class="cuisine-control">Cuisine
-      <select id="cuisineFilter" disabled><option value="">All cuisines</option></select>
-    </label>
-    <p id="categoryStatus" role="status">Loading recipes…</p>
-    <div id="categoryResults" class="recipe-outline category-results"></div>
+<body class="homepage">
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Family Cookbook home"><span class="brand-mark" aria-hidden="true">❧</span>Family Cookbook</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#directory">Recipes</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+      <a href="#directory" id="searchShortcut">Search ⌕</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <span class="eyebrow">Made, shared &amp; loved</span>
+        <h1 id="heroTitle">A collection of recipes, flavors, and favorites from our kitchen.</h1>
+        <p>Time-honored family recipes, new discoveries, and everyday meals we love to share.</p>
+        <a class="button" href="#directory">Browse Recipes &nbsp; →</a>
+      </div>
+      <div class="hero-photo" role="img" aria-label="Homemade Latvian pork and apricot stew"></div>
+    </section>
+
+    <section class="categories home-container" id="categories" aria-label="Browse recipe categories">
+      <div class="category-grid">
+        <a class="category-card" href="#directory" data-category="Mains"><img src="./public/images/skirt-steak-fajitas.jpg" alt="Skirt steak fajitas" loading="lazy"><span>Mains</span></a>
+        <a class="category-card" href="#directory" data-category="Sides"><img src="./public/images/mashed-potatoes.jpg" alt="Mashed potatoes" loading="lazy"><span>Sides</span></a>
+        <a class="category-card" href="#directory" data-category="Condiments"><img src="./public/images/peanut-sauce.jpg" alt="Peanut sauce" loading="lazy"><span>Condiments</span></a>
+        <a class="category-card" href="#directory" data-category="Drinks"><img src="./public/images/fork-fire-smoked-old-fashioned.jpg" alt="Smoked Old Fashioned cocktail" loading="lazy"><span>Drinks</span></a>
+        <a class="category-card" href="#directory" data-category="Desserts"><img src="./public/images/chocolate-strawberry-pizza.jpg" alt="Chocolate and strawberry dessert pizza" loading="lazy"><span>Desserts</span></a>
+      </div>
+    </section>
+
+    <section class="featured" aria-labelledby="featuredHeading">
+      <div class="home-container featured-grid">
+        <div class="featured-title"><h2 id="featuredHeading">From the<br>Cookbook</h2><span class="eyebrow">Our featured favorites</span></div>
+        <a href="./index2.html?recipe=neapolitan-pizza"><img src="./public/images/neapolitan-pizza.jpg" alt="Neapolitan pizza" loading="lazy"><h3>Neapolitan Pizza</h3><p>A wood-fired favorite with a beautifully blistered crust.</p></a>
+        <a href="./index2.html?recipe=belgian-waffles"><img src="./public/images/belgian-waffles.jpg" alt="Belgian waffles" loading="lazy"><h3>Belgian Waffles</h3><p>Crisp, golden waffles for an easy weekend breakfast.</p></a>
+        <a href="./index2.html?recipe=skirt-steak-fajitas"><img src="./public/images/skirt-steak-fajitas.jpg" alt="Skirt steak fajitas" loading="lazy"><h3>Skirt Steak Fajitas</h3><p>Bold, smoky, and perfect for sharing around the table.</p></a>
+      </div>
+    </section>
+
+    <section class="directory home-container" id="directory" aria-labelledby="directoryHeading">
+      <div class="directory-header">
+        <h2 id="directoryHeading">Recipe Directory</h2>
+        <p class="eyebrow">Browse, search, and explore our full collection of recipes.</p>
+      </div>
+      <div class="directory-tools">
+        <label class="search-control" for="recipeSearch">Search recipes
+          <input id="recipeSearch" type="search" placeholder="Try pizza, chicken, cocktail…" autocomplete="off">
+        </label>
+        <label class="cuisine-control" for="cuisineFilter">Cuisine
+          <select id="cuisineFilter" disabled><option value="">All cuisines</option></select>
+        </label>
+        <button id="clearFilters" class="reset-button" type="button">Clear filters</button>
+      </div>
+      <p id="categoryStatus" class="directory-status" role="status" aria-live="polite">Loading recipes…</p>
+      <div id="categoryResults" class="recipe-outline category-results"></div>
+      <noscript><p>JavaScript is required for the filtered directory. <a href="./index2.html">Browse the complete cuisine index instead.</a></p></noscript>
+    </section>
   </main>
+  <footer id="about" class="site-footer">Family Cookbook · Recipes gathered with care · <a href="./index2.html">Browse the classic cuisine index</a></footer>
 </body>
 </html>
