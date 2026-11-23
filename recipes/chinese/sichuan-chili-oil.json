@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "0.1",
+  "id": "sichuan-chili-oil",
+  "title": "Sichuan Chili Oil (Erjingtiao & Facing Heaven)",
+  "status": "draft",
+  "category": "Chinese",
+  "headnote": "DRAFT / UNTESTED FINAL BUILD. Recovered April 21, 2026 authentic-leaning chili oil with Erjingtiao and Facing Heaven chilies, whole-spice oil infusion, a three-stage oil pour, and subtle rock-sugar sweetness. User liked a prior Mala Market version but wanted more sweetness; no tasting result for this custom version was found.",
+  "ingredientGroups": [
+    {
+      "title": "Chili bowl",
+      "items": [
+        "¾ cup Erjingtiao chili flakes (weigh after crushing; weight was not recorded)",
+        "¼ cup Facing Heaven chili flakes (weight was not recorded)",
+        "1 tbsp fine chili powder",
+        "1½ tbsp Sichuan peppercorns, lightly crushed",
+        "2 tsp crushed rock sugar (small crystals are suitable)"
+      ]
+    },
+    {
+      "title": "Infused oil",
+      "items": [
+        "2 cups neutral oil (approximately 440 g; varies by oil)",
+        "6 garlic cloves, lightly smashed",
+        "1 shallot, sliced",
+        "4 slices fresh ginger",
+        "2 scallions, cut into lengths",
+        "Star anise (quantity not recorded)",
+        "Cassia cinnamon (quantity not recorded)",
+        "Bay leaf (quantity not recorded)",
+        "Black cardamom (quantity not recorded)"
+      ]
+    }
+  ],
+  "steps": [
+    "Place all ingredients for the chili bowl into a dry, large, heatproof bowl with ample room to accommodate hot oil; stir to combine.",
+    "Add oil, garlic, shallot, ginger, scallions, and the whole spices to a pot. Gradually heat the oil to 250–275°F and hold approximately 12–15 minutes, allowing the aromatics to gently sizzle and become fragrant without scorching.",
+    "Strain out all solids and return the infused oil to the pot. Heat to around 350°F, monitoring closely with a thermometer; do not leave the hot oil unattended.",
+    "Carefully pour roughly one-third of the hot oil over the chili mixture at about 350°F. The chilies should bubble and bloom, not turn black. Keep face and hands back from steam and splatter.",
+    "Allow the remaining oil to cool to roughly 300°F, about 20–30 seconds or as indicated by your thermometer, then pour another third over the chilies.",
+    "When the remaining oil cools to around 250°F, pour the last third over the bowl and stir gently.",
+    "Let rest at least 30–60 minutes; flavor develops best over 24–48 hours. Cool fully and refrigerate in a clean airtight container; use promptly and avoid storing homemade garlic-infused chili oil at room temperature."
+  ],
+  "reviewFlags": [
+    "UNTESTED: custom final build has no confirmed taste feedback.",
+    "Amounts for whole spices and chili flake weights were not recovered; estimates were intentionally not invented.",
+    "The user specifically wanted a slight sweetness compared with a Mala Market version.",
+    "Oil temperatures are targets; trust a thermometer rather than the estimated waiting times.",
+    "Photo not supplied."
+  ],
+  "sourceNote": "Recovered from April 21, 2026 Sichuan chili oil conversation."
+}
