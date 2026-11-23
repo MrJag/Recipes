@@ -313,7 +313,7 @@ async function loadRecipe(button) {
   sidebar.querySelector("[aria-current]")?.removeAttribute("aria-current");
   sidebar.querySelector(".recipe-versions")?.remove();
   button.setAttribute("aria-current", "page");
-  button.closest("details").open = true;
+  revealSelectedRecipe(button);
   statusEl.textContent = "Loading " + file + " …";
   try {
     const response = await fetch("./" + file, {cache:"no-store"});
@@ -389,20 +389,93 @@ const recipeIndex = byId("recipeIndex");
 const recipeView = byId("recipeView");
 const printMenu = byId("printMenu");
 const recipeLinks = new Map();
+const catalogLinks = new Map();
 const recipeCount = recipeIndex.querySelectorAll(".recipe-outline a[data-recipe]").length;
 byId("recipeCount").textContent = `${recipeCount} ${recipeCount === 1 ? "recipe" : "recipes"}`;
-for (const category of recipeIndex.querySelectorAll(".recipe-outline section")) {
-  const group = el("details");
-  group.appendChild(el("summary", null, category.querySelector("h2").textContent));
-  for (const link of category.querySelectorAll("[data-recipe]")) {
-    const sidebarLink = link.cloneNode(true);
-    const slug = new URL(link.href).searchParams.get("recipe");
-    addDraftBadge(link, link.dataset.status);
-    addDraftBadge(sidebarLink, sidebarLink.dataset.status);
-    recipeLinks.set(slug, sidebarLink);
-    group.appendChild(sidebarLink);
+
+// Maintain a single recipe catalog. The landing page and recipe sidebar share
+// the same taxonomy so a recipe cannot appear under different category trees.
+for (const link of recipeIndex.querySelectorAll(".recipe-outline a[data-recipe]")) {
+  const slug = new URL(link.href).searchParams.get("recipe");
+  if (!slug || catalogLinks.has(slug)) continue;
+  addDraftBadge(link, link.dataset.status);
+  catalogLinks.set(slug, link);
+}
+
+function addSidebarLink(link, container, slug) {
+  const sidebarLink = link.cloneNode(true);
+  sidebarLink.removeAttribute("aria-current");
+  sidebarLink.classList.add("sidebar-recipe-link");
+  // The source link already contains its draft badge.
+  recipeLinks.set(slug, sidebarLink);
+  container.appendChild(sidebarLink);
+}
+
+function buildSidebarFallback() {
+  for (const category of recipeIndex.querySelectorAll(".recipe-outline section")) {
+    const group = el("details", "sidebar-category");
+    group.appendChild(el("summary", null, category.querySelector("h2").textContent));
+    for (const link of category.querySelectorAll("a[data-recipe]")) {
+      const slug = new URL(link.href).searchParams.get("recipe");
+      addSidebarLink(link, group, slug);
+    }
+    sidebar.appendChild(group);
   }
-  sidebar.appendChild(group);
+}
+
+async function buildSidebar() {
+  const response = await fetch("./src/data/recipe-taxonomy.json", {cache: "no-cache"});
+  if (!response.ok) throw new Error("Could not load recipe categories");
+  const taxonomy = await response.json();
+  const fragment = document.createDocumentFragment();
+  const assigned = new Set();
+  for (const category of taxonomy.groups) {
+    const group = el("details", "sidebar-category");
+    const heading = el("summary", "sidebar-category-title");
+    heading.appendChild(el("span", null, category.name));
+    const groupCount = el("span", "sidebar-count");
+    heading.appendChild(groupCount);
+    group.appendChild(heading);
+    let count = 0;
+    for (const subcategory of category.subcategories) {
+      const subgroup = el("details", "sidebar-subcategory");
+      const subheading = el("summary", "sidebar-subcategory-title");
+      subheading.appendChild(el("span", null, subcategory.label));
+      const subcount = el("span", "sidebar-subcount");
+      subheading.appendChild(subcount);
+      subgroup.appendChild(subheading);
+      let subTotal = 0;
+      for (const slug of subcategory.slugs) {
+        const link = catalogLinks.get(slug);
+        if (!link) throw new Error("Unknown category recipe: " + slug);
+        if (assigned.has(slug)) throw new Error("Duplicate category recipe: " + slug);
+        assigned.add(slug);
+        addSidebarLink(link, subgroup, slug);
+        subTotal++;
+      }
+      if (subTotal) {
+        subcount.textContent = subTotal;
+        count += subTotal;
+        group.appendChild(subgroup);
+      }
+    }
+    if (count) {
+      groupCount.textContent = count;
+      fragment.appendChild(group);
+    }
+  }
+  if (assigned.size !== catalogLinks.size) {
+    throw new Error("Category index is missing " + (catalogLinks.size - assigned.size) + " recipes");
+  }
+  sidebar.replaceChildren(sidebar.querySelector(".index-link"), fragment);
+}
+
+function revealSelectedRecipe(link) {
+  const subcategory = link.closest(".sidebar-subcategory");
+  const category = link.closest(".sidebar-category");
+  // Only auto-expand the active branch. Keep manually expanded other groups.
+  if (category) category.open = true;
+  if (subcategory) subcategory.open = true;
 }
 
 function showRoute() {
@@ -412,9 +485,7 @@ function showRoute() {
   recipeIndex.hidden = Boolean(link);
   recipeView.hidden = !link;
   if (link) {
-    for (const group of sidebar.querySelectorAll("details")) {
-      group.open = group === link.closest("details");
-    }
+    revealSelectedRecipe(link);
     loadRecipe(link);
   } else {
     ++loadSequence;
@@ -453,4 +524,9 @@ for (const id of ["photoWidth","fontSize","stepGap"]) {
 byId("printMode").addEventListener("change", requestRender);
 byId("printButton").addEventListener("click", () => window.print());
 window.addEventListener("resize", requestRender);
-showRoute();
+buildSidebar().catch(error => {
+  console.warn("Using cuisine-based navigation because taxonomy could not load:", error);
+  sidebar.querySelectorAll(".sidebar-category").forEach(group => group.remove());
+  recipeLinks.clear();
+  buildSidebarFallback();
+}).finally(showRoute);

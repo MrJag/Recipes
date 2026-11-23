@@ -38,7 +38,7 @@
 @media screen {
   .cookbook-layout {
     display: grid;
-    grid-template-columns: 16rem minmax(0, 1fr);
+    grid-template-columns: clamp(20rem, 25vw, 23rem) minmax(0, 1fr);
     align-items: start;
   }
 
@@ -48,8 +48,8 @@
     grid-column: 1;
     grid-row: 1;
     display: grid;
-    gap: 14px;
-    padding: 24px 16px;
+    gap: 10px;
+    padding: 24px 18px;
     background: var(--paper);
     border-inline-end: 1px solid #d6c1b3;
     font: 600 13px var(--font-sans);
@@ -88,6 +88,70 @@
   .recipe-sidebar .recipe-versions {
     margin-inline-start: 8px;
     border-inline-start: 1px solid var(--rule);
+  }
+
+  .recipe-sidebar .sidebar-category {
+    min-width: 0;
+    border-bottom: 1px solid #e0d4c7;
+    padding-bottom: 4px;
+  }
+  .recipe-sidebar .sidebar-category-title,
+  .recipe-sidebar .sidebar-subcategory-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 9px;
+    list-style: none;
+    line-height: 1.35;
+  }
+  .recipe-sidebar .sidebar-category-title::-webkit-details-marker,
+  .recipe-sidebar .sidebar-subcategory-title::-webkit-details-marker { display: none; }
+  .recipe-sidebar .sidebar-category-title {
+    font: 600 15px/1.35 Georgia, serif;
+    padding: 11px 2px;
+  }
+  .recipe-sidebar .sidebar-category-title::before,
+  .recipe-sidebar .sidebar-subcategory-title::before {
+    content: "▸";
+    flex: 0 0 auto;
+    font: 12px var(--font-sans);
+    color: var(--accent);
+  }
+  .recipe-sidebar .sidebar-category[open] > .sidebar-category-title::before,
+  .recipe-sidebar .sidebar-subcategory[open] > .sidebar-subcategory-title::before {
+    content: "▾";
+  }
+  .recipe-sidebar .sidebar-category-title > span:first-child,
+  .recipe-sidebar .sidebar-subcategory-title > span:first-child {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .recipe-sidebar .sidebar-count {
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: #eae1d5;
+    color: #75604e;
+    font: 600 11px var(--font-sans);
+  }
+  .recipe-sidebar .sidebar-subcategory {
+    margin: 0 0 2px 8px;
+    padding: 0 0 5px 8px;
+    border-left: 1px solid #e0d4c7;
+  }
+  .recipe-sidebar .sidebar-subcategory-title {
+    font: 600 12px/1.35 var(--font-sans);
+    color: var(--accent);
+    padding: 10px 2px 7px;
+  }
+  .recipe-sidebar .sidebar-subcount {
+    color: #8b7c71;
+    font: 400 11px var(--font-sans);
+  }
+  .recipe-sidebar .sidebar-recipe-link {
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 7px 10px;
+    overflow-wrap: break-word;
   }
 
   .recipe-sidebar :is(summary, button, a):focus-visible {
