@@ -30,7 +30,8 @@
           "slugs": [
             "latvian-stew",
             "chuys-carne-guisada",
-            "chile-chicken-bean-guisado"
+            "chile-chicken-bean-guisado",
+            "frijoles-charros-rancho-gordo"
           ]
         }
       ]
@@ -62,7 +63,8 @@
             "enchiladas-suizas",
             "chuys-chicka-boom-enchiladas",
             "japanese-curry",
-            "creamy-chicken-florentine"
+            "creamy-chicken-florentine",
+            "thai-red-curry-chicken-cashews"
           ]
         },
         {
@@ -258,7 +260,8 @@
             "raspberry-vinaigrette",
             "catalan-sofrito",
             "spanish-picada",
-            "fresh-horseradish-cream-sauce"
+            "fresh-horseradish-cream-sauce",
+            "sichuan-chili-oil"
           ]
         },
         {
@@ -267,7 +270,8 @@
             "chili-powder",
             "garam-masala-spice",
             "lawrys-seasoning-clone",
-            "russells-yellow-curry-spice-blend"
+            "russells-yellow-curry-spice-blend",
+            "smokin-buddha-bbq-dry-rub"
           ]
         },
         {
@@ -384,7 +388,8 @@
           "label": "Nonalcoholic Drinks",
           "slugs": [
             "boba-milk-tea",
-            "iced-lemon-green-tea-with-basil-seeds"
+            "iced-lemon-green-tea-with-basil-seeds",
+            "creamy-hot-chocolate"
           ]
         },
         {
