@@ -4,7 +4,7 @@
       "slug": "sweetango-orchard-sour",
       "title": "Sweetango Orchard Sour",
       "description": "A bright, apple-forward bourbon sour designed around Fowler Farms Sweetango pure apple cider.",
-      "photo": null,
+      "photo": "./public/images/sweetango-orchard-sour.jpg",
       "draft": true
     },
     {
