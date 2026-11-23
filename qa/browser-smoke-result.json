@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-23T23:14:49.645Z",
+  "date": "2026-11-23T23:23:00.081Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -38,11 +38,31 @@
       "pass": true
     },
     {
+      "label": "Dynamic photo sidebar appears",
+      "pass": true
+    },
+    {
+      "label": "Photo sidebar reflects selected category",
+      "pass": true
+    },
+    {
+      "label": "Category photos use actual image files",
+      "pass": true
+    },
+    {
       "label": "Directory heading is near top of viewport",
       "pass": true
     },
     {
       "label": "Main Dishes bookmark filters correctly",
+      "pass": true
+    },
+    {
+      "label": "Main Dishes photo sidebar follows category",
+      "pass": true
+    },
+    {
+      "label": "Three category-aware cards appear",
       "pass": true
     },
     {
@@ -52,10 +72,76 @@
     {
       "label": "Search bookmark starts with every category collapsed",
       "pass": true
+    },
+    {
+      "label": "Search bookmark focuses search field",
+      "pass": true
+    },
+    {
+      "label": "Clicking Search collapses categories",
+      "pass": true
+    },
+    {
+      "label": "Search clears category selection",
+      "pass": true
+    },
+    {
+      "label": "Search shortcut updates to shareable anchor",
+      "pass": true
+    },
+    {
+      "label": "Homepage Search opens directory search view",
+      "pass": true
+    },
+    {
+      "label": "Homepage Search keeps category groups collapsed",
+      "pass": true
+    },
+    {
+      "label": "Old homepage category bookmark redirects",
+      "pass": true
+    },
+    {
+      "label": "Homepage category card opens directory",
+      "pass": true
+    },
+    {
+      "label": "Unfiltered directory shows recent additions",
+      "pass": true
+    },
+    {
+      "label": "Three recent additions appear in directory photo rail",
+      "pass": true
+    },
+    {
+      "label": "Recipe header has category dropdown",
+      "pass": true
+    },
+    {
+      "label": "Header brand returns home",
+      "pass": true
+    },
+    {
+      "label": "Recipes nav opens dedicated directory",
+      "pass": true
+    },
+    {
+      "label": "Dedicated directory visible after Recipes navigation",
+      "pass": true
+    },
+    {
+      "label": "Landing page visible after returning home",
+      "pass": true
+    },
+    {
+      "label": "Old combined-page bookmark redirects",
+      "pass": true
+    },
+    {
+      "label": "Old index2 bookmark redirects",
+      "pass": true
     }
   ],
-  "errors": [
-    "TEST ERROR: TypeError: page.locator(...).isFocused is not a function\n    at file:///home/runner/work/Recipes/Recipes/qa/browser-smoke.mjs:32:44"
-  ],
-  "pass": false
+  "errors": [],
+  "pass": true
 }
