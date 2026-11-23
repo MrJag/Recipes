@@ -1,29 +1,56 @@
 {
   "schemaVersion": "0.1",
   "id": "chile-chicken-bean-guisado",
-  "title": "Chile Chicken and Bean Guisado",
+  "title": "Chile Chicken and Bean Guisado (UNTESTED)",
   "status": "draft",
   "category": "Mexican",
-  "headnote": "Source-only draft. NYT Cooking recipe by Kristina Felix mentioned in the September 3, 2026 newsletter; the email did not include complete ingredient quantities or instructions. Praise quoted in the email came from NYT readers, not the cookbook owner.",
+  "headnote": "UNTESTED — not yet cooked or rated by the cookbook owner. A quick Mexican-inspired ground-chicken and white-bean stew by Kristina Felix (NYT Cooking); approximately 35 minutes, 4 servings. Reconstructed from published recipe information. This is a cook-ready draft, not a confirmed family favorite.",
   "ingredientGroups": [
     {
-      "title": "Recipe to recover",
+      "title": "Chicken and aromatics",
       "items": [
-        "Chicken — amount not yet verified",
-        "Beans — type and quantity not yet verified",
-        "Chile component — ingredients and quantities not yet verified",
-        "Other seasonings, liquids, and garnishes — consult original recipe"
+        "30 g avocado oil (2 tbsp; approximate)",
+        "½ white onion, diced",
+        "454 g ground chicken",
+        "Kosher salt, to taste (start with about 1 tsp Diamond Crystal)",
+        "3 garlic cloves, minced"
+      ]
+    },
+    {
+      "title": "Seasoning and stew",
+      "items": [
+        "30 g white vinegar (2 tbsp; approximate)",
+        "2 tsp ancho chile powder (or chipotle chile powder for more heat)",
+        "2 tsp dried Mexican oregano",
+        "½ tsp ground cinnamon",
+        "2 × 425 g cans white beans (can weight before draining), drained and rinsed",
+        "475 g low-sodium chicken broth (2 cups; approximate)",
+        "2 Roma tomatoes, diced",
+        "142 g baby spinach or arugula (optional)"
+      ]
+    },
+    {
+      "title": "For serving (optional)",
+      "items": [
+        "Warm corn or flour tortillas",
+        "Salsa roja",
+        "Chopped cilantro and diced onion"
       ]
     }
   ],
   "steps": [
-    "Open the linked original NYT Cooking recipe and verify the complete ingredients and steps before preparing or marking this entry final."
+    "Heat the avocado oil in a Dutch oven over medium-high heat. Add the onion and cook, stirring occasionally, until beginning to soften, around 3 minutes.",
+    "Add the ground chicken and a little kosher salt. Break it into small pieces while it cooks; continue until no longer pink, about 3–5 minutes.",
+    "Stir in the minced garlic, vinegar, ancho chile powder, oregano, and cinnamon. Cook briefly, about 2 minutes, to release their aroma.",
+    "Add the rinsed white beans, chicken broth, and diced tomatoes. Bring to a gentle boil, then reduce the heat and simmer uncovered for about 10 minutes, until the tomatoes soften.",
+    "If using spinach or arugula, add near the end and cook just until wilted. Ensure the chicken is fully cooked to 165°F. Taste and adjust salt and acidity.",
+    "Serve with warm tortillas and optional salsa roja, cilantro, and diced onion. Refrigerate leftovers promptly."
   ],
   "reviewFlags": [
-    "Incomplete placeholder: ingredient quantities and method not available from the retrieved newsletter.",
-    "Do not cook from this placeholder alone.",
-    "User enjoyment is not verified.",
-    "Photo not supplied."
+    "UNTESTED: the cookbook owner has not made or rated this recipe.",
+    "Draft status must remain until tested and approved.",
+    "Measurements converted to grams are approximate where the published recipe used tablespoons or cups.",
+    "No approved photo for the first-page right-edge strip has been supplied."
   ],
-  "sourceNote": "Kristina Felix, NYT Cooking, featured September 3, 2026: https://cooking.nytimes.com/search?q=Chile%20Chicken%20and%20Bean%20Guisado"
+  "sourceNote": "Adapted from Kristina Felix, NYT Cooking, Chile Chicken and Bean Guisado: https://cooking.nytimes.com/recipes/779127920-chile-chicken-and-bean-guisado (public descriptions and matching transcriptions checked November 23, 2026)."
 }
