@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "0.1",
+  "id": "lemongrass-ginger-chicken-rice-soup",
+  "title": "Lemongrass & Ginger Chicken Rice Soup",
+  "status": "draft",
+  "category": "Vietnamese",
+  "headnote": "External recipe by Isabelle Heikens (At Isabelle's), shared Nov 5, 2026. Earlier claims that the user made and loved this soup were misattributed: that praise described the newsletter author's household. Approximate metric conversions provided for convenience.",
+  "ingredientGroups": [
+    {
+      "title": "Soup",
+      "items": [
+        "3 chicken breasts (weight varies)",
+        "Salt and freshly ground pepper, to taste",
+        "Olive oil for searing",
+        "2 g coarsely ground coriander (original: 1 tsp)",
+        "½ bunch fresh cilantro, stems finely sliced and leaves reserved",
+        "5 scallions, whites and greens sliced, divided",
+        "18 g freshly grated ginger (original: 3 tbsp), divided",
+        "9 g grated garlic (original: 1 tbsp or 3 large cloves)",
+        "2,400 g chicken broth (original: 10 cups; approximate)",
+        "1 stalk lemongrass, lower stalk bruised, tough outer leaves removed",
+        "140 g jasmine rice (original: ¾ cup; approximate)",
+        "Fish sauce to finish",
+        "1 lime to finish"
+      ]
+    }
+  ],
+  "steps": [
+    "Dry the chicken breasts and season with salt and pepper. In a large pot, brown both sides briefly in olive oil, about 2–3 minutes per side; set aside.",
+    "Lower the heat and gently soften the coriander, chopped cilantro stems, and about half of the scallions for a few minutes. Add roughly two-thirds of the ginger and the garlic and cook just until aromatic.",
+    "Deglaze with a little broth. Add the chicken, remaining broth, bruised lemongrass, and uncooked rice; maintain a gentle simmer.",
+    "After approximately 15–20 minutes, check the chicken; remove it when its thickest part reaches 165°F. Let cool slightly and shred.",
+    "Continue simmering the rice until very tender and partly broken down, approximately 45–60 minutes total. Remove the lemongrass stalk, return the chicken, and stir in the remaining ginger.",
+    "Adjust the seasoning. Finish each serving with cilantro leaves, remaining scallions, fish sauce, and fresh lime juice. Loosen leftovers with broth if needed."
+  ],
+  "reviewFlags": [
+    "Third-party newsletter recipe; not established as a user-tested favorite.",
+    "Ingredient weights for coriander, ginger, garlic, stock and rice are approximations from the source's volume measures.",
+    "Photo not supplied."
+  ],
+  "sourceNote": "Isabelle Heikens, At Isabelle's, November 5, 2026: https://open.substack.com/pub/atisabelles/p/lemongrass-and-ginger-chicken-rice"
+}
