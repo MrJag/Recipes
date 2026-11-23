@@ -420,6 +420,7 @@ function buildSidebarFallback() {
       const slug = new URL(link.href).searchParams.get("recipe");
       addSidebarLink(link, group, slug);
     }
+    group.dataset.fallback = "true";
     sidebar.appendChild(group);
   }
 }
@@ -547,10 +548,22 @@ for (const id of ["photoWidth","fontSize","stepGap"]) {
 byId("printMode").addEventListener("change", requestRender);
 byId("printButton").addEventListener("click", () => window.print());
 window.addEventListener("resize", requestRender);
-buildSidebar().catch(error => {
+// The route must not wait on a network request for sidebar taxonomy.
+// Build navigable links synchronously first, render the requested recipe,
+// and replace the sidebar with the shared taxonomy when it loads.
+buildSidebarFallback();
+showRoute();
+buildSidebar().then(() => {
+  // Keep the current recipe selected and reveal its new taxonomy branch.
+  const current = new URLSearchParams(location.search).get("recipe");
+  const active = recipeLinks.get(current);
+  if (active) {
+    active.setAttribute("aria-current", "page");
+    revealSelectedRecipe(active);
+  }
+}).catch(error => {
   console.warn("Using cuisine-based navigation because taxonomy could not load:", error);
-  sidebar.querySelectorAll(".sidebar-category").forEach(group => group.remove());
-  recipeLinks.clear();
-  buildSidebarFallback();
-}).finally(showRoute);
+  sidebar.querySelectorAll(".sidebar-category:not([data-fallback])").forEach(group => group.remove());
+  // Preserve working navigation even if the taxonomy is unavailable.
+});
 })();
