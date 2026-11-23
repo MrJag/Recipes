@@ -40,7 +40,7 @@ const nonCuisineGroups = new Set(["Breakfast", "Dessert", "Drinks"]);
 const cuisineFilter = document.getElementById("cuisineFilter");
 const results = document.getElementById("categoryResults");
 const status = document.getElementById("categoryStatus");
-const indexUrl = new URL("./index.html", location.href);
+const indexUrl = new URL("./index2.html", location.href);
 
 function renderCategories(recipes) {
   const matching = recipes.filter(recipe => !cuisineFilter.value || recipe.cuisine === cuisineFilter.value);
