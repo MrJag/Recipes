@@ -1,3 +1,4 @@
+(() => {
 "use strict";
 
 // Dish-type classification is presentation metadata; recipe files and URLs remain unchanged.
@@ -228,3 +229,4 @@ loadCatalog().catch(error => {
   link.textContent = "Return to the recipe directory.";
   status.replaceChildren(document.createTextNode("Couldn’t load the recipe directory. "),link);
 });
+})();

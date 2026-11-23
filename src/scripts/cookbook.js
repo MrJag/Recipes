@@ -1,3 +1,4 @@
+(() => {
 "use strict";
 // Browser-only print layout. No external services, tracking, or publishing.
 const ROOT = document.documentElement;
@@ -552,3 +553,4 @@ buildSidebar().catch(error => {
   recipeLinks.clear();
   buildSidebarFallback();
 }).finally(showRoute);
+})();
