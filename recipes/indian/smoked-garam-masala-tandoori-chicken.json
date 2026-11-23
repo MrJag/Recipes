@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "0.1",
+  "id": "smoked-garam-masala-tandoori-chicken",
+  "title": "Smoked Garam Masala Tandoori Chicken",
+  "category": "Indian",
+  "photo": "./public/images/tandoori-chicken.jpg",
+  "servings": "4–5",
+  "prepTime": "15 minutes plus 6–12 hours marinating",
+  "headnote": "Tested with 2½ lb (1,134 g) boneless chicken thighs; the marinade tasted good. Reconstructed from a chef's video and scaled to a half batch. The tested batch used 2 Tbsp of 2–3-year-old Kashmiri chili powder (1 Tbsp initially, then 1 Tbsp more), which produced less vibrant red color than the video. Try fresh Kashmiri chili powder for stronger color; 1 Tbsp is the original half-batch quantity.",
+  "ingredientGroups": [
+    {
+      "title": "Chicken",
+      "items": [
+        "1,134 g (2½ lb) boneless chicken thighs"
+      ]
+    },
+    {
+      "title": "Marinade",
+      "items": [
+        "54 g (2 fl oz) neutral oil",
+        "1–2 Tbsp Kashmiri chili powder (2 Tbsp used in successful test with older powder)",
+        "1½ tsp smoked garam masala",
+        "1 Tbsp ginger-garlic paste",
+        "¼ cup kasuri methi (dried fenugreek leaves), loosely packed",
+        "9 g (1 Tbsp) Diamond Crystal kosher salt",
+        "123 g (½ cup) thick plain yogurt"
+      ]
+    }
+  ],
+  "steps": [
+    "Gently warm the oil, then remove from heat. Stir in Kashmiri chili powder and smoked garam masala; bloom for 20–30 seconds without scorching.",
+    "Allow the spiced oil to cool slightly, then stir in ginger-garlic paste.",
+    "Crush the kasuri methi between your palms and mix into the spiced oil with the Diamond Crystal kosher salt.",
+    "Stir in the thick yogurt until the marinade is uniform and clings thickly to a spoon.",
+    "Coat the chicken thoroughly, cover, and refrigerate for 6–12 hours.",
+    "Grill or roast over high heat until lightly charred and the thickest pieces reach 165°F internally. Cooking method and time were not recorded for the successful test."
+  ],
+  "reviewFlags": [
+    "Cooking equipment and actual cook time not recorded; finish method supplied as guidance. Exact chef ingredient volumes were estimated from video screenshots."
+  ],
+  "sourceNote": "User-tested adaptation of a restaurant chef's tandoori marinade shown in video screenshots. Half-scale of reconstructed video recipe; original proportions retained. Original cookbook Tandoori Chicken recipe remains unchanged."
+}
