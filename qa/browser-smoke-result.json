@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-23T23:10:31.172Z",
+  "date": "2026-11-23T23:14:49.645Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -50,40 +50,12 @@
       "pass": true
     },
     {
-      "label": "Old homepage category bookmark redirects",
-      "pass": true
-    },
-    {
-      "label": "Homepage category card opens directory",
-      "pass": true
-    },
-    {
-      "label": "Recipe header has category dropdown",
-      "pass": true
-    },
-    {
-      "label": "Header brand returns home",
-      "pass": true
-    },
-    {
-      "label": "Recipes nav opens dedicated directory",
-      "pass": true
-    },
-    {
-      "label": "Landing page visible",
-      "pass": false
-    },
-    {
-      "label": "Old combined-page bookmark redirects",
-      "pass": true
-    },
-    {
-      "label": "Old index2 bookmark redirects",
+      "label": "Search bookmark starts with every category collapsed",
       "pass": true
     }
   ],
   "errors": [
-    "Landing page visible"
+    "TEST ERROR: TypeError: page.locator(...).isFocused is not a function\n    at file:///home/runner/work/Recipes/Recipes/qa/browser-smoke.mjs:32:44"
   ],
   "pass": false
 }
