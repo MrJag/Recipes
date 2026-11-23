@@ -167,5 +167,11 @@
   "steak-guide": "./public/images/steak-guide.jpg",
   "high-tide-cocktail": "./public/images/high-tide-cocktail.jpg",
   "lemongrass-ginger-chicken-rice-soup": "./public/images/lemongrass-ginger-chicken-rice-soup.jpg",
-  "brioche-french-toast": "./public/images/brioche-french-toast.jpg"
+  "brioche-french-toast": "./public/images/brioche-french-toast.jpg",
+  "chile-chicken-bean-guisado": "./public/images/chile-chicken-bean-guisado.jpg",
+  "tangzhong-chocolate-chip-cookies": "./public/images/tangzhong-chocolate-chip-cookies.jpg",
+  "zaza-thai-chicken-rice-soup": "./public/images/zaza-thai-chicken-rice-soup.jpg",
+  "korean-pear-marinade": "./public/images/korean-pear-marinade.webp",
+  "creamy-chicken-florentine": "./public/images/creamy-chicken-florentine.jpg",
+  "smoked-garam-masala-tandoori-chicken": "./public/images/smoked-garam-masala-tandoori-chicken.jpg"
 }

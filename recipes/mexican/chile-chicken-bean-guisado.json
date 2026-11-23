@@ -52,5 +52,6 @@
     "Measurements converted to grams are approximate where the published recipe used tablespoons or cups.",
     "No approved photo for the first-page right-edge strip has been supplied."
   ],
-  "sourceNote": "Adapted from Kristina Felix, NYT Cooking, Chile Chicken and Bean Guisado: https://cooking.nytimes.com/recipes/779127920-chile-chicken-and-bean-guisado (public descriptions and matching transcriptions checked November 23, 2026)."
+  "sourceNote": "Adapted from Kristina Felix, NYT Cooking, Chile Chicken and Bean Guisado: https://cooking.nytimes.com/recipes/779127920-chile-chicken-and-bean-guisado (public descriptions and matching transcriptions checked November 23, 2026).",
+  "photo": "./public/images/chile-chicken-bean-guisado.jpg"
 }

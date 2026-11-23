@@ -42,5 +42,6 @@
     "Photo for page-one right-edge strip not yet supplied; recipe kept as draft until an appropriate photo is available.",
     "Marinating guidance is general; adjust for cut and thickness."
   ],
-  "sourceNote": "Scaled from the user's latest four-pear Korean marinade template (800 g pear, agave version) to 155 g prepared pear, retaining original ingredient proportions."
+  "sourceNote": "Scaled from the user's latest four-pear Korean marinade template (800 g pear, agave version) to 155 g prepared pear, retaining original ingredient proportions.",
+  "photo": "./public/images/korean-pear-marinade.webp"
 }

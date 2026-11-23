@@ -40,5 +40,6 @@
   "reviewFlags": [
     "The prior recipe specified the core ingredients and cooking times but did not preserve exact amounts for ginger, celery, garlic, fish sauce, sugar, or white pepper. Keep as Draft pending confirmation."
   ],
-  "sourceNote": "ZaZa Thai Chicken Rice Soup copycat from conversation, July 25, 2026; traditional version (not the leftover-rice variation)."
+  "sourceNote": "ZaZa Thai Chicken Rice Soup copycat from conversation, July 25, 2026; traditional version (not the leftover-rice variation).",
+  "photo": "./public/images/zaza-thai-chicken-rice-soup.jpg"
 }

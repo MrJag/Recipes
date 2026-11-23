@@ -42,5 +42,6 @@
   "reviewFlags": [
     "Recipe is user-tested, but exact final cooling interval varied in prior instructions (5 versus 10 minutes).",
     "Photo has not been supplied."
-  ]
+  ],
+  "photo": "./public/images/tangzhong-chocolate-chip-cookies.jpg"
 }
