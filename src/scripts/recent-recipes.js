@@ -17,7 +17,7 @@
       link.href = "./index2.html?recipe=" + encodeURIComponent(recipe.slug);
       if (recipe.photo) {
         const img = document.createElement("img");
-        img.src = new URL(recipe.photo.replace(/^\\.\\//,""), location.href).href;
+        img.src = new URL((recipe.photo.startsWith("./") ? recipe.photo.slice(2) : recipe.photo), location.href).href;
         img.alt = recipe.title;
         img.loading = "lazy";
         img.onerror = function () {
