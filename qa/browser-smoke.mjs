@@ -57,7 +57,9 @@ try {
  check(page.url().endsWith('/'),'Header brand returns home');
  await page.locator('.site-header .site-nav a').filter({hasText:'Recipes'}).click();
  check(page.url().includes('/directory.html'),'Recipes nav opens dedicated directory');
- check(await page.locator('.hero').isVisible(),'Landing page visible');
+ check(await page.locator('#directoryHeading').isVisible(),'Dedicated directory visible after Recipes navigation');
+ await page.locator('.site-header a.brand').click();
+ check(await page.locator('.hero').isVisible(),'Landing page visible after returning home');
  await page.goto('http://localhost:8123/index.html?recipe=midwestern-chili',{waitUntil:'load'});
  await page.waitForTimeout(300);
  check(page.url().includes('recipe.html?recipe=midwestern-chili'),'Old combined-page bookmark redirects');
