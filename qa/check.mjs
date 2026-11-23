@@ -21,12 +21,12 @@ check(!html.includes('class="index-link"'),"No redundant All recipes link");
 check(directory.includes('new URL("./index.html", location.href)'),"Directory reads homepage catalog");
 check(legacy.includes('location.replace("./" + location.search + location.hash)'),"Old recipe links redirect");
 check(script.includes("recipe-open"),"Router toggles recipe display");
-check(/\\.sheet:not\\(\\.has-photo\\) \\.content/.test(css),"Continuation pages use full width");
-check(/index === 0 \\? " has-photo"/.test(script),"Photo strip only on first page");
+check(/\.sheet:not\(\.has-photo\) \.content/.test(css),"Continuation pages use full width");
+check(/index === 0 \? " has-photo"/.test(script),"Photo strip only on first page");
 for(const path of refs){
   check(fs.existsSync(path),"Missing recipe: "+path);
   const data=JSON.parse(read(path));
   check(Boolean(data.title)&&Array.isArray(data.steps)&&Array.isArray(data.ingredientGroups),"Invalid recipe: "+path);
-  if(data.photo)check(fs.existsSync(data.photo.replace(/^\\.\\//,"")),"Missing photo: "+data.photo);
+  if(data.photo)check(fs.existsSync(data.photo.replace(/^\.\//,"")),"Missing photo: "+data.photo);
 }
 console.log("PASS: "+checks+" cookbook checks");
