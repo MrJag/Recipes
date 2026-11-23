@@ -1,4 +1,3 @@
-(() => {
 "use strict";
 // Browser-only print layout. No external services, tracking, or publishing.
 const ROOT = document.documentElement;
@@ -420,7 +419,6 @@ function buildSidebarFallback() {
       const slug = new URL(link.href).searchParams.get("recipe");
       addSidebarLink(link, group, slug);
     }
-    group.dataset.fallback = "true";
     sidebar.appendChild(group);
   }
 }
@@ -484,9 +482,8 @@ function showRoute() {
   printMenu.open = false;
   const slug = new URLSearchParams(location.search).get("recipe");
   const link = recipeLinks.get(slug);
-  recipeIndex.hidden = true; // The cuisine catalog is data, not a second visible directory.
+  recipeIndex.hidden = Boolean(link);
   recipeView.hidden = !link;
-  document.body.classList.toggle("recipe-open", Boolean(link));
   if (link) {
     revealSelectedRecipe(link);
     loadRecipe(link);
@@ -498,36 +495,15 @@ function showRoute() {
 }
 
 document.addEventListener("click", event => {
-  const link = event.target.closest("a[href]");
+  const link = event.target.closest("[data-recipe], .index-link");
   if (!link || event.defaultPrevented || event.button !== 0 ||
       event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-  const destination = new URL(link.href);
-  const slug = destination.searchParams.get("recipe");
-  if (slug && recipeLinks.has(slug) && destination.origin === location.origin &&
-      (destination.pathname.endsWith("/") || destination.pathname.endsWith("/index.html") || destination.pathname.endsWith("/index2.html"))) {
-    event.preventDefault();
-    const canonical = new URL("./", location.href);
-    canonical.searchParams.set("recipe", slug);
-    if (location.href !== canonical.href) history.pushState(null, "", canonical.href);
-    showRoute();
-    window.scrollTo(0, 0);
-    recipeView.focus();
-    return;
-  }
-  // Header section links should also work from within a recipe.
-  const href = link.getAttribute("href");
-  if (document.body.classList.contains("recipe-open") &&
-      link.closest(".site-header") && href?.startsWith("#")) {
-    event.preventDefault();
-    const canonical = new URL("./", location.href);
-    canonical.hash = href;
-    history.pushState(null, "", canonical.href);
-    showRoute();
-    document.querySelector(href)?.scrollIntoView();
-    if (href === "#directory") {
-      document.getElementById("recipeSearch")?.focus({preventScroll:true});
-    }
-  }
+
+  event.preventDefault();
+  if (location.href !== link.href) history.pushState(null, "", link.href);
+  showRoute();
+  window.scrollTo(0, 0);
+  (recipeView.hidden ? recipeIndex : recipeView).focus();
 });
 
 window.addEventListener("popstate", showRoute);
@@ -548,22 +524,9 @@ for (const id of ["photoWidth","fontSize","stepGap"]) {
 byId("printMode").addEventListener("change", requestRender);
 byId("printButton").addEventListener("click", () => window.print());
 window.addEventListener("resize", requestRender);
-// The route must not wait on a network request for sidebar taxonomy.
-// Build navigable links synchronously first, render the requested recipe,
-// and replace the sidebar with the shared taxonomy when it loads.
-buildSidebarFallback();
-showRoute();
-buildSidebar().then(() => {
-  // Keep the current recipe selected and reveal its new taxonomy branch.
-  const current = new URLSearchParams(location.search).get("recipe");
-  const active = recipeLinks.get(current);
-  if (active) {
-    active.setAttribute("aria-current", "page");
-    revealSelectedRecipe(active);
-  }
-}).catch(error => {
+buildSidebar().catch(error => {
   console.warn("Using cuisine-based navigation because taxonomy could not load:", error);
-  sidebar.querySelectorAll(".sidebar-category:not([data-fallback])").forEach(group => group.remove());
-  // Preserve working navigation even if the taxonomy is unavailable.
-});
-})();
+  sidebar.querySelectorAll(".sidebar-category").forEach(group => group.remove());
+  recipeLinks.clear();
+  buildSidebarFallback();
+}).finally(showRoute);

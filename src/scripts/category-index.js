@@ -2,7 +2,7 @@
 "use strict";
 
 // Dish-type classification is presentation metadata; recipe files and URLs remain unchanged.
-const indexUrl = new URL("./index.html", location.href);
+const indexUrl = new URL("./recipe.html", location.href);
 const taxonomyUrl = new URL("./src/data/recipe-taxonomy.json", location.href);
 const cuisineOverrides = {
   "frozen-margarita":"Mexican","persian-rice-with-tahdig":"Persian",
@@ -225,8 +225,8 @@ async function loadCatalog() {
 loadCatalog().catch(error => {
   console.error("Cookbook catalog:",error);
   const link = document.createElement("a");
-  link.href = "./#directory";
-  link.textContent = "Return to the recipe directory.";
+  link.href = "./recipe.html";
+  link.textContent = "Browse the recipe index.";
   status.replaceChildren(document.createTextNode("Couldn’t load the recipe directory. "),link);
 });
 })();
