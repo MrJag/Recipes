@@ -9,7 +9,7 @@ const script=read("src/scripts/cookbook.js");
 const directory=read("src/scripts/category-index.js");
 const taxonomy=JSON.parse(read("src/data/recipe-taxonomy.json"));
 const css=read("src/styles/cookbook.css");
-const refs=[...html.matchAll(/data-recipe="(recipes\\/[^"]+\\.json)"/g)].map(m=>m[1]);
+const refs=[...html.matchAll(/data-recipe="([^"]+)"/g)].map(m=>m[1]).filter(p=>p.startsWith("recipes/") && p.endsWith(".json"));
 const assigned=taxonomy.groups.flatMap(g=>g.subcategories.flatMap(s=>s.slugs));
 check(refs.length>100,"Recipe catalog must be present on homepage");
 check(refs.length===assigned.length,"Taxonomy must match the recipe catalog");
