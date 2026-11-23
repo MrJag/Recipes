@@ -20,7 +20,8 @@
           "slugs": [
             "15-bean-soup-sausage",
             "tomato-basil-soup",
-            "chicken-congee"
+            "chicken-congee",
+            "zaza-thai-chicken-rice-soup"
           ]
         },
         {
@@ -282,6 +283,7 @@
         {
           "label": "Waffles & Breakfast Bakes",
           "slugs": [
+            "brioche-french-toast",
             "belgian-waffles",
             "philips-waffles"
           ]
