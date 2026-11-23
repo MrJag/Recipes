@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "0.1",
+  "id": "brioche-french-toast",
+  "title": "Brioche French Toast",
+  "category": "Breakfast",
+  "subtitle": "Thick-cut Texas brioche · 325°F griddle",
+  "headnote": "Custardy, golden French toast made with thick Texas brioche. Makes 6 slices.",
+  "ingredientGroups": [
+    {
+      "title": "Custard",
+      "items": [
+        "6 thick slices Texas brioche",
+        "3 large eggs",
+        "180 g whole milk",
+        "60 g heavy cream",
+        "20 g sugar",
+        "5 g vanilla extract",
+        "1 g ground cinnamon",
+        "A pinch of nutmeg",
+        "1 g kosher salt"
+      ]
+    },
+    {
+      "title": "For cooking",
+      "items": [
+        "15–20 g butter"
+      ]
+    }
+  ],
+  "steps": [
+    "Preheat the griddle to 325°F.",
+    "Whisk the eggs, milk, cream, sugar, vanilla, cinnamon, nutmeg, and salt until fully combined.",
+    "Dip each brioche slice in the custard for 15–20 seconds per side, allowing it to soak without falling apart.",
+    "Melt a little butter on the griddle. Cook the soaked brioche for 3–4 minutes per side, until deep golden brown and cooked through.",
+    "Serve warm with preferred toppings."
+  ],
+  "sourceNote": "From French Toast Chat, September 26, 2026. Retains the specified 325°F griddle setting."
+}
