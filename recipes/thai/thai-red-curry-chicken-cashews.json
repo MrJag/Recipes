@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "0.1",
+  "id": "thai-red-curry-chicken-cashews",
+  "title": "Thai Red Curry with Chicken & Cashews",
+  "status": "draft",
+  "category": "Thai",
+  "headnote": "DRAFT / UNTESTED OUTCOME. Reconstructed from July 19, 2025 personal recipe discussion: the user's chosen build uses an entire 4 oz Maesri red curry paste can, two cans coconut milk, rotisserie chicken, a sautéed large onion, and roasted cashews. No confirmed personal tasting verdict was recovered.",
+  "ingredientGroups": [
+    {
+      "title": "Curry",
+      "items": [
+        "113 g Maesri red curry paste (one 4 oz can)",
+        "2 cans full-fat coconut milk (approximately 800 g total; confirm your can sizes)",
+        "1 large onion, thinly sliced",
+        "Cooked rotisserie chicken, cut into bite-size pieces (quantity to taste; not specified in original discussion)",
+        "85–115 g roasted unsalted cashews (original suggestion: ¾–1 cup; approximate)",
+        "15 g fish sauce (approximately 1 tbsp)",
+        "4 g sugar (approximately 1 tsp)",
+        "A little neutral oil to sauté onion",
+        "Fresh lime juice to finish, optional"
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        "Steamed jasmine rice"
+      ]
+    }
+  ],
+  "steps": [
+    "Sauté the thinly sliced onion in a little neutral oil over medium heat until softened and lightly golden.",
+    "Add the entire can of Maesri red curry paste and fry briefly until fragrant.",
+    "Stir in the two cans of coconut milk, loosening the paste into the sauce. Bring to a gentle simmer.",
+    "Add the cooked rotisserie chicken, fish sauce, and sugar. Gently simmer until the chicken is heated through and the flavors meld.",
+    "Stir in the roasted cashews near the end so they retain some crunch. Taste, adjust fish sauce or sugar if needed, and add a squeeze of lime if desired.",
+    "Serve over jasmine rice."
+  ],
+  "reviewFlags": [
+    "UNTESTED: no verified feedback on the finished curry.",
+    "Chicken quantity was never specified, so it is intentionally left to taste.",
+    "Cashew and seasoning amounts were suggested during the discussion rather than confirmed by a completed test.",
+    "Metric conversions are approximate and coconut milk can sizes can vary.",
+    "Photo not supplied."
+  ],
+  "sourceNote": "Recovered from user's July 19, 2025 recipe conversation."
+}
