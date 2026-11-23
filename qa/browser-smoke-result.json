@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-23T22:56:29.793Z",
+  "date": "2026-11-23T23:10:31.172Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -22,7 +22,7 @@
       "pass": true
     },
     {
-      "label": "Dropdown navigates to selected category",
+      "label": "Dropdown opens separate directory page with category",
       "pass": true
     },
     {
@@ -34,6 +34,30 @@
       "pass": true
     },
     {
+      "label": "Directory heading is visible",
+      "pass": true
+    },
+    {
+      "label": "Directory heading is near top of viewport",
+      "pass": true
+    },
+    {
+      "label": "Main Dishes bookmark filters correctly",
+      "pass": true
+    },
+    {
+      "label": "Filtered results visible",
+      "pass": true
+    },
+    {
+      "label": "Old homepage category bookmark redirects",
+      "pass": true
+    },
+    {
+      "label": "Homepage category card opens directory",
+      "pass": true
+    },
+    {
       "label": "Recipe header has category dropdown",
       "pass": true
     },
@@ -42,8 +66,12 @@
       "pass": true
     },
     {
-      "label": "Landing page visible",
+      "label": "Recipes nav opens dedicated directory",
       "pass": true
+    },
+    {
+      "label": "Landing page visible",
+      "pass": false
     },
     {
       "label": "Old combined-page bookmark redirects",
@@ -54,6 +82,8 @@
       "pass": true
     }
   ],
-  "errors": [],
-  "pass": true
+  "errors": [
+    "Landing page visible"
+  ],
+  "pass": false
 }
