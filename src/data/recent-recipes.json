@@ -1,0 +1,25 @@
+{
+  "recipes": [
+    {
+      "slug": "sweetango-orchard-sour",
+      "title": "Sweetango Orchard Sour",
+      "description": "A bright, apple-forward bourbon sour with cider and elderflower.",
+      "photo": null,
+      "draft": true
+    },
+    {
+      "slug": "oven-baked-bacon",
+      "title": "Oven-Baked Bacon (Tender or Crispy)",
+      "description": "400°F oven · One tray, two textures",
+      "photo": null,
+      "draft": false
+    },
+    {
+      "slug": "frijoles-charros-rancho-gordo",
+      "title": "Frijoles Charros (Rancho Gordo Pinto & Mayocoba)",
+      "description": "A hearty Mexican bean dish with bacon and tomatoes.",
+      "photo": null,
+      "draft": true
+    }
+  ]
+}

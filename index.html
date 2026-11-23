@@ -7,8 +7,9 @@
   <title>Family Cookbook | Recipes &amp; Favorites</title>
   <link rel="stylesheet" href="./src/styles/cookbook.css?v=0.7.7">
   <link rel="stylesheet" href="./src/styles/editor.css?v=0.7.6">
-  <link rel="stylesheet" href="./src/styles/home.css?v=2">
+  <link rel="stylesheet" href="./src/styles/home.css?v=3">
   <script defer src="./src/scripts/category-index.js?v=7"></script>
+  <script defer src="./src/scripts/recent-recipes.js?v=1"></script>
 </head>
 <body class="homepage">
   <header class="site-header">
@@ -44,10 +45,12 @@
 
     <section class="featured" aria-labelledby="featuredHeading">
       <div class="home-container featured-grid">
-        <div class="featured-title"><h2 id="featuredHeading">From the<br>Cookbook</h2><span class="eyebrow">Our featured favorites</span></div>
-        <a href="./index2.html?recipe=neapolitan-pizza"><img src="./public/images/neapolitan-pizza.jpg" alt="Neapolitan pizza" loading="lazy"><h3>Neapolitan Pizza</h3><p>A wood-fired favorite with a beautifully blistered crust.</p></a>
-        <a href="./index2.html?recipe=belgian-waffles"><img src="./public/images/belgian-waffles.jpg" alt="Belgian waffles" loading="lazy"><h3>Belgian Waffles</h3><p>Crisp, golden waffles for an easy weekend breakfast.</p></a>
-        <a href="./index2.html?recipe=skirt-steak-fajitas"><img src="./public/images/skirt-steak-fajitas.jpg" alt="Skirt steak fajitas" loading="lazy"><h3>Skirt Steak Fajitas</h3><p>Bold, smoky, and perfect for sharing around the table.</p></a>
+        <div class="featured-title"><h2 id="featuredHeading">From the<br>Cookbook</h2><span class="eyebrow">Latest recipe additions</span></div>
+        <div id="recentRecipes" class="recent-recipes" aria-live="polite">
+          <a href="./index2.html?recipe=sweetango-orchard-sour" class="recent-recipe"><div class="featured-photo-placeholder" aria-label="Photo coming soon"><span>Photo coming soon</span></div><h3>Sweetango Orchard Sour <span class="draft-badge">Draft</span></h3><p>A bright, apple-forward bourbon sour with cider and elderflower.</p></a>
+          <a href="./index2.html?recipe=oven-baked-bacon" class="recent-recipe"><div class="featured-photo-placeholder" aria-label="Photo coming soon"><span>Photo coming soon</span></div><h3>Oven-Baked Bacon (Tender or Crispy)</h3><p>One tray, two textures.</p></a>
+          <a href="./index2.html?recipe=frijoles-charros-rancho-gordo" class="recent-recipe"><div class="featured-photo-placeholder" aria-label="Photo coming soon"><span>Photo coming soon</span></div><h3>Frijoles Charros (Rancho Gordo Pinto &amp; Mayocoba) <span class="draft-badge">Draft</span></h3><p>A hearty Mexican bean dish with bacon and tomatoes.</p></a>
+        </div>
       </div>
     </section>
 
