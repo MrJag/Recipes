@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "0.1",
+  "id": "frijoles-charros-rancho-gordo",
+  "title": "Frijoles Charros (Rancho Gordo Pinto & Mayocoba)",
+  "status": "draft",
+  "category": "Mexican",
+  "headnote": "DRAFT / TESTED WITH PROBLEMS. Adapted from Serious Eats in September 2026. Final discussed batch changed from all-pinto to 225 g Rancho Gordo pinto plus 225 g mayocoba beans, with chicken stock and a bacon-tomato base. User reported a difficult trial: pintos mostly tender after about 5½ hours, mayocobas still firm, and baking soda caused rapid thickening/sticking. This is not a confirmed successful final recipe.",
+  "ingredientGroups": [
+    {
+      "title": "Bean pot",
+      "items": [
+        "225 g dried Rancho Gordo pinto beans",
+        "225 g dried mayocoba beans",
+        "18 g salt for the original soak (if soaking; drain afterward)",
+        "Approximately 1,400 g unsalted chicken stock (original: 6 cups); add just enough to cover the beans and top up as needed",
+        "6 g kosher salt to begin cooking (from September 8 adjustment); adjust at end"
+      ]
+    },
+    {
+      "title": "Bacon-tomato base",
+      "items": [
+        "340 g bacon, chopped",
+        "225 g onion, diced",
+        "2 serrano chilies, chopped",
+        "15 g garlic, minced",
+        "800 g fire-roasted tomatoes"
+      ]
+    }
+  ],
+  "steps": [
+    "Sort and rinse the beans. If using the original salted soak, dissolve the 18 g salt in sufficient water, soak the beans, then drain and rinse before cooking.",
+    "Place the beans in a heavy pot and add enough unsalted chicken stock to just cover (up to approximately 1.4 kg initially), topping up during cooking as needed. Add the initial 6 g salt; reserve final seasoning until tender.",
+    "Simmer gently until both bean varieties are truly tender, checking frequently and adding stock as necessary. Do not rely on a fixed time: in the user's trial, pintos were mostly tender after about 5½ hours but mayocobas were still firm.",
+    "Separately, cook the chopped bacon until rendered; soften the onion and serrano in the fat, then add garlic and fire-roasted tomatoes. Cook until the base is fragrant and slightly reduced.",
+    "When beans are tender, stir the bacon-tomato mixture into the pot and simmer another 20–30 minutes to meld, or combine cooked beans and base approximately 1:1 by weight when assembling smaller portions. This reflects the September 15 final discussion.",
+    "Taste and adjust salt and thickness. Do not use baking soda to force completion: during the earlier trial it caused the liquid to thicken rapidly and stick."
+  ],
+  "reviewFlags": [
+    "DRAFT / TESTED WITH PROBLEMS — not a verified successful recipe.",
+    "The user's actual mixed-bean test required ~5½ hours for mostly tender pintos, while mayocobas were still firm.",
+    "Baking soda caused thickening and sticking; the final draft avoids it.",
+    "Earlier all-pinto version used 450 g pinto beans; latest proposed batch was 225 g pinto + 225 g mayocoba. Both are preserved in notes, with the latest in ingredients.",
+    "The Fat Duck pressure-cooker stock process was discussed but full stock instructions were not recovered; this draft uses prepared unsalted chicken stock.",
+    "Photo not supplied."
+  ],
+  "sourceNote": "User's September 8–15, 2026 Serious Eats adaptation and cooking notes."
+}
