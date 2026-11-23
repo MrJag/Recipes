@@ -1,0 +1,407 @@
+{
+  "version": 1,
+  "groups": [
+    {
+      "name": "Soups, Stews & Chili",
+      "subcategories": [
+        {
+          "label": "Chili",
+          "slugs": [
+            "texas-chili-serrano",
+            "texas-chili-ancho",
+            "midwestern-chili",
+            "cookoff-smoked-beef-chili",
+            "mariannas-chili",
+            "hatch-green-chili"
+          ]
+        },
+        {
+          "label": "Soups",
+          "slugs": [
+            "15-bean-soup-sausage",
+            "tomato-basil-soup",
+            "chicken-congee"
+          ]
+        },
+        {
+          "label": "Stews & Braises",
+          "slugs": [
+            "latvian-stew",
+            "chuys-carne-guisada"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Main Dishes",
+      "subcategories": [
+        {
+          "label": "Chicken & Poultry",
+          "slugs": [
+            "roasted-chicken-bombay-potatoes",
+            "spatchcocked-hawaiian-chicken",
+            "hawaiian-huli-huli-chicken",
+            "hawaiian-teriyaki-chicken",
+            "butter-masala-chicken",
+            "tandoori-chicken",
+            "smoked-garam-masala-tandoori-chicken",
+            "sour-cream-chicken-enchiladas",
+            "chicken-mole-poblano",
+            "pollo-asado",
+            "pollo-a-la-brasa",
+            "thai-basil-chicken",
+            "lemongrass-chicken",
+            "chicken-satay",
+            "taiwanese-popcorn-chicken",
+            "mariannas-chicken-kotleti",
+            "joojeh-kebab",
+            "chicken-pintxo-avocado-toast",
+            "enchiladas-suizas",
+            "chuys-chicka-boom-enchiladas",
+            "japanese-curry",
+            "creamy-chicken-florentine"
+          ]
+        },
+        {
+          "label": "Beef",
+          "slugs": [
+            "hutchins-style-brisket",
+            "beef-stroganoff",
+            "skirt-steak-fajitas",
+            "chuys-combo-fajitas",
+            "beef-short-rib-biryani",
+            "uzbek-plov-beef",
+            "paella-de-carne",
+            "clay-pot-rice-short-ribs",
+            "polpette-alla-napoletana"
+          ]
+        },
+        {
+          "label": "Pork",
+          "slugs": [
+            "pistachio-stuffed-pork-tenderloin",
+            "hutchins-style-ribs",
+            "pan-fried-pork-chops",
+            "tamarind-glazed-pork-chops",
+            "texas-twinkies",
+            "3-2-1-ribs",
+            "smoked-pulled-pork",
+            "szechuan-green-beans-and-pork",
+            "goan-pork-vindaloo",
+            "pork-carnitas",
+            "shashlik-pork-kebab",
+            "salsiccia-napolitana"
+          ]
+        },
+        {
+          "label": "Lamb",
+          "slugs": [
+            "lamb-biryani",
+            "uzbek-plov-lamb",
+            "turkish-kofta-kebab"
+          ]
+        },
+        {
+          "label": "Seafood",
+          "slugs": [
+            "gambas-al-ajillo"
+          ]
+        },
+        {
+          "label": "Vegetarian & Plant-Based",
+          "slugs": [
+            "ancient-grains-bowl",
+            "dal-tadka",
+            "paneer-butter-masala",
+            "red-beans-and-rice"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pizza, Pasta & Noodles",
+      "subcategories": [
+        {
+          "label": "Pizza",
+          "slugs": [
+            "detroit-style-pizza",
+            "neapolitan-pizza"
+          ]
+        },
+        {
+          "label": "Pasta & Ravioli",
+          "slugs": [
+            "seamless-ricotta-ravioli",
+            "rigatoni-di-gregorio",
+            "fresh-pasta-from-scratch"
+          ]
+        },
+        {
+          "label": "Noodles",
+          "slugs": [
+            "hawaiian-stir-fry-noodles"
+          ]
+        },
+        {
+          "label": "Rice-Based Mains",
+          "slugs": [
+            "chicken-plov",
+            "chicken-paella"
+          ]
+        },
+        {
+          "label": "Pizza Doughs",
+          "slugs": [
+            "pizza-stone-dough",
+            "wood-fired-pizza-dough"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sides, Breads & Grains",
+      "subcategories": [
+        {
+          "label": "Vegetable Sides",
+          "slugs": [
+            "creamed-corn",
+            "roasted-acorn-squash",
+            "southwestern-roasted-cauliflower",
+            "cranberry-relish"
+          ]
+        },
+        {
+          "label": "Potatoes",
+          "slugs": [
+            "mashed-potatoes"
+          ]
+        },
+        {
+          "label": "Rice & Grains",
+          "slugs": [
+            "persian-rice-with-tahdig",
+            "jasmine-coconut-rice",
+            "indian-basmati-rice-pilau",
+            "long-grain-rice-with-mustard-seeds",
+            "coconut-lime-rice"
+          ]
+        },
+        {
+          "label": "Breads & Flatbreads",
+          "slugs": [
+            "sour-cream-skillet-cornbread",
+            "burger-buns",
+            "cornbread",
+            "dinner-rolls",
+            "roti",
+            "naan",
+            "balon-lavas",
+            "pita-bread",
+            "rosemary-focaccia"
+          ]
+        },
+        {
+          "label": "Appetizers & Dips",
+          "slugs": [
+            "baba-ganoush"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sauces, Condiments & Seasonings",
+      "subcategories": [
+        {
+          "label": "BBQ Sauces",
+          "slugs": [
+            "franklin-sweet-bbq",
+            "modified-butter-onion-bbq",
+            "franklin-butter-onion-bbq"
+          ]
+        },
+        {
+          "label": "Salsas & Dips",
+          "slugs": [
+            "chuys-creamy-jalapeno",
+            "chuys-boom-boom-sauce",
+            "codys-salsa",
+            "salsa-roja",
+            "peanut-sauce"
+          ]
+        },
+        {
+          "label": "Pasta & Pizza Sauces",
+          "slugs": [
+            "classic-bolognese-ragu",
+            "bolognese-ragu",
+            "italian-mushroom-cream",
+            "neapolitan-pizza-sauce",
+            "pomodoro-sauce"
+          ]
+        },
+        {
+          "label": "Marinades & Seasonings",
+          "slugs": [
+            "caribbean-green-seasoning",
+            "greek-marinade",
+            "hawaiian-chili-pepper-water"
+          ]
+        },
+        {
+          "label": "Dressings & Condiments",
+          "slugs": [
+            "raspberry-vinaigrette",
+            "catalan-sofrito",
+            "spanish-picada"
+          ]
+        },
+        {
+          "label": "Spice Blends",
+          "slugs": [
+            "chili-powder",
+            "garam-masala-spice",
+            "lawrys-seasoning-clone",
+            "russells-yellow-curry-spice-blend"
+          ]
+        },
+        {
+          "label": "Cooking Sauces & Bases",
+          "slugs": [
+            "japanese-curry-roux",
+            "tikka-masala-sauce",
+            "chuys-hatch-green-chile-sauce",
+            "chinese-white-stir-fry-sauce"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Breakfast & Brunch",
+      "subcategories": [
+        {
+          "label": "Waffles & Breakfast Bakes",
+          "slugs": [
+            "belgian-waffles",
+            "philips-waffles"
+          ]
+        },
+        {
+          "label": "Eggs & Savory Breakfast",
+          "slugs": [
+            "shakshuka"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Desserts & Baking",
+      "subcategories": [
+        {
+          "label": "Cakes & Tarts",
+          "slugs": [
+            "tiramisu",
+            "cuatro-leches-cake",
+            "whiskey-date-cake",
+            "buttery-apple-tart",
+            "hectors-tres-leches"
+          ]
+        },
+        {
+          "label": "Pastries & Muffins",
+          "slugs": [
+            "glazed-cranberry-orange-muffins",
+            "kouign-amann",
+            "cranberry-orange-muffins"
+          ]
+        },
+        {
+          "label": "Frozen Desserts",
+          "slugs": [
+            "coconut-stracciatella-gelato",
+            "espresso-oreo-gelato"
+          ]
+        },
+        {
+          "label": "Dessert Pizzas",
+          "slugs": [
+            "apple-pie-pizza",
+            "apricot-raspberry-pizza",
+            "chocolate-strawberry-pizza",
+            "mascarpone-dessert-pizza"
+          ]
+        },
+        {
+          "label": "Individual Desserts",
+          "slugs": [
+            "mini-pavlovas"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Drinks & Cocktails",
+      "subcategories": [
+        {
+          "label": "Margaritas & Tequila",
+          "slugs": [
+            "yuzu-margarita",
+            "tequila-tini",
+            "frozen-margarita",
+            "mariano-margarita"
+          ]
+        },
+        {
+          "label": "Whiskey & Bourbon",
+          "slugs": [
+            "fork-fire-smoked-old-fashioned",
+            "rye-tai"
+          ]
+        },
+        {
+          "label": "Other Cocktails",
+          "slugs": [
+            "bougie-rose",
+            "smoky-mezcal",
+            "fiery-pineapple",
+            "cucumber-cooler",
+            "tuscan-pear",
+            "sevilla-sour",
+            "cardamom-currant-moscow-mule"
+          ]
+        },
+        {
+          "label": "Nonalcoholic Drinks",
+          "slugs": [
+            "boba-milk-tea",
+            "iced-lemon-green-tea-with-basil-seeds"
+          ]
+        },
+        {
+          "label": "Syrups & Mixers",
+          "slugs": [
+            "cardamom-currant-syrup",
+            "salted-cream-cheese-foam"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Techniques & Guides",
+      "subcategories": [
+        {
+          "label": "Cooking Techniques",
+          "slugs": [
+            "velveting-beef",
+            "velveting-chicken"
+          ]
+        },
+        {
+          "label": "Guides",
+          "slugs": [
+            "steak-guide"
+          ]
+        }
+      ]
+    }
+  ]
+}
