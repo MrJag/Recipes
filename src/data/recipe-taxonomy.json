@@ -21,14 +21,16 @@
             "15-bean-soup-sausage",
             "tomato-basil-soup",
             "chicken-congee",
-            "zaza-thai-chicken-rice-soup"
+            "zaza-thai-chicken-rice-soup",
+            "lemongrass-ginger-chicken-rice-soup"
           ]
         },
         {
           "label": "Stews & Braises",
           "slugs": [
             "latvian-stew",
-            "chuys-carne-guisada"
+            "chuys-carne-guisada",
+            "chile-chicken-bean-guisado"
           ]
         }
       ]
@@ -74,7 +76,8 @@
             "uzbek-plov-beef",
             "paella-de-carne",
             "clay-pot-rice-short-ribs",
-            "polpette-alla-napoletana"
+            "polpette-alla-napoletana",
+            "meatballs-calabrian-chili-sauce"
           ]
         },
         {
@@ -336,7 +339,8 @@
         {
           "label": "Individual Desserts",
           "slugs": [
-            "mini-pavlovas"
+            "mini-pavlovas",
+            "tangzhong-chocolate-chip-cookies"
           ]
         }
       ]
@@ -357,7 +361,8 @@
           "label": "Whiskey & Bourbon",
           "slugs": [
             "fork-fire-smoked-old-fashioned",
-            "rye-tai"
+            "rye-tai",
+            "high-tide-cocktail"
           ]
         },
         {
