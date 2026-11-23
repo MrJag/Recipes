@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-23T22:52:14.573Z",
+  "date": "2026-11-23T22:54:34.800Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -15,6 +15,26 @@
     },
     {
       "label": "Taxonomy sidebar populated",
+      "pass": true
+    },
+    {
+      "label": "Header dropdown lists all taxonomy groups",
+      "pass": true
+    },
+    {
+      "label": "Dropdown navigates to selected category",
+      "pass": true
+    },
+    {
+      "label": "Directory filtering loads",
+      "pass": true
+    },
+    {
+      "label": "Drinks category filtering matches taxonomy",
+      "pass": true
+    },
+    {
+      "label": "Recipe header has category dropdown",
       "pass": true
     },
     {
