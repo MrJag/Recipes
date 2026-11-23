@@ -47,5 +47,6 @@
     "User has not confirmed the home version tastes like the restaurant drink.",
     "Photo not supplied."
   ],
-  "sourceNote": "Inspired by Driftwood's High Tide in Laguna Beach; recreated in prior ChatGPT discussion on May 8, 2026."
+  "sourceNote": "Inspired by Driftwood's High Tide in Laguna Beach; recreated in prior ChatGPT discussion on May 8, 2026.",
+  "photo": "./public/images/high-tide-cocktail.jpg"
 }
