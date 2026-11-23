@@ -34,7 +34,7 @@ try {
  await page.goto('http://localhost:8123/directory.html#recipeSearch',{waitUntil:'load'});
  await page.waitForTimeout(550);
  check(await page.locator('.group-details[open]').count()===0,'Search bookmark starts with every category collapsed');
- check(await page.locator('#recipeSearch').isFocused(),'Search bookmark focuses search field');
+ check(await page.locator('#recipeSearch').evaluate(input => document.activeElement === input),'Search bookmark focuses search field');
  await page.goto('http://localhost:8123/directory.html?category=Main%20Dishes',{waitUntil:'load'});
  await page.waitForTimeout(500);
  await page.locator('#searchShortcut').click();
