@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "0.1",
+  "id": "tangzhong-chocolate-chip-cookies",
+  "title": "Tangzhong Chocolate Chip Cookies",
+  "category": "Dessert",
+  "headnote": "Tested October 25, 2026: 50 g cookies baked at 350°F for 14 minutes gave slightly crisp edges and chewy centers. Original cornstarch formula, not the experimental sweet-potato/tapioca-starch substitution.",
+  "ingredientGroups": [
+    {
+      "title": "Tangzhong",
+      "items": [
+        "18 g all-purpose flour",
+        "60 g whole milk"
+      ]
+    },
+    {
+      "title": "Cookie dough",
+      "items": [
+        "242 g all-purpose flour",
+        "8 g cornstarch",
+        "4 g baking soda",
+        "4 g fine salt",
+        "170 g butter, melted and cooled slightly",
+        "160 g brown sugar",
+        "70 g granulated sugar",
+        "50 g egg (without shell)",
+        "18 g egg yolk",
+        "10 g vanilla extract",
+        "220 g semisweet chocolate chips or chopped chocolate"
+      ]
+    }
+  ],
+  "steps": [
+    "Warm 18 g flour and 60 g milk together over low heat, stirring 2–3 minutes until thick and smooth. Cool before adding to the dough.",
+    "Whisk the remaining flour, cornstarch, baking soda, and salt together.",
+    "Mix the melted, slightly cooled butter with both sugars. Stir in the cooled tangzhong, egg, egg yolk, and vanilla until combined.",
+    "Fold in the dry ingredients and chocolate without overmixing.",
+    "Refrigerate at least 1 hour, preferably 12–24 hours for improved flavor and handling.",
+    "Portion into 50 g dough balls. Arrange 6 per baking sheet with space to spread.",
+    "Bake on the center rack in a conventional 350°F oven for about 14 minutes, until the edges are lightly golden and set while the centers remain soft.",
+    "Cool on the baking sheet for 5–10 minutes before transferring to a rack."
+  ],
+  "reviewFlags": [
+    "Recipe is user-tested, but exact final cooling interval varied in prior instructions (5 versus 10 minutes).",
+    "Photo has not been supplied."
+  ]
+}
