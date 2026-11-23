@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "0.1",
+  "id": "creamy-hot-chocolate",
+  "title": "Creamy Hot Chocolate (Milk & Half-and-Half)",
+  "status": "draft",
+  "category": "Drinks",
+  "headnote": "DRAFT / UNTESTED. Recovered December 7, 2025 one-mug formula, deliberately made without heavy cream, using whole milk, half-and-half, and melted chocolate. No confirmed tasting review recovered.",
+  "ingredientGroups": [
+    {
+      "title": "One mug",
+      "items": [
+        "180 g whole milk",
+        "90 g half-and-half",
+        "45 g semisweet chocolate chips (or dark chocolate at 60–70% cacao for less sweetness)",
+        "0.5 g fine salt",
+        "Optional: 2 g vanilla extract",
+        "Optional: 10–15 g sugar or honey, to taste"
+      ]
+    }
+  ],
+  "steps": [
+    "Warm the whole milk and half-and-half together in a small saucepan over medium-low heat until steaming but not boiling.",
+    "Add chocolate and salt and whisk continuously for 30–60 seconds, until completely melted and smooth.",
+    "Take off the heat and stir in optional vanilla. Taste first, then add optional sugar or honey if needed.",
+    "Pour into a mug and serve immediately."
+  ],
+  "reviewFlags": [
+    "UNTESTED: no explicit personal tasting feedback recovered.",
+    "Heavy cream is intentionally excluded at the user's request.",
+    "Optional sugar and vanilla are recovered options, not mandatory additions.",
+    "Photo not supplied."
+  ],
+  "sourceNote": "Recovered December 7, 2025 hot chocolate discussion."
+}
