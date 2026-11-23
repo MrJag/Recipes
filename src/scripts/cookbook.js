@@ -502,7 +502,7 @@ document.addEventListener("click", event => {
   const destination = new URL(link.href);
   const slug = destination.searchParams.get("recipe");
   if (slug && recipeLinks.has(slug) && destination.origin === location.origin &&
-      /\\/(?:index2\\.html|index\\.html)?$/.test(destination.pathname)) {
+      (destination.pathname.endsWith("/") || destination.pathname.endsWith("/index.html") || destination.pathname.endsWith("/index2.html"))) {
     event.preventDefault();
     const canonical = new URL("./", location.href);
     canonical.searchParams.set("recipe", slug);
@@ -513,16 +513,16 @@ document.addEventListener("click", event => {
     return;
   }
   // Header section links should also work from within a recipe.
+  const href = link.getAttribute("href");
   if (document.body.classList.contains("recipe-open") &&
-      link.closest(".site-header") && destination.origin === location.origin &&
-      destination.pathname === location.pathname && destination.hash &&
-      !destination.searchParams.has("recipe")) {
+      link.closest(".site-header") && href?.startsWith("#")) {
     event.preventDefault();
-    history.pushState(null, "", destination.href);
+    const canonical = new URL("./", location.href);
+    canonical.hash = href;
+    history.pushState(null, "", canonical.href);
     showRoute();
-    const target = document.querySelector(destination.hash);
-    target?.scrollIntoView();
-    if (destination.hash === "#directory") {
+    document.querySelector(href)?.scrollIntoView();
+    if (href === "#directory") {
       document.getElementById("recipeSearch")?.focus({preventScroll:true});
     }
   }
