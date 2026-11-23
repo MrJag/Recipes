@@ -1,32 +1,36 @@
 {
-  "date": "2026-11-23T22:51:09.468Z",
+  "date": "2026-11-23T22:52:14.573Z",
   "checks": [
     {
-      "label": "Direct recipe URL switches to recipe view",
+      "label": "Direct recipe URL displays viewer",
       "pass": true
     },
     {
-      "label": "Recipe viewer is visible",
+      "label": "Legacy cuisine index is hidden on recipe",
       "pass": true
     },
     {
-      "label": "Landing page hides on recipe",
+      "label": "Mid-Western Chili appears in preview",
       "pass": true
     },
     {
-      "label": "Selected recipe is rendered",
+      "label": "Taxonomy sidebar populated",
       "pass": true
     },
     {
-      "label": "Sidebar contains recipe navigation",
+      "label": "Header brand returns home",
       "pass": true
     },
     {
-      "label": "Brand navigates back home",
+      "label": "Landing page visible",
       "pass": true
     },
     {
-      "label": "Another direct recipe opens",
+      "label": "Old combined-page bookmark redirects",
+      "pass": true
+    },
+    {
+      "label": "Old index2 bookmark redirects",
       "pass": true
     }
   ],
