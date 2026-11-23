@@ -5,7 +5,7 @@ import re
 import subprocess
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "src/data/recent-recipes.json"
 history = subprocess.check_output(
     ["git", "log", "--diff-filter=A", "--name-only", "--pretty=format:", "--", "recipes"],
@@ -16,7 +16,7 @@ results = []
 seen = set()
 for raw_path in history.splitlines():
     path = raw_path.strip()
-    if not re.fullmatch(r"recipes/[^/]+/[^/]+\\.json", path) or path in seen:
+    if not re.fullmatch(r"recipes/[^/]+/[^/]+\.json", path) or path in seen:
         continue
     seen.add(path)
     source = ROOT / path
@@ -44,7 +44,7 @@ for raw_path in history.splitlines():
     if description.upper().startswith("DRAFT") or description.upper().startswith("UNTESTED"):
         description = ""
     if len(description) > 125:
-        sentence = re.split(r"(?<=[.!?])\\s+", description, maxsplit=1)[0]
+        sentence = re.split(r"(?<=[.!?])\s+", description, maxsplit=1)[0]
         description = sentence if len(sentence) <= 145 else description[:122].rsplit(" ", 1)[0] + "…"
     results.append({
         "slug": slug,
@@ -58,7 +58,7 @@ for raw_path in history.splitlines():
 
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 OUTPUT.write_text(
-    json.dumps({"recipes": results}, indent=2, ensure_ascii=False) + "\\n",
+    json.dumps({"recipes": results}, indent=2, ensure_ascii=False) + "\n",
     encoding="utf-8",
 )
 print("Updated recent recipe cards:", ", ".join(r["slug"] for r in results))
