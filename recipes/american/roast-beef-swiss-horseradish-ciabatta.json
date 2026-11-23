@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "0.1",
+  "id": "roast-beef-swiss-horseradish-ciabatta",
+  "title": "Roast Beef, Swiss & Horseradish Ciabatta",
+  "status": "draft",
+  "category": "American",
+  "headnote": "Sandwich developed in conversation on June 14, 2026. Untested: no confirmed tasting feedback was recovered. Use the cookbook's separate Fresh Horseradish Cream Sauce recipe (fresh-horseradish-cream-sauce). Makes 1 sandwich; deli meat weight is a suggested serving amount rather than an original measured quantity.",
+  "ingredientGroups": [
+    {
+      "title": "Sandwich",
+      "items": [
+        "1 ciabatta roll, split",
+        "120–150 g thinly sliced roast beef (suggested; original conversation said a generous portion)",
+        "2 slices Swiss cheese",
+        "1 handful fresh arugula",
+        "Fresh Horseradish Cream Sauce (see standalone recipe: fresh-horseradish-cream-sauce), enough to spread both sides",
+        "Optional: caramelized onions"
+      ]
+    }
+  ],
+  "steps": [
+    "Prepare the Fresh Horseradish Cream Sauce using its standalone cookbook recipe (fresh-horseradish-cream-sauce).",
+    "Slice the ciabatta and lightly toast the cut sides.",
+    "If using leftover roast beef, warm it briefly in a little broth over low heat so it stays tender; drain before assembling. Deli-sliced roast beef can be used as is.",
+    "Spread the horseradish cream sauce on both cut sides of the ciabatta.",
+    "Layer on a generous amount of roast beef, Swiss cheese, arugula, and optional caramelized onions.",
+    "Close the sandwich and serve immediately. If desired, warm the cheese briefly before adding the arugula."
+  ],
+  "reviewFlags": [
+    "UNTESTED: no personal cooking/taste confirmation recovered.",
+    "Roast beef and cheese amounts are estimates for one sandwich; June 14 discussion specified generous roast beef and Swiss without weights.",
+    "No user-supplied page-one photo."
+  ]
+}
