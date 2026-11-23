@@ -28,8 +28,8 @@
   ],
   "reviewFlags": [
     "DRAFT — latest egg-free version recovered from October 18 conversation; no confirmed tasting result for this exact revision.",
-    "Original February version included an egg white, but has intentionally not been substituted into the October recipe.",
-    "No photo supplied."
+    "Original February version included an egg white, but has intentionally not been substituted into the October recipe."
   ],
-  "sourceNote": "Reconstructed from earlier user/assistant cocktail development conversations (February, October 2026)."
+  "sourceNote": "Reconstructed from earlier user/assistant cocktail development conversations (February, October 2026).",
+  "photo": "./public/images/bergamot-silk-sake-cocktail.jpg"
 }

@@ -28,7 +28,7 @@
   ],
   "reviewFlags": [
     "UNTESTED: no personal cooking/taste confirmation recovered.",
-    "Roast beef and cheese amounts are estimates for one sandwich; June 14 discussion specified generous roast beef and Swiss without weights.",
-    "No user-supplied page-one photo."
-  ]
+    "Roast beef and cheese amounts are estimates for one sandwich; June 14 discussion specified generous roast beef and Swiss without weights."
+  ],
+  "photo": "./public/images/roast-beef-swiss-horseradish-ciabatta.jpg"
 }

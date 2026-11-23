@@ -45,8 +45,8 @@
   "reviewFlags": [
     "DRAFT — this is the latest proposed revision, not a verified successful final drink.",
     "October 5 initial tested build: 60 ml sake, 15 ml lemon, 15 ml bergamot syrup, 9 g cucumber, ½ tbsp yuzu-honey tea. User reported it was not sweet enough.",
-    "Gin at 15 g was reported too strong. Keep it restrained at approximately 5–7.5 ml (the user's accepted range was 5–10 g).",
-    "No photo supplied."
+    "Gin at 15 g was reported too strong. Keep it restrained at approximately 5–7.5 ml (the user's accepted range was 5–10 g)."
   ],
-  "sourceNote": "Reconstructed from earlier user/assistant cocktail development conversations (February, October 2026)."
+  "sourceNote": "Reconstructed from earlier user/assistant cocktail development conversations (February, October 2026).",
+  "photo": "./public/images/sake-yuzu-cucumber-cocktail.jpg"
 }

@@ -35,8 +35,8 @@
   "reviewFlags": [
     "UNTESTED: no user feedback on this exact final reconstructed rub.",
     "Historical total was described as 13 lb 6 oz (6,067 g), but the listed original weights plus final substitutions sum to approximately 6,326 g; ingredient weights are preserved and arithmetic discrepancy flagged.",
-    "Large batch: consider scaling before making, rather than assuming quantities are household-sized.",
-    "Photo not supplied."
+    "Large batch: consider scaling before making, rather than assuming quantities are household-sized."
   ],
-  "sourceNote": "Recovered September 19, 2026 Smokin' Buddha BBQ rub reconstruction; not asserted as an official published formulation."
+  "sourceNote": "Recovered September 19, 2026 Smokin' Buddha BBQ rub reconstruction; not asserted as an official published formulation.",
+  "photo": "./public/images/smokin-buddha-bbq-dry-rub.jpg"
 }

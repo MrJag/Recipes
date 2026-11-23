@@ -44,8 +44,8 @@
     "UNTESTED: custom final build has no confirmed taste feedback.",
     "Amounts for whole spices and chili flake weights were not recovered; estimates were intentionally not invented.",
     "The user specifically wanted a slight sweetness compared with a Mala Market version.",
-    "Oil temperatures are targets; trust a thermometer rather than the estimated waiting times.",
-    "Photo not supplied."
+    "Oil temperatures are targets; trust a thermometer rather than the estimated waiting times."
   ],
-  "sourceNote": "Recovered from April 21, 2026 Sichuan chili oil conversation."
+  "sourceNote": "Recovered from April 21, 2026 Sichuan chili oil conversation.",
+  "photo": "./public/images/sichuan-chili-oil.jpg"
 }

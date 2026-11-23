@@ -11,14 +11,14 @@
       "slug": "oven-baked-bacon",
       "title": "Oven-Baked Bacon (Tender or Crispy)",
       "description": "400°F oven · One tray, two textures",
-      "photo": null,
+      "photo": "./public/images/oven-baked-bacon.jpg",
       "draft": false
     },
     {
       "slug": "frijoles-charros-rancho-gordo",
       "title": "Frijoles Charros (Rancho Gordo Pinto & Mayocoba)",
       "description": "Recently added to the cookbook.",
-      "photo": null,
+      "photo": "./public/images/frijoles-charros-rancho-gordo.jpg",
       "draft": true
     }
   ]

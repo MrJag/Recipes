@@ -27,8 +27,8 @@
   "reviewFlags": [
     "UNTESTED: no explicit personal tasting feedback recovered.",
     "Heavy cream is intentionally excluded at the user's request.",
-    "Optional sugar and vanilla are recovered options, not mandatory additions.",
-    "Photo not supplied."
+    "Optional sugar and vanilla are recovered options, not mandatory additions."
   ],
-  "sourceNote": "Recovered December 7, 2025 hot chocolate discussion."
+  "sourceNote": "Recovered December 7, 2025 hot chocolate discussion.",
+  "photo": "./public/images/creamy-hot-chocolate.jpg"
 }
