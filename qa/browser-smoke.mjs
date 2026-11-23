@@ -26,6 +26,22 @@ try {
  await page.waitForTimeout(550);
  check((await page.locator('#categoryStatus').textContent()).includes('53 of'),'Main Dishes bookmark filters correctly');
  check(await page.locator('#categoryResults').isVisible(),'Filtered results visible');
+ await page.goto('http://localhost:8123/directory.html#recipeSearch',{waitUntil:'load'});
+ await page.waitForTimeout(550);
+ check(await page.locator('.group-details[open]').count()===0,'Search bookmark starts with every category collapsed');
+ check(await page.locator('#recipeSearch').isFocused(),'Search bookmark focuses search field');
+ await page.goto('http://localhost:8123/directory.html?category=Main%20Dishes',{waitUntil:'load'});
+ await page.waitForTimeout(500);
+ await page.locator('#searchShortcut').click();
+ check(await page.locator('.group-details[open]').count()===0,'Clicking Search collapses categories');
+ check((await page.locator('#categoryStatus').textContent()).includes('175 of 175'),'Search clears category selection');
+ check(page.url().endsWith('#recipeSearch'),'Search shortcut updates to shareable anchor');
+ await page.goto('http://localhost:8123/',{waitUntil:'load'});
+ await page.locator('#searchShortcut').click();
+ await page.waitForTimeout(500);
+ check(page.url().includes('directory.html#recipeSearch'),'Homepage Search opens directory search view');
+ check(await page.locator('.group-details[open]').count()===0,'Homepage Search keeps category groups collapsed');
+
  await page.goto('http://localhost:8123/?category=Main%20Dishes#directory',{waitUntil:'load'});
  await page.waitForTimeout(300);
  check(page.url().includes('directory.html?category=Main'),'Old homepage category bookmark redirects');

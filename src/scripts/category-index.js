@@ -44,7 +44,7 @@ const groupNav = $("groupNav");
 let taxonomy;
 let recipes = [];
 let selectedGroups = [];
-let expandedGroup = "Soups, Stews & Chili";
+let expandedGroup = location.hash === "#recipeSearch" ? null : "Soups, Stews & Chili";
 
 function itemNode(recipe) {
   const item = document.createElement("li");
@@ -228,11 +228,22 @@ async function loadCatalog() {
       }
     });
   }
-  $("searchShortcut")?.addEventListener("click",() => {
-    window.setTimeout(() => searchInput.focus({preventScroll:true}),0);
+  $("searchShortcut")?.addEventListener("click", event => {
+    // Search is a clean, collapsed directory view rather than a category view.
+    event.preventDefault();
+    selectedGroups = [];
+    expandedGroup = null;
+    searchInput.value = cuisineFilter.value = proteinFilter.value = "";
+    const url = new URL(location.href);
+    url.search = "";
+    url.hash = "recipeSearch";
+    history.replaceState(null, "", url);
+    render();
+    searchInput.scrollIntoView({block:"start"});
+    searchInput.focus({preventScroll:true});
   });
   const urlFilters = new URLSearchParams(location.search);
-  const requestedGroup = urlFilters.get("category");
+  const requestedGroup = location.hash === "#recipeSearch" ? null : urlFilters.get("category");
   searchInput.value = urlFilters.get("search") || "";
   if (urlFilters.has("cuisine")) cuisineFilter.value = urlFilters.get("cuisine");
   if (urlFilters.has("ingredient")) proteinFilter.value = urlFilters.get("ingredient");
@@ -241,6 +252,10 @@ async function loadCatalog() {
     expandedGroup = requestedGroup;
   }
   render();
+  if (location.hash === "#recipeSearch") {
+    // Focus after the asynchronous catalog is ready; don't auto-expand a group.
+    searchInput.focus({preventScroll:true});
+  }
 }
 
 loadCatalog().catch(error => {
