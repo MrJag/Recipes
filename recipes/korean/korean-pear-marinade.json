@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "0.1",
+  "id": "korean-pear-marinade",
+  "title": "Korean Pear Marinade",
+  "status": "draft",
+  "category": "Korean",
+  "headnote": "Scaled for 2.2 lb (998 g) of beef or other meat. Adapted from the four-pear house marinade, using agave.",
+  "ingredientGroups": [
+    {
+      "title": "Marinade",
+      "items": [
+        "155 g Korean (Asian) pear, peeled and cored",
+        "78 g Sempio Jin Gold S soy sauce",
+        "35 g brown sugar",
+        "22 g agave syrup",
+        "27 g toasted sesame oil",
+        "23 g garlic",
+        "17 g fresh ginger",
+        "47 g onion",
+        "17 g rice vinegar",
+        "3 g freshly ground black pepper",
+        "12 g sesame seeds",
+        "23 g scallions"
+      ]
+    },
+    {
+      "title": "Optional spicy version",
+      "items": [
+        "12 g gochujang",
+        "2 g gochugaru"
+      ]
+    }
+  ],
+  "steps": [
+    "Peel and core the pear; cut the pear, onion, garlic, and ginger into pieces suitable for blending.",
+    "Blend the pear, soy sauce, brown sugar, agave, sesame oil, garlic, ginger, onion, rice vinegar, and black pepper until smooth.",
+    "Stir in sesame seeds and sliced scallions. For a spicy version, blend in gochujang and gochugaru.",
+    "Coat 2.2 lb (998 g) of meat evenly with the marinade. Refrigerate while marinating, ideally 4–8 hours for sliced beef; avoid extended marinating for very thin cuts.",
+    "Remove excess marinade before searing or grilling to limit burning from the sugars. Cook the meat to its appropriate safe temperature; discard marinade that touched raw meat unless boiled before use."
+  ],
+  "reviewFlags": [
+    "Photo for page-one right-edge strip not yet supplied; recipe kept as draft until an appropriate photo is available.",
+    "Marinating guidance is general; adjust for cut and thickness."
+  ],
+  "sourceNote": "Scaled from the user's latest four-pear Korean marinade template (800 g pear, agave version) to 155 g prepared pear, retaining original ingredient proportions."
+}
