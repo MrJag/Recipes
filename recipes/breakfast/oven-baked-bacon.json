@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "0.1",
+  "id": "oven-baked-bacon",
+  "title": "Oven-Baked Bacon (Tender or Crispy)",
+  "category": "Breakfast",
+  "subtitle": "400°F oven · One tray, two textures",
+  "headnote": "Bake bacon together, removing Anthony’s portion while tender and pliable and leaving Mariana’s portion until crispy. Timings are estimates; thickness and oven behavior vary.",
+  "ingredientGroups": [
+    {
+      "title": "Ingredients & equipment",
+      "items": [
+        "1 package bacon (regular or thick-cut)",
+        "1 rimmed baking sheet",
+        "Aluminum foil or parchment paper for lining the pan",
+        "Optional: loose foil tent or oven-safe mesh splatter screen"
+      ]
+    }
+  ],
+  "steps": [
+    "Preheat oven to 400°F. Line a rimmed baking sheet with aluminum foil or oven-safe parchment for easier cleanup.",
+    "Arrange bacon strips flat in a single layer, with a little room between strips. Do not stack them.",
+    "Bake uncovered for approximately 13 minutes, then check. For Anthony, remove strips when fully cooked but still tender and flexible, typically around 13–15 minutes for regular-cut bacon.",
+    "Continue baking Mariana’s strips for approximately 3–6 minutes more, usually 16–21 minutes total, until nicely browned and crispy. Thin pieces may finish sooner; thick-cut bacon may take longer.",
+    "No flipping is required, but optionally turn strips for more even browning. Transfer cooked bacon to paper towels to drain for 1–2 minutes.",
+    "To reduce splatter, use a loose tent of foil above the bacon (do not seal) or an oven-safe mesh splatter screen. A tight cover traps steam and reduces crispness; for Mariana’s strips, remove the tent near the end if necessary."
+  ],
+  "notes": [
+    "Anthony: prefers tender, pliable bacon—not crunchy. Check early and remove before crisping.",
+    "Mariana: prefers crispy bacon. Leave her portion in the oven longer, watching carefully to avoid burning.",
+    "A liner beneath the bacon helps cleanup but does not prevent splatter. Use a rimmed baking sheet to contain grease.",
+    "Cooking times are starting points, not guarantees; fully cook bacon and judge doneness by appearance and texture."
+  ],
+  "sourceNote": "Family conversation, November 23, 2026. Preferences specifically noted for Anthony and Mariana."
+}
