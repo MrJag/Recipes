@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "0.1",
+  "id": "chile-chicken-bean-guisado",
+  "title": "Chile Chicken and Bean Guisado",
+  "status": "draft",
+  "category": "Mexican",
+  "headnote": "Source-only draft. NYT Cooking recipe by Kristina Felix mentioned in the September 3, 2026 newsletter; the email did not include complete ingredient quantities or instructions. Praise quoted in the email came from NYT readers, not the cookbook owner.",
+  "ingredientGroups": [
+    {
+      "title": "Recipe to recover",
+      "items": [
+        "Chicken — amount not yet verified",
+        "Beans — type and quantity not yet verified",
+        "Chile component — ingredients and quantities not yet verified",
+        "Other seasonings, liquids, and garnishes — consult original recipe"
+      ]
+    }
+  ],
+  "steps": [
+    "Open the linked original NYT Cooking recipe and verify the complete ingredients and steps before preparing or marking this entry final."
+  ],
+  "reviewFlags": [
+    "Incomplete placeholder: ingredient quantities and method not available from the retrieved newsletter.",
+    "Do not cook from this placeholder alone.",
+    "User enjoyment is not verified.",
+    "Photo not supplied."
+  ],
+  "sourceNote": "Kristina Felix, NYT Cooking, featured September 3, 2026: https://cooking.nytimes.com/search?q=Chile%20Chicken%20and%20Bean%20Guisado"
+}
