@@ -219,6 +219,11 @@ async function loadCatalog() {
   $("searchShortcut")?.addEventListener("click",() => {
     window.setTimeout(() => searchInput.focus({preventScroll:true}),0);
   });
+  const requestedGroup = new URLSearchParams(location.search).get("category");
+  if (requestedGroup && taxonomy.groups.some(group => group.name === requestedGroup)) {
+    selectedGroups = [requestedGroup];
+    expandedGroup = requestedGroup;
+  }
   render();
 }
 

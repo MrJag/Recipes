@@ -8,15 +8,16 @@
   <link rel="stylesheet" href="./src/styles/cookbook.css?v=0.7.7">
   <link rel="stylesheet" href="./src/styles/editor.css?v=0.7.8">
   <link rel="stylesheet" href="./src/styles/home.css?v=5">
-  <link rel="stylesheet" href="./src/styles/site-header.css?v=1">
+  <link rel="stylesheet" href="./src/styles/site-header.css?v=2">
   <script>
     // Preserve old bookmarks from the previous combined-page build.
     if (new URLSearchParams(location.search).has("recipe")) {
       location.replace("./recipe.html" + location.search + location.hash);
     }
   </script>
-  <script defer src="./src/scripts/category-index.js?v=10"></script>
+  <script defer src="./src/scripts/category-index.js?v=11"></script>
   <script defer src="./src/scripts/recent-recipes.js?v=3"></script>
+  <script defer src="./src/scripts/header-categories.js?v=1"></script>
 
 </head>
 <body class="homepage">
@@ -24,7 +25,20 @@
     <a class="brand" href="./" aria-label="Family Cookbook home"><span class="brand-mark" aria-hidden="true">❧</span>Family Cookbook</a>
     <nav class="site-nav" aria-label="Main navigation">
       <a href="#directory">Recipes</a>
-      <a href="#categories">Categories</a>
+      <details class="header-categories" id="headerCategories">
+        <summary>Categories <span class="menu-chevron" aria-hidden="true">▾</span></summary>
+        <div class="header-categories-menu" role="group" aria-label="Recipe categories">
+          <a href="./?category=Soups%2C%20Stews%20%26%20Chili#directory">Soups, Stews &amp; Chili</a>
+          <a href="./?category=Main%20Dishes#directory">Main Dishes</a>
+          <a href="./?category=Pizza%2C%20Pasta%20%26%20Noodles#directory">Pizza, Pasta &amp; Noodles</a>
+          <a href="./?category=Sides%2C%20Breads%20%26%20Grains#directory">Sides, Breads &amp; Grains</a>
+          <a href="./?category=Sauces%2C%20Condiments%20%26%20Seasonings#directory">Sauces, Condiments &amp; Seasonings</a>
+          <a href="./?category=Breakfast%20%26%20Brunch#directory">Breakfast &amp; Brunch</a>
+          <a href="./?category=Desserts%20%26%20Baking#directory">Desserts &amp; Baking</a>
+          <a href="./?category=Drinks%20%26%20Cocktails#directory">Drinks &amp; Cocktails</a>
+          <a href="./?category=Techniques%20%26%20Guides#directory">Techniques &amp; Guides</a>
+        </div>
+      </details>
       <a href="#about">About</a>
       <a href="#directory" id="searchShortcut">Search ⌕</a>
     </nav>

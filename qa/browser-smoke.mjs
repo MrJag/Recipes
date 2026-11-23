@@ -13,6 +13,17 @@ try {
  check(await page.locator('#recipeIndex').isHidden(),'Legacy cuisine index is hidden on recipe');
  check((await page.locator('#pages h1').allTextContents()).some(x=>x.includes('Mid-Western Chili')),'Mid-Western Chili appears in preview');
  check(await page.locator('.recipe-sidebar .sidebar-recipe-link').count()>=170,'Taxonomy sidebar populated');
+ await page.locator('#headerCategories > summary').click();
+ check(await page.locator('.header-categories-menu a').count()===9,'Header dropdown lists all taxonomy groups');
+ await page.locator('.header-categories-menu a').filter({hasText:'Drinks & Cocktails'}).click();
+ await page.waitForTimeout(550);
+ check(page.url().includes('category=Drinks'), 'Dropdown navigates to selected category');
+ check((await page.locator('#categoryStatus').textContent()).includes('of 175'), 'Directory filtering loads');
+ check((await page.locator('#categoryStatus').textContent()).includes('22 of'), 'Drinks category filtering matches taxonomy');
+ await page.goto('http://localhost:8123/recipe.html?recipe=midwestern-chili',{waitUntil:'load'});
+ await page.waitForTimeout(500);
+ await page.locator('#headerCategories > summary').click();
+ check(await page.locator('.header-categories-menu a').count()===9,'Recipe header has category dropdown');
  await page.locator('.site-header a.brand').click();
  check(page.url().endsWith('/'),'Header brand returns home');
  check(await page.locator('.hero').isVisible(),'Landing page visible');
