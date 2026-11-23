@@ -90,6 +90,8 @@ function render() {
     if (!subgroups.length) continue;
     const section = document.createElement("section");
     section.className = "taxonomy-section";
+    section.dataset.group = group.name;
+    section.id = "recipes-" + group.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
     const details = document.createElement("details");
     details.className = "group-details";
     details.open = forceOpen || group.name === expandedGroup ||
@@ -197,9 +199,20 @@ async function loadCatalog() {
     render();
   });
   for (const card of document.querySelectorAll("[data-category]")) {
-    card.addEventListener("click",() => {
+    card.addEventListener("click",(event) => {
+      event.preventDefault();
       searchInput.value = cuisineFilter.value = proteinFilter.value = "";
-      selectGroups(photoCategoryGroups[card.dataset.category] || []);
+      const groups = photoCategoryGroups[card.dataset.category] || [];
+      selectGroups(groups);
+      // Jump to the actual recipe group rather than the directory search controls.
+      // Main Dishes takes precedence over Soups for the Mains photo card.
+      const targetName = card.dataset.category === "Mains" ? "Main Dishes" : groups[0];
+      const target = [...results.querySelectorAll(".taxonomy-section")]
+        .find(section => section.dataset.group === targetName);
+      if (target) {
+        target.querySelector(".group-details").open = true;
+        target.scrollIntoView({behavior:"auto",block:"start"});
+      }
     });
   }
   $("searchShortcut")?.addEventListener("click",() => {
