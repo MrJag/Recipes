@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T04:41:39.839Z",
+  "date": "2026-11-24T04:52:51.723Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -194,27 +194,51 @@
       "pass": true
     },
     {
-      "label": "Active rating button uses muted olive accent",
+      "label": "Opening stars does not activate inline edit mode",
       "pass": true
     },
     {
-      "label": "Rating selection enters editable save mode",
+      "label": "Pencil stays inactive when rating",
       "pass": true
     },
     {
-      "label": "Selecting four stars updates the editable header",
+      "label": "Redundant Clear rating button is removed",
       "pass": true
     },
     {
-      "label": "Rating follows subtitle while editing",
+      "label": "Rating popover has no text status",
       "pass": true
     },
     {
-      "label": "Rating is included in recipe save JSON",
+      "label": "Rating button uses olive accent while open",
       "pass": true
     },
     {
-      "label": "Cancel discards a pending rating",
+      "label": "Four stars preview on normal recipe page",
+      "pass": true
+    },
+    {
+      "label": "Rating has its own Save action",
+      "pass": true
+    },
+    {
+      "label": "Clicking selected four stars clears rating",
+      "pass": true
+    },
+    {
+      "label": "Saving is disabled when rating matches original",
+      "pass": true
+    },
+    {
+      "label": "Standalone rating Save writes rating to recipe JSON",
+      "pass": true
+    },
+    {
+      "label": "Rating Save does not create an editable sheet",
+      "pass": true
+    },
+    {
+      "label": "Dismissing rating Save restores committed rating",
       "pass": true
     },
     {
@@ -295,6 +319,30 @@
     },
     {
       "label": "Publishing without credentials is refused",
+      "pass": true
+    },
+    {
+      "label": "Published Bombay potatoes recipe includes the Jamie Oliver attribution",
+      "pass": true
+    },
+    {
+      "label": "Attribution is visible in inline edit mode",
+      "pass": true
+    },
+    {
+      "label": "Attribution can be edited",
+      "pass": true
+    },
+    {
+      "label": "Attribution retains italic footnote styling",
+      "pass": true
+    },
+    {
+      "label": "Source note edits are persisted to the original JSON field",
+      "pass": true
+    },
+    {
+      "label": "Editing source note preserves all recipe directions",
       "pass": true
     },
     {
