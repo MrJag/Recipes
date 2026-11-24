@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T05:54:57.047Z",
+  "date": "2026-11-24T05:59:35.751Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -470,6 +470,22 @@
       "pass": true
     },
     {
+      "label": "Rating save displays prominent Saving rating feedback",
+      "pass": true
+    },
+    {
+      "label": "Rating save progress spinner is animated",
+      "pass": true
+    },
+    {
+      "label": "Rating menu remains visible until save finishes",
+      "pass": true
+    },
+    {
+      "label": "Rating stars are disabled during a save",
+      "pass": true
+    },
+    {
       "label": "Clicking a rating immediately commits to GitHub with cached token",
       "pass": true
     },
@@ -483,6 +499,10 @@
     },
     {
       "label": "Rating auto-save keeps normal recipe view",
+      "pass": true
+    },
+    {
+      "label": "Clearing a rating also displays saving feedback",
       "pass": true
     },
     {
