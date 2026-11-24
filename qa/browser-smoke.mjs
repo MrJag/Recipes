@@ -223,6 +223,8 @@ try {
 
  // Mock GitHub API to test the save flow without changing repository data.
  let githubPut = null;
+ let githubPuts = 0;
+ let savedMockContent = null;
  const originalSource = readFileSync('recipes/drinks/sweetango-orchard-sour.json','utf8');
  await page.route('https://api.github.com/repos/MrJag/Recipes/contents/**',async route => {
    const method = route.request().method();
@@ -231,10 +233,12 @@ try {
    if (method === 'OPTIONS') return route.fulfill({status:204,headers:cors,body:''});
    if (method === 'GET') return route.fulfill({
      status:200,contentType:'application/json',headers:cors,
-     body:JSON.stringify({sha:'mock-current-sha',content:Buffer.from(originalSource).toString('base64')})
+     body:JSON.stringify({sha:'mock-current-sha',content:Buffer.from(savedMockContent || originalSource).toString('base64')})
    });
    if (method === 'PUT') {
      githubPut = route.request().postDataJSON();
+     githubPuts++;
+     savedMockContent = Buffer.from(githubPut.content,'base64').toString('utf8');
      return route.fulfill({status:200,contentType:'application/json',headers:cors,
        body:JSON.stringify({commit:{sha:'abcdef1234567890'}})});
    }
@@ -260,6 +264,34 @@ try {
  check((await page.locator('#saveFeedback').textContent()).includes('Published!'),'Successful publish confirms commit');
  check(await page.locator('#saveRecipeButton').isHidden(),'Save hides after successful publish');
  await page.locator('#dismissSaveDialog').click();
+ const storedAccess = await page.evaluate(() =>
+   JSON.parse(sessionStorage.getItem('familyCookbook.githubToken.v1') || 'null'));
+ check(storedAccess?.token==='test-only-token','Confirmed GitHub save caches tab-only access');
+ check(storedAccess?.expiresAt>Date.now(),'Cached access has a future expiry');
+ await page.locator('#editRecipeButton').click();
+ await page.locator('.edit-sheet .edit-main-title').fill('Sweetango Orchard Sour — Followup');
+ await page.locator('#saveRecipeButton').click();
+ await page.waitForTimeout(600);
+ check(githubPuts===2,'Valid tab access publishes follow-up edit automatically');
+ check(await page.locator('#githubTokenPrompt').isHidden(),'Cached GitHub access skips token input');
+ check((await page.locator('#saveFeedback').textContent()).includes('Published!'),
+   'Automatic save reports GitHub confirmation');
+ await page.locator('#dismissSaveDialog').click();
+ // An expired cached token must never trigger an automatic publish.
+ await page.evaluate(() => {
+   const key='familyCookbook.githubToken.v1';
+   const data=JSON.parse(sessionStorage.getItem(key));
+   data.expiresAt=Date.now()-1;
+   sessionStorage.setItem(key, JSON.stringify(data));
+ });
+ await page.locator('#editRecipeButton').click();
+ await page.locator('.edit-sheet .edit-main-title').fill('Unsaved after expiry');
+ await page.locator('#saveRecipeButton').click();
+ check(await page.locator('#githubTokenPrompt').isVisible(),'Expired access requires token again');
+ check(githubPuts===2,'Expired access prevents automatic publish');
+ await page.locator('#dismissSaveDialog').click();
+ page.once('dialog',dialog=>dialog.accept());
+ await page.locator('#cancelEditButton').click();
  await page.unrouteAll();
  // A truncated/empty GitHub response must not silently discard edits.
  await page.route('https://api.github.com/repos/MrJag/Recipes/contents/**',async route => {
