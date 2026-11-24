@@ -431,3 +431,27 @@
 @media print{
   .recipe-action-rail{display:none!important}
 }
+
+/* Option B: compact rating on the right of the category heading, with the
+   existing decorative rule running between category/draft and rating. */
+.recipe-header .category:has(.recipe-rating)::after,
+.edit-sheet .category:has(.edit-recipe-rating)::after{
+  order:1;min-width:12px;
+}
+.recipe-header .category > .recipe-rating,
+.edit-sheet .category > .edit-recipe-rating{
+  order:2;flex:0 0 auto;margin:0 0 0 auto;
+  display:flex;align-items:center;gap:5px;
+  font:10px/1.15 Arial,sans-serif;letter-spacing:normal;
+  text-transform:none;color:#756755;
+}
+.recipe-header .category > .recipe-rating .rating-glyphs,
+.edit-sheet .category > .edit-recipe-rating .rating-glyphs{
+  font:14px/1 Arial,sans-serif;letter-spacing:0;color:#d59c22;
+}
+.recipe-header .category > .recipe-rating.unrated .rating-glyphs,
+.edit-sheet .category > .edit-recipe-rating.unrated .rating-glyphs{color:#b7a99b}
+@media screen and (max-width:760px){
+  .recipe-header .category > .recipe-rating,
+  .edit-sheet .category > .edit-recipe-rating{font-size:9px}
+}

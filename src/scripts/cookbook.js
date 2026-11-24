@@ -102,10 +102,10 @@ function buildHeader(recipe) {
   const wrap = el("header", "recipe-header");
   const category = el("div", "category", (recipe.category || "Recipes").toUpperCase());
   addDraftBadge(category, recipe.status);
+  category.appendChild(ratingDisplay(recipe.rating));
   wrap.appendChild(category);
   wrap.appendChild(el("h1", null, recipe.title));
   if (recipe.subtitle) wrap.appendChild(el("div", "subtitle", "(" + recipe.subtitle + ")"));
-  wrap.appendChild(ratingDisplay(recipe.rating));
   const bits = [];
   if (recipe.servings) bits.push("SERVES " + recipe.servings);
   if (recipe.prepTime) bits.push("PREP " + recipe.prepTime);

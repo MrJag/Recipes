@@ -132,13 +132,14 @@ function buildEditPage(recipe) {
     sheet.appendChild(photo);
   }
   const content = node("div","content edit-content");
-  content.appendChild(node("div","category",(recipe.category || "Recipes").toUpperCase()));
+  const categoryLine = node("div","category",(recipe.category || "Recipes").toUpperCase());
+  categoryLine.appendChild(window.CookbookRating?.display(draft?.rating) ||
+    node("div","edit-recipe-rating","Unrated"));
+  content.appendChild(categoryLine);
   content.appendChild(editable("h1","edit-main-title",recipe.title,"Recipe title","Recipe title"));
   const subtitle = editable("div","edit-subtitle",recipe.subtitle || "","Subtitle","Subtitle (optional)");
   subtitle.dataset.editField = "subtitle";
   content.appendChild(subtitle);
-  content.appendChild(window.CookbookRating?.display(draft?.rating) ||
-    node("div","edit-recipe-rating","Unrated"));
   const meta = node("div","edit-meta");
   for (const [key,label] of [["servings","Serves"],["yield","Yield"],["prepTime","Prep"],["cookTime","Cook"]]) {
     const wrapper = node("label",null,label);
