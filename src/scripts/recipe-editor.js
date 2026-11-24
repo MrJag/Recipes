@@ -203,15 +203,13 @@ function sectionHeading(text) {
 function ingredientGroups(groups, identifier) {
   const holder = node("div", "edit-groups");
   holder.dataset.groups = identifier;
-  const refreshHolder = () => holder.classList.toggle("grouped",
+  const itemValues = list => [...list.querySelectorAll(":scope > li.edit-list-item")]
+    .map(item => item.textContent.trim()).filter(Boolean);
+  const updateLayout = () => holder.classList.toggle("grouped",
     holder.querySelectorAll(":scope > .edit-ingredient-group").length > 1);
-  const makeGroup = group => {
-    const section = node("div","edit-ingredient-group");
-    const heading = editable("h3","edit-group-name",group.title || "",
-      "Ingredient group heading","Group heading (optional)");
-    const list = editableList(group.items || [],"ingredients","Ingredient");
-    const values = current => [...current.querySelectorAll(":scope > li.edit-list-item")]
-      .map(item => item.textContent.trim()).filter(Boolean);
+
+  function attachList(section, values) {
+    const list = editableList(values, "ingredients", "Ingredient");
     list.onInsertHeading = after => {
       const entries = [...list.querySelectorAll(":scope > li.edit-list-item")];
       const index = entries.indexOf(after);
@@ -219,59 +217,44 @@ function ingredientGroups(groups, identifier) {
       const before = entries.slice(0,index+1).map(item => item.textContent.trim()).filter(Boolean);
       const following = entries.slice(index+1).map(item => item.textContent.trim()).filter(Boolean);
       const next = makeGroup({title:null,items:following});
+      list.replaceWith(attachList(section,before));
       section.after(next);
-      const replacement = editableList(before,"ingredients","Ingredient");
-      replacement.onInsertHeading = list.onInsertHeading;
-      list.replaceWith(replacement);
-      // The callback closes over the list, so refresh it for the new list too.
-      bindGroupList(section,replacement);
-      refreshHolder();
+      updateLayout();
       dirty = true;
       next.querySelector(".edit-group-name").focus();
     };
-    function bindGroupList(target, currentList) {
-      currentList.onInsertHeading = after => {
-        const entries = [...currentList.querySelectorAll(":scope > li.edit-list-item")];
-        const index = entries.indexOf(after);
-        if (index < 0) return;
-        const before = entries.slice(0,index+1).map(item => item.textContent.trim()).filter(Boolean);
-        const following = entries.slice(index+1).map(item => item.textContent.trim()).filter(Boolean);
-        const next = makeGroup({title:null,items:following});
-        target.after(next);
-        const replacement = editableList(before,"ingredients","Ingredient");
-        currentList.replaceWith(replacement);
-        bindGroupList(target,replacement);
-        refreshHolder();
-        dirty = true;
-        next.querySelector(".edit-group-name").focus();
-      };
-    }
-    bindGroupList(section,list);
+    return list;
+  }
+  function makeGroup(group) {
+    const section = node("div","edit-ingredient-group");
+    const heading = editable("h3","edit-group-name",group.title || "",
+      "Ingredient group heading","Group heading (optional)");
     heading.addEventListener("keydown", event => {
       if (event.key !== "Backspace" || heading.textContent.trim()) return;
       event.preventDefault();
       const previous = section.previousElementSibling;
       if (!previous?.classList.contains("edit-ingredient-group")) {
+        // First group has no preceding group to merge into.
         heading.remove();
         section.querySelector("li.edit-list-item")?.focus();
       } else {
-        const oldList = previous.querySelector("ul.edit-list");
-        const merged = values(oldList).concat(values(section.querySelector("ul.edit-list")));
-        const replacement = editableList(merged,"ingredients","Ingredient");
-        oldList.replaceWith(replacement);
-        bindGroupList(previous,replacement);
+        const previousList = previous.querySelector("ul.edit-list");
+        const merged = itemValues(previousList).concat(
+          itemValues(section.querySelector("ul.edit-list")));
+        previousList.replaceWith(attachList(previous,merged));
         section.remove();
-        refreshHolder();
-        previous.querySelector("li.edit-list-item:last-of-type")?.focus();
+        updateLayout();
+        const survivors = previous.querySelectorAll("li.edit-list-item");
+        survivors[survivors.length-1]?.focus();
       }
       dirty = true;
     });
-    section.append(heading,list);
+    section.append(heading,attachList(section,group.items || []));
     return section;
-  };
+  }
   (groups?.length ? groups : [{title:null,items:[]}]).forEach(group =>
     holder.appendChild(makeGroup(group)));
-  refreshHolder();
+  updateLayout();
   return holder;
 }
 function directions(steps, identifier) {
