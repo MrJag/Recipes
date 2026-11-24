@@ -27,6 +27,7 @@
   "reviewFlags": [
     "Draft — recipe has not yet been mixed and taste-tested; adjust lemon or elderflower after tasting."
   ],
-  "sourceNote": "Developed in conversation for Fowler Farms Sweetango cider, using Michter’s Small Batch Bourbon. Intended to preserve the cider’s bright, sweet-tart character without mulled spices.",
-  "photo": "./public/images/sweetango-orchard-sour-v2.jpg"
+  "sourceNote": "Homemade cocktail recipe to showcase a particularly great batch of Fowler Farms Sweetango cider.",
+  "photo": "./public/images/sweetango-orchard-sour-v2.jpg",
+  "subtitle": ""
 }
