@@ -590,3 +590,13 @@ body:has(#ratingOptions:not([hidden])) .edit-sheet .edit-recipe-rating .rating-l
   content:"Group heading (optional)";
   color:#b69a86;font-style:italic;
 }
+
+/* Grouped ingredient headings retain two cookbook-style columns while editing. */
+.edit-sheet .edit-groups.grouped {
+  columns:2;column-gap:20px;column-rule:1px solid #d6c1b3;
+}
+.edit-sheet .edit-groups.grouped .edit-ingredient-group {break-inside:avoid}
+.edit-sheet .edit-groups.grouped ul {columns:1}
+@media screen and (max-width:760px){
+  .edit-sheet .edit-groups.grouped {columns:1}
+}
