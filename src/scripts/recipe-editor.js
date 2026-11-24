@@ -67,6 +67,22 @@ let dirty = false;
 let draft = null;
 let saveInProgress = false;
 let restoreScroll = 0;
+const ratingSaveButton = document.getElementById("saveRecipeRating");
+const publishButton = document.getElementById("publishRecipeGithub");
+
+function setSavingState(busy) {
+  for (const button of [saveButton, ratingSaveButton, publishButton]) {
+    if (!button) continue;
+    button.disabled = busy;
+    button.classList.toggle("is-saving", busy);
+    button.setAttribute("aria-busy", String(busy));
+    if (button === saveButton) button.textContent = busy ? "Saving…" : "Save";
+    if (button === ratingSaveButton) button.textContent = busy ? "Saving…" : "Save rating";
+    if (button === publishButton) button.textContent = busy ? "Publishing…" : "Publish to GitHub";
+  }
+  // Only the visible button is announced, and repeated clicks are blocked.
+  if (busy) status.textContent = "Saving recipe to GitHub…";
+}
 
 const clone = object => JSON.parse(JSON.stringify(object));
 function node(tag, className, text) {
@@ -419,7 +435,7 @@ async function publish({silent=false}={}) {
   const headers = {"Authorization":"Bearer " + token,"Accept":"application/vnd.github+json",
                    "X-GitHub-Api-Version":"2022-11-28"};
   saveInProgress = true;
-  document.getElementById("publishRecipeGithub").disabled = true;
+  setSavingState(true);
   feedback.textContent = "Checking latest GitHub revision…";
   try {
     const get = await fetch(url + "?ref=main",{headers,cache:"no-store"});
@@ -521,7 +537,7 @@ async function publish({silent=false}={}) {
     if (!saveDialog.open) saveDialog.showModal();
   } finally {
     saveInProgress = false;
-    document.getElementById("publishRecipeGithub").disabled = false;
+    setSavingState(false);
   }
 }
 editButton.addEventListener("click",()=> editing ? close() : start());
