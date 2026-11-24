@@ -600,3 +600,46 @@ body:has(#ratingOptions:not([hidden])) .edit-sheet .edit-recipe-rating .rating-l
 @media screen and (max-width:760px){
   .edit-sheet .edit-groups.grouped {columns:1}
 }
+
+/* Contextual insertion points occupy the space between actual list items.
+   They never count as ingredients or numbered directions. */
+.edit-sheet .ingredients li.edit-insert-slot,
+.edit-sheet .edit-directions li.edit-insert-slot {
+  position:relative;display:block;list-style:none!important;
+  box-sizing:border-box;height:12px;min-height:12px;
+  padding:0!important;margin:-3px 0 1px!important;
+  break-inside:avoid;z-index:1;
+}
+.edit-sheet .edit-insert-slot::marker {content:""!important}
+.edit-sheet .edit-insert-slot::before {
+  content:"";position:absolute;left:0;right:0;top:50%;
+  border-top:1px dashed #b58b74;
+  opacity:0;pointer-events:none;transition:opacity .12s ease;
+}
+.edit-sheet .edit-insert-at {
+  position:absolute;right:0;top:50%;transform:translateY(-50%);
+  width:26px;height:26px;padding:0;
+  border:1px solid #a46b4d;border-radius:50%;
+  background:#fffaf4;color:#82462c;
+  font:700 19px/1 Arial,sans-serif;cursor:pointer;
+  opacity:0;pointer-events:none;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 1px 3px #0002;
+}
+.edit-sheet .edit-insert-slot:hover::before,
+.edit-sheet .edit-insert-slot:focus-within::before,
+.edit-sheet .edit-insert-slot:hover .edit-insert-at,
+.edit-sheet .edit-insert-slot:focus-within .edit-insert-at {
+  opacity:1;pointer-events:auto;
+}
+.edit-sheet .edit-insert-at:focus-visible {
+  outline:2px solid #984d29;outline-offset:2px;
+}
+@media(hover:none) {
+  .edit-sheet .edit-insert-slot:active::before,
+  .edit-sheet .edit-insert-slot:active .edit-insert-at {opacity:1}
+  .edit-sheet .edit-insert-at {opacity:.65;pointer-events:auto}
+}
+@media(prefers-reduced-motion:reduce){
+  .edit-sheet .edit-insert-slot::before {transition:none}
+}
