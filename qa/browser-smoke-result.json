@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T06:42:27.000Z",
+  "date": "2026-11-24T15:53:08.856Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -195,6 +195,22 @@
     },
     {
       "label": "Switching back to photo print mode restores first-page photo",
+      "pass": true
+    },
+    {
+      "label": "Mobile action toolbar is near the upper portion of the screen",
+      "pass": true
+    },
+    {
+      "label": "Mobile print menu stays within visible viewport height",
+      "pass": true
+    },
+    {
+      "label": "Mobile print menu scrolls when available height is limited",
+      "pass": true
+    },
+    {
+      "label": "Print action remains available on mobile",
       "pass": true
     },
     {
