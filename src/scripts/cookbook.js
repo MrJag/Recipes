@@ -10,6 +10,29 @@ let lastPageCount = 0;
 let renderPending = false;
 let loadSequence = 0;
 let photoWarning = "";
+// Decode each recipe photo once. Pagination can rebuild sheets repeatedly,
+// but the browser must never hide an image that has already loaded.
+const photoCache = new Map();
+function photoState(url) {
+  let cached = photoCache.get(url);
+  if (cached) return cached;
+  cached = {loaded:false,failed:false,listeners:new Set()};
+  photoCache.set(url,cached);
+  const preload = new Image();
+  preload.onload = () => {
+    cached.loaded = true;
+    for (const listener of cached.listeners) listener(true);
+    cached.listeners.clear();
+  };
+  preload.onerror = () => {
+    cached.failed = true;
+    for (const listener of cached.listeners) listener(false);
+    cached.listeners.clear();
+  };
+  preload.src = url;
+  if (preload.complete && preload.naturalWidth) preload.onload();
+  return cached;
+}
 
 function el(tag, className, text) {
   const node = document.createElement(tag);
@@ -35,10 +58,16 @@ function pageShell(index, recipe) {
       const photo = el("img", "strip-image");
       photo.alt = "";
       photo.decoding = "async";
-      photo.onload = () => { photo.hidden = false; };
-      photo.onerror = () => { photo.hidden = true; };
-      photo.hidden = true;
+      const state = photoState(recipe.photo);
+      // A loaded image is shown immediately, even after a layout rebuild.
+      photo.hidden = !state.loaded;
       photo.src = recipe.photo;
+      if (!state.loaded && !state.failed) {
+        const reveal = ok => {
+          if (photo.isConnected) photo.hidden = !ok;
+        };
+        state.listeners.add(reveal);
+      }
       strip.appendChild(photo);
     }
     page.appendChild(strip);
@@ -538,7 +567,10 @@ for (const id of ["photoWidth","fontSize","stepGap"]) {
 }
 byId("printMode").addEventListener("change", requestRender);
 byId("printButton").addEventListener("click", () => window.print());
-window.addEventListener("resize", requestRender);
+// Sheet dimensions are fixed at US Letter, independent of viewport width.
+// Re-paginating on every resize or mobile scroll viewport change would destroy
+// and recreate the photo element, causing visible flashes and wasted decoding.
+// CSS handles the responsive preview without resetting the page DOM.
 buildSidebar().catch(error => {
   console.warn("Using cuisine-based navigation because taxonomy could not load:", error);
   sidebar.querySelectorAll(".sidebar-category").forEach(group => group.remove());

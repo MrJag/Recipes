@@ -81,6 +81,24 @@ try {
  await page.waitForTimeout(650);
  check(await page.locator('#editRecipeButton').isVisible(),'Pencil action is available');
  check(await page.locator('#printMenuToggle svg').count()===1,'Print action is an icon outside the recipe page');
+ // Responsive changes should not rebuild the page or briefly hide its photograph.
+ await page.waitForFunction(() => {
+   const img = document.querySelector('#pages .sheet.has-photo .strip-image');
+   return Boolean(img && img.complete && img.naturalWidth > 0 && !img.hidden);
+ });
+ const originalPhoto = await page.locator('#pages .sheet.has-photo .strip-image').evaluate(el => el);
+ await page.setViewportSize({width:1160,height:900});
+ await page.waitForTimeout(120);
+ check(await page.locator('#pages .sheet.has-photo .strip-image').evaluate(el => !el.hidden && el.naturalWidth > 0),'Photo stays visible after desktop resize');
+ await page.setViewportSize({width:700,height:850});
+ await page.waitForTimeout(120);
+ check(await page.locator('#pages .sheet.has-photo .strip-image').evaluate(el => !el.hidden && el.naturalWidth > 0),'Photo stays visible on mobile breakpoint');
+ await page.setViewportSize({width:1400,height:900});
+ await page.waitForTimeout(120);
+ check(await page.locator('#pages .sheet.has-photo .strip-image').evaluate(el => !el.hidden && el.naturalWidth > 0),'Photo remains visible returning to desktop');
+ check(await page.locator('#pages .sheet.has-photo .strip-image').evaluate(el => el === document.querySelector('#pages .sheet.has-photo .strip-image')),'Photo remains in the document');
+ check(await page.locator('#pages .sheet:not(:first-child) .photo-strip').count()===0,'Continuation pages remain free of photo strips');
+
  await page.locator('#editRecipeButton').click();
  check(await page.locator('.edit-sheet').isVisible(),'Pencil enters inline edit mode');
  check(await page.locator('#saveRecipeButton').isVisible(),'Save action appears during editing');
