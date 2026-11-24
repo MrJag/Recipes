@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T16:06:38.402Z",
+  "date": "2026-11-24T21:27:12.286Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -342,8 +342,16 @@
       "pass": true
     },
     {
+      "label": "Description editor preserves multiline whitespace",
+      "pass": true
+    },
+    {
       "label": "Save opens real persistence options",
       "pass": true
+    },
+    {
+      "label": "Saving a recipe preserves blank lines between description paragraphs",
+      "pass": false
     },
     {
       "label": "JSON download fallback is available",
@@ -650,6 +658,8 @@
       "pass": true
     }
   ],
-  "errors": [],
-  "pass": true
+  "errors": [
+    "Saving a recipe preserves blank lines between description paragraphs"
+  ],
+  "pass": false
 }
