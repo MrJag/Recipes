@@ -110,12 +110,30 @@ function editable(tag, className, value, label, placeholder) {
 }
 function editableList(values, type, label) {
   const list = node(type === "directions" ? "ol" : "ul", "edit-list");
-  const updateColumns = () => {
-    if (type === "ingredients") list.classList.toggle("two-column", list.children.length >= 9);
-  };
   list.dataset.listType = type;
+  const refreshList = () => {
+    if (type === "ingredients") {
+      list.classList.toggle("two-column",
+        [...list.children].filter(li => li.classList.contains("edit-list-item")).length >= 9);
+    }
+    if (type === "directions") {
+      let number = 1;
+      for (const li of list.children) {
+        if (li.dataset.stageHeading) li.removeAttribute("value");
+        else li.value = number++;
+      }
+    }
+  };
   const addItem = (value, after) => {
-    const li = editable("li", "edit-list-item", value, label + " item", "Type here");
+    const heading = type === "directions" && value && typeof value === "object" &&
+      Object.hasOwn(value,"heading");
+    const display = heading ? value.heading :
+      typeof value === "string" ? value :
+      [value?.lead,value?.text].filter(Boolean).join(" ");
+    const li = editable("li", heading ? "edit-stage-heading" : "edit-list-item",
+      display || "", heading ? "Direction group heading" : label + " item",
+      heading ? "Group heading" : "Type here");
+    if (heading) li.dataset.stageHeading = "true";
     li.addEventListener("keydown", event => {
       if (event.key === "Enter" && !event.shiftKey) {
         event.preventDefault();
@@ -126,24 +144,30 @@ function editableList(values, type, label) {
         event.preventDefault();
         const next = li.previousElementSibling || li.nextElementSibling;
         li.remove();
-        updateColumns();
+        refreshList();
         next?.focus();
         dirty = true;
       }
     });
     if (after) after.after(li); else list.appendChild(li);
-    updateColumns();
+    if (type === "directions" && !heading && value && typeof value === "object") {
+      li.dataset.originalStep = JSON.stringify(value);
+      li.dataset.originalText = display;
+    }
+    refreshList();
     dirty = true;
     return li;
   };
-  for (const value of values?.length ? values : [""]) {
-    const display = typeof value === "string" ? value : [value?.lead,value?.text].filter(Boolean).join(" ");
-    const item = addItem(display,null);
-    if (type === "directions" && value && typeof value === "object") {
-      item.dataset.originalStep = JSON.stringify(value);
-      item.dataset.originalText = display;
-    }
-  }
+  list.addEventListener("focusin", event => {
+    const item = event.target.closest("li");
+    if (item && item.parentElement === list) list._selectedItem = item;
+  });
+  list.insertHeading = () => {
+    const heading = addItem({heading:""}, list._selectedItem || list.lastElementChild);
+    heading.focus();
+    return heading;
+  };
+  for (const value of values?.length ? values : [""]) addItem(value, null);
   return list;
 }
 function sectionHeading(text) {
@@ -152,20 +176,49 @@ function sectionHeading(text) {
 function ingredientGroups(groups, identifier) {
   const holder = node("div", "edit-groups");
   holder.dataset.groups = identifier;
-  (groups?.length ? groups : [{title:null,items:[]}]).forEach((group,index) => {
-    const section = node("div", "edit-ingredient-group");
-    section.dataset.groupIndex = index;
-    section.appendChild(editable("h3", "edit-group-name",group.title || "", "Ingredient group heading", "Group heading (optional)"));
-    section.appendChild(editableList(group.items || [], "ingredients", "Ingredient"));
-    holder.appendChild(section);
-  });
+  const makeGroup = (group) => {
+    const section = node("div","edit-ingredient-group");
+    const heading = editable("h3","edit-group-name",group.title || "",
+      "Ingredient group heading","Group heading (optional)");
+    const list = editableList(group.items || [],"ingredients","Ingredient");
+    const control = node("button","edit-insert-group",
+      "+ Group heading after selected ingredient");
+    control.type = "button";
+    control.setAttribute("aria-label","Insert ingredient group heading after selected ingredient");
+    control.addEventListener("click", () => {
+      const entries = [...list.querySelectorAll(":scope > li.edit-list-item")];
+      const selected = list._selectedItem && entries.includes(list._selectedItem)
+        ? list._selectedItem : entries[entries.length-1];
+      const split = Math.max(0, entries.indexOf(selected)+1);
+      const moved = entries.slice(split).map(item => item.textContent.trim()).filter(Boolean);
+      const next = makeGroup({title:null,items:moved});
+      section.after(next);
+      for (const li of entries.slice(split)) li.remove();
+      if (!list.children.length) list.replaceChildren(editableList([""],"ingredients","Ingredient").firstChild);
+      list.classList.toggle("two-column",list.children.length >= 9);
+      dirty = true;
+      next.querySelector(".edit-group-name").focus();
+    });
+    section.append(heading,list,control);
+    return section;
+  };
+  (groups?.length ? groups : [{title:null,items:[]}]).forEach(group =>
+    holder.appendChild(makeGroup(group)));
   return holder;
 }
 function directions(steps, identifier) {
   const section = node("section", "edit-directions");
   section.dataset.directions = identifier;
   section.appendChild(sectionHeading("Directions"));
-  section.appendChild(editableList(steps || [], "directions", "Direction"));
+  const list = editableList(steps || [],"directions","Direction");
+  const control = node("button","edit-insert-stage","+ Heading after selected step");
+  control.type = "button";
+  control.setAttribute("aria-label","Insert direction heading after selected step");
+  control.addEventListener("click", () => {
+    list.insertHeading();
+    dirty = true;
+  });
+  section.append(control,list);
   return section;
 }
 function valueOf(selector) {
@@ -188,6 +241,7 @@ function readSteps(section) {
   return [...section.querySelectorAll("ol > li")].map(li => {
     const text = li.textContent.trim();
     if (!text) return null;
+    if (li.dataset.stageHeading) return {heading:text};
     // Preserve structured {lead,text} steps unless the user actually edits them.
     if (li.dataset.originalStep && text === li.dataset.originalText) {
       return JSON.parse(li.dataset.originalStep);
