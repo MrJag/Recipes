@@ -275,6 +275,12 @@ function toBase64(value) {
   }
   return btoa(binary);
 }
+async function parseGithubResponse(response, operation) {
+  const raw = await response.text();
+  if (!raw.trim()) throw new Error(operation + " returned an empty response (HTTP " + response.status + "). Check GitHub before retrying.");
+  try { return JSON.parse(raw); }
+  catch { throw new Error(operation + " returned invalid JSON (HTTP " + response.status + "). Check GitHub before retrying."); }
+}
 async function publish() {
   const token = tokenField.value.trim();
   if (!token) {
@@ -297,13 +303,19 @@ async function publish() {
   try {
     const get = await fetch(url + "?ref=main",{headers,cache:"no-store"});
     if (!get.ok) throw new Error("Could not load latest GitHub file (HTTP " + get.status + "). Check token permissions.");
-    const latest = await get.json();
+    const latest = await parseGithubResponse(get, "GitHub read");
     if (!latest.sha) throw new Error("Missing revision SHA; refusing to overwrite.");
+    if (typeof latest.content !== "string" || !latest.content.trim()) {
+      throw new Error("GitHub returned no recipe file content. Nothing was published.");
+    }
     const latestBytes = Uint8Array.from(atob(latest.content.replace(/\s/g,"")),c=>c.charCodeAt(0));
     const latestJson = new TextDecoder().decode(latestBytes);
+    let latestData;
+    try { latestData = JSON.parse(latestJson); }
+    catch { throw new Error("GitHub returned incomplete recipe JSON. Nothing was published."); }
     const newJson = JSON.parse(content);
     const baseJson = bridge.getSource();
-    if (JSON.stringify(JSON.parse(latestJson)) !== JSON.stringify(baseJson)) {
+    if (JSON.stringify(latestData) !== JSON.stringify(baseJson)) {
       throw new Error("Someone else changed this recipe since you opened it. Refresh and reconcile before publishing.");
     }
     feedback.textContent = "Publishing the updated recipe to GitHub…";
@@ -315,10 +327,13 @@ async function publish() {
       })
     });
     if (!put.ok) {
-      const error = await put.json().catch(()=>({message:"Unknown GitHub error"}));
+      const raw = await put.text();
+      let error = {message:"No details returned"};
+      if (raw.trim()) { try {error = JSON.parse(raw);} catch {error = {message:"Unexpected non-JSON response"};} }
       throw new Error("GitHub rejected the save (HTTP " + put.status + "): " + error.message);
     }
-    const result = await put.json();
+    const result = await parseGithubResponse(put, "GitHub publish");
+    if (!result.commit?.sha) throw new Error("GitHub returned no commit ID; check the repository before retrying.");
     feedback.textContent = "Published! GitHub commit: " + result.commit.sha.slice(0,10) + ". Pages may take time to update.";
     tokenField.value = "";
     const update = JSON.parse(content);
@@ -334,7 +349,9 @@ async function publish() {
     saveDialog.dataset.payload = "";
     // Leave the success dialog visible until the user closes it.
   } catch(error) {
-    feedback.textContent = error.message + " Your edits remain in the editor.";
+    feedback.textContent = (error instanceof TypeError
+      ? "GitHub could not be reached. Check your connection or browser extensions."
+      : error.message) + " Your edits remain in the editor.";
     tokenField.value = "";
   } finally {
     saveInProgress = false;
