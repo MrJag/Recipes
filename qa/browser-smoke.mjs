@@ -187,6 +187,72 @@ try {
  check(!(await page.locator('#saveFeedback').textContent()).includes('Published!'),'Failed save does not claim publication');
  await page.locator('#dismissSaveDialog').click();
  await page.unrouteAll();
+ // GitHub may commit the update but return an empty body. Re-fetch and verify.
+ let ambiguousPayload = null;
+ let verificationReads = 0;
+ await page.route('https://api.github.com/repos/MrJag/Recipes/contents/**',async route => {
+   const method=route.request().method();
+   const cors={'access-control-allow-origin':'*','access-control-allow-headers':'authorization,accept,x-github-api-version,content-type',
+     'access-control-allow-methods':'GET,PUT,OPTIONS'};
+   if(method==='OPTIONS') return route.fulfill({status:204,headers:cors,body:''});
+   if(method==='PUT') {
+     ambiguousPayload=route.request().postDataJSON();
+     return route.fulfill({status:200,contentType:'application/json',headers:cors,body:''});
+   }
+   if(method==='GET') {
+     const verifying=route.request().url().includes('_verify=');
+     if(verifying) verificationReads++;
+     const json=verifying && ambiguousPayload
+       ? Buffer.from(ambiguousPayload.content,'base64').toString('utf8')
+       : originalSource;
+     return route.fulfill({status:200,contentType:'application/json',headers:cors,
+       body:JSON.stringify({sha:'mock-current-sha',content:Buffer.from(json).toString('base64')})});
+   }
+   return route.abort();
+ });
+ await page.goto('http://localhost:8123/recipe.html?recipe=sweetango-orchard-sour',{waitUntil:'load'});
+ await page.waitForTimeout(350);
+ await page.locator('#editRecipeButton').click();
+ await page.locator('.edit-sheet .edit-main-title').fill('Verified after empty confirmation');
+ await page.locator('#saveRecipeButton').click();
+ await page.locator('#githubWriteToken').fill('test-only-token');
+ await page.locator('#publishRecipeGithub').click();
+ await page.waitForTimeout(500);
+ check(Boolean(ambiguousPayload),'Ambiguous GitHub save submits the edited JSON');
+ check(verificationReads>=1,'Ambiguous GitHub confirmation triggers a verification read');
+ check((await page.locator('#saveFeedback').textContent()).includes('Published successfully'),
+   'Matching repository content confirms ambiguous save as published');
+ check(await page.locator('#saveRecipeButton').isHidden(),
+   'Verified save returns to normal recipe mode');
+ await page.locator('#dismissSaveDialog').click();
+ await page.unrouteAll();
+ // If the GitHub revision does NOT match, preserve edits and avoid false success.
+ await page.route('https://api.github.com/repos/MrJag/Recipes/contents/**',async route => {
+   const method=route.request().method();
+   const cors={'access-control-allow-origin':'*','access-control-allow-headers':'authorization,accept,x-github-api-version,content-type',
+     'access-control-allow-methods':'GET,PUT,OPTIONS'};
+   if(method==='OPTIONS') return route.fulfill({status:204,headers:cors,body:''});
+   if(method==='PUT') return route.fulfill({status:200,contentType:'application/json',headers:cors,body:''});
+   if(method==='GET') return route.fulfill({status:200,contentType:'application/json',headers:cors,
+     body:JSON.stringify({sha:'mock-current-sha',content:Buffer.from(originalSource).toString('base64')})});
+   return route.abort();
+ });
+ await page.goto('http://localhost:8123/recipe.html?recipe=sweetango-orchard-sour',{waitUntil:'load'});
+ await page.waitForTimeout(350);
+ await page.locator('#editRecipeButton').click();
+ await page.locator('.edit-sheet .edit-main-title').fill('Not committed test');
+ await page.locator('#saveRecipeButton').click();
+ await page.locator('#githubWriteToken').fill('test-only-token');
+ await page.locator('#publishRecipeGithub').click();
+ await page.waitForTimeout(500);
+ check((await page.locator('#saveFeedback').textContent()).includes('does not match'),
+   'Mismatched revision is reported as unverified');
+ check(await page.locator('.edit-sheet').isVisible(),'Unverified save preserves inline edits');
+ check(!(await page.locator('#saveFeedback').textContent()).includes('Published successfully'),
+   'Unverified save does not display success');
+ await page.locator('#dismissSaveDialog').click();
+ await page.unrouteAll();
+ await page.unrouteAll();
  await page.goto('http://localhost:8123/index.html?recipe=midwestern-chili',{waitUntil:'load'});
  await page.waitForTimeout(300);
  check(page.url().includes('recipe.html?recipe=midwestern-chili'),'Old combined-page bookmark redirects');
