@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T04:37:59.632Z",
+  "date": "2026-11-24T04:40:02.032Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -154,11 +154,11 @@
       "pass": true
     },
     {
-      "label": "Option B puts the rating at the right of the category line",
+      "label": "Option A displays the rating as a separate row below the subtitle",
       "pass": true
     },
     {
-      "label": "Header rating aligns to category row right edge",
+      "label": "Rating follows the title or subtitle",
       "pass": true
     },
     {
@@ -194,7 +194,7 @@
       "pass": true
     },
     {
-      "label": "Rating remains in category line while editing",
+      "label": "Rating follows subtitle while editing",
       "pass": true
     },
     {
