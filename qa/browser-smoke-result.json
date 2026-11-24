@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T05:06:55.205Z",
+  "date": "2026-11-24T05:40:10.616Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -438,15 +438,35 @@
       "pass": true
     },
     {
+      "label": "Cached GitHub token saves without opening the publish dialog",
+      "pass": true
+    },
+    {
+      "label": "Save button shows disabled Saving state during GitHub request",
+      "pass": true
+    },
+    {
       "label": "Valid tab access publishes follow-up edit automatically",
       "pass": true
     },
     {
-      "label": "Cached GitHub access skips token input",
+      "label": "Successful automatic save never displays the dialog",
       "pass": true
     },
     {
-      "label": "Automatic save reports GitHub confirmation",
+      "label": "Successful automatic save leaves edit mode",
+      "pass": true
+    },
+    {
+      "label": "Save spinner resets after successful publication",
+      "pass": true
+    },
+    {
+      "label": "Quiet save returns to normal read-only view",
+      "pass": true
+    },
+    {
+      "label": "Expired cached access opens the publish dialog",
       "pass": true
     },
     {
@@ -455,6 +475,26 @@
     },
     {
       "label": "Expired access prevents automatic publish",
+      "pass": true
+    },
+    {
+      "label": "Rejected cached token opens a visible error dialog",
+      "pass": true
+    },
+    {
+      "label": "Rejected credentials reveal the token prompt",
+      "pass": true
+    },
+    {
+      "label": "Rejected silent save preserves inline edits",
+      "pass": true
+    },
+    {
+      "label": "Save spinner resets after GitHub error",
+      "pass": true
+    },
+    {
+      "label": "Rejected cached credentials are forgotten",
       "pass": true
     },
     {
