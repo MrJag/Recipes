@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="About the Family Cookbook.">
+  <title>About | Family Cookbook</title>
+  <link rel="stylesheet" href="./src/styles/cookbook.css?v=0.7.7">
+  <link rel="stylesheet" href="./src/styles/editor.css?v=0.7.8">
+  <link rel="stylesheet" href="./src/styles/home.css?v=7">
+  <link rel="stylesheet" href="./src/styles/site-header.css?v=4">
+  <script defer src="./src/scripts/header-categories.js?v=2"></script>
+  <style>
+    .homepage.about-page .about-main { min-height: calc(100vh - 180px); }
+    .homepage.about-page .hero { grid-template-columns: minmax(0, 1fr); }
+    .homepage.about-page .hero-copy { max-width: 840px; }
+    .homepage.about-page .site-nav a[aria-current="page"] {
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+  </style>
+</head>
+<body class="homepage about-page">
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Family Cookbook home"><span class="brand-mark" aria-hidden="true">❧</span>Family Cookbook <span class="app-version">v0.10.0</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="./directory.html">Recipes</a>
+      <details class="header-categories" id="headerCategories">
+        <summary>Categories <span class="menu-chevron" aria-hidden="true">▾</span></summary>
+        <div class="header-categories-menu" role="group" aria-label="Recipe categories">
+          <a href="./directory.html?category=Soups%2C%20Stews%20%26%20Chili">Soups, Stews &amp; Chili</a>
+          <a href="./directory.html?category=Main%20Dishes">Main Dishes</a>
+          <a href="./directory.html?category=Pizza%2C%20Pasta%20%26%20Noodles">Pizza, Pasta &amp; Noodles</a>
+          <a href="./directory.html?category=Sides%2C%20Breads%20%26%20Grains">Sides, Breads &amp; Grains</a>
+          <a href="./directory.html?category=Sauces%2C%20Condiments%20%26%20Seasonings">Sauces, Condiments &amp; Seasonings</a>
+          <a href="./directory.html?category=Breakfast%20%26%20Brunch">Breakfast &amp; Brunch</a>
+          <a href="./directory.html?category=Desserts%20%26%20Baking">Desserts &amp; Baking</a>
+          <a href="./directory.html?category=Drinks%20%26%20Cocktails">Drinks &amp; Cocktails</a>
+          <a href="./directory.html?category=Techniques%20%26%20Guides">Techniques &amp; Guides</a>
+        </div>
+      </details>
+      <a href="./about.html" aria-current="page">About</a>
+      <a href="./directory.html#recipeSearch" id="searchShortcut">Search ⌕</a>
+    </nav>
+  </header>
+  <main class="about-main">
+    <section class="hero" aria-labelledby="aboutTitle">
+      <div class="hero-copy">
+        <span class="eyebrow">Made, shared &amp; loved</span>
+        <h1 id="aboutTitle">About the Family Cookbook</h1>
+        <p>A collection of family recipes, flavors, and favorites from our kitchen.</p>
+        <p>More about our cookbook is coming soon.</p>
+        <a class="button" href="./directory.html">Browse Recipes &nbsp; →</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">Family Cookbook · Recipes gathered with care</footer>
+</body>
+</html>
