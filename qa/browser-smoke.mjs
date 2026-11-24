@@ -121,6 +121,26 @@ try {
  await page.waitForTimeout(150);
  check(await page.locator('#pages .sheet.has-photo .strip-image').count()===1,
    'Switching back to photo print mode restores first-page photo');
+ // Compact mobile viewport: actions stay high and Print options fit onscreen.
+ await page.setViewportSize({width:390,height:700});
+ await page.waitForTimeout(100);
+ check(await page.locator('.recipe-action-rail').evaluate(el => {
+   const rect=el.getBoundingClientRect();
+   return rect.top >= 80 && rect.top < window.innerHeight * .45;
+ }), 'Mobile action toolbar is near the upper portion of the screen');
+ await page.locator('#printMenuToggle').click();
+ check(await page.locator('.print-menu .toolbar').evaluate(el => {
+   const rect=el.getBoundingClientRect();
+   return rect.top >= 0 && rect.bottom <= window.innerHeight - 8;
+ }), 'Mobile print menu stays within visible viewport height');
+ check(await page.locator('.print-menu .toolbar').evaluate(el =>
+   ['auto','scroll'].includes(getComputedStyle(el).overflowY)),
+   'Mobile print menu scrolls when available height is limited');
+ check(await page.locator('#printButton').isVisible(),
+   'Print action remains available on mobile');
+ await page.locator('#printMenuToggle').click();
+ await page.setViewportSize({width:1400,height:900});
+ await page.waitForTimeout(100);
  // Rating is independent of the pencil editor, and selecting the same star
  // again clears it without a separate Clear button.
  check(await page.locator('#ratingOptions').isHidden(),'Rating stars are hidden by default');

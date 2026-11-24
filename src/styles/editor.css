@@ -283,7 +283,19 @@
   .recipe-action-rail { position: fixed; top: 84px; right: 12px; margin: 0; transform: none; }
 }
 @media screen and (max-width: 760px) {
-  .recipe-action-rail { top: auto; bottom: 16px; right: 12px; }
+  /* Keep actions near the top of the recipe instead of Safari's bottom bar. */
+  .recipe-action-rail {
+    top: clamp(96px, 24dvh, 210px);
+    bottom: auto;
+    right: 12px;
+  }
+  /* A compact viewport must never clip the print controls offscreen. */
+  .print-menu .toolbar {
+    max-height: calc(100dvh - clamp(96px, 24dvh, 210px) - 16px - env(safe-area-inset-bottom, 0px));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 .print-menu { pointer-events: auto; }
