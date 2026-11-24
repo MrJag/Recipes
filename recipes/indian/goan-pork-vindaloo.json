@@ -111,12 +111,11 @@
   "status": "draft",
   "variants": [
     {
-      "title": "Mild Oven-Braised Vindaloo",
-      "headnote": null,
-      "servings": null,
+      "title": "Goan Pork Vindaloo",
+      "headnote": "Try out my Americanized adaptation of a traditional Goan Vindaloo.  I've reduced the heat and sour notes for approachability, then balanced with a mild sweetness.\n\nThe leftovers hold well and reheat quickly, making for a nice packed-lunch the following day.",
       "components": [],
       "reviewFlags": [],
-      "sourceNote": "Metric oven-braised variation supplied by the cookbook author.",
+      "sourceNote": "Inspired by a take-and-bake dish I had at my local Central Market grocery.",
       "ingredientGroups": [
         {
           "title": "Whole Spices",
@@ -168,7 +167,8 @@
         "Cover the pot and braise in the oven at 325°F for 2 hours.",
         "Stir gently to coat the pork with sauce. If the sauce is too thin, simmer uncovered on the stovetop until it reaches the desired consistency. Finish with the fresh cilantro."
       ],
-      "rating": 5
+      "rating": 5,
+      "subtitle": ""
     }
   ]
 }
