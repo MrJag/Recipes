@@ -279,7 +279,7 @@ function buildEditPage(recipe) {
   }
   content.appendChild(meta);
   content.appendChild(editable("p","edit-headnote",recipe.headnote || "","Description","Description (italic)"));
-  content.appendChild(node("p","edit-help","Edit directly in the recipe. Press Enter to add an ingredient or a direction; delete an empty line with Backspace."));
+  content.appendChild(node("p","edit-help","Edit directly in the recipe. Select an ingredient or direction, then use the + Heading control to insert a section after it. Press Enter to add a new line; delete an empty line with Backspace."));
   const ingredients = node("section","ingredients");
   ingredients.appendChild(sectionHeading("Ingredients"));
   ingredients.appendChild(ingredientGroups(recipe.ingredientGroups,"main"));
