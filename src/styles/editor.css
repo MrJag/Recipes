@@ -370,7 +370,11 @@
 .recipe-save-dialog #dismissSaveDialog{background:#eae1d5;color:#382e27}
 .recipe-save-dialog #saveFeedback:not(:empty){padding:8px;border:1px solid #d8c3af;border-radius:4px}
 @media(max-width:760px){
-  .edit-sheet{width:var(--page-width)}
+  /* Editing uses a readable mobile canvas; print preview retains US Letter size. */
+  .edit-sheet{width:min(100%,var(--page-width));box-sizing:border-box}
+  .edit-sheet .content{margin-right:0;padding:28px 18px}
+  .edit-sheet .photo-strip{display:none}
+  .edit-sheet .ingredients ul.two-column{columns:1}
 }
 @media print{
   .recipe-action-rail,.recipe-save-dialog{display:none!important}
