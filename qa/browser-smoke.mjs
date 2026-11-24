@@ -207,25 +207,52 @@ try {
  check(await page.locator('.edit-sheet .edit-directions ol').evaluate(el => getComputedStyle(el).listStyleType === 'decimal'),'Directions use automatic numbering');
  check(await page.locator('.edit-sheet .ingredients ul li[contenteditable="true"]').count()>=6,'Ingredients remain editable bullet points');
  check(await page.locator('.edit-sheet .edit-directions ol li[contenteditable="true"]').count()>=3,'Directions remain editable numbered steps');
- // A new group heading splits ingredients after the selected item, and
- // directions headings remain unnumbered while instructions stay sequential.
+ // Insertion lines appear between items on hover and create editable headings.
  const initialIngredientCount=await page.locator('[data-groups="main"] .edit-list-item').count();
- await page.locator('[data-groups="main"] .edit-list-item').nth(1).focus();
- await page.locator('[data-groups="main"] .edit-ingredient-group').first()
-   .locator('.edit-insert-group').click();
+ const ingredientInsert=page.locator('[data-groups="main"] .edit-insert-slot').nth(1);
+ await ingredientInsert.hover();
+ check(await ingredientInsert.locator('button').evaluate(el =>
+   getComputedStyle(el).opacity==='1' || Number(getComputedStyle(el).opacity)>0),
+   'Ingredient insertion button reveals on hover between items');
+ await ingredientInsert.locator('button').click();
  check(await page.locator('[data-groups="main"] .edit-ingredient-group').count()===2,
-   'Ingredient group insertion creates a new group after the selected ingredient');
+   'Hover insertion creates a new ingredient group at exact boundary');
  await page.locator('[data-groups="main"] .edit-group-name').nth(1).fill('Finishing ingredients');
  check(await page.locator('[data-groups="main"] .edit-list-item').count()===initialIngredientCount,
-   'Splitting ingredient groups preserves every ingredient');
- await page.locator('[data-directions="main"] .edit-list-item').nth(1).focus();
- await page.locator('[data-directions="main"] .edit-insert-stage').click();
+   'Splitting ingredients preserves every ingredient');
+ // Backspace on an emptied group heading removes it and rejoins the ingredients.
+ const secondHeading=page.locator('[data-groups="main"] .edit-group-name').nth(1);
+ await secondHeading.fill('');
+ await secondHeading.press('Backspace');
+ check(await page.locator('[data-groups="main"] .edit-ingredient-group').count()===1,
+   'Backspace removes an empty ingredient group heading');
+ check(await page.locator('[data-groups="main"] .edit-list-item').count()===initialIngredientCount,
+   'Removing a group heading restores all ingredient items');
+ const reinsertion=page.locator('[data-groups="main"] .edit-insert-slot').nth(1);
+ await reinsertion.hover();
+ await reinsertion.locator('button').click();
+ await page.locator('[data-groups="main"] .edit-group-name').nth(1).fill('Finishing ingredients');
+
+ const initialDirectionCount=await page.locator('[data-directions="main"] .edit-list-item').count();
+ const directionInsert=page.locator('[data-directions="main"] .edit-insert-slot').nth(1);
+ await directionInsert.hover();
+ await directionInsert.locator('button').click();
  await page.locator('[data-directions="main"] .edit-stage-heading').fill('Finishing steps');
  check(await page.locator('[data-directions="main"] .edit-stage-heading').count()===1,
-   'Direction group heading can be inserted between steps');
+   'Direction insertion line creates a heading between steps');
+ await page.locator('[data-directions="main"] .edit-stage-heading').fill('');
+ await page.locator('[data-directions="main"] .edit-stage-heading').press('Backspace');
+ check(await page.locator('[data-directions="main"] .edit-stage-heading').count()===0,
+   'Backspace removes an empty direction heading');
+ check(await page.locator('[data-directions="main"] .edit-list-item').count()===initialDirectionCount,
+   'Removing direction heading does not lose steps');
+ const directionReinsert=page.locator('[data-directions="main"] .edit-insert-slot').nth(1);
+ await directionReinsert.hover();
+ await directionReinsert.locator('button').click();
+ await page.locator('[data-directions="main"] .edit-stage-heading').fill('Finishing steps');
  check(await page.locator('[data-directions="main"] .edit-list-item').evaluateAll(items =>
    items.every((li,index) => li.value===index+1)),
-   'Direction numbers remain sequential after inserting a heading');
+   'Direction numbering stays sequential after insertion and removal');
 
  await page.locator('.edit-sheet .edit-main-title').fill('Sweetango Orchard Sour — Test Edit');
  await page.locator('.edit-sheet .edit-headnote').fill('First paragraph of description.\n\nSecond paragraph of description.');
