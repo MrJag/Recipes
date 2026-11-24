@@ -64,5 +64,6 @@
     "HIGH PRIORITY: Retrieve and verify all ingredient quantities against the original YouTube video description; they are not present in the spoken transcript.",
     "No recipe photo committed yet; add assets/masters/creamy-chicken-florentine.png and public/images/creamy-chicken-florentine.jpg, then set photo to ./public/images/creamy-chicken-florentine.jpg.",
     "Serving yield and preparation time not specified in transcript."
-  ]
+  ],
+  "rating": 5
 }
