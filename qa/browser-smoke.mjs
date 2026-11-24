@@ -207,6 +207,26 @@ try {
  check(await page.locator('.edit-sheet .edit-directions ol').evaluate(el => getComputedStyle(el).listStyleType === 'decimal'),'Directions use automatic numbering');
  check(await page.locator('.edit-sheet .ingredients ul li[contenteditable="true"]').count()>=6,'Ingredients remain editable bullet points');
  check(await page.locator('.edit-sheet .edit-directions ol li[contenteditable="true"]').count()>=3,'Directions remain editable numbered steps');
+ // A new group heading splits ingredients after the selected item, and
+ // directions headings remain unnumbered while instructions stay sequential.
+ const initialIngredientCount=await page.locator('[data-groups="main"] .edit-list-item').count();
+ await page.locator('[data-groups="main"] .edit-list-item').nth(1).focus();
+ await page.locator('[data-groups="main"] .edit-ingredient-group').first()
+   .locator('.edit-insert-group').click();
+ check(await page.locator('[data-groups="main"] .edit-ingredient-group').count()===2,
+   'Ingredient group insertion creates a new group after the selected ingredient');
+ await page.locator('[data-groups="main"] .edit-group-name').nth(1).fill('Finishing ingredients');
+ check(await page.locator('[data-groups="main"] .edit-list-item').count()===initialIngredientCount,
+   'Splitting ingredient groups preserves every ingredient');
+ await page.locator('[data-directions="main"] .edit-list-item').nth(1).focus();
+ await page.locator('[data-directions="main"] .edit-insert-stage').click();
+ await page.locator('[data-directions="main"] .edit-stage-heading').fill('Finishing steps');
+ check(await page.locator('[data-directions="main"] .edit-stage-heading').count()===1,
+   'Direction group heading can be inserted between steps');
+ check(await page.locator('[data-directions="main"] .edit-list-item').evaluateAll(items =>
+   items.every((li,index) => li.value===index+1)),
+   'Direction numbers remain sequential after inserting a heading');
+
  await page.locator('.edit-sheet .edit-main-title').fill('Sweetango Orchard Sour — Test Edit');
  await page.locator('.edit-sheet .edit-headnote').fill('First paragraph of description.\n\nSecond paragraph of description.');
  check(await page.locator('.edit-sheet .edit-headnote').evaluate(el =>
@@ -218,6 +238,13 @@ try {
  const multilinePayload = JSON.parse(await page.locator('#recipeSaveDialog').getAttribute('data-payload'));
  check(multilinePayload.headnote.includes('First paragraph of description.\n\nSecond paragraph of description.'),
    'Saving a recipe preserves blank lines between description paragraphs');
+ check(multilinePayload.ingredientGroups.length===2 &&
+   multilinePayload.ingredientGroups[1].title==='Finishing ingredients',
+   'Ingredient group insertion is saved in recipe JSON');
+ check(multilinePayload.steps.some(step => step?.heading==='Finishing steps'),
+   'Direction stage heading is saved in recipe JSON');
+ check(multilinePayload.steps.filter(step => !step?.heading).length>=3,
+   'Direction headings do not remove or overwrite steps');
  check(await page.locator('#downloadRecipeJson').isVisible(),'JSON download fallback is available');
  check(await page.locator('#publishRecipeGithub').isVisible(),'GitHub publishing option is available');
  check((await page.locator('#saveFeedback').textContent()).length===0,'Save does not claim success prematurely');
@@ -227,6 +254,21 @@ try {
  await page.locator('.sheet:not(.edit-sheet)').first().waitFor({state:'visible',timeout:3000});
  check(await page.locator('.edit-sheet').count()===0,'Pencil toggle restores normal pagination');
  check(await page.locator('#saveRecipeButton').isHidden(),'Save action hides outside edit mode');
+ // Simulate a saved recipe containing an inserted direction heading.
+ await page.evaluate(() => {
+   const bridge=window.CookbookEditorBridge;
+   const updated=JSON.parse(JSON.stringify(bridge.getRecipe()));
+   updated.steps.splice(2,0,{heading:'Test direction group'});
+   bridge.setSavedRecipe(updated);
+ });
+ check(await page.locator('#pages .stage-heading').filter({hasText:'Test direction group'}).count()===1,
+   'Recipe viewer displays saved direction headings');
+ check(await page.locator('#pages .recipe-step').evaluateAll(items =>
+   items.every((item,index) =>
+     item.querySelector('.step-num')?.textContent===String(index+1))),
+   'Recipe viewer numbers directions sequentially across headings');
+ await page.reload({waitUntil:'load'});
+ await page.waitForTimeout(300);
  await page.locator('#editRecipeButton').click();
  await page.locator('#saveRecipeButton').click();
  await page.locator('#publishRecipeGithub').click();
