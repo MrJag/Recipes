@@ -84,6 +84,14 @@ try {
  // Toolbar icons stack vertically, and print mode can omit photos entirely.
  check(await page.locator('.recipe-action-rail').evaluate(el=>getComputedStyle(el).flexDirection==='column'),
    'Recipe action icons are vertically stacked');
+ check(await page.locator('.recipe-action-rail').evaluate(el => {
+   const rail=el.getBoundingClientRect();
+   const sheet=document.querySelector('#pages .sheet').getBoundingClientRect();
+   return rail.left >= sheet.right && rail.left - sheet.right <= 22;
+ }), 'Desktop toolbar sits directly beside the recipe page');
+ check(await page.locator('#ratingRecipeButton').evaluate(el =>
+   getComputedStyle(el).backgroundColor === 'rgb(32, 32, 36)'),
+   'Inactive rating button matches neutral black toolbar icons');
  check(await page.locator('.recipe-header .recipe-rating').count()===1,
    'Recipe header includes a rating summary');
  check(await page.locator('.recipe-header > .recipe-rating').count()===1,
@@ -111,6 +119,9 @@ try {
  check(await page.locator('#ratingOptions').isHidden(),'Rating stars are hidden by default');
  await page.locator('#ratingRecipeButton').click();
  check(await page.locator('#ratingOptions').isVisible(),'Rating stars appear on button click');
+ check(await page.locator('#ratingRecipeButton').evaluate(el =>
+   getComputedStyle(el).backgroundColor === 'rgb(86, 99, 67)'),
+   'Active rating button uses muted olive accent');
  check(await page.locator('#saveRecipeButton').isVisible(),'Rating selection enters editable save mode');
  await page.locator('#ratingStars button[data-rating="4"]').click();
  check((await page.locator('.edit-recipe-rating').textContent()).includes('4 of 5'),
