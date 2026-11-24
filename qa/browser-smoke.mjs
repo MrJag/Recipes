@@ -138,18 +138,18 @@ try {
  check(await page.locator('#ratingStars button.selected').count()===0,
    'Moving pointer away restores unrated selection');
  await page.locator('#ratingStars button[data-rating="4"]').click();
- check((await page.locator('.recipe-header .rating-glyphs').textContent())==='★★★★☆','Four stars preview on normal recipe page');
- check(await page.locator('#saveRecipeRating').isVisible(),'Rating has its own Save action');
- await page.locator('#ratingStars button[data-rating="4"]').click();
- check((await page.locator('.recipe-header .rating-glyphs').textContent())==='☆☆☆☆☆','Clicking selected four stars clears rating');
- check(await page.locator('#saveRecipeRating').isHidden(),'Saving is disabled when rating matches original');
- await page.locator('#ratingStars button[data-rating="3"]').click();
- await page.locator('#saveRecipeRating').click();
+ check((await page.locator('.recipe-header .rating-glyphs').textContent())==='★★★★☆',
+   'Click immediately previews four stars on normal recipe page');
+ check(await page.locator('#saveRecipeRating').count()===0,
+   'Rating requires no separate Save button');
+ check(await page.locator('#recipeSaveDialog').isVisible(),
+   'Without cached GitHub access, clicking a star opens authentication');
  const ratingPayload=JSON.parse(await page.locator('#recipeSaveDialog').getAttribute('data-payload'));
- check(ratingPayload.rating===3,'Standalone rating Save writes rating to recipe JSON');
- check(await page.locator('.edit-sheet').count()===0,'Rating Save does not create an editable sheet');
+ check(ratingPayload.rating===4,'Star click immediately prepares the rating JSON');
+ check(await page.locator('.edit-sheet').count()===0,'Rating does not enter recipe editing mode');
  await page.locator('#dismissSaveDialog').click();
- check((await page.locator('.recipe-header .rating-glyphs').textContent())==='☆☆☆☆☆','Dismissing rating Save restores committed rating');
+ check((await page.locator('.recipe-header .rating-glyphs').textContent())==='☆☆☆☆☆',
+   'Dismissing unauthenticated save restores committed rating');
 
  // Responsive changes should not rebuild the page or briefly hide its photograph.
  await page.waitForFunction(() => {
@@ -324,6 +324,18 @@ try {
    'Save spinner resets after successful publication');
  check(await page.locator('#editRecipeButton').getAttribute('aria-pressed')==='false',
    'Quiet save returns to normal read-only view');
+ await page.locator('#ratingRecipeButton').click();
+ await page.locator('#ratingStars button[data-rating="4"]').click();
+ await page.waitForTimeout(550);
+ check(githubPuts===3,'Clicking a rating immediately commits to GitHub with cached token');
+ check(JSON.parse(savedMockContent).rating===4,'Rating of four stars persisted');
+ check(await page.locator('#recipeSaveDialog').isHidden(),'Auto-saving rating is silent');
+ check(await page.locator('.edit-sheet').count()===0,'Rating auto-save keeps normal recipe view');
+ await page.locator('#ratingRecipeButton').click();
+ await page.locator('#ratingStars button[data-rating="4"]').click();
+ await page.waitForTimeout(550);
+ check(githubPuts===4,'Clicking the selected star again auto-saves clearing the rating');
+ check(!('rating' in JSON.parse(savedMockContent)),'Cleared star selection deletes rating JSON property');
  // An expired cached token must never trigger an automatic publish.
  await page.evaluate(() => {
    const key='familyCookbook.githubToken.v1';
@@ -337,7 +349,7 @@ try {
  check(await page.locator('#recipeSaveDialog').isVisible(),
    'Expired cached access opens the publish dialog');
  check(await page.locator('#githubTokenPrompt').isVisible(),'Expired access requires token again');
- check(githubPuts===2,'Expired access prevents automatic publish');
+ check(githubPuts===4,'Expired access prevents automatic publish');
  await page.locator('#dismissSaveDialog').click();
  page.once('dialog',dialog=>dialog.accept());
  await page.locator('#editRecipeButton').click();
