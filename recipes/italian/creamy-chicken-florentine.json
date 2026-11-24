@@ -9,7 +9,7 @@
   "prepTime": "Not specified",
   "cookTime": "About 30 minutes on the stovetop, plus optional 90-minute tomato roasting",
   "photo": "./public/images/creamy-chicken-florentine.jpg",
-  "headnote": "ThatDudeCanCook's chicken Florentine with a shallot, garlic, white-wine, stock, Parmesan and cream sauce. The optional slow-roasted tomatoes bring concentrated acidity. Ingredient quantities are intentionally left unverified where the video transcript does not specify them; consult the original description before cooking.",
+  "headnote": "Chicken Florentine with a shallot, garlic, white-wine, and Parmesan cream sauce. Slow-roasted tomatoes add a contrasting burst of flavor.",
   "ingredientGroups": [
     {
       "title": "Chicken",
@@ -59,7 +59,7 @@
     "Return the chicken to the sauce. Warm gently over low heat for about 3–4 minutes, confirming the thickest chicken piece is at least 165°F.",
     "Arrange the roasted tomatoes over the chicken rather than mixing them into the pale sauce. Finish with a light squeeze of lemon and serve family-style. Garlic bread, pasta, mashed potatoes, polenta or rice work well alongside."
   ],
-  "sourceNote": "Source: ThatDudeCanCook, “How to Make Creamy Chicken Florentine,” https://www.youtube.com/watch?v=-oxzoIR5ofQ. Method reconstructed from the full TranscriptX transcript; the YouTube description ingredient quantities could not be retrieved.",
+  "sourceNote": "Adapted from ThatDudeCanCook's “How to Make Creamy Chicken Florentine,” https://www.youtube.com/watch?v=-oxzoIR5ofQ.",
   "reviewFlags": [
     "HIGH PRIORITY: Retrieve and verify all ingredient quantities against the original YouTube video description; they are not present in the spoken transcript.",
     "No recipe photo committed yet; add assets/masters/creamy-chicken-florentine.png and public/images/creamy-chicken-florentine.jpg, then set photo to ./public/images/creamy-chicken-florentine.jpg.",
