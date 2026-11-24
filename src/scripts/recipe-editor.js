@@ -236,7 +236,8 @@ function close({discard=false}={}) {
   editing = false;
   dirty = false;
   draft = null;
-  saveDialog.close?.();
+  window.CookbookRating?.close();
+  if (saveDialog.open) saveDialog.close();
   tokenField.value = "";
   editButton.setAttribute("aria-pressed","false");
   editButton.setAttribute("aria-label","Edit recipe");
@@ -397,6 +398,7 @@ async function publish() {
     printButton.disabled = false;
     bridge.setSavedRecipe(update);
     saveDialog.dataset.payload = "";
+    window.CookbookRating?.close();
     // Leave the success dialog visible until the user closes it.
   } catch(error) {
     feedback.textContent = (error instanceof TypeError
@@ -426,7 +428,16 @@ document.addEventListener("click",event=>{
 },true);
 window.CookbookEditor = {
   get active(){return editing;},
+  start,
   close,
+  setRating(rating) {
+    if (!editing) return;
+    if (rating) draft.rating = rating;
+    else delete draft.rating;
+    const display = pages.querySelector(".edit-recipe-rating");
+    display?.replaceWith(window.CookbookRating.display(rating));
+    dirty = true;
+  },
   get dirty(){return dirty;}
 };
 })();

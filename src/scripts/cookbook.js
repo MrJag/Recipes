@@ -560,6 +560,7 @@ document.addEventListener("click", event => {
 
 window.CookbookEditorBridge = {
   getRecipe: () => currentRecipe,
+  displayRating: ratingDisplay,
   getSource: () => sourceRecipe,
   getVariantIndex: () => activeVariantIndex,
   getPath: () => sidebar.querySelector('[aria-current="page"]')?.dataset.recipe,
