@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T05:40:10.616Z",
+  "date": "2026-11-24T05:44:42.775Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -286,6 +286,14 @@
       "pass": true
     },
     {
+      "label": "Cancel button is removed",
+      "pass": true
+    },
+    {
+      "label": "Pencil button indicates it will exit editing",
+      "pass": true
+    },
+    {
       "label": "Description is inline editable and italicized",
       "pass": true
     },
@@ -326,7 +334,7 @@
       "pass": true
     },
     {
-      "label": "Cancel restores normal pagination",
+      "label": "Pencil toggle restores normal pagination",
       "pass": true
     },
     {
