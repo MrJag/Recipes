@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T04:55:02.023Z",
+  "date": "2026-11-24T05:01:10.913Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -394,6 +394,34 @@
       "pass": true
     },
     {
+      "label": "Confirmed GitHub save caches tab-only access",
+      "pass": true
+    },
+    {
+      "label": "Cached access has a future expiry",
+      "pass": true
+    },
+    {
+      "label": "Valid tab access publishes follow-up edit automatically",
+      "pass": true
+    },
+    {
+      "label": "Cached GitHub access skips token input",
+      "pass": true
+    },
+    {
+      "label": "Automatic save reports GitHub confirmation",
+      "pass": true
+    },
+    {
+      "label": "Expired access requires token again",
+      "pass": true
+    },
+    {
+      "label": "Expired access prevents automatic publish",
+      "pass": true
+    },
+    {
       "label": "Empty API response produces an actionable error",
       "pass": true
     },
@@ -420,28 +448,10 @@
     {
       "label": "Verified save returns to normal recipe mode",
       "pass": true
-    },
-    {
-      "label": "Mismatched revision is reported as unverified",
-      "pass": true
-    },
-    {
-      "label": "Unverified save preserves inline edits",
-      "pass": true
-    },
-    {
-      "label": "Unverified save does not display success",
-      "pass": true
-    },
-    {
-      "label": "Old combined-page bookmark redirects",
-      "pass": true
-    },
-    {
-      "label": "Old index2 bookmark redirects",
-      "pass": true
     }
   ],
-  "errors": [],
-  "pass": true
+  "errors": [
+    "TEST ERROR: locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('#githubWriteToken')\n    - locator resolved to <input type=\"password\" autocomplete=\"off\" spellcheck=\"false\" id=\"githubWriteToken\" placeholder=\"Token required for GitHub publishing\"/>\n    - fill(\"test-only-token\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not visible\n     - retrying fill action\n       - waiting 500ms\n\n    at /home/runner/work/Recipes/Recipes/qa/browser-smoke.mjs:371:42"
+  ],
+  "pass": false
 }
