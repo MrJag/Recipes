@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T05:01:10.913Z",
+  "date": "2026-11-24T05:06:55.205Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -338,6 +338,42 @@
       "pass": true
     },
     {
+      "label": "Tandoori chicken displays Ingredient Notes",
+      "pass": true
+    },
+    {
+      "label": "Tandoori paste guidance moved from attribution into Ingredient Notes",
+      "pass": true
+    },
+    {
+      "label": "Ingredient Notes appear between Ingredients and Directions",
+      "pass": true
+    },
+    {
+      "label": "Tandoori source attribution no longer duplicates ingredient instructions",
+      "pass": true
+    },
+    {
+      "label": "Ingredient notes are editable in place",
+      "pass": true
+    },
+    {
+      "label": "Ingredient Notes are preserved in recipe JSON",
+      "pass": true
+    },
+    {
+      "label": "Recipe attribution stays intact",
+      "pass": true
+    },
+    {
+      "label": "Butter Masala tomato tip appears in Ingredient Notes",
+      "pass": true
+    },
+    {
+      "label": "Butter Masala tomato tip is not repeated after Directions",
+      "pass": true
+    },
+    {
       "label": "Published Bombay potatoes recipe includes the Jamie Oliver attribution",
       "pass": true
     },
@@ -448,10 +484,28 @@
     {
       "label": "Verified save returns to normal recipe mode",
       "pass": true
+    },
+    {
+      "label": "Mismatched revision is reported as unverified",
+      "pass": true
+    },
+    {
+      "label": "Unverified save preserves inline edits",
+      "pass": true
+    },
+    {
+      "label": "Unverified save does not display success",
+      "pass": true
+    },
+    {
+      "label": "Old combined-page bookmark redirects",
+      "pass": true
+    },
+    {
+      "label": "Old index2 bookmark redirects",
+      "pass": true
     }
   ],
-  "errors": [
-    "TEST ERROR: locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('#githubWriteToken')\n    - locator resolved to <input type=\"password\" autocomplete=\"off\" spellcheck=\"false\" id=\"githubWriteToken\" placeholder=\"Token required for GitHub publishing\"/>\n    - fill(\"test-only-token\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not visible\n     - retrying fill action\n       - waiting 500ms\n\n    at /home/runner/work/Recipes/Recipes/qa/browser-smoke.mjs:371:42"
-  ],
-  "pass": false
+  "errors": [],
+  "pass": true
 }
