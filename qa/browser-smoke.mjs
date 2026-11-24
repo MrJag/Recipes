@@ -477,6 +477,18 @@ try {
  await page.locator('#dismissSaveDialog').click();
  await page.unrouteAll();
  await page.unrouteAll();
+ // High-resolution Florentine photo is loaded from its versioned image asset.
+ await page.goto('http://localhost:8123/recipe.html?recipe=creamy-chicken-florentine',{waitUntil:'load'});
+ await page.waitForFunction(() => {
+   const img=document.querySelector('#pages .sheet.has-photo .strip-image');
+   return img && img.complete && img.naturalWidth>0;
+ });
+ check(await page.locator('#pages .sheet.has-photo .strip-image').evaluate(img =>
+   img.naturalWidth>=700 && img.naturalHeight>=1800),
+   'Florentine recipe renders high-resolution portrait image');
+ check(await page.locator('#pages .sheet.has-photo .strip-image').evaluate(img =>
+   img.currentSrc.includes('creamy-chicken-florentine-v2.jpg')),
+   'Florentine uses versioned image instead of stale cached preview');
  await page.goto('http://localhost:8123/index.html?recipe=midwestern-chili',{waitUntil:'load'});
  await page.waitForTimeout(300);
  check(page.url().includes('recipe.html?recipe=midwestern-chili'),'Old combined-page bookmark redirects');
