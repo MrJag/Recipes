@@ -276,6 +276,8 @@ try {
      githubPut = route.request().postDataJSON();
      githubPuts++;
      savedMockContent = Buffer.from(githubPut.content,'base64').toString('utf8');
+     // Hold rating writes long enough to test in-flight user feedback.
+     if (githubPuts===3 || githubPuts===4) await new Promise(resolve=>setTimeout(resolve,350));
      return route.fulfill({status:200,contentType:'application/json',headers:cors,
        body:JSON.stringify({commit:{sha:'abcdef1234567890'}})});
    }
@@ -326,14 +328,27 @@ try {
    'Quiet save returns to normal read-only view');
  await page.locator('#ratingRecipeButton').click();
  await page.locator('#ratingStars button[data-rating="4"]').click();
- await page.waitForTimeout(550);
+ await page.locator('#ratingSaveProgress').waitFor({state:'visible'});
+ check(await page.locator('#ratingSaveProgress').textContent() === 'Saving rating…',
+   'Rating save displays prominent Saving rating feedback');
+ check(await page.locator('#ratingSaveProgress .rating-save-spinner').evaluate(el =>
+   getComputedStyle(el).animationName === 'recipe-save-spin'),
+   'Rating save progress spinner is animated');
+ check(await page.locator('#ratingOptions').isVisible(),
+   'Rating menu remains visible until save finishes');
+ check(await page.locator('#ratingStars button[data-rating="4"]').isDisabled(),
+   'Rating stars are disabled during a save');
+ await page.waitForTimeout(700);
  check(githubPuts===3,'Clicking a rating immediately commits to GitHub with cached token');
  check(JSON.parse(savedMockContent).rating===4,'Rating of four stars persisted');
  check(await page.locator('#recipeSaveDialog').isHidden(),'Auto-saving rating is silent');
  check(await page.locator('.edit-sheet').count()===0,'Rating auto-save keeps normal recipe view');
  await page.locator('#ratingRecipeButton').click();
  await page.locator('#ratingStars button[data-rating="4"]').click();
- await page.waitForTimeout(550);
+ await page.locator('#ratingSaveProgress').waitFor({state:'visible'});
+ check(await page.locator('#ratingOptions').isVisible(),
+   'Clearing a rating also displays saving feedback');
+ await page.waitForTimeout(700);
  check(githubPuts===4,'Clicking the selected star again auto-saves clearing the rating');
  check(!('rating' in JSON.parse(savedMockContent)),'Cleared star selection deletes rating JSON property');
  // An expired cached token must never trigger an automatic publish.
