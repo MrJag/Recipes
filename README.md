@@ -20,8 +20,10 @@ The floating **Save** action opens a dialog:
   is requested on the first save in a tab. After GitHub confirms the
   save, the token is temporarily cached in that tab's `sessionStorage`
   for up to 30 minutes and can be cleared using **Forget saved GitHub access**.
-  Follow-up saves reuse an unexpired token without prompting again. Rejected
-  credentials are cleared automatically. **This is not a secure HttpOnly
+  Follow-up saves with an unexpired token run silently, without opening
+  the publish dialog. The dialog opens only when the token is missing,
+  expired, rejected, or another save error occurs. Rejected credentials
+  are cleared automatically. **This is not a secure HttpOnly
   session cookie**: any JavaScript running on the cookbook origin can read
   sessionStorage. Truly secure server-side sessions require an authentication
   backend (for example, a GitHub OAuth service).
