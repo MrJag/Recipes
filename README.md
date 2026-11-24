@@ -2,6 +2,29 @@
 
 Family cookbook project (temporarily public for GitHub Pages preview).
 
+## Recipe viewer editing (v0.9.0)
+
+Open a recipe at `recipe.html?recipe=<slug>`. The printer icon opens
+print settings in a compact toolbar outside the document preview; use the
+pencil icon to edit the recipe directly. The edit view preserves the formatted
+title, italic subtitle/description, bulleted ingredients (automatically
+two columns for longer lists), and numbered directions. Enter adds a
+new ingredient or direction; Backspace on an empty item removes it.
+
+The floating **Save** action opens a dialog:
+- **Download JSON** saves a copy of the edited recipe to your device,
+  but does not update the website.
+- **Publish to GitHub** commits the edited JSON back to `main`. This
+  requires a fine-grained GitHub personal access token scoped only to
+  `MrJag/Recipes` with **Contents: Read and write** permission. The token
+  is requested on each save and is never stored by this website.
+  The app checks the file SHA and rejects a save if the upstream recipe
+  changed since the editor loaded it.
+
+The original formatting and automatic paginated print preview return
+after successful publication or when cancelling the edit. GitHub Pages
+deployment may take a short time after a successful commit.
+
 ## Goals
 - Preserve the original recipes in Google Drive while migrating them into structured recipe files.
 - Use a shared recipe data model for an eventual private website and printable cookbook.
