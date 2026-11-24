@@ -281,7 +281,7 @@ function valueOf(selector) {
 }
 function readGroups(holder) {
   return [...holder.querySelectorAll(":scope > .edit-ingredient-group")].map(section => ({
-    title: section.querySelector(".edit-group-name").textContent.trim() || null,
+    title: section.querySelector(".edit-group-name")?.textContent.trim() || null,
     items: [...section.querySelectorAll("ul > li.edit-list-item")].map(li => li.textContent.trim()).filter(Boolean)
   })).filter(group => group.title || group.items.length);
 }
