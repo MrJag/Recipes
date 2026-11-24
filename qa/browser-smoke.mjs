@@ -115,7 +115,7 @@ try {
  const originalSource = readFileSync('recipes/drinks/sweetango-orchard-sour.json','utf8');
  await page.route('https://api.github.com/repos/MrJag/Recipes/contents/**',async route => {
    const method = route.request().method();
-   const cors = {'access-control-allow-origin':'*','access-control-allow-headers':'*',
+   const cors = {'access-control-allow-origin':'*','access-control-allow-headers':'authorization,accept,x-github-api-version,content-type',
      'access-control-allow-methods':'GET,PUT,OPTIONS'};
    if (method === 'OPTIONS') return route.fulfill({status:204,headers:cors,body:''});
    if (method === 'GET') return route.fulfill({
