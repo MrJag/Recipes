@@ -270,7 +270,7 @@ function saveRating(value) {
   feedback.textContent = "";
   tokenField.value = "";
   saveDialog.dataset.filePath = bridge.getPath() || "";
-  saveDialog.dataset.payload = JSON.stringify(file,null,2) + "\\n";
+  saveDialog.dataset.payload = JSON.stringify(file,null,2) + "\n";
   saveDialog.showModal();
 }
 function showSave() {
