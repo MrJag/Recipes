@@ -481,3 +481,28 @@ body:has(#ratingOptions:not([hidden])) .edit-sheet .edit-recipe-rating .rating-l
 .edit-sheet .edit-ingredient-notes [contenteditable]:empty:before{
   content:attr(data-placeholder);font-style:italic;color:#ac9a8d;
 }
+
+/* Busy feedback for GitHub saves, including silent cached-token saves. */
+.recipe-action-rail .is-saving,
+.recipe-save-dialog .is-saving {
+  cursor:wait!important;
+  opacity:.86;
+  white-space:nowrap;
+}
+.recipe-action-rail .is-saving::before,
+.recipe-save-dialog .is-saving::before {
+  content:"";
+  display:inline-block;
+  width:12px;height:12px;
+  margin-right:7px;
+  vertical-align:-2px;
+  border:2px solid currentColor;
+  border-right-color:transparent;
+  border-radius:50%;
+  animation:recipe-save-spin .7s linear infinite;
+}
+@keyframes recipe-save-spin {to {transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){
+  .recipe-action-rail .is-saving::before,
+  .recipe-save-dialog .is-saving::before {animation:none;border-style:dotted}
+}

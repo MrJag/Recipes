@@ -307,12 +307,18 @@ try {
  await page.locator('#saveRecipeButton').click();
  check(await page.locator('#recipeSaveDialog').isHidden(),
    'Cached GitHub token saves without opening the publish dialog');
+ check(await page.locator('#saveRecipeButton').evaluate(el =>
+   el.disabled && el.classList.contains('is-saving') && el.textContent.includes('Saving')),
+   'Save button shows disabled Saving state during GitHub request');
  await page.waitForTimeout(600);
  check(githubPuts===2,'Valid tab access publishes follow-up edit automatically');
  check(await page.locator('#recipeSaveDialog').isHidden(),
    'Successful automatic save never displays the dialog');
  check(await page.locator('#saveRecipeButton').isHidden(),
    'Successful automatic save leaves edit mode');
+ check(await page.locator('#saveRecipeButton').evaluate(el =>
+   !el.disabled && !el.classList.contains('is-saving') && el.textContent==='Save'),
+   'Save spinner resets after successful publication');
  check(await page.locator('#editRecipeButton').getAttribute('aria-pressed')==='false',
    'Quiet save returns to normal read-only view');
  // An expired cached token must never trigger an automatic publish.
@@ -357,6 +363,9 @@ try {
    'Rejected credentials reveal the token prompt');
  check(await page.locator('.edit-sheet').isVisible(),
    'Rejected silent save preserves inline edits');
+ check(await page.locator('#saveRecipeButton').evaluate(el =>
+   !el.disabled && !el.classList.contains('is-saving') && el.textContent==='Save'),
+   'Save spinner resets after GitHub error');
  check(await page.evaluate(() =>
    sessionStorage.getItem('familyCookbook.githubToken.v1'))===null,
    'Rejected cached credentials are forgotten');
