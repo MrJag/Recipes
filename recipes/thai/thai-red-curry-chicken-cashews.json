@@ -4,7 +4,7 @@
   "title": "Thai Red Curry with Chicken & Cashews",
   "status": "draft",
   "category": "Thai",
-  "headnote": "DRAFT / UNTESTED OUTCOME. Reconstructed from July 19, 2025 personal recipe discussion: the user's chosen build uses an entire 4 oz Maesri red curry paste can, two cans coconut milk, rotisserie chicken, a sautéed large onion, and roasted cashews. No confirmed personal tasting verdict was recovered.",
+  "headnote": "Don't use this recipe yet.  This is my first attempt at making a Thai Red Curry using Maesri red curry paste.  I'm not happy with the results just yet.",
   "ingredientGroups": [
     {
       "title": "Curry",
@@ -41,6 +41,6 @@
     "Cashew and seasoning amounts were suggested during the discussion rather than confirmed by a completed test.",
     "Metric conversions are approximate and coconut milk can sizes can vary."
   ],
-  "sourceNote": "Recovered from user's July 19, 2025 recipe conversation.",
-  "photo": "./public/images/thai-red-curry-chicken-cashews.jpg"
+  "photo": "./public/images/thai-red-curry-chicken-cashews.jpg",
+  "subtitle": "DRAFT"
 }
