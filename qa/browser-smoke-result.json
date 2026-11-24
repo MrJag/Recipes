@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T04:40:02.032Z",
+  "date": "2026-11-24T04:41:39.839Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -150,6 +150,14 @@
       "pass": true
     },
     {
+      "label": "Desktop toolbar sits directly beside the recipe page",
+      "pass": true
+    },
+    {
+      "label": "Inactive rating button matches neutral black toolbar icons",
+      "pass": true
+    },
+    {
       "label": "Recipe header includes a rating summary",
       "pass": true
     },
@@ -183,6 +191,10 @@
     },
     {
       "label": "Rating stars appear on button click",
+      "pass": true
+    },
+    {
+      "label": "Active rating button uses muted olive accent",
       "pass": true
     },
     {
