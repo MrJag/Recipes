@@ -4,7 +4,7 @@
   "title": "Bergamot Silk (Sake Cocktail)",
   "status": "draft",
   "category": "Drinks",
-  "headnote": "DRAFT / UNTESTED FINAL VERSION — Egg-free revised Bergamot Silk from October 18, 2026. Makes two cocktails. Earlier February version used egg white; this version deliberately omits it. Lemon is adjusted to taste.",
+  "headnote": "DRAFT — Egg-free revised Bergamot Silk from October 18, 2026. Makes two cocktails. Earlier February version used egg white; this version deliberately omits it. Lemon is adjusted to taste.",
   "ingredientGroups": [
     {
       "title": "For 2 cocktails",
@@ -31,5 +31,6 @@
     "Original February version included an egg white, but has intentionally not been substituted into the October recipe."
   ],
   "sourceNote": "Reconstructed from earlier user/assistant cocktail development conversations (February, October 2026).",
-  "photo": "./public/images/bergamot-silk-sake-cocktail.jpg"
+  "photo": "./public/images/bergamot-silk-sake-cocktail.jpg",
+  "subtitle": ""
 }
