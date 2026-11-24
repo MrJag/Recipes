@@ -5,16 +5,21 @@
   "category": "Spanish",
   "status": "draft",
   "photo": "./public/images/chicken-pintxo-avocado-toast.jpg",
-  "ingredientGroups": [{"title": null, "items": [
-    "2 marinated chicken thigh skewers",
-    "Cilantro, paprika, garlic, olive oil and salt, for the chicken marinade",
-    "Pan de cristal or baguette, sliced",
-    "Mashed avocado, salted to taste",
-    "Marinated onions and capers",
-    "1 oz yogurt sauce: equal parts Greek yogurt and lemon juice, with oil and salt to taste",
-    "1 oz mojo verde, a cilantro, oil and garlic sauce",
-    "8 tomato slices"
-  ]}],
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "2 marinated chicken thigh skewers",
+        "Cilantro, paprika, garlic, olive oil and salt, for the chicken marinade",
+        "Pan de cristal or baguette, sliced",
+        "Mashed avocado, salted to taste",
+        "Marinated onions and capers",
+        "1 oz yogurt sauce: equal parts Greek yogurt and lemon juice, with oil and salt to taste",
+        "1 oz mojo verde, a cilantro, oil and garlic sauce",
+        "8 tomato slices"
+      ]
+    }
+  ],
   "steps": [
     "Marinate the chicken thighs in cilantro, a lot of paprika, garlic, olive oil and a little salt.",
     "Grill the chicken skewers until fully cooked. The source also describes finishing the chicken in an oven.",
@@ -22,6 +27,10 @@
     "Mix the marinated onions and capers with the 8 tomato slices until coated. Place the tomatoes in the center of a bowl and top with marinade.",
     "Crisscross the avocado toast over the tomatoes and arrange the chicken skewers on top, leaning one over the other. Decorate with tomatoes, yogurt sauce and mojo verde."
   ],
-  "reviewFlags": ["The source does not specify quantities or marinating time for the chicken marinade, the oven temperature, or how to prepare the marinated onions and mojo verde. Confirm these details before cooking."],
-  "headnote": "Draft: The source leaves several marinade and sauce details unspecified. Adapted from Bulla Gastrobar Restaurante."
+  "reviewFlags": [
+    "The source does not specify quantities or marinating time for the chicken marinade, the oven temperature, or how to prepare the marinated onions and mojo verde. Confirm these details before cooking."
+  ],
+  "headnote": "This recipe is a work in progress.  several marinade and sauce details are still unspecified.",
+  "subtitle": "",
+  "sourceNote": "Adapted from Bulla Gastrobar Restaurante in Plano, TX."
 }
