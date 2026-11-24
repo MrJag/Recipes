@@ -17,7 +17,14 @@ The floating **Save** action opens a dialog:
 - **Publish to GitHub** commits the edited JSON back to `main`. This
   requires a fine-grained GitHub personal access token scoped only to
   `MrJag/Recipes` with **Contents: Read and write** permission. The token
-  is requested on each save and is never stored by this website.
+  is requested on the first save in a tab. After GitHub confirms the
+  save, the token is temporarily cached in that tab's `sessionStorage`
+  for up to 30 minutes and can be cleared using **Forget saved GitHub access**.
+  Follow-up saves reuse an unexpired token without prompting again. Rejected
+  credentials are cleared automatically. **This is not a secure HttpOnly
+  session cookie**: any JavaScript running on the cookbook origin can read
+  sessionStorage. Truly secure server-side sessions require an authentication
+  backend (for example, a GitHub OAuth service).
   The app checks the file SHA and rejects a save if the upstream recipe
   changed since the editor loaded it.
 
