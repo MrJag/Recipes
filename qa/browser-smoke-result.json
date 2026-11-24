@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T04:52:51.723Z",
+  "date": "2026-11-24T04:55:02.023Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -211,6 +211,22 @@
     },
     {
       "label": "Rating button uses olive accent while open",
+      "pass": true
+    },
+    {
+      "label": "Hovering over fourth star illuminates first four stars",
+      "pass": true
+    },
+    {
+      "label": "Stars after hovered rating remain unfilled",
+      "pass": true
+    },
+    {
+      "label": "Hovering over second star illuminates first two stars",
+      "pass": true
+    },
+    {
+      "label": "Moving pointer away restores unrated selection",
       "pass": true
     },
     {
