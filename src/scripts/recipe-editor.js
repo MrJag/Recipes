@@ -169,7 +169,14 @@ function directions(steps, identifier) {
   return section;
 }
 function valueOf(selector) {
-  return pages.querySelector(selector)?.textContent.trim() || "";
+  const element = pages.querySelector(selector);
+  if (!element) return "";
+  // Editable descriptions can contain DOM paragraphs/divs produced by Enter.
+  // innerText preserves their visible line breaks; textContent concatenates them.
+  if (element.classList.contains("edit-headnote")) {
+    return element.innerText.replace(/\r\n?/g, "\n").trim();
+  }
+  return element.textContent.trim();
 }
 function readGroups(holder) {
   return [...holder.querySelectorAll(":scope > .edit-ingredient-group")].map(section => ({

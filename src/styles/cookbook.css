@@ -34,7 +34,7 @@ body.commercial .photo-strip { right: 0; }
 h1 { font-size: var(--title-size); line-height: 1.01; margin: 0 0 4px; }
 .subtitle { font-size: 15pt; line-height: 1.15; font-style: italic; margin-bottom: 12px; }
 .metadata { font: 700 8.5pt var(--font-sans); letter-spacing: .6px; margin-bottom: 15px; }
-.headnote { font-style: italic; font-size: var(--body-size); line-height: var(--body-line-height); margin: 0 0 var(--section-gap); }
+.headnote { font-style: italic; font-size: var(--body-size); line-height: var(--body-line-height); margin: 0 0 var(--section-gap); white-space: pre-line; }
 .ingredients { background: var(--ingredient-paper); border-radius: 7px; padding: 11px 12px; margin-bottom: var(--section-gap); break-inside: avoid; }
 .section-heading { display: flex; gap: 12px; align-items: center; color: var(--accent); font-size: 13pt; letter-spacing: 1.5px; margin: 0 0 10px; }
 .section-heading::after { content: ""; height: 1px; flex: 1; background: var(--rule); }
