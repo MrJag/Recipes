@@ -228,6 +228,35 @@ function paginate(recipe, density) {
   const ingredients = buildIngredients(allIngredientGroups(recipe));
   page.content.append(header, ingredients);
   let overflow = !fits(page);
+  // Ingredient Notes are optional and follow Ingredients, not the Directions
+  // footer. Each note can flow onto another page without being dropped.
+  const ingredientNotes = Array.isArray(recipe.ingredientNotes)
+    ? recipe.ingredientNotes.filter(note => typeof note === "string" && note.trim())
+    : [];
+  if (ingredientNotes.length) {
+    let list = null;
+    let notesSection = null;
+    const makeNotesSection = (continued=false) => {
+      notesSection = el("section", "ingredient-notes");
+      notesSection.appendChild(makeHeading(continued ? "Ingredient Notes · continued" : "Ingredient Notes"));
+      list = el("ul");
+      notesSection.appendChild(list);
+      page.content.appendChild(notesSection);
+    };
+    makeNotesSection();
+    for (const note of ingredientNotes) {
+      const item = el("li", null, note);
+      list.appendChild(item);
+      if (!fits(page)) {
+        item.remove();
+        if (!list.children.length) notesSection.remove();
+        page = pageShell(pagesEl.children.length, recipe);
+        makeNotesSection(true);
+        list.appendChild(item);
+        overflow ||= !fits(page);
+      }
+    }
+  }
   const stages = [
     ...(recipe.components || []).map(c => ({title:c.title, steps:c.steps || [], note:c.notes})),
     ...(recipe.steps?.length ? [{title:recipe.components?.length ? "Main method" : null, steps:recipe.steps}] : [])

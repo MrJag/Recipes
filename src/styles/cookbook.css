@@ -89,3 +89,18 @@ h1 { font-size: var(--title-size); line-height: 1.01; margin: 0 0 4px; }
   white-space: nowrap;
 }
 .category .draft-badge { margin-inline-start: 0; font-size: 8pt; }
+
+/* Optional ingredient-specific notes, between Ingredients and Directions. */
+.ingredient-notes {
+  margin: 0 0 var(--section-gap);
+  padding: 0 1px;
+  font: italic var(--body-size)/var(--body-line-height) var(--font-serif);
+  break-inside: avoid;
+}
+.ingredient-notes .section-heading {
+  margin-bottom: 7px;
+  font-style: normal;
+}
+.ingredient-notes ul {margin:0;padding-left:19px}
+.ingredient-notes li {margin:0 0 5px;break-inside:avoid;overflow-wrap:anywhere}
+.ingredient-notes li::marker {color:var(--accent)}

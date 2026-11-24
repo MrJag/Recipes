@@ -198,6 +198,40 @@ try {
  await page.locator('#dismissSaveDialog').click();
  await page.locator('#cancelEditButton').click();
 
+ // Ingredient Notes appear between Ingredients and Directions and remain editable.
+ await page.goto('http://localhost:8123/recipe.html?recipe=tandoori-chicken',{waitUntil:'load'});
+ await page.waitForTimeout(350);
+ check(await page.locator('.ingredient-notes').count()===1,
+   'Tandoori chicken displays Ingredient Notes');
+ check((await page.locator('.ingredient-notes').textContent()).includes('Garlic and Ginger Paste'),
+   'Tandoori paste guidance moved from attribution into Ingredient Notes');
+ check(await page.locator('.ingredient-notes').evaluate(el => {
+   const ingredients = document.querySelector('.ingredients');
+   const steps = document.querySelector('.steps');
+   return ingredients && steps && ingredients.compareDocumentPosition(el)&Node.DOCUMENT_POSITION_FOLLOWING &&
+     el.compareDocumentPosition(steps)&Node.DOCUMENT_POSITION_FOLLOWING;
+ }), 'Ingredient Notes appear between Ingredients and Directions');
+ check(!(await page.locator('.source').textContent()).includes('Garlic and Ginger Paste'),
+   'Tandoori source attribution no longer duplicates ingredient instructions');
+ await page.locator('#editRecipeButton').click();
+ check(await page.locator('.edit-ingredient-notes li[contenteditable="true"]').count()===1,
+   'Ingredient notes are editable in place');
+ await page.locator('.edit-ingredient-notes li').first().fill('Combine fresh ginger and garlic in equal portions.');
+ await page.locator('#saveRecipeButton').click();
+ const notePayload=JSON.parse(await page.locator('#recipeSaveDialog').getAttribute('data-payload'));
+ check(notePayload.ingredientNotes?.[0]==='Combine fresh ginger and garlic in equal portions.',
+   'Ingredient Notes are preserved in recipe JSON');
+ check(notePayload.sourceNote?.includes('Food Fusion'),'Recipe attribution stays intact');
+ await page.locator('#dismissSaveDialog').click();
+ page.once('dialog',dialog=>dialog.accept());
+ await page.locator('#cancelEditButton').click();
+ await page.goto('http://localhost:8123/recipe.html?recipe=butter-masala-chicken',{waitUntil:'load'});
+ await page.waitForTimeout(350);
+ check((await page.locator('.ingredient-notes').textContent()).includes('peel the tomatoes'),
+   'Butter Masala tomato tip appears in Ingredient Notes');
+ check(!(await page.locator('.component-note').allTextContents()).some(text=>text.includes('peel the tomatoes')),
+   'Butter Masala tomato tip is not repeated after Directions');
+
  // Source attribution is a real editable field and preserves the original
  // JSON property, including when other recipe fields are unchanged.
  await page.goto('http://localhost:8123/recipe.html?recipe=roasted-chicken-bombay-potatoes',{waitUntil:'load'});

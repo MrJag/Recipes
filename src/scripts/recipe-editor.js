@@ -200,6 +200,12 @@ function buildEditPage(recipe) {
   ingredients.appendChild(sectionHeading("Ingredients"));
   ingredients.appendChild(ingredientGroups(recipe.ingredientGroups,"main"));
   content.appendChild(ingredients);
+  const notesSection = node("section", "ingredient-notes edit-ingredient-notes");
+  notesSection.dataset.editField = "ingredientNotes";
+  notesSection.appendChild(sectionHeading("Ingredient Notes"));
+  notesSection.appendChild(editableList(recipe.ingredientNotes || [],
+    "ingredient-notes", "Ingredient note"));
+  content.appendChild(notesSection);
   if (Array.isArray(recipe.components)) {
     const components = node("div","edit-components");
     recipe.components.forEach((component,index) => {
@@ -240,6 +246,10 @@ function collectDraft() {
     else delete result[field.dataset.meta];
   }
   result.ingredientGroups = readGroups(pages.querySelector('[data-groups="main"]'));
+  const notes = [...pages.querySelectorAll('.edit-ingredient-notes ul > li')]
+    .map(item => item.textContent.trim()).filter(Boolean);
+  if (notes.length) result.ingredientNotes = notes;
+  else delete result.ingredientNotes;
   if (!result.ingredientGroups.some(group => group.items.length)) throw new Error("Add at least one ingredient.");
   result.steps = readSteps(pages.querySelector('[data-directions="main"]'));
   if (!result.steps.length && !(result.components || []).some(component => component.steps?.length)) {
@@ -258,7 +268,7 @@ function collectDraft() {
 function fullRecipeFile(edited) {
   const file = clone(bridge.getSource());
   const index = bridge.getVariantIndex();
-  const fields = ["title","subtitle","headnote","servings","yield","prepTime","cookTime","ingredientGroups","steps","components","rating","sourceNote"];
+  const fields = ["title","subtitle","headnote","servings","yield","prepTime","cookTime","ingredientGroups","ingredientNotes","steps","components","rating","sourceNote"];
   const target = index < 0 ? file : file.variants[index];
   if (!target) throw new Error("The selected recipe version is unavailable.");
   for (const field of fields) {

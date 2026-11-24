@@ -76,8 +76,7 @@
         "Fry the onions over high heat until golden brown and set aside.",
         "Blend the onions, tomatoes, and garlic-ginger-chili paste until smooth.",
         "Puree the mixture until smooth."
-      ],
-      "notes": "* A quick way to peel the tomatoes is to broil the halves for 5 minutes in the oven, cut side down. The skin will separate from the pulp and will easily slip off."
+      ]
     }
   ],
   "steps": [
@@ -96,5 +95,8 @@
     "Subcomponent stages retained as separate objects; renderer needs integrated component printing",
     "Original document references garam masala 'recipe in link' that needs URL extraction",
     "Verify whether 2 Tbsp kashmiri chili powder intended"
+  ],
+  "ingredientNotes": [
+    "A quick way to peel the tomatoes is to broil the halves for 5 minutes in the oven, cut side down. The skin will separate from the pulp and will easily slip off."
   ]
 }

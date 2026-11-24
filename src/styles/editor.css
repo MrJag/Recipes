@@ -474,3 +474,10 @@ body:has(#ratingOptions:not([hidden])) .edit-sheet .edit-recipe-rating .rating-l
 .recipe-save-dialog #githubTokenPrompt[hidden],
 .recipe-save-dialog #cachedTokenNotice[hidden] {display:none!important}
 .recipe-save-dialog .forget-session {background:transparent;color:#715b46;border:1px solid #cbb8a8;margin:8px 0 14px;font:12px Arial,sans-serif;padding:7px 10px}
+
+/* Notes are always editable, but blank notes stay hidden outside edit mode. */
+.edit-sheet .edit-ingredient-notes{margin:13px 0 18px}
+.edit-sheet .edit-ingredient-notes li{line-height:1.45;margin-bottom:7px}
+.edit-sheet .edit-ingredient-notes [contenteditable]:empty:before{
+  content:attr(data-placeholder);font-style:italic;color:#ac9a8d;
+}
