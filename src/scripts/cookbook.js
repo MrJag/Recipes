@@ -72,7 +72,7 @@ function pageShell(index, recipe) {
       strip.appendChild(photo);
     }
     page.appendChild(strip);
-  } else {
+  } else if (index > 0) {
     content.appendChild(el("div", "running-head", recipe.title + " · continued"));
   }
   page.appendChild(content);
