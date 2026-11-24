@@ -167,6 +167,26 @@ try {
  check(await page.locator('#saveRecipeButton').isHidden(),'Save hides after successful publish');
  await page.locator('#dismissSaveDialog').click();
  await page.unrouteAll();
+ // A truncated/empty GitHub response must not silently discard edits.
+ await page.route('https://api.github.com/repos/MrJag/Recipes/contents/**',async route => {
+   const cors={'access-control-allow-origin':'*','access-control-allow-headers':'authorization,accept,x-github-api-version,content-type',
+     'access-control-allow-methods':'GET,PUT,OPTIONS'};
+   if (route.request().method()==='OPTIONS') return route.fulfill({status:204,headers:cors,body:''});
+   return route.fulfill({status:200,contentType:'application/json',headers:cors,body:''});
+ });
+ await page.goto('http://localhost:8123/recipe.html?recipe=sweetango-orchard-sour',{waitUntil:'load'});
+ await page.waitForTimeout(350);
+ await page.locator('#editRecipeButton').click();
+ await page.locator('.edit-sheet .edit-main-title').fill('Unsaved response error test');
+ await page.locator('#saveRecipeButton').click();
+ await page.locator('#githubWriteToken').fill('test-only-token');
+ await page.locator('#publishRecipeGithub').click();
+ await page.waitForTimeout(300);
+ check((await page.locator('#saveFeedback').textContent()).includes('empty response'),'Empty API response produces an actionable error');
+ check(await page.locator('.edit-sheet').isVisible(),'Edits remain available after failed GitHub response');
+ check(!(await page.locator('#saveFeedback').textContent()).includes('Published!'),'Failed save does not claim publication');
+ await page.locator('#dismissSaveDialog').click();
+ await page.unrouteAll();
  await page.goto('http://localhost:8123/index.html?recipe=midwestern-chili',{waitUntil:'load'});
  await page.waitForTimeout(300);
  check(page.url().includes('recipe.html?recipe=midwestern-chili'),'Old combined-page bookmark redirects');
