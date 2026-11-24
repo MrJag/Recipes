@@ -313,8 +313,8 @@ try {
    'Successful automatic save never displays the dialog');
  check(await page.locator('#saveRecipeButton').isHidden(),
    'Successful automatic save leaves edit mode');
- check((await page.locator('#status').textContent()).includes('saved to GitHub'),
-   'Quiet save provides nonmodal status');
+ check(await page.locator('#editRecipeButton').getAttribute('aria-pressed')==='false',
+   'Quiet save returns to normal read-only view');
  // An expired cached token must never trigger an automatic publish.
  await page.evaluate(() => {
    const key='familyCookbook.githubToken.v1';
