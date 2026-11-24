@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T04:06:31.929Z",
+  "date": "2026-11-24T04:18:30.687Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -251,6 +251,18 @@
     },
     {
       "label": "Save hides after successful publish",
+      "pass": true
+    },
+    {
+      "label": "Empty API response produces an actionable error",
+      "pass": true
+    },
+    {
+      "label": "Edits remain available after failed GitHub response",
+      "pass": true
+    },
+    {
+      "label": "Failed save does not claim publication",
       "pass": true
     },
     {
