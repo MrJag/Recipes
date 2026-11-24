@@ -3,7 +3,8 @@
   const toggle = document.getElementById("ratingRecipeButton");
   const panel = document.getElementById("ratingOptions");
   const stars = document.getElementById("ratingStars");
-  if (!toggle || !panel || !stars) return;
+  const progress = document.getElementById("ratingSaveProgress");
+  if (!toggle || !panel || !stars || !progress) return;
 
   const normalize = number => {
     const n = Number(number);
@@ -90,14 +91,14 @@
     paint();
   });
   document.addEventListener("click", event => {
-    if (!panel.hidden && !event.target.closest(".rating-action-group")) {
+    if (!saving && !panel.hidden && !event.target.closest(".rating-action-group")) {
       // Save dialog was opened from the rating panel; retain the preview
       // until the dialog's outcome is known.
       if (!document.getElementById("recipeSaveDialog").open) close();
     }
   });
   document.addEventListener("keydown", event => {
-    if (event.key === "Escape" && !panel.hidden) {
+    if (!saving && event.key === "Escape" && !panel.hidden) {
       event.preventDefault();
       close();
       toggle.focus();
@@ -115,6 +116,13 @@
       toggle.classList.toggle("is-saving", saving);
       toggle.setAttribute("aria-busy", String(saving));
       stars.setAttribute("aria-busy", String(saving));
+      progress.hidden = !saving;
+      panel.classList.toggle("rating-saving", saving);
+      if (saving) {
+        // Keep the star menu visible during the entire request.
+        panel.hidden = false;
+        toggle.setAttribute("aria-expanded", "true");
+      }
       paint();
     },
     discard() { value = saved; pending = false; paint(); close({discard:false}); preview(); }
