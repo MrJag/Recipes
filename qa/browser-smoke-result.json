@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T04:26:34.735Z",
+  "date": "2026-11-24T04:37:59.632Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -146,6 +146,66 @@
       "pass": true
     },
     {
+      "label": "Recipe action icons are vertically stacked",
+      "pass": true
+    },
+    {
+      "label": "Recipe header includes a rating summary",
+      "pass": true
+    },
+    {
+      "label": "Option B puts the rating at the right of the category line",
+      "pass": true
+    },
+    {
+      "label": "Header rating aligns to category row right edge",
+      "pass": true
+    },
+    {
+      "label": "Recipes without a rating show Unrated",
+      "pass": true
+    },
+    {
+      "label": "No-photo print mode removes the photo strip",
+      "pass": true
+    },
+    {
+      "label": "No-photo print layout uses full-width text",
+      "pass": true
+    },
+    {
+      "label": "Switching back to photo print mode restores first-page photo",
+      "pass": true
+    },
+    {
+      "label": "Rating stars are hidden by default",
+      "pass": true
+    },
+    {
+      "label": "Rating stars appear on button click",
+      "pass": true
+    },
+    {
+      "label": "Rating selection enters editable save mode",
+      "pass": true
+    },
+    {
+      "label": "Selecting four stars updates the editable header",
+      "pass": true
+    },
+    {
+      "label": "Rating remains in category line while editing",
+      "pass": true
+    },
+    {
+      "label": "Rating is included in recipe save JSON",
+      "pass": true
+    },
+    {
+      "label": "Cancel discards a pending rating",
+      "pass": true
+    },
+    {
       "label": "Photo stays visible after desktop resize",
       "pass": true
     },
@@ -239,6 +299,10 @@
     },
     {
       "label": "Save preserves Draft status",
+      "pass": true
+    },
+    {
+      "label": "Ordinary recipe editing does not invent a rating",
       "pass": true
     },
     {
