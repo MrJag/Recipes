@@ -86,11 +86,12 @@ try {
    'Recipe action icons are vertically stacked');
  check(await page.locator('.recipe-header .recipe-rating').count()===1,
    'Recipe header includes a rating summary');
- check(await page.locator('.recipe-header .category > .recipe-rating').count()===1,
-   'Option B puts the rating at the right of the category line');
+ check(await page.locator('.recipe-header > .recipe-rating').count()===1,
+   'Option A displays the rating as a separate row below the subtitle');
  check(await page.locator('.recipe-header .recipe-rating').evaluate(el =>
-   Math.abs(el.getBoundingClientRect().right - el.parentElement.getBoundingClientRect().right) < 8),
-   'Header rating aligns to category row right edge');
+   el.previousElementSibling?.classList.contains('subtitle') ||
+   el.previousElementSibling?.tagName === 'H1'),
+   'Rating follows the title or subtitle');
  check((await page.locator('.recipe-header .recipe-rating').textContent()).includes('Unrated'),
    'Recipes without a rating show Unrated');
  await page.locator('#printMenuToggle').click();
@@ -114,8 +115,8 @@ try {
  await page.locator('#ratingStars button[data-rating="4"]').click();
  check((await page.locator('.edit-recipe-rating').textContent()).includes('4 of 5'),
    'Selecting four stars updates the editable header');
- check(await page.locator('.edit-sheet .category > .edit-recipe-rating').count()===1,
-   'Rating remains in category line while editing');
+ check(await page.locator('.edit-sheet .edit-content > .edit-recipe-rating').count()===1,
+   'Rating follows subtitle while editing');
  await page.locator('#saveRecipeButton').click();
  const ratingPayload=JSON.parse(await page.locator('#recipeSaveDialog').getAttribute('data-payload'));
  check(ratingPayload.rating===4,'Rating is included in recipe save JSON');
