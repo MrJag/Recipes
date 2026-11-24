@@ -236,6 +236,7 @@ function paginate(recipe, density) {
   if (ingredientNotes.length) {
     let list = null;
     let notesSection = null;
+    let placedNotes = 0;
     const makeNotesSection = (continued=false) => {
       notesSection = el("section", "ingredient-notes");
       notesSection.appendChild(makeHeading(continued ? "Ingredient Notes · continued" : "Ingredient Notes"));
@@ -251,10 +252,11 @@ function paginate(recipe, density) {
         item.remove();
         if (!list.children.length) notesSection.remove();
         page = pageShell(pagesEl.children.length, recipe);
-        makeNotesSection(true);
+        makeNotesSection(placedNotes > 0);
         list.appendChild(item);
         overflow ||= !fits(page);
       }
+      placedNotes++;
     }
   }
   const stages = [
