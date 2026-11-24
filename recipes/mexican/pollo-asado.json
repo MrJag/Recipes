@@ -8,7 +8,7 @@
     {
       "title": null,
       "items": [
-        "2-4 lbs chicken (breast is fine, thigh is more juicy)"
+        "2-4 lbs chicken\n(breast is fine, thigh is more juicy)"
       ]
     },
     {
@@ -18,7 +18,7 @@
         "¼ cup lime juice",
         "1 Tbsp honey",
         "2-3 Tbsp olive oil",
-        "2 chilis in adobo",
+        "2 chilis in adobo *",
         "0.5 oz achiote paste",
         "3-4 garlic cloves, roughly chopped or minced",
         "1 tsp ground cumin",
@@ -35,5 +35,9 @@
     "Rest for 3-5 minutes before serving."
   ],
   "reviewFlags": [],
-  "sourceNote": "Substitute with 1-1.5 Tsp of your choice of ground chili pepper.  Different chili peppers produce different flavor profiles; Aleppo for a fruity raisin, Guajillo for a smokiness, or Kashmiri or a neutral taste."
+  "subtitle": "",
+  "headnote": "",
+  "ingredientNotes": [
+    "Substitute with 1-1.5 Tsp of your choice of ground chili pepper.  Different chili peppers produce different flavor profiles; Aleppo for a fruity raisin, Guajillo for a smokiness, or Kashmiri or a neutral taste."
+  ]
 }
