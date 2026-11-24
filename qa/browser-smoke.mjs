@@ -305,12 +305,16 @@ try {
  await page.locator('#editRecipeButton').click();
  await page.locator('.edit-sheet .edit-main-title').fill('Sweetango Orchard Sour — Followup');
  await page.locator('#saveRecipeButton').click();
+ check(await page.locator('#recipeSaveDialog').isHidden(),
+   'Cached GitHub token saves without opening the publish dialog');
  await page.waitForTimeout(600);
  check(githubPuts===2,'Valid tab access publishes follow-up edit automatically');
- check(await page.locator('#githubTokenPrompt').isHidden(),'Cached GitHub access skips token input');
- check((await page.locator('#saveFeedback').textContent()).includes('Published!'),
-   'Automatic save reports GitHub confirmation');
- await page.locator('#dismissSaveDialog').click();
+ check(await page.locator('#recipeSaveDialog').isHidden(),
+   'Successful automatic save never displays the dialog');
+ check(await page.locator('#saveRecipeButton').isHidden(),
+   'Successful automatic save leaves edit mode');
+ check((await page.locator('#status').textContent()).includes('saved to GitHub'),
+   'Quiet save provides nonmodal status');
  // An expired cached token must never trigger an automatic publish.
  await page.evaluate(() => {
    const key='familyCookbook.githubToken.v1';
@@ -321,8 +325,41 @@ try {
  await page.locator('#editRecipeButton').click();
  await page.locator('.edit-sheet .edit-main-title').fill('Unsaved after expiry');
  await page.locator('#saveRecipeButton').click();
+ check(await page.locator('#recipeSaveDialog').isVisible(),
+   'Expired cached access opens the publish dialog');
  check(await page.locator('#githubTokenPrompt').isVisible(),'Expired access requires token again');
  check(githubPuts===2,'Expired access prevents automatic publish');
+ await page.locator('#dismissSaveDialog').click();
+ page.once('dialog',dialog=>dialog.accept());
+ await page.locator('#cancelEditButton').click();
+ await page.unrouteAll();
+ // A cached token rejected by GitHub must bring up a visible error dialog.
+ await page.evaluate(() => sessionStorage.setItem('familyCookbook.githubToken.v1',
+   JSON.stringify({token:'expired-token',expiresAt:Date.now()+600000})));
+ await page.route('https://api.github.com/repos/MrJag/Recipes/contents/**',async route => {
+   const cors={'access-control-allow-origin':'*',
+     'access-control-allow-headers':'authorization,accept,x-github-api-version,content-type',
+     'access-control-allow-methods':'GET,PUT,OPTIONS'};
+   if(route.request().method()==='OPTIONS')
+     return route.fulfill({status:204,headers:cors,body:''});
+   return route.fulfill({status:401,contentType:'application/json',headers:cors,
+     body:JSON.stringify({message:'Bad credentials'})});
+ });
+ await page.goto('http://localhost:8123/recipe.html?recipe=sweetango-orchard-sour',{waitUntil:'load'});
+ await page.waitForTimeout(350);
+ await page.locator('#editRecipeButton').click();
+ await page.locator('.edit-sheet .edit-main-title').fill('Rejected token test');
+ await page.locator('#saveRecipeButton').click();
+ await page.locator('#recipeSaveDialog').waitFor({state:'visible'});
+ check((await page.locator('#saveFeedback').textContent()).includes('HTTP 401'),
+   'Rejected cached token opens a visible error dialog');
+ check(await page.locator('#githubTokenPrompt').isVisible(),
+   'Rejected credentials reveal the token prompt');
+ check(await page.locator('.edit-sheet').isVisible(),
+   'Rejected silent save preserves inline edits');
+ check(await page.evaluate(() =>
+   sessionStorage.getItem('familyCookbook.githubToken.v1'))===null,
+   'Rejected cached credentials are forgotten');
  await page.locator('#dismissSaveDialog').click();
  page.once('dialog',dialog=>dialog.accept());
  await page.locator('#cancelEditButton').click();
