@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T02:52:50.356Z",
+  "date": "2026-11-24T04:06:31.929Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -143,6 +143,26 @@
     },
     {
       "label": "Print action is an icon outside the recipe page",
+      "pass": true
+    },
+    {
+      "label": "Photo stays visible after desktop resize",
+      "pass": true
+    },
+    {
+      "label": "Photo stays visible on mobile breakpoint",
+      "pass": true
+    },
+    {
+      "label": "Photo remains visible returning to desktop",
+      "pass": true
+    },
+    {
+      "label": "Resize does not replace the loaded photo element",
+      "pass": true
+    },
+    {
+      "label": "Continuation pages remain free of photo strips",
       "pass": true
     },
     {
