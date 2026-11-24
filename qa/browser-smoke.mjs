@@ -76,7 +76,7 @@ try {
  await page.waitForTimeout(650);
  await page.locator('#editRecipeButton').click();
  check(await page.locator('.edit-sheet .ingredients ul').evaluate(el => getComputedStyle(el).columnCount === '2'),'Long ingredient lists automatically use two columns');
- await page.locator('#cancelEditButton').click();
+ await page.locator('#editRecipeButton').click();
  await page.goto('http://localhost:8123/recipe.html?recipe=sweetango-orchard-sour',{waitUntil:'load'});
  await page.waitForTimeout(650);
  check(await page.locator('#editRecipeButton').isVisible(),'Pencil action is available');
@@ -172,6 +172,9 @@ try {
  await page.locator('#editRecipeButton').click();
  check(await page.locator('.edit-sheet').isVisible(),'Pencil enters inline edit mode');
  check(await page.locator('#saveRecipeButton').isVisible(),'Save action appears during editing');
+ check(await page.locator('#cancelEditButton').count()===0,'Cancel button is removed');
+ check(await page.locator('#editRecipeButton').getAttribute('aria-label')==='Cancel editing',
+   'Pencil button indicates it will exit editing');
  check(await page.locator('.edit-sheet .edit-headnote[contenteditable="true"]').count()===1,'Description is inline editable and italicized');
  check(await page.locator('.edit-sheet .edit-headnote').evaluate(el => getComputedStyle(el).fontStyle === 'italic'),'Description actually renders italic');
  check(await page.locator('.edit-sheet .ingredients ul').evaluate(el => getComputedStyle(el).columnCount === '1'),'Short ingredient lists stay single column');
@@ -187,16 +190,16 @@ try {
  check((await page.locator('#saveFeedback').textContent()).length===0,'Save does not claim success prematurely');
  await page.locator('#dismissSaveDialog').click();
  page.once('dialog', dialog => dialog.accept());
- await page.locator('#cancelEditButton').click();
+ await page.locator('#editRecipeButton').click();
  await page.locator('.sheet:not(.edit-sheet)').first().waitFor({state:'visible',timeout:3000});
- check(await page.locator('.edit-sheet').count()===0,'Cancel restores normal pagination');
+ check(await page.locator('.edit-sheet').count()===0,'Pencil toggle restores normal pagination');
  check(await page.locator('#saveRecipeButton').isHidden(),'Save action hides outside edit mode');
  await page.locator('#editRecipeButton').click();
  await page.locator('#saveRecipeButton').click();
  await page.locator('#publishRecipeGithub').click();
  check((await page.locator('#saveFeedback').textContent()).includes('token'),'Publishing without credentials is refused');
  await page.locator('#dismissSaveDialog').click();
- await page.locator('#cancelEditButton').click();
+ await page.locator('#editRecipeButton').click();
 
  // Ingredient Notes appear between Ingredients and Directions and remain editable.
  await page.goto('http://localhost:8123/recipe.html?recipe=tandoori-chicken',{waitUntil:'load'});
@@ -224,7 +227,7 @@ try {
  check(notePayload.sourceNote?.includes('Food Fusion'),'Recipe attribution stays intact');
  await page.locator('#dismissSaveDialog').click();
  page.once('dialog',dialog=>dialog.accept());
- await page.locator('#cancelEditButton').click();
+ await page.locator('#editRecipeButton').click();
  await page.goto('http://localhost:8123/recipe.html?recipe=butter-masala-chicken',{waitUntil:'load'});
  await page.waitForTimeout(350);
  check((await page.locator('.ingredient-notes').textContent()).includes('peel the tomatoes'),
@@ -253,7 +256,7 @@ try {
  check(sourcePayload.steps.length===7,'Editing source note preserves all recipe directions');
  await page.locator('#dismissSaveDialog').click();
  page.once('dialog', dialog => dialog.accept());
- await page.locator('#cancelEditButton').click();
+ await page.locator('#editRecipeButton').click();
 
  // Mock GitHub API to test the save flow without changing repository data.
  let githubPut = null;
@@ -337,7 +340,7 @@ try {
  check(githubPuts===2,'Expired access prevents automatic publish');
  await page.locator('#dismissSaveDialog').click();
  page.once('dialog',dialog=>dialog.accept());
- await page.locator('#cancelEditButton').click();
+ await page.locator('#editRecipeButton').click();
  await page.unrouteAll();
  // A cached token rejected by GitHub must bring up a visible error dialog.
  await page.evaluate(() => sessionStorage.setItem('familyCookbook.githubToken.v1',
@@ -371,7 +374,7 @@ try {
    'Rejected cached credentials are forgotten');
  await page.locator('#dismissSaveDialog').click();
  page.once('dialog',dialog=>dialog.accept());
- await page.locator('#cancelEditButton').click();
+ await page.locator('#editRecipeButton').click();
  await page.unrouteAll();
  // A truncated/empty GitHub response must not silently discard edits.
  await page.route('https://api.github.com/repos/MrJag/Recipes/contents/**',async route => {

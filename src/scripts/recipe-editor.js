@@ -5,7 +5,6 @@ const bridge = window.CookbookEditorBridge;
 const pages = document.getElementById("pages");
 const editButton = document.getElementById("editRecipeButton");
 const saveButton = document.getElementById("saveRecipeButton");
-const cancelButton = document.getElementById("cancelEditButton");
 const printButton = document.getElementById("printButton");
 const saveDialog = document.getElementById("recipeSaveDialog");
 const feedback = document.getElementById("saveFeedback");
@@ -307,9 +306,9 @@ function start() {
   editing = true;
   printButton.disabled = true;
   editButton.setAttribute("aria-pressed","true");
-  editButton.setAttribute("aria-label","Exit edit mode");
+  editButton.setAttribute("aria-label","Cancel editing");
+  editButton.title = "Cancel editing";
   saveButton.hidden = false;
-  cancelButton.hidden = false;
   document.getElementById("printMenu").open = false;
   buildEditPage(draft);
   status.textContent = "Editing · changes are not published until you save";
@@ -325,8 +324,8 @@ function close({discard=false}={}) {
   tokenField.value = "";
   editButton.setAttribute("aria-pressed","false");
   editButton.setAttribute("aria-label","Edit recipe");
+  editButton.title = "Edit recipe";
   saveButton.hidden = true;
-  cancelButton.hidden = true;
   printButton.disabled = false;
   pages.replaceChildren();
   window.CookbookRating?.sync(bridge.getRecipe()?.rating);
@@ -507,8 +506,7 @@ async function publish({silent=false}={}) {
     editing = false;
     dirty = false;
     saveButton.hidden = true;
-    cancelButton.hidden = true;
-    editButton.setAttribute("aria-pressed","false");
+      editButton.setAttribute("aria-pressed","false");
     editButton.setAttribute("aria-label","Edit recipe");
     printButton.disabled = false;
     bridge.setSavedRecipe(update);
@@ -541,7 +539,6 @@ async function publish({silent=false}={}) {
   }
 }
 editButton.addEventListener("click",()=> editing ? close() : start());
-cancelButton.addEventListener("click",()=>close());
 saveButton.addEventListener("click",showSave);
 document.getElementById("forgetGithubSession").addEventListener("click", () => {
   forgetSessionToken();
