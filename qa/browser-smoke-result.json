@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T05:59:35.751Z",
+  "date": "2026-11-24T06:34:31.446Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -434,6 +434,14 @@
       "pass": true
     },
     {
+      "label": "Pencil tooltip returns to Edit recipe after successful save",
+      "pass": true
+    },
+    {
+      "label": "Pencil accessibility label resets after successful save",
+      "pass": true
+    },
+    {
       "label": "Confirmed GitHub save caches tab-only access",
       "pass": true
     },
@@ -447,6 +455,14 @@
     },
     {
       "label": "Save button shows disabled Saving state during GitHub request",
+      "pass": true
+    },
+    {
+      "label": "Editing recipe does not show rating save progress",
+      "pass": true
+    },
+    {
+      "label": "Editing recipe does not animate the star icon",
       "pass": true
     },
     {
@@ -471,6 +487,10 @@
     },
     {
       "label": "Rating save displays prominent Saving rating feedback",
+      "pass": true
+    },
+    {
+      "label": "Rating-only save animates star icon",
       "pass": true
     },
     {
