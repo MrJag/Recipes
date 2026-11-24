@@ -193,6 +193,7 @@ function ingredientGroups(groups, identifier) {
       const moved = entries.slice(split).map(item => item.textContent.trim()).filter(Boolean);
       const next = makeGroup({title:null,items:moved});
       section.after(next);
+      holder.classList.toggle("grouped", holder.children.length > 1);
       for (const li of entries.slice(split)) li.remove();
       list.classList.toggle("two-column",list.children.length >= 9);
       dirty = true;
@@ -203,6 +204,7 @@ function ingredientGroups(groups, identifier) {
   };
   (groups?.length ? groups : [{title:null,items:[]}]).forEach(group =>
     holder.appendChild(makeGroup(group)));
+  holder.classList.toggle("grouped", holder.children.length > 1);
   return holder;
 }
 function directions(steps, identifier) {
@@ -234,7 +236,7 @@ function readGroups(holder) {
   return [...holder.querySelectorAll(":scope > .edit-ingredient-group")].map(section => ({
     title: section.querySelector(".edit-group-name").textContent.trim() || null,
     items: [...section.querySelectorAll("ul > li")].map(li => li.textContent.trim()).filter(Boolean)
-  }));
+  })).filter(group => group.title || group.items.length);
 }
 function readSteps(section) {
   return [...section.querySelectorAll("ol > li")].map(li => {
