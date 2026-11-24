@@ -44,7 +44,7 @@ const groupNav = $("groupNav");
 let taxonomy;
 let recipes = [];
 let selectedGroups = [];
-let expandedGroup = location.hash === "#recipeSearch" ? null : "Soups, Stews & Chili";
+let expandedGroup = null;
 
 let featuredPhotoIndex = {};
 let recentHighlights = [];
@@ -181,7 +181,7 @@ function render() {
     for (const sub of subgroups) {
       const subdetails = document.createElement("details");
       subdetails.className = "subcategory-details";
-      subdetails.open = forceOpen || subgroups.length === 1 || (group.name === "Soups, Stews & Chili" && sub.label === "Chili");
+      subdetails.open = forceOpen;
       const summary = document.createElement("summary");
       const label = document.createElement("span");
       label.textContent = sub.label;
@@ -215,7 +215,7 @@ function saveFilterUrl() {
 }
 function selectGroups(names) {
   selectedGroups = names;
-  expandedGroup = names[0] || "Soups, Stews & Chili";
+  expandedGroup = names[0] || null;
   saveFilterUrl();
   render();
 }
@@ -283,7 +283,7 @@ async function loadCatalog() {
   clearButton.addEventListener("click",() => {
     selectedGroups = [];
     searchInput.value = cuisineFilter.value = proteinFilter.value = "";
-    expandedGroup = "Soups, Stews & Chili";
+    expandedGroup = null;
     saveFilterUrl();
     render();
   });

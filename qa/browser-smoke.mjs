@@ -29,6 +29,8 @@ try {
  await page.waitForTimeout(550);
  check((await page.locator('#categoryStatus').textContent()).includes('53 of'),'Main Dishes bookmark filters correctly');
  check((await page.locator('#directoryHighlightsTitle').textContent()).includes('Main Dishes'),'Main Dishes photo sidebar follows category');
+ check(await page.locator('.group-details[open]').count()===1,
+   'Explicit category bookmark expands only the requested category');
  check(await page.locator('#directoryHighlights .highlight-recipe').count()===3,'Three category-aware cards appear');
  check(await page.locator('#categoryResults').isVisible(),'Filtered results visible');
  await page.goto('http://localhost:8123/directory.html#recipeSearch',{waitUntil:'load'});
@@ -57,6 +59,10 @@ try {
  await page.goto('http://localhost:8123/directory.html',{waitUntil:'load'});
  await page.waitForTimeout(500);
  check((await page.locator('#directoryHighlightsTitle').textContent()).includes('Fresh from the Kitchen'),'Unfiltered directory shows recent additions');
+ check(await page.locator('.group-details[open]').count()===0,
+   'Unfiltered directory starts with every top-level category collapsed');
+ check(await page.locator('.subcategory-details[open]').count()===0,
+   'Unfiltered directory starts with all subcategories collapsed');
  check(await page.locator('#directoryHighlights .highlight-recipe').count()===3,'Three recent additions appear in directory photo rail');
  await page.goto('http://localhost:8123/recipe.html?recipe=midwestern-chili',{waitUntil:'load'});
  await page.waitForTimeout(500);
