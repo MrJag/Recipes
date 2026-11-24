@@ -51,10 +51,15 @@ function setTokenPromptVisible(visible) {
   cachedTokenNotice.hidden = visible;
 }
 function openSaveDialog() {
+  if (saveInProgress) return;
   const reused = Boolean(readSessionToken());
   setTokenPromptVisible(!reused);
-  saveDialog.showModal();
-  if (reused) void publish();
+  if (reused) {
+    // No modal on a cached-token save. A failed request opens it with details.
+    void publish({silent:true});
+  } else {
+    saveDialog.showModal();
+  }
 }
 
 let editing = false;
@@ -391,18 +396,21 @@ async function verifyPublishedContent(url, headers, expected) {
   }
   return JSON.stringify(committed) === JSON.stringify(expected);
 }
-async function publish() {
+async function publish({silent=false}={}) {
+  if (saveInProgress) return;
   const typedToken = tokenField.value.trim();
   const token = typedToken || readSessionToken();
   const usingCachedToken = !typedToken && Boolean(token);
   if (!token) {
     setTokenPromptVisible(true);
+    if (!saveDialog.open) saveDialog.showModal();
     feedback.textContent = "Enter a fine-grained GitHub token to publish, or download the JSON instead.";
     tokenField.focus();
     return;
   }
   const path = saveDialog.dataset.filePath;
   if (!/^recipes\/[a-z0-9-]+\/[a-z0-9-]+\.json$/.test(path)) {
+    if (!saveDialog.open) saveDialog.showModal();
     feedback.textContent = "Recipe path could not be verified; nothing was published.";
     return;
   }
@@ -491,7 +499,12 @@ async function publish() {
     saveDialog.dataset.payload = "";
     ratingOnlySave = false;
     window.CookbookRating?.close({discard:false});
-    // Leave the success dialog visible until the user closes it.
+    // Manual saves keep the confirmation dialog; cached-token saves never
+    // show it. Updating the recipe preview is the success indication.
+    if (silent) {
+      status.textContent = "Recipe saved to GitHub.";
+      if (saveDialog.open) saveDialog.close();
+    }
   } catch(error) {
     const denied = error?.githubStatus === 401 || error?.githubStatus === 403;
     if (denied) {
@@ -503,6 +516,9 @@ async function publish() {
       : error.message) + " Your edits remain in the editor." +
       (denied && usingCachedToken ? " Enter a new GitHub token to retry." : "");
     tokenField.value = "";
+    // Surface errors only, including auth expiry, stale revisions, network
+    // errors, and ambiguous commit confirmations. Keep the edit draft intact.
+    if (!saveDialog.open) saveDialog.showModal();
   } finally {
     saveInProgress = false;
     document.getElementById("publishRecipeGithub").disabled = false;
