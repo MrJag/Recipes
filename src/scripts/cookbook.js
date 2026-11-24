@@ -259,9 +259,23 @@ function paginate(recipe, density) {
       placedNotes++;
     }
   }
+  // Inline direction headings are represented as {heading:"..."} within
+  // steps. Convert them into display stages without numbering headings or
+  // changing any pre-existing component sections.
+  const mainStages = [];
+  let currentStage = {title:recipe.components?.length ? "Main method" : null,steps:[]};
+  for (const step of recipe.steps || []) {
+    if (step && typeof step === "object" && typeof step.heading === "string") {
+      if (currentStage.steps.length || currentStage.title) mainStages.push(currentStage);
+      currentStage = {title:step.heading,steps:[]};
+    } else {
+      currentStage.steps.push(step);
+    }
+  }
+  if (currentStage.steps.length || currentStage.title) mainStages.push(currentStage);
   const stages = [
     ...(recipe.components || []).map(c => ({title:c.title, steps:c.steps || [], note:c.notes})),
-    ...(recipe.steps?.length ? [{title:recipe.components?.length ? "Main method" : null, steps:recipe.steps}] : [])
+    ...mainStages
   ];
   let stepNo = 1;
   for (const stage of stages) {
