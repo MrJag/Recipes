@@ -3,8 +3,7 @@
   const toggle = document.getElementById("ratingRecipeButton");
   const panel = document.getElementById("ratingOptions");
   const stars = document.getElementById("ratingStars");
-  const saveRating = document.getElementById("saveRecipeRating");
-  if (!toggle || !panel || !stars || !saveRating) return;
+  if (!toggle || !panel || !stars) return;
 
   const normalize = number => {
     const n = Number(number);
@@ -13,6 +12,7 @@
   let saved = null;
   let value = null;
   let pending = false;
+  let saving = false;
   let hovered = null;
 
   function paint() {
@@ -24,7 +24,7 @@
       button.setAttribute("aria-label", current + " star" + (current === 1 ? "" : "s") +
         (current === value ? " (selected, click to clear)" : ""));
     }
-    saveRating.hidden = !pending;
+    for (const button of stars.querySelectorAll("button")) button.disabled = saving;
   }
   function preview() {
     window.CookbookEditor?.setRating(value);
@@ -38,11 +38,21 @@
     }
   }
   function choose(next) {
+    if (saving) return;
     const selected = normalize(next);
     value = value === selected ? null : selected;
     pending = value !== saved;
+    hovered = null;
     paint();
     preview();
+    if (pending) {
+      // A click is the save action; cached credentials publish silently.
+      if (window.CookbookEditor?.active) {
+        document.getElementById("saveRecipeButton").click();
+      } else {
+        window.CookbookEditor?.saveRating(value);
+      }
+    }
   }
   for (let n = 1; n <= 5; n++) {
     const button = document.createElement("button");
@@ -79,15 +89,6 @@
     toggle.setAttribute("aria-expanded", "true");
     paint();
   });
-  saveRating.addEventListener("click", () => {
-    if (!pending) return;
-    if (window.CookbookEditor?.active) {
-      // Rating changes are part of the normal recipe edit transaction.
-      document.getElementById("saveRecipeButton").click();
-    } else {
-      window.CookbookEditor?.saveRating(value);
-    }
-  });
   document.addEventListener("click", event => {
     if (!panel.hidden && !event.target.closest(".rating-action-group")) {
       // Save dialog was opened from the rating panel; retain the preview
@@ -108,6 +109,10 @@
     getRating() {return value;},
     display(rating) {return window.CookbookEditorBridge.displayRating(rating, "edit-recipe-rating");},
     close,
+    setSavingState(busy) {
+      saving = Boolean(busy);
+      paint();
+    },
     discard() { value = saved; pending = false; paint(); close({discard:false}); preview(); }
   };
   paint();
