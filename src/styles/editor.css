@@ -461,3 +461,11 @@ body:has(#ratingOptions:not([hidden])) .recipe-header .recipe-rating .rating-lab
 body:has(#ratingOptions:not([hidden])) .edit-sheet .edit-recipe-rating .rating-label{
   display:none;
 }
+
+/* The hover preview is painted across all stars through the hovered one.
+   Avoid a separate :hover color on only the individual star. */
+.recipe-action-rail .rating-stars button:hover,
+.recipe-action-rail .rating-stars button:focus-visible {color:inherit}
+.recipe-action-rail .rating-stars button.selected,
+.recipe-action-rail .rating-stars button.selected:hover,
+.recipe-action-rail .rating-stars button.selected:focus-visible {color:#efad19}

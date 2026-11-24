@@ -126,6 +126,17 @@ try {
  check(await page.locator('#ratingStatus').count()===0,'Rating popover has no text status');
  check(await page.locator('#ratingRecipeButton').evaluate(el =>
    getComputedStyle(el).backgroundColor==='rgb(86, 99, 67)'),'Rating button uses olive accent while open');
+ await page.locator('#ratingStars button[data-rating="4"]').hover();
+ check(await page.locator('#ratingStars button.selected').count()===4,
+   'Hovering over fourth star illuminates first four stars');
+ check(await page.locator('#ratingStars button[data-rating="5"]').evaluate(el =>
+   !el.classList.contains('selected')),'Stars after hovered rating remain unfilled');
+ await page.locator('#ratingStars button[data-rating="2"]').hover();
+ check(await page.locator('#ratingStars button.selected').count()===2,
+   'Hovering over second star illuminates first two stars');
+ await page.locator('#ratingRecipeButton').hover();
+ check(await page.locator('#ratingStars button.selected').count()===0,
+   'Moving pointer away restores unrated selection');
  await page.locator('#ratingStars button[data-rating="4"]').click();
  check((await page.locator('.recipe-header .rating-glyphs').textContent())==='★★★★☆','Four stars preview on normal recipe page');
  check(await page.locator('#saveRecipeRating').isVisible(),'Rating has its own Save action');

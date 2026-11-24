@@ -13,11 +13,13 @@
   let saved = null;
   let value = null;
   let pending = false;
+  let hovered = null;
 
   function paint() {
+    const illuminated = hovered ?? value;
     for (const button of stars.querySelectorAll("button")) {
       const current = Number(button.dataset.rating);
-      button.classList.toggle("selected", value !== null && current <= value);
+      button.classList.toggle("selected", illuminated !== null && current <= illuminated);
       button.setAttribute("aria-pressed", String(current === value));
       button.setAttribute("aria-label", current + " star" + (current === 1 ? "" : "s") +
         (current === value ? " (selected, click to clear)" : ""));
@@ -47,10 +49,18 @@
     button.type = "button";
     button.dataset.rating = String(n);
     button.textContent = "★";
+    button.addEventListener("mouseenter", () => {hovered = n; paint();});
+    button.addEventListener("focus", () => {hovered = n; paint();});
     button.addEventListener("click", () => choose(n));
     stars.appendChild(button);
   }
+  stars.addEventListener("mouseleave", () => {hovered = null; paint();});
+  stars.addEventListener("focusout", event => {
+    if (!stars.contains(event.relatedTarget)) {hovered = null; paint();}
+  });
   function close({discard=true}={}) {
+    hovered = null;
+    paint();
     panel.hidden = true;
     toggle.setAttribute("aria-expanded", "false");
     if (discard && pending && !window.CookbookEditor?.active) {
@@ -64,6 +74,7 @@
     if (!panel.hidden) return close();
     if (!window.CookbookEditorBridge?.getRecipe()) return;
     document.getElementById("printMenu").open = false;
+    hovered = null;
     panel.hidden = false;
     toggle.setAttribute("aria-expanded", "true");
     paint();
@@ -92,8 +103,8 @@
     }
   });
   window.CookbookRating = {
-    sync(rating) {saved = normalize(rating); value = saved; pending = false; paint(); close({discard:false});},
-    reset() {saved = null; value = null; pending = false; paint(); close({discard:false});},
+    sync(rating) {saved = normalize(rating); value = saved; pending = false; hovered = null; paint(); close({discard:false});},
+    reset() {saved = null; value = null; pending = false; hovered = null; paint(); close({discard:false});},
     getRating() {return value;},
     display(rating) {return window.CookbookEditorBridge.displayRating(rating, "edit-recipe-rating");},
     close,
