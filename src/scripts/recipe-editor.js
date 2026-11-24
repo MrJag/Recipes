@@ -166,6 +166,10 @@ function buildEditPage(recipe) {
     });
   }
   content.appendChild(directions(recipe.steps || [],"main"));
+  const source = editable("p","source edit-source-note",recipe.sourceNote || "",
+    "Source, inspiration or attribution","Source or attribution (optional)");
+  source.dataset.editField = "sourceNote";
+  content.appendChild(source);
   sheet.appendChild(content);
   pages.appendChild(sheet);
   dirty = false;
@@ -178,6 +182,9 @@ function collectDraft() {
   result.title = title;
   result.subtitle = valueOf(".edit-subtitle");
   result.headnote = valueOf(".edit-headnote");
+  const attribution = valueOf(".edit-source-note");
+  if (attribution) result.sourceNote = attribution;
+  else delete result.sourceNote;
   const selectedRating = window.CookbookRating?.getRating();
   if (selectedRating) result.rating = selectedRating;
   else delete result.rating;
@@ -205,7 +212,7 @@ function collectDraft() {
 function fullRecipeFile(edited) {
   const file = clone(bridge.getSource());
   const index = bridge.getVariantIndex();
-  const fields = ["title","subtitle","headnote","servings","yield","prepTime","cookTime","ingredientGroups","steps","components","rating"];
+  const fields = ["title","subtitle","headnote","servings","yield","prepTime","cookTime","ingredientGroups","steps","components","rating","sourceNote"];
   const target = index < 0 ? file : file.variants[index];
   if (!target) throw new Error("The selected recipe version is unavailable.");
   for (const field of fields) {
@@ -249,7 +256,25 @@ function close({discard=false}={}) {
   bridge.requestRender();
   return true;
 }
+let ratingOnlySave = false;
+function saveRating(value) {
+  if (editing) return showSave();
+  const source = bridge.getSource();
+  const current = bridge.getRecipe();
+  if (!source || !current) return;
+  const cloneRecipe = clone(current);
+  if (value) cloneRecipe.rating = value;
+  else delete cloneRecipe.rating;
+  const file = fullRecipeFile(cloneRecipe);
+  ratingOnlySave = true;
+  feedback.textContent = "";
+  tokenField.value = "";
+  saveDialog.dataset.filePath = bridge.getPath() || "";
+  saveDialog.dataset.payload = JSON.stringify(file,null,2) + "\\n";
+  saveDialog.showModal();
+}
 function showSave() {
+  ratingOnlySave = false;
   try {
     const updated = collectDraft();
     const file = fullRecipeFile(updated);
@@ -398,7 +423,8 @@ async function publish() {
     printButton.disabled = false;
     bridge.setSavedRecipe(update);
     saveDialog.dataset.payload = "";
-    window.CookbookRating?.close();
+    ratingOnlySave = false;
+    window.CookbookRating?.close({discard:false});
     // Leave the success dialog visible until the user closes it.
   } catch(error) {
     feedback.textContent = (error instanceof TypeError
@@ -416,7 +442,14 @@ saveButton.addEventListener("click",showSave);
 document.getElementById("downloadRecipeJson").addEventListener("click",download);
 document.getElementById("publishRecipeGithub").addEventListener("click",publish);
 document.getElementById("dismissSaveDialog").addEventListener("click",()=>saveDialog.close());
-saveDialog.addEventListener("close",()=>{tokenField.value="";saveDialog.dataset.payload="";});
+saveDialog.addEventListener("close",()=>{
+  tokenField.value = "";
+  saveDialog.dataset.payload = "";
+  if (ratingOnlySave && !saveInProgress) {
+    ratingOnlySave = false;
+    window.CookbookRating?.discard();
+  }
+});
 window.addEventListener("beforeunload",event=>{
   if (editing && dirty) {event.preventDefault();event.returnValue="";}
 });
@@ -430,6 +463,7 @@ window.CookbookEditor = {
   get active(){return editing;},
   start,
   close,
+  saveRating,
   setRating(rating) {
     if (!editing) return;
     if (rating) draft.rating = rating;

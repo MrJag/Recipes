@@ -445,3 +445,13 @@
     right:calc(100% + 8px);
   }
 }
+
+/* Rating popup is independent of the pencil editor. */
+.recipe-action-rail .rating-options {flex-wrap:nowrap}
+.recipe-action-rail .rating-options .save-rating{
+  border:0;border-radius:4px;padding:7px 10px;
+  background:#566343;color:white;font:700 12px Arial,sans-serif;cursor:pointer;
+}
+.recipe-action-rail .rating-options .save-rating[hidden]{display:none!important}
+.edit-sheet .edit-source-note{font:italic 8.4pt/1.25 var(--font-serif);margin-top:14px;
+  border-top:1px solid var(--rule);padding-top:8px;min-height:20px}

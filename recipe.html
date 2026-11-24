@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Family Cookbook</title>
 <link rel="stylesheet" href="./src/styles/cookbook.css?v=0.10.0">
-<link rel="stylesheet" href="./src/styles/editor.css?v=0.10.3">
+<link rel="stylesheet" href="./src/styles/editor.css?v=0.10.4">
 <link rel="stylesheet" href="./src/styles/site-header.css?v=4">
-<script defer src="./src/scripts/cookbook.js?v=0.10.3"></script>
-<script defer src="./src/scripts/recipe-editor.js?v=8"></script>
-<script defer src="./src/scripts/recipe-rating.js?v=1"></script>
+<script defer src="./src/scripts/cookbook.js?v=0.10.4"></script>
+<script defer src="./src/scripts/recipe-editor.js?v=9"></script>
+<script defer src="./src/scripts/recipe-rating.js?v=2"></script>
 <script defer src="./src/scripts/header-categories.js?v=2"></script>
 </head>
 <body>
@@ -343,10 +343,8 @@
   <div class="rating-action-group">
     <button id="ratingRecipeButton" class="recipe-icon-button rating-toggle" type="button" aria-label="Rate recipe" aria-expanded="false" aria-controls="ratingOptions" title="Rate this recipe"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.9 6.1 6.7 1-4.8 4.8 1.1 6.7-5.9-3.1-5.9 3.1 1.1-6.7-4.8-4.8 6.7-1z"/></svg></button>
     <div id="ratingOptions" class="rating-options" hidden>
-      <span class="rating-options-label">Your rating</span>
       <div id="ratingStars" class="rating-stars" role="group" aria-label="Choose recipe rating from one to five stars"></div>
-      <button id="clearRecipeRating" type="button" class="clear-rating">Clear</button>
-      <span id="ratingStatus" class="rating-status" role="status">Unrated</span>
+      <button id="saveRecipeRating" type="button" class="save-rating" hidden>Save rating</button>
     </div>
   </div>
 </div>

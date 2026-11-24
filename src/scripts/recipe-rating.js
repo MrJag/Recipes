@@ -3,71 +3,101 @@
   const toggle = document.getElementById("ratingRecipeButton");
   const panel = document.getElementById("ratingOptions");
   const stars = document.getElementById("ratingStars");
-  const label = document.getElementById("ratingStatus");
-  const clear = document.getElementById("clearRecipeRating");
-  if (!toggle || !panel || !stars) return;
-  let value = null;
-  const normalize = rating => {
-    const n = Number(rating);
+  const saveRating = document.getElementById("saveRecipeRating");
+  if (!toggle || !panel || !stars || !saveRating) return;
+
+  const normalize = number => {
+    const n = Number(number);
     return Number.isInteger(n) && n >= 1 && n <= 5 ? n : null;
   };
+  let saved = null;
+  let value = null;
+  let pending = false;
+
   function paint() {
     for (const button of stars.querySelectorAll("button")) {
-      const selected = value !== null && Number(button.dataset.rating) <= value;
-      button.classList.toggle("selected", selected);
-      button.setAttribute("aria-pressed", String(Number(button.dataset.rating) === value));
+      const current = Number(button.dataset.rating);
+      button.classList.toggle("selected", value !== null && current <= value);
+      button.setAttribute("aria-pressed", String(current === value));
+      button.setAttribute("aria-label", current + " star" + (current === 1 ? "" : "s") +
+        (current === value ? " (selected, click to clear)" : ""));
     }
-    label.textContent = value ? value + " of 5" : "Unrated";
+    saveRating.hidden = !pending;
   }
-  function update(valueToApply) {
-    value = normalize(valueToApply);
-    paint();
+  function preview() {
     window.CookbookEditor?.setRating(value);
+    // In normal reading mode update only the rating node, not the entire
+    // paginated preview (which would recreate the photograph).
+    if (!window.CookbookEditor?.active) {
+      const bridge = window.CookbookEditorBridge;
+      document.querySelectorAll("#pages .recipe-header .recipe-rating").forEach(el => {
+        el.replaceWith(bridge.displayRating(value));
+      });
+    }
   }
-  for (let rating = 1; rating <= 5; rating++) {
+  function choose(next) {
+    const selected = normalize(next);
+    value = value === selected ? null : selected;
+    pending = value !== saved;
+    paint();
+    preview();
+  }
+  for (let n = 1; n <= 5; n++) {
     const button = document.createElement("button");
     button.type = "button";
-    button.dataset.rating = String(rating);
+    button.dataset.rating = String(n);
     button.textContent = "★";
-    button.setAttribute("aria-label", rating + (rating === 1 ? " star" : " stars"));
-    button.addEventListener("click", () => update(rating));
+    button.addEventListener("click", () => choose(n));
     stars.appendChild(button);
   }
-  toggle.addEventListener("click", () => {
-    if (!panel.hidden) {
-      resetPanel();
-      return;
+  function close({discard=true}={}) {
+    panel.hidden = true;
+    toggle.setAttribute("aria-expanded", "false");
+    if (discard && pending && !window.CookbookEditor?.active) {
+      value = saved;
+      pending = false;
+      paint();
+      preview();
     }
+  }
+  toggle.addEventListener("click", () => {
+    if (!panel.hidden) return close();
     if (!window.CookbookEditorBridge?.getRecipe()) return;
-    const editor = window.CookbookEditor;
-    if (!editor?.active) editor?.start();
-    if (!editor?.active) return;
     document.getElementById("printMenu").open = false;
     panel.hidden = false;
     toggle.setAttribute("aria-expanded", "true");
     paint();
   });
-  clear.addEventListener("click", () => update(null));
-  function resetPanel() {
-    panel.hidden = true;
-    toggle.setAttribute("aria-expanded", "false");
-  }
+  saveRating.addEventListener("click", () => {
+    if (!pending) return;
+    if (window.CookbookEditor?.active) {
+      // Rating changes are part of the normal recipe edit transaction.
+      document.getElementById("saveRecipeButton").click();
+    } else {
+      window.CookbookEditor?.saveRating(value);
+    }
+  });
   document.addEventListener("click", event => {
-    if (!panel.hidden && !event.target.closest(".rating-action-group")) resetPanel();
+    if (!panel.hidden && !event.target.closest(".rating-action-group")) {
+      // Save dialog was opened from the rating panel; retain the preview
+      // until the dialog's outcome is known.
+      if (!document.getElementById("recipeSaveDialog").open) close();
+    }
   });
   document.addEventListener("keydown", event => {
     if (event.key === "Escape" && !panel.hidden) {
       event.preventDefault();
-      resetPanel();
+      close();
       toggle.focus();
     }
   });
   window.CookbookRating = {
-    sync(rating) {value = normalize(rating);paint();resetPanel();},
-    reset() {value = null;paint();resetPanel();},
+    sync(rating) {saved = normalize(rating); value = saved; pending = false; paint(); close({discard:false});},
+    reset() {saved = null; value = null; pending = false; paint(); close({discard:false});},
     getRating() {return value;},
-    display(rating) {return window.CookbookEditorBridge.displayRating(rating,"edit-recipe-rating");},
-    close: resetPanel
+    display(rating) {return window.CookbookEditorBridge.displayRating(rating, "edit-recipe-rating");},
+    close,
+    discard() { value = saved; pending = false; paint(); close({discard:false}); preview(); }
   };
   paint();
 })();
