@@ -69,6 +69,37 @@ try {
  check(await page.locator('#directoryHeading').isVisible(),'Dedicated directory visible after Recipes navigation');
  await page.locator('.site-header a.brand').click();
  check(await page.locator('.hero').isVisible(),'Landing page visible after returning home');
+
+ // Inline editing keeps the visual recipe structure while enabling changes.
+ await page.goto('http://localhost:8123/recipe.html?recipe=sweetango-orchard-sour',{waitUntil:'load'});
+ await page.waitForTimeout(650);
+ check(await page.locator('#editRecipeButton').isVisible(),'Pencil action is available');
+ check(await page.locator('#printMenuToggle svg').count()===1,'Print action is an icon outside the recipe page');
+ await page.locator('#editRecipeButton').click();
+ check(await page.locator('.edit-sheet').isVisible(),'Pencil enters inline edit mode');
+ check(await page.locator('#saveRecipeButton').isVisible(),'Save action appears during editing');
+ check(await page.locator('.edit-sheet .edit-headnote[contenteditable="true"]').count()===1,'Description is inline editable and italicized');
+ check(await page.locator('.edit-sheet .ingredients ul li[contenteditable="true"]').count()>=6,'Ingredients remain editable bullet points');
+ check(await page.locator('.edit-sheet .edit-directions ol li[contenteditable="true"]').count()>=3,'Directions remain editable numbered steps');
+ await page.locator('.edit-sheet .edit-main-title').fill('Sweetango Orchard Sour — Test Edit');
+ await page.locator('.edit-sheet .edit-headnote').fill('Bright, sweet-tart apple cider test description.');
+ await page.locator('#saveRecipeButton').click();
+ check(await page.locator('#recipeSaveDialog').isVisible(),'Save opens real persistence options');
+ check(await page.locator('#downloadRecipeJson').isVisible(),'JSON download fallback is available');
+ check(await page.locator('#publishRecipeGithub').isVisible(),'GitHub publishing option is available');
+ check((await page.locator('#saveFeedback').textContent()).length===0,'Save does not claim success prematurely');
+ await page.locator('#dismissSaveDialog').click();
+ page.once('dialog', dialog => dialog.accept());
+ await page.locator('#cancelEditButton').click();
+ check(await page.locator('.edit-sheet').count()===0,'Cancel restores normal pagination');
+ check(await page.locator('#saveRecipeButton').isHidden(),'Save action hides outside edit mode');
+ await page.locator('#editRecipeButton').click();
+ await page.locator('#saveRecipeButton').click();
+ await page.locator('#publishRecipeGithub').click();
+ check((await page.locator('#saveFeedback').textContent()).includes('token'),'Publishing without credentials is refused');
+ await page.locator('#dismissSaveDialog').click();
+ await page.locator('#cancelEditButton').click();
+
  await page.goto('http://localhost:8123/index.html?recipe=midwestern-chili',{waitUntil:'load'});
  await page.waitForTimeout(300);
  check(page.url().includes('recipe.html?recipe=midwestern-chili'),'Old combined-page bookmark redirects');
