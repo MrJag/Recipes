@@ -455,3 +455,9 @@
 .recipe-action-rail .rating-options .save-rating[hidden]{display:none!important}
 .edit-sheet .edit-source-note{font:italic 8.4pt/1.25 var(--font-serif);margin-top:14px;
   border-top:1px solid var(--rule);padding-top:8px;min-height:20px}
+
+/* Ratings show only stars, without numerical/unrated captions, while choosing. */
+body:has(#ratingOptions:not([hidden])) .recipe-header .recipe-rating .rating-label,
+body:has(#ratingOptions:not([hidden])) .edit-sheet .edit-recipe-rating .rating-label{
+  display:none;
+}

@@ -115,28 +115,30 @@ try {
  await page.waitForTimeout(150);
  check(await page.locator('#pages .sheet.has-photo .strip-image').count()===1,
    'Switching back to photo print mode restores first-page photo');
- // Ratings are editable only after opening the star action.
+ // Rating is independent of the pencil editor, and selecting the same star
+ // again clears it without a separate Clear button.
  check(await page.locator('#ratingOptions').isHidden(),'Rating stars are hidden by default');
  await page.locator('#ratingRecipeButton').click();
  check(await page.locator('#ratingOptions').isVisible(),'Rating stars appear on button click');
+ check(await page.locator('.edit-sheet').count()===0,'Opening stars does not activate inline edit mode');
+ check(await page.locator('#editRecipeButton').getAttribute('aria-pressed')==='false','Pencil stays inactive when rating');
+ check(await page.locator('#clearRecipeRating').count()===0,'Redundant Clear rating button is removed');
+ check(await page.locator('#ratingStatus').count()===0,'Rating popover has no text status');
  check(await page.locator('#ratingRecipeButton').evaluate(el =>
-   getComputedStyle(el).backgroundColor === 'rgb(86, 99, 67)'),
-   'Active rating button uses muted olive accent');
- check(await page.locator('#saveRecipeButton').isVisible(),'Rating selection enters editable save mode');
+   getComputedStyle(el).backgroundColor==='rgb(86, 99, 67)'),'Rating button uses olive accent while open');
  await page.locator('#ratingStars button[data-rating="4"]').click();
- check((await page.locator('.edit-recipe-rating').textContent()).includes('4 of 5'),
-   'Selecting four stars updates the editable header');
- check(await page.locator('.edit-sheet .edit-content > .edit-recipe-rating').count()===1,
-   'Rating follows subtitle while editing');
- await page.locator('#saveRecipeButton').click();
+ check((await page.locator('.recipe-header .rating-glyphs').textContent())==='★★★★☆','Four stars preview on normal recipe page');
+ check(await page.locator('#saveRecipeRating').isVisible(),'Rating has its own Save action');
+ await page.locator('#ratingStars button[data-rating="4"]').click();
+ check((await page.locator('.recipe-header .rating-glyphs').textContent())==='☆☆☆☆☆','Clicking selected four stars clears rating');
+ check(await page.locator('#saveRecipeRating').isHidden(),'Saving is disabled when rating matches original');
+ await page.locator('#ratingStars button[data-rating="3"]').click();
+ await page.locator('#saveRecipeRating').click();
  const ratingPayload=JSON.parse(await page.locator('#recipeSaveDialog').getAttribute('data-payload'));
- check(ratingPayload.rating===4,'Rating is included in recipe save JSON');
+ check(ratingPayload.rating===3,'Standalone rating Save writes rating to recipe JSON');
+ check(await page.locator('.edit-sheet').count()===0,'Rating Save does not create an editable sheet');
  await page.locator('#dismissSaveDialog').click();
- page.once('dialog', dialog=>dialog.accept());
- await page.locator('#cancelEditButton').click();
- await page.locator('.sheet:not(.edit-sheet)').first().waitFor({state:'visible'});
- check((await page.locator('.recipe-header .recipe-rating').textContent()).includes('Unrated'),
-   'Cancel discards a pending rating');
+ check((await page.locator('.recipe-header .rating-glyphs').textContent())==='☆☆☆☆☆','Dismissing rating Save restores committed rating');
 
  // Responsive changes should not rebuild the page or briefly hide its photograph.
  await page.waitForFunction(() => {
@@ -183,6 +185,29 @@ try {
  await page.locator('#publishRecipeGithub').click();
  check((await page.locator('#saveFeedback').textContent()).includes('token'),'Publishing without credentials is refused');
  await page.locator('#dismissSaveDialog').click();
+ await page.locator('#cancelEditButton').click();
+
+ // Source attribution is a real editable field and preserves the original
+ // JSON property, including when other recipe fields are unchanged.
+ await page.goto('http://localhost:8123/recipe.html?recipe=roasted-chicken-bombay-potatoes',{waitUntil:'load'});
+ await page.waitForTimeout(400);
+ check((await page.locator('#pages .source').textContent()).includes('Jamie Oliver'),
+   'Published Bombay potatoes recipe includes the Jamie Oliver attribution');
+ await page.locator('#editRecipeButton').click();
+ check((await page.locator('.edit-sheet .edit-source-note').textContent()).includes('Jamie Oliver'),
+   'Attribution is visible in inline edit mode');
+ check(await page.locator('.edit-sheet .edit-source-note').getAttribute('contenteditable')==='true',
+   'Attribution can be edited');
+ check(await page.locator('.edit-sheet .edit-source-note').evaluate(el =>
+   getComputedStyle(el).fontStyle==='italic'),'Attribution retains italic footnote styling');
+ await page.locator('.edit-sheet .edit-source-note').fill('Adapted from Jamie Oliver — revised in editor.');
+ await page.locator('#saveRecipeButton').click();
+ const sourcePayload=JSON.parse(await page.locator('#recipeSaveDialog').getAttribute('data-payload'));
+ check(sourcePayload.sourceNote==='Adapted from Jamie Oliver — revised in editor.',
+   'Source note edits are persisted to the original JSON field');
+ check(sourcePayload.steps.length===7,'Editing source note preserves all recipe directions');
+ await page.locator('#dismissSaveDialog').click();
+ page.once('dialog', dialog => dialog.accept());
  await page.locator('#cancelEditButton').click();
 
  // Mock GitHub API to test the save flow without changing repository data.
