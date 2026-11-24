@@ -19,7 +19,7 @@
 .related-section ul{padding-left:18px;margin:3px 0 8px}
 .related-section li{margin:0 0 3px}
 .overflow-warning{color:#a42e24;font:700 9pt Arial,sans-serif;margin-top:5px}
-@media print{.print-menu-bar{display:none!important}.photo-placeholder{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+@media print{.recipe-action-rail{display:none!important}.photo-placeholder{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
 
 /* Keep page height measurements honest. */
 .content > * { flex-shrink: 0; }
@@ -257,61 +257,55 @@
 .recipe-outline a:hover, .recipe-outline a:focus-visible { color: var(--accent); }
 .recipe-sidebar a { text-decoration: none; }
 
-.print-menu-bar {
-  position: sticky;
-  top: 10px;
-  z-index: 40;
+.recipe-action-rail {
   grid-column: 2;
   grid-row: 1;
+  z-index: 40;
+  justify-self: end;
   align-self: start;
-  justify-self: center;
-  width: min(var(--page-width), calc(100% - 24px));
-  height: 0;
-  margin-top: 36px;
-  padding-inline: 12px;
+  position: sticky;
+  top: 18px;
+  margin: 20px 15px 0 0;
   display: flex;
-  justify-content: flex-end;
-  pointer-events: none;
+  align-items: center;
+  gap: 7px;
+  pointer-events: auto;
 }
-
+@media screen and (min-width: 1100px) {
+  .cookbook-layout #pages { padding-right: 78px; }
+}
+@media screen and (max-width: 1099px) {
+  .recipe-action-rail { position: fixed; top: 84px; right: 12px; margin: 0; }
+}
 @media screen and (max-width: 760px) {
-  .print-menu-bar {
-    grid-column: 1;
-    margin-top: 24px;
-  }
+  .recipe-action-rail { top: auto; bottom: 16px; right: 12px; }
 }
 
 .print-menu { pointer-events: auto; }
 
-.print-menu summary {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 44px;
-  padding: 0 14px;
-  border-radius: 7px;
-  background: #202024;
-  color: #fff;
-  box-shadow: 0 2px 10px #0004;
-  font: 600 14px var(--font-sans);
-  cursor: pointer;
-  list-style: none;
+.print-menu summary,.recipe-icon-button {
+  display:flex;align-items:center;justify-content:center;
+  width:44px;height:44px;border:0;border-radius:9px;
+  background:#202024;color:#fff;box-shadow:0 2px 10px #0003;
+  cursor:pointer;list-style:none;
 }
-
-.print-menu summary::-webkit-details-marker { display: none; }
-
-.print-menu summary::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border: solid currentColor;
-  border-width: 0 1.5px 1.5px 0;
-  transform: rotate(45deg);
+.print-menu summary::-webkit-details-marker { display:none }
+.print-menu summary svg,.recipe-icon-button svg {
+  width:21px;height:21px;fill:none;stroke:currentColor;
+  stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;
 }
-
-.print-menu[open] summary::after { transform: rotate(225deg); }
-.print-menu summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-
+.print-menu summary:focus-visible,.recipe-icon-button:focus-visible,
+.recipe-save-button:focus-visible,.recipe-cancel-button:focus-visible {
+  outline:2px solid var(--accent);outline-offset:3px;
+}
+.recipe-icon-button[aria-pressed="true"]{background:#8b5033}
+.recipe-action-rail .recipe-save-button,.recipe-action-rail .recipe-cancel-button {
+  min-height:44px;padding:0 14px;border:0;border-radius:8px;
+  font:700 13px Arial,sans-serif;cursor:pointer;box-shadow:0 2px 10px #0002;
+}
+.recipe-action-rail .recipe-save-button{background:#566343;color:#fff}
+.recipe-action-rail .recipe-cancel-button{background:#f8f4ef;color:#54493d}
+.recipe-action-rail [hidden]{display:none!important}
 .print-menu .toolbar {
   position: absolute;
   inset-inline-end: 12px;
@@ -335,4 +329,49 @@
     from { opacity: 0; transform: translateY(-6px); }
     to { opacity: 1; transform: translateY(0); }
   }
+}
+
+/* Editable recipe document, preserving typographic hierarchy and semantic lists. */
+.edit-sheet{height:auto!important;min-height:var(--page-height);overflow:visible!important}
+.edit-sheet .content{position:relative!important;inset:auto!important;padding:var(--safe-margin);margin-right:calc(var(--photo-width) + var(--photo-gap));min-height:var(--page-height);display:block}
+.edit-sheet:not(.has-photo) .content{margin-right:0}
+.edit-sheet .photo-strip{height:100%;right:0}
+.edit-sheet .page-num{display:none}
+.edit-sheet [contenteditable="true"]{cursor:text;border-radius:3px;outline:1px dashed transparent;white-space:pre-wrap;overflow-wrap:anywhere}
+.edit-sheet [contenteditable="true"]:hover{outline-color:#d4b7a5}
+.edit-sheet [contenteditable="true"]:focus{outline:2px solid #ab7359;background:#fff9ef;outline-offset:3px}
+.edit-sheet [contenteditable="true"]:empty:before{content:attr(data-placeholder);color:#ac9a8d;font-style:italic}
+.edit-sheet .edit-main-title{font-size:var(--title-size);line-height:1.1;margin:0 0 8px}
+.edit-sheet .edit-headnote{font-style:italic;line-height:1.45;margin:10px 0 16px}
+.edit-sheet .edit-subtitle{font-style:italic;font-size:15pt;margin-bottom:10px}
+.edit-sheet .edit-meta{display:flex;flex-wrap:wrap;gap:6px 14px;margin:0 0 14px;font:700 9pt Arial,sans-serif;color:#846048}
+.edit-sheet .edit-meta label{display:flex;gap:6px;align-items:center}
+.edit-sheet .edit-meta [contenteditable]{min-width:44px;font:normal 9pt Arial,sans-serif}
+.edit-sheet .edit-ingredient-group{break-inside:avoid;margin-bottom:12px}
+.edit-sheet .edit-ingredient-group h3{font:700 9pt Arial,sans-serif;color:#904928;margin:0 0 8px}
+.edit-sheet .ingredients ul{columns:2;column-gap:22px;column-rule:1px solid #d6c1b3}
+.edit-sheet .ingredients li{margin-bottom:6px;break-inside:avoid}
+.edit-sheet .edit-directions{margin-top:16px}
+.edit-sheet .edit-directions ol{list-style:decimal;padding-left:30px;margin:0 0 16px}
+.edit-sheet .edit-directions li{margin:0 0 10px;padding-left:6px;line-height:1.4;break-inside:avoid}
+.edit-sheet .edit-directions li::marker{font:700 10pt Arial,sans-serif;color:#904928}
+.edit-sheet .edit-help{font:italic 9pt Georgia,serif;color:#8b7160;margin:0 0 12px}
+.recipe-save-dialog{border:1px solid #cbb8a8;border-radius:10px;padding:24px;max-width:min(520px,calc(100vw - 30px));background:#fcf8f1;color:#30271f;box-shadow:0 18px 55px #0005}
+.recipe-save-dialog::backdrop{background:#1f1818a9}
+.recipe-save-dialog h2{font:normal 1.5rem Georgia,serif;margin:0 0 10px}
+.recipe-save-dialog p{font:14px/1.5 Arial,sans-serif}
+.recipe-save-dialog label{display:block;font:700 13px/1.4 Arial,sans-serif;margin:16px 0 6px}
+.recipe-save-dialog label small{display:block;font-weight:400;color:#746b61}
+.recipe-save-dialog input{box-sizing:border-box;width:100%;padding:11px;border:1px solid #bfae9e;border-radius:4px;font:14px monospace}
+.recipe-save-dialog .token-note{font-size:12px;color:#66574c}
+.recipe-save-dialog .dialog-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.recipe-save-dialog button{background:#665f42;border:0;border-radius:5px;color:#fff;padding:11px 14px;cursor:pointer}
+.recipe-save-dialog #dismissSaveDialog{background:#eae1d5;color:#382e27}
+.recipe-save-dialog #saveFeedback:not(:empty){padding:8px;border:1px solid #d8c3af;border-radius:4px}
+@media(max-width:760px){
+  .edit-sheet{width:var(--page-width)}
+}
+@media print{
+  .recipe-action-rail,.recipe-save-dialog{display:none!important}
+  .edit-sheet{display:none!important}
 }

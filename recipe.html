@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Family Cookbook</title>
 <link rel="stylesheet" href="./src/styles/cookbook.css?v=0.7.7">
-<link rel="stylesheet" href="./src/styles/editor.css?v=0.7.7">
+<link rel="stylesheet" href="./src/styles/editor.css?v=0.8.1">
 <link rel="stylesheet" href="./src/styles/site-header.css?v=4">
-<script defer src="./src/scripts/cookbook.js?v=0.7.14"></script>
+<script defer src="./src/scripts/cookbook.js?v=0.8.1"></script>
+<script defer src="./src/scripts/recipe-editor.js?v=1"></script>
 <script defer src="./src/scripts/header-categories.js?v=2"></script>
 </head>
 <body>
@@ -313,29 +314,47 @@
 </main>
 <div id="recipeView" tabindex="-1" hidden>
 <div class="cookbook-layout">
-<div class="print-menu-bar">
-<details class="print-menu" id="printMenu">
-  <summary id="printMenuToggle">Print options</summary>
-  <div class="toolbar">
-  <div class="toolbar-heading">
-    <strong>Family Cookbook <small>v0.7 · CSS print preview</small></strong>
-    <span>US Letter · photo strip on page 1 only</span>
-  </div>
-  <div class="controls">
-    <label>Photo width <input id="photoWidth" type="range" min="22" max="34" value="28" step="1"> <output id="photoWidthValue">28%</output></label>
-    <label>Font size <input id="fontSize" type="range" min="9" max="11.5" step=".25" value="10"> <output id="fontSizeValue">10 pt</output></label>
-    <label>Step spacing <input id="stepGap" type="range" min="3" max="14" value="8" step="1"> <output id="stepGapValue">8px</output></label>
-    <label>Photo placement <select id="printMode"><option value="home">Inset photo</option><option value="commercial" selected>Edge-to-edge photo</option></select></label>
-    <button id="printButton" type="button">Print / Save PDF</button>
-  </div>
-  <div class="status" id="status" role="status">Loading recipe…</div>
-  </div>
-</details>
+<div class="recipe-action-rail" aria-label="Recipe actions">
+  <details class="print-menu" id="printMenu">
+    <summary id="printMenuToggle" aria-label="Print options" title="Print options"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v5a2 2 0 0 1-2 2h-2M6 14h12v7H6zM18 11h.01"/></svg></summary>
+    <div class="toolbar">
+      <div class="toolbar-heading">
+        <strong>Print options</strong>
+        <span>US Letter · photo strip on page 1 only</span>
+      </div>
+      <div class="controls">
+        <label>Photo width <input id="photoWidth" type="range" min="22" max="34" value="28" step="1"> <output id="photoWidthValue">28%</output></label>
+        <label>Font size <input id="fontSize" type="range" min="9" max="11.5" step=".25" value="10"> <output id="fontSizeValue">10 pt</output></label>
+        <label>Step spacing <input id="stepGap" type="range" min="3" max="14" value="8" step="1"> <output id="stepGapValue">8px</output></label>
+        <label>Photo placement <select id="printMode"><option value="home">Inset photo</option><option value="commercial" selected>Edge-to-edge photo</option></select></label>
+        <button id="printButton" type="button">Print / Save PDF</button>
+      </div>
+      <div class="status" id="status" role="status">Loading recipe…</div>
+    </div>
+  </details>
+  <button id="editRecipeButton" class="recipe-icon-button" type="button" aria-label="Edit recipe" title="Edit recipe" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m16 4 4 4M3 21l4.5-1 12-12a2.83 2.83 0 0 0-4-4l-12 12L3 21z"/></svg></button>
+  <button id="saveRecipeButton" class="recipe-save-button" type="button" hidden>Save</button>
+  <button id="cancelEditButton" class="recipe-cancel-button" type="button" hidden>Cancel</button>
 </div>
   <main id="pages" aria-label="Paginated recipe preview"></main>
   <nav class="recipe-sidebar" aria-label="Browse recipes">
 </nav>
 </div>
 </div>
+<dialog id="recipeSaveDialog" class="recipe-save-dialog" aria-labelledby="saveDialogHeading">
+  <form method="dialog" id="saveDialogForm">
+    <h2 id="saveDialogHeading">Save recipe edits</h2>
+    <p>Download an updated recipe JSON file, or publish the changes to the cookbook's GitHub repository.</p>
+    <label for="githubWriteToken">Fine-grained GitHub token <small>(Contents: Read and write, restricted to MrJag/Recipes)</small></label>
+    <input id="githubWriteToken" type="password" autocomplete="off" spellcheck="false" placeholder="Token required for GitHub publishing">
+    <p class="token-note">The token is used only for this save request. It is not stored or included in the recipe.</p>
+    <p id="saveFeedback" role="status" aria-live="polite"></p>
+    <div class="dialog-actions">
+      <button id="downloadRecipeJson" type="button">Download JSON</button>
+      <button id="publishRecipeGithub" type="button">Publish to GitHub</button>
+      <button id="dismissSaveDialog" type="button">Close</button>
+    </div>
+  </form>
+</dialog>
 </body>
 </html>

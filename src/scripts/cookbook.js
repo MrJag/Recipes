@@ -289,7 +289,7 @@ function render(recipe) {
   return result;
 }
 function requestRender() {
-  if (!currentRecipe || renderPending) return;
+  if (!currentRecipe || window.CookbookEditor?.active || renderPending) return;
   renderPending = true;
   requestAnimationFrame(() => {
     renderPending = false;
@@ -307,6 +307,7 @@ function requestRender() {
 async function loadRecipe(button) {
   const requestId = ++loadSequence;
   const file = button.dataset.recipe;
+  window.CookbookEditor?.close({discard:true});
   currentRecipe = null;
   pagesEl.replaceChildren();
   byId("printButton").disabled = true;
@@ -370,7 +371,10 @@ function setupVariants(recipe, recipeButton) {
   recipeButton.after(versions);
   selectRecipeVersion(initialIndex);
 }
+let activeVariantIndex = -1;
 function selectRecipeVersion(index) {
+  window.CookbookEditor?.close({discard:true});
+  activeVariantIndex = index;
   const variant = sourceRecipe?.variants?.[index];
   currentRecipe = variant ? {
     ...sourceRecipe,
@@ -506,6 +510,17 @@ document.addEventListener("click", event => {
   (recipeView.hidden ? recipeIndex : recipeView).focus();
 });
 
+window.CookbookEditorBridge = {
+  getRecipe: () => currentRecipe,
+  getSource: () => sourceRecipe,
+  getVariantIndex: () => activeVariantIndex,
+  getPath: () => sidebar.querySelector('[aria-current="page"]')?.dataset.recipe,
+  setSavedRecipe: data => {
+    sourceRecipe = data;
+    selectRecipeVersion(activeVariantIndex);
+  },
+  requestRender
+};
 window.addEventListener("popstate", showRoute);
 document.addEventListener("click", event => {
   if (printMenu.open && !printMenu.contains(event.target)) printMenu.open = false;
