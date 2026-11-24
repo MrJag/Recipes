@@ -1,6 +1,13 @@
 {
   "recipes": [
     {
+      "slug": "crispy-blanched-brussels-sprouts",
+      "title": "Crispy Blanched Brussels Sprouts (Oven or Air Fryer)",
+      "description": "Blanched until bright green, then roasted or air-fried until deeply crisp.",
+      "photo": "./public/images/crispy-blanched-brussels-sprouts.jpg",
+      "draft": true
+    },
+    {
       "slug": "sweetango-orchard-sour",
       "title": "Sweetango Orchard Sour",
       "description": "A bright, apple-forward bourbon sour designed around Fowler Farms Sweetango pure apple cider.",
@@ -13,13 +20,6 @@
       "description": "400°F oven · One tray, two textures",
       "photo": "./public/images/oven-baked-bacon.jpg",
       "draft": false
-    },
-    {
-      "slug": "frijoles-charros-rancho-gordo",
-      "title": "Frijoles Charros (Rancho Gordo Pinto & Mayocoba)",
-      "description": "Recently added to the cookbook.",
-      "photo": "./public/images/frijoles-charros-rancho-gordo.jpg",
-      "draft": true
     }
   ]
 }
