@@ -4,172 +4,62 @@
   "title": "Goan Pork Vindaloo",
   "category": "Indian",
   "photo": "./public/images/goan-pork-vindaloo.jpg",
+  "headnote": "Try out my Americanized adaptation of a traditional Goan Vindaloo.  I've reduced the heat and sour notes for approachability, then balanced with a mild sweetness.\n\nThe leftovers hold well and reheat quickly, making for a nice packed-lunch the following day.",
+  "components": [],
+  "reviewFlags": [],
+  "sourceNote": "Inspired by a take-and-bake dish I had at my local Central Market grocery.",
   "ingredientGroups": [
     {
-      "title": "Pork",
+      "title": "Whole Spices",
       "items": [
-        "2.5 lbs pork butt, cut into chunks",
-        "2 medium yellow onions, finely diced",
-        "8-10 cloves garlic",
-        "2 Tbsp fresh ginger",
-        "3 Tbsp neutral oil",
-        "Seasoned vinegar (below)",
-        "Vindaloo Spice mix (below)"
+        "5 g cumin seeds",
+        "3 g yellow mustard seeds",
+        "3 g coriander seeds",
+        "0.5 g fenugreek seeds",
+        "1 g green cardamom seeds, removed from the pods",
+        "0.5 g black peppercorns"
       ]
     },
     {
-      "title": "To Balance",
+      "title": "Ground Spices",
       "items": [
-        "3-4 Tbsp brown sugar",
-        "1 ½ tsp kosher salt",
-        "1 ½ cups water"
+        "2 g ground turmeric",
+        "5 g sweet paprika"
       ]
     },
     {
-      "title": "Garnish",
+      "title": "Vindaloo",
       "items": [
-        "¼ cup chopped cilantro"
+        "900 g pork shoulder, cut into 1–1½-inch chunks",
+        "300 g yellow onions, very finely diced",
+        "35 g garlic, minced",
+        "20 g ginger, minced",
+        "75 g rice wine vinegar",
+        "15 g brown sugar",
+        "250 g water",
+        "4 g kosher salt, plus a pinch for the onions",
+        "Neutral oil, enough to coat the bottom of the pot"
+      ]
+    },
+    {
+      "title": "To Finish",
+      "items": [
+        "12 g fresh cilantro"
       ]
     }
   ],
   "steps": [
-    "Heat 3 Tbsp neutral oil in a dutch oven over medium-high heat.  Working in 3-4 batches, sear the pork chunks until lightly browned, then set aside.  Do not overcrowd the pot, or the pork will steam instead of developing flavor through the maillard reaction.  Remove the pork before a hard crust develops.",
-    "Reduce the heat to medium and add the diced onions.  Saute for 6-8 minutes until softened and lightly golden.",
-    "Add a small pinch of salt, along with the garlic and ginger, and saute for 1-2 minutes until fragrant.",
-    "Reduce the heat slightly (medium to medium-low) and add the spice mix.  Stir continuously, for 30-60 seconds to bloom the spices.  The mixture should become very aromatic with a warm, deep fragrance.",
-    "Return the pork to the pot along with any accumulated juices.  Add the seasoned vinegar, 1.5 cups water, 3-4 Tbsp brown sugar, and 1.5 tsp kosher salt.  Stir to combine.",
-    "Bring to a gentle simmer, then cover and reduce heat to low.  Cook for 75 minutes, stirring occasionally.",
-    "Remove the lid and simmer uncovered for 10-20 minutes, until the sauce reduces to a thick, glossy consistency that coats the back of a spoon.  If needed, lightly mash a few pork pieces to help thicken the sauce.",
-    "Taste and adjust seasoning: Add a splash of vinegar for brightness Add a small amount of brown sugar for sweetness Adjust salt as needed.",
-    "Serve immediately, or preferably rest overnight in the refrigerator to develop a more cohesive, deeper, and smoother flavor.  Reheat gently with a splash of water to loosen the sauce.",
-    "Finish with ¼ cup chopped cilantro and serve with the rice."
+    "SPICES: Spread the whole spices on a baking sheet and toast at 250°F for 10 minutes. Let them cool, then grind to a fine powder and mix with the turmeric and sweet paprika.",
+    "PREP: Increase the oven temperature to 325°F. Cut the pork into 1–1½-inch chunks. Finely dice the onions and mince the garlic and ginger.",
+    "SEAR: Coat the bottom of a Dutch oven or other heavy ovenproof pot with neutral oil and heat over medium-high. Season the pork with 4 g kosher salt. Working in batches, brown the pork for 3 minutes on the first side and 2 minutes on the second. Transfer each batch to a bowl and reserve the juices.",
+    "CARMELIZE: Reduce the heat to medium. Add the onions and a pinch of salt. As the onions release moisture, scrape up some of the browned bits from the bottom of the pot. Cook for 10–20 minutes, stirring as needed, until the onions are deep golden brown.",
+    "Add the garlic and ginger and sauté for 45 seconds. Stir in the spice blend and sauté for another 30 seconds.",
+    "DEGLAZE: Add the water, brown sugar, and rice wine vinegar. Scrape the bottom of the pot to loosen the remaining browned bits. Bring to a simmer, then return the pork and any accumulated juices to the pot.",
+    "BRAISE: Cover the pot and braise in the oven at 325°F for 2 hours.",
+    "Stir gently to coat the pork with sauce. If the sauce is too thin, simmer uncovered on the stovetop until it reaches the desired consistency.",
+    "Garnish with fresh chopped cilantro and serve with Jasmine rice or naan bread."
   ],
-  "reviewFlags": [],
-  "headnote": "This untested draft recipe attempts to replicate the Central Market Goan Pork Vindaloo with Jasmine rice.  The dish is an americanized adaptation of a traditional Goan Vindaloo, reducing the heat and sour notes for approachability, then balancing with a mild sweetness.  Leftovers hold well and reheat quickly, making a nice packed lunch.",
-  "servings": "8 (5 oz portions plus rice)",
-  "components": [
-    {
-      "title": "Seasoned Vinegar",
-      "ingredientGroups": [
-        {
-          "title": null,
-          "items": [
-            "4 Tbsp rice vinegar",
-            "2 tsp sugar",
-            "2 tsp salt"
-          ]
-        }
-      ],
-      "steps": [
-        "Mix and set aside."
-      ]
-    },
-    {
-      "title": "Vindaloo Spice Mix",
-      "ingredientGroups": [
-        {
-          "title": null,
-          "items": [
-            "1 Tbsp black pepper",
-            "2 tsp cumin",
-            "2 tsp mustard seeds",
-            "1 tsp fenugreek seeds",
-            "1 tsp turmeric",
-            "1 tsp paprika",
-            "½ tsp cardamom",
-            "1 tsp chili powder (can increase to 2 tsp)"
-          ]
-        }
-      ],
-      "steps": [
-        "Toast all the spices over medium heat for 30-60 seconds and set aside.  Alternatively, bake them in the oven on a sheet pan at 250-275 degrees F for 15 minutes.",
-        "Cool for 5 minutes then grind into a fine powder."
-      ]
-    },
-    {
-      "title": "Jasmine Rice",
-      "ingredientGroups": [
-        {
-          "title": null,
-          "items": [
-            "2 cups jasmine rice",
-            "½ cup chickpeas (cooked)",
-            "2 tbsp shallot, minced",
-            "¼ cup daikon radish (small dice)",
-            "2 tbsp oil (90% neutral, 10% olive)",
-            "2-3 tsp lemon juice"
-          ]
-        }
-      ],
-      "steps": [
-        "Rinse 2 cups jasmine rice and cook per rice cooker’s directions (typically 1:1 to 1:1.25)",
-        "Fold remaining ingredients into the rice while it is still warm."
-      ]
-    }
-  ],
-  "sourceNote": "This clone is designed to replicate Central Market’s Pork Vindaloo With Jasmine Rice Dinner For One. https://www.centralmarket.com/holiday-meals-closed/product/central-market-pork-vindaloo-with-jasmine-rice-dinner-for-one-ea/1800631",
-  "status": "draft",
-  "variants": [
-    {
-      "title": "Goan Pork Vindaloo",
-      "headnote": "Try out my Americanized adaptation of a traditional Goan Vindaloo.  I've reduced the heat and sour notes for approachability, then balanced with a mild sweetness.\n\nThe leftovers hold well and reheat quickly, making for a nice packed-lunch the following day.",
-      "components": [],
-      "reviewFlags": [],
-      "sourceNote": "Inspired by a take-and-bake dish I had at my local Central Market grocery.",
-      "ingredientGroups": [
-        {
-          "title": "Whole Spices",
-          "items": [
-            "5 g cumin seeds",
-            "3 g yellow mustard seeds",
-            "3 g coriander seeds",
-            "0.5 g fenugreek seeds",
-            "1 g green cardamom seeds, removed from the pods",
-            "0.5 g black peppercorns"
-          ]
-        },
-        {
-          "title": "Ground Spices",
-          "items": [
-            "2 g ground turmeric",
-            "5 g sweet paprika"
-          ]
-        },
-        {
-          "title": "Vindaloo",
-          "items": [
-            "900 g pork shoulder, cut into 1–1½-inch chunks",
-            "300 g yellow onions, very finely diced",
-            "35 g garlic, minced",
-            "20 g ginger, minced",
-            "75 g rice wine vinegar",
-            "15 g brown sugar",
-            "250 g water",
-            "4 g kosher salt, plus a pinch for the onions",
-            "Neutral oil, enough to coat the bottom of the pot"
-          ]
-        },
-        {
-          "title": "To Finish",
-          "items": [
-            "12 g fresh cilantro"
-          ]
-        }
-      ],
-      "steps": [
-        "SPICES: Spread the whole spices on a baking sheet and toast at 250°F for 10 minutes. Let them cool, then grind to a fine powder and mix with the turmeric and sweet paprika.",
-        "PREP: Increase the oven temperature to 325°F. Cut the pork into 1–1½-inch chunks. Finely dice the onions and mince the garlic and ginger.",
-        "SEAR: Coat the bottom of a Dutch oven or other heavy ovenproof pot with neutral oil and heat over medium-high. Season the pork with 4 g kosher salt. Working in batches, brown the pork for 3 minutes on the first side and 2 minutes on the second. Transfer each batch to a bowl and reserve the juices.",
-        "CARMELIZE: Reduce the heat to medium. Add the onions and a pinch of salt. As the onions release moisture, scrape up some of the browned bits from the bottom of the pot. Cook for 10–20 minutes, stirring as needed, until the onions are deep golden brown.",
-        "Add the garlic and ginger and sauté for 45 seconds. Stir in the spice blend and sauté for another 30 seconds.",
-        "DEGLAZE: Add the water, brown sugar, and rice wine vinegar. Scrape the bottom of the pot to loosen the remaining browned bits. Bring to a simmer, then return the pork and any accumulated juices to the pot.",
-        "BRAISE: Cover the pot and braise in the oven at 325°F for 2 hours.",
-        "Stir gently to coat the pork with sauce. If the sauce is too thin, simmer uncovered on the stovetop until it reaches the desired consistency.",
-        "Garnish with fresh chopped cilantro and serve with Jasmine rice or naan bread."
-      ],
-      "rating": 5,
-      "subtitle": "",
-      "servings": "8 (5 oz portions plus rice)"
-    }
-  ]
+  "rating": 5,
+  "subtitle": "",
+  "servings": "8 (5 oz portions plus rice)"
 }
