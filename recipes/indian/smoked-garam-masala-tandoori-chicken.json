@@ -6,19 +6,19 @@
   "photo": "./public/images/smoked-garam-masala-tandoori-chicken.jpg",
   "servings": "4–5",
   "prepTime": "15 minutes plus 6–12 hours marinating",
-  "headnote": "Tested with 2½ lb (1,134 g) boneless chicken thighs; the marinade tasted good. Reconstructed from a chef's video and scaled to a half batch. The tested batch used 2 Tbsp of 2–3-year-old Kashmiri chili powder (1 Tbsp initially, then 1 Tbsp more), which produced less vibrant red color than the video. Try fresh Kashmiri chili powder for stronger color; 1 Tbsp is the original half-batch quantity.",
+  "headnote": "Delicious recipe from Ghee Indian Kitchen in Miami, scaled for the home kitchen.",
   "ingredientGroups": [
     {
       "title": "Chicken",
       "items": [
-        "1,134 g (2½ lb) boneless chicken thighs"
+        "2½ lb boneless chicken thighs"
       ]
     },
     {
       "title": "Marinade",
       "items": [
-        "¼ cup (about 54 g) neutral oil",
-        "1–2 Tbsp Kashmiri chili powder (2 Tbsp used in successful test with older powder)",
+        "50g (¼ cup) neutral oil",
+        "2 Tbsp Kashmiri chili powder",
         "1½ tsp smoked garam masala",
         "1 Tbsp garlic paste",
         "1 Tbsp ginger paste",
@@ -39,7 +39,7 @@
   "reviewFlags": [
     "Cooking equipment and actual cook time not recorded; finish method supplied as guidance. Exact chef ingredient volumes were estimated from video screenshots."
   ],
-  "sourceNote": "User-tested adaptation of a restaurant chef's tandoori marinade shown in video screenshots. Original cookbook Tandoori Chicken recipe remains unchanged. This version uses ¼ cup oil and 1 Tbsp each garlic and ginger paste as a subsequent adjustment.",
+  "sourceNote": "This recipe was reverse engineered using clues from Ghee Indian Kitchen in Miami.",
   "rating": 4,
   "subtitle": ""
 }
