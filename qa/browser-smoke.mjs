@@ -86,7 +86,7 @@ try {
    const img = document.querySelector('#pages .sheet.has-photo .strip-image');
    return Boolean(img && img.complete && img.naturalWidth > 0 && !img.hidden);
  });
- const originalPhoto = await page.locator('#pages .sheet.has-photo .strip-image').evaluate(el => el);
+ await page.locator('#pages .sheet.has-photo .strip-image').evaluate(el => {window.__photoBeforeResize = el});
  await page.setViewportSize({width:1160,height:900});
  await page.waitForTimeout(120);
  check(await page.locator('#pages .sheet.has-photo .strip-image').evaluate(el => !el.hidden && el.naturalWidth > 0),'Photo stays visible after desktop resize');
@@ -96,7 +96,7 @@ try {
  await page.setViewportSize({width:1400,height:900});
  await page.waitForTimeout(120);
  check(await page.locator('#pages .sheet.has-photo .strip-image').evaluate(el => !el.hidden && el.naturalWidth > 0),'Photo remains visible returning to desktop');
- check(await page.locator('#pages .sheet.has-photo .strip-image').evaluate(el => el === document.querySelector('#pages .sheet.has-photo .strip-image')),'Photo remains in the document');
+ check(await page.locator('#pages .sheet.has-photo .strip-image').evaluate(el => el === window.__photoBeforeResize),'Resize does not replace the loaded photo element');
  check(await page.locator('#pages .sheet:not(:first-child) .photo-strip').count()===0,'Continuation pages remain free of photo strips');
 
  await page.locator('#editRecipeButton').click();
