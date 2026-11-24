@@ -111,63 +111,90 @@ function editable(tag, className, value, label, placeholder) {
 function editableList(values, type, label) {
   const list = node(type === "directions" ? "ol" : "ul", "edit-list");
   list.dataset.listType = type;
-  const refreshList = () => {
+  const headingCapable = type === "ingredients" || type === "directions";
+  const items = () => [...list.children].filter(item =>
+    item.classList.contains("edit-list-item") || item.classList.contains("edit-stage-heading"));
+  const refresh = () => {
     if (type === "ingredients") {
       list.classList.toggle("two-column",
-        [...list.children].filter(li => li.classList.contains("edit-list-item")).length >= 9);
+        items().filter(item => item.classList.contains("edit-list-item")).length >= 9);
     }
     if (type === "directions") {
-      let number = 1;
-      for (const li of list.children) {
-        if (li.dataset.stageHeading) li.removeAttribute("value");
-        else li.value = number++;
+      let n = 1;
+      for (const item of items()) {
+        if (item.dataset.stageHeading) item.removeAttribute("value");
+        else item.value = n++;
       }
     }
   };
-  const addItem = (value, after) => {
-    const heading = type === "directions" && value && typeof value === "object" &&
-      Object.hasOwn(value,"heading");
-    const display = heading ? value.heading :
+  const addSlot = after => {
+    if (!headingCapable) return;
+    const slot = node("li","edit-insert-slot");
+    slot.contentEditable = "false";
+    const button = node("button","edit-insert-at","+");
+    button.type = "button";
+    button.setAttribute("aria-label", type === "ingredients"
+      ? "Insert ingredient group heading here"
+      : "Insert direction heading here");
+    button.title = "Insert group heading here";
+    button.addEventListener("click", () => {
+      if (typeof list.onInsertHeading === "function") list.onInsertHeading(after);
+    });
+    slot.appendChild(button);
+    after.after(slot);
+  };
+  const addItem = (value, after = null) => {
+    const stage = type === "directions" && value && typeof value === "object" &&
+      Object.hasOwn(value, "heading");
+    const display = stage ? value.heading :
       typeof value === "string" ? value :
-      [value?.lead,value?.text].filter(Boolean).join(" ");
-    const li = editable("li", heading ? "edit-stage-heading" : "edit-list-item",
-      display || "", heading ? "Direction group heading" : label + " item",
-      heading ? "Group heading" : "Type here");
-    if (heading) li.dataset.stageHeading = "true";
+      [value?.lead, value?.text].filter(Boolean).join(" ");
+    const li = editable("li", stage ? "edit-stage-heading" : "edit-list-item",
+      display || "", stage ? "Direction group heading" : label + " item",
+      stage ? "Group heading" : "Type here");
+    if (stage) li.dataset.stageHeading = "true";
     li.addEventListener("keydown", event => {
-      if (event.key === "Enter" && !event.shiftKey) {
+      if (event.key === "Backspace" && !li.textContent.trim() &&
+          (stage || items().length > 1)) {
+        event.preventDefault();
+        const siblings = items(), index = siblings.indexOf(li);
+        const next = siblings[index-1] || siblings[index+1];
+        if (li.nextElementSibling?.classList.contains("edit-insert-slot")) {
+          li.nextElementSibling.remove();
+        }
+        li.remove();
+        refresh();
+        next?.focus();
+        dirty = true;
+      } else if (event.key === "Enter" && !event.shiftKey) {
         event.preventDefault();
         const sibling = addItem("", li);
         sibling.focus();
-      } else if (event.key === "Backspace" && !li.textContent.trim() &&
-                 list.children.length > 1) {
-        event.preventDefault();
-        const next = li.previousElementSibling || li.nextElementSibling;
-        li.remove();
-        refreshList();
-        next?.focus();
-        dirty = true;
       }
     });
-    if (after) after.after(li); else list.appendChild(li);
-    if (type === "directions" && !heading && value && typeof value === "object") {
+    if (after) {
+      const slot = after.nextElementSibling;
+      if (slot?.classList.contains("edit-insert-slot")) slot.after(li);
+      else after.after(li);
+    } else {
+      list.appendChild(li);
+    }
+    if (!stage && type === "directions" && value && typeof value === "object") {
       li.dataset.originalStep = JSON.stringify(value);
       li.dataset.originalText = display;
     }
-    refreshList();
+    addSlot(li);
+    refresh();
     dirty = true;
     return li;
   };
-  list.addEventListener("focusin", event => {
-    const item = event.target.closest("li");
-    if (item && item.parentElement === list) list._selectedItem = item;
-  });
-  list.insertHeading = () => {
-    const heading = addItem({heading:""}, list._selectedItem || list.lastElementChild);
+  list.insertHeadingAfter = after => {
+    const heading = addItem({heading:""},after);
     heading.focus();
     return heading;
   };
-  for (const value of values?.length ? values : [""]) addItem(value, null);
+  list.refresh = refresh;
+  for (const value of values?.length ? values : [""]) addItem(value);
   return list;
 }
 function sectionHeading(text) {
@@ -176,35 +203,75 @@ function sectionHeading(text) {
 function ingredientGroups(groups, identifier) {
   const holder = node("div", "edit-groups");
   holder.dataset.groups = identifier;
-  const makeGroup = (group) => {
+  const refreshHolder = () => holder.classList.toggle("grouped",
+    holder.querySelectorAll(":scope > .edit-ingredient-group").length > 1);
+  const makeGroup = group => {
     const section = node("div","edit-ingredient-group");
     const heading = editable("h3","edit-group-name",group.title || "",
       "Ingredient group heading","Group heading (optional)");
     const list = editableList(group.items || [],"ingredients","Ingredient");
-    const control = node("button","edit-insert-group",
-      "+ Group heading after selected ingredient");
-    control.type = "button";
-    control.setAttribute("aria-label","Insert ingredient group heading after selected ingredient");
-    control.addEventListener("click", () => {
+    const values = current => [...current.querySelectorAll(":scope > li.edit-list-item")]
+      .map(item => item.textContent.trim()).filter(Boolean);
+    list.onInsertHeading = after => {
       const entries = [...list.querySelectorAll(":scope > li.edit-list-item")];
-      const selected = list._selectedItem && entries.includes(list._selectedItem)
-        ? list._selectedItem : entries[entries.length-1];
-      const split = Math.max(0, entries.indexOf(selected)+1);
-      const moved = entries.slice(split).map(item => item.textContent.trim()).filter(Boolean);
-      const next = makeGroup({title:null,items:moved});
+      const index = entries.indexOf(after);
+      if (index < 0) return;
+      const before = entries.slice(0,index+1).map(item => item.textContent.trim()).filter(Boolean);
+      const following = entries.slice(index+1).map(item => item.textContent.trim()).filter(Boolean);
+      const next = makeGroup({title:null,items:following});
       section.after(next);
-      holder.classList.toggle("grouped", holder.children.length > 1);
-      for (const li of entries.slice(split)) li.remove();
-      list.classList.toggle("two-column",list.children.length >= 9);
+      const replacement = editableList(before,"ingredients","Ingredient");
+      replacement.onInsertHeading = list.onInsertHeading;
+      list.replaceWith(replacement);
+      // The callback closes over the list, so refresh it for the new list too.
+      bindGroupList(section,replacement);
+      refreshHolder();
       dirty = true;
       next.querySelector(".edit-group-name").focus();
+    };
+    function bindGroupList(target, currentList) {
+      currentList.onInsertHeading = after => {
+        const entries = [...currentList.querySelectorAll(":scope > li.edit-list-item")];
+        const index = entries.indexOf(after);
+        if (index < 0) return;
+        const before = entries.slice(0,index+1).map(item => item.textContent.trim()).filter(Boolean);
+        const following = entries.slice(index+1).map(item => item.textContent.trim()).filter(Boolean);
+        const next = makeGroup({title:null,items:following});
+        target.after(next);
+        const replacement = editableList(before,"ingredients","Ingredient");
+        currentList.replaceWith(replacement);
+        bindGroupList(target,replacement);
+        refreshHolder();
+        dirty = true;
+        next.querySelector(".edit-group-name").focus();
+      };
+    }
+    bindGroupList(section,list);
+    heading.addEventListener("keydown", event => {
+      if (event.key !== "Backspace" || heading.textContent.trim()) return;
+      event.preventDefault();
+      const previous = section.previousElementSibling;
+      if (!previous?.classList.contains("edit-ingredient-group")) {
+        heading.remove();
+        section.querySelector("li.edit-list-item")?.focus();
+      } else {
+        const oldList = previous.querySelector("ul.edit-list");
+        const merged = values(oldList).concat(values(section.querySelector("ul.edit-list")));
+        const replacement = editableList(merged,"ingredients","Ingredient");
+        oldList.replaceWith(replacement);
+        bindGroupList(previous,replacement);
+        section.remove();
+        refreshHolder();
+        previous.querySelector("li.edit-list-item:last-of-type")?.focus();
+      }
+      dirty = true;
     });
-    section.append(heading,list,control);
+    section.append(heading,list);
     return section;
   };
   (groups?.length ? groups : [{title:null,items:[]}]).forEach(group =>
     holder.appendChild(makeGroup(group)));
-  holder.classList.toggle("grouped", holder.children.length > 1);
+  refreshHolder();
   return holder;
 }
 function directions(steps, identifier) {
@@ -212,14 +279,11 @@ function directions(steps, identifier) {
   section.dataset.directions = identifier;
   section.appendChild(sectionHeading("Directions"));
   const list = editableList(steps || [],"directions","Direction");
-  const control = node("button","edit-insert-stage","+ Heading after selected step");
-  control.type = "button";
-  control.setAttribute("aria-label","Insert direction heading after selected step");
-  control.addEventListener("click", () => {
-    list.insertHeading();
+  list.onInsertHeading = item => {
+    list.insertHeadingAfter(item);
     dirty = true;
-  });
-  section.append(control,list);
+  };
+  section.appendChild(list);
   return section;
 }
 function valueOf(selector) {
@@ -235,11 +299,11 @@ function valueOf(selector) {
 function readGroups(holder) {
   return [...holder.querySelectorAll(":scope > .edit-ingredient-group")].map(section => ({
     title: section.querySelector(".edit-group-name").textContent.trim() || null,
-    items: [...section.querySelectorAll("ul > li")].map(li => li.textContent.trim()).filter(Boolean)
+    items: [...section.querySelectorAll("ul > li.edit-list-item")].map(li => li.textContent.trim()).filter(Boolean)
   })).filter(group => group.title || group.items.length);
 }
 function readSteps(section) {
-  return [...section.querySelectorAll("ol > li")].map(li => {
+  return [...section.querySelectorAll("ol > li.edit-list-item, ol > li.edit-stage-heading")].map(li => {
     const text = li.textContent.trim();
     if (!text) return null;
     if (li.dataset.stageHeading) return {heading:text};
@@ -279,7 +343,7 @@ function buildEditPage(recipe) {
   }
   content.appendChild(meta);
   content.appendChild(editable("p","edit-headnote",recipe.headnote || "","Description","Description (italic)"));
-  content.appendChild(node("p","edit-help","Edit directly in the recipe. Select an ingredient or direction, then use the + Heading control to insert a section after it. Press Enter to add a new line; delete an empty line with Backspace."));
+  content.appendChild(node("p","edit-help","Hover between ingredients or directions and click + to insert a group heading. Backspace removes an empty heading; Enter adds a new item."));
   const ingredients = node("section","ingredients");
   ingredients.appendChild(sectionHeading("Ingredients"));
   ingredients.appendChild(ingredientGroups(recipe.ingredientGroups,"main"));
