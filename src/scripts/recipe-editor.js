@@ -68,7 +68,14 @@ function editableList(values, type, label) {
     dirty = true;
     return li;
   };
-  for (const value of values?.length ? values : [""]) addItem(typeof value === "string" ? value : (value?.text || ""), null);
+  for (const value of values?.length ? values : [""]) {
+    const display = typeof value === "string" ? value : [value?.lead,value?.text].filter(Boolean).join(" ");
+    const item = addItem(display,null);
+    if (type === "directions" && value && typeof value === "object") {
+      item.dataset.originalStep = JSON.stringify(value);
+      item.dataset.originalText = display;
+    }
+  }
   return list;
 }
 function sectionHeading(text) {
@@ -103,7 +110,15 @@ function readGroups(holder) {
   }));
 }
 function readSteps(section) {
-  return [...section.querySelectorAll("ol > li")].map(li => li.textContent.trim()).filter(Boolean);
+  return [...section.querySelectorAll("ol > li")].map(li => {
+    const text = li.textContent.trim();
+    if (!text) return null;
+    // Preserve structured {lead,text} steps unless the user actually edits them.
+    if (li.dataset.originalStep && text === li.dataset.originalText) {
+      return JSON.parse(li.dataset.originalStep);
+    }
+    return text;
+  }).filter(Boolean);
 }
 function buildEditPage(recipe) {
   pages.replaceChildren();
