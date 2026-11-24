@@ -267,8 +267,10 @@
   top: 18px;
   margin: 20px 15px 0 0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   gap: 7px;
+  width: 44px;
   pointer-events: auto;
 }
 @media screen and (min-width: 1100px) {
@@ -308,9 +310,9 @@
 .recipe-action-rail [hidden]{display:none!important}
 .print-menu .toolbar {
   position: absolute;
-  inset-inline-end: 12px;
-  top: 50px;
-  width: min(25rem, calc(100% - 24px));
+  left: calc(100% + 10px);
+  top: 0;
+  width: min(260px, calc(100vw - 68px));
   max-height: calc(100vh - 72px);
   max-height: calc(100dvh - 72px);
   overflow-y: auto;
@@ -379,4 +381,53 @@
 @media print{
   .recipe-action-rail,.recipe-save-dialog{display:none!important}
   .edit-sheet{display:none!important}
+}
+
+/* v0.10: vertical action stack, with contextual panels next to each icon. */
+.recipe-action-rail .edit-action-group,
+.recipe-action-rail .rating-action-group{position:relative}
+.recipe-action-rail .edit-action-options{
+  position:absolute;left:calc(100% + 8px);top:0;
+  display:flex;align-items:center;gap:6px;white-space:nowrap;
+}
+.recipe-action-rail .rating-toggle{background:#ba6a29;color:#fff}
+.recipe-action-rail .rating-toggle svg{fill:transparent}
+.recipe-action-rail .rating-toggle[aria-expanded="true"]{background:#a04d28}
+.recipe-action-rail .rating-toggle:focus-visible{outline:2px solid #c99a57;outline-offset:2px}
+.recipe-action-rail .rating-options{
+  position:absolute;left:calc(100% + 9px);top:0;z-index:45;
+  display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px;
+  width:max-content;max-width:min(300px,calc(100vw - 75px));
+  padding:7px 10px;background:#fcf9f4;border:1px solid #dbcbbd;border-radius:7px;
+  box-shadow:0 3px 12px #0002;color:#554536;font:12px Arial,sans-serif;
+}
+.recipe-action-rail .rating-options-label{flex-basis:100%;font-size:11px}
+.recipe-action-rail .rating-stars{display:flex;gap:0}
+.recipe-action-rail .rating-stars button{
+  background:transparent;border:0;color:#a69b8c;
+  cursor:pointer;font:28px/1 Arial,sans-serif;padding:0 1px;
+}
+.recipe-action-rail .rating-stars button.selected{color:#efad19}
+.recipe-action-rail .rating-stars button:hover,
+.recipe-action-rail .rating-stars button:focus-visible{color:#d78c12}
+.recipe-action-rail .rating-options .clear-rating{
+  border:1px solid #d9c8b7;background:#fff7ef;color:#725847;
+  border-radius:4px;cursor:pointer;padding:5px 7px;font:11px Arial,sans-serif;
+}
+.recipe-action-rail .rating-status{font:11px Arial,sans-serif;color:#6b6156}
+.recipe-header .recipe-rating{margin:6px 0 10px;display:flex;align-items:center;gap:9px;font:12px Arial,sans-serif;color:#756755}
+.recipe-header .recipe-rating .rating-glyphs{font:18px/1 Arial,sans-serif;letter-spacing:1px;color:#d59c22}
+.recipe-header .recipe-rating.unrated .rating-glyphs{color:#b7a99b}
+.edit-sheet .edit-recipe-rating{margin:8px 0 12px;font:12px Arial,sans-serif;color:#756755}
+.edit-sheet .edit-recipe-rating .rating-glyphs{font:18px Arial,sans-serif;color:#d59c22}
+@media screen and (max-width:1099px){
+  .print-menu .toolbar,
+  .recipe-action-rail .edit-action-options,
+  .recipe-action-rail .rating-options{left:auto;right:calc(100% + 8px)}
+}
+@media screen and (max-width:760px){
+  .recipe-action-rail .rating-options{max-width:min(300px,calc(100vw - 70px))}
+}
+@media print{
+  .recipe-action-rail{display:none!important}
 }

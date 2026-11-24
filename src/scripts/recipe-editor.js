@@ -137,6 +137,8 @@ function buildEditPage(recipe) {
   const subtitle = editable("div","edit-subtitle",recipe.subtitle || "","Subtitle","Subtitle (optional)");
   subtitle.dataset.editField = "subtitle";
   content.appendChild(subtitle);
+  content.appendChild(window.CookbookRating?.display(draft?.rating) ||
+    node("div","edit-recipe-rating","Unrated"));
   const meta = node("div","edit-meta");
   for (const [key,label] of [["servings","Serves"],["yield","Yield"],["prepTime","Prep"],["cookTime","Cook"]]) {
     const wrapper = node("label",null,label);
@@ -176,6 +178,9 @@ function collectDraft() {
   result.title = title;
   result.subtitle = valueOf(".edit-subtitle");
   result.headnote = valueOf(".edit-headnote");
+  const selectedRating = window.CookbookRating?.getRating();
+  if (selectedRating) result.rating = selectedRating;
+  else delete result.rating;
   for (const field of pages.querySelectorAll("[data-meta]")) {
     const value = field.textContent.trim();
     if (value) result[field.dataset.meta] = value;
@@ -200,7 +205,7 @@ function collectDraft() {
 function fullRecipeFile(edited) {
   const file = clone(bridge.getSource());
   const index = bridge.getVariantIndex();
-  const fields = ["title","subtitle","headnote","servings","yield","prepTime","cookTime","ingredientGroups","steps","components"];
+  const fields = ["title","subtitle","headnote","servings","yield","prepTime","cookTime","ingredientGroups","steps","components","rating"];
   const target = index < 0 ? file : file.variants[index];
   if (!target) throw new Error("The selected recipe version is unavailable.");
   for (const field of fields) {
@@ -213,6 +218,7 @@ function start() {
   if (editing || !bridge.getRecipe()) return;
   if (document.getElementById("recipeView").hidden) return;
   draft = clone(bridge.getRecipe());
+  window.CookbookRating?.sync(draft.rating);
   restoreScroll = window.scrollY;
   editing = true;
   printButton.disabled = true;
@@ -238,6 +244,7 @@ function close({discard=false}={}) {
   cancelButton.hidden = true;
   printButton.disabled = false;
   pages.replaceChildren();
+  window.CookbookRating?.sync(bridge.getRecipe()?.rating);
   bridge.requestRender();
   return true;
 }

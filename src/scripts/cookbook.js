@@ -44,10 +44,11 @@ function makeHeading(title) {
   return el("h2", "section-heading", title);
 }
 function pageShell(index, recipe) {
-  const page = el("article", "sheet" + (index === 0 ? " has-photo" : ""));
+  const displayPhoto = index === 0 && byId("printMode").value !== "none";
+  const page = el("article", "sheet" + (displayPhoto ? " has-photo" : ""));
   page.setAttribute("aria-label", "Recipe page " + (index + 1));
   const content = el("div", "content");
-  if (index === 0) {
+  if (displayPhoto) {
     const strip = el("aside", "photo-strip");
     strip.setAttribute("aria-label", recipe.photo ? "Recipe photograph" : "Photograph placeholder");
     const placeholder = el("div", "photo-placeholder");
@@ -83,6 +84,20 @@ function addDraftBadge(element, status) {
   if (status === "draft") element.append(" ", el("span", "draft-badge", "Draft"));
 }
 
+function normalizedRating(value) {
+  const n = Number(value);
+  return Number.isInteger(n) && n >= 1 && n <= 5 ? n : null;
+}
+function ratingDisplay(value, className="recipe-rating") {
+  const rating = normalizedRating(value);
+  const container = el("div", className + (!rating ? " unrated" : ""));
+  const stars = el("span", "rating-glyphs", rating ? "★".repeat(rating) + "☆".repeat(5-rating) : "☆☆☆☆☆");
+  stars.setAttribute("aria-hidden","true");
+  container.appendChild(stars);
+  container.appendChild(el("span", "rating-label", rating ? rating + " of 5" : "Unrated"));
+  container.setAttribute("aria-label", rating ? "Recipe rating: " + rating + " of 5 stars" : "Recipe not yet rated");
+  return container;
+}
 function buildHeader(recipe) {
   const wrap = el("header", "recipe-header");
   const category = el("div", "category", (recipe.category || "Recipes").toUpperCase());
@@ -90,6 +105,7 @@ function buildHeader(recipe) {
   wrap.appendChild(category);
   wrap.appendChild(el("h1", null, recipe.title));
   if (recipe.subtitle) wrap.appendChild(el("div", "subtitle", "(" + recipe.subtitle + ")"));
+  wrap.appendChild(ratingDisplay(recipe.rating));
   const bits = [];
   if (recipe.servings) bits.push("SERVES " + recipe.servings);
   if (recipe.prepTime) bits.push("PREP " + recipe.prepTime);
@@ -202,6 +218,7 @@ function setLayout(density) {
   ROOT.style.setProperty("--strip-fraction", photoFraction.toFixed(2));
   ROOT.style.setProperty("--photo-width", ((8.5 - 2 * 0.38) * photoFraction).toFixed(3) + "in");
   document.body.classList.toggle("commercial", byId("printMode").value === "commercial");
+  document.body.classList.toggle("no-print-photo", byId("printMode").value === "none");
 }
 function paginate(recipe, density) {
   setLayout(density);
@@ -338,6 +355,7 @@ async function loadRecipe(button) {
   const file = button.dataset.recipe;
   window.CookbookEditor?.close({discard:true});
   currentRecipe = null;
+  window.CookbookRating?.reset();
   pagesEl.replaceChildren();
   byId("printButton").disabled = true;
   sidebar.querySelector("[aria-current]")?.removeAttribute("aria-current");
@@ -415,6 +433,7 @@ function selectRecipeVersion(index) {
     sourceNote: variant.sourceNote || sourceRecipe.sourceNote || "Original source document"
   } : sourceRecipe;
   document.title = currentRecipe.title + " | Family Cookbook";
+  window.CookbookRating?.sync(currentRecipe.rating);
   requestRender();
 }
 const sidebar = document.querySelector(".recipe-sidebar");
