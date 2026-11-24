@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T21:32:21.065Z",
+  "date": "2026-11-24T21:47:32.351Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -342,19 +342,39 @@
       "pass": true
     },
     {
-      "label": "Ingredient group insertion creates a new group after the selected ingredient",
+      "label": "Ingredient insertion button reveals on hover between items",
       "pass": true
     },
     {
-      "label": "Splitting ingredient groups preserves every ingredient",
+      "label": "Hover insertion creates a new ingredient group at exact boundary",
       "pass": true
     },
     {
-      "label": "Direction group heading can be inserted between steps",
+      "label": "Splitting ingredients preserves every ingredient",
       "pass": true
     },
     {
-      "label": "Direction numbers remain sequential after inserting a heading",
+      "label": "Backspace removes an empty ingredient group heading",
+      "pass": true
+    },
+    {
+      "label": "Removing a group heading restores all ingredient items",
+      "pass": true
+    },
+    {
+      "label": "Direction insertion line creates a heading between steps",
+      "pass": true
+    },
+    {
+      "label": "Backspace removes an empty direction heading",
+      "pass": true
+    },
+    {
+      "label": "Removing direction heading does not lose steps",
+      "pass": true
+    },
+    {
+      "label": "Direction numbering stays sequential after insertion and removal",
       "pass": true
     },
     {
