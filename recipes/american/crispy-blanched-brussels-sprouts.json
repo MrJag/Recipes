@@ -1,39 +1,39 @@
 {
   "schemaVersion": "0.1",
   "id": "crispy-blanched-brussels-sprouts",
-  "title": "Crispy Blanched Brussels Sprouts (Oven or Air Fryer)",
+  "title": "Crispy Brussels Sprouts",
   "category": "American",
   "status": "draft",
-  "subtitle": "5-minute blanch · 2-minute steam-dry · two crispy finishing methods",
+  "subtitle": "Oven or Air Fryer",
   "servings": "About 4 (estimate; vegetable weight unverified)",
   "prepTime": "10–15 minutes (estimate)",
   "cookTime": "25–30 minutes including blanch and roasting",
-  "headnote": "DRAFT / UNTESTED — Adapted from the YouTube video “I Found a Better Way to Roast Brussels Sprouts” by ThatDudeCanCook. The defining technique is to blanch halved Brussels sprouts for 5 minutes in salted water, let them steam-dry for 2 minutes, toss with olive oil and a little more salt, then roast or air-fry until crisp outside and creamy inside. The presenter did not specify the sprouts weight or exact oil amount; quantities below are editorial starting estimates and have not been tested.",
+  "headnote": "DRAFT / UNTESTED — Adapted from “I Found a Better Way to Roast Brussels Sprouts” by ThatDudeCanCook. The defining technique is to blanch halved Brussels sprouts for 5 minutes in salted water, let them steam-dry for 2 minutes, toss with olive oil and a little more salt, then roast or air-fry until crisp outside and creamy inside.",
   "ingredientGroups": [
     {
       "title": "Brussels sprouts and blanching water",
       "items": [
-        "680 g Brussels sprouts (editorial starting estimate; amount not stated in video)",
-        "3.8 L water (4 quarts, as demonstrated)",
-        "1 heaping tablespoon sea salt for blanching water (exact weight depends on salt; video amount)"
+        "1 lb Brussels sprouts",
+        "3 Liters water, for blanching",
+        "1 heaping tablespoon salt"
       ]
     },
     {
       "title": "Seasoning before finishing",
       "items": [
-        "About 25–35 g olive oil, enough to coat evenly (editorial estimate; video says a generous amount)",
-        "A little additional sea salt, less than 1 teaspoon as described in video (adjust to taste)"
+        "2-3 tsp olive oil",
+        "a pinch of salt, to taste"
       ]
     }
   ],
   "steps": [
     "Trim the dry stem end off each Brussels sprout. Remove any damaged outer leaves and cut each sprout in half lengthwise.",
-    "Bring 3.8 L (4 quarts) water to a boil. Add 1 heaping tablespoon sea salt. Carefully add the halved Brussels sprouts and boil for 5 minutes.",
+    "Bring water to a boil. Add 1 heaping tablespoon sea salt. Carefully add the halved Brussels sprouts and boil for 5 minutes.",
     "Drain thoroughly and allow the sprouts to steam-dry in the colander for approximately 2 minutes. Surface moisture should dissipate before roasting.",
-    "Transfer sprouts to a bowl. Toss with enough olive oil to coat and a small extra sprinkle of salt (less than 1 tsp, according to the video).",
+    "Transfer sprouts to a bowl. Toss with enough olive oil to coat and a small extra sprinkle of salt.",
     "OVEN METHOD: Heat a convection oven to 400°F. Arrange the sprouts cut-side down on a rimmed sheet pan in a single layer. Roast about 20 minutes, until deeply browned and crisp at the cut faces. Start checking early; ovens vary.",
     "AIR-FRYER METHOD: Preheat the air fryer to 430°F (only if the appliance supports this setting). Arrange in an uncrowded single layer, cut-side up. Air-fry about 15 minutes, checking during the final minutes for deep browning and crisp edges. Cook in batches if needed.",
-    "Serve immediately while the outer leaves are crunchy and the centers are tender and creamy. Taste and adjust salt."
+    "Serve immediately while the outer leaves are crunchy and the centers are tender and creamy."
   ],
   "notes": [
     "Use one finishing method, not both. The oven method gives particularly deep cut-side browning from contact with the hot sheet pan; the air fryer is convenient when oven space is limited.",
