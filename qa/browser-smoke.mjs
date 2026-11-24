@@ -337,6 +337,7 @@ try {
  await page.goto('http://localhost:8123/recipe.html?recipe=sweetango-orchard-sour',{waitUntil:'load'});
  await page.waitForTimeout(350);
  await page.locator('#editRecipeButton').click();
+ await page.evaluate(() => sessionStorage.removeItem('familyCookbook.githubToken.v1'));
  await page.locator('.edit-sheet .edit-main-title').fill('Unsaved response error test');
  await page.locator('#saveRecipeButton').click();
  await page.locator('#githubWriteToken').fill('test-only-token');
@@ -373,6 +374,7 @@ try {
  await page.goto('http://localhost:8123/recipe.html?recipe=sweetango-orchard-sour',{waitUntil:'load'});
  await page.waitForTimeout(350);
  await page.locator('#editRecipeButton').click();
+ await page.evaluate(() => sessionStorage.removeItem('familyCookbook.githubToken.v1'));
  await page.locator('.edit-sheet .edit-main-title').fill('Verified after empty confirmation');
  await page.locator('#saveRecipeButton').click();
  await page.locator('#githubWriteToken').fill('test-only-token');
@@ -400,6 +402,7 @@ try {
  await page.goto('http://localhost:8123/recipe.html?recipe=sweetango-orchard-sour',{waitUntil:'load'});
  await page.waitForTimeout(350);
  await page.locator('#editRecipeButton').click();
+ await page.evaluate(() => sessionStorage.removeItem('familyCookbook.githubToken.v1'));
  await page.locator('.edit-sheet .edit-main-title').fill('Not committed test');
  await page.locator('#saveRecipeButton').click();
  await page.locator('#githubWriteToken').fill('test-only-token');
