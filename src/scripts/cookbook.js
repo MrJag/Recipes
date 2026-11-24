@@ -293,7 +293,7 @@ function requestRender() {
   renderPending = true;
   requestAnimationFrame(() => {
     renderPending = false;
-    if (currentRecipe) {
+    if (currentRecipe && !window.CookbookEditor?.active) {
       pagesEl.classList.add("measuring");
       try {
         render(currentRecipe);
