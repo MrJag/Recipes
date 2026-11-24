@@ -208,7 +208,7 @@ try {
  check(await page.locator('.edit-sheet .ingredients ul li[contenteditable="true"]').count()>=6,'Ingredients remain editable bullet points');
  check(await page.locator('.edit-sheet .edit-directions ol li[contenteditable="true"]').count()>=3,'Directions remain editable numbered steps');
  await page.locator('.edit-sheet .edit-main-title').fill('Sweetango Orchard Sour — Test Edit');
- await page.locator('.edit-sheet .edit-headnote').fill('First paragraph of description.\\n\\nSecond paragraph of description.');
+ await page.locator('.edit-sheet .edit-headnote').fill('First paragraph of description.\n\nSecond paragraph of description.');
  check(await page.locator('.edit-sheet .edit-headnote').evaluate(el =>
    getComputedStyle(el).whiteSpace === 'pre-wrap'),
    'Description editor preserves multiline whitespace');
@@ -216,7 +216,7 @@ try {
  await page.locator('#saveRecipeButton').click();
  check(await page.locator('#recipeSaveDialog').isVisible(),'Save opens real persistence options');
  const multilinePayload = JSON.parse(await page.locator('#recipeSaveDialog').getAttribute('data-payload'));
- check(multilinePayload.headnote.includes('First paragraph of description.\\n\\nSecond paragraph of description.'),
+ check(multilinePayload.headnote.includes('First paragraph of description.\n\nSecond paragraph of description.'),
    'Saving a recipe preserves blank lines between description paragraphs');
  check(await page.locator('#downloadRecipeJson').isVisible(),'JSON download fallback is available');
  check(await page.locator('#publishRecipeGithub').isVisible(),'GitHub publishing option is available');
