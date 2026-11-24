@@ -562,3 +562,31 @@ body:has(#ratingOptions:not([hidden])) .edit-sheet .edit-recipe-rating .rating-l
 @media(prefers-reduced-motion:reduce){
   .recipe-action-rail .rating-save-spinner{animation:none;border-style:dotted}
 }
+
+/* In-edit section headings: select an item, then insert a heading after it. */
+.edit-sheet .edit-insert-group,
+.edit-sheet .edit-insert-stage {
+  display:inline-flex;align-items:center;justify-content:flex-start;
+  margin:4px 0 10px;padding:5px 8px;
+  border:1px dashed #cba68d;border-radius:5px;
+  background:#fffaf4;color:#904928;
+  font:600 10px/1.3 Arial,sans-serif;cursor:pointer;
+}
+.edit-sheet .edit-insert-group:hover,
+.edit-sheet .edit-insert-stage:hover,
+.edit-sheet .edit-insert-group:focus-visible,
+.edit-sheet .edit-insert-stage:focus-visible {
+  border-style:solid;background:#f7e9db;outline:2px solid #a56a49;outline-offset:2px;
+}
+.edit-sheet .edit-stage-heading {
+  list-style:none!important;
+  padding-left:0!important;margin:12px 0 7px!important;
+  color:#904928;font:700 10pt/1.25 Arial,sans-serif!important;
+  letter-spacing:.25px;
+}
+.edit-sheet .edit-stage-heading::marker{content:""!important}
+.edit-sheet .edit-stage-heading:empty::before{content:"Group heading";color:#b69a86;font-style:italic}
+.edit-sheet .edit-ingredient-group .edit-group-name:empty::before {
+  content:"Group heading (optional)";
+  color:#b69a86;font-style:italic;
+}

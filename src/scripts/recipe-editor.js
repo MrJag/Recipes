@@ -194,7 +194,6 @@ function ingredientGroups(groups, identifier) {
       const next = makeGroup({title:null,items:moved});
       section.after(next);
       for (const li of entries.slice(split)) li.remove();
-      if (!list.children.length) list.replaceChildren(editableList([""],"ingredients","Ingredient").firstChild);
       list.classList.toggle("two-column",list.children.length >= 9);
       dirty = true;
       next.querySelector(".edit-group-name").focus();
