@@ -501,6 +501,11 @@ async function publish() {
 editButton.addEventListener("click",()=> editing ? close() : start());
 cancelButton.addEventListener("click",()=>close());
 saveButton.addEventListener("click",showSave);
+document.getElementById("forgetGithubSession").addEventListener("click", () => {
+  forgetSessionToken();
+  setTokenPromptVisible(true);
+  feedback.textContent = "Saved GitHub access cleared for this tab.";
+});
 document.getElementById("downloadRecipeJson").addEventListener("click",download);
 document.getElementById("publishRecipeGithub").addEventListener("click",()=>void publish());
 document.getElementById("dismissSaveDialog").addEventListener("click",()=>saveDialog.close());

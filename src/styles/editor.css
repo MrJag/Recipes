@@ -469,3 +469,8 @@ body:has(#ratingOptions:not([hidden])) .edit-sheet .edit-recipe-rating .rating-l
 .recipe-action-rail .rating-stars button.selected,
 .recipe-action-rail .rating-stars button.selected:hover,
 .recipe-action-rail .rating-stars button.selected:focus-visible {color:#efad19}
+
+/* Tab-scoped GitHub access controls; never imply an HttpOnly cookie. */
+.recipe-save-dialog #githubTokenPrompt[hidden],
+.recipe-save-dialog #cachedTokenNotice[hidden] {display:none!important}
+.recipe-save-dialog .forget-session {background:transparent;color:#715b46;border:1px solid #cbb8a8;margin:8px 0 14px;font:12px Arial,sans-serif;padding:7px 10px}
