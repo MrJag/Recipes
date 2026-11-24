@@ -1,5 +1,11 @@
 # Family Cookbook release checkpoints
 
+## v0.10.0 — November 23, 2026
+Floating recipe actions are vertically stacked. Print options now allow
+a full-width, photo-free layout for ink-saving printing. Rating editing
+supports unrated-by-default 1–5 stars with Clear, and ratings save in recipe JSON.
+The initial recipe header placement is under the subtitle (subject to design review).
+
 ## v0.9.0 — November 23, 2026
 Recipe viewer editing milestone. The Print options trigger is now a printer icon
 outside the paper preview, and a pencil toggles inline editing. Styled editable
