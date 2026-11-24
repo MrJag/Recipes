@@ -266,7 +266,7 @@ function paginate(recipe, density) {
   let currentStage = {title:recipe.components?.length ? "Main method" : null,steps:[]};
   for (const step of recipe.steps || []) {
     if (step && typeof step === "object" && typeof step.heading === "string") {
-      if (currentStage.steps.length || currentStage.title) mainStages.push(currentStage);
+      if (currentStage.steps.length) mainStages.push(currentStage);
       currentStage = {title:step.heading,steps:[]};
     } else {
       currentStage.steps.push(step);
