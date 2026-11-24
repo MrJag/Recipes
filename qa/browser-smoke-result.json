@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T02:48:59.499Z",
+  "date": "2026-11-24T02:52:50.356Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -203,6 +203,34 @@
     },
     {
       "label": "Publishing without credentials is refused",
+      "pass": true
+    },
+    {
+      "label": "Authenticated save sends a GitHub API commit",
+      "pass": true
+    },
+    {
+      "label": "Saved JSON includes edited recipe title",
+      "pass": true
+    },
+    {
+      "label": "Save preserves the recipe photo",
+      "pass": true
+    },
+    {
+      "label": "Save preserves Draft status",
+      "pass": true
+    },
+    {
+      "label": "Save uses optimistic concurrency SHA",
+      "pass": true
+    },
+    {
+      "label": "Successful publish confirms commit",
+      "pass": true
+    },
+    {
+      "label": "Save hides after successful publish",
       "pass": true
     },
     {
