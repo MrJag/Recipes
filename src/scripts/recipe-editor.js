@@ -511,6 +511,7 @@ async function publish({silent=false}={}) {
     saveButton.hidden = true;
       editButton.setAttribute("aria-pressed","false");
     editButton.setAttribute("aria-label","Edit recipe");
+    editButton.title = "Edit recipe";
     printButton.disabled = false;
     bridge.setSavedRecipe(update);
     saveDialog.dataset.payload = "";

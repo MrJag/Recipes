@@ -302,6 +302,10 @@ try {
  }
  check((await page.locator('#saveFeedback').textContent()).includes('Published!'),'Successful publish confirms commit');
  check(await page.locator('#saveRecipeButton').isHidden(),'Save hides after successful publish');
+ check(await page.locator('#editRecipeButton').getAttribute('title')==='Edit recipe',
+   'Pencil tooltip returns to Edit recipe after successful save');
+ check(await page.locator('#editRecipeButton').getAttribute('aria-label')==='Edit recipe',
+   'Pencil accessibility label resets after successful save');
  await page.locator('#dismissSaveDialog').click();
  const storedAccess = await page.evaluate(() =>
    JSON.parse(sessionStorage.getItem('familyCookbook.githubToken.v1') || 'null'));
