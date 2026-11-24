@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T06:34:31.446Z",
+  "date": "2026-11-24T06:42:27.000Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -62,6 +62,10 @@
       "pass": true
     },
     {
+      "label": "Explicit category bookmark expands only the requested category",
+      "pass": true
+    },
+    {
       "label": "Three category-aware cards appear",
       "pass": true
     },
@@ -107,6 +111,14 @@
     },
     {
       "label": "Unfiltered directory shows recent additions",
+      "pass": true
+    },
+    {
+      "label": "Unfiltered directory starts with every top-level category collapsed",
+      "pass": true
+    },
+    {
+      "label": "Unfiltered directory starts with all subcategories collapsed",
       "pass": true
     },
     {
