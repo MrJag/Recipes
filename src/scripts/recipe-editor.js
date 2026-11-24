@@ -281,6 +281,27 @@ async function parseGithubResponse(response, operation) {
   try { return JSON.parse(raw); }
   catch { throw new Error(operation + " returned invalid JSON (HTTP " + response.status + "). Check GitHub before retrying."); }
 }
+// Confirm ambiguous saves against GitHub rather than treating a malformed PUT
+// confirmation as proof of failure. Use the original token only in this request.
+async function verifyPublishedContent(url, headers, expected) {
+  const check = new URL(url);
+  check.searchParams.set("ref", "main");
+  check.searchParams.set("_verify", String(Date.now()));
+  const response = await fetch(check.href, {headers, cache:"no-store"});
+  if (!response.ok) throw new Error("Verification read failed (HTTP " + response.status + ")");
+  const file = await parseGithubResponse(response, "GitHub verification");
+  if (typeof file.content !== "string" || !file.content.trim()) {
+    throw new Error("Verification returned no recipe contents");
+  }
+  let committed;
+  try {
+    const bytes = Uint8Array.from(atob(file.content.replace(/\\s/g,"")), c=>c.charCodeAt(0));
+    committed = JSON.parse(new TextDecoder().decode(bytes));
+  } catch {
+    throw new Error("Verification returned unreadable recipe JSON");
+  }
+  return JSON.stringify(committed) === JSON.stringify(expected);
+}
 async function publish() {
   const token = tokenField.value.trim();
   if (!token) {
@@ -332,9 +353,31 @@ async function publish() {
       if (raw.trim()) { try {error = JSON.parse(raw);} catch {error = {message:"Unexpected non-JSON response"};} }
       throw new Error("GitHub rejected the save (HTTP " + put.status + "): " + error.message);
     }
-    const result = await parseGithubResponse(put, "GitHub publish");
-    if (!result.commit?.sha) throw new Error("GitHub returned no commit ID; check the repository before retrying.");
-    feedback.textContent = "Published! GitHub commit: " + result.commit.sha.slice(0,10) + ". Pages may take time to update.";
+    let result;
+    let confirmationIssue = null;
+    try {
+      result = await parseGithubResponse(put, "GitHub publish");
+      if (!result.commit?.sha) throw new Error("GitHub returned no commit ID");
+    } catch (error) {
+      confirmationIssue = error;
+    }
+    if (confirmationIssue) {
+      feedback.textContent = "GitHub accepted the request; verifying saved recipe content…";
+      let verified = false;
+      try {
+        verified = await verifyPublishedContent(url, headers, newJson);
+      } catch (error) {
+        throw new Error("GitHub accepted the save request, but confirmation could not be verified (" +
+          error.message + "). Check the repository before retrying; your edits are still available.");
+      }
+      if (!verified) {
+        throw new Error("GitHub accepted the save request, but the repository content does not match your edits. " +
+          "Do not retry blindly; check the recipe history first.");
+      }
+      feedback.textContent = "Published successfully — verified against GitHub. Pages may take time to update.";
+    } else {
+      feedback.textContent = "Published! GitHub commit: " + result.commit.sha.slice(0,10) + ". Pages may take time to update.";
+    }
     tokenField.value = "";
     const update = JSON.parse(content);
     saveInProgress = false;
