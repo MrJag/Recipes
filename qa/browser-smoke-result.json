@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T04:18:30.687Z",
+  "date": "2026-11-24T04:26:34.735Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -263,6 +263,34 @@
     },
     {
       "label": "Failed save does not claim publication",
+      "pass": true
+    },
+    {
+      "label": "Ambiguous GitHub save submits the edited JSON",
+      "pass": true
+    },
+    {
+      "label": "Ambiguous GitHub confirmation triggers a verification read",
+      "pass": true
+    },
+    {
+      "label": "Matching repository content confirms ambiguous save as published",
+      "pass": true
+    },
+    {
+      "label": "Verified save returns to normal recipe mode",
+      "pass": true
+    },
+    {
+      "label": "Mismatched revision is reported as unverified",
+      "pass": true
+    },
+    {
+      "label": "Unverified save preserves inline edits",
+      "pass": true
+    },
+    {
+      "label": "Unverified save does not display success",
       "pass": true
     },
     {
