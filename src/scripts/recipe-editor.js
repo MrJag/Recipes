@@ -11,6 +11,52 @@ const saveDialog = document.getElementById("recipeSaveDialog");
 const feedback = document.getElementById("saveFeedback");
 const tokenField = document.getElementById("githubWriteToken");
 const status = document.getElementById("status");
+const tokenPrompt = document.getElementById("githubTokenPrompt");
+const cachedTokenNotice = document.getElementById("cachedTokenNotice");
+const TOKEN_SESSION_KEY = "familyCookbook.githubToken.v1";
+const TOKEN_TTL_MS = 30 * 60 * 1000;
+
+function forgetSessionToken() {
+  try { sessionStorage.removeItem(TOKEN_SESSION_KEY); } catch {}
+}
+function readSessionToken() {
+  try {
+    const raw = sessionStorage.getItem(TOKEN_SESSION_KEY);
+    if (!raw) return null;
+    const saved = JSON.parse(raw);
+    if (!saved || typeof saved.token !== "string" ||
+        !Number.isFinite(saved.expiresAt) || Date.now() >= saved.expiresAt) {
+      forgetSessionToken();
+      return null;
+    }
+    return saved.token;
+  } catch {
+    forgetSessionToken();
+    return null;
+  }
+}
+function rememberSessionToken(token) {
+  // Only after GitHub confirms the write. This is tab-scoped sessionStorage,
+  // NOT an HttpOnly cookie: JavaScript running on this origin can read it.
+  try {
+    sessionStorage.setItem(TOKEN_SESSION_KEY, JSON.stringify({
+      token, expiresAt: Date.now() + TOKEN_TTL_MS
+    }));
+  } catch {
+    // Private browsing or disabled storage: save still succeeds, no reuse.
+  }
+}
+function setTokenPromptVisible(visible) {
+  tokenPrompt.hidden = !visible;
+  cachedTokenNotice.hidden = visible;
+}
+function openSaveDialog() {
+  const reused = Boolean(readSessionToken());
+  setTokenPromptVisible(!reused);
+  saveDialog.showModal();
+  if (reused) void publish();
+}
+
 let editing = false;
 let dirty = false;
 let draft = null;
@@ -271,7 +317,7 @@ function saveRating(value) {
   tokenField.value = "";
   saveDialog.dataset.filePath = bridge.getPath() || "";
   saveDialog.dataset.payload = JSON.stringify(file,null,2) + "\n";
-  saveDialog.showModal();
+  openSaveDialog();
 }
 function showSave() {
   ratingOnlySave = false;
@@ -282,7 +328,7 @@ function showSave() {
     tokenField.value = "";
     saveDialog.dataset.filePath = bridge.getPath() || "";
     saveDialog.dataset.payload = JSON.stringify(file,null,2) + "\n";
-    saveDialog.showModal();
+    openSaveDialog();
   } catch(error) {
     alert("Unable to save: " + error.message);
   }
@@ -336,8 +382,11 @@ async function verifyPublishedContent(url, headers, expected) {
   return JSON.stringify(committed) === JSON.stringify(expected);
 }
 async function publish() {
-  const token = tokenField.value.trim();
+  const typedToken = tokenField.value.trim();
+  const token = typedToken || readSessionToken();
+  const usingCachedToken = !typedToken && Boolean(token);
   if (!token) {
+    setTokenPromptVisible(true);
     feedback.textContent = "Enter a fine-grained GitHub token to publish, or download the JSON instead.";
     tokenField.focus();
     return;
@@ -356,7 +405,11 @@ async function publish() {
   feedback.textContent = "Checking latest GitHub revision…";
   try {
     const get = await fetch(url + "?ref=main",{headers,cache:"no-store"});
-    if (!get.ok) throw new Error("Could not load latest GitHub file (HTTP " + get.status + "). Check token permissions.");
+    if (!get.ok) {
+      const error = new Error("Could not load latest GitHub file (HTTP " + get.status + "). Check token permissions.");
+      error.githubStatus = get.status;
+      throw error;
+    }
     const latest = await parseGithubResponse(get, "GitHub read");
     if (!latest.sha) throw new Error("Missing revision SHA; refusing to overwrite.");
     if (typeof latest.content !== "string" || !latest.content.trim()) {
@@ -384,7 +437,9 @@ async function publish() {
       const raw = await put.text();
       let error = {message:"No details returned"};
       if (raw.trim()) { try {error = JSON.parse(raw);} catch {error = {message:"Unexpected non-JSON response"};} }
-      throw new Error("GitHub rejected the save (HTTP " + put.status + "): " + error.message);
+      const failure = new Error("GitHub rejected the save (HTTP " + put.status + "): " + error.message);
+      failure.githubStatus = put.status;
+      throw failure;
     }
     let result;
     let confirmationIssue = null;
@@ -411,6 +466,7 @@ async function publish() {
     } else {
       feedback.textContent = "Published! GitHub commit: " + result.commit.sha.slice(0,10) + ". Pages may take time to update.";
     }
+    rememberSessionToken(token);
     tokenField.value = "";
     const update = JSON.parse(content);
     saveInProgress = false;
@@ -427,9 +483,15 @@ async function publish() {
     window.CookbookRating?.close({discard:false});
     // Leave the success dialog visible until the user closes it.
   } catch(error) {
+    const denied = error?.githubStatus === 401 || error?.githubStatus === 403;
+    if (denied) {
+      forgetSessionToken();
+      setTokenPromptVisible(true);
+    }
     feedback.textContent = (error instanceof TypeError
       ? "GitHub could not be reached. Check your connection or browser extensions."
-      : error.message) + " Your edits remain in the editor.";
+      : error.message) + " Your edits remain in the editor." +
+      (denied && usingCachedToken ? " Enter a new GitHub token to retry." : "");
     tokenField.value = "";
   } finally {
     saveInProgress = false;
@@ -440,10 +502,11 @@ editButton.addEventListener("click",()=> editing ? close() : start());
 cancelButton.addEventListener("click",()=>close());
 saveButton.addEventListener("click",showSave);
 document.getElementById("downloadRecipeJson").addEventListener("click",download);
-document.getElementById("publishRecipeGithub").addEventListener("click",publish);
+document.getElementById("publishRecipeGithub").addEventListener("click",()=>void publish());
 document.getElementById("dismissSaveDialog").addEventListener("click",()=>saveDialog.close());
 saveDialog.addEventListener("close",()=>{
   tokenField.value = "";
+  setTokenPromptVisible(true);
   saveDialog.dataset.payload = "";
   if (ratingOnlySave && !saveInProgress) {
     ratingOnlySave = false;
