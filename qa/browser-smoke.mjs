@@ -315,6 +315,11 @@ try {
  check(await page.locator('#saveRecipeButton').evaluate(el =>
    el.disabled && el.classList.contains('is-saving') && el.textContent.includes('Saving')),
    'Save button shows disabled Saving state during GitHub request');
+ check(await page.locator('#ratingSaveProgress').isHidden(),
+   'Editing recipe does not show rating save progress');
+ check(await page.locator('#ratingRecipeButton').evaluate(el =>
+   !el.classList.contains('is-saving')),
+   'Editing recipe does not animate the star icon');
  await page.waitForTimeout(600);
  check(githubPuts===2,'Valid tab access publishes follow-up edit automatically');
  check(await page.locator('#recipeSaveDialog').isHidden(),
@@ -331,6 +336,9 @@ try {
  await page.locator('#ratingSaveProgress').waitFor({state:'visible'});
  check(await page.locator('#ratingSaveProgress').textContent() === 'Saving rating…',
    'Rating save displays prominent Saving rating feedback');
+ check(await page.locator('#ratingRecipeButton').evaluate(el =>
+   el.classList.contains('is-saving')),
+   'Rating-only save animates star icon');
  check(await page.locator('#ratingSaveProgress .rating-save-spinner').evaluate(el =>
    getComputedStyle(el).animationName === 'recipe-save-spin'),
    'Rating save progress spinner is animated');
