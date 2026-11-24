@@ -81,6 +81,44 @@ try {
  await page.waitForTimeout(650);
  check(await page.locator('#editRecipeButton').isVisible(),'Pencil action is available');
  check(await page.locator('#printMenuToggle svg').count()===1,'Print action is an icon outside the recipe page');
+ // Toolbar icons stack vertically, and print mode can omit photos entirely.
+ check(await page.locator('.recipe-action-rail').evaluate(el=>getComputedStyle(el).flexDirection==='column'),
+   'Recipe action icons are vertically stacked');
+ check(await page.locator('.recipe-header .recipe-rating').count()===1,
+   'Recipe header includes a rating summary');
+ check((await page.locator('.recipe-header .recipe-rating').textContent()).includes('Unrated'),
+   'Recipes without a rating show Unrated');
+ await page.locator('#printMenuToggle').click();
+ await page.locator('#printMode').selectOption('none');
+ await page.locator('#pages .sheet').first().waitFor({state:'visible'});
+ await page.waitForTimeout(150);
+ check(await page.locator('#pages .photo-strip').count()===0,
+   'No-photo print mode removes the photo strip');
+ check(await page.locator('#pages .sheet.has-photo').count()===0,
+   'No-photo print layout uses full-width text');
+ await page.locator('#printMode').selectOption('commercial');
+ await page.locator('#printMenuToggle').click();
+ await page.waitForTimeout(150);
+ check(await page.locator('#pages .sheet.has-photo .strip-image').count()===1,
+   'Switching back to photo print mode restores first-page photo');
+ // Ratings are editable only after opening the star action.
+ check(await page.locator('#ratingOptions').isHidden(),'Rating stars are hidden by default');
+ await page.locator('#ratingRecipeButton').click();
+ check(await page.locator('#ratingOptions').isVisible(),'Rating stars appear on button click');
+ check(await page.locator('#saveRecipeButton').isVisible(),'Rating selection enters editable save mode');
+ await page.locator('#ratingStars button[data-rating="4"]').click();
+ check((await page.locator('.edit-recipe-rating').textContent()).includes('4 of 5'),
+   'Selecting four stars updates the editable header');
+ await page.locator('#saveRecipeButton').click();
+ const ratingPayload=JSON.parse(await page.locator('#recipeSaveDialog').getAttribute('data-payload'));
+ check(ratingPayload.rating===4,'Rating is included in recipe save JSON');
+ await page.locator('#dismissSaveDialog').click();
+ page.once('dialog', dialog=>dialog.accept());
+ await page.locator('#cancelEditButton').click();
+ await page.locator('.sheet:not(.edit-sheet)').first().waitFor({state:'visible'});
+ check((await page.locator('.recipe-header .recipe-rating').textContent()).includes('Unrated'),
+   'Cancel discards a pending rating');
+
  // Responsive changes should not rebuild the page or briefly hide its photograph.
  await page.waitForFunction(() => {
    const img = document.querySelector('#pages .sheet.has-photo .strip-image');
@@ -161,6 +199,7 @@ try {
    check(saved.title === 'Sweetango Orchard Sour — Browser Test','Saved JSON includes edited recipe title');
    check(saved.photo === './public/images/sweetango-orchard-sour-v2.jpg','Save preserves the recipe photo');
    check(saved.status === 'draft','Save preserves Draft status');
+   check(!('rating' in saved),'Ordinary recipe editing does not invent a rating');
    check(githubPut.sha === 'mock-current-sha','Save uses optimistic concurrency SHA');
  }
  check((await page.locator('#saveFeedback').textContent()).includes('Published!'),'Successful publish confirms commit');
