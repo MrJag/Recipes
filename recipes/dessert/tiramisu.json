@@ -13,11 +13,11 @@
         "1½–2 cups white sugar, to taste",
         "2 cups mascarpone",
         "3 cups heavy whipping cream",
+        "0.4g xantham gum",
         "2 packages ladyfingers",
-        "¼ cup espresso and ¼ cup brandy",
-        "1 Tbsp brandy",
+        "72g (3oz) espresso",
+        "72g (3oz) brandy",
         "Unsweetened cocoa powder, for dusting",
-        "Coffee liqueur, amount unspecified",
         "Chocolate curls, optional"
       ]
     }
@@ -32,5 +32,9 @@
   "reviewFlags": [
     "The ingredient list gives espresso and brandy, but the directions call for coffee liqueur without specifying an amount or how the espresso and brandy are used. Confirm the soaking mixture."
   ],
-  "headnote": "The ingredient list gives espresso and brandy, but the directions call for coffee liqueur without specifying an amount or how the espresso and brandy are used. Confirm the soaking mixture."
+  "headnote": "The ingredient list gives espresso and brandy, but the directions call for coffee liqueur without specifying an amount or how the espresso and brandy are used. Confirm the soaking mixture.",
+  "subtitle": "",
+  "ingredientNotes": [
+    "Experiment with whipping to medium peaks instead of stiff peaks."
+  ]
 }
