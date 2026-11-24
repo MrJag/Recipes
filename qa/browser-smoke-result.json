@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T05:44:42.775Z",
+  "date": "2026-11-24T05:54:57.047Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -230,31 +230,27 @@
       "pass": true
     },
     {
-      "label": "Four stars preview on normal recipe page",
+      "label": "Click immediately previews four stars on normal recipe page",
       "pass": true
     },
     {
-      "label": "Rating has its own Save action",
+      "label": "Rating requires no separate Save button",
       "pass": true
     },
     {
-      "label": "Clicking selected four stars clears rating",
+      "label": "Without cached GitHub access, clicking a star opens authentication",
       "pass": true
     },
     {
-      "label": "Saving is disabled when rating matches original",
+      "label": "Star click immediately prepares the rating JSON",
       "pass": true
     },
     {
-      "label": "Standalone rating Save writes rating to recipe JSON",
+      "label": "Rating does not enter recipe editing mode",
       "pass": true
     },
     {
-      "label": "Rating Save does not create an editable sheet",
-      "pass": true
-    },
-    {
-      "label": "Dismissing rating Save restores committed rating",
+      "label": "Dismissing unauthenticated save restores committed rating",
       "pass": true
     },
     {
@@ -474,6 +470,30 @@
       "pass": true
     },
     {
+      "label": "Clicking a rating immediately commits to GitHub with cached token",
+      "pass": true
+    },
+    {
+      "label": "Rating of four stars persisted",
+      "pass": true
+    },
+    {
+      "label": "Auto-saving rating is silent",
+      "pass": true
+    },
+    {
+      "label": "Rating auto-save keeps normal recipe view",
+      "pass": true
+    },
+    {
+      "label": "Clicking the selected star again auto-saves clearing the rating",
+      "pass": true
+    },
+    {
+      "label": "Cleared star selection deletes rating JSON property",
+      "pass": true
+    },
+    {
       "label": "Expired cached access opens the publish dialog",
       "pass": true
     },
@@ -543,6 +563,14 @@
     },
     {
       "label": "Unverified save does not display success",
+      "pass": true
+    },
+    {
+      "label": "Florentine recipe renders high-resolution portrait image",
+      "pass": true
+    },
+    {
+      "label": "Florentine uses versioned image instead of stale cached preview",
       "pass": true
     },
     {
