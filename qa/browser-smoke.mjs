@@ -1,5 +1,5 @@
 import { chromium } from 'playwright';
-import { writeFileSync } from 'node:fs';
+import { writeFileSync, readFileSync } from 'node:fs';
 const report={date:new Date().toISOString(),checks:[],errors:[]};
 let browser;
 const check=(ok,label)=>{report.checks.push({label,pass:Boolean(ok)});if(!ok)report.errors.push(label)};
@@ -110,6 +110,45 @@ try {
  await page.locator('#dismissSaveDialog').click();
  await page.locator('#cancelEditButton').click();
 
+ // Mock GitHub API to test the save flow without changing repository data.
+ let githubPut = null;
+ const originalSource = readFileSync('recipes/drinks/sweetango-orchard-sour.json','utf8');
+ await page.route('https://api.github.com/repos/MrJag/Recipes/contents/**',async route => {
+   const method = route.request().method();
+   const cors = {'access-control-allow-origin':'*','access-control-allow-headers':'*',
+     'access-control-allow-methods':'GET,PUT,OPTIONS'};
+   if (method === 'OPTIONS') return route.fulfill({status:204,headers:cors,body:''});
+   if (method === 'GET') return route.fulfill({
+     status:200,contentType:'application/json',headers:cors,
+     body:JSON.stringify({sha:'mock-current-sha',content:Buffer.from(originalSource).toString('base64')})
+   });
+   if (method === 'PUT') {
+     githubPut = route.request().postDataJSON();
+     return route.fulfill({status:200,contentType:'application/json',headers:cors,
+       body:JSON.stringify({commit:{sha:'abcdef1234567890'}})});
+   }
+   return route.abort();
+ });
+ await page.goto('http://localhost:8123/recipe.html?recipe=sweetango-orchard-sour',{waitUntil:'load'});
+ await page.waitForTimeout(400);
+ await page.locator('#editRecipeButton').click();
+ await page.locator('.edit-sheet .edit-main-title').fill('Sweetango Orchard Sour — Browser Test');
+ await page.locator('#saveRecipeButton').click();
+ await page.locator('#githubWriteToken').fill('test-only-token');
+ await page.locator('#publishRecipeGithub').click();
+ await page.waitForTimeout(450);
+ check(Boolean(githubPut),'Authenticated save sends a GitHub API commit');
+ if (githubPut) {
+   const saved = JSON.parse(Buffer.from(githubPut.content,'base64').toString('utf8'));
+   check(saved.title === 'Sweetango Orchard Sour — Browser Test','Saved JSON includes edited recipe title');
+   check(saved.photo === './public/images/sweetango-orchard-sour-v2.jpg','Save preserves the recipe photo');
+   check(saved.status === 'draft','Save preserves Draft status');
+   check(githubPut.sha === 'mock-current-sha','Save uses optimistic concurrency SHA');
+ }
+ check((await page.locator('#saveFeedback').textContent()).includes('Published!'),'Successful publish confirms commit');
+ check(await page.locator('#saveRecipeButton').isHidden(),'Save hides after successful publish');
+ await page.locator('#dismissSaveDialog').click();
+ await page.unrouteAll();
  await page.goto('http://localhost:8123/index.html?recipe=midwestern-chili',{waitUntil:'load'});
  await page.waitForTimeout(300);
  check(page.url().includes('recipe.html?recipe=midwestern-chili'),'Old combined-page bookmark redirects');
