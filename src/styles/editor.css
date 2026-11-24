@@ -349,7 +349,8 @@
 .edit-sheet .edit-meta [contenteditable]{min-width:44px;font:normal 9pt Arial,sans-serif}
 .edit-sheet .edit-ingredient-group{break-inside:avoid;margin-bottom:12px}
 .edit-sheet .edit-ingredient-group h3{font:700 9pt Arial,sans-serif;color:#904928;margin:0 0 8px}
-.edit-sheet .ingredients ul{columns:2;column-gap:22px;column-rule:1px solid #d6c1b3}
+.edit-sheet .ingredients ul{columns:1;column-gap:22px;column-rule:1px solid #d6c1b3}
+.edit-sheet .ingredients ul.two-column{columns:2}
 .edit-sheet .ingredients li{margin-bottom:6px;break-inside:avoid}
 .edit-sheet .edit-directions{margin-top:16px}
 .edit-sheet .edit-directions ol{list-style:decimal;padding-left:30px;margin:0 0 16px}

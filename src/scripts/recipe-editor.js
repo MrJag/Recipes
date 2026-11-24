@@ -42,6 +42,9 @@ function editable(tag, className, value, label, placeholder) {
 }
 function editableList(values, type, label) {
   const list = node(type === "directions" ? "ol" : "ul", "edit-list");
+  const updateColumns = () => {
+    if (type === "ingredients") list.classList.toggle("two-column", list.children.length >= 9);
+  };
   list.dataset.listType = type;
   const addItem = (value, after) => {
     const li = editable("li", "edit-list-item", value, label + " item", "Type here");
@@ -55,11 +58,13 @@ function editableList(values, type, label) {
         event.preventDefault();
         const next = li.previousElementSibling || li.nextElementSibling;
         li.remove();
+        updateColumns();
         next?.focus();
         dirty = true;
       }
     });
     if (after) after.after(li); else list.appendChild(li);
+    updateColumns();
     dirty = true;
     return li;
   };
@@ -217,6 +222,7 @@ function close({discard=false}={}) {
   saveButton.hidden = true;
   cancelButton.hidden = true;
   printButton.disabled = false;
+  pages.replaceChildren();
   bridge.requestRender();
   return true;
 }

@@ -71,6 +71,12 @@ try {
  check(await page.locator('.hero').isVisible(),'Landing page visible after returning home');
 
  // Inline editing keeps the visual recipe structure while enabling changes.
+
+ await page.goto('http://localhost:8123/recipe.html?recipe=midwestern-chili',{waitUntil:'load'});
+ await page.waitForTimeout(650);
+ await page.locator('#editRecipeButton').click();
+ check(await page.locator('.edit-sheet .ingredients ul').evaluate(el => getComputedStyle(el).columnCount === '2'),'Long ingredient lists automatically use two columns');
+ await page.locator('#cancelEditButton').click();
  await page.goto('http://localhost:8123/recipe.html?recipe=sweetango-orchard-sour',{waitUntil:'load'});
  await page.waitForTimeout(650);
  check(await page.locator('#editRecipeButton').isVisible(),'Pencil action is available');
@@ -79,6 +85,9 @@ try {
  check(await page.locator('.edit-sheet').isVisible(),'Pencil enters inline edit mode');
  check(await page.locator('#saveRecipeButton').isVisible(),'Save action appears during editing');
  check(await page.locator('.edit-sheet .edit-headnote[contenteditable="true"]').count()===1,'Description is inline editable and italicized');
+ check(await page.locator('.edit-sheet .edit-headnote').evaluate(el => getComputedStyle(el).fontStyle === 'italic'),'Description actually renders italic');
+ check(await page.locator('.edit-sheet .ingredients ul').evaluate(el => getComputedStyle(el).columnCount === '1'),'Short ingredient lists stay single column');
+ check(await page.locator('.edit-sheet .edit-directions ol').evaluate(el => getComputedStyle(el).listStyleType === 'decimal'),'Directions use automatic numbering');
  check(await page.locator('.edit-sheet .ingredients ul li[contenteditable="true"]').count()>=6,'Ingredients remain editable bullet points');
  check(await page.locator('.edit-sheet .edit-directions ol li[contenteditable="true"]').count()>=3,'Directions remain editable numbered steps');
  await page.locator('.edit-sheet .edit-main-title').fill('Sweetango Orchard Sour — Test Edit');
@@ -91,6 +100,7 @@ try {
  await page.locator('#dismissSaveDialog').click();
  page.once('dialog', dialog => dialog.accept());
  await page.locator('#cancelEditButton').click();
+ await page.locator('.sheet:not(.edit-sheet)').first().waitFor({state:'visible',timeout:3000});
  check(await page.locator('.edit-sheet').count()===0,'Cancel restores normal pagination');
  check(await page.locator('#saveRecipeButton').isHidden(),'Save action hides outside edit mode');
  await page.locator('#editRecipeButton').click();
