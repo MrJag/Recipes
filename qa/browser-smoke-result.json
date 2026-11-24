@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T00:21:37.630Z",
+  "date": "2026-11-24T02:47:43.559Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -134,6 +134,62 @@
       "pass": true
     },
     {
+      "label": "Pencil action is available",
+      "pass": true
+    },
+    {
+      "label": "Print action is an icon outside the recipe page",
+      "pass": true
+    },
+    {
+      "label": "Pencil enters inline edit mode",
+      "pass": true
+    },
+    {
+      "label": "Save action appears during editing",
+      "pass": true
+    },
+    {
+      "label": "Description is inline editable and italicized",
+      "pass": true
+    },
+    {
+      "label": "Ingredients remain editable bullet points",
+      "pass": true
+    },
+    {
+      "label": "Directions remain editable numbered steps",
+      "pass": true
+    },
+    {
+      "label": "Save opens real persistence options",
+      "pass": true
+    },
+    {
+      "label": "JSON download fallback is available",
+      "pass": true
+    },
+    {
+      "label": "GitHub publishing option is available",
+      "pass": true
+    },
+    {
+      "label": "Save does not claim success prematurely",
+      "pass": true
+    },
+    {
+      "label": "Cancel restores normal pagination",
+      "pass": false
+    },
+    {
+      "label": "Save action hides outside edit mode",
+      "pass": true
+    },
+    {
+      "label": "Publishing without credentials is refused",
+      "pass": true
+    },
+    {
       "label": "Old combined-page bookmark redirects",
       "pass": true
     },
@@ -142,6 +198,8 @@
       "pass": true
     }
   ],
-  "errors": [],
-  "pass": true
+  "errors": [
+    "Cancel restores normal pagination"
+  ],
+  "pass": false
 }
