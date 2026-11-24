@@ -2,8 +2,8 @@
   "recipes": [
     {
       "slug": "crispy-blanched-brussels-sprouts",
-      "title": "Crispy Blanched Brussels Sprouts (Oven or Air Fryer)",
-      "description": "5-minute blanch · 2-minute steam-dry · two crispy finishing methods",
+      "title": "Crispy Brussels Sprouts",
+      "description": "Oven or Air Fryer",
       "photo": "./public/images/crispy-blanched-brussels-sprouts.jpg",
       "draft": true
     },
