@@ -69,7 +69,7 @@ let restoreScroll = 0;
 
 const publishButton = document.getElementById("publishRecipeGithub");
 
-function setSavingState(busy) {
+function setSavingState(busy, ratingSave=false) {
   for (const button of [saveButton, publishButton]) {
     if (!button) continue;
     button.disabled = busy;
@@ -80,7 +80,9 @@ function setSavingState(busy) {
   }
   // Only the visible button is announced, and repeated clicks are blocked.
   if (busy) status.textContent = "Saving recipe to GitHub…";
-  window.CookbookRating?.setSavingState(busy);
+  // Only rating-only saves animate the star control. Recipe edits keep
+  // progress feedback on the regular Save button.
+  window.CookbookRating?.setSavingState(busy && ratingSave);
 }
 
 const clone = object => JSON.parse(JSON.stringify(object));
@@ -433,8 +435,9 @@ async function publish({silent=false}={}) {
   const url = "https://api.github.com/repos/MrJag/Recipes/contents/" + path;
   const headers = {"Authorization":"Bearer " + token,"Accept":"application/vnd.github+json",
                    "X-GitHub-Api-Version":"2022-11-28"};
+  const savingRating = ratingOnlySave;
   saveInProgress = true;
-  setSavingState(true);
+  setSavingState(true, savingRating);
   feedback.textContent = "Checking latest GitHub revision…";
   try {
     const get = await fetch(url + "?ref=main",{headers,cache:"no-store"});
@@ -535,7 +538,7 @@ async function publish({silent=false}={}) {
     if (!saveDialog.open) saveDialog.showModal();
   } finally {
     saveInProgress = false;
-    setSavingState(false);
+    setSavingState(false, savingRating);
   }
 }
 editButton.addEventListener("click",()=> editing ? close() : start());
