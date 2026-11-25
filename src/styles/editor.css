@@ -613,18 +613,18 @@ body:has(#ratingOptions:not([hidden])) .edit-sheet .edit-recipe-rating .rating-l
 .edit-sheet .edit-insert-slot::marker {content:""!important}
 .edit-sheet .edit-insert-slot::before {
   content:"";position:absolute;left:0;right:0;top:50%;
-  border-top:1px dashed #b58b74;
+  border-top:1px dashed #d4b7a5;
   opacity:0;pointer-events:none;transition:opacity .12s ease;
 }
 .edit-sheet .edit-insert-at {
   position:absolute;right:0;top:50%;transform:translateY(-50%);
-  width:26px;height:26px;padding:0;
-  border:1px solid #a46b4d;border-radius:50%;
+  width:22px;height:22px;padding:0 0 1px;
+  border:1px solid #b58b74;border-radius:50%;
   background:#fffaf4;color:#82462c;
-  font:700 19px/1 Arial,sans-serif;cursor:pointer;
+  font:600 15px/1 Arial,sans-serif;cursor:pointer;
   opacity:0;pointer-events:none;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 1px 3px #0002;
+  display:grid;place-items:center;
+  box-shadow:0 1px 2px #0001;
 }
 .edit-sheet .edit-insert-slot:hover::before,
 .edit-sheet .edit-insert-slot:focus-within::before,
