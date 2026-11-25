@@ -1,6 +1,13 @@
 {
   "recipes": [
     {
+      "slug": "fennel-apple-salad",
+      "title": "Fennel Apple Salad",
+      "description": "Recently added to the cookbook.",
+      "photo": null,
+      "draft": true
+    },
+    {
       "slug": "crispy-blanched-brussels-sprouts",
       "title": "Crispy Brussels Sprouts",
       "description": "Oven or Air Fryer",
@@ -13,13 +20,6 @@
       "description": "A bright, apple-forward bourbon sour designed around Fowler Farms Sweetango pure apple cider.",
       "photo": "./public/images/sweetango-orchard-sour-v2.jpg",
       "draft": true
-    },
-    {
-      "slug": "oven-baked-bacon",
-      "title": "Oven-Baked Bacon (Tender or Crispy)",
-      "description": "400°F oven · One tray, two textures",
-      "photo": "./public/images/oven-baked-bacon.jpg",
-      "draft": false
     }
   ]
 }
