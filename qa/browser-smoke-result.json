@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-25T03:41:44.125Z",
+  "date": "2026-11-25T03:58:37.351Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -447,7 +447,7 @@
     },
     {
       "label": "Recipe viewer displays saved direction headings",
-      "pass": true
+      "pass": false
     },
     {
       "label": "Recipe viewer numbers directions sequentially across headings",
@@ -606,7 +606,7 @@
       "pass": true
     },
     {
-      "label": "Rating-only save animates star icon",
+      "label": "Rating button stays disabled without a duplicate spinner",
       "pass": true
     },
     {
@@ -749,7 +749,8 @@
   "errors": [
     "Directory filtering loads",
     "Search clears category selection",
-    "Saving a recipe preserves blank lines between description paragraphs"
+    "Saving a recipe preserves blank lines between description paragraphs",
+    "Recipe viewer displays saved direction headings"
   ],
   "pass": false
 }
