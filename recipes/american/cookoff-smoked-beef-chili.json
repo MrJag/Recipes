@@ -72,8 +72,7 @@
         "12 oz bacon, diced into 1 cm pieces",
         "¼ cup water",
         "225 g onion (1 medium)",
-        "2 serranos, deseeded and minced",
-        "Garlic, quantity unspecified"
+        "2 serranos, deseeded and minced"
       ]
     },
     {
@@ -140,6 +139,7 @@
   "reviewFlags": [
     "Review the source: the sofrito calls for garlic without a quantity, and the smoked-bean method does not specify whether to drain the soaking water. The author notes the recipe was reconstructed from notes and may contain omissions."
   ],
-  "headnote": "Review the source: the sofrito calls for garlic without a quantity, and the smoked-bean method does not specify whether to drain the soaking water. The author notes the recipe was reconstructed from notes and may contain omissions.",
-  "subtitle": ""
+  "headnote": "Developed for the 2026 Toyota Chili Cookoff.  1st place.",
+  "subtitle": "",
+  "rating": 5
 }
