@@ -519,17 +519,6 @@ body:has(#ratingOptions:not([hidden])) .edit-sheet .edit-recipe-rating .rating-l
   .recipe-save-dialog .is-saving::before {animation:none;border-style:dotted}
 }
 
-/* Indicate in-flight rating commits on the star icon itself. */
-.recipe-action-rail .rating-toggle.is-saving::before{content:none}
-.recipe-action-rail .rating-toggle.is-saving::after{
-  content:"";position:absolute;right:-4px;bottom:-4px;width:12px;height:12px;
-  border:2px solid #fff;border-right-color:transparent;border-radius:50%;
-  background:#566343;animation:recipe-save-spin .7s linear infinite;
-}
-@media(prefers-reduced-motion:reduce){
-  .recipe-action-rail .rating-toggle.is-saving::after{animation:none;border-style:dotted}
-}
-
 /* Prominent, persistent rating-save feedback in the opened star menu. */
 .recipe-action-rail .rating-save-progress {
   display:inline-flex;

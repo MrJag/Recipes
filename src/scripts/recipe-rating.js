@@ -113,7 +113,6 @@
     setSavingState(busy) {
       saving = Boolean(busy);
       toggle.disabled = saving;
-      toggle.classList.toggle("is-saving", saving);
       toggle.setAttribute("aria-busy", String(saving));
       stars.setAttribute("aria-busy", String(saving));
       progress.hidden = !saving;

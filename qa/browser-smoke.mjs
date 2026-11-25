@@ -480,8 +480,10 @@ try {
  check(await page.locator('#ratingSaveProgress').textContent() === 'Saving rating…',
    'Rating save displays prominent Saving rating feedback');
  check(await page.locator('#ratingRecipeButton').evaluate(el =>
-   el.classList.contains('is-saving')),
-   'Rating-only save animates star icon');
+   el.disabled && !el.classList.contains('is-saving') &&
+   getComputedStyle(el,'::before').animationName === 'none' &&
+   getComputedStyle(el,'::after').animationName === 'none'),
+   'Rating button stays disabled without a duplicate spinner');
  check(await page.locator('#ratingSaveProgress .rating-save-spinner').evaluate(el =>
    getComputedStyle(el).animationName === 'recipe-save-spin'),
    'Rating save progress spinner is animated');
