@@ -1,6 +1,13 @@
 {
   "recipes": [
     {
+      "slug": "chicken-langoustine-paella",
+      "title": "Chicken and Langoustine Paella",
+      "description": "Recently added to the cookbook.",
+      "photo": "./public/images/chicken-langoustine-paella.jpg",
+      "draft": true
+    },
+    {
       "slug": "forno-bravo-smashed-tomato-sauce",
       "title": "Smashed Tomato Pizza Sauce",
       "description": "A simple uncooked sauce for a wood-fired pizza oven. The source suggests trying it cooked first when using a pizza stone.",
@@ -12,13 +19,6 @@
       "title": "Paneer Butter Masala",
       "description": "Stovetop Version",
       "photo": "./public/images/paneer-butter-masala-stovetop.jpg",
-      "draft": true
-    },
-    {
-      "slug": "ultimate-butter-chicken",
-      "title": "The Ultimate Butter Chicken",
-      "description": "Recently added to the cookbook.",
-      "photo": "./public/images/ultimate-butter-chicken.jpg",
       "draft": true
     }
   ]
