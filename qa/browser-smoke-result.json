@@ -1,6 +1,26 @@
 {
-  "date": "2026-11-25T03:58:37.351Z",
+  "date": "2026-11-25T04:07:43.617Z",
   "checks": [
+    {
+      "label": "Whiskey Cake has original and home adaptation version buttons",
+      "pass": true
+    },
+    {
+      "label": "Both Whiskey Cake versions show Draft badges",
+      "pass": true
+    },
+    {
+      "label": "Chef John Franke version loads as the original",
+      "pass": true
+    },
+    {
+      "label": "Home adaptation displays when selected",
+      "pass": true
+    },
+    {
+      "label": "Original version can be restored",
+      "pass": true
+    },
     {
       "label": "Direct recipe URL displays viewer",
       "pass": true
