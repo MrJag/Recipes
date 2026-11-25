@@ -1,43 +1,47 @@
 {
   "schemaVersion": "0.1",
   "id": "whiskey-date-cake",
-  "title": "Whiskey Date Cake",
+  "title": "Whiskey Cake — Chef John Franke",
   "category": "Dessert",
   "status": "draft",
+  "defaultVariant": -1,
   "photo": "./public/images/whiskey-date-cake.jpg",
+  "subtitle": "Original recipe · Chef John Franke · 9 servings",
+  "yield": "9 servings",
+  "headnote": "Chef John Franke's original Whiskey Cake Kitchen recipe, published by NBC 5 Dallas–Fort Worth. The cake is served with whiskey custard sauce, toffee sauce, spiced pecans and whipped cream.",
   "ingredientGroups": [
     {
       "title": "Date cake",
       "items": [
-        "1 (8 oz) package dried pitted dates, chopped into ½-inch pieces",
-        "2 tsp baking soda",
-        "1¾ cups boiling water",
-        "1 stick unsalted butter, softened",
-        "1 cup plus 2 Tbsp granulated sugar",
-        "3 jumbo eggs, room temperature",
+        "2 cups pitted dates, chopped into ½-inch pieces",
+        "1 tsp baking soda",
+        "2 cups boiling water",
+        "1 cup unsalted butter, softened",
+        "1 cup granulated sugar",
+        "2 jumbo eggs",
         "1¾ cups self-rising flour",
-        "3 Tbsp turbinado sugar",
-        "Nonstick pan spray"
+        "Nonstick pan spray, as needed",
+        "2 Tbsp Sugar in the Raw (turbinado sugar)"
       ]
     },
     {
-      "title": "Bourbon sauce",
+      "title": "Whiskey sauce",
       "items": [
-        "2 cups heavy cream",
-        "½ cup granulated sugar, divided",
-        "1 vanilla bean, split",
-        "4 jumbo egg yolks",
-        "1 tsp vanilla extract",
-        "2 Tbsp bourbon"
+        "1 cup heavy cream",
+        "4 Tbsp granulated sugar, divided into 2 Tbsp portions",
+        "½ vanilla bean, split",
+        "2½ egg yolks (as written in source)",
+        "½ tsp vanilla extract",
+        "1 tsp Irish whiskey"
       ]
     },
     {
       "title": "Toffee sauce",
       "items": [
-        "1 stick unsalted butter",
-        "1 lb light brown sugar",
+        "¼ lb unsalted butter",
+        "1 lb brown sugar",
         "2 cups heavy cream",
-        "2 Tbsp bourbon",
+        "2 Tbsp whiskey",
         "1 Tbsp vanilla extract"
       ]
     },
@@ -55,27 +59,115 @@
     {
       "title": "Whipped cream",
       "items": [
-        "2 cups heavy cream",
+        "½ quart heavy cream",
         "½ cup granulated sugar",
         "1 tsp vanilla extract"
       ]
     }
   ],
   "steps": [
-    "Date cake: Heat oven to 350°. Combine dates, baking soda and boiling water; soak 15–20 minutes. Process the date mixture for 2 minutes to form a paste.",
-    "Cream the butter in a stand mixer for about 1 minute. Add sugar and cream 3 minutes more. Scrape the bowl; add eggs one at a time, mixing between additions. Mix in the flour on low speed, about ½ cup at a time, just until incorporated. Fold in the date paste.",
-    "Spray an 8 × 14-inch cake pan and coat its bottom and sides with turbinado sugar. Pour in batter and bake 30–40 minutes, until a toothpick comes out clean. Cool 20 minutes; turn onto a parchment-lined tray and cool completely.",
-    "Optional self-rising flour blend from the source: mix 3 cups all-purpose flour, 2 tsp iodized salt and 1 Tbsp baking powder. Use immediately or keep airtight; measure the 1¾ cups needed for the cake from the blend.",
-    "Bourbon sauce: Bring cream, ¼ cup sugar and vanilla bean to a simmer. Whisk the yolks and remaining ¼ cup sugar until frothy. Slowly whisk in half the hot cream, then return to the pot and cook over medium-low until thick enough to coat a spoon.",
-    "Stir in vanilla extract and bourbon; remove from heat, strain and cool in an ice bath. Use immediately or refrigerate; if chilled, reheat at 50% microwave power in 10-second intervals until slightly warm and pourable.",
-    "Toffee sauce: Melt butter over medium heat, add brown sugar and cook about 8 minutes, stirring occasionally. Add cream and cook 6–7 minutes more. Remove from heat and stir in bourbon and vanilla. Use immediately or refrigerate up to 3 days; reheat before use.",
-    "Spiced pecans: Heat oven to 350°. Mix water, syrup, salt and peppers; toss with pecans to coat. Spread on a foil-lined baking sheet and bake 12–15 minutes. Scrape from the pan and break up clumps immediately; cool completely. Store airtight at room temperature.",
-    "Whipped cream: Whip cream, sugar and vanilla, starting at low speed and increasing to high, until slightly stiff peaks form. Use immediately or refrigerate.",
-    "To serve: Cut cake into 12 pieces and poke several holes in each. Place on a nonstick foil-lined baking sheet. Heat oven to 500° and pour ¼ cup toffee sauce over each piece. Warm for 4–5 minutes, until bubbling.",
-    "Spoon ¼ cup bourbon sauce onto each plate; add warm cake, whipped cream and spiced pecans."
+    "Date cake: Combine chopped dates, baking soda and boiling water. Let stand 15–20 minutes to soften; process the mixture for 2 minutes into a paste.",
+    "In a mixer fitted with a paddle, beat softened butter and sugar on medium until smooth; scrape the sides of the bowl. Fold in the date paste with a rubber spatula.",
+    "Spray an 8 × 14-inch cake pan with nonstick spray. Add 2 Tbsp turbinado sugar and shake to coat the bottom and sides. Pour batter into the pan.",
+    "Bake at 350°F for 30–40 minutes or until firm throughout. Cool at room temperature for 20 minutes, turn out onto a paper-lined tray and cool completely. Wrap and keep at room temperature or serve.",
+    "Whiskey sauce: Bring heavy cream, 2 Tbsp sugar and split vanilla bean to a simmer. Whisk the other 2 Tbsp sugar with the egg yolks until foamy. Temper with half the hot cream, return to the pot, add vanilla bean and cook over medium heat until thick.",
+    "Add Irish whiskey and vanilla extract, remove from heat and strain through a chinois into a container set in an ice bath. Cool, cover and refrigerate until needed.",
+    "Toffee sauce: Melt butter in a heavy saucepan over medium heat. Add brown sugar and cook over medium-high heat for 10 minutes, stirring occasionally. Add cream and cook 7 minutes more. Remove from heat and stir in whiskey and vanilla. Cool over ice or use immediately; refrigerate for up to 3 days and reheat before serving.",
+    "Spiced pecans: Mix pecans, water, maple syrup, salt and peppers; spread on a cookie sheet. Toast at 350°F for approximately 10–12 minutes. Immediately scrape pecans from the pan to prevent sticking; cool and store airtight.",
+    "Whipped cream: Whip heavy cream, sugar and vanilla in a mixer until stiff peaks form. Transfer to a container and refrigerate or serve.",
+    "To serve: Cut the cake into 9 pieces and poke several holes in each. Pour 2 oz warm toffee sauce over each piece and warm in a 500°F oven for 4–5 minutes until bubbling. Pour 2 oz whiskey sauce onto each plate, add cake, chopped spiced pecans and a large dollop of whipped cream."
   ],
   "reviewFlags": [
-    "The source contains two different versions. This is its separately labeled 12-serving alternate; confirm whether the nine-serving original should also be included. The source lists oven temperatures in degrees without a temperature scale."
+    "Chef Franke's source lists 2 jumbo eggs but does not specify when to add them in the cake procedure. Verify egg incorporation before preparing.",
+    "The whiskey sauce calls for 2½ egg yolks; unusual fractional amount preserved exactly from source.",
+    "The original recipe's toffee-sauce instructions say 'bourbon' although its ingredient list says 'whiskey'; the ingredient listing is retained.",
+    "Original lists temperatures as degrees without explicitly stating Fahrenheit; °F is assumed from the Dallas-area recipe context."
   ],
-  "headnote": "The source contains two different versions. This is its separately labeled 12-serving alternate; confirm whether the nine-serving original should also be included. The source lists oven temperatures in degrees without a temperature scale. Adapted from Whiskey Cake."
+  "sourceDriveUrl": "https://docs.google.com/document/d/1scyq18JsE9r0rdpo9Sla9IYgshpM5Nw2qsEprAOr_QQ/edit?usp=drivesdk",
+  "sourceNote": "Original by Chef John Franke, Executive Chef of Frontburner Restaurants, as reproduced in NBC 5 Dallas–Fort Worth, 'Chef John Franke’s Whiskey Cake'. Archived in the linked Google Drive document.",
+  "variants": [
+    {
+      "title": "Whiskey Cake — Home Adaptation",
+      "subtitle": "Home adaptation · Culinary Crumbs · 12 servings",
+      "status": "draft",
+      "yield": "12 servings",
+      "headnote": "Home adaptation from Culinary Crumbs ('Wildly Wonderful Whiskey Cake', November 7, 2011), based on Whiskey Cake in Plano, Texas. Compared with Chef John Franke's original, this adaptation uses different cake and sauce proportions and a bourbon-based custard sauce.",
+      "ingredientGroups": [
+        {
+          "title": "Date cake",
+          "items": [
+            "1 (8 oz) package dried pitted dates, chopped into ½-inch pieces",
+            "2 tsp baking soda",
+            "1¾ cups boiling water",
+            "1 stick unsalted butter, softened",
+            "1 cup plus 2 Tbsp granulated sugar",
+            "3 jumbo eggs, room temperature",
+            "1¾ cups self-rising flour",
+            "3 Tbsp turbinado sugar",
+            "Nonstick pan spray"
+          ]
+        },
+        {
+          "title": "Bourbon sauce",
+          "items": [
+            "2 cups heavy cream",
+            "½ cup granulated sugar, divided",
+            "1 vanilla bean, split",
+            "4 jumbo egg yolks",
+            "1 tsp vanilla extract",
+            "2 Tbsp bourbon"
+          ]
+        },
+        {
+          "title": "Toffee sauce",
+          "items": [
+            "1 stick unsalted butter",
+            "1 lb light brown sugar",
+            "2 cups heavy cream",
+            "2 Tbsp bourbon",
+            "1 Tbsp vanilla extract"
+          ]
+        },
+        {
+          "title": "Spiced pecans",
+          "items": [
+            "1 lb pecan halves",
+            "2 tsp water",
+            "¾ cup maple syrup",
+            "½ tsp kosher salt",
+            "½ tsp black pepper",
+            "½ tsp cayenne pepper"
+          ]
+        },
+        {
+          "title": "Whipped cream",
+          "items": [
+            "2 cups heavy cream",
+            "½ cup granulated sugar",
+            "1 tsp vanilla extract"
+          ]
+        }
+      ],
+      "steps": [
+        "Date cake: Heat oven to 350°. Combine dates, baking soda and boiling water; soak 15–20 minutes. Process the date mixture for 2 minutes to form a paste.",
+        "Cream the butter in a stand mixer for about 1 minute. Add sugar and cream 3 minutes more. Scrape the bowl; add eggs one at a time, mixing between additions. Mix in the flour on low speed, about ½ cup at a time, just until incorporated. Fold in the date paste.",
+        "Spray an 8 × 14-inch cake pan and coat its bottom and sides with turbinado sugar. Pour in batter and bake 30–40 minutes, until a toothpick comes out clean. Cool 20 minutes; turn onto a parchment-lined tray and cool completely.",
+        "Optional self-rising flour blend from the source: mix 3 cups all-purpose flour, 2 tsp iodized salt and 1 Tbsp baking powder. Use immediately or keep airtight; measure the 1¾ cups needed for the cake from the blend.",
+        "Bourbon sauce: Bring cream, ¼ cup sugar and vanilla bean to a simmer. Whisk the yolks and remaining ¼ cup sugar until frothy. Slowly whisk in half the hot cream, then return to the pot and cook over medium-low until thick enough to coat a spoon.",
+        "Stir in vanilla extract and bourbon; remove from heat, strain and cool in an ice bath. Use immediately or refrigerate; if chilled, reheat at 50% microwave power in 10-second intervals until slightly warm and pourable.",
+        "Toffee sauce: Melt butter over medium heat, add brown sugar and cook about 8 minutes, stirring occasionally. Add cream and cook 6–7 minutes more. Remove from heat and stir in bourbon and vanilla. Use immediately or refrigerate up to 3 days; reheat before use.",
+        "Spiced pecans: Heat oven to 350°. Mix water, syrup, salt and peppers; toss with pecans to coat. Spread on a foil-lined baking sheet and bake 12–15 minutes. Scrape from the pan and break up clumps immediately; cool completely. Store airtight at room temperature.",
+        "Whipped cream: Whip cream, sugar and vanilla, starting at low speed and increasing to high, until slightly stiff peaks form. Use immediately or refrigerate.",
+        "To serve: Cut cake into 12 pieces and poke several holes in each. Place on a nonstick foil-lined baking sheet. Heat oven to 500° and pour ¼ cup toffee sauce over each piece. Warm for 4–5 minutes, until bubbling.",
+        "Spoon ¼ cup bourbon sauce onto each plate; add warm cake, whipped cream and spiced pecans."
+      ],
+      "reviewFlags": [
+        "Home adaptation has distinct 12-serving ingredients and method; do not substitute quantities from Chef John Franke's original.",
+        "The source's self-rising flour mix is an optional separate blend; recipe only uses 1¾ cups of the resulting blend.",
+        "Source lists oven temperatures in degrees without stating scale; °F assumed."
+      ],
+      "sourceDriveUrl": "https://docs.google.com/document/d/1scyq18JsE9r0rdpo9Sla9IYgshpM5Nw2qsEprAOr_QQ/edit?usp=drivesdk",
+      "sourceNote": "Home adaptation from Culinary Crumbs, 'Wildly Wonderful Whiskey Cake' (November 7, 2011), reproduced in the alternate section of the linked Google Drive document."
+    }
+  ]
 }
