@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "0.1",
+  "category": "Dessert",
+  "status": "draft",
+  "subtitle": "Pumpkin cheesecake · Gingersnap and mixed-nut crust",
+  "yield": "8 servings · 9-inch springform pan",
+  "ingredientGroups": [
+    {
+      "title": "Gingersnap and mixed-nut crust",
+      "items": [
+        "28 g finely chopped pecans",
+        "35 g finely chopped almonds",
+        "30 g finely chopped walnuts",
+        "75 g finely crushed gingersnaps",
+        "28 g unsalted butter, melted, plus more for greasing"
+      ]
+    },
+    {
+      "title": "Pumpkin cheesecake filling",
+      "items": [
+        "680 g full-fat cream cheese, room temperature",
+        "150 g granulated sugar",
+        "117 g light brown sugar",
+        "5 large eggs, room temperature",
+        "120 g full-fat sour cream, room temperature",
+        "340 g pure pumpkin purée, room temperature",
+        "30 g all-purpose flour",
+        "2 tsp vanilla bean paste",
+        "1 tsp fresh lemon juice",
+        "1½ tsp ground cinnamon",
+        "½ tsp ground ginger",
+        "¼ tsp ground nutmeg",
+        "¼ tsp ground allspice",
+        "⅛ tsp ground cloves",
+        "¼ tsp fine sea salt"
+      ]
+    },
+    {
+      "title": "Salted bourbon caramel and garnish",
+      "items": [
+        "150 g granulated sugar",
+        "40 g water",
+        "100 g heavy cream, warmed",
+        "40 g unsalted butter, diced",
+        "1 Tbsp bourbon",
+        "½ tsp fine sea salt, or to taste",
+        "40 g toasted pecans, roughly chopped"
+      ]
+    }
+  ],
+  "steps": [
+    "Preheat the oven to 325°F with a rack in the center. Butter a 9-inch springform pan. Wrap the outside of the base and sides in two or three overlapping layers of wide heavy-duty aluminum foil, extending above the intended water line. Set a kettle of water to heat.",
+    "Mix the finely chopped nuts, gingersnap crumbs and melted butter. Press firmly into the base and about 1½ inches up the sides of the pan. No separate crust bake is needed.",
+    "Beat the room-temperature cream cheese on low speed until smooth. Add both sugars gradually and scrape the bowl. Mix in the flour, spices, salt, vanilla and lemon juice. Blot the pumpkin purée if watery before weighing it; mix in the pumpkin and sour cream until uniform.",
+    "Add the eggs one at a time on low speed, mixing just until incorporated. Avoid beating air into the batter.",
+    "Pour the batter into the prepared crust. Set the wrapped springform pan in a larger roasting pan. Place on the center oven rack and carefully pour hot water into the roasting pan until it reaches halfway up the springform pan, below the top of the foil.",
+    "Bake at 325°F, beginning to check at 75 minutes. Allow approximately 75–95 minutes, checking every 5–10 minutes until the edges are set and the central 2–3 inches wobble gently as a unit, not as liquid.",
+    "Turn off the oven, prop the door slightly open and leave the cheesecake in the water bath in the oven for 1 hour. Carefully remove the springform pan from the water bath, discard the foil and set it on a wire rack. Cool at room temperature until no longer warm, then refrigerate within 2 hours of removing it from the oven.",
+    "Cover and refrigerate the cheesecake for 24 hours before releasing the springform ring.",
+    "For the caramel, combine sugar and water in a medium heavy-bottomed saucepan. Heat over medium heat without stirring until deep amber; swirl the pan gently if needed.",
+    "Remove from the heat. Carefully whisk in the warm cream in small additions (the caramel will bubble vigorously). Whisk in the butter and salt. Once bubbling subsides, whisk in the bourbon off the heat. Cool to room temperature; if making ahead, refrigerate and gently rewarm to a pourable consistency.",
+    "Drizzle the cooled caramel over the chilled cheesecake just before serving. Scatter with toasted pecans and cut with a hot, wiped knife. Serve extra sauce alongside."
+  ],
+  "reviewFlags": [
+    "Proposed pumpkin adaptation of Marianna’s Cheesecake; filling, crust and topping quantities have not been kitchen-tested. Check doneness rather than relying on the estimated time.",
+    "Recipe photograph pending; the cookbook will display its photo placeholder."
+  ],
+  "sourceNote": "Adapted from Marianna’s Cheesecake (Cheesecake Factory–style), with pumpkin replacing most of the sour cream.",
+  "ingredientNotes": [
+    "Use pure pumpkin purée, not sweetened pumpkin pie filling. Bring all filling ingredients to room temperature.",
+    "For a thicker crust, double the crust ingredients."
+  ],
+  "id": "pumpkin-cheesecake-bourbon-caramel",
+  "title": "Pumpkin Cheesecake with Salted Bourbon Caramel",
+  "headnote": "Creamy spiced pumpkin cheesecake with a gingersnap and mixed-nut crust, finished with salted bourbon caramel and toasted pecans."
+}
