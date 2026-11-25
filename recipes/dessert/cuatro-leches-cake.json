@@ -5,7 +5,7 @@
   "category": "Dessert",
   "status": "draft",
   "defaultVariant": -1,
-  "photo": "./public/images/cuatro-leches-cake.jpg",
+  "photo": "./public/images/cuatro-leches-original.jpg",
   "yield": "One 8-inch cake",
   "subtitle": "Original La Duni Latin Café recipe · Pastry chef Dunia Borga",
   "headnote": "The original La Duni Cuatro Leches: vanilla mantecada sponge layered with three-milk soak, covered in caramelized meringue, and finished with arequipe sauce. Transcribed from the original restaurant PDF; source inconsistencies are flagged rather than silently corrected.",
@@ -103,7 +103,7 @@
     {
       "title": "Cuatro Leches Cake",
       "status": "draft",
-      "photo": "./public/images/cuatro-leches-cake.jpg",
+      "photo": "./public/images/cuatro-leches-updated.jpg",
       "subtitle": "Updated by CraftyBaking",
       "yield": "Two 9-inch cake layers, assembled as one tall cake",
       "headnote": "CraftyBaking's tested revision of chef Dunia Borga's La Duni cake. The cake batter and procedures are revised, sauce proportions are smaller, and two baked layers are each split for assembly.",
@@ -199,7 +199,7 @@
     {
       "title": "Panque de Limón — Lemon-Curd Variation",
       "status": "draft",
-      "photo": "./public/images/cuatro-leches-cake.jpg",
+      "photo": "./public/images/panque-de-limon.jpg",
       "subtitle": "La Duni lemon variation · complete home rendition",
       "yield": "One layered 9-inch cake (from two cakes)",
       "headnote": "CraftyBaking describes chef Dunia Borga's Panque de Limón as mantecada cake layered with fresh lemon curd, topped with caramelized meringue and candied lemon peel, and served with raspberry purée. The source gives no quantities for those three added elements; this complete home rendition uses independently attributed supplemental recipes and quantities. This version does NOT use the three-milk soak or arequipe.",
