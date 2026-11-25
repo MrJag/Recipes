@@ -4,14 +4,14 @@
       "slug": "pumpkin-cheesecake-bourbon-caramel",
       "title": "Pumpkin Cheesecake with Salted Bourbon Caramel",
       "description": "Pumpkin cheesecake · Gingersnap and mixed-nut crust",
-      "photo": null,
+      "photo": "./public/images/pumpkin-cheesecake-bourbon-caramel.jpg",
       "draft": true
     },
     {
       "slug": "pumpkin-cheesecake-vanilla-sour-cream",
       "title": "Pumpkin Cheesecake with Vanilla Sour Cream",
       "description": "Pumpkin cheesecake · Gingersnap and mixed-nut crust",
-      "photo": null,
+      "photo": "./public/images/pumpkin-cheesecake-vanilla-sour-cream.jpg",
       "draft": true
     },
     {

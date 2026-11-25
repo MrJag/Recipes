@@ -57,8 +57,7 @@
     "Refrigerate for at least 30 minutes to chill the topping. Slice with a hot, wiped knife. Keep refrigerated until serving."
   ],
   "reviewFlags": [
-    "Proposed pumpkin adaptation of Marianna’s Cheesecake; filling, crust and topping quantities have not been kitchen-tested. Check doneness rather than relying on the estimated time.",
-    "Recipe photograph pending; the cookbook will display its photo placeholder."
+    "Proposed pumpkin adaptation of Marianna’s Cheesecake; filling, crust and topping quantities have not been kitchen-tested. Check doneness rather than relying on the estimated time."
   ],
   "sourceNote": "Adapted from Marianna’s Cheesecake (Cheesecake Factory–style), with pumpkin replacing most of the sour cream.",
   "ingredientNotes": [
@@ -67,5 +66,6 @@
   ],
   "id": "pumpkin-cheesecake-vanilla-sour-cream",
   "title": "Pumpkin Cheesecake with Vanilla Sour Cream",
-  "headnote": "Creamy spiced pumpkin cheesecake with a gingersnap and mixed-nut crust and a thin, tangy vanilla sour cream topping."
+  "headnote": "Creamy spiced pumpkin cheesecake with a gingersnap and mixed-nut crust and a thin, tangy vanilla sour cream topping.",
+  "photo": "./public/images/pumpkin-cheesecake-vanilla-sour-cream.jpg"
 }

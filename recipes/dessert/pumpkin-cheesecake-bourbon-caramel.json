@@ -62,8 +62,7 @@
     "Drizzle the cooled caramel over the chilled cheesecake just before serving. Scatter with toasted pecans and cut with a hot, wiped knife. Serve extra sauce alongside."
   ],
   "reviewFlags": [
-    "Proposed pumpkin adaptation of Marianna’s Cheesecake; filling, crust and topping quantities have not been kitchen-tested. Check doneness rather than relying on the estimated time.",
-    "Recipe photograph pending; the cookbook will display its photo placeholder."
+    "Proposed pumpkin adaptation of Marianna’s Cheesecake; filling, crust and topping quantities have not been kitchen-tested. Check doneness rather than relying on the estimated time."
   ],
   "sourceNote": "Adapted from Marianna’s Cheesecake (Cheesecake Factory–style), with pumpkin replacing most of the sour cream.",
   "ingredientNotes": [
@@ -72,5 +71,6 @@
   ],
   "id": "pumpkin-cheesecake-bourbon-caramel",
   "title": "Pumpkin Cheesecake with Salted Bourbon Caramel",
-  "headnote": "Creamy spiced pumpkin cheesecake with a gingersnap and mixed-nut crust, finished with salted bourbon caramel and toasted pecans."
+  "headnote": "Creamy spiced pumpkin cheesecake with a gingersnap and mixed-nut crust, finished with salted bourbon caramel and toasted pecans.",
+  "photo": "./public/images/pumpkin-cheesecake-bourbon-caramel.jpg"
 }
