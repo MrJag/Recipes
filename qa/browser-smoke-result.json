@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24T21:47:32.351Z",
+  "date": "2026-11-25T03:33:52.341Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -27,7 +27,7 @@
     },
     {
       "label": "Directory filtering loads",
-      "pass": true
+      "pass": false
     },
     {
       "label": "Drinks category filtering matches taxonomy",
@@ -87,7 +87,7 @@
     },
     {
       "label": "Search clears category selection",
-      "pass": true
+      "pass": false
     },
     {
       "label": "Search shortcut updates to shareable anchor",
@@ -330,7 +330,15 @@
       "pass": true
     },
     {
-      "label": "Directions use automatic numbering",
+      "label": "Directions use custom circular numbering as in read mode",
+      "pass": true
+    },
+    {
+      "label": "Edit mode uses the same grid and circular step numbering as read mode",
+      "pass": true
+    },
+    {
+      "label": "Directions use the same body font in reading and editing modes",
       "pass": true
     },
     {
@@ -698,6 +706,14 @@
       "pass": true
     },
     {
+      "label": "Fennel Apple Salad uses the full-resolution photo rather than a placeholder",
+      "pass": true
+    },
+    {
+      "label": "Fennel Apple Salad edit mode keeps cookbook font and circular direction numbers",
+      "pass": true
+    },
+    {
       "label": "Florentine recipe renders high-resolution portrait image",
       "pass": true
     },
@@ -715,6 +731,8 @@
     }
   ],
   "errors": [
+    "Directory filtering loads",
+    "Search clears category selection",
     "Saving a recipe preserves blank lines between description paragraphs"
   ],
   "pass": false
