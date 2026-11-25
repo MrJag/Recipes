@@ -204,7 +204,15 @@ try {
  check(await page.locator('.edit-sheet .edit-headnote[contenteditable="true"]').count()===1,'Description is inline editable and italicized');
  check(await page.locator('.edit-sheet .edit-headnote').evaluate(el => getComputedStyle(el).fontStyle === 'italic'),'Description actually renders italic');
  check(await page.locator('.edit-sheet .ingredients ul').evaluate(el => getComputedStyle(el).columnCount === '1'),'Short ingredient lists stay single column');
- check(await page.locator('.edit-sheet .edit-directions ol').evaluate(el => getComputedStyle(el).listStyleType === 'decimal'),'Directions use automatic numbering');
+ check(await page.locator('.edit-sheet .edit-directions ol').evaluate(el => getComputedStyle(el).listStyleType === 'none'),'Directions use custom circular numbering as in read mode');
+ check(await page.locator('.edit-sheet .edit-directions li.edit-list-item').first().evaluate(el =>
+   getComputedStyle(el).display === 'grid' && getComputedStyle(el,'::before').content !== 'none'),
+   'Edit mode uses the same grid and circular step numbering as read mode');
+ check(await page.locator('.edit-sheet .edit-directions li.edit-list-item').first().evaluate(el => {
+   const read=document.querySelector('#pages .recipe-step');
+   return !read || (getComputedStyle(el).fontFamily === getComputedStyle(read).fontFamily &&
+     getComputedStyle(el).fontSize === getComputedStyle(read).fontSize);
+ }), 'Directions use the same body font in reading and editing modes');
  check(await page.locator('.edit-sheet .ingredients ul li[contenteditable="true"]').count()>=6,'Ingredients remain editable bullet points');
  check(await page.locator('.edit-sheet .edit-directions ol li[contenteditable="true"]').count()>=3,'Directions remain editable numbered steps');
  // Insertion lines appear between items on hover and create editable headings.
@@ -606,6 +614,20 @@ try {
  await page.locator('#dismissSaveDialog').click();
  await page.unrouteAll();
  await page.unrouteAll();
+ // Salad image must load at full portrait resolution in the actual viewer.
+ await page.goto('http://localhost:8123/recipe.html?recipe=fennel-apple-salad',{waitUntil:'load'});
+ await page.waitForFunction(() => {
+   const img=document.querySelector('#pages .sheet.has-photo .strip-image');
+   return img?.complete && img.naturalWidth > 0;
+ });
+ check(await page.locator('#pages .sheet.has-photo .strip-image').evaluate(el =>
+   el.naturalWidth>=1000 && el.naturalHeight>=1400 && el.currentSrc.includes('fennel-apple-salad.jpg')),
+   'Fennel Apple Salad uses the full-resolution photo rather than a placeholder');
+ await page.locator('#editRecipeButton').click();
+ check(await page.locator('.edit-sheet .edit-directions li.edit-list-item').first().evaluate(el =>
+   getComputedStyle(el).fontFamily.includes('Georgia') && getComputedStyle(el,'::before').content !== 'none'),
+   'Fennel Apple Salad edit mode keeps cookbook font and circular direction numbers');
+ await page.locator('#editRecipeButton').click();
  // High-resolution Florentine photo is loaded from its versioned image asset.
  await page.goto('http://localhost:8123/recipe.html?recipe=creamy-chicken-florentine',{waitUntil:'load'});
  await page.waitForFunction(() => {

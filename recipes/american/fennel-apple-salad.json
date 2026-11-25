@@ -29,5 +29,6 @@
     "The original Google Doc calls for 2 Tbsp cilantro, whereas the Bon Appétit source uses a small handful; the Google Doc quantity was preserved.",
     "The Bon Appétit yield of 8 servings applies to the combined pork-and-salad meal, not necessarily to the salad alone; standalone yield has not been specified."
   ],
-  "sourceNote": "Standalone fennel and apple salad adapted from Vivek Surti, “Spiced Roast Pork With Fennel and Apple Salad,” Bon Appétit (September 17, 2019): https://www.bonappetit.com/recipe/spiced-roast-pork-with-fennel-and-apple-salad. Original user recipe: https://docs.google.com/document/d/1qZiI4yeEdBmZbKPVcSFQ7Zd7kt0uKarNH9BBjALkuzM/edit"
+  "sourceNote": "Standalone fennel and apple salad adapted from Vivek Surti, “Spiced Roast Pork With Fennel and Apple Salad,” Bon Appétit (September 17, 2019): https://www.bonappetit.com/recipe/spiced-roast-pork-with-fennel-and-apple-salad. Original user recipe: https://docs.google.com/document/d/1qZiI4yeEdBmZbKPVcSFQ7Zd7kt0uKarNH9BBjALkuzM/edit",
+  "photo": "./public/images/fennel-apple-salad.jpg"
 }
