@@ -10,8 +10,24 @@
     if (!response.ok) throw new Error("Recent recipes unavailable");
     const payload = await response.json();
     if (!Array.isArray(payload.recipes) || !payload.recipes.length) return;
+    const selected = payload.recipes.slice(0, 3);
+    // The recent index supplies order, not authoritative display metadata.
+    const page = await fetch(new URL("./recipe.html", location.href), {cache:"no-cache"});
+    if (!page.ok) throw new Error("Recipe paths unavailable");
+    const catalog = new DOMParser().parseFromString(await page.text(), "text/html");
+    const paths = new Map([...catalog.querySelectorAll(".recipe-outline a[data-recipe]")].map(link => [
+      new URL(link.getAttribute("href"), new URL("./recipe.html", location.href)).searchParams.get("recipe"),
+      link.dataset.recipe
+    ]));
+    const metadata = await RecipeMetadata.mapLimit(selected, entry => RecipeMetadata.load(paths.get(entry.slug) || ""));
     const cards = document.createDocumentFragment();
-    for (const recipe of payload.recipes.slice(0, 3)) {
+    for (const [i, entry] of selected.entries()) {
+      const data = metadata[i].value;
+      if (metadata[i].error) console.warn("Using saved recent recipe details:", entry.slug, metadata[i].error);
+      const recipe = data ? {
+        ...entry, title:data.title, draft:data.status === "draft", photo:data.photo,
+        description:RecipeMetadata.description(data) || "Recently added to the cookbook."
+      } : entry;
       const link = document.createElement("a");
       link.className = "recent-recipe";
       link.href = "./recipe.html?recipe=" + encodeURIComponent(recipe.slug);

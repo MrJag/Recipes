@@ -43,6 +43,7 @@ const clearButton = $("clearFilters");
 const groupNav = $("groupNav");
 let taxonomy;
 let recipes = [];
+let metadataFailures = 0;
 let selectedGroups = [];
 let expandedGroup = null;
 
@@ -101,7 +102,7 @@ function renderHighlights(matching) {
     }
     const description = document.createElement("span");
     description.className = "highlight-description";
-    const note = byRecent.get(recipe.slug)?.description;
+    const note = recipe.description || byRecent.get(recipe.slug)?.description;
     description.textContent = note || [recipe.subgroup,recipe.cuisine].filter(Boolean).join(" · ");
     card.append(frame,title,description);
     highlights.appendChild(card);
@@ -145,7 +146,7 @@ function render() {
     (!selectedGroups.length || selectedGroups.includes(recipe.group)) &&
     (!cuisineFilter.value || recipe.cuisine === cuisineFilter.value) &&
     (!proteinFilter.value || recipe.proteins.includes(proteinFilter.value)) &&
-    (!term || [recipe.title, recipe.cuisine, recipe.group, recipe.subgroup, ...recipe.proteins]
+    (!term || [recipe.title, recipe.subtitle || "", recipe.cuisine, recipe.group, recipe.subgroup, ...recipe.proteins]
       .some(value => value.toLocaleLowerCase().includes(term)))
   );
   const bySlug = new Map(matching.map(recipe => [recipe.slug, recipe]));
@@ -200,6 +201,7 @@ function render() {
   status.textContent = matching.length
     ? `Showing ${matching.length} of ${recipes.length} recipes`
     : "No recipes match your filters. Try clearing the search or filters.";
+  if (metadataFailures) status.textContent += ` · ${metadataFailures} recipe(s) using saved listing details; reload to retry.`;
   updateGroupButtons();
   renderHighlights(matching);
 }
@@ -250,7 +252,7 @@ async function loadCatalog() {
     const assignment = mapped.get(slug);
     if (!assignment) throw new Error("Unclassified recipe: " + slug);
     return {
-      slug,title:link.textContent.trim(),url:url.href,
+      slug,path:link.dataset.recipe,title:link.textContent.trim(),url:url.href,
       cuisine:cuisineOverrides[slug] ?? (nonCuisineGroups.has(sourceGroup) ? "Unspecified" : sourceGroup),
       group:assignment.group,subgroup:assignment.subgroup,
       proteins:proteinBySlug.get(slug) || [],
@@ -258,6 +260,22 @@ async function loadCatalog() {
     };
   });
   if (!recipes.length || mapped.size !== recipes.length) throw new Error("Recipe taxonomy does not match catalog");
+  const metadata = await RecipeMetadata.mapLimit(recipes, recipe => RecipeMetadata.load(recipe.path));
+  metadata.forEach((result, i) => {
+    const entry = recipes[i];
+    if (result.error) {
+      metadataFailures++;
+      console.warn("Using saved listing details:", entry.slug, result.error);
+      return;
+    }
+    const data = result.value;
+    Object.assign(entry, {
+      title:data.title, subtitle:data.subtitle || "", draft:data.status === "draft",
+      description:RecipeMetadata.description(data), rating:data.rating, yield:data.yield
+    });
+    if (data.photo) featuredPhotoIndex[entry.slug] = data.photo;
+    else delete featuredPhotoIndex[entry.slug];
+  });
   recipes.sort((a,b)=>a.title.localeCompare(b.title));
   for (const cuisine of [...new Set(recipes.map(recipe=>recipe.cuisine))].sort()) {
     cuisineFilter.add(new Option(cuisine,cuisine));

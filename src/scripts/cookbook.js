@@ -415,6 +415,7 @@ async function loadRecipe(button) {
     if (requestId !== loadSequence) return; // Ignore stale responses from previous selections.
     if (!recipe.title || !Array.isArray(recipe.ingredientGroups) || !Array.isArray(recipe.steps)) throw new Error("Invalid recipe structure");
     sourceRecipe = recipe;
+    syncCatalogRecipe(new URL(button.href).searchParams.get("recipe"), recipe);
     photoWarning = "";
     if (recipe.photo) {
       const probe = new Image();
@@ -487,6 +488,7 @@ const recipeView = byId("recipeView");
 const printMenu = byId("printMenu");
 const recipeLinks = new Map();
 const catalogLinks = new Map();
+const authoritativeCatalogSlugs = new Set();
 const recipeCount = recipeIndex.querySelectorAll(".recipe-outline a[data-recipe]").length;
 byId("recipeCount").textContent = `${recipeCount} ${recipeCount === 1 ? "recipe" : "recipes"}`;
 
@@ -506,6 +508,31 @@ function addSidebarLink(link, container, slug) {
   // The source link already contains its draft badge.
   recipeLinks.set(slug, sidebarLink);
   container.appendChild(sidebarLink);
+}
+
+// Update existing nodes in place: routing, expanded groups and focus stay intact.
+function syncCatalogRecipe(slug, data) {
+  if (!slug || !data || typeof data.title !== "string" || !data.title.trim()) return;
+  authoritativeCatalogSlugs.add(slug);
+  for (const link of [catalogLinks.get(slug), recipeLinks.get(slug)]) {
+    if (!link) continue;
+    link.textContent = data.title;
+    if (data.status) link.dataset.status = data.status;
+    else delete link.dataset.status;
+    addDraftBadge(link, data.status);
+  }
+}
+
+async function refreshCatalogMetadata() {
+  const entries = [...catalogLinks.entries()];
+  const results = await RecipeMetadata.mapLimit(entries, async ([slug, link]) => {
+    if (authoritativeCatalogSlugs.has(slug)) return;
+    const data = await RecipeMetadata.load(link.dataset.recipe);
+    // A just-opened or just-saved recipe is more authoritative than a pending fetch.
+    if (!authoritativeCatalogSlugs.has(slug)) syncCatalogRecipe(slug, data);
+  });
+  const failures = results.filter(result => result.error);
+  if (failures.length) console.warn("Some recipe links use saved listing details:", failures);
 }
 
 function buildSidebarFallback() {
@@ -611,6 +638,7 @@ window.CookbookEditorBridge = {
   getPath: () => sidebar.querySelector('[aria-current="page"]')?.dataset.recipe,
   setSavedRecipe: data => {
     sourceRecipe = data;
+    syncCatalogRecipe(new URLSearchParams(location.search).get("recipe"), data);
     selectRecipeVersion(activeVariantIndex);
   },
   requestRender
@@ -641,4 +669,7 @@ buildSidebar().catch(error => {
   sidebar.querySelectorAll(".sidebar-category").forEach(group => group.remove());
   recipeLinks.clear();
   buildSidebarFallback();
-}).finally(showRoute);
+}).finally(() => {
+  showRoute();
+  void refreshCatalogMetadata();
+});

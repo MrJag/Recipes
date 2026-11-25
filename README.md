@@ -79,3 +79,7 @@ Include a portrait photo with every new recipe, including recipes added for revi
 Use a PNG master at `assets/masters/<recipe-slug>.png` and a web JPG at `public/images/<recipe-slug>.jpg`. Recipe JSON `photo` points to the JPG. The PNG is retained for re-exports and later print-production work. Converting an existing JPG to PNG cannot restore details already discarded by JPG encoding.
 
 **Latvian Stew:** The current JPEG and original PNG are committed as binary Git blobs and their Git SHAs have been verified against local image files. See `docs/images.md` for paths and asset policy.
+
+## Recipe metadata and naming
+
+Recipe JSON is authoritative for displayed titles, subtitles, draft status, rating, photo and description. The HTML catalog provides stable recipe paths, cuisine groupings and offline/error fallback labels; the taxonomy and recent index provide grouping and order. The directory and recipe sidebar revalidate JSON with a shared concurrency-limited loader, and the homepage loads only its three recent recipe files. The recipe sidebar also updates immediately after a confirmed browser-editor save. No title synchronization commit or manual index edit is needed after renaming a recipe. Static fallback labels can appear if an individual JSON request fails; the directory reports the number of such fallbacks. The static site reflects external changes after GitHub Pages deploys the updated JSON.
