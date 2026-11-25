@@ -434,7 +434,7 @@ async function loadRecipe(button) {
     setupVariants(recipe, button);
   } catch (error) {
     if (requestId !== loadSequence) return;
-    statusEl.textContent = "Unable to load recipe: " + error.message + ". Run a local HTTP server; opening index.html directly may block JSON fetches.";
+    statusEl.textContent = "Unable to load recipe: " + error.message + ". Refresh to retry; a newly published recipe may not be deployed yet.";
   }
 }
 function setupVariants(recipe, recipeButton) {
@@ -548,9 +548,16 @@ function buildSidebarFallback() {
 }
 
 async function buildSidebar() {
-  const response = await fetch("./src/data/recipe-taxonomy.json", {cache: "no-cache"});
-  if (!response.ok) throw new Error("Could not load recipe categories");
-  const taxonomy = await response.json();
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 4000);
+  let taxonomy;
+  try {
+    const response = await fetch("./src/data/recipe-taxonomy.json", {cache: "no-cache", signal:controller.signal});
+    if (!response.ok) throw new Error("Could not load recipe categories");
+    taxonomy = await response.json();
+  } finally {
+    clearTimeout(timeout);
+  }
   const fragment = document.createDocumentFragment();
   const assigned = new Set();
   for (const category of taxonomy.groups) {
@@ -615,6 +622,7 @@ function showRoute() {
     ++loadSequence;
     currentRecipe = null;
     document.title = "Family Cookbook";
+    if (slug) statusEl.textContent = "Recipe not found in this version of the cookbook. Refresh the page or open the directory.";
   }
 }
 

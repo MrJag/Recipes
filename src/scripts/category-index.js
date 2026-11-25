@@ -44,6 +44,7 @@ const groupNav = $("groupNav");
 let taxonomy;
 let recipes = [];
 let metadataFailures = 0;
+let metadataRefreshing = false;
 let selectedGroups = [];
 let expandedGroup = null;
 
@@ -185,6 +186,7 @@ function render() {
       subdetails.open = forceOpen;
       const summary = document.createElement("summary");
       const label = document.createElement("span");
+      label.className = "subcategory-label";
       label.textContent = sub.label;
       const number = document.createElement("small");
       number.textContent = String(sub.entries.length);
@@ -201,6 +203,7 @@ function render() {
   status.textContent = matching.length
     ? `Showing ${matching.length} of ${recipes.length} recipes`
     : "No recipes match your filters. Try clearing the search or filters.";
+  if (metadataRefreshing) status.textContent += " · Refreshing recipe details…";
   if (metadataFailures) status.textContent += ` · ${metadataFailures} recipe(s) using saved listing details; reload to retry.`;
   updateGroupButtons();
   renderHighlights(matching);
@@ -220,6 +223,46 @@ function selectGroups(names) {
   expandedGroup = names[0] || null;
   saveFilterUrl();
   render();
+}
+
+// Render the index immediately; hydrate live titles in the background.
+// Keep expanded groups/subcategories intact when metadata refreshes.
+function refreshRenderedMetadata() {
+  const expanded = new Set([...results.querySelectorAll("details[open]")].map(d => {
+    const section = d.closest(".taxonomy-section");
+    const name = section?.dataset.group || "";
+    return d.classList.contains("group-details") ? name : name + "::" + d.querySelector("summary .subcategory-label")?.textContent;
+  }));
+  render();
+  for (const d of results.querySelectorAll("details")) {
+    const name = d.closest(".taxonomy-section")?.dataset.group || "";
+    const key = d.classList.contains("group-details") ? name : name + "::" + d.querySelector("summary .subcategory-label")?.textContent;
+    if (expanded.has(key)) d.open = true;
+  }
+}
+
+async function hydrateCatalogMetadata() {
+  metadataRefreshing = true;
+  let timer = null;
+  const scheduleRender = () => {
+    if (timer !== null) return;
+    timer = setTimeout(() => { timer = null; refreshRenderedMetadata(); }, 250);
+  };
+  const entries = [...recipes];
+  const outcomes = await RecipeMetadata.mapLimit(entries, async entry => {
+    const data = await RecipeMetadata.load(entry.path);
+    Object.assign(entry, {
+      title:data.title, subtitle:data.subtitle || "", draft:data.status === "draft",
+      description:RecipeMetadata.description(data), rating:data.rating, yield:data.yield
+    });
+    if (data.photo) featuredPhotoIndex[entry.slug] = data.photo;
+    else delete featuredPhotoIndex[entry.slug];
+    scheduleRender();
+  });
+  metadataFailures = outcomes.filter(result => result.error).length;
+  if (timer !== null) clearTimeout(timer);
+  metadataRefreshing = false;
+  refreshRenderedMetadata();
 }
 
 async function loadCatalog() {
@@ -260,22 +303,6 @@ async function loadCatalog() {
     };
   });
   if (!recipes.length || mapped.size !== recipes.length) throw new Error("Recipe taxonomy does not match catalog");
-  const metadata = await RecipeMetadata.mapLimit(recipes, recipe => RecipeMetadata.load(recipe.path));
-  metadata.forEach((result, i) => {
-    const entry = recipes[i];
-    if (result.error) {
-      metadataFailures++;
-      console.warn("Using saved listing details:", entry.slug, result.error);
-      return;
-    }
-    const data = result.value;
-    Object.assign(entry, {
-      title:data.title, subtitle:data.subtitle || "", draft:data.status === "draft",
-      description:RecipeMetadata.description(data), rating:data.rating, yield:data.yield
-    });
-    if (data.photo) featuredPhotoIndex[entry.slug] = data.photo;
-    else delete featuredPhotoIndex[entry.slug];
-  });
   recipes.sort((a,b)=>a.title.localeCompare(b.title));
   for (const cuisine of [...new Set(recipes.map(recipe=>recipe.cuisine))].sort()) {
     cuisineFilter.add(new Option(cuisine,cuisine));
@@ -345,7 +372,13 @@ async function loadCatalog() {
     selectedGroups = [requestedGroup];
     expandedGroup = requestedGroup;
   }
+  metadataRefreshing = true;
   render();
+  void hydrateCatalogMetadata().catch(error => {
+    metadataRefreshing = false;
+    console.warn("Recipe metadata refresh failed:", error);
+    refreshRenderedMetadata();
+  });
   if (location.hash === "#recipeSearch") {
     // Focus after the asynchronous catalog is ready; don't auto-expand a group.
     searchInput.focus({preventScroll:true});

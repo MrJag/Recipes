@@ -9,13 +9,19 @@ window.RecipeMetadata = (() => {
     if (!/^recipes\/[a-z0-9-]+\/[a-z0-9-]+\.json$/.test(path)) {
       throw new Error("Invalid recipe path: " + path);
     }
-    const response = await fetch(new URL(path, location.href), {cache:"no-cache"});
-    if (!response.ok) throw new Error("Recipe metadata unavailable: " + path + " (" + response.status + ")");
-    const recipe = await response.json();
-    if (typeof recipe.title !== "string" || !recipe.title.trim()) {
-      throw new Error("Missing recipe title: " + path);
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 10000);
+    try {
+      const response = await fetch(new URL(path, location.href), {cache:"no-cache", signal:controller.signal});
+      if (!response.ok) throw new Error("Recipe metadata unavailable: " + path + " (" + response.status + ")");
+      const recipe = await response.json();
+      if (typeof recipe.title !== "string" || !recipe.title.trim()) {
+        throw new Error("Missing recipe title: " + path);
+      }
+      return recipe;
+    } finally {
+      clearTimeout(timeout);
     }
-    return recipe;
   }
 
   async function mapLimit(items, action) {
