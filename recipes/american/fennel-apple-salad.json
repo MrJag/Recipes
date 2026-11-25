@@ -4,25 +4,30 @@
   "title": "Fennel Apple Salad",
   "category": "American",
   "status": "draft",
-  "headnote": "Draft import: the original recipe document provides ingredients and attribution but no preparation directions.",
+  "headnote": "A bright, crunchy fennel and Honeycrisp apple salad with lime, fresh chilies, cilantro, and olive oil. Adapted as a standalone side from the salad served with Vivek Surti’s spiced roast pork.",
   "ingredientGroups": [
     {
       "title": null,
       "items": [
-        "1 fennel bulb, fronds reserved",
-        "1 honey crisp apple",
-        "2 limes",
-        "2 Serrano or Thai red chilies, thinly sliced",
-        "2 Tbsp cilantro coarsly chopped for garnish",
-        "Kosher salt",
-        "Nice olive oil"
+        "1 fennel bulb, cored and very thinly sliced; fronds reserved",
+        "1 Honeycrisp apple (or another crisp, not-too-sour apple), very thinly sliced",
+        "Zest and juice of 2 limes",
+        "2 serrano or red Thai chilies, thinly sliced into rounds",
+        "2 Tbsp cilantro, finely chopped (source document quantity)",
+        "Kosher salt, to taste",
+        "3 Tbsp extra-virgin olive oil (approximately 40 g)"
       ]
     }
   ],
-  "steps": [],
-  "reviewFlags": [
-    "The original Google Doc contains no directions; add a preparation method before considering this recipe complete.",
-    "Amounts for kosher salt and olive oil are not specified in the source."
+  "steps": [
+    "Prepare the fennel: remove the tough core and slice the bulb very thinly. Reserve the tender fronds.",
+    "Slice the apple very thinly. Zest and juice the limes; finely chop the cilantro and slice the chilies into thin rounds.",
+    "In a large bowl, combine the fennel bulb and fronds with the apple, lime zest and juice, sliced chilies, and cilantro. Toss together and season with kosher salt.",
+    "Drizzle the olive oil over the salad and toss again until lightly coated. Serve promptly as a fresh, crunchy side."
   ],
-  "sourceNote": "Adapted from https://www.bonappetit.com/recipe/spiced-roast-pork-with-fennel-and-apple-salad. Original Google Doc: https://docs.google.com/document/d/1qZiI4yeEdBmZbKPVcSFQ7Zd7kt0uKarNH9BBjALkuzM/edit"
+  "reviewFlags": [
+    "The original Google Doc calls for 2 Tbsp cilantro, whereas the Bon Appétit source uses a small handful; the Google Doc quantity was preserved.",
+    "The Bon Appétit yield of 8 servings applies to the combined pork-and-salad meal, not necessarily to the salad alone; standalone yield has not been specified."
+  ],
+  "sourceNote": "Standalone fennel and apple salad adapted from Vivek Surti, “Spiced Roast Pork With Fennel and Apple Salad,” Bon Appétit (September 17, 2019): https://www.bonappetit.com/recipe/spiced-roast-pork-with-fennel-and-apple-salad. Original user recipe: https://docs.google.com/document/d/1qZiI4yeEdBmZbKPVcSFQ7Zd7kt0uKarNH9BBjALkuzM/edit"
 }
