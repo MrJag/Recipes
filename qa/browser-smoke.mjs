@@ -7,6 +7,17 @@ try {
  browser=await chromium.launch({headless:true});
  const page=await browser.newPage({viewport:{width:1400,height:900}});
  page.on('pageerror',error=>report.errors.push('PAGE ERROR: '+error.message));
+ await page.goto('http://localhost:8123/recipe.html?recipe=whiskey-date-cake',{waitUntil:'load'});
+ await page.waitForTimeout(900);
+ check(await page.locator('.recipe-versions button').count()===2,'Whiskey Cake has original and home adaptation version buttons');
+ check((await page.locator('.recipe-versions button').allTextContents()).every(t=>t.includes('Draft')),'Both Whiskey Cake versions show Draft badges');
+ check((await page.locator('#pages h1').allTextContents()).some(t=>t.includes('Chef John Franke')),'Chef John Franke version loads as the original');
+ await page.locator('.recipe-versions button').nth(1).click();
+ await page.waitForTimeout(550);
+ check((await page.locator('#pages h1').allTextContents()).some(t=>t.includes('Home Adaptation')),'Home adaptation displays when selected');
+ await page.locator('.recipe-versions button').nth(0).click();
+ await page.waitForTimeout(550);
+ check((await page.locator('#pages h1').allTextContents()).some(t=>t.includes('Chef John Franke')),'Original version can be restored');
  await page.goto('http://localhost:8123/recipe.html?recipe=midwestern-chili',{waitUntil:'load'});
  await page.waitForTimeout(1000);
  check(await page.locator('#recipeView').isVisible(),'Direct recipe URL displays viewer');
