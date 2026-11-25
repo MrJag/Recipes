@@ -45,7 +45,7 @@ try {
  await page.locator('.header-categories-menu a').filter({hasText:'Drinks & Cocktails'}).click();
  await page.waitForTimeout(550);
  check(page.url().includes('directory.html?category=Drinks'), 'Dropdown opens separate directory page with category');
- check((await page.locator('#categoryStatus').textContent()).includes('of 176'), 'Directory filtering loads');
+ check((await page.locator('#categoryStatus').textContent()).includes('of 178'), 'Directory filtering loads');
  check((await page.locator('#categoryStatus').textContent()).includes('22 of'), 'Drinks category filtering matches taxonomy');
  check(await page.locator('#directoryHeading').isVisible(),'Directory heading is visible');
  check(await page.locator('#directoryHighlights .highlight-recipe').count()>=1,'Dynamic photo sidebar appears');
@@ -68,7 +68,7 @@ try {
  await page.waitForTimeout(500);
  await page.locator('#searchShortcut').click();
  check(await page.locator('.group-details[open]').count()===0,'Clicking Search collapses categories');
- check((await page.locator('#categoryStatus').textContent()).includes('176 of 176'),'Search clears category selection');
+ check((await page.locator('#categoryStatus').textContent()).includes('178 of 178'),'Search clears category selection');
  check(page.url().endsWith('#recipeSearch'),'Search shortcut updates to shareable anchor');
  await page.goto('http://localhost:8123/',{waitUntil:'load'});
  await page.locator('#searchShortcut').click();

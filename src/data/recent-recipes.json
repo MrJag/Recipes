@@ -1,6 +1,13 @@
 {
   "recipes": [
     {
+      "slug": "cheesecake-factory-cheesecake",
+      "title": "Cheesecake Factory–Style Cheesecake",
+      "description": "Classic vanilla cheesecake with a three-nut wafer crust",
+      "photo": "./public/images/cheesecake-factory-cheesecake.jpg",
+      "draft": true
+    },
+    {
       "slug": "fennel-apple-salad",
       "title": "Fennel Apple Salad",
       "description": "A bright, crunchy fennel and Honeycrisp apple salad with lime, fresh chilies, cilantro, and olive oil.",
@@ -12,13 +19,6 @@
       "title": "Crispy Brussels Sprouts",
       "description": "Oven or Air Fryer",
       "photo": "./public/images/crispy-blanched-brussels-sprouts.jpg",
-      "draft": true
-    },
-    {
-      "slug": "sweetango-orchard-sour",
-      "title": "Sweetango Orchard Sour",
-      "description": "A bright, apple-forward bourbon sour designed around Fowler Farms Sweetango pure apple cider.",
-      "photo": "./public/images/sweetango-orchard-sour-v2.jpg",
       "draft": true
     }
   ]

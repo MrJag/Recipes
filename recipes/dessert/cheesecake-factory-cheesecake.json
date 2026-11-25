@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "0.1",
+  "id": "cheesecake-factory-cheesecake",
+  "title": "Cheesecake Factory–Style Cheesecake",
+  "category": "Dessert",
+  "status": "draft",
+  "photo": "./public/images/cheesecake-factory-cheesecake.jpg",
+  "subtitle": "Classic vanilla cheesecake with a three-nut wafer crust",
+  "yield": "8 servings · 9-inch springform pan",
+  "headnote": "A rich, creamy cheesecake inspired by the Recipezaar Cheesecake Factory copycat. Pecans, almonds, walnuts and vanilla wafers form an unusual nutty crust. For a thicker crust, double the crust ingredients. A full 24-hour chill allows the texture and flavor to develop.",
+  "ingredientGroups": [
+    {
+      "title": "Nut and vanilla wafer crust",
+      "items": [
+        "28 g finely chopped pecans (¼ cup)",
+        "35 g finely chopped almonds (¼ cup)",
+        "30 g finely chopped walnuts (¼ cup)",
+        "75 g finely crushed vanilla wafers (¾ cup)",
+        "28 g unsalted butter, melted (2 Tbsp), plus more for greasing"
+      ]
+    },
+    {
+      "title": "Cheesecake filling",
+      "items": [
+        "680 g full-fat cream cheese, room temperature",
+        "267 g granulated sugar (1⅓ cups)",
+        "5 large eggs, room temperature",
+        "454 g full-fat sour cream, room temperature",
+        "30 g all-purpose flour (¼ cup)",
+        "2 tsp vanilla bean paste",
+        "2 tsp fresh lemon juice",
+        "Finely grated zest of ½ lemon (yellow portion only)"
+      ]
+    }
+  ],
+  "steps": [
+    "Preheat the oven to 325°F with a rack in the center. Butter a 9-inch springform pan. Wrap the outside of the base and sides in two or three overlapping layers of wide heavy-duty aluminum foil, extending above the intended water line. Set a kettle of water to heat.",
+    "Mix the finely chopped nuts, vanilla wafer crumbs and melted butter. Press firmly into the base and about 1½ inches up the sides of the pan. Set aside; no separate crust bake is needed.",
+    "With all filling ingredients at room temperature, beat the cream cheese on low speed until smooth and creamy, scraping the bowl and paddle as needed. Gradually add the sugar and mix until smooth. Keep the mixer on low to avoid incorporating excess air.",
+    "Add the eggs one at a time, mixing just until each is incorporated. Mix in the flour, vanilla bean paste, lemon juice and lemon zest. Add the sour cream last and mix on low just until uniform.",
+    "Pour the batter into the prepared crust. Set the wrapped springform pan in a larger roasting pan. Place on the center oven rack and carefully pour hot water into the roasting pan until it reaches halfway up the springform pan, below the top of the foil.",
+    "Bake at 325°F for about 1 hour 15 minutes. Begin checking at 75 minutes; if necessary, continue in 5–10-minute increments until the outer filling is set and the central 2–3 inches still wobble gently as a unit. The center should not appear liquid.",
+    "Turn off the oven, prop the door slightly open and leave the cheesecake in the water bath in the oven for 1 hour. Carefully remove the springform pan from the water bath, discard the foil and set it on a wire rack. Cool at room temperature until no longer warm, then refrigerate within 2 hours of removing it from the oven.",
+    "Cover and refrigerate for 24 hours before releasing the springform ring and slicing. For clean cuts, dip a knife in hot water and wipe it dry between slices."
+  ],
+  "reviewFlags": [
+    "Adapted water-bath baking method, vanilla bean paste and lemon zest have not yet been verified in this version; check doneness rather than relying solely on time.",
+    "Gram equivalents for the original cup measurements are approximate; original volumes are retained for reference."
+  ],
+  "sourceNote": "Adapted from Recipezaar, Cheesecake Factory Cheesecake (recipe 107544): http://www.recipezaar.com/Cheesecake-Factory-Cheesecake-107544. Vanilla bean paste replaces the original 2 tsp vanilla extract; lemon zest and water-bath baking added."
+}
