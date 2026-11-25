@@ -4,7 +4,7 @@
       "slug": "fennel-apple-salad",
       "title": "Fennel Apple Salad",
       "description": "A bright, crunchy fennel and Honeycrisp apple salad with lime, fresh chilies, cilantro, and olive oil.",
-      "photo": null,
+      "photo": "./public/images/fennel-apple-salad.jpg",
       "draft": true
     },
     {
