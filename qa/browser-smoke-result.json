@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-25T23:50:26.425Z",
+  "date": "2026-11-25T23:58:43.777Z",
   "checks": [
     {
       "label": "Cuatro Leches has three linked versions",
@@ -179,7 +179,7 @@
     },
     {
       "label": "Three recent additions appear in directory photo rail",
-      "pass": false
+      "pass": true
     },
     {
       "label": "Recipe header has category dropdown",
@@ -808,7 +808,6 @@
     "Directory filtering loads",
     "Main Dishes bookmark filters correctly",
     "Search clears category selection",
-    "Three recent additions appear in directory photo rail",
     "Saving a recipe preserves blank lines between description paragraphs"
   ],
   "pass": false
