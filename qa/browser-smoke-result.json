@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-25T03:33:52.341Z",
+  "date": "2026-11-25T03:41:44.125Z",
   "checks": [
     {
       "label": "Direct recipe URL displays viewer",
@@ -334,7 +334,7 @@
       "pass": true
     },
     {
-      "label": "Edit mode uses the same grid and circular step numbering as read mode",
+      "label": "Edit mode places circular numbers outside the editable text area",
       "pass": true
     },
     {
@@ -367,6 +367,22 @@
     },
     {
       "label": "Removing a group heading restores all ingredient items",
+      "pass": true
+    },
+    {
+      "label": "Directions expose an insertion slot before step one",
+      "pass": true
+    },
+    {
+      "label": "Heading inserted before first numbered direction",
+      "pass": true
+    },
+    {
+      "label": "Enter creates a new numbered direction",
+      "pass": true
+    },
+    {
+      "label": "New direction focuses editable content after its circular number",
       "pass": true
     },
     {
