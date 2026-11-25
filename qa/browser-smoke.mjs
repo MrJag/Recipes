@@ -266,7 +266,8 @@ try {
    if(!li) return false;
    const marker=li.getBoundingClientRect();
    const styles=getComputedStyle(li);
-   return li===document.querySelector('[data-directions="main"] .edit-list-item:last-of-type') &&
+   const entries=[...document.querySelectorAll('[data-directions="main"] .edit-list-item')];
+   return li===entries[entries.length-1] &&
      parseFloat(styles.paddingLeft)>=30 && marker.width>100;
  }), 'New direction focuses editable content after its circular number');
  await page.locator('[data-directions="main"] .edit-list-item').last().press('Backspace');
