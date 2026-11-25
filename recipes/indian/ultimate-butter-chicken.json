@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "0.1",
+  "id": "ultimate-butter-chicken",
+  "title": "The Ultimate Butter Chicken",
+  "category": "Indian",
+  "status": "draft",
+  "servings": null,
+  "prepTime": null,
+  "cookTime": null,
+  "photo": "./public/images/ultimate-butter-chicken.jpg",
+  "headnote": "Draft: The source does not specify the quantity of chicken or honey. Confirm both amounts and how much ginger-garlic paste to use in the initial marinade before preparing.",
+  "ingredientGroups": [
+    {
+      "title": "Chicken and marinade",
+      "items": [
+        "Boneless, skinless chicken thighs, quantity unspecified",
+        "30 g mustard oil",
+        "30 g Kashmiri chili powder",
+        "30 g ginger-garlic paste",
+        "15 g coriander powder",
+        "5 g cumin powder",
+        "3 g turmeric powder",
+        "3 g kasoori methi",
+        "3 g amchur powder",
+        "3 g black salt",
+        "5 g garam masala",
+        "12 g kosher salt",
+        "200 g hung yogurt",
+        "15 ml Indian lemon juice, or a blend of 45% lime, 35% lemon and 20% white or yellow grapefruit juice"
+      ]
+    },
+    {
+      "title": "Makhni sauce",
+      "items": [
+        "30 g ghee",
+        "5 g cumin seeds",
+        "400 g Bombay onions or shallots, sliced",
+        "20 g garlic, peeled and chopped",
+        "20 g ginger, peeled and chopped",
+        "5 g green bird’s eye chili, chopped",
+        "30 g Kashmiri chili powder",
+        "15 g coriander powder",
+        "3 g turmeric powder",
+        "5 whole Kashmiri chilies",
+        "12 green cardamom",
+        "1,000 g fresh San Marzano tomatoes, chopped",
+        "50 g roasted cashews",
+        "50 g coriander stems, chopped",
+        "3 g khoya",
+        "Salt, to taste",
+        "100 g double cream",
+        "80 g salted butter",
+        "3 g kasoori methi",
+        "Honey, quantity unspecified"
+      ]
+    }
+  ],
+  "steps": [
+    "Mix the chicken with ginger-garlic paste, kosher salt and lemon juice. Marinate for 30 minutes, then drain the juices. The source does not specify how much of the ginger-garlic paste to use at this stage.",
+    "Mix the remaining marinade ingredients and coat the chicken. Refrigerate for at least 4 hours, ideally overnight.",
+    "Skewer and grill over charcoal until cooked and lightly charred.",
+    "For the sauce, heat the ghee in a pot and add the cumin seeds. When they crackle, add the garlic, ginger, green chili and onions. Cook over medium heat until translucent.",
+    "Add the remaining sauce ingredients except the butter, cream, honey and kasoori methi. Cook over low heat for 30–40 minutes, until the tomatoes are soft.",
+    "Add the butter, cream, honey and kasoori methi; blend until smooth. Add the grilled chicken and adjust the salt and kasoori methi to taste."
+  ],
+  "reviewFlags": [
+    "Chicken and honey quantities are missing from the source.",
+    "The source does not specify how to divide the ginger-garlic paste between the two marinade stages.",
+    "The sauce method calls for oil while the ingredient list specifies ghee; confirm the intended fat."
+  ]
+}
