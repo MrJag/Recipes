@@ -1,6 +1,13 @@
 {
   "recipes": [
     {
+      "slug": "forno-bravo-smashed-tomato-sauce",
+      "title": "Smashed Tomato Pizza Sauce",
+      "description": "A simple uncooked sauce for a wood-fired pizza oven. The source suggests trying it cooked first when using a pizza stone.",
+      "photo": "./public/images/forno-bravo-smashed-tomato-sauce.jpg",
+      "draft": false
+    },
+    {
       "slug": "paneer-butter-masala-stovetop",
       "title": "Paneer Butter Masala",
       "description": "Stovetop Version",
@@ -12,13 +19,6 @@
       "title": "The Ultimate Butter Chicken",
       "description": "Recently added to the cookbook.",
       "photo": "./public/images/ultimate-butter-chicken.jpg",
-      "draft": true
-    },
-    {
-      "slug": "cheesecake-factory-cheesecake",
-      "title": "Marianna’s Cheesecake",
-      "description": "Cheesecake Factory–Style Cheesecake",
-      "photo": "./public/images/cheesecake-factory-cheesecake.jpg",
       "draft": true
     }
   ]
