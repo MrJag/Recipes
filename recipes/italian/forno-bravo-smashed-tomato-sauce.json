@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "0.1",
+  "id": "forno-bravo-smashed-tomato-sauce",
+  "title": "Smashed Tomato Pizza Sauce",
+  "category": "Italian",
+  "photo": "./public/images/forno-bravo-smashed-tomato-sauce.jpg",
+  "servings": null,
+  "prepTime": null,
+  "cookTime": null,
+  "headnote": "A simple uncooked sauce for a wood-fired pizza oven. The source suggests trying it cooked first when using a pizza stone.",
+  "ingredientGroups": [
+    {
+      "title": "Sauce",
+      "items": [
+        "1 can (28 oz) San Marzano tomatoes",
+        "¼ tsp freshly ground black pepper",
+        "½ tsp salt",
+        "1 tsp oregano"
+      ]
+    },
+    {
+      "title": "Optional additions",
+      "items": [
+        "1 tsp dried basil or 2 Tbsp fresh basil",
+        "1 Tbsp garlic powder",
+        "2 Tbsp red wine vinegar or lemon juice",
+        "1 Tbsp olive oil"
+      ]
+    }
+  ],
+  "steps": [
+    "Mash the tomatoes with a potato masher to a sauce consistency. Avoid a food processor or hand blender, which can break the seeds.",
+    "Mix in the pepper, salt and oregano, along with any optional additions.",
+    "Use uncooked on pizza for a wood-fired oven; the source suggests trying the sauce cooked first when baking on a pizza stone."
+  ],
+  "sourceNote": "Adapted from Forno Bravo, Wood-Fired Pizza (2007), https://www.fornobravo.com/",
+  "reviewFlags": []
+}
