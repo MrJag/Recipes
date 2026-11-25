@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "0.1",
+  "id": "chicken-langoustine-paella",
+  "title": "Chicken and Langoustine Paella",
+  "category": "Spanish",
+  "status": "draft",
+  "photo": "./public/images/chicken-langoustine-paella.jpg",
+  "servings": "6",
+  "prepTime": "40 minutes",
+  "cookTime": "17 minutes",
+  "headnote": "Draft: The source says to arrange the langoustines on top and later add them again; confirm the intended timing. It also calls for lime zest but does not say when to use it.",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "6 young tender artichokes",
+        "2 limes",
+        "200 ml (scant 1 cup) olive oil",
+        "1 whole 1.5 kg (3¼ lb) chicken, boned and skin removed, cut into 35 g (1½ oz) pieces",
+        "8 langoustines, rinsed",
+        "2 garlic cloves, finely chopped",
+        "1 green bell pepper, seeded and cut into strips",
+        "200 g (7 oz) green beans, trimmed",
+        "6 spring onions",
+        "500 g (1 lb 2 oz) squid, cleaned and cut into rings",
+        "1 medium–large tomato, halved, seeded and grated with skin discarded, or finely diced",
+        "1 tsp Spanish sweet smoked paprika",
+        "2 litres water, added in two 1-litre (4¼-cup) portions",
+        "400 g (2 cups) bomba or other short-grain rice",
+        "1½ tsp saffron threads, toasted and pounded",
+        "Salt and pepper",
+        "1 sprig rosemary",
+        "2 sprigs thyme",
+        "2 bay leaves"
+      ]
+    }
+  ],
+  "steps": [
+    "Preheat the barbecue or grill. Trim the artichokes, remove any hairy chokes and peel tough stems. Quarter them, rub the cut surfaces with one lime, and place in cold water acidulated with lime juice. Tie the rosemary, thyme and bay leaves in a muslin bouquet garni. Finely grate the zest of the second lime and set aside.",
+    "Level a 51 cm (20½ inch) paella pan. Heat the olive oil over low heat and gently sauté the chicken without browning it too much. Move it to the edge of the pan.",
+    "Sauté the langoustines in the centre until half cooked; remove, cover with foil and keep warm. Gently sauté the garlic, then add the vegetables and cook until beginning to soften. Move the vegetables to the edge.",
+    "Sauté the squid in the centre until half cooked, then push it to the side. Cook the tomato in the centre over low heat until thickened. Add the paprika and cook for a few seconds.",
+    "Add 1 litre (4¼ cups) water and boil for 1 minute over the hottest part of the grill. Add the bouquet garni and mark the liquid level with folded foil over the pan lip. Add the remaining 1 litre (4¼ cups) water and boil until the liquid returns to the mark, adding hot water if it falls below it.",
+    "Scatter the rice and saffron evenly into the pan. Taste and season with salt as needed. Arrange the ingredients, including the langoustines, on top.",
+    "After 5 minutes, reduce the heat and discard the herb bag. When rice rises to the surface, reduce to a gentle simmer. The source says to add the langoustines at this stage as well; confirm their timing. Cook until the liquid evaporates and the rice is tender but slightly firm.",
+    "If the rice is a little firm, cover with a clean damp towel for 2–3 minutes. If much too firm, add a few tablespoons of hot water and continue cooking. Rest for 3 minutes before serving."
+  ],
+  "reviewFlags": [
+    "The source places the langoustines on top before the five-minute stage and then says to add them again; confirm timing.",
+    "The source calls for grated lime zest but does not say when to add it.",
+    "The source lists 17 minutes cooking time, but its method describes a longer sequence; review timing."
+  ],
+  "sourceNote": "Adapted from Alberto Herraiz, Paella: https://www.phaidon.com/agenda/food/articles/2011/may/18/paella-rice-with-chicken-and-langoustines/"
+}
