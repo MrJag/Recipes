@@ -1,6 +1,13 @@
 {
   "recipes": [
     {
+      "slug": "goan-pork-vindaloo-original",
+      "title": "Goan Pork Vindaloo",
+      "description": "Original Version",
+      "photo": "./public/images/goan-pork-vindaloo-original.jpg",
+      "draft": true
+    },
+    {
       "slug": "chicken-langoustine-paella",
       "title": "Chicken and Langoustine Paella",
       "description": "Recently added to the cookbook.",
@@ -13,13 +20,6 @@
       "description": "A simple uncooked sauce for a wood-fired pizza oven. The source suggests trying it cooked first when using a pizza stone.",
       "photo": "./public/images/forno-bravo-smashed-tomato-sauce.jpg",
       "draft": false
-    },
-    {
-      "slug": "paneer-butter-masala-stovetop",
-      "title": "Paneer Butter Masala",
-      "description": "Stovetop Version",
-      "photo": "./public/images/paneer-butter-masala-stovetop.jpg",
-      "draft": true
     }
   ]
 }
