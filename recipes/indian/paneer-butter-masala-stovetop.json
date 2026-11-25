@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "0.1",
+  "id": "paneer-butter-masala-stovetop",
+  "title": "Paneer Butter Masala",
+  "subtitle": "Stovetop Version",
+  "category": "Indian",
+  "status": "draft",
+  "photo": "./public/images/paneer-butter-masala-stovetop.jpg",
+  "headnote": "Draft: The source lists 2 tablespoons of cream but uses only 1 tablespoon in the directions. Confirm the intended amount. This stovetop version uses a different sauce and method from the pressure-cooker version.",
+  "servings": null,
+  "prepTime": null,
+  "cookTime": null,
+  "ingredientGroups": [
+    {
+      "title": "Gravy",
+      "items": [
+        "1 Tbsp oil",
+        "2 green cardamom pods",
+        "1 cup white onions, cubed",
+        "1½ cups tomatoes, chopped",
+        "1 tsp salt",
+        "1 tsp sugar",
+        "12 cashew nuts",
+        "½–¾ tsp Kashmiri chili powder",
+        "¾–1 tsp garam masala powder",
+        "1 tsp coriander powder"
+      ]
+    },
+    {
+      "title": "To finish",
+      "items": [
+        "1½ Tbsp butter",
+        "1 small bay leaf",
+        "1 inch cinnamon",
+        "2 green cardamom pods",
+        "2 cloves",
+        "1½ tsp ginger-garlic paste (½ inch ginger and 3 medium garlic cloves)",
+        "¼ tsp Kashmiri chili powder",
+        "200–250 g paneer, cubed and soaked in hot water for 20 minutes",
+        "½–¾ tsp dried kasuri methi, or ½–¾ Tbsp fresh minced fenugreek leaves",
+        "2 Tbsp cream",
+        "2 Tbsp cilantro, chopped"
+      ]
+    }
+  ],
+  "steps": [
+    "Heat the oil with 2 cardamom pods. Add the onions and sauté until soft and translucent.",
+    "Add the tomatoes and salt; fry for 3 minutes, then cover and cook until soft.",
+    "Add the garam masala, coriander, cashews, chili powder and sugar. Fry until aromatic and the mixture pulls away from the sides.",
+    "Cool completely, then purée with 1 cup water until smooth.",
+    "Heat the butter with the cinnamon, cloves, remaining cardamom and bay leaf for 1–2 minutes.",
+    "Sauté the ginger-garlic paste over low heat until softened, without burning. Add the purée and ¼ tsp chili powder.",
+    "Reduce the heat to its lowest setting and add the paneer and ½ tsp kasuri methi. Garnish with 1 Tbsp cream and the cilantro."
+  ],
+  "reviewFlags": [
+    "The source lists 2 Tbsp cream but uses 1 Tbsp in the method.",
+    "The source lists ½–¾ tsp dried kasuri methi but directs using ½ tsp."
+  ]
+}
