@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.1",
+  "id": "fennel-apple-salad",
+  "title": "Fennel Apple Salad",
+  "category": "American",
+  "status": "draft",
+  "headnote": "Draft import: the original recipe document provides ingredients and attribution but no preparation directions.",
+  "ingredientGroups": [
+    {
+      "title": null,
+      "items": [
+        "1 fennel bulb, fronds reserved",
+        "1 honey crisp apple",
+        "2 limes",
+        "2 Serrano or Thai red chilies, thinly sliced",
+        "2 Tbsp cilantro coarsly chopped for garnish",
+        "Kosher salt",
+        "Nice olive oil"
+      ]
+    }
+  ],
+  "steps": [],
+  "reviewFlags": [
+    "The original Google Doc contains no directions; add a preparation method before considering this recipe complete.",
+    "Amounts for kosher salt and olive oil are not specified in the source."
+  ],
+  "sourceNote": "Adapted from https://www.bonappetit.com/recipe/spiced-roast-pork-with-fennel-and-apple-salad. Original Google Doc: https://docs.google.com/document/d/1qZiI4yeEdBmZbKPVcSFQ7Zd7kt0uKarNH9BBjALkuzM/edit"
+}
