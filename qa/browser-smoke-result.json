@@ -1,6 +1,42 @@
 {
-  "date": "2026-11-25T04:07:43.617Z",
+  "date": "2026-11-25T04:45:27.149Z",
   "checks": [
+    {
+      "label": "Cuatro Leches has three linked versions",
+      "pass": true
+    },
+    {
+      "label": "All three Cuatro Leches versions are Draft",
+      "pass": true
+    },
+    {
+      "label": "Original La Duni recipe loads first",
+      "pass": true
+    },
+    {
+      "label": "Original cake uses the new image",
+      "pass": true
+    },
+    {
+      "label": "CraftyBaking version loads",
+      "pass": false
+    },
+    {
+      "label": "Updated cake uses its generated photo",
+      "pass": true
+    },
+    {
+      "label": "Panque de Limón version loads",
+      "pass": true
+    },
+    {
+      "label": "Lemon cake uses its generated photo",
+      "pass": true
+    },
+    {
+      "label": "Panque de Limón visibly distinguishes supplementary elements",
+      "pass": true
+    },
     {
       "label": "Whiskey Cake has original and home adaptation version buttons",
       "pass": true
@@ -767,6 +803,7 @@
     }
   ],
   "errors": [
+    "CraftyBaking version loads",
     "Directory filtering loads",
     "Search clears category selection",
     "Saving a recipe preserves blank lines between description paragraphs",
