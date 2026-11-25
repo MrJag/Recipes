@@ -141,9 +141,10 @@ function editableList(values, type, label) {
       if (typeof list.onInsertHeading === "function") list.onInsertHeading(after);
     });
     slot.appendChild(button);
-    after.after(slot);
+    if (after) after.after(slot);
+    else list.prepend(slot);
   };
-  const addItem = (value, after = null) => {
+  const addItem = (value, after = null, prepend = false) => {
     const stage = type === "directions" && value && typeof value === "object" &&
       Object.hasOwn(value, "heading");
     const display = stage ? value.heading :
@@ -170,12 +171,29 @@ function editableList(values, type, label) {
         event.preventDefault();
         const sibling = addItem("", li);
         sibling.focus();
+        // An empty contenteditable LI can receive a caret at the start of
+        // the marker grid cell; explicitly set a collapsed range in the
+        // editable text node (not the generated step number).
+        const selection = window.getSelection();
+        if (selection) {
+          const range = document.createRange();
+          range.selectNodeContents(sibling);
+          range.collapse(true);
+          selection.removeAllRanges();
+          selection.addRange(range);
+        }
       }
     });
     if (after) {
       const slot = after.nextElementSibling;
       if (slot?.classList.contains("edit-insert-slot")) slot.after(li);
       else after.after(li);
+    } else if (prepend) {
+      // The leading insertion slot remains first; put the heading directly
+      // before the current first step, never at the end of the list.
+      const first = list.firstElementChild;
+      if (first?.classList.contains("edit-insert-slot")) first.after(li);
+      else list.prepend(li);
     } else {
       list.appendChild(li);
     }
@@ -189,12 +207,13 @@ function editableList(values, type, label) {
     return li;
   };
   list.insertHeadingAfter = after => {
-    const heading = addItem({heading:""},after);
+    const heading = addItem({heading:""},after,after === null);
     heading.focus();
     return heading;
   };
   list.refresh = refresh;
   for (const value of values?.length ? values : [""]) addItem(value);
+  if (type === "directions") addSlot(null);
   return list;
 }
 function sectionHeading(text) {

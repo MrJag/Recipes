@@ -206,8 +206,9 @@ try {
  check(await page.locator('.edit-sheet .ingredients ul').evaluate(el => getComputedStyle(el).columnCount === '1'),'Short ingredient lists stay single column');
  check(await page.locator('.edit-sheet .edit-directions ol').evaluate(el => getComputedStyle(el).listStyleType === 'none'),'Directions use custom circular numbering as in read mode');
  check(await page.locator('.edit-sheet .edit-directions li.edit-list-item').first().evaluate(el =>
-   getComputedStyle(el).display === 'grid' && getComputedStyle(el,'::before').content !== 'none'),
-   'Edit mode uses the same grid and circular step numbering as read mode');
+   getComputedStyle(el).display === 'block' && getComputedStyle(el,'::before').content !== 'none' &&
+   getComputedStyle(el,'::before').position === 'absolute'),
+   'Edit mode places circular numbers outside the editable text area');
  check(await page.locator('.edit-sheet .edit-directions li.edit-list-item').first().evaluate(el => {
    const read=document.querySelector('#pages .recipe-step');
    return !read || (getComputedStyle(el).fontFamily === getComputedStyle(read).fontFamily &&
@@ -241,7 +242,34 @@ try {
  await reinsertion.locator('button').click();
  await page.locator('[data-groups="main"] .edit-group-name').nth(1).fill('Finishing ingredients');
 
+ const firstDirectionSlot=page.locator('[data-directions="main"] .edit-insert-slot').first();
+ check(await firstDirectionSlot.evaluate(el => el===el.parentElement.firstElementChild),
+   'Directions expose an insertion slot before step one');
+ await firstDirectionSlot.locator('button').click({force:true});
+ await page.locator('[data-directions="main"] .edit-stage-heading').first().fill('Preparation');
+ check(await page.locator('[data-directions="main"] ol > li.edit-stage-heading').first().evaluate(el =>
+   !el.previousElementSibling?.classList.contains('edit-list-item')),
+   'Heading inserted before first numbered direction');
+ await page.locator('[data-directions="main"] .edit-stage-heading').first().fill('');
+ await page.locator('[data-directions="main"] .edit-stage-heading').first().press('Backspace');
  const initialDirectionCount=await page.locator('[data-directions="main"] .edit-list-item').count();
+ const lastDirection=page.locator('[data-directions="main"] .edit-list-item').last();
+ await lastDirection.focus();
+ await lastDirection.press('End');
+ await lastDirection.press('Enter');
+ check(await page.locator('[data-directions="main"] .edit-list-item').count()===initialDirectionCount+1,
+   'Enter creates a new numbered direction');
+ check(await page.evaluate(() => {
+   const sel=window.getSelection();
+   const li=sel?.anchorNode?.parentElement?.closest('li.edit-list-item') ||
+     (sel?.anchorNode?.nodeType===1 ? sel.anchorNode.closest('li.edit-list-item') : null);
+   if(!li) return false;
+   const marker=li.getBoundingClientRect();
+   const styles=getComputedStyle(li);
+   return li===document.querySelector('[data-directions="main"] .edit-list-item:last-of-type') &&
+     parseFloat(styles.paddingLeft)>=30 && marker.width>100;
+ }), 'New direction focuses editable content after its circular number');
+ await page.locator('[data-directions="main"] .edit-list-item').last().press('Backspace');
  const directionInsert=page.locator('[data-directions="main"] .edit-insert-slot').nth(1);
  await directionInsert.hover();
  await directionInsert.locator('button').click();

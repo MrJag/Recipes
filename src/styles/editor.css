@@ -673,11 +673,12 @@ body:has(#ratingOptions:not([hidden])) .edit-sheet .edit-recipe-rating .rating-l
   font:var(--body-size)/var(--body-line-height) var(--font-serif);
 }
 .edit-sheet .edit-directions li.edit-list-item {
-  display:grid;
-  grid-template-columns:24px minmax(0,1fr);
-  column-gap:10px;
-  align-items:start;
-  padding:0;
+  display:block;
+  position:relative;
+  /* Text/caret start after the marker. CSS grid put bare editable text
+     in the marker's first cell, making new directions hard to type. */
+  padding:0 0 0 34px;
+  min-height:23px;
   margin:0 0 var(--step-gap);
   font:var(--body-size)/var(--body-line-height) var(--font-serif);
   counter-increment:edit-direction-step;
@@ -686,8 +687,8 @@ body:has(#ratingOptions:not([hidden])) .edit-sheet .edit-recipe-rating .rating-l
 }
 .edit-sheet .edit-directions li.edit-list-item::before {
   content:counter(edit-direction-step);
-  grid-column:1;
-  margin-top:1px;
+  position:absolute;
+  left:0;top:1px;
   width:23px;height:23px;
   display:flex;align-items:center;justify-content:center;
   border-radius:50%;
