@@ -1,6 +1,13 @@
 {
   "recipes": [
     {
+      "slug": "paneer-butter-masala-stovetop",
+      "title": "Paneer Butter Masala",
+      "description": "Stovetop Version",
+      "photo": "./public/images/paneer-butter-masala-stovetop.jpg",
+      "draft": true
+    },
+    {
       "slug": "ultimate-butter-chicken",
       "title": "The Ultimate Butter Chicken",
       "description": "Recently added to the cookbook.",
@@ -12,13 +19,6 @@
       "title": "Marianna’s Cheesecake",
       "description": "Cheesecake Factory–Style Cheesecake",
       "photo": "./public/images/cheesecake-factory-cheesecake.jpg",
-      "draft": true
-    },
-    {
-      "slug": "fennel-apple-salad",
-      "title": "Fennel Apple Salad",
-      "description": "A bright, crunchy fennel and Honeycrisp apple salad with lime, fresh chilies, cilantro, and olive oil.",
-      "photo": "./public/images/fennel-apple-salad.jpg",
       "draft": true
     }
   ]
