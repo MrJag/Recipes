@@ -1,6 +1,13 @@
 {
   "recipes": [
     {
+      "slug": "ultimate-butter-chicken",
+      "title": "The Ultimate Butter Chicken",
+      "description": "Recently added to the cookbook.",
+      "photo": "./public/images/ultimate-butter-chicken.jpg",
+      "draft": true
+    },
+    {
       "slug": "cheesecake-factory-cheesecake",
       "title": "Marianna’s Cheesecake",
       "description": "Cheesecake Factory–Style Cheesecake",
@@ -12,13 +19,6 @@
       "title": "Fennel Apple Salad",
       "description": "A bright, crunchy fennel and Honeycrisp apple salad with lime, fresh chilies, cilantro, and olive oil.",
       "photo": "./public/images/fennel-apple-salad.jpg",
-      "draft": true
-    },
-    {
-      "slug": "crispy-blanched-brussels-sprouts",
-      "title": "Crispy Brussels Sprouts",
-      "description": "Oven or Air Fryer",
-      "photo": "./public/images/crispy-blanched-brussels-sprouts.jpg",
       "draft": true
     }
   ]
