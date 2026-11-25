@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "0.1",
+  "id": "goan-pork-vindaloo-original",
+  "title": "Goan Pork Vindaloo",
+  "subtitle": "Original Version",
+  "category": "Indian",
+  "status": "draft",
+  "photo": "./public/images/goan-pork-vindaloo-original.jpg",
+  "servings": "8 (5 oz portions plus rice)",
+  "headnote": "This untested original version was written to approximate a mild, slightly sweet Central Market vindaloo. Review the spice-mixing directions, which include both a simple mixing instruction and a separate toasting and grinding method.",
+  "ingredientGroups": [
+    {
+      "title": "Vindaloo",
+      "items": [
+        "2½ lb pork butt, cut into chunks",
+        "2 medium yellow onions, finely diced",
+        "8–10 garlic cloves",
+        "2 Tbsp fresh ginger",
+        "3 Tbsp neutral oil",
+        "3–4 Tbsp brown sugar",
+        "1½ tsp kosher salt",
+        "1½ cups water",
+        "¼ cup chopped cilantro, to garnish"
+      ]
+    },
+    {
+      "title": "Seasoned vinegar",
+      "items": [
+        "4 Tbsp rice vinegar",
+        "2 tsp sugar",
+        "2 tsp salt"
+      ]
+    },
+    {
+      "title": "Vindaloo spice mix",
+      "items": [
+        "1 Tbsp black pepper",
+        "2 tsp cumin",
+        "2 tsp mustard seeds",
+        "1 tsp fenugreek seeds",
+        "1 tsp turmeric",
+        "1 tsp paprika",
+        "½ tsp cardamom",
+        "1 tsp chili powder (up to 2 tsp)"
+      ]
+    },
+    {
+      "title": "Rice",
+      "items": [
+        "2 cups jasmine rice",
+        "½ cup cooked chickpeas",
+        "2 Tbsp minced shallot",
+        "¼ cup daikon radish, small dice",
+        "2 Tbsp oil (90% neutral, 10% olive)",
+        "2–3 tsp lemon juice"
+      ]
+    }
+  ],
+  "steps": [
+    "Mix the seasoned vinegar ingredients and set aside. The source also says to mix the spices and set aside, then offers the following toasting and grinding method.",
+    "Toast the spices over medium heat for 30–60 seconds, or on a sheet pan in a 250–275°F oven for 15 minutes. Cool for 5 minutes, then grind finely.",
+    "Rinse the rice and cook according to the rice cooker directions; the source gives a typical rice-to-water ratio of 1:1 to 1:1.25. Fold in the chickpeas, shallot, daikon, oil and lemon juice while the rice is warm.",
+    "Heat 3 Tbsp neutral oil in a Dutch oven over medium-high heat. Working in 3–4 batches, lightly brown the pork and set aside before a hard crust forms.",
+    "Reduce the heat to medium and sauté the onions for 6–8 minutes, until soft and lightly golden. Add a small pinch of salt, the garlic and ginger; sauté for 1–2 minutes.",
+    "Reduce the heat slightly, add the spice mix and stir continuously for 30–60 seconds, until fragrant.",
+    "Return the pork and any juices to the pot. Add the seasoned vinegar, water, brown sugar and 1½ tsp kosher salt. Bring to a gentle simmer, cover and cook over low heat for 75 minutes, stirring occasionally.",
+    "Uncover and simmer for 10–20 minutes, until the sauce is thick and glossy. If needed, lightly mash a few pork pieces to thicken it.",
+    "Taste and adjust with vinegar, brown sugar or salt as needed. Serve immediately, or refrigerate overnight to develop flavor and reheat gently with a splash of water. Finish with cilantro and serve with the rice."
+  ],
+  "reviewFlags": [
+    "Untested source draft.",
+    "The source gives both a mix-and-set-aside instruction and a separate toast-and-grind instruction for the spice blend; confirm the intended method.",
+    "The source does not specify whether each spice is whole or ground before toasting."
+  ],
+  "sourceNote": "Inspired by a Central Market pork vindaloo and jasmine rice meal."
+}
