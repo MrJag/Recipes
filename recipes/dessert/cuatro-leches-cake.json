@@ -1,41 +1,54 @@
 {
   "schemaVersion": "0.1",
   "id": "cuatro-leches-cake",
-  "title": "Cuatro Leches Cake",
+  "title": "Cuatro Leches — La Duni Original",
   "category": "Dessert",
   "status": "draft",
+  "defaultVariant": -1,
   "photo": "./public/images/cuatro-leches-cake.jpg",
+  "yield": "One 8-inch cake",
+  "subtitle": "Original La Duni Latin Café recipe · Pastry chef Dunia Borga",
+  "headnote": "The original La Duni Cuatro Leches: vanilla mantecada sponge layered with three-milk soak, covered in caramelized meringue, and finished with arequipe sauce. Transcribed from the original restaurant PDF; source inconsistencies are flagged rather than silently corrected.",
+  "sourceDriveUrl": "https://drive.google.com/file/d/1be3Kcm9YaWp-ORWb-2Aj6g0H_2u7i-Ql/view",
+  "sourceNote": "La Duni Latin Café, cuatrolechescakeweb.pdf, V.02.10.03 BIC 2003; original by pastry chef Dunia Borga.",
   "ingredientGroups": [
     {
-      "title": "Vanilla Mantecada Cake",
+      "title": "Vanilla mantecada cake (original)",
       "items": [
-        "3 cups all-purpose flour (13.23 oz / 375 g)",
-        "1½ tsp baking powder (7.35 g)",
-        "¼ tsp salt (1.5 g)",
-        "1 liquid cup milk (8.5 oz / 242 g)",
-        "1 tsp vanilla extract (4 g)",
-        "1 cup unsalted butter (2 sticks / 8 oz / 226 g)",
-        "2 cups sugar (14 oz / 400 g)",
-        "4 large eggs (7 oz / 200 g)"
+        "3 cups all-purpose flour",
+        "1½ tsp baking powder",
+        "¼ tsp salt",
+        "1 cup unsalted butter",
+        "2 cups sugar",
+        "4 large eggs",
+        "1 tsp vanilla extract",
+        "1 cup milk",
+        "Butter and parchment for one 8-inch cake pan"
       ]
     },
     {
-      "title": "Three Leches Sauce",
+      "title": "Dulce de leche",
+      "items": [
+        "1 can sweetened condensed milk, for making dulce de leche (or 1 cup prepared dulce de leche; safer substitute)"
+      ]
+    },
+    {
+      "title": "Three-milk sauce",
       "items": [
         "2 cups evaporated milk",
-        "2 cups condensed milk",
+        "2 cups sweetened condensed milk",
         "2 cups whipping cream"
       ]
     },
     {
-      "title": "Arequipe Sauce",
+      "title": "Arequipe caramel sauce",
       "items": [
         "1 cup dulce de leche",
-        "½ liquid cup warmed whole or 2% milk (4.25 oz / 121 g)"
+        "½ cup warmed whole milk"
       ]
     },
     {
-      "title": "Caramelized Meringue",
+      "title": "Caramelized meringue",
       "items": [
         "2 cups sugar",
         "4 oz water",
@@ -47,51 +60,260 @@
     {
       "title": "Assembly",
       "items": [
-        "1 baked and cooled 8-inch vanilla mantecada cake, as listed in the source",
+        "1 cooled 8-inch mantecada cake",
+        "1 cup three-milk sauce, listed for assembly (source's detailed method calls for more)",
         "¾ cup arequipe sauce",
-        "1 cup three leches sauce",
-        "1 recipe caramelized meringue",
-        "½ cup powdered sugar, or more, for dusting",
-        "Fresh fruit, optional"
+        "1 batch caramelized meringue",
+        "Powdered sugar, for dusting"
       ]
     }
   ],
   "steps": [
     {
-      "heading": "Vanilla Mantecada Cake:"
+      "heading": "Vanilla mantecada cake — La Duni PDF"
     },
-    "Position a rack in the lower third and preheat the oven to 350°F. Grease two 9-inch pans and line the bottoms with greased parchment. The source says to reduce oven heat by 25°F for dark nonstick or ovenproof glass pans.",
-    "Sift flour, baking powder and salt. Stir vanilla into the milk. Beat the butter on low until softened, about 60 seconds if cold; add sugar gradually and beat on medium for 2 minutes. Scrape the bowl.",
-    "On low speed add eggs one at a time, beating 20 seconds after each. Beat on medium for 2 minutes. With the mixer on low, add the flour mixture in three portions alternating with the milk in two, beginning and ending with flour. Scrape the bowl and mix on low for 30 seconds; do not overmix.",
-    "Divide between the pans. Bake for about 40 minutes, or about 45 minutes in 8-inch pans, until the centers feel firm. Cool in the pans on a rack.",
+    "Preheat the oven to 350°F. Sift flour, baking powder and salt together.",
+    "Cream the butter until very fluffy using a stand mixer with a paddle. Gradually beat in the sugar; add eggs individually on low speed. Mix in the vanilla.",
+    "Add a third of the flour mixture, then half the milk; alternate with the remaining flour and milk, ending with flour. Mix briefly, approximately 1 minute or less, and avoid overmixing.",
+    "Pour into a buttered, parchment-lined 8-inch round cake pan. Bake on the lower third rack for 55–70 minutes, until the center springs back and the sides pull away. Cool completely.",
     {
-      "heading": "Tres Leches Sauce:"
+      "heading": "Dulce de leche"
     },
-    "Whisk together the evaporated milk, condensed milk and whipping cream.  Refrigerate until needed.",
+    "The PDF instructs simmering a sealed can of condensed milk in water for 2 hours. For safety, use 1 cup prepared dulce de leche instead; this is a documented substitution, not the original heating method.",
     {
-      "heading": "Arequipe Sauce:"
+      "heading": "Sauces and meringue"
     },
-    "Whisk the dulce de leche with the warmed milk. Cover and refrigerate until needed.",
+    "Whisk evaporated milk, condensed milk and cream until combined; refrigerate. Separately whisk the dulce de leche with warmed whole milk for the arequipe sauce and refrigerate.",
+    "Heat the sugar and water to 240°F (soft-ball stage). Beat egg whites to soft peaks; while beating at medium speed, carefully drizzle in the hot syrup. Beat at high speed with the lemon juice and vanilla to stiff peaks.",
     {
-      "heading": "Meringue:"
+      "heading": "Original assembly"
     },
-    "Make the syrup by heating the water and sugar in a small saucepan to the soft-ball stage, 240°F.",
-    "Beat egg whites to soft peaks.",
-    "Slowly add the syrup to the egg whites at medium speed, then increase to high and add the lemon juice and vanilla, beating until stiff peaks.",
-    {
-      "heading": "Assembly:"
-    },
-    "Unmold the 8-inch cake, remove parchment, and slice the first the cake horizontally into two layers.",
-    "On each layer, pierce the cut surfaces with a fork and brush with 6 oz of Tres Leches Sauce.  Stack both layers back together.",
-    "Ice the cake with meringue about ½ inch thick.  Start by piping a dam of meringue around the perimeter of the top edge, then spread more meringue within the perimeter across the top and down the sides.",
-    "Torch until light golden brown. Alternatively, preheat the oven to 450°F for 15 minutes and brown on the middle rack for 4–6 minutes, watching constantly.",
-    "Drizzle with arequipe sauce and dust with powdered sugar. Add fruit if desired.",
-    "Chill about 1 hour and serve immediately with extra three leches sauce and arequipe.  The cake can hold in the refrigerator for 3-4 days."
+    "Remove the cake from its parchment and slice horizontally into three even layers. Prick each layer with a fork.",
+    "Brush with the three-milk mixture while stacking layers. The PDF lists 1 cup in its assembly ingredients but directs 6 oz per layer (18 oz total); check the desired saturation before pouring and do not assume the figures agree.",
+    "Cover the cake with approximately ½-inch of meringue, making peaks with a spatula. Torch until golden; drizzle with arequipe and dust with powdered sugar. Serve with additional milk sauce and caramel."
   ],
   "reviewFlags": [
-    "The assembly ingredient list calls for one 8-inch cake and 1 cup three leches sauce, but the detailed method calls for two cakes and about 6 oz sauce per pair of cut layers. The companion source uses a different assembly. Confirm cake count and soaking quantity before making."
+    "Original PDF cake formula uses ONE 8-inch pan and 55–70 minutes; this differs materially from CraftyBaking's two 9-inch layers and ~40 minutes.",
+    "Original PDF lists 1 cup of three-milk sauce for assembly but instructs brushing 6 oz on each of three layers. These amounts are inconsistent; original values are retained.",
+    "The original PDF calls its hot-syrup topping 'Caramelized Meringue'; this preparation is Italian-style meringue, not a conventional uncooked Swiss meringue.",
+    "Sealed-can simmering for dulce de leche in the PDF is replaced in directions with safer prepared dulce de leche; original method is described in the note."
   ],
-  "headnote": "An icon in Dallas' culinary history, the Cuatro Leches Cake is Dunia Borga's flagship desert under the La Duni Latin cafe.  \n\nThis decadent layered cake features a Mantecado Vanilla sponge cake, soaked in cuatro leches sauce, topped with caramelized swiss meringue and dotted with Arequipe reduction.",
-  "subtitle": "",
-  "rating": 5
+  "rating": 5,
+  "variants": [
+    {
+      "title": "Cuatro Leches — CraftyBaking Updated",
+      "status": "draft",
+      "photo": "./public/images/cuatro-leches-cake.jpg",
+      "subtitle": "Updated cake and assembly · Sarah Phillips / CraftyBaking",
+      "yield": "Two 9-inch cake layers, assembled as one tall cake",
+      "headnote": "CraftyBaking's tested revision of chef Dunia Borga's La Duni cake. The cake batter and procedures are revised, sauce proportions are smaller, and two baked layers are each split for assembly.",
+      "sourceNote": "CraftyBaking, Sarah Phillips, 'Cuatro Leches Vanilla Mantecado Cake' (2011); revised from chef Dunia Borga's La Duni original.",
+      "sourceUrl": "https://www.craftybaking.com/recipes/cuatro-leches-vanilla-mantecado-cake/",
+      "ingredientGroups": [
+        {
+          "title": "Vanilla mantecada layers",
+          "items": [
+            "375 g all-purpose flour (3 cups, spooned and leveled)",
+            "7.35 g baking powder (1½ tsp)",
+            "1.5 g salt (¼ tsp)",
+            "242 g cold milk (1 cup)",
+            "4 g vanilla extract (1 tsp)",
+            "226 g cold unsalted butter (1 cup)",
+            "400 g granulated sugar (2 cups)",
+            "200 g whole eggs (4 large)",
+            "Parchment and butter for two 9-inch pans"
+          ]
+        },
+        {
+          "title": "Dulce de leche and arequipe",
+          "items": [
+            "1 cup prepared dulce de leche (about 300 g, brand-dependent)",
+            "121 g warmed milk (½ cup)"
+          ]
+        },
+        {
+          "title": "Three-milk soak",
+          "items": [
+            "242 g evaporated milk (1 cup)",
+            "242 g sweetened condensed milk (1 cup)",
+            "232 g heavy whipping cream (1 cup)"
+          ]
+        },
+        {
+          "title": "Caramelized meringue",
+          "items": [
+            "400 g granulated sugar (2 cups)",
+            "118 g water (½ cup)",
+            "240 g egg whites (approximately 8 large)",
+            "15 g lemon juice (1 Tbsp)",
+            "2 g vanilla extract (½ tsp)"
+          ]
+        },
+        {
+          "title": "Assembly",
+          "items": [
+            "Two baked 9-inch mantecada layers, cooled",
+            "¾ cup arequipe sauce",
+            "Three-milk soak, about 6 oz for each split cake pair per revised method",
+            "One batch caramelized meringue",
+            "Powdered sugar, for dusting",
+            "Fresh fruit, optional"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "heading": "Cake — CraftyBaking revised method"
+        },
+        "Heat oven to 350°F with rack in lower third. Grease two light-colored 9-inch pans and line with parchment. Reduce heat 25°F if using dark nonstick or glass pans.",
+        "Sift flour, baking powder and salt. Stir vanilla into the milk.",
+        "Beat cold butter with a paddle on low until softened, about 60 seconds. Add sugar steadily, beat on medium for 2 minutes until fluffy and scrape bowl.",
+        "On low, add eggs one by one, beating 20 seconds after each. Increase to medium and beat 2 minutes.",
+        "With mixer on low, alternate flour mixture in three portions with milk in two portions, starting and ending with flour. Scrape the bowl and beat 30 more seconds on low; avoid overmixing.",
+        "Divide between prepared pans; bake about 40 minutes in 9-inch pans (about 45 minutes in 8-inch pans). Cool in pans on racks.",
+        {
+          "heading": "Sauces"
+        },
+        "Use prepared dulce de leche (or the original CraftyBaking crockpot method if appropriate for your equipment). Whisk with 121 g warm milk for arequipe, then chill.",
+        "Whisk the evaporated milk, condensed milk and cream for the three-milk soak, then refrigerate.",
+        {
+          "heading": "Caramelized meringue"
+        },
+        "Heat sugar and water to 240°F without stirring once boiling; brush down crystals. Whip egg whites to soft peaks.",
+        "Slowly pour syrup down side of mixer bowl on medium; beat on high with lemon juice and vanilla until firm peaks. Use immediately.",
+        {
+          "heading": "Assemble the updated cake"
+        },
+        "Turn both cooled cakes out and remove parchment. Horizontally split each into two layers. Prick cut surfaces with a fork.",
+        "Brush about 6 oz total three-milk sauce onto each split pair. Re-stack the first pair; add a meringue border and filling, then stack the second split pair as described by CraftyBaking.",
+        "Cover the cake with a roughly ½-inch meringue coat, pipe decorative borders and torch lightly until golden. Alternatively brown at 450°F for 4–6 minutes, watching continuously.",
+        "Drizzle with arequipe, dust with powdered sugar, chill about an hour, and serve with extra sauce. Refrigerate leftovers (CraftyBaking suggests up to 3–4 days)."
+      ],
+      "reviewFlags": [
+        "CraftyBaking cake formula yields TWO 9-inch layers, yet its assembly ingredient line still mentions ONE 8-inch cake; this entry follows the expanded two-cake assembly instructions and flags that inconsistency.",
+        "CraftyBaking's assembly instructs about 6 oz soak per split pair despite a 1 cup sauce line in the ingredient summary; use the expanded assembly amounts with judgment.",
+        "Prepared dulce de leche is used as a safer ready-made option; CraftyBaking also documents a sealed-can slow-cooker method."
+      ]
+    },
+    {
+      "title": "Panque de Limón — Lemon-Curd Variation",
+      "status": "draft",
+      "photo": "./public/images/cuatro-leches-cake.jpg",
+      "subtitle": "La Duni lemon variation · complete home rendition",
+      "yield": "One layered 9-inch cake (from two cakes)",
+      "headnote": "CraftyBaking describes chef Dunia Borga's Panque de Limón as mantecada cake layered with fresh lemon curd, topped with caramelized meringue and candied lemon peel, and served with raspberry purée. The source gives no quantities for those three added elements; this complete home rendition uses independently attributed supplemental recipes and quantities. This version does NOT use the three-milk soak or arequipe.",
+      "sourceNote": "Cake and meringue from CraftyBaking (Sarah Phillips); composition of Panque de Limón attributed there to chef Dunia Borga. Supplemental lemon curd from King Arthur Baking (Sarah Jampel, updated 2026), candied lemon peel adapted from Whole Foods Market, and raspberry coulis from BBC Good Food (Esther Clark).",
+      "sourceUrl": "https://www.craftybaking.com/recipes/cuatro-leches-vanilla-mantecado-cake/",
+      "supplementalSources": [
+        {
+          "component": "Lemon curd",
+          "url": "https://www.kingarthurbaking.com/recipes/lemon-curd-recipe",
+          "attribution": "Sarah Jampel / King Arthur Baking (2026)"
+        },
+        {
+          "component": "Candied lemon peel",
+          "url": "https://www.wholefoodsmarket.com/recipes/candied-lemon-peels",
+          "attribution": "Whole Foods Market; scaled down from published batch"
+        },
+        {
+          "component": "Raspberry purée",
+          "url": "https://www.bbcgoodfood.com/recipes/raspberry-coulis",
+          "attribution": "Esther Clark / BBC Good Food"
+        }
+      ],
+      "ingredientGroups": [
+        {
+          "title": "Vanilla mantecada sponge — from CraftyBaking",
+          "items": [
+            "375 g all-purpose flour",
+            "7.35 g baking powder (1½ tsp)",
+            "1.5 g salt (¼ tsp)",
+            "242 g milk",
+            "4 g vanilla extract (1 tsp)",
+            "226 g unsalted butter",
+            "400 g granulated sugar",
+            "200 g whole eggs (4 large)"
+          ]
+        },
+        {
+          "title": "Fresh lemon curd — King Arthur Baking",
+          "items": [
+            "248 g granulated sugar",
+            "Finely grated zest of 2 lemons",
+            "227 g fresh lemon juice",
+            "4 large eggs plus 2 large yolks",
+            "113 g cold butter, cubed",
+            "½ tsp vanilla extract",
+            "⅛ tsp salt"
+          ]
+        },
+        {
+          "title": "Caramelized meringue — CraftyBaking",
+          "items": [
+            "400 g granulated sugar",
+            "118 g water",
+            "240 g egg whites",
+            "15 g lemon juice",
+            "2 g vanilla extract"
+          ]
+        },
+        {
+          "title": "Candied lemon peel — small batch based on Whole Foods",
+          "items": [
+            "Peel of 2 unwaxed lemons, cut into narrow strips",
+            "250 g granulated sugar (200 g syrup plus 50 g coating)",
+            "180 g water for syrup, plus extra blanching water"
+          ]
+        },
+        {
+          "title": "Raspberry purée — BBC Good Food",
+          "items": [
+            "450 g fresh or thawed frozen raspberries",
+            "Juice of ½ small lemon",
+            "3 Tbsp icing sugar (approximately 24 g)"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "heading": "Vanilla mantecada cake"
+        },
+        "Heat oven to 350°F. Grease and line two light-colored 9-inch pans. Sift flour, baking powder and salt; combine milk and vanilla.",
+        "Beat butter until softened; add sugar and beat 2 minutes. Beat in eggs one at a time, 20 seconds each, then beat 2 minutes at medium speed.",
+        "Alternate flour in three additions with milk in two, mixing on low and ending with flour. Beat 30 seconds on low, then divide between pans.",
+        "Bake approximately 40 minutes until centers spring back. Cool in pans, then unmold and remove parchment.",
+        {
+          "heading": "Lemon curd — supplemental King Arthur Baking"
+        },
+        "Rub lemon zest into sugar until aromatic. Warm the lemon juice in a heavy pan without boiling. Whisk eggs and yolks, gradually whisk in lemon sugar.",
+        "Slowly temper egg mixture with warm lemon juice, return to saucepan and whisk continuously over medium heat until it reaches 170°F and thickens (about 6–8 minutes).",
+        "Immediately strain, whisk in cold butter, vanilla and salt. Cover surface directly and chill until firmly set, approximately 4 hours. Makes about 730 g.",
+        {
+          "heading": "Candied lemon peel — supplemental adaptation"
+        },
+        "Peel two washed, unwaxed lemons without much white pith; cut peel into thin strips. Cover with water, bring to boil 1 minute and drain. Repeat twice more.",
+        "Simmer the blanched peel in a syrup of 200 g sugar and 180 g water for roughly 45–60 minutes until translucent. Lift out, coat with the remaining 50 g sugar and dry on a rack until no longer tacky. This is a scaled-down variation of the cited Whole Foods recipe.",
+        {
+          "heading": "Raspberry purée — supplemental BBC Good Food"
+        },
+        "Blend raspberries with lemon juice and icing sugar just until smooth. Pass through a fine sieve to remove seeds. Chill until serving.",
+        {
+          "heading": "Caramelized meringue — from CraftyBaking"
+        },
+        "Boil 400 g sugar with 118 g water to 240°F. Beat egg whites to soft peaks, gradually stream in syrup while whipping, then beat in lemon juice and vanilla to firm glossy peaks. Use immediately.",
+        {
+          "heading": "Assembly — complete home rendition"
+        },
+        "Split each cooled mantecada layer horizontally to make four thin layers. Spread chilled lemon curd between the cake layers, reserving a little for the top if desired.",
+        "Coat exterior with caramelized meringue, create swoops and peaks, and torch golden. Top with candied lemon peel. Chill until set.",
+        "Serve slices with raspberry purée spooned onto the plate. Keep the assembled cake refrigerated and consume within 2–3 days for best texture."
+      ],
+      "reviewFlags": [
+        "Panque de Limón on CraftyBaking is an overview, not a complete quantified formula. Curd, peel, raspberry components and assembly choices here are supplementary home-developed instructions, NOT Chef Dunia's authenticated formula.",
+        "Supplemental lemon curd from King Arthur Baking was updated in 2026; this component may differ from that used by La Duni historically.",
+        "The candied-peel quantity was scaled from the Whole Foods recipe and is therefore an adaptation rather than a reproduction.",
+        "This lemon version is not soaked in three-milk sauce and does not use arequipe; its flavor and structure are distinct from Cuatro Leches."
+      ]
+    }
+  ]
 }
