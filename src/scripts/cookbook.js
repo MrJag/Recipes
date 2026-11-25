@@ -474,7 +474,7 @@ function selectRecipeVersion(index) {
     title: variant.title,
     status: variant.status,
     category: sourceRecipe.category,
-    sourceDriveUrl: sourceRecipe.sourceDriveUrl,
+    sourceDriveUrl: variant.sourceUrl || variant.sourceDriveUrl || sourceRecipe.sourceDriveUrl,
     sourceNote: variant.sourceNote || sourceRecipe.sourceNote || "Original source document"
   } : sourceRecipe;
   document.title = currentRecipe.title + " | Family Cookbook";

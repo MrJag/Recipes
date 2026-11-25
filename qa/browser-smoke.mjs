@@ -7,6 +7,22 @@ try {
  browser=await chromium.launch({headless:true});
  const page=await browser.newPage({viewport:{width:1400,height:900}});
  page.on('pageerror',error=>report.errors.push('PAGE ERROR: '+error.message));
+ // The original La Duni PDF, updated CraftyBaking, and lemon rendition share one entry.
+ await page.goto('http://localhost:8123/recipe.html?recipe=cuatro-leches-cake',{waitUntil:'load'});
+ await page.waitForTimeout(600);
+ check(await page.locator('.recipe-versions button').count()===3,'Cuatro Leches has three linked versions');
+ check((await page.locator('.recipe-versions button').allTextContents()).every(t=>t.includes('Draft')),'All three Cuatro Leches versions are Draft');
+ check((await page.locator('#pages h1').allTextContents()).some(t=>t.includes('La Duni Original')),'Original La Duni recipe loads first');
+ check((await page.locator('#pages .photo-strip img').first().getAttribute('src')).includes('cuatro-leches-original.jpg'),'Original cake uses the new image');
+ await page.locator('.recipe-versions button').nth(1).click();
+ await page.waitForTimeout(350);
+ check((await page.locator('#pages h1').allTextContents()).some(t=>t.includes('CraftyBaking Updated')),'CraftyBaking version loads');
+ check((await page.locator('#pages .photo-strip img').first().getAttribute('src')).includes('cuatro-leches-updated.jpg'),'Updated cake uses its generated photo');
+ await page.locator('.recipe-versions button').nth(2).click();
+ await page.waitForTimeout(350);
+ check((await page.locator('#pages h1').allTextContents()).some(t=>t.includes('Panque de Limón')),'Panque de Limón version loads');
+ check((await page.locator('#pages .photo-strip img').first().getAttribute('src')).includes('panque-de-limon.jpg'),'Lemon cake uses its generated photo');
+ check((await page.locator('#pages .headnote').allTextContents()).join(' ').includes('supplement'),'Panque de Limón visibly distinguishes supplementary elements');
  await page.goto('http://localhost:8123/recipe.html?recipe=whiskey-date-cake',{waitUntil:'load'});
  await page.waitForTimeout(900);
  check(await page.locator('.recipe-versions button').count()===2,'Whiskey Cake has original and home adaptation version buttons');
