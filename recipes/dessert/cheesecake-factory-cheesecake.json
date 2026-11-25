@@ -48,5 +48,8 @@
     "Gram equivalents for the original cup measurements are approximate; original volumes are retained for reference."
   ],
   "sourceNote": "Inspired by the original Cheesecake Factory Cheesecake, with vanilla bean paste, lemon zest, and water-bath baking.",
-  "rating": 5
+  "rating": 5,
+  "ingredientNotes": [
+    "All filling ingredients should be room temperature before starting. This is critical to an evenly cooked cake without cracks."
+  ]
 }
