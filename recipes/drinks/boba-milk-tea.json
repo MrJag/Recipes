@@ -6,9 +6,33 @@
   "status": "draft",
   "photo": "./public/images/boba-milk-tea.jpg",
   "ingredientGroups": [
-    {"title": "Tea concentrate", "items": ["20 g loose Assam tea leaves", "5 g loose Ceylon tea leaves", "5 g loose oolong tea leaves", "1 liter water"]},
-    {"title": "Boba", "items": ["10 cups water", "1 cup instant boba", "¼ cup 2:1 brown sugar simple syrup"]},
-    {"title": "For each drink", "items": ["½ cup tea concentrate", "3 Tbsp evaporated milk", "2 Tbsp simple syrup", "¼ cup prepared boba", "½ cup ice"]}
+    {
+      "title": "Tea concentrate",
+      "items": [
+        "20 g loose Assam tea leaves",
+        "5 g loose Ceylon tea leaves",
+        "5 g loose oolong tea leaves",
+        "1 liter water"
+      ]
+    },
+    {
+      "title": "Boba",
+      "items": [
+        "10 cups water",
+        "1 cup instant boba",
+        "¼ cup 2:1 brown sugar simple syrup"
+      ]
+    },
+    {
+      "title": "For each drink",
+      "items": [
+        "½ cup tea concentrate",
+        "3 Tbsp evaporated milk",
+        "2 Tbsp simple syrup",
+        "¼ cup prepared boba",
+        "½ cup ice"
+      ]
+    }
   ],
   "steps": [
     "Heat 1 liter water to 185°F. Add the tea leaves and steep for 10 minutes; strain and chill.",
@@ -17,6 +41,9 @@
     "Transfer the boba to a bowl of cold water. After 20 seconds, transfer to a storage container and add ¼ cup 2:1 brown sugar simple syrup.",
     "For each drink, combine ½ cup tea concentrate, 3 Tbsp evaporated milk, 2 Tbsp simple syrup, ¼ cup boba and ½ cup ice. Stir."
   ],
-  "reviewFlags": ["The source is a draft. Confirm whether the boba should rest or continue simmering during the 8 minutes after the heat is turned off, and whether the assembly syrup is the brown sugar syrup."],
-  "headnote": "The source is a draft. Confirm whether the boba should rest or continue simmering during the 8 minutes after the heat is turned off, and whether the assembly syrup is the brown sugar syrup."
+  "reviewFlags": [
+    "The source is a draft. Confirm whether the boba should rest or continue simmering during the 8 minutes after the heat is turned off, and whether the assembly syrup is the brown sugar syrup."
+  ],
+  "headnote": "DRAFT NOTES: Still need to confirm whether the boba should rest or continue simmering during the 8 minutes after the heat is turned off, and whether the assembly syrup is the brown sugar syrup.",
+  "subtitle": ""
 }
