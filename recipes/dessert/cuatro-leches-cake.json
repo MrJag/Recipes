@@ -101,10 +101,10 @@
   "rating": 5,
   "variants": [
     {
-      "title": "Cuatro Leches — CraftyBaking Updated",
+      "title": "Cuatro Leches Cake",
       "status": "draft",
       "photo": "./public/images/cuatro-leches-cake.jpg",
-      "subtitle": "Updated cake and assembly · Sarah Phillips / CraftyBaking",
+      "subtitle": "Updated by CraftyBaking",
       "yield": "Two 9-inch cake layers, assembled as one tall cake",
       "headnote": "CraftyBaking's tested revision of chef Dunia Borga's La Duni cake. The cake batter and procedures are revised, sauce proportions are smaller, and two baked layers are each split for assembly.",
       "sourceNote": "CraftyBaking, Sarah Phillips, 'Cuatro Leches Vanilla Mantecado Cake' (2011); revised from chef Dunia Borga's La Duni original.",
@@ -193,7 +193,8 @@
         "CraftyBaking cake formula yields TWO 9-inch layers, yet its assembly ingredient line still mentions ONE 8-inch cake; this entry follows the expanded two-cake assembly instructions and flags that inconsistency.",
         "CraftyBaking's assembly instructs about 6 oz soak per split pair despite a 1 cup sauce line in the ingredient summary; use the expanded assembly amounts with judgment.",
         "Prepared dulce de leche is used as a safer ready-made option; CraftyBaking also documents a sealed-can slow-cooker method."
-      ]
+      ],
+      "rating": 5
     },
     {
       "title": "Panque de Limón — Lemon-Curd Variation",
