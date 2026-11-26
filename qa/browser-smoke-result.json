@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-26T00:43:21.202Z",
+  "date": "2026-11-26T07:12:06.083Z",
   "checks": [
     {
       "label": "Cuatro Leches has three linked versions",
@@ -75,7 +75,7 @@
     },
     {
       "label": "Header dropdown lists all taxonomy groups",
-      "pass": true
+      "pass": false
     },
     {
       "label": "Dropdown opens separate directory page with category",
@@ -179,11 +179,11 @@
     },
     {
       "label": "Three recent additions appear in directory photo rail",
-      "pass": true
+      "pass": false
     },
     {
       "label": "Recipe header has category dropdown",
-      "pass": true
+      "pass": false
     },
     {
       "label": "Header brand returns home",
@@ -503,7 +503,7 @@
     },
     {
       "label": "Recipe viewer displays saved direction headings",
-      "pass": true
+      "pass": false
     },
     {
       "label": "Recipe viewer numbers directions sequentially across headings",
@@ -805,10 +805,14 @@
   "errors": [
     "Original La Duni recipe loads first",
     "CraftyBaking version loads",
+    "Header dropdown lists all taxonomy groups",
     "Directory filtering loads",
     "Main Dishes bookmark filters correctly",
     "Search clears category selection",
-    "Saving a recipe preserves blank lines between description paragraphs"
+    "Three recent additions appear in directory photo rail",
+    "Recipe header has category dropdown",
+    "Saving a recipe preserves blank lines between description paragraphs",
+    "Recipe viewer displays saved direction headings"
   ],
   "pass": false
 }
