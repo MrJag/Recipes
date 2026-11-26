@@ -175,10 +175,18 @@
         {
           "label": "Vegetable Sides",
           "slugs": [
+            "creamed-corn",
             "roasted-acorn-squash",
             "southwestern-roasted-cauliflower",
+            "cranberry-relish",
             "crispy-blanched-brussels-sprouts",
             "fennel-apple-salad"
+          ]
+        },
+        {
+          "label": "Potatoes",
+          "slugs": [
+            "mashed-potatoes"
           ]
         },
         {
@@ -319,7 +327,8 @@
             "hectors-tres-leches",
             "cheesecake-factory-cheesecake",
             "pumpkin-cheesecake-bourbon-caramel",
-            "pumpkin-cheesecake-vanilla-sour-cream"
+            "pumpkin-cheesecake-vanilla-sour-cream",
+            "mariannas-pumpkin-swirl-cheesecake"
           ]
         },
         {
