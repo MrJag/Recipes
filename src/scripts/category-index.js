@@ -63,9 +63,10 @@ function renderHighlights(matching) {
   // When browsing a category, show variety across its subcategories first.
   if (currentGroup) {
     for (const recipe of photographed) {
-      if (!seen.has(recipe.subgroup) && chosen.length < 3) {
+      const subgroup = recipe.assignments.find(a => a.group === currentGroup)?.subgroup;
+      if (!seen.has(subgroup) && chosen.length < 3) {
         chosen.push(recipe);
-        seen.add(recipe.subgroup);
+        seen.add(subgroup);
       }
     }
   }
@@ -104,7 +105,7 @@ function renderHighlights(matching) {
     const description = document.createElement("span");
     description.className = "highlight-description";
     const note = recipe.description || byRecent.get(recipe.slug)?.description;
-    description.textContent = note || [recipe.subgroup,recipe.cuisine].filter(Boolean).join(" · ");
+    description.textContent = note || [recipe.assignments.find(a => a.group === currentGroup)?.subgroup || recipe.assignments[0].subgroup,recipe.cuisine].filter(Boolean).join(" · ");
     card.append(frame,title,description);
     highlights.appendChild(card);
   }
@@ -144,16 +145,17 @@ function updateGroupButtons() {
 function render() {
   const term = searchInput.value.trim().toLocaleLowerCase();
   const matching = recipes.filter(recipe =>
-    (!selectedGroups.length || selectedGroups.includes(recipe.group)) &&
+    (!selectedGroups.length || recipe.assignments.some(a => selectedGroups.includes(a.group))) &&
     (!cuisineFilter.value || recipe.cuisine === cuisineFilter.value) &&
     (!proteinFilter.value || recipe.proteins.includes(proteinFilter.value)) &&
-    (!term || [recipe.title, recipe.subtitle || "", recipe.cuisine, recipe.group, recipe.subgroup, ...recipe.proteins]
+    (!term || [recipe.title, recipe.subtitle || "", recipe.cuisine, ...recipe.assignments.flatMap(a => [a.group,a.subgroup]), ...recipe.proteins]
       .some(value => value.toLocaleLowerCase().includes(term)))
   );
   const bySlug = new Map(matching.map(recipe => [recipe.slug, recipe]));
   const forceOpen = Boolean(term || cuisineFilter.value || proteinFilter.value);
   results.replaceChildren();
   for (const group of taxonomy.groups) {
+    if (selectedGroups.length && !selectedGroups.includes(group.name)) continue;
     const subgroups = group.subcategories.map(sub => ({
       label:sub.label,
       entries:sub.slugs.map(slug => bySlug.get(slug)).filter(Boolean)
@@ -175,7 +177,7 @@ function render() {
     const name = document.createElement("span");
     name.textContent = group.name;
     const count = document.createElement("small");
-    count.textContent = String(subgroups.reduce((sum, sub) => sum + sub.entries.length, 0));
+    count.textContent = String(new Set(subgroups.flatMap(sub => sub.entries.map(recipe => recipe.slug))).size);
     title.append(name, count);
     details.appendChild(title);
     const wrap = document.createElement("div");
@@ -283,8 +285,10 @@ async function loadCatalog() {
   const mapped = new Map();
   for (const group of taxonomy.groups) for (const sub of group.subcategories) {
     for (const slug of sub.slugs) {
-      if (mapped.has(slug)) throw new Error("Duplicate recipe taxonomy entry: " + slug);
-      mapped.set(slug,{group:group.name,subgroup:sub.label});
+      if (!mapped.has(slug)) mapped.set(slug,[]);
+      const assignments = mapped.get(slug);
+      if (assignments.some(a => a.group === group.name && a.subgroup === sub.label)) throw new Error("Duplicate recipe within category: " + slug);
+      assignments.push({group:group.name,subgroup:sub.label});
     }
   }
   recipes = [...catalog.querySelectorAll(".recipe-outline a[data-recipe]")].map(link => {
@@ -297,12 +301,12 @@ async function loadCatalog() {
     return {
       slug,path:link.dataset.recipe,title:link.textContent.trim(),url:url.href,
       cuisine:cuisineOverrides[slug] ?? (nonCuisineGroups.has(sourceGroup) ? "Unspecified" : sourceGroup),
-      group:assignment.group,subgroup:assignment.subgroup,
+      assignments:assignment,
       proteins:proteinBySlug.get(slug) || [],
       draft:link.dataset.status === "draft"
     };
   });
-  if (!recipes.length || mapped.size !== recipes.length) throw new Error("Recipe taxonomy does not match catalog");
+  if (!recipes.length || mapped.size !== recipes.length || new Set(recipes.map(recipe => recipe.slug)).size !== recipes.length) throw new Error("Recipe taxonomy does not match catalog");
   recipes.sort((a,b)=>a.title.localeCompare(b.title));
   for (const cuisine of [...new Set(recipes.map(recipe=>recipe.cuisine))].sort()) {
     cuisineFilter.add(new Option(cuisine,cuisine));
