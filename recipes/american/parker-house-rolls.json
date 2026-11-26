@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "0.1",
+  "id": "parker-house-rolls",
+  "title": "Parker House Rolls",
+  "category": "American",
+  "status": "draft",
+  "photo": "./public/images/parker-house-rolls.jpg",
+  "subtitle": "Buttery folded dinner rolls · Recommended by Eric",
+  "yield": "15 rolls",
+  "headnote": "Soft, buttery Boston-style rolls with a folded center and a flaky salt finish. Recommended by Eric. Prep: 45 minutes; proofing: approximately 2 hours 15 minutes; bake: 20–30 minutes at 350°F. Source total time: 3 hours 20 minutes.",
+  "ingredientGroups": [
+    {
+      "title": "Dough and shaping",
+      "items": [
+        "542 g all-purpose flour, plus extra for dusting",
+        "7 g instant yeast",
+        "9 g Diamond Crystal kosher salt",
+        "290 mL whole milk, room temperature",
+        "50 g granulated sugar",
+        "1 large egg and 1 large egg yolk",
+        "58 g unsalted butter, softened, divided into 4 pieces",
+        "28 g unsalted butter, melted, for shaping",
+        "Cooking spray or butter for greasing"
+      ]
+    },
+    {
+      "title": "Finishing",
+      "items": [
+        "58 g unsalted butter, melted",
+        "1 large egg",
+        "5 mL water",
+        "3 g flaky sea salt"
+      ]
+    }
+  ],
+  "steps": [
+    "Combine flour, yeast and salt in the mixer bowl. Separately whisk milk, sugar, egg and yolk. With dough hook on medium-low, stream in liquids; mix 2 minutes.",
+    "At medium speed, incorporate softened butter piecewise over 2 minutes. Knead 10 minutes until elastic and clearing the bowl.",
+    "Cover in a greased bowl; rise 60–90 minutes until doubled.",
+    "Deflate; divide into 15 equal portions (about 65 g). Round tightly; cover and rest 10 minutes.",
+    "Stretch each to 2 × 5 inches, brush with the 28 g melted butter and fold into overlapping 2-inch squares. Arrange flat-side down, 3 rows of 5, in a greased 9 × 13-inch pan.",
+    "Cover and proof about 45 minutes, until puffy; a gentle indentation should slowly recover.",
+    "Preheat oven to 350°F, middle rack. Whisk finishing egg with water; brush tops. Bake 20–30 minutes to golden brown and 190°F internally.",
+    "Brush immediately with the 58 g finishing butter; scatter flaky salt. Cool 20 minutes for warm serving, or 1 hour for room temperature."
+  ],
+  "ingredientNotes": [
+    "If substituting table salt for Diamond Crystal kosher salt, use half the original volumetric amount (1½ tsp instead of 1 Tbsp).",
+    "Store covered at room temperature for up to 1 day. Reheat foil-wrapped at 350°F for about 15 minutes."
+  ],
+  "reviewFlags": [
+    "Recommended by Eric; family kitchen testing has not been confirmed."
+  ],
+  "sourceNote": "Recommended by Eric. Recipe developed by Nicole Hopper for Serious Eats, headnote by Leah Colins. https://www.seriouseats.com/parker-house-rolls-recipe-8733832"
+}
