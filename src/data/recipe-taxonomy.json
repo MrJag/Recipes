@@ -175,18 +175,10 @@
         {
           "label": "Vegetable Sides",
           "slugs": [
-            "creamed-corn",
             "roasted-acorn-squash",
             "southwestern-roasted-cauliflower",
-            "cranberry-relish",
             "crispy-blanched-brussels-sprouts",
             "fennel-apple-salad"
-          ]
-        },
-        {
-          "label": "Potatoes",
-          "slugs": [
-            "mashed-potatoes"
           ]
         },
         {
@@ -327,8 +319,7 @@
             "hectors-tres-leches",
             "cheesecake-factory-cheesecake",
             "pumpkin-cheesecake-bourbon-caramel",
-            "pumpkin-cheesecake-vanilla-sour-cream",
-            "mariannas-pumpkin-swirl-cheesecake"
+            "pumpkin-cheesecake-vanilla-sour-cream"
           ]
         },
         {
@@ -430,6 +421,25 @@
           "label": "Guides",
           "slugs": [
             "steak-guide"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Thanksgiving",
+      "subcategories": [
+        {
+          "label": "Sides",
+          "slugs": [
+            "cranberry-relish",
+            "creamed-corn",
+            "mashed-potatoes"
+          ]
+        },
+        {
+          "label": "Desserts",
+          "slugs": [
+            "mariannas-pumpkin-swirl-cheesecake"
           ]
         }
       ]
