@@ -167,13 +167,19 @@ function render() {
     section.id = "recipes-" + group.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
     const details = document.createElement("details");
     details.className = "group-details";
-    details.open = forceOpen || group.name === expandedGroup ||
-      (selectedGroups.length === 1 && group.name === selectedGroups[0]);
+    const categorySelected = selectedGroups.includes(group.name);
+    details.open = forceOpen || group.name === expandedGroup || categorySelected;
     details.addEventListener("toggle", () => {
       if (details.open && !forceOpen) expandedGroup = group.name;
     });
     const title = document.createElement("summary");
     title.className = "group-heading";
+    title.addEventListener("click", () => {
+      // Opening a category reveals every recipe list beneath it.
+      if (!details.open) {
+        for (const child of details.querySelectorAll(".subcategory-details")) child.open = true;
+      }
+    });
     const name = document.createElement("span");
     name.textContent = group.name;
     const count = document.createElement("small");
@@ -185,7 +191,7 @@ function render() {
     for (const sub of subgroups) {
       const subdetails = document.createElement("details");
       subdetails.className = "subcategory-details";
-      subdetails.open = forceOpen;
+      subdetails.open = forceOpen || categorySelected || group.name === expandedGroup;
       const summary = document.createElement("summary");
       const label = document.createElement("span");
       label.className = "subcategory-label";
@@ -230,16 +236,17 @@ function selectGroups(names) {
 // Render the index immediately; hydrate live titles in the background.
 // Keep expanded groups/subcategories intact when metadata refreshes.
 function refreshRenderedMetadata() {
-  const expanded = new Set([...results.querySelectorAll("details[open]")].map(d => {
+  const expansionState = new Map([...results.querySelectorAll("details")].map(d => {
     const section = d.closest(".taxonomy-section");
     const name = section?.dataset.group || "";
-    return d.classList.contains("group-details") ? name : name + "::" + d.querySelector("summary .subcategory-label")?.textContent;
+    const key = d.classList.contains("group-details") ? name : name + "::" + d.querySelector("summary .subcategory-label")?.textContent;
+    return [key, d.open];
   }));
   render();
   for (const d of results.querySelectorAll("details")) {
     const name = d.closest(".taxonomy-section")?.dataset.group || "";
     const key = d.classList.contains("group-details") ? name : name + "::" + d.querySelector("summary .subcategory-label")?.textContent;
-    if (expanded.has(key)) d.open = true;
+    if (expansionState.has(key)) d.open = expansionState.get(key);
   }
 }
 
