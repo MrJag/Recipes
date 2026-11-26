@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "0.1",
+  "id": "japanese-milk-bread",
+  "title": "Japanese Milk Bread (Hokkaido Milk Bread)",
+  "category": "Japanese",
+  "status": "draft",
+  "servings": "1 loaf (18 slices) or 9 dinner rolls",
+  "headnote": "Soft, lightly sweet Japanese bread made with a cooked flour paste (tangzhong). Prep: 45 min; cook: 40 min; proof: 4 hr; total: 5 hr 25 min.",
+  "ingredientGroups": [
+    {
+      "title": "Tangzhong",
+      "items": [
+        "60 mL water",
+        "60 mL milk",
+        "23 g bread flour"
+      ]
+    },
+    {
+      "title": "Dough",
+      "items": [
+        "All the tangzhong, cooled",
+        "120 mL milk, lukewarm",
+        "7 g active dry yeast",
+        "50 g sugar",
+        "15 g dry milk powder (optional)",
+        "1 egg",
+        "350 g bread flour",
+        "1 tsp sea salt",
+        "58 g unsalted butter, softened"
+      ]
+    },
+    {
+      "title": "Finish",
+      "items": [
+        "Milk or egg wash, as needed",
+        "Butter and flour, for the pan"
+      ]
+    }
+  ],
+  "steps": [
+    "Whisk tangzhong flour with water, then milk. Cook over medium heat, stirring until pudding-thick. Cover the surface; cool.",
+    "Bloom yeast in lukewarm milk with 1 tsp of the measured sugar for 10–20 minutes.",
+    "Combine with remaining sugar, tangzhong, milk powder, egg, flour and salt. Knead with dough hook on low for 5 minutes.",
+    "Incorporate butter in 3–4 additions, 20 seconds apart. Knead on medium for 5–7 minutes until smooth and tacky; avoid extra flour.",
+    "Cover and rise until doubled (1–2 hours), optionally chill afterward, or refrigerate for a 12-hour first rise.",
+    "Deflate. For a loaf, divide into four, flatten into 6-inch squares, fold opposite corners inward, roll tightly and seal. Arrange seam-down in a buttered, floured 4.5 × 8.5-inch loaf pan.",
+    "For rolls instead, shape nine balls and space ¼–½ inch apart in a buttered, floured 8- or 9-inch square pan.",
+    "Cover and proof until doubled (1–2 hours). Brush with milk or egg wash.",
+    "Bake at 350°F: loaf 30–35 minutes; rolls 20–30 minutes. Target 190–205°F internally; tent with foil if browning rapidly.",
+    "Rest briefly, unmold onto a rack and cool before slicing."
+  ],
+  "reviewFlags": [
+    "Imported from an external recipe; family testing not yet recorded."
+  ],
+  "sourceNote": "Adapted from Dini Kodippili, The Flavor Bender. https://www.theflavorbender.com/japanese-milk-bread-recipe-hokkaido-milk-bread/#wprm-recipe-container-32495"
+}

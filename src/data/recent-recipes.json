@@ -1,6 +1,12 @@
 {
   "recipes": [
     {
+      "slug": "japanese-milk-bread",
+      "title": "Japanese Milk Bread (Hokkaido Milk Bread)",
+      "description": "Soft Japanese bread with tangzhong; loaf or dinner rolls.",
+      "draft": true
+    },
+    {
       "slug": "parker-house-rolls",
       "title": "Parker House Rolls",
       "description": "Buttery folded dinner rolls · Recommended by Eric",
@@ -12,13 +18,6 @@
       "title": "Creamy Pumpkin Pasta with Toasted Pecans",
       "description": "Pumpkin, Sage & Parmigiano Reggiano",
       "photo": "./public/images/creamy-pumpkin-pasta.jpg",
-      "draft": true
-    },
-    {
-      "slug": "mariannas-pumpkin-swirl-cheesecake",
-      "title": "Marianna’s Pumpkin Swirl Cheesecake",
-      "description": "Snickerdoodle Crust · Cheesecake Factory–Style",
-      "photo": "./public/images/mariannas-pumpkin-swirl-cheesecake.jpg",
       "draft": true
     }
   ]
