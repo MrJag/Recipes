@@ -52,13 +52,22 @@
     }
   ],
   "steps": [
+    {
+      "heading": "Prep:"
+    },
     "Heat oven to 375°F. Grease a 9 × 13-inch baking dish.",
     "Bring salted water to a boil. Cook the pasta 2 minutes less than the package specifies, drain, and leave unrinsed.",
     "Toss the shredded cheddar, Gruyère and Monterey Jack together. Measure out 2 cups of the mixture for the top; set aside.",
     "In a separate bowl, combine the panko, melted butter, finely grated Parmesan and paprika.",
-    "Melt the unsalted butter in a large pot. Whisk in the flour and cook for 1–2 minutes.",
+    {
+      "heading": "Cheese Sauce:"
+    },
+    "Melt the unsalted butter over medium heat in a large pot. Whisk in the flour and cook for 1–2 minutes.",
     "Gradually whisk the whole milk, heavy cream and evaporated milk into the roux. Add the salt, pepper, garlic powder, onion powder, smoked paprika and mustard powder; simmer 5 minutes.",
     "Lower the heat. Stir in the softened cream cheese, then gradually incorporate the remaining shredded cheese, a handful at a time, until the sauce is smooth.",
+    {
+      "heading": "Assembly:"
+    },
     "Fold in the drained pasta and spread in the prepared baking dish. Scatter the reserved shredded cheese over the surface, followed by the panko mixture.",
     "Bake 25–30 minutes at 375°F, then broil 2–3 minutes until browned. Rest 10 minutes before serving."
   ],
