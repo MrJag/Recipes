@@ -408,6 +408,9 @@ async function loadRecipe(button) {
   button.setAttribute("aria-current", "page");
   revealSelectedRecipe(button);
   statusEl.textContent = "Loading " + file + " …";
+  const routeMessage = byId("recipeRouteMessage");
+  routeMessage.textContent = "Loading recipe…";
+  routeMessage.hidden = false;
   try {
     const response = await fetch("./" + file, {cache:"no-store"});
     if (!response.ok) throw new Error("HTTP " + response.status);
@@ -431,10 +434,13 @@ async function loadRecipe(button) {
       };
       probe.src = recipe.photo;
     }
-    setupVariants(recipe, button);
+    const selected = recipeLinks.get(new URL(button.href).searchParams.get("recipe")) || button;
+    setupVariants(recipe, selected);
+    byId("recipeRouteMessage").hidden = true;
   } catch (error) {
     if (requestId !== loadSequence) return;
     statusEl.textContent = "Unable to load recipe: " + error.message + ". Refresh to retry; a newly published recipe may not be deployed yet.";
+    showRecipeRouteError("Unable to load this recipe: " + error.message, button.href);
   }
 }
 function setupVariants(recipe, recipeButton) {
@@ -501,12 +507,12 @@ for (const link of recipeIndex.querySelectorAll(".recipe-outline a[data-recipe]"
   catalogLinks.set(slug, link);
 }
 
-function addSidebarLink(link, container, slug) {
+function addSidebarLink(link, container, slug, links = recipeLinks) {
   const sidebarLink = link.cloneNode(true);
   sidebarLink.removeAttribute("aria-current");
   sidebarLink.classList.add("sidebar-recipe-link");
   // The source link already contains its draft badge.
-  recipeLinks.set(slug, sidebarLink);
+  links.set(slug, sidebarLink);
   container.appendChild(sidebarLink);
 }
 
@@ -536,6 +542,8 @@ async function refreshCatalogMetadata() {
 }
 
 function buildSidebarFallback() {
+  sidebar.replaceChildren();
+  recipeLinks.clear();
   for (const category of recipeIndex.querySelectorAll(".recipe-outline section")) {
     const group = el("details", "sidebar-category");
     group.appendChild(el("summary", null, category.querySelector("h2").textContent));
@@ -559,6 +567,7 @@ async function buildSidebar() {
     clearTimeout(timeout);
   }
   const fragment = document.createDocumentFragment();
+  const newRecipeLinks = new Map();
   const assigned = new Set();
   for (const category of taxonomy.groups) {
     const group = el("details", "sidebar-category");
@@ -581,7 +590,7 @@ async function buildSidebar() {
         if (!link) throw new Error("Unknown category recipe: " + slug);
         if (assigned.has(slug)) throw new Error("Duplicate category recipe: " + slug);
         assigned.add(slug);
-        addSidebarLink(link, subgroup, slug);
+        addSidebarLink(link, subgroup, slug, newRecipeLinks);
         subTotal++;
       }
       if (subTotal) {
@@ -598,7 +607,19 @@ async function buildSidebar() {
   if (assigned.size !== catalogLinks.size) {
     throw new Error("Category index is missing " + (catalogLinks.size - assigned.size) + " recipes");
   }
+  // A recipe can already be open while taxonomy is loading. Move its selection
+  // and version controls to the new sidebar without fetching or rendering again.
+  const activeSlug = getRouteSlug();
+  const versions = sidebar.querySelector(".recipe-versions");
+  const selected = newRecipeLinks.get(activeSlug);
+  if (selected) {
+    selected.setAttribute("aria-current", "page");
+    if (versions) selected.after(versions);
+    revealSelectedRecipe(selected);
+  }
   sidebar.replaceChildren(fragment);
+  recipeLinks.clear();
+  for (const [slug, link] of newRecipeLinks) recipeLinks.set(slug, link);
 }
 
 function revealSelectedRecipe(link) {
@@ -609,12 +630,27 @@ function revealSelectedRecipe(link) {
   if (subcategory) subcategory.open = true;
 }
 
+function getRouteSlug() {
+  const query = new URLSearchParams(location.search);
+  return query.get("recipe") || new URLSearchParams(location.hash.slice(1)).get("recipe");
+}
+function showRecipeRouteError(message, retryUrl) {
+  const notice = byId("recipeRouteMessage");
+  notice.replaceChildren(document.createTextNode(message + ". "));
+  const retry = el("a", null, "Retry");
+  retry.href = retryUrl || location.href;
+  const directory = el("a", null, "Browse recipes");
+  directory.href = "./directory.html";
+  notice.append(retry, " · ", directory);
+  notice.hidden = false;
+}
 function showRoute() {
   printMenu.open = false;
-  const slug = new URLSearchParams(location.search).get("recipe");
+  const slug = getRouteSlug();
   const link = recipeLinks.get(slug);
-  recipeIndex.hidden = Boolean(link);
-  recipeView.hidden = !link;
+  // Never silently show the catalog when a recipe URL is requested.
+  recipeIndex.hidden = Boolean(slug);
+  recipeView.hidden = !slug;
   if (link) {
     revealSelectedRecipe(link);
     loadRecipe(link);
@@ -622,7 +658,12 @@ function showRoute() {
     ++loadSequence;
     currentRecipe = null;
     document.title = "Family Cookbook";
-    if (slug) statusEl.textContent = "Recipe not found in this version of the cookbook. Refresh the page or open the directory.";
+    pagesEl.replaceChildren();
+    if (slug) {
+      showRecipeRouteError("This recipe is not in the currently deployed catalog", location.href);
+    } else {
+      byId("recipeRouteMessage").hidden = true;
+    }
   }
 }
 
@@ -646,7 +687,7 @@ window.CookbookEditorBridge = {
   getPath: () => sidebar.querySelector('[aria-current="page"]')?.dataset.recipe,
   setSavedRecipe: data => {
     sourceRecipe = data;
-    syncCatalogRecipe(new URLSearchParams(location.search).get("recipe"), data);
+    syncCatalogRecipe(getRouteSlug(), data);
     selectRecipeVersion(activeVariantIndex);
   },
   requestRender
@@ -672,12 +713,12 @@ byId("printButton").addEventListener("click", () => window.print());
 // Re-paginating on every resize or mobile scroll viewport change would destroy
 // and recreate the photo element, causing visible flashes and wasted decoding.
 // CSS handles the responsive preview without resetting the page DOM.
+// Direct recipe links work from the embedded catalog even if the taxonomy
+// request is slow, fails or is temporarily out of sync during deployment.
+buildSidebarFallback();
+showRoute();
 buildSidebar().catch(error => {
-  console.warn("Using cuisine-based navigation because taxonomy could not load:", error);
-  sidebar.querySelectorAll(".sidebar-category").forEach(group => group.remove());
-  recipeLinks.clear();
-  buildSidebarFallback();
+  console.warn("Keeping cuisine-based navigation because taxonomy could not load:", error);
 }).finally(() => {
-  showRoute();
-  void refreshCatalogMetadata();
+  void refreshCatalogMetadata().catch(error => console.warn("Recipe metadata refresh failed:", error));
 });

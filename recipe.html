@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="./src/styles/editor.css?v=0.10.17">
 <link rel="stylesheet" href="./src/styles/site-header.css?v=4">
 <script defer src="./src/scripts/recipe-metadata.js?v=2"></script>
-<script defer src="./src/scripts/cookbook.js?v=0.9.5"></script>
+<script defer src="./src/scripts/cookbook.js?v=0.9.6"></script>
 <script defer src="./src/scripts/recipe-editor.js?v=21"></script>
 <script defer src="./src/scripts/recipe-rating.js?v=7"></script>
 <script defer src="./src/scripts/header-categories.js?v=2"></script>
@@ -325,6 +325,7 @@
   </div>
 </main>
 <div id="recipeView" tabindex="-1" hidden>
+<p id="recipeRouteMessage" role="status" aria-live="polite" style="max-width:720px;margin:1rem auto;padding:1rem;background:#fcf9f4;color:#251e1a" hidden></p>
 <div class="cookbook-layout">
 <div class="recipe-action-rail" aria-label="Recipe actions">
   <details class="print-menu" id="printMenu">
@@ -383,5 +384,6 @@
     </div>
   </form>
 </dialog>
+<noscript><p>JavaScript is required for the full recipe viewer. <a href="./view/mariannas-pumpkin-swirl-cheesecake.html">Read Marianna’s Pumpkin Swirl Cheesecake</a>.</p></noscript>
 </body>
 </html>
