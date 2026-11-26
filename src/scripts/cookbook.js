@@ -573,6 +573,12 @@ async function buildSidebar() {
   for (const category of taxonomy.groups) {
     const group = el("details", "sidebar-category");
     const heading = el("summary", "sidebar-category-title");
+    heading.addEventListener("click", () => {
+      // Opening a category reveals every subcategory, without changing recipe selection.
+      if (!group.open) {
+        for (const child of group.querySelectorAll(".sidebar-subcategory")) child.open = true;
+      }
+    });
     heading.appendChild(el("span", null, category.name));
     const groupCount = el("span", "sidebar-count");
     heading.appendChild(groupCount);
