@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "0.1",
+  "id": "five-cheese-baked-mac-and-cheese",
+  "title": "Five-Cheese Baked Mac and Cheese",
+  "category": "American",
+  "status": "draft",
+  "photo": "./public/images/five-cheese-baked-mac-and-cheese.jpg",
+  "subtitle": "Creamy cavatappi with a crispy Parmesan-panko topping",
+  "yield": "One 9 × 13-inch baking dish; servings not specified",
+  "headnote": "Alissa Nguyen’s Thanksgiving macaroni and cheese combines sharp cheddar, Monterey Jack, Gruyère, cream cheese and Parmesan. The pasta is finished in a rich milk-and-cream sauce beneath a crunchy cheese and breadcrumb crust.",
+  "ingredientGroups": [
+    {
+      "title": "Pasta",
+      "items": [
+        "454 g cavatappi or elbow macaroni (1 lb)",
+        "1 Tbsp kosher salt, for pasta water"
+      ]
+    },
+    {
+      "title": "Cheese blend",
+      "items": [
+        "454 g sharp cheddar, freshly shredded (16 oz)",
+        "198 g Gruyère, freshly shredded (7 oz)",
+        "227 g Monterey Jack, freshly shredded (8 oz)",
+        "227 g cream cheese, softened (8 oz)"
+      ]
+    },
+    {
+      "title": "Cheese sauce",
+      "items": [
+        "113 g unsalted butter (8 Tbsp)",
+        "60 g all-purpose flour (½ cup, approximate weight)",
+        "710 mL whole milk (3 US cups)",
+        "473 mL heavy whipping cream (2 US cups)",
+        "One 12 fl oz can evaporated milk (about 354 mL)",
+        "2 tsp kosher salt",
+        "1 tsp black pepper",
+        "1 tsp garlic powder",
+        "1 tsp onion powder",
+        "½ tsp smoked paprika",
+        "½ tsp mustard powder"
+      ]
+    },
+    {
+      "title": "Crispy topping",
+      "items": [
+        "1 cup panko breadcrumbs (about 60 g)",
+        "43 g melted butter (3 Tbsp)",
+        "¼ cup finely grated Parmesan (about 25 g)",
+        "½ tsp paprika"
+      ]
+    }
+  ],
+  "steps": [
+    "Heat oven to 375°F. Grease a 9 × 13-inch baking dish.",
+    "Bring salted water to a boil. Cook the pasta 2 minutes less than the package specifies, drain, and leave unrinsed.",
+    "Toss the shredded cheddar, Gruyère and Monterey Jack together. Measure out 2 cups of the mixture for the top; set aside.",
+    "In a separate bowl, combine the panko, melted butter, finely grated Parmesan and paprika.",
+    "Melt the unsalted butter in a large pot. Whisk in the flour and cook for 1–2 minutes.",
+    "Gradually whisk the whole milk, heavy cream and evaporated milk into the roux. Add the salt, pepper, garlic powder, onion powder, smoked paprika and mustard powder; simmer 5 minutes.",
+    "Lower the heat. Stir in the softened cream cheese, then gradually incorporate the remaining shredded cheese, a handful at a time, until the sauce is smooth.",
+    "Fold in the drained pasta and spread in the prepared baking dish. Scatter the reserved shredded cheese over the surface, followed by the panko mixture.",
+    "Bake 25–30 minutes at 375°F, then broil 2–3 minutes until browned. Rest 10 minutes before serving."
+  ],
+  "ingredientNotes": [
+    "Use freshly grated block cheese rather than packaged pre-shredded cheese for smoother melting.",
+    "Make ahead: assemble without the panko mixture, cover and refrigerate the day before. Let stand 30 minutes before baking, add the topping, then bake as directed in the source.",
+    "Optional source suggestion: add extra cheddar on top for additional browning and cheesiness.",
+    "Flour, panko and grated Parmesan weights are approximate volume conversions; the original measures are retained."
+  ],
+  "reviewFlags": [
+    "Not yet family-tested; source serving count not provided.",
+    "Written ingredient quantities and make-ahead instructions were recovered from the creator’s corresponding November 9, 2026 Instagram post as mirrored online; the YouTube description was not accessible. The spoken method was checked against the video transcript.",
+    "Generated illustrative photograph; not a photo of a family-tested result."
+  ],
+  "sourceNote": "Alissa Nguyen (@alissanguyen_), The Mac & Cheese Recipe People Won't Stop Asking Me For: https://youtu.be/MHJlHauDAh0 . Corresponding written recipe, Ultimate Baked Mac and Cheese: https://www.instagram.com/p/Dfh3NhKxf19/ (accessible mirror https://imginn.com/p/Dfh3NhKxf19/)."
+}
