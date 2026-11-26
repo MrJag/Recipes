@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "0.1",
+  "id": "creamy-pumpkin-pasta",
+  "title": "Creamy Pumpkin Pasta with Toasted Pecans",
+  "category": "Italian",
+  "status": "draft",
+  "photo": "./public/images/creamy-pumpkin-pasta.jpg",
+  "subtitle": "Pumpkin, Sage & Parmigiano Reggiano",
+  "yield": "4 servings",
+  "headnote": "A silky pumpkin cream sauce with sage and nutmeg coats tubular pasta, finished with toasted pecans and Parmigiano Reggiano. The adapted sauce uses a full 2 cups of starchy pasta water for a looser, creamy consistency. Preparation: 5 minutes. Cooking: approximately 30 minutes.",
+  "ingredientGroups": [
+    {
+      "title": "Pasta and pumpkin cream sauce",
+      "items": [
+        "454 g rigatoni or tortiglioni",
+        "56 g unsalted butter",
+        "1 medium onion, finely diced",
+        "425 g pure canned pumpkin purée (one 15 oz can), not pumpkin pie filling",
+        "1 cup heavy cream",
+        "1 Tbsp fresh sage, minced",
+        "½ tsp ground nutmeg",
+        "½ tsp salt, plus salt for the pasta water",
+        "½ tsp ground black pepper",
+        "¾ cup grated Parmigiano Reggiano, plus more for serving",
+        "2 cups reserved pasta water (approximately 475 mL)",
+        "1 tsp sugar, optional, if needed to balance the pumpkin"
+      ]
+    },
+    {
+      "title": "Garnish",
+      "items": [
+        "1 cup pecans, roughly chopped",
+        "Whole fresh sage leaves",
+        "Extra-virgin olive oil, for frying sage (optional)"
+      ]
+    }
+  ],
+  "steps": [
+    "Toast the pecans in a dry skillet over medium-low heat for 3–5 minutes, stirring frequently, until fragrant. Transfer to a plate. If desired, fry whole sage leaves in a little olive oil over medium heat for about 15 seconds per side and drain on paper towels.",
+    "Bring a large pot of salted water to a boil. Meanwhile, melt the butter in a wide, deep skillet over medium to medium-low heat. Add the onion and cook for 5–7 minutes, until tender and translucent.",
+    "Stir the pumpkin purée into the onion and butter and cook for about 2 minutes. Add the cream, minced sage, nutmeg, ½ tsp salt and ½ tsp black pepper. Bring to a gentle simmer; reduce the heat to low while the pasta cooks.",
+    "Cook the pasta in the boiling water until 1 minute shy of al dente. Reserve 2 cups of the cooking water before draining.",
+    "Gradually stir most of the reserved pasta water into the pumpkin sauce. Return the sauce to medium heat and toss in the pasta. Cook until al dente and the sauce coats the pasta; let excess liquid reduce as necessary.",
+    "Remove the skillet from the heat. Stir in the grated Parmigiano Reggiano and the remaining measured pasta water, using the full 2 cups in total. Toss until the cheese is incorporated and the sauce is creamy. Taste for balance; if needed, briefly reduce over low heat while stirring. Add the optional sugar only if the pumpkin needs it.",
+    "Fold in most of the toasted pecans. Serve immediately with the remaining pecans, extra grated Parmigiano and whole or crispy sage leaves."
+  ],
+  "ingredientNotes": [
+    "Use pure pumpkin purée rather than sweetened pie filling. Walnuts or hazelnuts can replace pecans.",
+    "The specified 2 cups of cooking water are added in full, in stages, rather than reserved only for optional thinning. Pasta water and Parmigiano contribute salt; taste the finished dish before adding additional seasoning."
+  ],
+  "reviewFlags": [
+    "Adaptation uses the full 2 cups of reserved pasta water plus measured salt and pepper per user request. The modified sauce consistency has not been independently kitchen-tested; reduce gently as needed."
+  ],
+  "sourceNote": "Adapted from James Delmage, Sip and Feast, Creamy Pumpkin Pasta with Toasted Pecans: https://www.sipandfeast.com/creamy-pumpkin-pasta/ — video: https://youtu.be/5vt-X3lbBgc"
+}

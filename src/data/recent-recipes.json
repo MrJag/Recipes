@@ -1,6 +1,13 @@
 {
   "recipes": [
     {
+      "slug": "creamy-pumpkin-pasta",
+      "title": "Creamy Pumpkin Pasta with Toasted Pecans",
+      "description": "Pumpkin cream sauce with sage, Parmigiano Reggiano and toasted pecans.",
+      "photo": "./public/images/creamy-pumpkin-pasta.jpg",
+      "draft": true
+    },
+    {
       "slug": "mariannas-pumpkin-swirl-cheesecake",
       "title": "Marianna’s Pumpkin Swirl Cheesecake",
       "description": "Snickerdoodle Crust · Cheesecake Factory–Style",
@@ -12,13 +19,6 @@
       "title": "Pumpkin Cheesecake with Salted Bourbon Caramel",
       "description": "Pumpkin cheesecake · Gingersnap and mixed-nut crust",
       "photo": "./public/images/pumpkin-cheesecake-bourbon-caramel.jpg",
-      "draft": true
-    },
-    {
-      "slug": "pumpkin-cheesecake-vanilla-sour-cream",
-      "title": "Pumpkin Cheesecake with Vanilla Sour Cream",
-      "description": "Pumpkin cheesecake · Gingersnap and mixed-nut crust",
-      "photo": "./public/images/pumpkin-cheesecake-vanilla-sour-cream.jpg",
       "draft": true
     }
   ]
