@@ -434,7 +434,7 @@ async function loadRecipe(button) {
       };
       probe.src = recipe.photo;
     }
-    const selected = recipeLinks.get(new URL(button.href).searchParams.get("recipe")) || button;
+    const selected = sidebar.querySelector('[aria-current="page"]') || button;
     setupVariants(recipe, selected);
     byId("recipeRouteMessage").hidden = true;
   } catch (error) {
@@ -499,7 +499,7 @@ const recipeCount = recipeIndex.querySelectorAll(".recipe-outline a[data-recipe]
 byId("recipeCount").textContent = `${recipeCount} ${recipeCount === 1 ? "recipe" : "recipes"}`;
 
 // Maintain a single recipe catalog. The landing page and recipe sidebar share
-// the same taxonomy so a recipe cannot appear under different category trees.
+// the same taxonomy; several category links may refer to one recipe file.
 for (const link of recipeIndex.querySelectorAll(".recipe-outline a[data-recipe]")) {
   const slug = new URL(link.href).searchParams.get("recipe");
   if (!slug || catalogLinks.has(slug)) continue;
@@ -512,7 +512,8 @@ function addSidebarLink(link, container, slug, links = recipeLinks) {
   sidebarLink.removeAttribute("aria-current");
   sidebarLink.classList.add("sidebar-recipe-link");
   // The source link already contains its draft badge.
-  links.set(slug, sidebarLink);
+  if (!links.has(slug)) links.set(slug, []);
+  links.get(slug).push(sidebarLink);
   container.appendChild(sidebarLink);
 }
 
@@ -520,7 +521,7 @@ function addSidebarLink(link, container, slug, links = recipeLinks) {
 function syncCatalogRecipe(slug, data) {
   if (!slug || !data || typeof data.title !== "string" || !data.title.trim()) return;
   authoritativeCatalogSlugs.add(slug);
-  for (const link of [catalogLinks.get(slug), recipeLinks.get(slug)]) {
+  for (const link of [catalogLinks.get(slug), ...(recipeLinks.get(slug) || [])]) {
     if (!link) continue;
     link.textContent = data.title;
     if (data.status) link.dataset.status = data.status;
@@ -576,7 +577,7 @@ async function buildSidebar() {
     const groupCount = el("span", "sidebar-count");
     heading.appendChild(groupCount);
     group.appendChild(heading);
-    let count = 0;
+    const groupSlugs = new Set();
     for (const subcategory of category.subcategories) {
       const subgroup = el("details", "sidebar-subcategory");
       const subheading = el("summary", "sidebar-subcategory-title");
@@ -584,23 +585,25 @@ async function buildSidebar() {
       const subcount = el("span", "sidebar-subcount");
       subheading.appendChild(subcount);
       subgroup.appendChild(subheading);
+      const subSlugs = new Set();
       let subTotal = 0;
       for (const slug of subcategory.slugs) {
         const link = catalogLinks.get(slug);
         if (!link) throw new Error("Unknown category recipe: " + slug);
-        if (assigned.has(slug)) throw new Error("Duplicate category recipe: " + slug);
+        if (subSlugs.has(slug)) throw new Error("Duplicate recipe within category: " + slug);
+        subSlugs.add(slug);
+        groupSlugs.add(slug);
         assigned.add(slug);
         addSidebarLink(link, subgroup, slug, newRecipeLinks);
         subTotal++;
       }
       if (subTotal) {
         subcount.textContent = subTotal;
-        count += subTotal;
         group.appendChild(subgroup);
       }
     }
-    if (count) {
-      groupCount.textContent = count;
+    if (groupSlugs.size) {
+      groupCount.textContent = groupSlugs.size;
       fragment.appendChild(group);
     }
   }
@@ -611,7 +614,7 @@ async function buildSidebar() {
   // and version controls to the new sidebar without fetching or rendering again.
   const activeSlug = getRouteSlug();
   const versions = sidebar.querySelector(".recipe-versions");
-  const selected = newRecipeLinks.get(activeSlug);
+  const selected = newRecipeLinks.get(activeSlug)?.[0];
   if (selected) {
     selected.setAttribute("aria-current", "page");
     if (versions) selected.after(versions);
@@ -644,10 +647,11 @@ function showRecipeRouteError(message, retryUrl) {
   notice.append(retry, " · ", directory);
   notice.hidden = false;
 }
-function showRoute() {
+function showRoute(preferredLink = null) {
   printMenu.open = false;
   const slug = getRouteSlug();
-  const link = recipeLinks.get(slug);
+  const choices = recipeLinks.get(slug) || [];
+  const link = choices.includes(preferredLink) ? preferredLink : choices.find(item => item.getAttribute("aria-current") === "page") || choices[0];
   // Never silently show the catalog when a recipe URL is requested.
   recipeIndex.hidden = Boolean(slug);
   recipeView.hidden = !slug;
@@ -674,7 +678,7 @@ document.addEventListener("click", event => {
 
   event.preventDefault();
   if (location.href !== link.href) history.pushState(null, "", link.href);
-  showRoute();
+  showRoute(link);
   window.scrollTo(0, 0);
   (recipeView.hidden ? recipeIndex : recipeView).focus();
 });
