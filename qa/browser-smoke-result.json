@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-26T07:12:06.083Z",
+  "date": "2026-11-27T17:50:13.220Z",
   "checks": [
     {
       "label": "Cuatro Leches has three linked versions",
@@ -503,7 +503,7 @@
     },
     {
       "label": "Recipe viewer displays saved direction headings",
-      "pass": false
+      "pass": true
     },
     {
       "label": "Recipe viewer numbers directions sequentially across headings",
@@ -615,11 +615,11 @@
     },
     {
       "label": "Confirmed GitHub save caches tab-only access",
-      "pass": true
+      "pass": false
     },
     {
       "label": "Cached access has a future expiry",
-      "pass": true
+      "pass": false
     },
     {
       "label": "Cached GitHub token saves without opening the publish dialog",
@@ -704,102 +704,6 @@
     {
       "label": "Cleared star selection deletes rating JSON property",
       "pass": true
-    },
-    {
-      "label": "Expired cached access opens the publish dialog",
-      "pass": true
-    },
-    {
-      "label": "Expired access requires token again",
-      "pass": true
-    },
-    {
-      "label": "Expired access prevents automatic publish",
-      "pass": true
-    },
-    {
-      "label": "Rejected cached token opens a visible error dialog",
-      "pass": true
-    },
-    {
-      "label": "Rejected credentials reveal the token prompt",
-      "pass": true
-    },
-    {
-      "label": "Rejected silent save preserves inline edits",
-      "pass": true
-    },
-    {
-      "label": "Save spinner resets after GitHub error",
-      "pass": true
-    },
-    {
-      "label": "Rejected cached credentials are forgotten",
-      "pass": true
-    },
-    {
-      "label": "Empty API response produces an actionable error",
-      "pass": true
-    },
-    {
-      "label": "Edits remain available after failed GitHub response",
-      "pass": true
-    },
-    {
-      "label": "Failed save does not claim publication",
-      "pass": true
-    },
-    {
-      "label": "Ambiguous GitHub save submits the edited JSON",
-      "pass": true
-    },
-    {
-      "label": "Ambiguous GitHub confirmation triggers a verification read",
-      "pass": true
-    },
-    {
-      "label": "Matching repository content confirms ambiguous save as published",
-      "pass": true
-    },
-    {
-      "label": "Verified save returns to normal recipe mode",
-      "pass": true
-    },
-    {
-      "label": "Mismatched revision is reported as unverified",
-      "pass": true
-    },
-    {
-      "label": "Unverified save preserves inline edits",
-      "pass": true
-    },
-    {
-      "label": "Unverified save does not display success",
-      "pass": true
-    },
-    {
-      "label": "Fennel Apple Salad uses the full-resolution photo rather than a placeholder",
-      "pass": true
-    },
-    {
-      "label": "Fennel Apple Salad edit mode keeps cookbook font and circular direction numbers",
-      "pass": true
-    },
-    {
-      "label": "Florentine recipe renders high-resolution portrait image",
-      "pass": true
-    },
-    {
-      "label": "Florentine uses versioned image instead of stale cached preview",
-      "pass": true
-    },
-    {
-      "label": "Old combined-page bookmark redirects",
-      "pass": true
-    },
-    {
-      "label": "Old index2 bookmark redirects",
-      "pass": true
     }
   ],
   "errors": [
@@ -812,7 +716,9 @@
     "Three recent additions appear in directory photo rail",
     "Recipe header has category dropdown",
     "Saving a recipe preserves blank lines between description paragraphs",
-    "Recipe viewer displays saved direction headings"
+    "Confirmed GitHub save caches tab-only access",
+    "Cached access has a future expiry",
+    "TEST ERROR: page.evaluate: TypeError: Cannot set properties of null (setting 'expiresAt')\n    at eval (eval at evaluate (:370:30), <anonymous>:4:18)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /home/runner/work/Recipes/Recipes/qa/browser-smoke.mjs:535:13"
   ],
   "pass": false
 }
