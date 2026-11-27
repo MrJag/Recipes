@@ -65,7 +65,8 @@
             "chuys-chicka-boom-enchiladas",
             "japanese-curry",
             "creamy-chicken-florentine",
-            "thai-red-curry-chicken-cashews"
+            "thai-red-curry-chicken-cashews",
+            "rosemary-smoked-turkey"
           ]
         },
         {
@@ -439,6 +440,12 @@
     {
       "name": "Thanksgiving",
       "subcategories": [
+        {
+          "label": "Mains",
+          "slugs": [
+            "rosemary-smoked-turkey"
+          ]
+        },
         {
           "label": "Sides",
           "slugs": [
