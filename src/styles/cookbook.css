@@ -104,3 +104,19 @@ h1 { font-size: var(--title-size); line-height: 1.01; margin: 0 0 4px; }
 .ingredient-notes ul {margin:0;padding-left:19px}
 .ingredient-notes li {margin:0 0 5px;break-inside:avoid;overflow-wrap:anywhere}
 .ingredient-notes li::marker {color:var(--accent)}
+
+/* Draft watermark: decorative, out of flow, and repeated on every recipe sheet. */
+.sheet > .draft-watermark {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  font: 700 108pt/1 var(--font-sans);
+  letter-spacing: .035em;
+  color: rgba(161, 43, 49, .085);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
