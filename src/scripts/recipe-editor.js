@@ -12,33 +12,36 @@ const tokenField = document.getElementById("githubWriteToken");
 const status = document.getElementById("status");
 const tokenPrompt = document.getElementById("githubTokenPrompt");
 const cachedTokenNotice = document.getElementById("cachedTokenNotice");
-const TOKEN_SESSION_KEY = "familyCookbook.githubToken.v1";
-const TOKEN_TTL_MS = 30 * 60 * 1000;
+const TOKEN_CACHE_KEY = "familyCookbook.githubToken.v1";
+const TOKEN_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 
-function forgetSessionToken() {
-  try { sessionStorage.removeItem(TOKEN_SESSION_KEY); } catch {}
+// Discard the previous tab-only cache; persist only after a new successful write.
+try { sessionStorage.removeItem(TOKEN_CACHE_KEY); } catch {}
+
+function forgetCachedToken() {
+  try { localStorage.removeItem(TOKEN_CACHE_KEY); } catch {}
 }
-function readSessionToken() {
+function readCachedToken() {
   try {
-    const raw = sessionStorage.getItem(TOKEN_SESSION_KEY);
+    const raw = localStorage.getItem(TOKEN_CACHE_KEY);
     if (!raw) return null;
     const saved = JSON.parse(raw);
     if (!saved || typeof saved.token !== "string" ||
         !Number.isFinite(saved.expiresAt) || Date.now() >= saved.expiresAt) {
-      forgetSessionToken();
+      forgetCachedToken();
       return null;
     }
     return saved.token;
   } catch {
-    forgetSessionToken();
+    forgetCachedToken();
     return null;
   }
 }
-function rememberSessionToken(token) {
-  // Only after GitHub confirms the write. This is tab-scoped sessionStorage,
+function rememberCachedToken(token) {
+  // Only after GitHub confirms the write. This persists in localStorage,
   // NOT an HttpOnly cookie: JavaScript running on this origin can read it.
   try {
-    sessionStorage.setItem(TOKEN_SESSION_KEY, JSON.stringify({
+    localStorage.setItem(TOKEN_CACHE_KEY, JSON.stringify({
       token, expiresAt: Date.now() + TOKEN_TTL_MS
     }));
   } catch {
@@ -51,7 +54,7 @@ function setTokenPromptVisible(visible) {
 }
 function openSaveDialog() {
   if (saveInProgress) return;
-  const reused = Boolean(readSessionToken());
+  const reused = Boolean(readCachedToken());
   setTokenPromptVisible(!reused);
   if (reused) {
     // No modal on a cached-token save. A failed request opens it with details.
@@ -544,7 +547,7 @@ async function verifyPublishedContent(url, headers, expected) {
 async function publish({silent=false}={}) {
   if (saveInProgress) return;
   const typedToken = tokenField.value.trim();
-  const token = typedToken || readSessionToken();
+  const token = typedToken || readCachedToken();
   const usingCachedToken = !typedToken && Boolean(token);
   if (!token) {
     setTokenPromptVisible(true);
@@ -630,7 +633,7 @@ async function publish({silent=false}={}) {
     } else {
       feedback.textContent = "Published! GitHub commit: " + result.commit.sha.slice(0,10) + ". Pages may take time to update.";
     }
-    rememberSessionToken(token);
+    rememberCachedToken(token);
     tokenField.value = "";
     const update = JSON.parse(content);
     saveInProgress = false;
@@ -654,7 +657,7 @@ async function publish({silent=false}={}) {
   } catch(error) {
     const denied = error?.githubStatus === 401 || error?.githubStatus === 403;
     if (denied) {
-      forgetSessionToken();
+      forgetCachedToken();
       setTokenPromptVisible(true);
     }
     feedback.textContent = (error instanceof TypeError
@@ -673,9 +676,9 @@ async function publish({silent=false}={}) {
 editButton.addEventListener("click",()=> editing ? close() : start());
 saveButton.addEventListener("click",showSave);
 document.getElementById("forgetGithubSession").addEventListener("click", () => {
-  forgetSessionToken();
+  forgetCachedToken();
   setTokenPromptVisible(true);
-  feedback.textContent = "Saved GitHub access cleared for this tab.";
+  feedback.textContent = "Saved GitHub access cleared for this browser.";
 });
 document.getElementById("downloadRecipeJson").addEventListener("click",download);
 document.getElementById("publishRecipeGithub").addEventListener("click",()=>void publish());
