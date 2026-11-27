@@ -47,6 +47,11 @@ function pageShell(index, recipe) {
   const displayPhoto = index === 0 && byId("printMode").value !== "none";
   const page = el("article", "sheet" + (displayPhoto ? " has-photo" : ""));
   page.setAttribute("aria-label", "Recipe page " + (index + 1));
+  if (recipe.status === "draft") {
+    const watermark = el("div", "draft-watermark", "DRAFT");
+    watermark.setAttribute("aria-hidden", "true");
+    page.appendChild(watermark);
+  }
   const content = el("div", "content");
   if (displayPhoto) {
     const strip = el("aside", "photo-strip");
