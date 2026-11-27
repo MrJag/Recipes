@@ -691,3 +691,15 @@ body:has(#ratingOptions:not([hidden])) .edit-sheet .edit-recipe-rating .rating-l
 .edit-sheet .edit-directions li.edit-stage-heading {
   font:700 9.5pt/1.25 var(--font-sans)!important;
 }
+
+/* Center direction insertion controls in the actual gap between steps.
+   Move the preceding step's margin into the slot itself so its midpoint
+   is the midpoint of the gap, regardless of the step-spacing setting. */
+.edit-sheet .edit-directions li.edit-list-item:has(+ li.edit-insert-slot) {
+  margin-bottom:0;
+}
+.edit-sheet .edit-directions li.edit-list-item + li.edit-insert-slot {
+  margin:0!important;
+  height:calc(var(--step-gap) + 10px);
+  min-height:calc(var(--step-gap) + 10px);
+}
