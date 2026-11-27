@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-27T17:50:13.220Z",
+  "date": "2026-11-27T19:39:33.533Z",
   "checks": [
     {
       "label": "Cuatro Leches has three linked versions",
@@ -503,7 +503,7 @@
     },
     {
       "label": "Recipe viewer displays saved direction headings",
-      "pass": true
+      "pass": false
     },
     {
       "label": "Recipe viewer numbers directions sequentially across headings",
@@ -716,6 +716,7 @@
     "Three recent additions appear in directory photo rail",
     "Recipe header has category dropdown",
     "Saving a recipe preserves blank lines between description paragraphs",
+    "Recipe viewer displays saved direction headings",
     "Confirmed GitHub save caches tab-only access",
     "Cached access has a future expiry",
     "TEST ERROR: page.evaluate: TypeError: Cannot set properties of null (setting 'expiresAt')\n    at eval (eval at evaluate (:370:30), <anonymous>:4:18)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /home/runner/work/Recipes/Recipes/qa/browser-smoke.mjs:535:13"
