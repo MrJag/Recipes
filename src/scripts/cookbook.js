@@ -47,11 +47,7 @@ function pageShell(index, recipe) {
   const displayPhoto = index === 0 && byId("printMode").value !== "none";
   const page = el("article", "sheet" + (displayPhoto ? " has-photo" : ""));
   page.setAttribute("aria-label", "Recipe page " + (index + 1));
-  if (recipe.status === "draft") {
-    const watermark = el("div", "draft-watermark", "DRAFT");
-    watermark.setAttribute("aria-hidden", "true");
-    page.appendChild(watermark);
-  }
+  if (recipe.status === "draft") page.classList.add("is-draft");
   const content = el("div", "content");
   if (displayPhoto) {
     const strip = el("aside", "photo-strip");
@@ -372,6 +368,25 @@ function render(recipe) {
       }
     }
     if (density === 0) result = paginate(recipe, 0);
+  }
+  // Position decorative watermarks only after pagination has settled.
+  for (const sheet of pagesEl.querySelectorAll(".sheet.is-draft")) {
+    const content = sheet.querySelector(".content");
+    const steps = content.querySelector(".steps");
+    const ingredients = content.querySelector(".ingredients");
+    const heading = steps?.previousElementSibling;
+    const start = heading?.classList.contains("section-heading") ? heading : steps;
+    const bounds = content.getBoundingClientRect();
+    const scale = bounds.height / content.clientHeight || 1;
+    const top = start ? (start.getBoundingClientRect().top - bounds.top) / scale
+      : ingredients ? (ingredients.getBoundingClientRect().bottom - bounds.top) / scale : 0;
+    const available = Math.max(0, content.clientHeight - top);
+    // Fit the rotated text into the remaining region, including short first pages.
+    const watermark = el("div", "draft-watermark", "DRAFT");
+    watermark.setAttribute("aria-hidden", "true");
+    watermark.style.top = (top + available / 2) + "px";
+    watermark.style.fontSize = Math.max(0, Math.min(144, content.clientWidth / 3.15, available / 3.15)) + "px";
+    content.prepend(watermark);
   }
   lastPageCount = result.pages;
   if (result.overflow) {
