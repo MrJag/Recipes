@@ -6,48 +6,48 @@
   "status": "draft",
   "photo": "./public/images/five-cheese-baked-mac-and-cheese.jpg",
   "subtitle": "Creamy cavatappi with a crispy Parmesan-panko topping",
-  "yield": "One 9 × 13-inch baking dish; servings not specified",
+  "yield": "One 8 × 8-inch baking dish; approximately 4–6 side-dish servings",
   "headnote": "Alissa Nguyen’s Thanksgiving macaroni and cheese combines sharp cheddar, Monterey Jack, Gruyère, cream cheese and Parmesan. The pasta is finished in a rich milk-and-cream sauce beneath a crunchy cheese and breadcrumb crust.",
   "ingredientGroups": [
     {
       "title": "Pasta",
       "items": [
-        "454 g cavatappi or elbow macaroni (1 lb)",
-        "1 Tbsp kosher salt, for pasta water"
+        "227 g cavatappi or elbow macaroni (8 oz)",
+        "1½ tsp kosher salt, for pasta water"
       ]
     },
     {
       "title": "Cheese blend",
       "items": [
-        "454 g sharp cheddar, freshly shredded (16 oz)",
-        "198 g Gruyère, freshly shredded (7 oz)",
-        "227 g Monterey Jack, freshly shredded (8 oz)",
-        "227 g cream cheese, softened (8 oz)"
+        "227 g sharp cheddar, freshly shredded (8 oz)",
+        "99 g Gruyère, freshly shredded (3½ oz)",
+        "113.5 g Monterey Jack, freshly shredded (4 oz)",
+        "113.5 g cream cheese, softened (4 oz)"
       ]
     },
     {
       "title": "Cheese sauce",
       "items": [
-        "113 g unsalted butter (8 Tbsp)",
-        "60 g all-purpose flour (½ cup, approximate weight)",
-        "710 mL whole milk (3 US cups)",
-        "473 mL heavy whipping cream (2 US cups)",
-        "One 12 fl oz can evaporated milk (about 354 mL)",
-        "2 tsp kosher salt",
-        "1 tsp black pepper",
-        "1 tsp garlic powder",
-        "1 tsp onion powder",
-        "½ tsp smoked paprika",
-        "½ tsp mustard powder"
+        "56.5 g unsalted butter (4 Tbsp)",
+        "30 g all-purpose flour (¼ cup, approximate weight)",
+        "355 mL whole milk (1½ US cups)",
+        "237 mL heavy whipping cream (1 US cup)",
+        "177 mL evaporated milk (6 fl oz; half a 12 fl oz can)",
+        "1 tsp kosher salt",
+        "½ tsp black pepper",
+        "½ tsp garlic powder",
+        "½ tsp onion powder",
+        "¼ tsp smoked paprika",
+        "¼ tsp mustard powder"
       ]
     },
     {
       "title": "Crispy topping",
       "items": [
-        "1 cup panko breadcrumbs (about 60 g)",
-        "43 g melted butter (3 Tbsp)",
-        "¼ cup finely grated Parmesan (about 25 g)",
-        "½ tsp paprika"
+        "½ cup panko breadcrumbs (about 30 g)",
+        "21.5 g melted butter (1½ Tbsp)",
+        "2 Tbsp finely grated Parmesan (about 12.5 g)",
+        "¼ tsp paprika"
       ]
     }
   ],
@@ -55,9 +55,9 @@
     {
       "heading": "Prep:"
     },
-    "Heat oven to 375°F. Grease a 9 × 13-inch baking dish.",
+    "Heat oven to 375°F. Grease a 8 × 8-inch baking dish.",
     "Bring salted water to a boil. Cook the pasta 2 minutes less than the package specifies, drain, and leave unrinsed.",
-    "Toss the shredded cheddar, Gruyère and Monterey Jack together. Measure out 2 cups of the mixture for the top; set aside.",
+    "Toss the shredded cheddar, Gruyère and Monterey Jack together. Measure out 1 cup of the mixture for the top; set aside.",
     "In a separate bowl, combine the panko, melted butter, finely grated Parmesan and paprika.",
     {
       "heading": "Cheese Sauce:"
@@ -69,16 +69,16 @@
       "heading": "Assembly:"
     },
     "Fold in the drained pasta and spread in the prepared baking dish. Scatter the reserved shredded cheese over the surface, followed by the panko mixture.",
-    "Bake 25–30 minutes at 375°F, then broil 2–3 minutes until browned. Rest 10 minutes before serving."
+    "Bake at 375°F, checking at 20 minutes; allow 20–30 minutes, until hot and bubbling. Broil 2–3 minutes until browned, watching closely. Rest 10 minutes before serving."
   ],
   "ingredientNotes": [
     "Use freshly grated block cheese rather than packaged pre-shredded cheese for smoother melting.",
-    "Make ahead: assemble without the panko mixture, cover and refrigerate the day before. Let stand 30 minutes before baking, add the topping, then bake as directed in the source.",
+    "Make ahead: assemble without the panko mixture, cover and refrigerate the day before. Let stand 30 minutes before baking, add the topping, then bake until hot and bubbling; a chilled casserole may take longer.",
     "Optional source suggestion: add extra cheddar on top for additional browning and cheesiness.",
-    "Flour, panko and grated Parmesan weights are approximate volume conversions; the original measures are retained."
+    "Flour, panko and grated Parmesan weights are approximate volume conversions. All ingredient quantities are halved from the original 9 × 13-inch recipe. Double for the original pan size."
   ],
   "reviewFlags": [
-    "Not yet family-tested; source serving count not provided.",
+    "8 × 8-inch adaptation not yet family-tested; yield and baking-time range are estimates.",
     "Written ingredient quantities and make-ahead instructions were recovered from the creator’s corresponding November 9, 2026 Instagram post as mirrored online; the YouTube description was not accessible. The spoken method was checked against the video transcript.",
     "Generated illustrative photograph; not a photo of a family-tested result."
   ],
