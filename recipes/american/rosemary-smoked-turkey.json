@@ -1,0 +1,52 @@
+{
+  "id": "rosemary-smoked-turkey",
+  "schemaVersion": "0.1",
+  "title": "Rosemary Dry-Brined Smoked Turkey",
+  "category": "American",
+  "status": "draft",
+  "subtitle": "Brown Sugar Dry Brine · Black Pepper & Sweet Paprika Butter",
+  "yield": "6–8 servings (2 bone-in breasts and 2 bone-in legs)",
+  "headnote": "Our Thanksgiving turkey, smoked as separate bone-in breasts and legs so each can finish at its ideal temperature. The revised dry brine is slightly stronger and sweeter, and the pepper and paprika in the butter are doubled from the 2026 Thanksgiving cook.\n\nDry brine: 12–24 hours. Prep: approximately 20 minutes. Smoke: approximately 2–3 hours. Rest: 20–30 minutes. Allow 3½ hours for smoking and resting.",
+  "ingredientGroups": [
+    {
+      "title": "Turkey",
+      "items": [
+        "2,572 g bone-in, skin-on turkey breasts (2 pieces)",
+        "832 g bone-in, skin-on turkey legs (2 pieces)"
+      ]
+    },
+    {
+      "title": "Rosemary & brown sugar dry brine",
+      "items": [
+        "34 g That Dude Can Cook rosemary salt (Sonny’s blend)",
+        "20 g light brown sugar"
+      ]
+    },
+    {
+      "title": "Black pepper & paprika butter",
+      "items": [
+        "85 g unsalted butter, softened",
+        "3 tsp cracked black pepper",
+        "2 tsp sweet paprika"
+      ]
+    }
+  ],
+  "steps": [
+    "The day before smoking, pat the turkey dry and gently loosen the skin without detaching it. Mix the rosemary salt and brown sugar thoroughly. Use approximately 26 g rosemary salt and 15 g brown sugar for the breasts, and 8 g rosemary salt and 5 g brown sugar for the legs. Apply evenly, concentrating the seasoning directly on the meat beneath the skin and using a little on the outside.",
+    "Place the pieces skin-side up on a wire rack over a rimmed tray. Refrigerate uncovered for 12–24 hours to dry-brine and dry the skin. Do not rinse; pat away any surface moisture before cooking.",
+    "Preheat the smoker to 275°F. Mix the softened butter with the cracked black pepper and sweet paprika. Use about 60 g of the butter mixture for the breasts and 25 g for the legs, spreading most of it under the skin with a light coating on the outside. Do not add extra salt.",
+    "Arrange all four pieces skin-side up on the smoker, with the legs in the hotter zone if your smoker has one. Insert temperature probes into the thickest meat without touching bone. Keep the smoker at 275°F; do not spritz or repeatedly baste.",
+    "Begin checking internal temperatures after about 1 hour. Expect the breasts to take approximately 2–3 hours and the legs 1½–2½ hours, depending on size and smoker conditions. Remove each piece independently: breasts at 165°F, legs at 175–185°F for tenderness. Check more than one spot with an instant-read thermometer; all turkey must reach at least 165°F.",
+    "Rest the turkey for 20–30 minutes, loosely tented if needed. Remove the breast meat from the bone and slice across the grain. Serve alongside the legs."
+  ],
+  "ingredientNotes": [
+    "The original Thanksgiving dry brine used 30 g rosemary salt without sugar. The revised 34 g increases seasoning by approximately 13%; the 20 g brown sugar is a new addition for a little sweetness.",
+    "Rosemary salt is a seasoned blend, not pure salt. The quantities assume the same blend as the original cook; reduce or omit the dry brine for pre-brined, injected or kosher turkey.",
+    "For different turkey weights, use approximately 10 g rosemary salt, 6 g brown sugar and 25 g butter per 1,000 g bone-in turkey. Scale the pepper and paprika proportionally.",
+    "The original 85 g butter was sufficient for all four pieces; only the pepper and paprika have been doubled. Use sweet paprika, not smoked paprika, because the smoker provides the smoke flavor."
+  ],
+  "reviewFlags": [
+    "Draft: original smoking method and quantities are based on the 2026 Thanksgiving cook and planning notes. The stronger, sweeter brine and doubled pepper/paprika seasoning have not yet been kitchen-tested."
+  ],
+  "sourceNote": "Family Thanksgiving turkey, November 26, 2026; revised based on the cook’s feedback."
+}
