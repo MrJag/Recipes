@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="./src/styles/site-header.css?v=4">
 <script defer src="./src/scripts/recipe-metadata.js?v=2"></script>
 <script defer src="./src/scripts/cookbook.js?v=0.9.8"></script>
-<script defer src="./src/scripts/recipe-editor.js?v=21"></script>
+<script defer src="./src/scripts/recipe-editor.js?v=22"></script>
 <script defer src="./src/scripts/recipe-rating.js?v=7"></script>
 <script defer src="./src/scripts/header-categories.js?v=2"></script>
 </head>
@@ -377,8 +377,8 @@
       <label for="githubWriteToken">Fine-grained GitHub token <small>(Contents: Read and write, restricted to MrJag/Recipes)</small></label>
       <input id="githubWriteToken" type="password" autocomplete="off" spellcheck="false" placeholder="Token required for GitHub publishing">
     </div>
-    <p id="cachedTokenNotice" class="token-note" hidden>Using GitHub access from this browser tab. Publishing automatically.</p>
-    <p class="token-note">After a successful save, access is remembered in this tab for up to 30 minutes. This uses JavaScript-readable session storage, not a secure HttpOnly cookie. Close the tab on shared devices.</p>
+    <p id="cachedTokenNotice" class="token-note" hidden>Using saved GitHub access from this browser. Publishing automatically.</p>
+    <p class="token-note">After a successful save, access is remembered in this browser for up to 30 days, including after closing the tab. This uses JavaScript-readable local storage, not a secure HttpOnly cookie. Do not save access on shared devices; clear this site's data or forget saved access when finished.</p>
     <button id="forgetGithubSession" type="button" class="forget-session">Forget saved GitHub access</button>
     <p id="saveFeedback" role="status" aria-live="polite"></p>
     <div class="dialog-actions">
