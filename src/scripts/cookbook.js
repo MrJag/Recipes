@@ -5,6 +5,8 @@ const pagesEl = document.getElementById("pages");
 const statusEl = document.getElementById("status");
 const byId = id => document.getElementById(id);
 let currentRecipe = null;
+let recipeScaleFactor = 1;
+let recipeScaler = null;
 let sourceRecipe = null;
 let lastPageCount = 0;
 let renderPending = false;
@@ -109,6 +111,7 @@ function buildHeader(recipe) {
   wrap.appendChild(ratingDisplay(recipe.rating));
   const bits = [];
   if (recipe.servings) bits.push("SERVES " + recipe.servings);
+  if (recipe.displayScale) bits.push("SCALED " + Number(recipe.displayScale.toPrecision(5)) + "×");
   if (recipe.prepTime) bits.push("PREP " + recipe.prepTime);
   if (recipe.cookTime) bits.push("COOK " + recipe.cookTime);
   if (bits.length) wrap.appendChild(el("div", "metadata", bits.join("   |   ")));
@@ -399,6 +402,143 @@ function render(recipe) {
   }
   return result;
 }
+function scaleIngredient(item, factor) {
+  if (typeof item !== "string" || factor === 1 || /\bper\s+(?:serving|person|portion|pastry|piece|glass|drink|cookie|roll|pancake|waffle|pizza|batch)\b/i.test(item)) return item;
+  const fractions = {"¼":.25,"½":.5,"¾":.75,"⅓":1/3,"⅔":2/3,"⅛":.125,"⅜":.375,"⅝":.625,"⅞":.875,"⅕":.2,"⅖":.4,"⅗":.6,"⅘":.8,"⅙":1/6,"⅚":5/6};
+  const token = "(?:\\d+\\s+\\d+\\s*\\/\\s*\\d+|\\d+\\s*[¼½¾⅓⅔⅛⅜⅝⅞⅕⅖⅗⅘⅙⅚]|[¼½¾⅓⅔⅛⅜⅝⅞⅕⅖⅗⅘⅙⅚]|\\d+\\s*\\/\\s*\\d+|\\d+(?:\\.\\d+)?|\\.\\d+)";
+  const pattern = new RegExp("^(\\s*(?:optional\\s*:\\s*)?)("+token+")(?:\\s*([-–—]|\\bto\\b)\\s*("+token+"))?(?=\\s|$|[a-zA-Z])","i");
+  const parse = value => {
+    const t = value.trim();
+    const glyph = t.slice(-1);
+    if (Object.hasOwn(fractions,glyph)) return Number(t.slice(0,-1).trim() || 0) + fractions[glyph];
+    if (t.includes("/")) {
+      const m = t.match(/^(?:(\d+)\s+)?(\d+)\s*\/\s*(\d+)$/);
+      return m && Number(m[3]) ? Number(m[1] || 0)+Number(m[2])/Number(m[3]) : NaN;
+    }
+    return Number(t);
+  };
+  const format = (value, metric) => {
+    if (!metric) {
+      const whole = Math.floor(value+1e-9);
+      const rest = value-whole;
+      if (Math.abs(rest)<1e-9) return String(whole);
+      for (const [glyph,n] of Object.entries(fractions)) {
+        if (Math.abs(rest-n)<1e-7) return (whole || "")+glyph;
+      }
+    }
+    return String(Number(value.toPrecision(5)));
+  };
+  const m = item.match(pattern);
+  if (!m) return item;
+  const suffix = item.slice(m[0].length);
+  if (/^\s*(?:[-–—]\s*)?(?:inch(?:es)?|cm|mm|°[FC]|%|×|x\s+\d)\b/i.test(suffix) || /^[-–—\d/.]/.test(suffix)) return item;
+  const a = parse(m[2]), b = m[4] ? parse(m[4]) : null;
+  if (!Number.isFinite(a) || (b !== null && !Number.isFinite(b))) return item;
+  const metric = /^\s*(?:g|kg|mg|ml|mL|l|L|grams?|kilograms?|milliliters?|liters?)\b/i.test(suffix);
+  return m[1]+format(a*factor,metric)+(b === null ? "" : (m[3].toLowerCase()==="to"?" to ":"–")+format(b*factor,metric))+suffix;
+}
+
+function scaleServingCount(value) {
+  const m = String(value ?? "").trim().match(/^(\d+(?:\.\d+)?)$/);
+  const n = m ? Number(m[1]) : 0;
+  return Number.isFinite(n) && n>0 ? n : null;
+}
+
+function scaledRecipeForDisplay(recipe) {
+  const factor = recipeScaleFactor;
+  if (factor === 1) return recipe;
+  const groups = list => (list || []).map(group => ({
+    ...group,
+    items: /\b(?:separate|independent)\s+batch\b/i.test(group.title || "") ? group.items :
+      (group.items || []).map(item => scaleIngredient(item,factor))
+  }));
+  const base = scaleServingCount(recipe.servings);
+  return {...recipe,
+    servings: base === null ? recipe.servings : Number((base*factor).toPrecision(5)),
+    displayScale: factor,
+    ingredientGroups: groups(recipe.ingredientGroups),
+    components: (recipe.components || []).map(c=>({...c,ingredientGroups:groups(c.ingredientGroups)})),
+    headnote: [recipe.headnote, "Scaled ingredient quantities are estimates. Check package sizes, equivalent amounts, separate batches, per-serving amounts and any quantities in the directions; cooking times and temperatures are unchanged."].filter(Boolean).join("\n")
+  };
+}
+
+function installRecipeScaler() {
+  const rail = document.querySelector(".recipe-action-rail");
+  const button = el("button","recipe-icon-button");
+  button.type="button";
+  button.title="Scale recipe";
+  button.setAttribute("aria-label","Scale recipe");
+  button.setAttribute("aria-haspopup","dialog");
+  button.textContent="×";
+  button.style.fontSize="25px";
+  rail.appendChild(button);
+  const dialog=el("dialog","recipe-save-dialog");
+  dialog.setAttribute("aria-label","Scale recipe");
+  const heading=el("h2",null,"Scale recipe");
+  const form=el("form");
+  form.method="dialog";
+  const info=el("p",null,"");
+  const presets=el("div","dialog-actions");
+  const multiplier=el("input");
+  multiplier.type="number";multiplier.min="0.01";multiplier.max="100";multiplier.step="any";
+  multiplier.required=true;multiplier.id="recipeScaleMultiplier";
+  const factorLabel=el("label",null,"Batch multiplier (×)");
+  factorLabel.htmlFor=multiplier.id;
+  const servingLabel=el("label",null,"Desired servings");
+  const servings=el("input");
+  servings.type="number";servings.min="0.01";servings.step="any";servings.id="recipeScaleServings";
+  servingLabel.htmlFor=servings.id;
+  const servingWrap=el("div");servingWrap.append(servingLabel,servings);
+  const note=el("p","token-note","Only the displayed recipe and print preview change. The original recipe is never modified. Review ingredient quantities and directions before cooking.");
+  const actions=el("div","dialog-actions");
+  const apply=el("button",null,"Apply");apply.type="submit";
+  const reset=el("button",null,"Reset to 1×");reset.type="button";
+  const cancel=el("button",null,"Cancel");cancel.type="button";
+  actions.append(reset,cancel,apply);
+  let base=null;
+  function fill(factor) {
+    multiplier.value=String(Number(factor.toPrecision(8)));
+    servings.value=base ? String(Number((base*factor).toPrecision(8))) : "";
+  }
+  for (const factor of [.5,1,1.5,2,3,4]) {
+    const p=el("button",null,factor+"×");p.type="button";
+    p.addEventListener("click",()=>fill(factor));presets.append(p);
+  }
+  multiplier.addEventListener("input",()=>{
+    if(base) servings.value=multiplier.value && Number(multiplier.value)>0 ? String(Number((base*Number(multiplier.value)).toPrecision(8))) : "";
+  });
+  servings.addEventListener("input",()=>{
+    if(base) multiplier.value=servings.value && Number(servings.value)>0 ? String(Number((Number(servings.value)/base).toPrecision(8))) : "";
+  });
+  function applyFactor(factor) {
+    recipeScaleFactor=factor;
+    button.setAttribute("aria-pressed",String(factor!==1));
+    button.title="Scale recipe ("+factor+"×)";
+    dialog.close();requestRender();button.focus();
+  }
+  form.addEventListener("submit",event=>{
+    event.preventDefault();
+    const factor=Number(multiplier.value);
+    if(Number.isFinite(factor)&&factor>=.01&&factor<=100&&currentRecipe&&!window.CookbookEditor?.active) applyFactor(factor);
+  });
+  reset.addEventListener("click",()=>applyFactor(1));
+  cancel.addEventListener("click",()=>dialog.close());
+  button.addEventListener("click",()=>{
+    if(!currentRecipe)return;
+    if(window.CookbookEditor?.active){window.alert("Finish editing before scaling the recipe.");return;}
+    printMenu.open=false;
+    base=scaleServingCount(currentRecipe.servings);
+    info.textContent=base ? "Original recipe serves "+base+"." : "No exact serving count is stored. Scale by batch instead.";
+    servingWrap.hidden=base===null;
+    servings.disabled=base===null;
+    fill(recipeScaleFactor);
+    dialog.showModal();
+  });
+  form.append(heading,info,presets,factorLabel,multiplier,servingWrap,note,actions);
+  dialog.append(form);document.body.append(dialog);
+  return {reset(){recipeScaleFactor=1;button.setAttribute("aria-pressed","false");button.title="Scale recipe";if(dialog.open)dialog.close();}};
+}
+
 function requestRender() {
   if (!currentRecipe || window.CookbookEditor?.active || renderPending) return;
   renderPending = true;
@@ -407,7 +547,7 @@ function requestRender() {
     if (currentRecipe && !window.CookbookEditor?.active) {
       pagesEl.classList.add("measuring");
       try {
-        render(currentRecipe);
+        render(scaledRecipeForDisplay(currentRecipe));
         byId("printButton").disabled = false;
       } finally {
         pagesEl.classList.remove("measuring");
@@ -417,6 +557,7 @@ function requestRender() {
 }
 async function loadRecipe(button) {
   const requestId = ++loadSequence;
+  recipeScaler?.reset();
   const file = button.dataset.recipe;
   window.CookbookEditor?.close({discard:true});
   currentRecipe = null;
@@ -492,6 +633,7 @@ function setupVariants(recipe, recipeButton) {
 }
 let activeVariantIndex = -1;
 function selectRecipeVersion(index) {
+  recipeScaler?.reset();
   window.CookbookEditor?.close({discard:true});
   activeVariantIndex = index;
   const variant = sourceRecipe?.variants?.[index];
@@ -745,6 +887,7 @@ byId("printButton").addEventListener("click", () => window.print());
 // CSS handles the responsive preview without resetting the page DOM.
 // Direct recipe links work from the embedded catalog even if the taxonomy
 // request is slow, fails or is temporarily out of sync during deployment.
+recipeScaler = installRecipeScaler();
 buildSidebarFallback();
 showRoute();
 buildSidebar().catch(error => {
