@@ -7,7 +7,7 @@
   "photo": "./public/images/italian-mushroom-cream.jpg",
   "ingredientGroups": [
     {
-      "title": "Mushroom cream",
+      "title": "Mushroom Cream",
       "items": [
         "2 Tbsp extra-virgin olive oil",
         "1 yellow onion, diced",
@@ -66,5 +66,8 @@
     "The source does not specify how to prepare or how much egg wash to use for the optional chicken friands."
   ],
   "headnote": "A versatile mushroom cream for chicken or pasta. Review the egg wash for the optional chicken friands.",
-  "subtitle": ""
+  "subtitle": "",
+  "ingredientNotes": [
+    "Double base Mushroom Cream recipe to use as a soup."
+  ]
 }
